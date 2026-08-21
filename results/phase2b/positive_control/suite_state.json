@@ -1,0 +1,30 @@
+{
+  "attempted_trials": 4,
+  "completed_trials": [
+    {
+      "success": true,
+      "trial": 1
+    },
+    {
+      "success": true,
+      "trial": 2
+    },
+    {
+      "success": true,
+      "trial": 4
+    }
+  ],
+  "end_to_end_attempt_success_rate": 0.75,
+  "invalid_trials": [
+    {
+      "counted_as_karto_negative": false,
+      "reason": "RuntimeError: MoveTo target 3 failed with state 1",
+      "status": "FAILED",
+      "trial": 3
+    }
+  ],
+  "karto_success_rate_given_valid_revisit": 1.0,
+  "requested_valid_trials": 3,
+  "status": "SUCCEEDED_WITH_INVALID_TRIALS",
+  "successful_trials": 3
+}

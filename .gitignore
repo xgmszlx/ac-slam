@@ -1,0 +1,40 @@
+# Python caches and local environments
+**/__pycache__/
+**/*.py[cod]
+**/*.egg-info/
+.venv/
+venv/
+**/.idea/
+**/cmake-build-*/
+**/.$*
+
+# Catkin/ROS machine-generated state
+catkin_ws/build/
+catkin_ws/devel/
+catkin_ws/log/
+catkin_ws/.ros/
+catkin_ws/python/
+catkin_ws/.catkin_tools/
+
+# Locally installed evo environment
+evaluation/evo-1.31.1/
+evaluation/evo-1.31.1-target/
+
+# Downloaded third-party executables (see catkin_ws/tools/concorde/README.md)
+catkin_ws/tools/concorde/concorde
+catkin_ws/tools/concorde/linkern
+catkin_ws/tools/concorde/concorde.gz
+catkin_ws/tools/concorde/linkern.gz
+
+# Runtime copies produced inside the vendored author baseline. Canonical run
+# archives are kept under the top-level results/ directory.
+baseline/Graph-Based_SLAM-Aware_Exploration/results/
+baseline/Graph-Based_SLAM-Aware_Exploration/supp.pdf
+
+# Generated upstream API documentation; p2os source and license remain tracked.
+dependencies/p2os/p2os_doc/**/html/
+
+# Editor/OS state
+.DS_Store
+*.swp
+*.swo

@@ -1,0 +1,20 @@
+{
+  "git_commit": "5a116671143611601736c3e4218a762a6a5a9263",
+  "launch_arguments": {
+    "map_name": "map3/map3",
+    "only_use_tsp": false,
+    "strategy": "MyPlanner",
+    "suffix": "_Phase1_SLAMAware_map3_run1"
+  },
+  "launch_file": "cpp_solver exploration.launch",
+  "map": "map3",
+  "method": "Graph-Based SLAM-Aware",
+  "observer": "tools/phase1_event_logger.py (read-only)",
+  "python": "/usr/bin/python3 (3.8)",
+  "start_pose_xyyaw": [
+    -28.0,
+    -28.0,
+    0.0
+  ],
+  "stdout_stderr": "roslaunch.log"
+}

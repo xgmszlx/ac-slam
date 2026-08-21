@@ -1,0 +1,21 @@
+{
+  "git_commit": "5a116671143611601736c3e4218a762a6a5a9263",
+  "launch_arguments": {
+    "map_name": "map3/map3",
+    "only_use_tsp": true,
+    "strategy": "NearestFrontierPlanner",
+    "suffix": "_Phase1_NearestFrontier_map3_run1"
+  },
+  "launch_file": "cpp_solver exploration.launch",
+  "map": "map3",
+  "method": "Nearest Frontier",
+  "observer": "tools/phase1_event_logger.py (read-only)",
+  "event_log_provenance": "events.csv reconstructed from timestamped roslaunch Really visited logs; original partial live log preserved as events_live_partial.csv",
+  "python": "/usr/bin/python3 (3.8)",
+  "start_pose_xyyaw": [
+    -28.0,
+    -28.0,
+    0.0
+  ],
+  "stdout_stderr": "roslaunch.log"
+}

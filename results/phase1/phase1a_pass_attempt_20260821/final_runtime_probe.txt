@@ -1,0 +1,204 @@
+2026-08-21T09:47:53+08:00
+[nodes]
+/Explore
+/GetMap
+/Mapper
+/Navigator
+/Operator
+/RVIZ
+/SetGoal
+/Stage
+/exploration_button_server
+/map_server
+/path_planner
+/pubPath
+/publisher
+/robot_state_publisher
+/rosout
+/rqt_robot_steering
+/tf_echo_1787276591846734410
+/updateDistance
+[services]
+/Explore/get_loggers
+/Explore/set_logger_level
+/GetMap/get_loggers
+/GetMap/set_logger_level
+/Mapper/get_loggers
+/Mapper/set_logger_level
+/Navigator/get_loggers
+/Navigator/set_logger_level
+/Operator/get_loggers
+/Operator/local_map/inflation_layer/set_parameters
+/Operator/local_map/obstacle_layer/set_parameters
+/Operator/local_map/set_parameters
+/Operator/set_logger_level
+/Pause
+/RVIZ/get_loggers
+/RVIZ/load_config
+/RVIZ/load_config_discarding_changes
+/RVIZ/reload_shaders
+/RVIZ/save_config
+/RVIZ/set_logger_level
+/SetGoal/get_loggers
+/SetGoal/set_logger_level
+/Stage/get_loggers
+/Stage/set_logger_level
+/StartExploration
+/StartMapping
+/Stop
+/change_map
+/exploration_button_server/get_loggers
+/exploration_button_server/set_logger_level
+/explore_button
+/get_map
+/map_server/get_loggers
+/map_server/set_logger_level
+/path_plan_service
+/path_planner/get_loggers
+/path_planner/set_logger_level
+/prior_graph_service
+/pubPath/get_loggers
+/pubPath/set_logger_level
+/publisher/get_loggers
+/publisher/set_logger_level
+/reliable_loop_service
+/reset_positions
+/robot_state_publisher/get_loggers
+/robot_state_publisher/set_logger_level
+/rosout/get_loggers
+/rosout/set_logger_level
+/rqt_robot_steering/get_loggers
+/rqt_robot_steering/set_logger_level
+/static_world
+/tf_echo_1787276591846734410/get_loggers
+/tf_echo_1787276591846734410/set_logger_level
+/updateDistance/get_loggers
+/updateDistance/set_logger_level
+[topics]
+/Explore/cancel
+/Explore/feedback
+/Explore/goal
+/Explore/result
+/Explore/status
+/GetFirstMap/cancel
+/GetFirstMap/feedback
+/GetFirstMap/goal
+/GetFirstMap/result
+/GetFirstMap/status
+/Localize/cancel
+/Localize/feedback
+/Localize/goal
+/Localize/result
+/Localize/status
+/Mapper/closure_edges
+/Mapper/closure_edges_array
+/Mapper/colored_edges
+/Mapper/odom_edges
+/Mapper/odom_edges_array
+/Mapper/vertices
+/Mapper/vertices_array
+/MoveTo/cancel
+/MoveTo/feedback
+/MoveTo/goal
+/MoveTo/result
+/MoveTo/status
+/Navigator/dist_map
+/Navigator/dist_map_updates
+/Navigator/frontier_to_vertex
+/Navigator/frontier_to_vertex_array
+/Navigator/frontiers
+/Navigator/frontiers_array
+/Navigator/markers
+/Navigator/nav_goal
+/Navigator/nav_goal_array
+/Navigator/path_finder
+/Navigator/path_finder_array
+/Navigator/plan
+/Navigator/prior_map
+/Navigator/tsp_index
+/Navigator/visual_tsp_path
+/Navigator/visual_tsp_path_array
+/Operator/desired
+/Operator/local_map/costmap
+/Operator/local_map/costmap_updates
+/Operator/local_map/footprint
+/Operator/local_map/inflation_layer/parameter_descriptions
+/Operator/local_map/inflation_layer/parameter_updates
+/Operator/local_map/obstacle_layer/parameter_descriptions
+/Operator/local_map/obstacle_layer/parameter_updates
+/Operator/local_map/parameter_descriptions
+/Operator/local_map/parameter_updates
+/Operator/route
+/base_pose_ground_truth
+/base_scan
+/clicked_point
+/clock
+/cmd
+/cmd_vel
+/costs
+/edge_distance
+/finished_topic
+/goal
+/initialpose
+/joint_states
+/karto_in
+/karto_out
+/localization_result
+/map
+/map_updates
+/odom
+/others
+/path_gt
+/path_odom
+/path_slam
+/pose_graph_idx
+/request_replan
+/rosout
+/rosout_agg
+/slam_path
+/slam_pose_graph
+/stop_exploration
+/tf
+/tf_static
+/world
+/world_metadata
+/world_updates
+[tf post-stop]
+At time 326.600
+- Translation: [-2.651, 5.447, 0.000]
+- Rotation: in Quaternion [0.000, 0.000, 0.838, 0.545]
+            in RPY (radian) [0.000, -0.000, 1.988]
+            in RPY (degree) [0.000, -0.000, 113.913]
+At time 326.600
+- Translation: [-2.651, 5.447, 0.000]
+- Rotation: in Quaternion [0.000, 0.000, 0.838, 0.545]
+            in RPY (radian) [0.000, -0.000, 1.988]
+            in RPY (degree) [0.000, -0.000, 113.913]
+At time 327.600
+- Translation: [-2.651, 5.447, 0.000]
+- Rotation: in Quaternion [0.000, 0.000, 0.838, 0.545]
+            in RPY (radian) [0.000, -0.000, 1.988]
+            in RPY (degree) [0.000, -0.000, 113.913]
+At time 328.700
+- Translation: [-2.651, 5.447, 0.000]
+- Rotation: in Quaternion [0.000, 0.000, 0.838, 0.545]
+            in RPY (radian) [0.000, -0.000, 1.988]
+            in RPY (degree) [0.000, -0.000, 113.913]
+At time 329.600
+- Translation: [-2.651, 5.447, 0.000]
+- Rotation: in Quaternion [0.000, 0.000, 0.838, 0.545]
+            in RPY (radian) [0.000, -0.000, 1.988]
+            in RPY (degree) [0.000, -0.000, 113.913]
+[process RSS]
+   9317 43584 Ssl  /usr/bin/python3 /opt/ros/noetic/bin/rosmaster --core -p 11311 -w 3 __log:=/home/wcqw/ac-slam/catkin_ws/.ros/log/8df9b518-9d01-11f1-a38e-cf9a7ef17d8f/master.log
+   9354 373912 Ssl /opt/ros/noetic/lib/stage_ros/stageros /home/wcqw/ac-slam/catkin_ws/src/cpp_solver/world/map3/map3.world __name:=Stage __log:=/home/wcqw/ac-slam/catkin_ws/.ros/log/8df9b518-9d01-11f1-a38e-cf9a7ef17d8f/Stage-2.log
+   9356 24316 Ssl  /home/wcqw/ac-slam/catkin_ws/devel/lib/nav2d_operator/operator scan:=base_scan __name:=Operator __log:=/home/wcqw/ac-slam/catkin_ws/.ros/log/8df9b518-9d01-11f1-a38e-cf9a7ef17d8f/Operator-4.log
+   9357 307116 Ssl /home/wcqw/ac-slam/catkin_ws/devel/lib/nav2d_karto/mapper scan:=base_scan __name:=Mapper __log:=/home/wcqw/ac-slam/catkin_ws/.ros/log/8df9b518-9d01-11f1-a38e-cf9a7ef17d8f/Mapper-5.log
+   9358 27552 Ssl  /home/wcqw/ac-slam/catkin_ws/devel/lib/nav2d_navigator/navigator __name:=Navigator __log:=/home/wcqw/ac-slam/catkin_ws/.ros/log/8df9b518-9d01-11f1-a38e-cf9a7ef17d8f/Navigator-6.log
+   9359 11068 Ssl  /home/wcqw/ac-slam/catkin_ws/devel/lib/nav2d_navigator/get_map_client __name:=GetMap __log:=/home/wcqw/ac-slam/catkin_ws/.ros/log/8df9b518-9d01-11f1-a38e-cf9a7ef17d8f/GetMap-7.log
+   9360 11188 Ssl  /home/wcqw/ac-slam/catkin_ws/devel/lib/nav2d_navigator/explore_client __name:=Explore __log:=/home/wcqw/ac-slam/catkin_ws/.ros/log/8df9b518-9d01-11f1-a38e-cf9a7ef17d8f/Explore-8.log
+   9361 11124 Ssl  /home/wcqw/ac-slam/catkin_ws/devel/lib/nav2d_navigator/set_goal_client __name:=SetGoal __log:=/home/wcqw/ac-slam/catkin_ws/.ros/log/8df9b518-9d01-11f1-a38e-cf9a7ef17d8f/SetGoal-9.log
+   9365 89692 Ssl  /usr/bin/python3 /home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/scripts/path_planner.py __name:=path_planner __log:=/home/wcqw/ac-slam/catkin_ws/.ros/log/8df9b518-9d01-11f1-a38e-cf9a7ef17d8f/path_planner-13.log
+  11587  3980 Ss   /bin/bash -c source catkin_ws/activate.sh run_dir=/home/wcqw/ac-slam/results/phase1/phase1a_pass_attempt_20260821 {   date --iso-8601=seconds   printf '%s\n' '[nodes]'   rosnode list   printf '%s\n' '[services]'   rosservice list   printf '%s\n' '[topics]'   rostopic list   printf '%s\n' '[tf post-stop]'   timeout 4 rosrun tf tf_echo map base_link   printf '%s\n' '[process RSS]'   ps -eo pid,rss,stat,cmd | rg 'stageros|nav2d_|path_planner.py|rosmaster' || true } 2>&1 | tee "$run_dir/final_runtime_probe.txt" printf '%s\n' '[error summary]' rg -n "Traceback|process has died|process has finished|\[ERROR\]|ERROR:" "$run_dir/roslaunch.log" | sed -n '1,160p'
+  11627  2412 S    /bin/bash -c source catkin_ws/activate.sh run_dir=/home/wcqw/ac-slam/results/phase1/phase1a_pass_attempt_20260821 {   date --iso-8601=seconds   printf '%s\n' '[nodes]'   rosnode list   printf '%s\n' '[services]'   rosservice list   printf '%s\n' '[topics]'   rostopic list   printf '%s\n' '[tf post-stop]'   timeout 4 rosrun tf tf_echo map base_link   printf '%s\n' '[process RSS]'   ps -eo pid,rss,stat,cmd | rg 'stageros|nav2d_|path_planner.py|rosmaster' || true } 2>&1 | tee "$run_dir/final_runtime_probe.txt" printf '%s\n' '[error summary]' rg -n "Traceback|process has died|process has finished|\[ERROR\]|ERROR:" "$run_dir/roslaunch.log" | sed -n '1,160p'
+  11750  4200 S    rg stageros|nav2d_|path_planner.py|rosmaster

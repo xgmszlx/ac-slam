@@ -1,0 +1,1215 @@
+[WARN] [1787299223.044486067]: The root link base_link has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.
+0x55b67b49b870
+[INFO] [1787299223.096252213]: Inititialized robot 1, starting to map now.
+Create multimapper!!
+concorde -s 22003 /tmp/tmp35fcdck1/problem.tsp
+Host: msxg  Current process id: 100288
+Using random seed 22003
+Number of Nodes: 72
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 8141 (from tour)
+ERROR: No dual change in basis finding code
+Did not find a basic optimal solution
+Fractional matching routine failed
+Warning: restarting running timer Miscellaneous
+No warmstart, stumbling on anyway
+Basic dual change required, but no candidate edges
+  LP Value  1: 8137.000000  (0.00 seconds)
+recomputing rownorms ...
+  LP Value  2: 8137.000000  (0.01 seconds)
+New lower bound: 8135.000000
+  LP Value  1: 8137.000000  (0.01 seconds)
+recomputing rownorms ...
+  LP Value  2: 8137.000000  (0.01 seconds)
+New lower bound: 8137.000000
+New upperbound from x-heuristic: 8137.00
+Final lower bound 8137.000000, upper bound 8137.000000
+Exact lower bound: 8137.000000
+DIFF: 0.000000
+Final LP has 91 rows, 154 columns, 441 nonzeros
+Optimal Solution: 8137.00
+Number of bbnodes: 1
+Total Running Time: 0.03 (seconds)
+[WARN] [1787299224.293057657, 0.400000000]: local_map: Parameter "plugins" not provided, loading pre-Hydro parameters
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 534.800000 according to authority unknown_publisher
+         at line TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 534.800000 according to authority unknown_publisher277 in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp[INFO] [1787299223.097549185]: NearestFrontierPlanner start!
+[INFO] [1787299223.099085080]: Successfully loaded exploration strategy [NearestFrontierPlanner].
+[INFO] [1787299231.595898929, 7.700000000]: Navigator is now initialized.
+         at line 
+Warning: 277 in Warning: /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cppTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 534.800000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 534.800000 according to authority unknown_publisher
+
+
+         at line          at line 277 in 277/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cppWarning: 
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 534.800000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cppWarning: 
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 534.800000 according to authority unknown_publisher
+         at line 277 in Warning: /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cppTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 534.800000 according to authority unknown_publisher
+
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787299758.696705402, 534.800000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 534.800000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 534.800000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787299758.696732361, 534.800000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 534.800000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 541.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 541.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 541.100000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 541.100000 according to authority unknown_publisher
+
+         at line          at line 277277 in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 541.100000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 541.100000 according to authority unknown_publisher
+
+         at line          at line 277277 in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+[WARN] [1787299765.029586860, 541.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 541.100000 according to authority unknown_publisher
+[WARN] [1787299765.029616614, 541.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 541.100000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 541.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 541.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 546.300000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 546.300000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 546.300000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cppWarning: 
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 546.300000 according to authority unknown_publisher
+         at line Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 546.300000 according to authority unknown_publisher277
+ in          at line /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp277
+ in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 546.300000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 546.300000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 546.300000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787299770.242376617, 546.300000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 546.300000 according to authority unknown_publisher
+[WARN] [1787299770.242402125, 546.300000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 546.300000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 573.100000 according to authority unknown_publisher
+         at line 277 in Warning: /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cppWarning: 
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 573.100000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 573.100000 according to authority unknown_publisher
+
+Warning:          at line          at line TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 573.100000 according to authority unknown_publisher277277
+ in  in          at line /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp277
+
+ in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 573.100000 according to authority unknown_publisher
+         at line Warning: 277TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 573.100000 according to authority unknown_publisher in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp         at line 
+277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787299797.039744687, 573.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 573.100000 according to authority unknown_publisher
+[WARN] [1787299797.039783302, 573.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 573.100000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 573.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 573.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 602.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: [WARN] [1787299826.001933748, 602.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 602.100000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 602.100000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 602.100000 according to authority unknown_publisher
+
+         at line          at line 277277 in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 602.100000 according to authority unknown_publisher[WARN] [1787299826.001970703, 602.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 602.100000 according to authority unknown_publisher
+
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 602.100000 according to authority unknown_publisher
+         at line Warning: 277TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 602.100000 according to authority unknown_publisher in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp         at line 
+277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 602.100000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 602.100000 according to authority unknown_publisher
+
+         at line          at line 277277 in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 646.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 646.100000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 646.100000 according to authority unknown_publisher
+
+         at line          at line 277277 in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 646.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 646.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787299870.025441510, 646.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 646.100000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 646.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787299870.025472731, 646.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 646.100000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 646.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 646.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 648.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 648.100000 according to authority unknown_publisher
+Warning:          at line 277TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 648.100000 according to authority unknown_publisher in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp         at line 
+277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787299871.992087021, 648.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 648.100000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 648.100000 according to authority unknown_publisherWarning: [WARN] [1787299871.992110543, 648.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 648.100000 according to authority unknown_publisher
+
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 648.100000 according to authority unknown_publisher         at line 
+277         at line  in 277/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 648.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 648.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 648.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 664.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 664.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 664.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 664.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787299887.996339283, 664.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 664.100000 according to authority unknown_publisher
+[WARN] [1787299887.996373791, 664.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 664.100000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 664.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 664.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 664.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 664.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 714.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 714.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 714.100000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 714.100000 according to authority unknown_publisher
+
+         at line          at line 277277 in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 714.100000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 714.100000 according to authority unknown_publisher
+
+         at line          at line 277277 in [WARN] [1787299938.007128270, 714.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 714.100000 according to authority unknown_publisher
+ in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 714.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp[WARN] [1787299938.007155002, 714.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 714.100000 according to authority unknown_publisher
+
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 714.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 719.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 719.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 719.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 719.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787299943.346542228, 719.400000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 719.400000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 719.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787299943.346563686, 719.400000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 719.400000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 719.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 719.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 719.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 726.100000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 726.100000 according to authority unknown_publisher
+
+         at line          at line 277277 in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 726.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cppWarning: 
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 726.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 726.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 726.100000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 726.100000 according to authority unknown_publisher
+
+         at line          at line 277277 in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 726.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787299950.009463751, 726.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 726.100000 according to authority unknown_publisher
+[WARN] [1787299950.009490740, 726.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 726.100000 according to authority unknown_publisher
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 744.100000 according to authority unknown_publisherWarning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 744.100000 according to authority unknown_publisher
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 744.100000 according to authority unknown_publisher
+         at line 
+         at line          at line 277277277 in  in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+
+Warning: Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 744.100000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 744.100000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 744.100000 according to authority unknown_publisher
+
+
+         at line          at line          at line 277277277 in  in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+
+[WARN] [1787299968.049034484, 744.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 744.100000 according to authority unknown_publisher
+[WARN] [1787299968.049075045, 744.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 744.100000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 744.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 744.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 750.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 750.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 750.100000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 750.100000 according to authority unknown_publisher
+
+         at line          at line 277277 in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 750.100000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 750.100000 according to authority unknown_publisher
+[WARN] [1787299974.020151815, 750.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 750.100000 according to authority unknown_publisher
+
+         at line          at line 277277 in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+Warning: [WARN] [1787299974.020173306, 750.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 750.100000 according to authority unknown_publisher
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 750.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 750.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 756.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 756.100000 according to authority unknown_publisher
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 756.100000 according to authority unknown_publisher         at line 
+277         at line  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp277
+ in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 756.100000 according to authority unknown_publisherWarning: 
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 756.100000 according to authority unknown_publisherWarning:          at line 
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 756.100000 according to authority unknown_publisher277         at line 
+ in 277         at line /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp in 277
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 756.100000 according to authority unknown_publisherWarning: 
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 756.100000 according to authority unknown_publisher         at line 
+277         at line  in 277/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787299980.023959329, 756.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 756.100000 according to authority unknown_publisher
+[WARN] [1787299980.023985884, 756.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 756.100000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 780.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 780.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 780.100000 according to authority unknown_publisher[WARN] [1787300004.020767003, 780.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 780.100000 according to authority unknown_publisher
+
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 780.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: [WARN] [1787300004.020807497, 780.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 780.100000 according to authority unknown_publisher
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 780.100000 according to authority unknown_publisher
+         at line 277 in Warning: /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 780.100000 according to authority unknown_publisher
+         at line 277Warning:  in TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 780.100000 according to authority unknown_publisher/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+         at line 277 in Warning: /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cppTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 780.100000 according to authority unknown_publisher
+
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 786.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 786.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 786.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 786.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 786.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 786.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 786.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 786.100000 according to authority unknown_publisher
+         at line [WARN] [1787300010.019885881, 786.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 786.100000 according to authority unknown_publisher
+277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787300010.019922881, 786.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 786.100000 according to authority unknown_publisher
+[WARN] [1787300021.853828166, 797.900000000]: No Frontiers in the map!
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 808.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 808.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 808.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 808.500000 according to authority unknown_publisher[INFO] [1787300021.853915013, 797.900000000]: Exploration has finished.
+[INFO] [1787300027.298892257, 803.400000000]: Path planning took 0.137478033 seconds, distance is 19.58 m.
+
+Warning:          at line TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 808.500000 according to authority unknown_publisher277
+ in          at line /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp277
+ in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 808.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 808.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 808.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787300032.451223719, 808.500000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 808.500000 according to authority unknown_publisher
+[WARN] [1787300032.451260444, 808.500000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 808.500000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 818.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 818.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[INFO] [1787300032.555521595, 808.600000000]: Path planning took 0.461496269 seconds, distance is 17.09 m.
+[INFO] [1787300037.393966207, 813.500000000]: Path planning took 0.299398941 seconds, distance is 14.54 m.
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 818.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 818.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 818.500000 according to authority unknown_publisher
+         at line 277 in [WARN] [1787300042.431383555, 818.500000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 818.500000 according to authority unknown_publisher
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 818.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787300042.431418893, 818.500000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 818.500000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 818.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 818.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 843.500000 according to authority unknown_publisher
+         at line 277Warning:  in TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 843.500000 according to authority unknown_publisher/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+         at line 277Warning:  in TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 843.500000 according to authority unknown_publisher/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+         at line 277 in Warning: /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cppTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 843.500000 according to authority unknown_publisher
+
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 843.500000 according to authority unknown_publisher
+[INFO] [1787300042.511277632, 818.600000000]: Path planning took 0.418697713 seconds, distance is 12.80 m.
+[INFO] [1787300047.402880757, 823.500000000]: Path planning took 0.310833810 seconds, distance is 9.17 m.
+[INFO] [1787300052.444097502, 828.500000000]: Path planning took 0.349877871 seconds, distance is 5.35 m.
+[INFO] [1787300057.442561600, 833.500000000]: Path planning took 0.348428934 seconds, distance is 1.63 m.
+[INFO] [1787300062.441992156, 838.500000000]: Path planning took 0.349329010 seconds, distance is 0.38 m.
+[INFO] [1787300063.092568883, 839.200000000]: Reached target, now turning to desired direction.
+[INFO] [1787300063.092612004, 839.200000000]: Heading: -1.61 / Desired: 1.60 / Difference: 3.07 / Tolerance: 0.10
+[INFO] [1787300064.093703046, 840.200000000]: Heading: -2.34 / Desired: 1.60 / Difference: 2.35 / Tolerance: 0.10
+[INFO] [1787300065.093100630, 841.200000000]: Heading: 2.95 / Desired: 1.60 / Difference: 1.35 / Tolerance: 0.10
+[INFO] [1787300066.092983883, 842.200000000]: Heading: 1.85 / Desired: 1.60 / Difference: 0.25 / Tolerance: 0.10
+         at line Warning: 277 in TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 843.500000 according to authority unknown_publisher/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+         at line 277 in Warning: /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cppTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 843.500000 according to authority unknown_publisher[WARN] [1787300067.437554250, 843.500000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 843.500000 according to authority unknown_publisher
+
+
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cppWarning: 
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 843.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787300067.437580026, 843.500000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 843.500000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 855.500000 according to authority unknown_publisher
+         at line [INFO] [1787300067.558191276, 843.600000000]: Path planning took 0.463940161 seconds, distance is 0.24 m.
+[INFO] [1787300067.558227450, 843.600000000]: Heading: 1.42 / Desired: 1.60 / Difference: 0.17 / Tolerance: 0.10
+[INFO] [1787300069.094907477, 845.200000000]: Heading: 1.61 / Desired: 1.60 / Difference: 0.01 / Tolerance: 0.10
+[INFO] [1787300069.094983818, 845.200000000]: Final Heading: 1.61 / Desired: 1.60 / Difference: 0.01 / Tolerance: 0.10
+[INFO] [1787300069.095016005, 845.200000000]: Goal reached.
+[INFO] [1787300069.330080678, 845.400000000]: Path planning took 0.232589375 seconds, distance is 5.08 m.
+[INFO] [1787300074.448815391, 850.500000000]: Path planning took 0.355320735 seconds, distance is 3.60 m.
+277Warning: Warning:  in TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 855.500000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 855.500000 according to authority unknown_publisher
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+         at line 
+277         at line  in 277/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp in Warning: 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cppTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 855.500000 according to authority unknown_publisher
+
+Warning:          at line TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 855.500000 according to authority unknown_publisher277Warning: 
+ in TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 855.500000 according to authority unknown_publisher         at line /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+277
+         at line  in 277/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 855.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 855.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787300079.449760852, 855.500000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 855.500000 according to authority unknown_publisher
+[WARN] [1787300079.449792526, 855.500000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 855.500000 according to authority unknown_publisher
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 860.500000 according to authority unknown_publisher
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 860.500000 according to authority unknown_publisher         at line 
+277         at line  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp277
+ in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 860.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 860.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787300084.453571610, 860.500000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 860.500000 according to authority unknown_publisher
+[INFO] [1787300079.526007265, 855.600000000]: Path planning took 0.433015931 seconds, distance is 1.44 m.
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 860.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: [WARN] [1787300084.453608253, 860.500000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 860.500000 according to authority unknown_publisher
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 860.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 860.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 860.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 864.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 864.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[INFO] [1787300084.532198912, 860.600000000]: Path planning took 0.438633046 seconds, distance is 0.40 m.
+[INFO] [1787300085.094008517, 861.200000000]: Reached target, now turning to desired direction.
+[INFO] [1787300085.094071724, 861.200000000]: Heading: -1.67 / Desired: 1.88 / Difference: 2.74 / Tolerance: 0.10
+[INFO] [1787300086.093868127, 862.200000000]: Heading: -2.46 / Desired: 1.88 / Difference: 1.94 / Tolerance: 0.10
+[INFO] [1787300087.094007588, 863.200000000]: Heading: 2.82 / Desired: 1.88 / Difference: 0.94 / Tolerance: 0.10
+[INFO] [1787300088.093609634, 864.200000000]: Heading: 1.86 / Desired: 1.88 / Difference: 0.02 / Tolerance: 0.10
+[INFO] [1787300088.093704302, 864.200000000]: Final Heading: 1.86 / Desired: 1.88 / Difference: 0.02 / Tolerance: 0.10
+[INFO] [1787300088.093741193, 864.200000000]: Goal reached.
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 864.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 864.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 864.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 864.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 864.500000 according to authority unknown_publisher
+[WARN] [1787300088.395100915, 864.500000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 864.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 864.500000 according to authority unknown_publisher[WARN] [1787300088.395120796, 864.500000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 864.500000 according to authority unknown_publisher
+
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787300100.492829908, 876.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300101.492184232, 877.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300102.494141061, 878.600000000]: Robot cannot move further in this direction!
+Warning: [INFO] [1787300088.412488380, 864.500000000]: Path planning took 0.315901906 seconds, distance is 6.39 m.
+[INFO] [1787300093.445910552, 869.500000000]: Path planning took 0.351682568 seconds, distance is 4.44 m.
+[INFO] [1787300098.411012047, 874.500000000]: Path planning took 0.319790294 seconds, distance is 1.06 m.
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 879.500000 according to authority unknown_publisherWarning: 
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 879.500000 according to authority unknown_publisher         at line 
+277         at line  in 277/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp in 
+Warning: /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cppWarning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 879.500000 according to authority unknown_publisher
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 879.500000 according to authority unknown_publisher
+
+         at line          at line Warning: 277277TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 879.500000 according to authority unknown_publisher in  in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp         at line 
+
+277 in Warning: /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cppTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 879.500000 according to authority unknown_publisher
+
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 879.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 879.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787300103.448290013, 879.500000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 879.500000 according to authority unknown_publisher
+[WARN] [1787300103.448313354, 879.500000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 879.500000 according to authority unknown_publisher
+[WARN] [1787300103.491475895, 879.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300104.491810019, 880.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300105.491523908, 881.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300106.494306773, 882.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300107.492968072, 883.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300108.494609432, 884.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300109.492494922, 885.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300110.494974388, 886.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300111.495025549, 887.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300112.492463035, 888.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300113.492418817, 889.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300114.494983953, 890.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300115.493312261, 891.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300116.493245495, 892.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300117.492342519, 893.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300118.494325129, 894.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300119.495517247, 895.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300120.492179763, 896.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300121.494536709, 897.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300122.494191865, 898.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300123.494683869, 899.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300124.494646467, 900.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300125.494902502, 901.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300126.493900786, 902.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300127.493679158, 903.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300128.493450856, 904.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300129.492087376, 905.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300130.494342229, 906.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300131.494622123, 907.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300132.493208610, 908.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300133.493482333, 909.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300134.494411847, 910.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300135.495273069, 911.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300136.494635858, 912.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300137.495314198, 913.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300138.495183074, 914.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300139.494669469, 915.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300140.493684843, 916.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300141.495413303, 917.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300142.494937707, 918.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300143.491657374, 919.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300144.492971385, 920.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300145.492482639, 921.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300146.493784009, 922.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300147.494215069, 923.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300148.492095806, 924.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300149.492210458, 925.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300150.494691833, 926.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300151.494209301, 927.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300152.492546731, 928.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300153.494901492, 929.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300154.492767449, 930.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300155.494031834, 931.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300156.491715099, 932.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300157.492286351, 933.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300158.492452129, 934.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300159.493404091, 935.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300160.492575115, 936.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300161.493030109, 937.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300162.492949768, 938.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300163.494657352, 939.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300164.492380890, 940.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300165.492204210, 941.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300166.492596518, 942.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300167.493296340, 943.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300168.494347606, 944.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300169.494859427, 945.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300170.492886101, 946.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300171.494132403, 947.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300172.492544027, 948.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300173.491860409, 949.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300174.494406896, 950.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300175.494490352, 951.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300176.493259586, 952.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300177.491757133, 953.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300178.494062738, 954.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300179.494228713, 955.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300180.491815465, 956.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300181.491620468, 957.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300182.492842188, 958.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300183.494150105, 959.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300184.493102140, 960.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300185.492912896, 961.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300186.492579229, 962.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300187.495731218, 963.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300188.494303004, 964.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300189.493156769, 965.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300190.494313330, 966.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300191.493386201, 967.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300192.492362282, 968.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300193.493252427, 969.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300194.494545411, 970.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300195.493347063, 971.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300196.491879202, 972.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300197.491626585, 973.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300198.494564450, 974.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300199.495008842, 975.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300200.492429178, 976.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300201.493771256, 977.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300202.493889991, 978.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300203.494024896, 979.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300204.494533198, 980.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300205.491531402, 981.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300206.494398489, 982.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300207.494452197, 983.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300208.491626000, 984.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300209.491174587, 985.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300210.492748865, 986.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300211.492880573, 987.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300212.492629771, 988.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300213.491520507, 989.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300214.493428228, 990.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300215.494403929, 991.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300216.492191040, 992.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300217.491706568, 993.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300218.493064102, 994.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300219.492616549, 995.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300220.491900154, 996.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300221.491929012, 997.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300222.493049318, 998.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300223.495098627, 999.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300224.494857564, 1000.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300225.493998301, 1001.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300226.493424966, 1002.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300227.495549412, 1003.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300228.494359289, 1004.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300229.492642474, 1005.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300230.495366965, 1006.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300231.493199964, 1007.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300232.493438115, 1008.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300233.492079783, 1009.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300234.494693694, 1010.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300235.495267460, 1011.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300236.494243338, 1012.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300237.493272932, 1013.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300238.495070999, 1014.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300239.494267492, 1015.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300240.492825476, 1016.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300241.492129745, 1017.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300242.493979751, 1018.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300243.493723751, 1019.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300244.494176554, 1020.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300245.493035206, 1021.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300246.493250432, 1022.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300247.492634883, 1023.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300248.492445797, 1024.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300249.492678673, 1025.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300250.493865041, 1026.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300251.492732723, 1027.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300252.492623463, 1028.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300253.495125318, 1029.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300254.494062642, 1030.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300255.494581818, 1031.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300256.494001114, 1032.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300257.494527528, 1033.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300258.494537088, 1034.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300259.495236733, 1035.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300260.494858147, 1036.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300261.492946311, 1037.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300262.494100036, 1038.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300263.494986349, 1039.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300264.492958943, 1040.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300265.493099547, 1041.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300266.494060428, 1042.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300267.494290672, 1043.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300268.492899774, 1044.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300269.494130736, 1045.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300270.491408690, 1046.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300271.494685538, 1047.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300272.492585954, 1048.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300273.492166879, 1049.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300274.495016494, 1050.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300275.493106819, 1051.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300276.494604265, 1052.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300277.491622438, 1053.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300278.493929749, 1054.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300279.494943616, 1055.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300280.493473738, 1056.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300281.494303187, 1057.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300282.493689952, 1058.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300283.493288707, 1059.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300284.495526939, 1060.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300285.493343157, 1061.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300286.494609961, 1062.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300287.493207168, 1063.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300288.493123479, 1064.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300289.493785574, 1065.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300290.493789625, 1066.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300291.494549795, 1067.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300292.492177090, 1068.600000000]: Robot cannot move further in this direction!
+[INFO] [1787300103.526100939, 879.600000000]: Path planning took 0.434781429 seconds, distance is 0.61 m.
+[INFO] [1787300108.279029138, 884.300000000]: Path planning took 0.186377015 seconds, distance is 0.61 m.
+[INFO] [1787300113.272160255, 889.300000000]: Path planning took 0.178503435 seconds, distance is 0.61 m.
+[INFO] [1787300118.271774706, 894.300000000]: Path planning took 0.179582912 seconds, distance is 0.61 m.
+[INFO] [1787300123.281927146, 899.300000000]: Path planning took 0.189661890 seconds, distance is 0.61 m.
+[INFO] [1787300128.277971563, 904.300000000]: Path planning took 0.185282426 seconds, distance is 0.61 m.
+[INFO] [1787300133.289020560, 909.300000000]: Path planning took 0.195312017 seconds, distance is 0.61 m.
+[INFO] [1787300138.329683868, 914.400000000]: Path planning took 0.236475265 seconds, distance is 0.61 m.
+[INFO] [1787300143.292628212, 919.400000000]: Path planning took 0.200157865 seconds, distance is 0.61 m.
+[INFO] [1787300148.288054717, 924.300000000]: Path planning took 0.195715953 seconds, distance is 0.61 m.
+[INFO] [1787300153.290465709, 929.300000000]: Path planning took 0.197242671 seconds, distance is 0.61 m.
+[INFO] [1787300158.278870144, 934.300000000]: Path planning took 0.186703241 seconds, distance is 0.61 m.
+[INFO] [1787300163.281726894, 939.300000000]: Path planning took 0.188996218 seconds, distance is 0.61 m.
+[INFO] [1787300168.288477795, 944.300000000]: Path planning took 0.196260586 seconds, distance is 0.61 m.
+[INFO] [1787300173.275060157, 949.300000000]: Path planning took 0.181691605 seconds, distance is 0.61 m.
+[INFO] [1787300178.314250552, 954.400000000]: Path planning took 0.221958772 seconds, distance is 0.61 m.
+[INFO] [1787300183.317790023, 959.400000000]: Path planning took 0.225813845 seconds, distance is 0.61 m.
+[INFO] [1787300188.331488415, 964.400000000]: Path planning took 0.238015885 seconds, distance is 0.61 m.
+[INFO] [1787300193.274412543, 969.300000000]: Path planning took 0.181167396 seconds, distance is 0.61 m.
+[INFO] [1787300198.314267682, 974.400000000]: Path planning took 0.222440954 seconds, distance is 0.61 m.
+[INFO] [1787300203.290284923, 979.300000000]: Path planning took 0.198154681 seconds, distance is 0.61 m.
+[INFO] [1787300208.317431203, 984.400000000]: Path planning took 0.225143869 seconds, distance is 0.61 m.
+[INFO] [1787300213.275090793, 989.300000000]: Path planning took 0.181874303 seconds, distance is 0.61 m.
+[INFO] [1787300218.275870321, 994.300000000]: Path planning took 0.184149882 seconds, distance is 0.61 m.
+[INFO] [1787300223.279775145, 999.300000000]: Path planning took 0.187702978 seconds, distance is 0.61 m.
+[INFO] [1787300228.289144956, 1004.300000000]: Path planning took 0.196510329 seconds, distance is 0.61 m.
+[INFO] [1787300233.320660209, 1009.400000000]: Path planning took 0.227817619 seconds, distance is 0.61 m.
+[INFO] [1787300238.325363186, 1014.400000000]: Path planning took 0.232795418 seconds, distance is 0.61 m.
+[INFO] [1787300243.287087707, 1019.300000000]: Path planning took 0.194309917 seconds, distance is 0.61 m.
+[INFO] [1787300248.278747545, 1024.300000000]: Path planning took 0.186392908 seconds, distance is 0.61 m.
+[INFO] [1787300253.326233145, 1029.400000000]: Path planning took 0.232952427 seconds, distance is 0.61 m.
+[INFO] [1787300258.332062025, 1034.400000000]: Path planning took 0.239161729 seconds, distance is 0.61 m.
+[INFO] [1787300263.270626562, 1039.300000000]: Path planning took 0.177935737 seconds, distance is 0.61 m.
+[INFO] [1787300268.277113595, 1044.300000000]: Path planning took 0.184443009 seconds, distance is 0.61 m.
+[INFO] [1787300273.328074411, 1049.400000000]: Path planning took 0.235118601 seconds, distance is 0.61 m.
+[INFO] [1787300278.279210859, 1054.300000000]: Path planning took 0.187722040 seconds, distance is 0.61 m.
+[INFO] [1787300283.292249474, 1059.400000000]: Path planning took 0.198452843 seconds, distance is 0.61 m.
+[INFO] [1787300288.288169822, 1064.300000000]: Path planning took 0.194629378 seconds, distance is 0.61 m.
+[INFO] [1787300293.328938733, 1069.400000000]: Path pla[WARN] [1787300293.494765329, 1069.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300294.494302251, 1070.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300295.492901592, 1071.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300296.492967239, 1072.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300297.492492368, 1073.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300298.493153319, 1074.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300299.494904505, 1075.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300300.494059879, 1076.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300301.495147699, 1077.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300302.494611797, 1078.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300303.493288839, 1079.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300304.493292167, 1080.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300305.494977898, 1081.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300306.494053287, 1082.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300307.495630789, 1083.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300308.492612313, 1084.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300309.494482422, 1085.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300310.495412415, 1086.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300311.492133334, 1087.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300312.492267397, 1088.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300313.493028440, 1089.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300314.493816837, 1090.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300315.493690393, 1091.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300316.492737193, 1092.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300317.494533016, 1093.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300318.492985550, 1094.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300319.494402890, 1095.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300320.494421010, 1096.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300321.493056015, 1097.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300322.494087840, 1098.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300323.493526444, 1099.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300324.492740916, 1100.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300325.492021468, 1101.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300326.494301748, 1102.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300327.495735122, 1103.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300328.491461410, 1104.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300329.491701431, 1105.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300330.493531374, 1106.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300331.494529580, 1107.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300332.492157203, 1108.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300333.494372420, 1109.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300334.495419570, 1110.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300335.492486330, 1111.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300336.492142811, 1112.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300337.492551065, 1113.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300338.493135124, 1114.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300339.494958923, 1115.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300340.493164324, 1116.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300341.493333215, 1117.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300342.494468444, 1118.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300343.493881147, 1119.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300344.492729114, 1120.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300345.493744375, 1121.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300346.493247007, 1122.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300347.494684886, 1123.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300348.491853171, 1124.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300349.495037582, 1125.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300350.495088899, 1126.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300351.493028722, 1127.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300352.494306363, 1128.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300353.491641263, 1129.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300354.495444162, 1130.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300355.495295653, 1131.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300356.491651117, 1132.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300357.491865916, 1133.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300358.494897755, 1134.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300359.494304458, 1135.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300360.492730364, 1136.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300361.492511258, 1137.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300362.492747500, 1138.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300363.494053090, 1139.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300364.492345321, 1140.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300365.493087929, 1141.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300366.495728411, 1142.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300367.495343412, 1143.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300368.491787569, 1144.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300369.493178790, 1145.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300370.492532479, 1146.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300371.493366861, 1147.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300372.492937993, 1148.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300373.493065123, 1149.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300374.494192593, 1150.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300375.495446314, 1151.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300376.493892989, 1152.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300377.494404589, 1153.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300378.493371998, 1154.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300379.494164087, 1155.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300380.493384916, 1156.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300381.493228524, 1157.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300382.492161060, 1158.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300383.494842703, 1159.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300384.492196364, 1160.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300385.491522755, 1161.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300386.492829771, 1162.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300387.492900416, 1163.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300388.493841757, 1164.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300389.492402726, 1165.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300390.493828750, 1166.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300391.495133290, 1167.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300392.492421131, 1168.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300393.494133925, 1169.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300394.494919160, 1170.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300395.492460884, 1171.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300396.494686643, 1172.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300397.492535376, 1173.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300398.493186563, 1174.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300399.494704801, 1175.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300400.494923556, 1176.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300401.493944864, 1177.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300402.494761174, 1178.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300403.493389597, 1179.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300404.493867508, 1180.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300405.495426592, 1181.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300406.493825213, 1182.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300407.493341644, 1183.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300408.492988537, 1184.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300409.491852688, 1185.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300410.493565224, 1186.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300411.495581213, 1187.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300412.493839810, 1188.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300413.493431626, 1189.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300414.493963181, 1190.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300415.493572366, 1191.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300416.493753920, 1192.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300417.491927712, 1193.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300418.492731823, 1194.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300419.494676060, 1195.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300420.494349207, 1196.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300421.492778495, 1197.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300422.493632638, 1198.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300423.494551057, 1199.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300424.494903542, 1200.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300425.494472781, 1201.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300426.493704720, 1202.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300427.495540261, 1203.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300428.495514323, 1204.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300429.495799566, 1205.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300430.495234923, 1206.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300431.491797717, 1207.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300432.492082759, 1208.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300433.492142471, 1209.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300434.494943299, 1210.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300435.495067174, 1211.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300436.492816363, 1212.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300437.492084084, 1213.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300438.495419771, 1214.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300439.494505460, 1215.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300440.492685837, 1216.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300441.493531935, 1217.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300442.494104384, 1218.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300443.491773113, 1219.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300444.492487150, 1220.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300445.491591737, 1221.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300446.493056991, 1222.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300447.494313743, 1223.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300448.492803475, 1224.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300449.494469082, 1225.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300450.494030275, 1226.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300451.492857574, 1227.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300452.495156098, 1228.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300453.495700514, 1229.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300454.494748670, 1230.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300455.494454846, 1231.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300456.494208836, 1232.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300457.494409798, 1233.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300458.494523706, 1234.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300459.491824840, 1235.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300460.494811487, 1236.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300461.493762932, 1237.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300462.494115819, 1238.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300463.495567238, 1239.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300464.492395083, 1240.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300465.494643540, 1241.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300466.493480077, 1242.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300467.492062236, 1243.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300468.492149557, 1244.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300469.491668699, 1245.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300470.493699627, 1246.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300471.492983363, 1247.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300472.491814249, 1248.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300473.491798080, 1249.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300474.492260995, 1250.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300475.492745776, 1251.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300476.492170612, 1252.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300477.492515110, 1253.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300478.493390569, 1254.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300479.493635840, 1255.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300480.491587119, 1256.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300481.491543299, 1257.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300482.492326416, 1258.600000000]: Robot cannot move further in this direction!
+nning took 0.235816283 seconds, distance is 0.61 m.
+[INFO] [1787300298.270170708, 1074.300000000]: Path planning took 0.178123406 seconds, distance is 0.61 m.
+[INFO] [1787300303.289655565, 1079.300000000]: Path planning took 0.195867169 seconds, distance is 0.61 m.
+[INFO] [1787300308.276828818, 1084.300000000]: Path planning took 0.183517089 seconds, distance is 0.61 m.
+[INFO] [1787300313.278274779, 1089.300000000]: Path planning took 0.185735715 seconds, distance is 0.61 m.
+[INFO] [1787300318.282574894, 1094.300000000]: Path planning took 0.189706853 seconds, distance is 0.61 m.
+[INFO] [1787300323.296917092, 1099.400000000]: Path planning took 0.203587394 seconds, distance is 0.61 m.
+[INFO] [1787300328.332526030, 1104.400000000]: Path planning took 0.239756245 seconds, distance is 0.61 m.
+[INFO] [1787300333.278187290, 1109.300000000]: Path planning took 0.185968517 seconds, distance is 0.61 m.
+[INFO] [1787300338.272114422, 1114.300000000]: Path planning took 0.180516918 seconds, distance is 0.61 m.
+[INFO] [1787300343.279133429, 1119.300000000]: Path planning took 0.187457840 seconds, distance is 0.61 m.
+[INFO] [1787300348.330232388, 1124.400000000]: Path planning took 0.238260960 seconds, distance is 0.61 m.
+[INFO] [1787300353.290211121, 1129.300000000]: Path planning took 0.197443530 seconds, distance is 0.61 m.
+[INFO] [1787300358.271830809, 1134.300000000]: Path planning took 0.179754425 seconds, distance is 0.61 m.
+[INFO] [1787300363.282943013, 1139.300000000]: Path planning took 0.189258389 seconds, distance is 0.61 m.
+[INFO] [1787300368.318317960, 1144.400000000]: Path planning took 0.226238103 seconds, distance is 0.61 m.
+[INFO] [1787300373.329001501, 1149.400000000]: Path planning took 0.236215851 seconds, distance is 0.61 m.
+[INFO] [1787300378.287716295, 1154.300000000]: Path planning took 0.195390978 seconds, distance is 0.61 m.
+[INFO] [1787300383.330130397, 1159.400000000]: Path planning took 0.237082693 seconds, distance is 0.61 m.
+[INFO] [1787300388.285133207, 1164.300000000]: Path planning took 0.192935151 seconds, distance is 0.61 m.
+[INFO] [1787300393.288667659, 1169.300000000]: Path planning took 0.196031566 seconds, distance is 0.61 m.
+[INFO] [1787300398.274285505, 1174.300000000]: Path planning took 0.182741683 seconds, distance is 0.61 m.
+[INFO] [1787300403.288225692, 1179.300000000]: Path planning took 0.194626550 seconds, distance is 0.61 m.
+[INFO] [1787300408.288567913, 1184.300000000]: Path planning took 0.195974219 seconds, distance is 0.61 m.
+[INFO] [1787300413.322484568, 1189.400000000]: Path planning took 0.231262245 seconds, distance is 0.61 m.
+[INFO] [1787300418.275354875, 1194.300000000]: Path planning took 0.183336859 seconds, distance is 0.61 m.
+[INFO] [1787300423.282028440, 1199.300000000]: Path planning took 0.189271315 seconds, distance is 0.61 m.
+[INFO] [1787300428.329895539, 1204.400000000]: Path planning took 0.236581994 seconds, distance is 0.61 m.
+[INFO] [1787300433.275710144, 1209.300000000]: Path planning took 0.182884644 seconds, distance is 0.61 m.
+[INFO] [1787300438.331704140, 1214.400000000]: Path planning took 0.238093745 seconds, distance is 0.61 m.
+[INFO] [1787300443.286340047, 1219.300000000]: Path planning took 0.193180199 seconds, distance is 0.61 m.
+[INFO] [1787300448.320602498, 1224.400000000]: Path planning took 0.228261243 seconds, distance is 0.61 m.
+[INFO] [1787300453.285343883, 1229.300000000]: Path planning took 0.192026557 seconds, distance is 0.61 m.
+[INFO] [1787300458.275244485, 1234.300000000]: Path planning took 0.181698726 seconds, distance is 0.61 m.
+[INFO] [1787300463.291683402, 1239.400000000]: Path planning took 0.199565159 seconds, distance is 0.61 m.
+[INFO] [1787300468.291784433, 1244.400000000]: Path planning took 0.198642197 seconds, distance is 0.61 m.
+[INFO] [1787300473.321780820, 1249.400000000]: Path planning took 0.228325643 seconds, distance is 0.61 m.
+[INFO] [1787300478.270859926, 1254.300000000]: Path planning took 0.178798929 seconds, distance is 0.61 m.
+[INFO] [1787300483.278682090, 1259.300000000]: Path planning took 0.186622475 seconds[WARN] [1787300483.493984736, 1259.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300484.492447864, 1260.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300485.492572964, 1261.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300486.493333081, 1262.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300487.494498792, 1263.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300488.492551354, 1264.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300489.494965218, 1265.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300490.493344397, 1266.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300491.494947092, 1267.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300492.491882764, 1268.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300493.492922641, 1269.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300494.494810885, 1270.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300495.492638053, 1271.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300496.492383352, 1272.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300497.491507988, 1273.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300498.494091647, 1274.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300499.494343697, 1275.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300500.492113142, 1276.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300501.491581212, 1277.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300502.493057083, 1278.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300503.494796989, 1279.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300504.493252668, 1280.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300505.493304592, 1281.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300506.494763305, 1282.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300507.493067818, 1283.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300508.492227099, 1284.600000000]: Robot cannot move further in this direction!
+[WARN] [1787300509.491050277, 1285.600000000]: Robot cannot move further in this direction!
+double free or corruption (fasttop)
+, distance is 0.61 m.
+[INFO] [1787300488.277992807, 1264.300000000]: Path planning took 0.185410775 seconds, distance is 0.61 m.
+[INFO] [1787300493.323604809, 1269.400000000]: Path planning took 0.230688950 seconds, distance is 0.61 m.
+[INFO] [1787300498.269976423, 1274.300000000]: Path planning took 0.178490117 seconds, distance is 0.61 m.
+[INFO] [1787300503.179114339, 1279.200000000]: Path planning took 0.087998222 seconds, distance is 0.61 m.
+[INFO] [1787300508.284295240, 1284.300000000]: Path planning took 0.190622897 seconds, distance is 0.61 m.
+[WARN] [1787299223.595705, 0.000000]: Robot Start At 8
+[WARN] [1787299223.645621, 0.000000]: Tsp problem solved by Concorde. 0.0465703010559082
+/home/wcqw/ac-slam/catkin_ws/src/cpp_solver/world/map3/map3.xml
+74.0
+True
+Drawio scale: 0.10277777777777777
+[INFO] [1787299223.587126, 0.000000]: Build prior map with 36 vertices.
+[INFO] [1787299223.587792, 0.000000]: Build prior map.
+[INFO] [1787299223.591887, 0.000000]: prior_map_save_path: /home/wcqw/ac-slam/catkin_ws/src/cpp_solver/results/prior_map_Phase2B_PositiveControl_trial03.pickle
+Robot position: (-28.0, -28.0)
+10: 2225.556520061729,(x, y) = (10.527777777777779, 45.986111111111114)
+11: 1243.3435570987656,(x, y) = (10.527777777777779, 33.65277777777778)
+Reverse tsp path is better!
+tsp_path VS full_tsp_path:
+[8, 7, 6, 5, 4, 3, 9, 15, 16, 10, 11, 35, 36, 12, 13, 14, 18, 17, 21, 22, 28, 34, 33, 27, 26, 32, 31, 25, 24, 30, 29, 23, 19, 20, 37, 38]
+[8, 7, 6, 5, 4, 3, 9, 15, 16, 10, 11, 35, 36, 12, 13, 14, 18, 17, 21, 22, 28, 34, 33, 27, 26, 32, 31, 25, 24, 30, 29, 23, 19, 20, 37, 38]
+[INFO] [1787299223.647159, 0.000000]: TSP_RECORD {"full_tsp_path": [8, 7, 6, 5, 4, 3, 9, 15, 16, 10, 11, 35, 36, 12, 13, 14, 18, 17, 21, 22, 28, 34, 33, 27, 26, 32, 31, 25, 24, 30, 29, 23, 19, 20, 37, 38], "initial_tsp_path": [8, 7, 6, 5, 4, 3, 9, 15, 16, 10, 11, 35, 36, 12, 13, 14, 18, 17, 21, 22, 28, 34, 33, 27, 26, 32, 31, 25, 24, 30, 29, 23, 19, 20, 37, 38], "predicted_full_tsp_length": 415.22222222222206, "predicted_tsp_length": 415.22222222222206, "seed": 22003, "solver": "concorde"}
+[INFO] [1787299223.648013, 0.000000]: tsp_record_path: /home/wcqw/ac-slam/catkin_ws/src/cpp_solver/results/tsp_record_Phase2B_PositiveControl_trial03.json
+[INFO] [1787299223.648738, 0.000000]: Find initial tsp path.
+[INFO] [1787299223.649496, 0.000000]: Find modified curr_path and loop index
+[INFO] [1787299223.654336, 0.000000]: g2o_save_path: /home/wcqw/ac-slam/catkin_ws/src/cpp_solver/results/graph_Phase2B_PositiveControl_trial03.g2o
+[INFO] [1787299224.400252, 0.500000]: Really visited vertices: 
+[INFO] [1787299236.618080, 12.700000]: Really visited vertices: 8 
+[INFO] [1787299247.425195, 23.500000]: Really visited vertices: 8 
+[INFO] [1787299291.328039, 67.400000]: Really visited vertices: 8 7 13 
+[INFO] [1787299307.531876, 83.600000]: Really visited vertices: 8 7 13 12 6 
+[INFO] [1787299325.225392, 101.300000]: Really visited vertices: 8 7 13 12 6 
+[INFO] [1787299342.938792, 119.000000]: Really visited vertices: 8 7 13 12 6 5 11 
+[INFO] [1787299348.940597, 125.000000]: Really visited vertices: 8 7 13 12 6 5 11 
+[INFO] [1787299355.129725, 131.200000]: Really visited vertices: 8 7 13 12 6 5 11 
+[INFO] [1787299379.452355, 155.500000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 
+[INFO] [1787299407.956501, 184.000000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 
+[INFO] [1787299421.621485, 197.700000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 
+[INFO] [1787299427.765724, 203.800000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 
+[INFO] [1787299473.353514, 249.400000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 9 15 
+[INFO] [1787299479.165851, 255.200000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 9 15 
+[INFO] [1787299496.653566, 272.700000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 9 15 16 
+[INFO] [1787299508.160004, 284.200000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 9 15 16 
+[INFO] [1787299520.021662, 296.100000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 9 15 16 20 19 
+[INFO] [1787299534.842058, 310.900000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 9 15 16 20 19 
+[INFO] [1787299558.582797, 334.600000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 9 15 16 20 19 23 24 
+[INFO] [1787299580.299587, 356.400000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 9 15 16 20 19 23 24 29 
+[INFO] [1787299591.683913, 367.700000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 9 15 16 20 19 23 24 29 
+[INFO] [1787299609.064693, 385.100000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 9 15 16 20 19 23 24 29 30 
+[INFO] [1787299643.991223, 420.000000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 9 15 16 20 19 23 24 29 30 
+[INFO] [1787299650.806179, 426.900000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 9 15 16 20 19 23 24 29 30 31 
+[INFO] [1787299656.492619, 432.600000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 9 15 16 20 19 23 24 29 30 31 
+[INFO] [1787299674.061664, 450.100000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 9 15 16 20 19 23 24 29 30 31 
+[INFO] [1787299689.463660, 465.500000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 9 15 16 20 19 23 24 29 30 31 32 
+[INFO] [1787299712.319613, 488.400000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 9 15 16 20 19 23 24 29 30 31 32 26 
+[INFO] [1787299730.304220, 506.400000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 9 15 16 20 19 23 24 29 30 31 32 26 
+[INFO] [1787299744.102034, 520.200000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 9 15 16 20 19 23 24 29 30 31 32 26 
+[INFO] [1787299758.696055, 534.800000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 9 15 16 20 19 23 24 29 30 31 32 26 27 32 
+[INFO] [1787299770.242843, 546.300000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 9 15 16 20 19 23 24 29 30 31 32 26 27 32 33 
+[INFO] [1787299776.676469, 552.700000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 9 15 16 20 19 23 24 29 30 31 32 26 27 32 33 
+[INFO] [1787299791.833089, 567.900000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 9 15 16 20 19 23 24 29 30 31 32 26 27 32 33 28 
+[INFO] [1787299808.714071, 584.800000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 9 15 16 20 19 23 24 29 30 31 32 26 27 32 33 28 
+[INFO] [1787299839.648629, 615.700000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 9 15 16 20 19 23 24 29 30 31 32 26 27 32 33 28 22 
+[INFO] [1787299845.848710, 621.900000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 9 15 16 20 19 23 24 29 30 31 32 26 27 32 33 28 22 
+[INFO] [1787299863.112908, 639.200000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 9 15 16 20 19 23 24 29 30 31 32 26 27 32 33 28 22 
+[INFO] [1787299883.521127, 659.600000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 9 15 16 20 19 23 24 29 30 31 32 26 27 32 33 28 22 18 
+[INFO] [1787299943.346844, 719.400000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 9 15 16 20 19 23 24 29 30 31 32 26 27 32 33 28 22 18 17 36 
+[INFO] [1787299985.644649, 761.700000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 9 15 16 20 19 23 24 29 30 31 32 26 27 32 33 28 22 18 17 36 38 36 38 36 
+[INFO] [1787299991.138408, 767.200000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 9 15 16 20 19 23 24 29 30 31 32 26 27 32 33 28 22 18 17 36 38 36 38 36 
+[INFO] [1787300021.440149, 797.500000]: Really visited vertices: 8 7 13 12 6 5 11 10 4 3 9 3 9 15 16 20 19 23 24 29 30 31 32 26 27 32 33 28 22 18 17 36 38 36 38 36 
+[INFO] [1787300509.912405, 1285.400000]: Pose graph has: 507 vertices, 805 edges.
+... logging to /home/wcqw/ac-slam/catkin_ws/.ros/log/5b6c936a-9d36-11f1-a38e-cf9a7ef17d8f/roslaunch-msxg-99773.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;/home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/launch/exploration.launch
+[1mstarted roslaunch server http://127.0.0.1:39615/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /Mapper/LoopMatchMaximumVarianceCoarse: 0.16
+ * /Mapper/LoopMatchMinimumChainSize: 4
+ * /Mapper/LoopMatchMinimumResponseCoarse: 0.6
+ * /Mapper/LoopMatchMinimumResponseFine: 0.7
+ * /Mapper/LoopSearchMaximumDistance: 4
+ * /Mapper/LoopSearchSpaceDimension: 5.0
+ * /Mapper/MinimumTravelDistance: 1.0
+ * /Mapper/MinimumTravelHeading: 0.52
+ * /Mapper/grid_resolution: 0.1
+ * /Mapper/map_frame: map
+ * /Mapper/map_update_rate: 5
+ * /Mapper/max_covariance: 0.01
+ * /Mapper/max_particles: 10000
+ * /Mapper/min_map_size: 20
+ * /Mapper/min_particles: 2500
+ * /Mapper/publish_pose_graph: True
+ * /Mapper/range_threshold: 25.0
+ * /Mapper/transform_publish_period: 0.1
+ * /Navigator/command_target_distance: 1.5
+ * /Navigator/exploration_goal_distance: 3.0
+ * /Navigator/exploration_strategy: NearestFrontierPl...
+ * /Navigator/frequency: 1
+ * /Navigator/map_inflation_radius: 1.0
+ * /Navigator/max_replanning_period: 1.0
+ * /Navigator/min_replanning_period: 5.0
+ * /Navigator/min_target_area_size: 1.0
+ * /Navigator/navigation_goal_angle: 1.0
+ * /Navigator/navigation_goal_distance: 2.0
+ * /Navigator/navigation_homing_distance: 4.0
+ * /Navigator/robot_radius: 0.5
+ * /Navigator/save_path_plan_time: /home/wcqw/ac-sla...
+ * /Navigator/use_local_planner: True
+ * /Navigator/visualize_frontiers: True
+ * /Operator/conformance_weight: 1
+ * /Operator/continue_weight: 1
+ * /Operator/escape_weight: 1
+ * /Operator/frequency: 10
+ * /Operator/local_map/cost_scaling_factor: 2.0
+ * /Operator/local_map/global_frame: odom
+ * /Operator/local_map/height: 6.0
+ * /Operator/local_map/inflation_radius: 0.75
+ * /Operator/local_map/lethal_cost_threshold: 100
+ * /Operator/local_map/map_type: costmap
+ * /Operator/local_map/max_obstacle_height: 2.0
+ * /Operator/local_map/min_obstacle_height: 0.0
+ * /Operator/local_map/observation_sources: scan
+ * /Operator/local_map/obstacle_range: 4.0
+ * /Operator/local_map/publish_frequency: 1.0
+ * /Operator/local_map/publish_voxel_map: True
+ * /Operator/local_map/raytrace_range: 4.5
+ * /Operator/local_map/resolution: 0.05
+ * /Operator/local_map/robot_base_frame: base_link
+ * /Operator/local_map/robot_radius: 0.4
+ * /Operator/local_map/rolling_window: True
+ * /Operator/local_map/scan/clearing: True
+ * /Operator/local_map/scan/data_type: LaserScan
+ * /Operator/local_map/scan/expected_update_rate: 0.4
+ * /Operator/local_map/scan/marking: True
+ * /Operator/local_map/scan/max_obstacle_height: 0.4
+ * /Operator/local_map/scan/min_obstacle_height: 0.08
+ * /Operator/local_map/scan/observation_persistence: 0.0
+ * /Operator/local_map/static_map: False
+ * /Operator/local_map/track_unknown_space: True
+ * /Operator/local_map/transform_tolerance: 0.3
+ * /Operator/local_map/update_frequency: 5.0
+ * /Operator/local_map/width: 6.0
+ * /Operator/max_free_space: 3.0
+ * /Operator/max_velocity: 1.0
+ * /Operator/publish_route: True
+ * /Operator/safety_decay: 0.99
+ * /Operator/safety_weight: 1
+ * /Stage/base_watchdog_timeout: 0
+ * /laser_frame: base_laser_link
+ * /laser_topic: base_scan
+ * /map_frame: map
+ * /map_server/frame_id: map
+ * /map_service: static_map
+ * /map_topic: map
+ * /odometry_frame: odom
+ * /offset_frame: offset
+ * /path_planner/g2o_save_path: /home/wcqw/ac-sla...
+ * /path_planner/map_width: 74.0
+ * /path_planner/need_noise: False
+ * /path_planner/only_use_tsp: True
+ * /path_planner/prior_map_save_path: /home/wcqw/ac-sla...
+ * /path_planner/robot_position: -28.0 -28.0 0
+ * /path_planner/tsp_record_path: /home/wcqw/ac-sla...
+ * /path_planner/tsp_seed: 22003
+ * /path_planner/tsp_solver: concorde
+ * /path_planner/use_drawio: True
+ * /path_planner/variance: 0.0
+ * /path_planner/xml_path: /home/wcqw/ac-sla...
+ * /pubPath/gt_save_path: /home/wcqw/ac-sla...
+ * /pubPath/robot_position: -28.0 -28.0 0
+ * /pubPath/slam_save_path: /home/wcqw/ac-sla...
+ * /robot_description: <?xml version="1....
+ * /robot_frame: base_link
+ * /robot_start_position: -28.0 -28.0 0
+ * /robot_state_publisher/publish_frequency: 30.0
+ * /robot_state_publisher/tf_prefix: 
+ * /rosdistro: noetic
+ * /rosversion: 1.17.4
+ * /use_sim_time: True
+ * /use_tf1: True
+
+NODES
+  /
+    Explore (nav2d_navigator/explore_client)
+    GetMap (nav2d_navigator/get_map_client)
+    Mapper (nav2d_karto/mapper)
+    Navigator (nav2d_navigator/navigator)
+    Operator (nav2d_operator/operator)
+    RVIZ (rviz/rviz)
+    SetGoal (nav2d_navigator/set_goal_client)
+    Stage (stage_ros/stageros)
+    exploration_button_server (cpp_solver/exploration_button_server.py)
+    map_server (map_server/map_server)
+    path_planner (cpp_solver/path_planner.py)
+    pubPath (cpp_solver/pub_path)
+    publisher (p2os_urdf/p2os_publisher_3at)
+    robot_state_publisher (robot_state_publisher/robot_state_publisher)
+    rqt_robot_steering (rqt_robot_steering/rqt_robot_steering)
+    updateDistance (cpp_solver/updateDistance)
+
+[1mROS_MASTER_URI=http://localhost:11311[0m
+]2;/home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/launch/exploration.launch http://localhost:11311
+[1mprocess[Stage-1]: started with pid [99906][0m
+[1mprocess[map_server-2]: started with pid [99907][0m
+[1mprocess[Operator-3]: started with pid [99908][0m
+[1mprocess[Mapper-4]: started with pid [99913][0m
+[1mprocess[Navigator-5]: started with pid [99918][0m
+[1mprocess[GetMap-6]: started with pid [99924][0m
+[1mprocess[Explore-7]: started with pid [99929][0m
+[1mprocess[SetGoal-8]: started with pid [99936][0m
+[1mprocess[pubPath-9]: started with pid [99942][0m
+[1mprocess[updateDistance-10]: started with pid [99948][0m
+[1mprocess[exploration_button_server-11]: started with pid [99952][0m
+[1mprocess[path_planner-12]: started with pid [99958][0m
+[1mprocess[rqt_robot_steering-13]: started with pid [99962][0m
+[1mprocess[robot_state_publisher-14]: started with pid [99965][0m
+[1mprocess[publisher-15]: started with pid [99969][0m
+[1mprocess[RVIZ-16]: started with pid [99971][0m
+[RVIZ-16] killing on exit
+[publisher-15] killing on exit
+[robot_state_publisher-14] killing on exit
+[rqt_robot_steering-13] killing on exit
+[path_planner-12] killing on exit
+[exploration_button_server-11] killing on exit
+[pubPath-9] killing on exit
+[updateDistance-10] killing on exit
+[Explore-7] killing on exit
+[SetGoal-8] killing on exit
+[GetMap-6] killing on exit
+[Navigator-5] killing on exit
+[Mapper-4] killing on exit
+[Stage-1] killing on exit
+[map_server-2] killing on exit
+[Operator-3] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+[1mdone[0m

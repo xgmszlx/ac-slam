@@ -1,0 +1,5 @@
+# Preserve vendored source and raw experiment evidence byte-for-byte. Their
+# upstream/generated whitespace is not reformatted by the top-level repository.
+/baseline/** -whitespace
+/dependencies/** -whitespace
+/results/** -whitespace

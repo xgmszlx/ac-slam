@@ -1,0 +1,93 @@
+2026-08-21T09:43:05+08:00
+[nodes]
+/Explore
+/GetMap
+/Mapper
+/Navigator
+/Operator
+/RVIZ
+/SetGoal
+/Stage
+/exploration_button_server
+/map_server
+/path_planner
+/pubPath
+/publisher
+/robot_state_publisher
+/rosout
+/rqt_robot_steering
+/updateDistance
+[critical ping]
+rosnode: node is [/Stage]
+pinging /Stage with a timeout of 3.0s
+xmlrpc reply from http://127.0.0.1:39233/	time=0.299692ms
+rosnode: node is [/Mapper]
+pinging /Mapper with a timeout of 3.0s
+xmlrpc reply from http://127.0.0.1:41617/	time=0.424862ms
+rosnode: node is [/Navigator]
+pinging /Navigator with a timeout of 3.0s
+xmlrpc reply from http://127.0.0.1:45425/	time=0.354528ms
+rosnode: node is [/Operator]
+pinging /Operator with a timeout of 3.0s
+xmlrpc reply from http://127.0.0.1:40079/	time=0.302553ms
+rosnode: node is [/path_planner]
+pinging /path_planner with a timeout of 3.0s
+xmlrpc reply from http://127.0.0.1:35757/	time=0.761747ms
+rosnode: node is [/updateDistance]
+pinging /updateDistance with a timeout of 3.0s
+xmlrpc reply from http://127.0.0.1:46225/	time=0.303984ms
+rosnode: node is [/pubPath]
+pinging /pubPath with a timeout of 3.0s
+xmlrpc reply from http://127.0.0.1:41037/	time=0.337124ms
+rosnode: node is [/robot_state_publisher]
+pinging /robot_state_publisher with a timeout of 3.0s
+xmlrpc reply from http://127.0.0.1:38349/	time=0.325203ms
+[services]
+/StartMapping std_srvs/Trigger
+/StartExploration std_srvs/Trigger
+/prior_graph_service cpp_solver/RequestGraph
+/path_plan_service cpp_solver/TspPathList
+/reliable_loop_service cpp_solver/ReliableLoop
+[map summary]
+stamp=0.300000000
+resolution=0.10000000149011612 width=250 height=321
+known=6242 free=6036 occupied=206 unknown=74008
+[ground truth pose]
+pose: 
+  position: 
+    x: -28.0
+    y: -28.0
+    z: 0.0
+  orientation: 
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+---
+[tf map base_link]
+At time 44.300
+- Translation: [0.000, 0.000, 0.000]
+- Rotation: in Quaternion [0.000, 0.000, 0.000, 1.000]
+            in RPY (radian) [0.000, -0.000, 0.000]
+            in RPY (degree) [0.000, -0.000, 0.000]
+At time 44.400
+- Translation: [0.000, 0.000, 0.000]
+- Rotation: in Quaternion [0.000, 0.000, 0.000, 1.000]
+            in RPY (radian) [0.000, -0.000, 0.000]
+            in RPY (degree) [0.000, -0.000, 0.000]
+At time 45.300
+- Translation: [0.000, 0.000, 0.000]
+- Rotation: in Quaternion [0.000, 0.000, 0.000, 1.000]
+            in RPY (radian) [0.000, -0.000, 0.000]
+            in RPY (degree) [0.000, -0.000, 0.000]
+At time 46.300
+- Translation: [0.000, 0.000, 0.000]
+- Rotation: in Quaternion [0.000, 0.000, 0.000, 1.000]
+            in RPY (radian) [0.000, -0.000, 0.000]
+            in RPY (degree) [0.000, -0.000, 0.000]
+At time 47.300
+- Translation: [0.000, 0.000, 0.000]
+- Rotation: in Quaternion [0.000, 0.000, 0.000, 1.000]
+            in RPY (radian) [0.000, -0.000, 0.000]
+            in RPY (degree) [0.000, -0.000, 0.000]

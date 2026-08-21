@@ -1,0 +1,423 @@
+... logging to /home/wcqw/ac-slam/catkin_ws/.ros/log/8df9b518-9d01-11f1-a38e-cf9a7ef17d8f/roslaunch-msxg-9242.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;/home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/launch/exploration.launch
+[1mstarted roslaunch server http://127.0.0.1:42927/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /Mapper/LoopMatchMaximumVarianceCoarse: 0.16
+ * /Mapper/LoopMatchMinimumChainSize: 4
+ * /Mapper/LoopMatchMinimumResponseCoarse: 0.6
+ * /Mapper/LoopMatchMinimumResponseFine: 0.7
+ * /Mapper/LoopSearchMaximumDistance: 4
+ * /Mapper/LoopSearchSpaceDimension: 5.0
+ * /Mapper/MinimumTravelDistance: 1.0
+ * /Mapper/MinimumTravelHeading: 0.52
+ * /Mapper/grid_resolution: 0.1
+ * /Mapper/map_frame: map
+ * /Mapper/map_update_rate: 5
+ * /Mapper/max_covariance: 0.01
+ * /Mapper/max_particles: 10000
+ * /Mapper/min_map_size: 20
+ * /Mapper/min_particles: 2500
+ * /Mapper/publish_pose_graph: True
+ * /Mapper/range_threshold: 25.0
+ * /Mapper/transform_publish_period: 0.1
+ * /Navigator/command_target_distance: 1.5
+ * /Navigator/exploration_goal_distance: 3.0
+ * /Navigator/exploration_strategy: MyPlanner
+ * /Navigator/frequency: 1
+ * /Navigator/map_inflation_radius: 1.0
+ * /Navigator/max_replanning_period: 1.0
+ * /Navigator/min_replanning_period: 5.0
+ * /Navigator/min_target_area_size: 1.0
+ * /Navigator/navigation_goal_angle: 1.0
+ * /Navigator/navigation_goal_distance: 2.0
+ * /Navigator/navigation_homing_distance: 4.0
+ * /Navigator/robot_radius: 0.5
+ * /Navigator/save_path_plan_time: /home/wcqw/ac-sla...
+ * /Navigator/use_local_planner: True
+ * /Navigator/visualize_frontiers: True
+ * /Operator/conformance_weight: 1
+ * /Operator/continue_weight: 1
+ * /Operator/escape_weight: 1
+ * /Operator/frequency: 10
+ * /Operator/local_map/cost_scaling_factor: 2.0
+ * /Operator/local_map/global_frame: odom
+ * /Operator/local_map/height: 6.0
+ * /Operator/local_map/inflation_radius: 0.75
+ * /Operator/local_map/lethal_cost_threshold: 100
+ * /Operator/local_map/map_type: costmap
+ * /Operator/local_map/max_obstacle_height: 2.0
+ * /Operator/local_map/min_obstacle_height: 0.0
+ * /Operator/local_map/observation_sources: scan
+ * /Operator/local_map/obstacle_range: 4.0
+ * /Operator/local_map/publish_frequency: 1.0
+ * /Operator/local_map/publish_voxel_map: True
+ * /Operator/local_map/raytrace_range: 4.5
+ * /Operator/local_map/resolution: 0.05
+ * /Operator/local_map/robot_base_frame: base_link
+ * /Operator/local_map/robot_radius: 0.4
+ * /Operator/local_map/rolling_window: True
+ * /Operator/local_map/scan/clearing: True
+ * /Operator/local_map/scan/data_type: LaserScan
+ * /Operator/local_map/scan/expected_update_rate: 0.4
+ * /Operator/local_map/scan/marking: True
+ * /Operator/local_map/scan/max_obstacle_height: 0.4
+ * /Operator/local_map/scan/min_obstacle_height: 0.08
+ * /Operator/local_map/scan/observation_persistence: 0.0
+ * /Operator/local_map/static_map: False
+ * /Operator/local_map/track_unknown_space: True
+ * /Operator/local_map/transform_tolerance: 0.3
+ * /Operator/local_map/update_frequency: 5.0
+ * /Operator/local_map/width: 6.0
+ * /Operator/max_free_space: 3.0
+ * /Operator/max_velocity: 1.0
+ * /Operator/publish_route: True
+ * /Operator/safety_decay: 0.99
+ * /Operator/safety_weight: 1
+ * /Stage/base_watchdog_timeout: 0
+ * /laser_frame: base_laser_link
+ * /laser_topic: base_scan
+ * /map_frame: map
+ * /map_server/frame_id: map
+ * /map_service: static_map
+ * /map_topic: map
+ * /odometry_frame: odom
+ * /offset_frame: offset
+ * /path_planner/g2o_save_path: /home/wcqw/ac-sla...
+ * /path_planner/map_width: 74.0
+ * /path_planner/need_noise: False
+ * /path_planner/only_use_tsp: False
+ * /path_planner/prior_map_save_path: /home/wcqw/ac-sla...
+ * /path_planner/robot_position: -28.0 -28.0 0
+ * /path_planner/tsp_solver: concorde
+ * /path_planner/use_drawio: True
+ * /path_planner/variance: 0.0
+ * /path_planner/xml_path: /home/wcqw/ac-sla...
+ * /pubPath/gt_save_path: /home/wcqw/ac-sla...
+ * /pubPath/robot_position: -28.0 -28.0 0
+ * /pubPath/slam_save_path: /home/wcqw/ac-sla...
+ * /robot_description: <?xml version="1....
+ * /robot_frame: base_link
+ * /robot_start_position: -28.0 -28.0 0
+ * /robot_state_publisher/publish_frequency: 30.0
+ * /robot_state_publisher/tf_prefix: 
+ * /rosdistro: noetic
+ * /rosversion: 1.17.4
+ * /use_sim_time: True
+ * /use_tf1: True
+
+NODES
+  /
+    Explore (nav2d_navigator/explore_client)
+    GetMap (nav2d_navigator/get_map_client)
+    Mapper (nav2d_karto/mapper)
+    Navigator (nav2d_navigator/navigator)
+    Operator (nav2d_operator/operator)
+    RVIZ (rviz/rviz)
+    SetGoal (nav2d_navigator/set_goal_client)
+    Stage (stage_ros/stageros)
+    exploration_button_server (cpp_solver/exploration_button_server.py)
+    map_server (map_server/map_server)
+    path_planner (cpp_solver/path_planner.py)
+    pubPath (cpp_solver/pub_path)
+    publisher (p2os_urdf/p2os_publisher_3at)
+    robot_state_publisher (robot_state_publisher/robot_state_publisher)
+    rqt_robot_steering (rqt_robot_steering/rqt_robot_steering)
+    updateDistance (cpp_solver/updateDistance)
+
+auto-starting new master
+[1mprocess[master]: started with pid [9317][0m
+[1mROS_MASTER_URI=http://localhost:11311[0m
+]2;/home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/launch/exploration.launch http://localhost:11311
+[1msetting /run_id to 8df9b518-9d01-11f1-a38e-cf9a7ef17d8f[0m
+[1mprocess[rosout-1]: started with pid [9350][0m
+started core service [/rosout]
+[1mprocess[Stage-2]: started with pid [9354][0m
+[1mprocess[map_server-3]: started with pid [9355][0m
+[1mprocess[Operator-4]: started with pid [9356][0m
+[1mprocess[Mapper-5]: started with pid [9357][0m
+[1mprocess[Navigator-6]: started with pid [9358][0m
+[1mprocess[GetMap-7]: started with pid [9359][0m
+[1mprocess[Explore-8]: started with pid [9360][0m
+[1mprocess[SetGoal-9]: started with pid [9361][0m
+[1mprocess[pubPath-10]: started with pid [9362][0m
+[1mprocess[updateDistance-11]: started with pid [9363][0m
+[1mprocess[exploration_button_server-12]: started with pid [9364][0m
+[1mprocess[path_planner-13]: started with pid [9365][0m
+[1mprocess[rqt_robot_steering-14]: started with pid [9412][0m
+[1mprocess[robot_state_publisher-15]: started with pid [9415][0m
+[1mprocess[publisher-16]: started with pid [9439][0m
+[1mprocess[RVIZ-17]: started with pid [9441][0m
+[WARN] [1787276545.785972431]: The root link base_link has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.
+0x55fc14621450
+[INFO] [1787276546.160207969]: Inititialized robot 1, starting to map now.
+Create multimapper!!
+[WARN] [1787276548.030267806, 0.200000000]: local_map: Parameter "plugins" not provided, loading pre-Hydro parameters
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 0.300000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 0.300000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 0.300000 according to authority unknown_publisher[INFO] [1787276545.909019872]: Waiting for prior_graph_service ...
+[INFO] [1787276545.910676632]: waitForService: Service [/prior_graph_service] has not been advertised, waiting...
+
+         at line Warning: 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 0.300000 according to authority unknown_publisher
+Warning:          at line TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 0.300000 according to authority unknown_publisher
+         at line 277277 in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 0.300000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 0.300000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 0.300000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+/home/wcqw/ac-slam/catkin_ws/src/cpp_solver/world/map3/map3.xml
+74.0
+True
+Drawio scale: 0.10277777777777777
+[INFO] [1787276556.536874, 0.000000]: Build prior map with 36 vertices.
+[INFO] [1787276556.538144, 0.000000]: Build prior map.
+[INFO] [1787276556.643828, 8.800000]: prior_map_save_path: /home/wcqw/ac-slam/catkin_ws/src/cpp_solver/results/prior_map_SLAM_Aware_Planner_map3.pickle
+Robot position: (-28.0, -28.0)
+10: 2225.556520061729,(x, y) = (10.527777777777779, 45.986111111111114)
+11: 1243.3435570987656,(x, y) = (10.527777777777779, 33.65277777777778)
+[WARN] [1787276556.647148, 8.800000]: Robot Start At 8
+concorde /tmp/tmp573807bg/problem.tsp
+Host: msxg  Current process id: 9655
+Using random seed 1787276556
+Number of Nodes: 72
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 8137 (from tour)
+ERROR: No dual change in basis finding code
+Did not find a basic optimal solution
+Fractional matching routine failed
+Warning: restarting running timer Miscellaneous
+No warmstart, stumbling on anyway
+Basic dual change required, but no candidate edges
+  LP Value  1: 8135.000000  (0.00 seconds)
+  LP Value  2: 8137.000000  (0.01 seconds)
+New lower bound: 8135.000000
+  LP Value  1: 8137.000000  (0.01 seconds)
+New lower bound: 8137.000000
+Final lower bound 8137.000000, upper bound 8137.000000
+Exact lower bound: 8137.000000
+DIFF: 0.000000
+Final LP has 95 rows, 188 columns, 594 nonzeros
+Optimal Solution: 8137.00
+Number of bbnodes: 1
+Total Running Time: 0.04 (seconds)
+Original tsp path is better!
+[WARN] [1787276556.752645, 8.900000]: Tsp problem solved by Concorde. 0.10229659080505371
+tsp_path VS full_tsp_path:
+[8, 7, 6, 5, 4, 3, 9, 15, 16, 10, 11, 35, 37, 38, 36, 12, 13, 14, 18, 17, 21, 22, 28, 34, 33, 27, 26, 32, 31, 25, 24, 30, 29, 23, 19, 20]
+[8, 7, 6, 5, 4, 3, 9, 15, 16, 10, 11, 35, 37, 38, 36, 12, 13, 14, 18, 17, 21, 22, 28, 34, 33, 27, 26, 32, 31, 25, 24, 30, 29, 23, 19, 20]
+[INFO] [1787276556.753800, 8.900000]: Find initial tsp path.
+<class 'networkx.utils.decorators.argmap'> compilation 4:4: FutureWarning: laplacian_matrix will return a scipy.sparse array instead of a matrix in Networkx 3.0.
+tsp_d_opt: 46.41588833612747, tsp_dist: 415.22222222222206
+current idx: 0 / 35
+max_candidate_dist: 44.76564224112665
+Iter <built-in function iter>: 0 / 36
+Iter <built-in function iter>: 20 / 36
+#candidates: 76
+current obj: 0.1160569215788487, resistance: 1.0998852356650595, dis_incre: 1.0594059405940595 tsp_obj: 0.11178565561283046
+Optimization ratio: 1.0
+No candidate is better than current_d_opt. Iteration stops.
+#Add edges: 3, [(16, 20), (8, 14), (38, 26)]
+Time cost: 0.06s for best one; 0.1s for all.
+  
+optimized tsp path: [8, 7, 6, 5, 4, 3, 9, 15, 16, 10, 11, 35, 37, 38, 36, 12, 13, 14, 8, 14, 18, 17, 21, 22, 28, 34, 33, 27, 26, 38, 26, 32, 31, 25, 24, 30, 29, 23, 19, 20, 16]
+non-optimized tsp path: [8, 7, 6, 5, 4, 3, 9, 15, 16, 10, 11, 35, 37, 38, 36, 12, 13, 14, 18, 17, 21, 22, 28, 34, 33, 27, 26, 32, 31, 25, 24, 30, 29, 23, 19, 20]
+[INFO] [1787276557.024530, 9.200000]: Find modified curr_path and loop index
+[INFO] [1787276557.028897, 9.200000]: g2o_save_path: /home/wcqw/ac-slam/catkin_ws/src/cpp_solver/results/graph_SLAM_Aware_Planner_map3.g2o
+[INFO] [1787276557.049863, 9.200000]: Replanning request. curr_vertex_idx: 0
+[INFO] [1787276557.050712, 9.200000]:                     covered_vertices: ()
+[INFO] [1787276557.051413, 9.200000]: Handle local replanning...
+[INFO] [1787276557.052042, 9.200000]: curr path length: 41, is_loop length: 41
+[INFO] [1787276557.052564, 9.200000]: Send new plan: 8  ---> 7 6 5 4 3 9 15 16 10 11 35 37 38 36 12 13 14 8(L) 14 18 17 21 22 28 34 33 27 26 38(L) 26 32 31 25 24 30 29 23 19 20 16(L) 
+[INFO] [1787276618.642416, 70.800000]: Really visited vertices: 8 
+[INFO] [1787276690.773405, 142.900000]: Replanning request. curr_vertex_idx: 0
+[INFO] [1787276690.774377, 142.900000]:                     covered_vertices: ()
+[INFO] [1787276690.775289, 142.900000]: Handle local replanning...
+[INFO] [1787276690.775899, 142.900000]: curr path length: 41, is_loop length: 41
+[INFO] [1787276690.776420, 142.900000]: Send new plan: 8  ---> 7 6 5 4 3 9 15 16 10 11 35 37 38 36 12 13 14 8(L) 14 18 17 21 22 28 34 33 27 26 38(L) 26 32 31 25 24 30 29 23 19 20 16(L) 
+[WARN] [1787276690.777409811, 142.900000000]: No frontier at vertex 8. #Frontier: 0
+[INFO] [1787276691.774998, 143.900000]: Replanning request. curr_vertex_idx: 1
+[INFO] [1787276691.775946, 143.900000]:                     covered_vertices: ()
+[INFO] [1787276691.776623, 143.900000]: Handle local replanning...
+[INFO] [1787276691.777269, 143.900000]: Local path to replan: [7, 6, 5, 4, 3, 9, 15, 16, 10, 11, 35, 37, 38, 36, 12, 13, 14, 8]
+concorde /tmp/tmpodz7grzj/problem.tsp
+Host: msxg  Current process id: 10977
+Using random seed 1787276691
+Number of Nodes: 36
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 1092 (from tour)
+ERROR: No dual change in basis finding code
+Did not find a basic optimal solution
+Fractional matching routine failed
+Warning: restarting running timer Miscellaneous
+No warmstart, stumbling on anyway
+Basic dual change required, but no candidate edges
+  LP Value  1: 1062.000000  (0.00 seconds)
+  LP Value  2: 1092.000000  (0.00 seconds)
+New lower bound: 1092.000000
+Final lower bound 1092.000000, upper bound 1092.000000
+Exact lower bound: 1092.000000
+DIFF: 0.000000
+Final LP has 40 rows, 65 columns, 169 nonzeros
+Optimal Solution: 1092.00
+Number of bbnodes: 1
+Total Running Time: 0.00 (seconds)
+Original tsp path is better!
+[ERROR] [1787276691.790763, 143.900000]: Local path replan get wrong start and end vertex! Specify_end: True
+[ERROR] [1787276691.791924, 143.900000]: new_local_path: [7, 8, 14, 13, 12, 36, 38, 37, 35, 11, 10, 16, 15, 9, 3, 4, 5, 6]
+[[ 0.         12.33333333 24.66666667 37.         49.07638889 62.4375
+  73.74305556 61.66666667 50.36111111 38.02777778 49.33333333 61.66666667
+  49.33333333 37.         25.69444444 13.36111111 19.32600021 11.30555556]
+ [12.33333333  0.         12.33333333 24.66666667 36.74305556 50.10416667
+  61.40972222 49.33333333 38.02777778 25.69444444 37.         49.33333333
+  37.         24.66666667 13.36111111 25.69444444 31.65933355 23.63888889]
+ [24.66666667 12.33333333  0.         12.33333333 24.40972222 37.77083333
+  49.07638889 37.         25.69444444 13.36111111 24.66666667 37.
+  49.33333333 37.         25.69444444 38.02777778 43.99266688 35.97222222]
+ [37.         24.66666667 12.33333333  0.         12.07638889 25.4375
+  36.74305556 24.66666667 13.36111111 25.69444444 37.         49.33333333
+  61.66666667 49.33333333 38.02777778 50.36111111 56.32600021 48.30555556]
+ [49.07638889 36.74305556 24.40972222 12.07638889  0.         13.36111111
+  24.66666667 36.74305556 25.4375     37.77083333 49.07638889 61.40972222
+  73.74305556 61.40972222 50.10416667 62.4375     68.4023891  60.38194444]
+ [62.4375     50.10416667 37.77083333 25.4375     13.36111111  0.
+  11.30555556 23.38194444 12.07638889 24.40972222 35.71527778 48.04861111
+  60.38194444 48.04861111 36.74305556 49.07638889 60.38194444 73.74305556]
+ [73.74305556 61.40972222 49.07638889 36.74305556 24.66666667 11.30555556
+   0.         12.07638889 23.38194444 35.71527778 24.40972222 36.74305556
+  49.07638889 36.74305556 48.04861111 60.38194444 71.6875     85.04861111]
+ [61.66666667 49.33333333 37.         24.66666667 36.74305556 23.38194444
+  12.07638889  0.         11.30555556 23.63888889 12.33333333 24.66666667
+  37.         24.66666667 35.97222222 48.30555556 59.61111111 72.97222222]
+ [50.36111111 38.02777778 25.69444444 13.36111111 25.4375     12.07638889
+  23.38194444 11.30555556  0.         12.33333333 23.63888889 35.97222222
+  48.30555556 35.97222222 24.66666667 37.         48.30555556 61.66666667]
+ [38.02777778 25.69444444 13.36111111 25.69444444 37.77083333 24.40972222
+  35.71527778 23.63888889 12.33333333  0.         11.30555556 23.63888889
+  35.97222222 23.63888889 12.33333333 24.66666667 35.97222222 49.33333333]
+ [49.33333333 37.         24.66666667 37.         49.07638889 35.71527778
+  24.40972222 12.33333333 23.63888889 11.30555556  0.         12.33333333
+  24.66666667 12.33333333 23.63888889 35.97222222 47.27777778 60.63888889]
+ [61.66666667 49.33333333 37.         49.33333333 61.40972222 48.04861111
+  36.74305556 24.66666667 35.97222222 23.63888889 12.33333333  0.
+  12.33333333 24.66666667 35.97222222 48.30555556 59.61111111 72.97222222]
+ [49.33333333 37.         49.33333333 61.66666667 73.74305556 60.38194444
+  49.07638889 37.         48.30555556 35.97222222 24.66666667 12.33333333
+   0.         12.33333333 23.63888889 35.97222222 47.27777778 60.63888889]
+ [37.         24.66666667 37.         49.33333333 61.40972222 48.04861111
+  36.74305556 24.66666667 35.97222222 23.63888889 12.33333333 24.66666667
+  12.33333333  0.         11.30555556 23.63888889 34.94444444 48.30555556]
+ [25.69444444 13.36111111 25.69444444 38.02777778 50.10416667 36.74305556
+  48.04861111 35.97222222 24.66666667 12.33333333 23.63888889 35.97222222
+  23.63888889 11.30555556  0.         12.33333333 23.63888889 37.        ]
+ [13.36111111 25.69444444 38.02777778 50.36111111 62.4375     49.07638889
+  60.38194444 48.30555556 37.         24.66666667 35.97222222 48.30555556
+  35.97222222 23.63888889 12.33333333  0.         11.30555556 24.66666667]
+ [19.32600021 31.65933355 43.99266688 56.32600021 68.4023891  60.38194444
+  71.6875     59.61111111 48.30555556 35.97222222 47.27777778 59.61111111
+  47.27777778 34.94444444 23.63888889 11.30555556  0.         13.36111111]
+ [11.30555556 23.63888889 35.97222222 48.30555556 60.38194444 73.74305556
+  85.04861111 72.97222222 61.66666667 49.33333333 60.63888889 72.97222222
+  60.63888889 48.30555556 37.         24.66666667 13.36111111  0.        ]]
+[INFO] [1787276691.793785, 143.900000]: curr path length: 41, is_loop length: 41
+[INFO] [1787276691.794629, 143.900000]: Send new plan: 8 7  ---> 6 5 4 3 9 15 16 10 11 35 37 38 36 12 13 14 8(L) 14 18 17 21 22 28 34 33 27 26 38(L) 26 32 31 25 24 30 29 23 19 20 16(L) 
+[INFO] [1787276696.745125, 148.900000]: Really visited vertices: 8 
+[INFO] [1787276697.779483, 149.900000]: Replanning request. curr_vertex_idx: 1
+[INFO] [1787276697.780320, 149.900000]:                     covered_vertices: ()
+[INFO] [1787276697.780940, 149.900000]: Handle local replanning...
+[INFO] [1787276697.781522, 149.900000]: Local path to replan: [7, 6, 5, 4, 3, 9, 15, 16, 10, 11, 35, 37, 38, 36, 12, 13, 14, 8]
+concorde /tmp/tmpeypm7vrg/problem.tsp
+Host: msxg  Current process id: 10987
+Using random seed 1787276697
+Number of Nodes: 36
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 1178 (from tour)
+ERROR: No dual change in basis finding code
+Did not find a basic optimal solution
+Fractional matching routine failed
+Warning: restarting running timer Miscellaneous
+No warmstart, stumbling on anyway
+Basic dual change required, but no candidate edges
+  LP Value  1: 1052.000000  (0.00 seconds)
+  LP Value  2: 1092.000000  (0.00 seconds)
+recomputing rownorms ...
+  LP Value  3: 1092.000000  (0.00 seconds)
+New lower bound: 1092.000000
+New upperbound from x-heuristic: 1092.00
+Final lower bound 1092.000000, upper bound 1092.000000
+Exact lower bound: 1092.000000
+DIFF: 0.000000
+Final LP has 40 rows, 67 columns, 153 nonzeros
+Optimal Solution: 1092.00
+Number of bbnodes: 1
+Total Running Time: 0.00 (seconds)
+Original tsp path is better!
+[ERROR] [1787276697.794821, 149.900000]: Local path replan get wrong start and end vertex! Specify_end: True
+[ERROR] [1787276697.795858, 149.900000]: new_local_path: [7, 8, 14, 13, 12, 36, 38, 37, 35, 11, 10, 16, 15, 9, 3, 4, 5, 6]
+[[ 0.         12.33333333 24.66666667 37.         49.07638889 62.4375
+  73.74305556 61.66666667 50.36111111 38.02777778 49.33333333 61.66666667
+  49.33333333 37.         25.69444444 13.36111111 19.32600021 11.30555556]
+ [12.33333333  0.         12.33333333 24.66666667 36.74305556 50.10416667
+  61.40972222 49.33333333 38.02777778 25.69444444 37.         49.33333333
+  37.         24.66666667 13.36111111 25.69444444 30.74699974 23.63888889]
+ [24.66666667 12.33333333  0.         12.33333333 24.40972222 37.77083333
+  49.07638889 37.         25.69444444 13.36111111 24.66666667 37.
+  49.33333333 37.         25.69444444 38.02777778 43.08033307 35.97222222]
+ [37.         24.66666667 12.33333333  0.         12.07638889 25.4375
+  36.74305556 24.66666667 13.36111111 25.69444444 37.         49.33333333
+  61.66666667 49.33333333 38.02777778 50.36111111 55.41366641 48.30555556]
+ [49.07638889 36.74305556 24.40972222 12.07638889  0.         13.36111111
+  24.66666667 36.74305556 25.4375     37.77083333 49.07638889 61.40972222
+  73.74305556 61.40972222 50.10416667 62.4375     67.4900553  60.38194444]
+ [62.4375     50.10416667 37.77083333 25.4375     13.36111111  0.
+  11.30555556 23.38194444 12.07638889 24.40972222 35.71527778 48.04861111
+  60.38194444 48.04861111 36.74305556 49.07638889 60.38194444 73.74305556]
+ [73.74305556 61.40972222 49.07638889 36.74305556 24.66666667 11.30555556
+   0.         12.07638889 23.38194444 35.71527778 24.40972222 36.74305556
+  49.07638889 36.74305556 48.04861111 60.38194444 71.6875     85.04861111]
+ [61.66666667 49.33333333 37.         24.66666667 36.74305556 23.38194444
+  12.07638889  0.         11.30555556 23.63888889 12.33333333 24.66666667
+  37.         24.66666667 35.97222222 48.30555556 59.61111111 72.97222222]
+ [50.36111111 38.02777778 25.69444444 13.36111111 25.4375     12.07638889
+  23.38194444 11.30555556  0.         12.33333333 23.63888889 35.97222222
+  48.30555556 35.97222222 24.66666667 37.         48.30555556 61.66666667]
+ [38.02777778 25.69444444 13.36111111 25.69444444 37.77083333 24.40972222
+  35.71527778 23.63888889 12.33333333  0.         11.30555556 23.63888889
+  35.97222222 23.63888889 12.33333333 24.66666667 35.97222222 49.33333333]
+ [49.33333333 37.         24.66666667 37.         49.07638889 35.71527778
+  24.40972222 12.33333333 23.63888889 11.30555556  0.         12.33333333
+  24.66666667 12.33333333 23.63888889 35.97222222 47.27777778 60.63888889]
+ [61.66666667 49.33333333 37.         49.33333333 61.40972222 48.04861111
+  36.74305556 24.66666667 35.97222222 23.63888889 12.33333333  0.
+  12.33333333 24.66666667 35.97222222 48.30555556 59.61111111 72.97222222]
+ [49.33333333 37.         49.33333333 61.66666667 73.74305556 60.38194444
+  49.07638889 37.         48.30555556 35.97222222 24.66666667 12.33333333
+   0.         12.33333333 23.63888889 35.97222222 47.27777778 60.63888889]
+ [37.         24.66666667 37.         49.33333333 61.40972222 48.04861111
+  36.74305556 24.66666667 35.97222222 23.63888889 12.33333333 24.66666667
+  12.33333333  0.         11.30555556 23.63888889 34.94444444 48.30555556]
+ [25.69444444 13.36111111 25.69444444 38.02777778 50.10416667 36.74305556
+  48.04861111 35.97222222 24.66666667 12.33333333 23.63888889 35.97222222
+  23.63888889 11.30555556  0.         12.33333333 23.63888889 37.        ]
+ [13.36111111 25.69444444 38.02777778 50.36111111 62.4375     49.07638889
+  60.38194444 48.30555556 37.         24.66666667 35.97222222 48.30555556
+  35.97222222 23.63888889 12.33333333  0.         11.30555556 24.66666667]
+ [19.32600021 30.74699974 43.08033307 55.41366641 67.4900553  60.38194444
+  71.6875     59.61111111 48.30555556 35.97222222 47.27777778 59.61111111
+  47.27777778 34.94444444 23.63888889 11.30555556  0.         13.36111111]
+ [11.30555556 23.63888889 35.97222222 48.30555556 60.38194444 73.74305556
+  85.04861111 72.97222222 61.66666667 49.33333333 60.63888889 72.97222222
+  60.63888889 48.30555556 37.         24.66666667 13.36111111  0.        ]]
+[INFO] [1787276697.797385, 149.900000]: curr path length: 41, is_loop length: 41
+[INFO] [1787276697.797910, 149.900000]: Send new plan: 8 7  ---> 6 5 4 3 9 15 16 10 11 35 37 38 36 12 13 14 8(L) 14 18 17 21 22 28 34 33 27 26 38(L) 26 32 31 25 24 30 29 23 19 20 16(L) 

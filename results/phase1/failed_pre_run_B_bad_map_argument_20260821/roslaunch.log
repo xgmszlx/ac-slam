@@ -1,0 +1,27 @@
+[FATAL] [1787278173.505573297]: The world file /home/wcqw/ac-slam/catkin_ws/src/cpp_solver/world/map3.world does not exist.
+[ERROR] [1787278173.511028018]: Map_server could not open /home/wcqw/ac-slam/catkin_ws/src/cpp_solver/world/map3.yaml.
+[WARN] [1787278173.564311546]: The root link base_link has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.
+0x55c84c4cc830
+[INFO] [1787278173.603365717]: Inititialized robot 1, starting to map now.
+Create multimapper!!
+[41merr[0m: unable to open world file /home/wcqw/ac-slam/catkin_ws/src/cpp_solver/world/map3.world : No such file or directory (/tmp/binarydeb/ros-noetic-stage-4.3.0/libstage/worldfile.cc Load)
+[41merr[0m:  Failed to open file /home/wcqw/ac-slam/catkin_ws/src/cpp_solver/world/map3.world (/tmp/binarydeb/ros-noetic-stage-4.3.0/libstage/world.cc Load)
+/home/wcqw/ac-slam/catkin_ws/src/cpp_solver/world/map3.xml
+74.0
+True
+Traceback (most recent call last):
+  File "/home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/scripts/path_planner.py", line 680, in <module>
+    path_planner = PathPlanner()
+  File "/home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/scripts/path_planner.py", line 69, in __init__
+    self.prior_graph = self.build_prior_graph_with_xml(need_normalize=False, need_noise=self.need_noise, variance=self.variance)
+  File "/home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/scripts/path_planner.py", line 122, in build_prior_graph_with_xml
+    graph = build_prior_map_from_drawio(self.xml_path, actual_map_width=self.map_width, need_normalize=need_normalize, need_noise=need_noise, variance=variance)
+  File "/home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/scripts/read_drawio_to_nx.py", line 144, in build_prior_map_from_drawio
+    graph = from_drawio_to_nx(path)
+  File "/home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/scripts/read_drawio_to_nx.py", line 23, in from_drawio_to_nx
+    tree = ET.parse(file_name)
+  File "/usr/lib/python3.8/xml/etree/ElementTree.py", line 1202, in parse
+    tree.parse(source, parser)
+  File "/usr/lib/python3.8/xml/etree/ElementTree.py", line 584, in parse
+    source = open(source, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/home/wcqw/ac-slam/catkin_ws/src/cpp_solver/world/map3.xml'

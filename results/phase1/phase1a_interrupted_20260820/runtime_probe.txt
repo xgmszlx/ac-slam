@@ -1,0 +1,247 @@
+2026-08-20T17:40:59+08:00
+[rosnode list]
+/Explore
+/GetMap
+/Mapper
+/Navigator
+/Operator
+/RVIZ
+/SetGoal
+/Stage
+/exploration_button_server
+/map_server
+/path_planner
+/pubPath
+/publisher
+/robot_state_publisher
+/rosout
+/rqt_robot_steering
+/updateDistance
+[rosservice list]
+/Explore/get_loggers
+/Explore/set_logger_level
+/GetMap/get_loggers
+/GetMap/set_logger_level
+/Mapper/get_loggers
+/Mapper/set_logger_level
+/Navigator/get_loggers
+/Navigator/set_logger_level
+/Operator/get_loggers
+/Operator/local_map/inflation_layer/set_parameters
+/Operator/local_map/obstacle_layer/set_parameters
+/Operator/local_map/set_parameters
+/Operator/set_logger_level
+/Pause
+/RVIZ/get_loggers
+/RVIZ/load_config
+/RVIZ/load_config_discarding_changes
+/RVIZ/reload_shaders
+/RVIZ/save_config
+/RVIZ/set_logger_level
+/SetGoal/get_loggers
+/SetGoal/set_logger_level
+/Stage/get_loggers
+/Stage/set_logger_level
+/StartExploration
+/StartMapping
+/Stop
+/change_map
+/exploration_button_server/get_loggers
+/exploration_button_server/set_logger_level
+/explore_button
+/get_map
+/map_server/get_loggers
+/map_server/set_logger_level
+/path_plan_service
+/path_planner/get_loggers
+/path_planner/set_logger_level
+/prior_graph_service
+/pubPath/get_loggers
+/pubPath/set_logger_level
+/publisher/get_loggers
+/publisher/set_logger_level
+/reliable_loop_service
+/reset_positions
+/robot_state_publisher/get_loggers
+/robot_state_publisher/set_logger_level
+/rosout/get_loggers
+/rosout/set_logger_level
+/rqt_robot_steering/get_loggers
+/rqt_robot_steering/set_logger_level
+/static_world
+/updateDistance/get_loggers
+/updateDistance/set_logger_level
+[rostopic list]
+/Explore/cancel
+/Explore/feedback
+/Explore/goal
+/Explore/result
+/Explore/status
+/GetFirstMap/cancel
+/GetFirstMap/feedback
+/GetFirstMap/goal
+/GetFirstMap/result
+/GetFirstMap/status
+/Localize/cancel
+/Localize/feedback
+/Localize/goal
+/Localize/result
+/Localize/status
+/Mapper/closure_edges
+/Mapper/closure_edges_array
+/Mapper/colored_edges
+/Mapper/odom_edges
+/Mapper/odom_edges_array
+/Mapper/vertices
+/Mapper/vertices_array
+/MoveTo/cancel
+/MoveTo/feedback
+/MoveTo/goal
+/MoveTo/result
+/MoveTo/status
+/Navigator/dist_map
+/Navigator/dist_map_updates
+/Navigator/frontier_to_vertex
+/Navigator/frontier_to_vertex_array
+/Navigator/frontiers
+/Navigator/frontiers_array
+/Navigator/markers
+/Navigator/nav_goal
+/Navigator/nav_goal_array
+/Navigator/path_finder
+/Navigator/path_finder_array
+/Navigator/plan
+/Navigator/prior_map
+/Navigator/tsp_index
+/Navigator/visual_tsp_path
+/Navigator/visual_tsp_path_array
+/Operator/desired
+/Operator/local_map/costmap
+/Operator/local_map/costmap_updates
+/Operator/local_map/footprint
+/Operator/local_map/inflation_layer/parameter_descriptions
+/Operator/local_map/inflation_layer/parameter_updates
+/Operator/local_map/obstacle_layer/parameter_descriptions
+/Operator/local_map/obstacle_layer/parameter_updates
+/Operator/local_map/parameter_descriptions
+/Operator/local_map/parameter_updates
+/Operator/route
+/base_pose_ground_truth
+/base_scan
+/clicked_point
+/clock
+/cmd
+/cmd_vel
+/costs
+/edge_distance
+/finished_topic
+/goal
+/initialpose
+/joint_states
+/karto_in
+/karto_out
+/localization_result
+/map
+/map_updates
+/odom
+/others
+/path_gt
+/path_odom
+/path_slam
+/pose_graph_idx
+/request_replan
+/rosout
+/rosout_agg
+/slam_path
+/slam_pose_graph
+/stop_exploration
+/tf
+/tf_static
+/world
+/world_metadata
+/world_updates
+[critical node pings]
+rosnode: node is [/Stage]
+pinging /Stage with a timeout of 3.0s
+xmlrpc reply from http://msxg:42501/	time=0.348806ms
+rosnode: node is [/Mapper]
+pinging /Mapper with a timeout of 3.0s
+xmlrpc reply from http://msxg:40881/	time=0.384331ms
+rosnode: node is [/Navigator]
+pinging /Navigator with a timeout of 3.0s
+xmlrpc reply from http://msxg:45543/	time=0.538111ms
+rosnode: node is [/Operator]
+pinging /Operator with a timeout of 3.0s
+xmlrpc reply from http://msxg:35139/	time=0.403404ms
+rosnode: node is [/path_planner]
+pinging /path_planner with a timeout of 3.0s
+xmlrpc reply from http://msxg:35297/	time=1.529217ms
+rosnode: node is [/updateDistance]
+pinging /updateDistance with a timeout of 3.0s
+xmlrpc reply from http://msxg:39681/	time=0.395298ms
+rosnode: node is [/pubPath]
+pinging /pubPath with a timeout of 3.0s
+xmlrpc reply from http://msxg:40239/	time=0.364304ms
+rosnode: node is [/robot_state_publisher]
+pinging /robot_state_publisher with a timeout of 3.0s
+xmlrpc reply from http://msxg:39371/	time=0.427961ms
+[critical service types]
+/StartMapping std_srvs/Trigger
+/StartExploration std_srvs/Trigger
+/prior_graph_service cpp_solver/RequestGraph
+/path_plan_service cpp_solver/TspPathList
+/reliable_loop_service cpp_solver/ReliableLoop
+[map one message]
+map_load_time: 
+  secs: 0
+  nsecs:         0
+resolution: 0.10000000149011612
+width: 250
+height: 321
+origin: 
+  position: 
+    x: 0.19999968964913517
+    y: -7.100010592418692
+    z: 0.0
+  orientation: 
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+---
+[tf map to base_link]
+At time 43.400
+- Translation: [0.000, 0.000, 0.000]
+- Rotation: in Quaternion [0.000, 0.000, 0.000, 1.000]
+            in RPY (radian) [0.000, -0.000, 0.000]
+            in RPY (degree) [0.000, -0.000, 0.000]
+At time 43.400
+- Translation: [0.000, 0.000, 0.000]
+- Rotation: in Quaternion [0.000, 0.000, 0.000, 1.000]
+            in RPY (radian) [0.000, -0.000, 0.000]
+            in RPY (degree) [0.000, -0.000, 0.000]
+At time 44.500
+- Translation: [0.000, 0.000, 0.000]
+- Rotation: in Quaternion [0.000, 0.000, 0.000, 1.000]
+            in RPY (radian) [0.000, -0.000, 0.000]
+            in RPY (degree) [0.000, -0.000, 0.000]
+At time 45.400
+- Translation: [0.000, 0.000, 0.000]
+- Rotation: in Quaternion [0.000, 0.000, 0.000, 1.000]
+            in RPY (radian) [0.000, -0.000, 0.000]
+            in RPY (degree) [0.000, -0.000, 0.000]
+At time 46.400
+- Translation: [0.000, 0.000, 0.000]
+- Rotation: in Quaternion [0.000, 0.000, 0.000, 1.000]
+            in RPY (radian) [0.000, -0.000, 0.000]
+            in RPY (degree) [0.000, -0.000, 0.000]
+At time 47.400
+- Translation: [0.000, 0.000, 0.000]
+- Rotation: in Quaternion [0.000, 0.000, 0.000, 1.000]
+            in RPY (radian) [0.000, -0.000, 0.000]
+            in RPY (degree) [0.000, -0.000, 0.000]
+At time 48.400
+- Translation: [0.000, 0.000, 0.000]
+- Rotation: in Quaternion [0.000, 0.000, 0.000, 1.000]
+            in RPY (radian) [0.000, -0.000, 0.000]
+            in RPY (degree) [0.000, -0.000, 0.000]

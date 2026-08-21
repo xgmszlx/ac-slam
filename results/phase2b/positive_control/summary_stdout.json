@@ -1,0 +1,65 @@
+{
+  "attempted_trials": 4,
+  "end_to_end_attempt_success_rate": 0.75,
+  "instrumentation_finding": "The custom incremental /slam_pose_graph stream can stop advancing after exploration; full /slam_path and /Mapper/closure_edges plus the accepted callback are used for the positive-control before/after audit.",
+  "invalid_trials": [
+    {
+      "counted_as_karto_negative": false,
+      "reason": "RuntimeError: MoveTo target 3 failed with state 1",
+      "status": "FAILED",
+      "trial": 3
+    }
+  ],
+  "karto_success_rate_given_valid_revisit": 1.0,
+  "requested_valid_trials": 3,
+  "success_definition": "At least one Karto accepted-loop callback during the explicit revisit and at least one new full-graph marker edge crossing the pre-revisit node cutoff with scan-index gap > 70.",
+  "successful_trials": 3,
+  "trials": [
+    {
+      "accepted_closures_during_explicit_revisit": 1,
+      "accepted_closures_whole_run": 2,
+      "cross_cutoff_nonlocal_marker_edges": 41,
+      "historical_poses_compared": 565,
+      "history_node_count_before_revisit": 565,
+      "incremental_pose_graph_topic_stale": true,
+      "max_historical_trajectory_correction_m": 0.22019721705798015,
+      "mean_historical_trajectory_correction_m": 0.11251632560232104,
+      "node_count_after_revisit": 720,
+      "success": true,
+      "targets_attempted": 7,
+      "targets_succeeded": 7,
+      "trial": 1
+    },
+    {
+      "accepted_closures_during_explicit_revisit": 1,
+      "accepted_closures_whole_run": 1,
+      "cross_cutoff_nonlocal_marker_edges": 2,
+      "historical_poses_compared": 527,
+      "history_node_count_before_revisit": 527,
+      "incremental_pose_graph_topic_stale": true,
+      "max_historical_trajectory_correction_m": 0.21083836929081112,
+      "mean_historical_trajectory_correction_m": 0.10408574739695185,
+      "node_count_after_revisit": 610,
+      "success": true,
+      "targets_attempted": 7,
+      "targets_succeeded": 7,
+      "trial": 2
+    },
+    {
+      "accepted_closures_during_explicit_revisit": 1,
+      "accepted_closures_whole_run": 1,
+      "cross_cutoff_nonlocal_marker_edges": 75,
+      "historical_poses_compared": 512,
+      "history_node_count_before_revisit": 512,
+      "incremental_pose_graph_topic_stale": true,
+      "max_historical_trajectory_correction_m": 0.24723169067231057,
+      "mean_historical_trajectory_correction_m": 0.08660877558445783,
+      "node_count_after_revisit": 635,
+      "success": true,
+      "targets_attempted": 7,
+      "targets_succeeded": 7,
+      "trial": 4
+    }
+  ],
+  "valid_completed_trials": 3
+}

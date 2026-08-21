@@ -1,0 +1,1082 @@
+[WARN] [1787287320.921436716]: The root link base_link has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.
+0x563971bd28a0
+[INFO] [1787287320.968730038]: Inititialized robot 1, starting to map now.
+Create multimapper!!
+concorde -s 21003 /tmp/tmp51e1tkhh/problem.tsp
+Host: msxg  Current process id: 53002
+Using random seed 21003
+Number of Nodes: 72
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 8137 (from tour)
+ERROR: No dual change in basis finding code
+Did not find a basic optimal solution
+Fractional matching routine failed
+Warning: restarting running timer Miscellaneous
+No warmstart, stumbling on anyway
+Basic dual change required, but no candidate edges
+  LP Value  1: 8137.000000  (0.01 seconds)
+New lower bound: 8137.000000
+Final lower bound 8137.000000, upper bound 8137.000000
+Exact lower bound: 8137.000000
+DIFF: 0.000000
+Final LP has 97 rows, 174 columns, 594 nonzeros
+Optimal Solution: 8137.00
+Number of bbnodes: 1
+Total Running Time: 0.03 (seconds)
+[WARN] [1787287322.390499833, 0.400000000]: local_map: Parameter "plugins" not provided, loading pre-Hydro parameters
+[WARN] [1787287339.257037464, 17.200000000]: No frontier at vertex 8. #Frontier: 0
+[WARN] [1787287362.290756796, 40.300000000]: No frontier at vertex 7. #Frontier: 0
+[WARN] [1787287391.321367992, 69.300000000]: No frontier at vertex 6. #Frontier: 0
+[WARN] [1787287417.338406158, 95.300000000]: No frontier at vertex 5. #Frontier: 0
+[WARN] [1787287453.438044958, 131.400000000]: No frontier at vertex 4. #Frontier: 0
+[INFO] [1787287320.983702012]: Waiting for prior_graph_service ...
+[INFO] [1787287320.984761160]: waitForService: Service [/prior_graph_service] has not been advertised, waiting...
+[INFO] [1787287321.560270124]: waitForService: Service [/prior_graph_service] is now available.
+[INFO] [1787287321.561565975]: Receive response of service prior_graph_service.
+[INFO] [1787287321.562605910]: Load prior_map.
+[INFO] [1787287321.562659882]: Publishing prior graph......
+[INFO] [1787287321.563236895]: Draw prior_map in RVIZ.
+[INFO] [1787287321.563252119]: Waiting for path_plan_service ...
+[INFO] [1787287321.566617375]: Receive tsp path: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 36 12 13 14 18 17
+[INFO] [1787287321.566668052]: Receive loop index: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+[INFO] [1787287321.566680176]: Waiting for reliable_loop_service ...
+[INFO] [1787287321.567114170]: reliable_loop_service is available.
+[INFO] [1787287321.567443970]: MyPlanner is initialized and running!!
+[INFO] [1787287321.567477591]: Successfully loaded exploration strategy [MyPlanner].
+[INFO] [1787287329.993566509, 8.000000000]: Navigator is now initialized.
+[INFO] [1787287339.254080333, 17.200000000]: Call local replanning...
+[INFO] [1787287339.257021767, 17.200000000]: Reach vertex 8
+[INFO] [1787287339.257074493, 17.200000000]: Set newGoal 7
+[INFO] [1787287340.245399112, 18.200000000]: Call local replanning...
+[INFO] [1787287346.249517293, 24.200000000]: Call local replanning...
+[INFO] [1787287352.275937601, 30.200000000]: Call local replanning...
+[INFO] [1787287352.278758504, 30.200000000]: Reach vertex 7
+[INFO] [1787287352.279812256, 30.200000000]: Explore Goal 7 's frontiers...
+[INFO] [1787287354.274990353, 32.200000000]: Call local replanning...
+[INFO] [1787287354.279201070, 32.200000000]: Explore Goal 7 's frontiers...
+[INFO] [1787287356.281154290, 34.200000000]: Call local replanning...
+[INFO] [1787287356.295628711, 34.300000000]: Explore Goal 7 's frontiers...
+[INFO] [1787287362.287197773, 40.200000000]: Call local replanning...
+[INFO] [1787287362.290790554, 40.300000000]: Set newGoal 6
+[INFO] [1787287368.297012690, 46.300000000]: Call local replanning...
+[INFO] [1787287374.303858704, 52.300000000]: Call local replanning...
+[INFO] [1787287380.290373148, 58.300000000]: Call local replanning...
+[INFO] [1787287386.353194402, 64.300000000]: Call local replanning...
+[INFO] [1787287386.356880145, 64.300000000]: Reach vertex 6
+[INFO] [1787287386.363499504, 64.300000000]: Explore Goal 6 's frontiers...
+[INFO] [1787287391.317828488, 69.300000000]: Call local replanning...
+[INFO] [1787287391.321388572, 69.300000000]: Set newGoal 5
+[INFO] [1787287397.312876817, 75.300000000]: Call local replanning...
+[INFO] [1787287403.327947715, 81.300000000]: Call local replanning...
+[INFO] [1787287409.346952478, 87.300000000]: Call local replanning...
+[INFO] [1787287415.406773188, 93.400000000]: Call local replanning...
+[INFO] [1787287415.410297171, 93.400000000]: Reach vertex 5
+[INFO] [1787287415.412617746, 93.400000000]: Explore Goal 5 's frontiers...
+[INFO] [1787287417.335337890, 95.300000000]: Call local replanning...
+[INFO] [1787287417.338429606, 95.300000000]: Set newGoal 4
+[INFO] [1787287423.359381110, 101.300000000]: Call local replanning...
+[INFO] [1787287429.420196420, 107.400000000]: Call local replanning...
+[INFO] [1787287435.358623130, 113.300000000]: Call local replanning...
+[INFO] [1787287441.358294861, 119.300000000]: Call local replanning...
+[INFO] [1787287447.361235579, 125.300000000]: Call local replanning...
+[INFO] [1787287453.434460109, 131.400000000]: Call local replanning...
+[INFO] [1787287453.438022101, 131.400000000]: Reach vertex 4
+[INFO] [1787287453.438075513, 131.400000000]: Set newGoal 3
+[INFO] [1787287459.365225588, 137.300000000]: Call local replanning...
+[INFO] [1787287465.449711370, 143.400000000]: Call local replanning...
+[INFO] [1787287465.453402183, 143.400000000]: Reach vertex 3
+[INFO] [1787287465.459404292, 143.400000000]: Explore Goal 3 's frontiers...
+[[WARN] [1787287469.466301321, 147.400000000]: No frontier at vertex 3. #Frontier: 0
+[WARN] [1787287502.429981267, 180.400000000]: No frontier at vertex 9. #Frontier: 0
+/home/wcqw/ac-slam/catkin_ws/src/cpp_solver/world/map3/map3.xml
+74.0
+True
+Drawio scale: 0.10277777777777777
+[INFO] [1787287321.486978, 0.000000]: Build prior map with 36 vertices.
+[INFO] [1787287321.488008, 0.000000]: Build prior map.
+[INFO] [1787287321.494443, 0.000000]: prior_map_save_path: /home/wcqw/ac-slam/catkin_ws/src/cpp_solver/results/prior_map_Phase2_pair03_PriorTSP_seed21003.pickle
+Robot position: (-28.0, -28.0)
+10: 2225.556520061729,(x, y) = (10.527777777777779, 45.986111111111114)
+11: 1243.3435570987656,(x, y) = (10.527777777777779, 33.65277777777778)
+Reverse tsp path is better!
+tsp_path VS full_tsp_path:
+[8, 7, 6, 5, 4, 3, 9, 15, 16, 10, 11, 35, 37, 20, 19, 23, 29, 30, 24, 25, 31, 32, 26, 27, 33, 34, 28, 22, 21, 38, 36, 12, 13, 14, 18, 17]
+[8, 7, 6, 5, 4, 3, 9, 15, 16, 10, 11, 35, 37, 20, 19, 23, 29, 30, 24, 25, 31, 32, 26, 27, 33, 34, 28, 22, 21, 38, 36, 12, 13, 14, 18, 17]
+[INFO] [1787287321.549245, 0.000000]: TSP_RECORD {"full_tsp_path": [8, 7, 6, 5, 4, 3, 9, 15, 16, 10, 11, 35, 37, 20, 19, 23, 29, 30, 24, 25, 31, 32, 26, 27, 33, 34, 28, 22, 21, 38, 36, 12, 13, 14, 18, 17], "initial_tsp_path": [8, 7, 6, 5, 4, 3, 9, 15, 16, 10, 11, 35, 37, 20, 19, 23, 29, 30, 24, 25, 31, 32, 26, 27, 33, 34, 28, 22, 21, 38, 36, 12, 13, 14, 18, 17], "predicted_full_tsp_length": 415.222222222222, "predicted_tsp_length": 415.222222222222, "seed": 21003, "solver": "concorde"}
+[INFO] [1787287321.549959, 0.000000]: tsp_record_path: /home/wcqw/ac-slam/catkin_ws/src/cpp_solver/results/tsp_record_Phase2_pair03_PriorTSP_seed21003.json
+[INFO] [1787287321.550640, 0.000000]: Find initial tsp path.
+[INFO] [1787287321.551276, 0.000000]: Find modified curr_path and loop index
+[INFO] [1787287321.554469, 0.000000]: g2o_save_path: /home/wcqw/ac-slam/catkin_ws/src/cpp_solver/results/graph_Phase2_pair03_PriorTSP_seed21003.g2o
+[INFO] [1787287321.564706, 0.000000]: Replanning request. curr_vertex_idx: 0
+[INFO] [1787287321.565710, 0.000000]:                     covered_vertices: ()
+[INFO] [1787287322.493125, 0.500000]: Really visited vertices: 
+[INFO] [1787287335.213278, 13.200000]: Really visited vertices: 8 
+[INFO] [1787287339.255238, 17.200000]: Replanning request. curr_vertex_idx: 0
+[INFO] [1787287339.256126, 17.200000]:                     covered_vertices: ()
+[INFO] [1787287340.246636, 18.200000]: Replanning request. curr_vertex_idx: 1
+[INFO] [1787287340.247793, 18.200000]:                     covered_vertices: ()
+[INFO] [1787287345.819602, 23.800000]: Really visited vertices: 8 
+[INFO] [1787287346.250475, 24.200000]: Replanning request. curr_vertex_idx: 1
+[INFO] [1787287346.251375, 24.200000]:                     covered_vertices: ()
+[INFO] [1787287352.276936, 30.200000]: Replanning request. curr_vertex_idx: 1
+[INFO] [1787287352.277869, 30.200000]:                     covered_vertices: ()
+[INFO] [1787287354.276072, 32.200000]: Replanning request. curr_vertex_idx: 1
+[INFO] [1787287354.277123, 32.200000]:                     covered_vertices: ()
+[INFO] [1787287356.282456, 34.200000]: Replanning request. curr_vertex_idx: 1
+[INFO] [1787287356.283404, 34.200000]:                     covered_vertices: ()
+[INFO] [1787287361.229701, 39.200000]: Really visited vertices: 8 7 
+[INFO] [1787287362.288467, 40.200000]: Replanning request. curr_vertex_idx: 1
+[INFO] [1787287362.289612, 40.300000]:                     covered_vertices: ()
+[INFO] [1787287368.298311, 46.300000]: Replanning request. curr_vertex_idx: 2
+[INFO] [1787287368.299306, 46.300000]:                     covered_vertices: ()
+[INFO] [1787287374.304853, 52.300000]: Replanning request. curr_vertex_idx: 2
+[INFO] [1787287374.305938, 52.300000]:                     covered_vertices: ()
+[INFO] [1787287379.827626, 57.800000]: Really visited vertices: 8 7 
+[INFO] [1787287380.291344, 58.300000]: Replanning request. curr_vertex_idx: 2
+[INFO] [1787287380.292341, 58.300000]:                     covered_vertices: ()
+[INFO] [1787287386.354662, 64.300000]: Replanning request. curr_vertex_idx: 2
+[INFO] [1787287386.355690, 64.300000]:                     covered_vertices: ()
+[INFO] [1787287391.319191, 69.300000]: Replanning request. curr_vertex_idx: 2
+[INFO] [1787287391.320382, 69.300000]:                     covered_vertices: ()
+[INFO] [1787287397.314201, 75.300000]: Replanning request. curr_vertex_idx: 3
+[INFO] [1787287397.315302, 75.300000]:                     covered_vertices: ()
+[INFO] [1787287403.329133, 81.300000]: Replanning request. curr_vertex_idx: 3
+[INFO] [1787287403.330194, 81.300000]:                     covered_vertices: ()
+[INFO] [1787287409.348132, 87.300000]: Replanning request. curr_vertex_idx: 3
+[INFO] [1787287409.349214, 87.300000]:                     covered_vertices: ()
+[INFO] [1787287415.408152, 93.400000]: Replanning request. curr_vertex_idx: 3
+[INFO] [1787287415.409194, 93.400000]:                     covered_vertices: ()
+[INFO] [1787287417.336572, 95.300000]: Replanning request. curr_vertex_idx: 3
+[INFO] [1787287417.337514, 95.300000]:                     covered_vertices: ()
+[INFO] [1787287423.360600, 101.300000]: Replanning request. curr_vertex_idx: 4
+[INFO] [1787287423.361637, 101.300000]:                     covered_vertices: ()
+[INFO] [1787287429.421401, 107.400000]: Replanning request. curr_vertex_idx: 4
+[INFO] [1787287429.422443, 107.400000]:                     covered_vertices: ()
+[INFO] [1787287435.359734, 113.300000]: Replanning request. curr_vertex_idx: 4
+[INFO] [1787287435.360792, 113.300000]:                     covered_vertices: ()
+[INFO] [1787287441.359460, 119.300000]: Replanning request. curr_vertex_idx: 4
+[INFO] [1787287441.360435, 119.300000]:                     covered_vertices: ()
+[INFO] [1787287446.838897, 124.800000]: Really visited vertices: 8 7 6 5 
+[INFO] [1787287447.362450, 125.300000]: Replanning request. curr_vertex_idx: 4
+[INFO] [1787287447.363410, 125.300000]:                     covered_vertices: ()
+[INFO] [1787287453.435763, 131.400000]: Replanning request. curr_vertex_idx: 4
+[INFO] [1787287453.436929, 131.400000]:                     covered_vertices: ()
+[INFO] [1787287458.932490, 136.900000]: Really visited vertices: 8 7 6 5 4 
+[INFO] [1787287459.366448, 137.300000]: Replanning request. curr_vertex_idx: 5
+[INFO] [1787287459.367456, 137.300000]:                     covered_vertices: ()
+[INFO] [1787287464.351986, 142.300000]: Really visited vertices: 8 7 6 5 4 
+[INFO] [1787287465.451005, 143.400000]: Replanning request. curr_vertex_idx: 5
+[INFO] [1787287465.452071, 143.400000]:                     covered_vertices: ()
+[INFO] [1787287469.463962, 147.400000]: Replanning request. curr_vertex_idx: 5
+[INFO] [1787287469.465015, 147.400000]:                     covered_vertices: ()
+[INFO] [1787287474.546169, 152.500000]: Really visited vertices: 8 7 6 5 4 3 
+[INFO] [1787287475.373221, 153.300000]: Replanning request. curr_vertex_idx: 6
+[INFO] [1787287475.374095, 153.300000]:                     covered_vertices: ()
+[INFO] [1787287481.387359, 159.300000]: Replanning request. curr_vertex_idx: 6
+[INFO] [1787287481.388307, 159.300000]:                     covered_vertices: ()
+[INFO] [1787287486.435163, 164.400000]: Really visited vertices: 8 7 6 5 4 3 
+[INFO] [1787287487.380589, 165.300000]: Replanning request. curr_vertex_idx: 6
+[INFO] [1787287487.381505, 165.300000]:                     covered_vertices: ()
+[INFO] [1787287493.497349, 171.500000]: Replanning request. curr_vertex_idx: 6
+[INFO] [1787287493.498309, 171.500000]:                     covered_vertices: ()
+[INFO] [1787287499.429749, 177.400000]: Replanning request. curr_vertex_idx: 6
+[INFO] [1787287499.430805, 177.400000]:                     covered_vertices: ()
+[INFO] [1787287502.427982, 180.400000]: Replanning request. curr_vertex_idx: 6
+[INFO] [1787287502.428963, 180.400000]:                     covered_vertices: ()
+[INFO] [1787287508.499189, 186.500000]: Replanning request. curr_vertex_idx: 7
+[INFO] [1787287508.500422, 186.500000]:                     covered_vertices: ()
+[INFO] [1787287514.539659, 192.500000]: Replanning request. curr_vertex_idx: 7
+[INFO] [1787287514.540860, 192.500000]:                     covered_vertices: ()
+[WARN] [1787287547.463837687, 225.400000000]: No frontier at vertex 15. #Frontier: 0
+[WARN] [1787287577.623174942, 255.600000000]: No frontier at vertex 16. #Frontier: 0
+[WARN] [1787287637.464568012, 315.400000000]: No frontier at vertex 11. #Frontier: 0
+[WARN] [1787287673.514619942, 351.500000000]: No frontier at vertex 35. #Frontier: 0
+INFO] [1787287469.462840134, 147.400000000]: Call local replanning...
+[INFO] [1787287469.466335792, 147.400000000]: Set newGoal 9
+[INFO] [1787287475.372056947, 153.300000000]: Call local replanning...
+[INFO] [1787287481.386126533, 159.300000000]: Call local replanning...
+[INFO] [1787287487.379344519, 165.300000000]: Call local replanning...
+[INFO] [1787287493.496033076, 171.500000000]: Call local replanning...
+[INFO] [1787287499.428532748, 177.400000000]: Call local replanning...
+[INFO] [1787287499.431907733, 177.400000000]: Reach vertex 9
+[INFO] [1787287499.433936495, 177.400000000]: Explore Goal 9 's frontiers...
+[INFO] [1787287502.426760415, 180.400000000]: Call local replanning...
+[INFO] [1787287502.430005031, 180.400000000]: Set newGoal 15
+[INFO] [1787287508.497841136, 186.500000000]: Call local replanning...
+[INFO] [1787287514.538301755, 192.500000000]: Call local replanning...
+[INFO] [1787287520.426916775, 198.400000000]: Call local replanning...
+[INFO] [1787287526.546122714, 204.500000000]: Call local replanning...
+[INFO] [1787287532.534863429, 210.500000000]: Call local replanning...
+[INFO] [1787287538.427542860, 216.400000000]: Call local replanning...
+[INFO] [1787287544.565785412, 222.500000000]: Call local replanning...
+[INFO] [1787287544.569387984, 222.500000000]: Reach vertex 15
+[INFO] [1787287544.572755447, 222.500000000]: Explore Goal 15 's frontiers...
+[INFO] [1787287547.460187910, 225.400000000]: Call local replanning...
+[INFO] [1787287547.463866881, 225.400000000]: Set newGoal 16
+[INFO] [1787287553.532797555, 231.500000000]: Call local replanning...
+[INFO] [1787287559.450596887, 237.400000000]: Call local replanning...
+[INFO] [1787287565.425304918, 243.400000000]: Call local replanning...
+[INFO] [1787287571.575237007, 249.500000000]: Call local replanning...
+[INFO] [1787287577.619344378, 255.600000000]: Call local replanning...
+[INFO] [1787287577.623157252, 255.600000000]: Reach vertex 16
+[INFO] [1787287577.623209822, 255.600000000]: Skip repeated visit to vertex 10
+[INFO] [1787287577.623221887, 255.600000000]: Set newGoal 11
+[INFO] [1787287583.442592586, 261.400000000]: Call local replanning...
+[INFO] [1787287589.632943725, 267.600000000]: Call local replanning...
+[INFO] [1787287595.517285302, 273.500000000]: Call local replanning...
+[INFO] [1787287601.480463017, 279.400000000]: Call local replanning...
+[INFO] [1787287607.478281901, 285.400000000]: Call local replanning...
+[INFO] [1787287613.565097215, 291.500000000]: Call local replanning...
+[INFO] [1787287619.604276169, 297.600000000]: Call local replanning...
+[INFO] [1787287625.442461659, 303.400000000]: Call local replanning...
+[INFO] [1787287631.636859189, 309.600000000]: Call local replanning...
+[INFO] [1787287637.461124896, 315.400000000]: Call local replanning...
+[INFO] [1787287637.464557272, 315.400000000]: Reach vertex 11
+[INFO] [1787287637.464589325, 315.400000000]: Set newGoal 35
+[INFO] [1787287643.589867874, 321.600000000]: Call local replanning...
+[INFO] [1787287649.502471861, 327.500000000]: Call local replanning...
+[INFO] [1787287655.539056237, 333.500000000]: Call local replanning...
+[INFO] [1787287661.543555086, 339.500000000]: Call local replanning...
+[INFO] [1787287667.559475320, 345.500000000]: Call local replanning...
+[INFO] [1787287667.562625981, 345.500000000]: Reach vertex 35
+[INFO] [1787287667.583806122, 345.500000000]: Explore Goal 35 's frontiers...
+[INFO] [1787287673.511144541, 351.500000000]: Call local replanning...
+[INFO] [1787287673.514648814, 351.500000000]: Set newGoal 37
+[INFO] [1787287679.498433015, 357.500000000]: Call local replanning...
+[INFO] [1787287685.578070084, 363.500000000]: Call local replanning...
+[INFO] [1787287691.670697001, 369.600000000]: Call local replanning...
+[INFO] [1787287697.496474378, 375.500000000]: Call local replanning...
+[INFO] [1787287697.499454542, 375.500000000]: Skip currGoal 37 that has no frontier and seen by robot
+[INFO] [1787287697.499475292, 375.500000000]: Set newGoal 20
+[INFO] [1787287703.685163850, 381.600000000]: Call local replanning...
+[INFO] [1787287709.549291244, 387.500[WARN] [1787287739.586143254, 417.500000000]: No frontier at vertex 20. #Frontier: 0
+[WARN] [1787287757.704695094, 435.700000000]: No frontier at vertex 19. #Frontier: 0
+[INFO] [1787287520.428237, 198.400000]: Replanning request. curr_vertex_idx: 7
+[INFO] [1787287520.429278, 198.400000]:                     covered_vertices: ()
+[INFO] [1787287526.547280, 204.500000]: Replanning request. curr_vertex_idx: 7
+[INFO] [1787287526.548324, 204.500000]:                     covered_vertices: ()
+[INFO] [1787287532.536023, 210.500000]: Replanning request. curr_vertex_idx: 7
+[INFO] [1787287532.537355, 210.500000]:                     covered_vertices: ()
+[INFO] [1787287538.428708, 216.400000]: Replanning request. curr_vertex_idx: 7
+[INFO] [1787287538.429822, 216.400000]:                     covered_vertices: ()
+[INFO] [1787287544.567011, 222.500000]: Replanning request. curr_vertex_idx: 7
+[INFO] [1787287544.568083, 222.500000]:                     covered_vertices: ()
+[INFO] [1787287547.461418, 225.400000]: Replanning request. curr_vertex_idx: 7
+[INFO] [1787287547.462502, 225.400000]:                     covered_vertices: ()
+[INFO] [1787287552.685989, 230.600000]: Really visited vertices: 8 7 6 5 4 3 9 15 
+[INFO] [1787287553.534032, 231.500000]: Replanning request. curr_vertex_idx: 8
+[INFO] [1787287553.534983, 231.500000]:                     covered_vertices: ()
+[INFO] [1787287559.451716, 237.400000]: Replanning request. curr_vertex_idx: 8
+[INFO] [1787287559.452775, 237.400000]:                     covered_vertices: ()
+[INFO] [1787287564.642423, 242.600000]: Really visited vertices: 8 7 6 5 4 3 9 15 
+[INFO] [1787287565.426423, 243.400000]: Replanning request. curr_vertex_idx: 8
+[INFO] [1787287565.427527, 243.400000]:                     covered_vertices: ()
+[INFO] [1787287571.576643, 249.500000]: Replanning request. curr_vertex_idx: 8
+[INFO] [1787287571.577712, 249.500000]:                     covered_vertices: ()
+[INFO] [1787287577.620733, 255.600000]: Replanning request. curr_vertex_idx: 8
+[INFO] [1787287577.621839, 255.600000]:                     covered_vertices: ()
+[INFO] [1787287583.046598, 261.000000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 
+[INFO] [1787287583.443977, 261.400000]: Replanning request. curr_vertex_idx: 10
+[INFO] [1787287583.445077, 261.400000]:                     covered_vertices: ()
+[INFO] [1787287589.634451, 267.600000]: Replanning request. curr_vertex_idx: 10
+[INFO] [1787287589.635662, 267.600000]:                     covered_vertices: ()
+[INFO] [1787287595.518522, 273.500000]: Replanning request. curr_vertex_idx: 10
+[INFO] [1787287595.519388, 273.500000]:                     covered_vertices: ()
+[INFO] [1787287601.481802, 279.400000]: Replanning request. curr_vertex_idx: 10
+[INFO] [1787287601.482745, 279.400000]:                     covered_vertices: ()
+[INFO] [1787287607.479507, 285.400000]: Replanning request. curr_vertex_idx: 10
+[INFO] [1787287607.480647, 285.400000]:                     covered_vertices: ()
+[INFO] [1787287612.897988, 290.900000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 
+[INFO] [1787287613.566615, 291.500000]: Replanning request. curr_vertex_idx: 10
+[INFO] [1787287613.567906, 291.500000]:                     covered_vertices: ()
+[INFO] [1787287619.605490, 297.600000]: Replanning request. curr_vertex_idx: 10
+[INFO] [1787287619.606637, 297.600000]:                     covered_vertices: ()
+[INFO] [1787287624.648972, 302.600000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 
+[INFO] [1787287625.443759, 303.400000]: Replanning request. curr_vertex_idx: 10
+[INFO] [1787287625.444811, 303.400000]:                     covered_vertices: ()
+[INFO] [1787287631.638086, 309.600000]: Replanning request. curr_vertex_idx: 10
+[INFO] [1787287631.639169, 309.600000]:                     covered_vertices: ()
+[INFO] [1787287636.545318, 314.500000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 
+[INFO] [1787287637.462333, 315.400000]: Replanning request. curr_vertex_idx: 10
+[INFO] [1787287637.463435, 315.400000]:                     covered_vertices: ()
+[INFO] [1787287642.449819, 320.400000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 
+[INFO] [1787287643.591193, 321.600000]: Replanning request. curr_vertex_idx: 11
+[INFO] [1787287643.592158, 321.600000]:                     covered_vertices: ()
+[INFO] [1787287649.503747, 327.500000]: Replanning request. curr_vertex_idx: 11
+[INFO] [1787287649.504836, 327.500000]:                     covered_vertices: ()
+[INFO] [1787287655.540141, 333.500000]: Replanning request. curr_vertex_idx: 11
+[INFO] [1787287655.541189, 333.500000]:                     covered_vertices: ()
+[INFO] [1787287661.544590, 339.500000]: Replanning request. curr_vertex_idx: 11
+[INFO] [1787287661.545789, 339.500000]:                     covered_vertices: ()
+[INFO] [1787287667.560683, 345.500000]: Replanning request. curr_vertex_idx: 11
+[INFO] [1787287667.561652, 345.500000]:                     covered_vertices: ()
+[INFO] [1787287673.512407, 351.500000]: Replanning request. curr_vertex_idx: 11
+[INFO] [1787287673.513535, 351.500000]:                     covered_vertices: ()
+[INFO] [1787287678.853356, 356.800000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 
+[INFO] [1787287679.499710, 357.500000]: Replanning request. curr_vertex_idx: 12
+[INFO] [1787287679.500740, 357.500000]:                     covered_vertices: ()
+[INFO] [1787287685.579341, 363.500000]: Replanning request. curr_vertex_idx: 12
+[INFO] [1787287685.580463, 363.500000]:                     covered_vertices: ()
+[INFO] [1787287691.671898, 369.600000]: Replanning request. curr_vertex_idx: 12
+[INFO] [1787287691.672800, 369.600000]:                     covered_vertices: ()
+[INFO] [1787287696.565225, 374.500000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 
+[INFO] [1787287697.497472, 375.500000]: Replanning request. curr_vertex_idx: 12
+[INFO] [1787287697.498466, 375.500000]:                     covered_vertices: ()
+[INFO] [1787287703.686320, 381.600000]: Replanning request. curr_vertex_idx: 13
+[INFO] [1787287703.687388, 381.600000]:                     covered_vertices: ()
+[INFO] [1787287708.967742, 386.900000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 
+[INFO] [1787287709.550526, 387.500000]: Replanning request. curr_vertex_idx: 13
+[INFO] [1787287709.551556, 387.500000]:                     covered_vertices: ()
+[INFO] [1787287715.567654, 393.500000]: Replanning request. curr_vertex_idx: 13
+[INFO] [1787287715.568784, 393.500000]:                     covered_vertices: ()
+[INFO] [1787287721.600558, 399.600000]: Replanning request. curr_vertex_idx: 13
+[INFO] [1787287721.601510, 399.600000]:                     covered_vertices: ()
+[INFO] [1787287727.765248, 405.700000]: Replanning request. curr_vertex_idx: 13
+[INFO] [1787287727.766202, 405.700000]:                     covered_vertices: ()
+[INFO] [1787287733.572321, 411.500000]: Replanning request. curr_vertex_idx: 13
+[INFO] [1787287733.573307, 411.500000]:                     covered_vertices: ()
+[INFO] [1787287739.584151, 417.500000]: Replanning request. curr_vertex_idx: 13
+[INFO] [1787287739.585174, 417.500000]:                     covered_vertices: ()
+[INFO] [1787287744.766760, 422.700000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 
+[INFO] [1787287745.540218, 423.500000]: Replanning request. curr_vertex_idx: 14
+[INFO] [1787287745.541183, 423.500000]:                     covered_vertices: ()
+[INFO] [1787287751.584405, 429.500000]: Replanning request. curr_vertex_idx: 14
+[INFO] [1787287751.585253, 429.500000]:                     covered_vertices: ()
+[INFO] [1787287756.968294, 434.900000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 
+[INFO] [1787287757.702950, 435.700000]: Replanning request. curr_vertex_idx: 14
+[INFO] [1787287757.703801, 435.700000]:                     covered_vertices: ()
+[INFO] [1787287762.263594, 440.200000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 
+[INFO] [1787287763.719549, 441.700000]: Replanning request. curr_vertex_idx: 15
+[INFO] [1787287763.720323, 441.700000]:                     covered_vertices: ()
+[INFO] [1787287768.635297, 446.600000]: Replanning request. curr_vertex_idx: 15
+[INFO] [1787287768.636204, 446.600000]:                     covered_vertices: ()
+[WARN] [1787287780.549183806, 458.500000000]: No frontier at vertex 23. #Frontier: 0
+[WARN] [1787287804.813099911, 482.800000000]: No frontier at vertex 29. #Frontier: 0
+[WARN] [1787287831.696412056, 509.700000000]: No frontier at vertex 30. #Frontier: 0
+[WARN] [1787287879.915601016, 557.900000000]: No frontier at vertex 25. #Frontier: 0
+[WARN] [1787287891.681204099, 569.600000000]: No frontier at vertex 31. #Frontier: 0
+000000]: Call local replanning...
+[INFO] [1787287715.566445750, 393.500000000]: Call local replanning...
+[INFO] [1787287721.599342855, 399.600000000]: Call local replanning...
+[INFO] [1787287727.763967457, 405.700000000]: Call local replanning...
+[INFO] [1787287733.570903353, 411.500000000]: Call local replanning...
+[INFO] [1787287739.582955215, 417.500000000]: Call local replanning...
+[INFO] [1787287739.586121925, 417.500000000]: Reach vertex 20
+[INFO] [1787287739.586169226, 417.500000000]: Set newGoal 19
+[INFO] [1787287745.538991009, 423.500000000]: Call local replanning...
+[INFO] [1787287751.583097052, 429.500000000]: Call local replanning...
+[INFO] [1787287751.586394901, 429.500000000]: Reach vertex 19
+[INFO] [1787287751.604244841, 429.600000000]: Explore Goal 19 's frontiers...
+[INFO] [1787287757.701644036, 435.700000000]: Call local replanning...
+[INFO] [1787287757.704742224, 435.700000000]: Set newGoal 23
+[INFO] [1787287763.718204871, 441.700000000]: Call local replanning...
+[INFO] [1787287768.634034327, 446.600000000]: Call local replanning...
+[INFO] [1787287768.637146633, 446.600000000]: Reach vertex 23
+[INFO] [1787287768.641204327, 446.600000000]: Explore Goal 23 's frontiers...
+[INFO] [1787287774.558464842, 452.500000000]: Call local replanning...
+[INFO] [1787287774.566185624, 452.500000000]: Explore Goal 23 's frontiers...
+[INFO] [1787287780.545482168, 458.500000000]: Call local replanning...
+[INFO] [1787287780.549222084, 458.500000000]: Set newGoal 29
+[INFO] [1787287786.731772734, 464.700000000]: Call local replanning...
+[INFO] [1787287792.856830886, 470.800000000]: Call local replanning...
+[INFO] [1787287798.552099788, 476.500000000]: Call local replanning...
+[INFO] [1787287804.809554260, 482.800000000]: Call local replanning...
+[INFO] [1787287804.813076288, 482.800000000]: Reach vertex 29
+[INFO] [1787287804.813133265, 482.800000000]: Set newGoal 30
+[INFO] [1787287810.812027714, 488.800000000]: Call local replanning...
+[INFO] [1787287816.807250005, 494.800000000]: Call local replanning...
+[INFO] [1787287822.628967492, 500.600000000]: Call local replanning...
+[INFO] [1787287828.569871768, 506.500000000]: Call local replanning...
+[INFO] [1787287828.573247865, 506.500000000]: Reach vertex 30
+[INFO] [1787287828.575091508, 506.500000000]: Explore Goal 30 's frontiers...
+[INFO] [1787287831.693112620, 509.700000000]: Call local replanning...
+[INFO] [1787287831.696438563, 509.700000000]: Set newGoal 24
+[INFO] [1787287837.583348888, 515.500000000]: Call local replanning...
+[INFO] [1787287843.585530348, 521.500000000]: Call local replanning...
+[INFO] [1787287843.588887729, 521.500000000]: Skip currGoal 24 that has no frontier and seen by robot
+[INFO] [1787287843.588920531, 521.500000000]: Set newGoal 25
+[INFO] [1787287849.571173068, 527.500000000]: Call local replanning...
+[INFO] [1787287855.581322157, 533.500000000]: Call local replanning...
+[INFO] [1787287861.888756394, 539.800000000]: Call local replanning...
+[INFO] [1787287867.821401982, 545.800000000]: Call local replanning...
+[INFO] [1787287873.772766573, 551.700000000]: Call local replanning...
+[INFO] [1787287873.776094589, 551.700000000]: Reach vertex 25
+[INFO] [1787287873.799973390, 551.800000000]: Explore Goal 25 's frontiers...
+[INFO] [1787287879.912405437, 557.900000000]: Call local replanning...
+[INFO] [1787287879.915649014, 557.900000000]: Set newGoal 31
+[INFO] [1787287885.680953436, 563.600000000]: Call local replanning...
+[INFO] [1787287891.678145077, 569.600000000]: Call local replanning...
+[INFO] [1787287891.681184754, 569.600000000]: Reach vertex 31
+[INFO] [1787287891.681240440, 569.600000000]: Set newGoal 32
+[INFO] [1787287897.604567185, 575.600000000]: Call local replanning...
+[INFO] [1787287903.674546129, 581.600000000]: Call local replanning...
+[INFO] [1787287909.607358417, 587.600000000]: Call local replanning...
+[INFO] [1787287909.610423134, 587.600000000]: Reach vertex 32
+[INFO] [1787287909.612277096, 587.600000000]: Explore Goal 32 's frontiers...
+[INFO] [1787287912.688685574, 590.600000000]: Call local replanning...
+[INFO] [1787287912.7058[WARN] [1787287924.696169068, 602.700000000]: No frontier at vertex 32. #Frontier: 0
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 648.600000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 648.600000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+99848, 590.700000000]: Explore Goal 32 's frontiers...
+[INFO] [1787287918.763072324, 596.700000000]: Call local replanning...
+[INFO] [1787287918.773818712, 596.700000000]: Explore Goal 32 's frontiers...
+[INFO] [1787287924.693383343, 602.700000000]: Call local replanning...
+[INFO] [1787287924.696203620, 602.700000000]: Set newGoal 26
+[INFO] [1787287930.971029954, 608.900000000]: Call local replanning...
+[INFO] [1787287936.771999803, 614.700000000]: Call local replanning...
+[INFO] [1787287936.775415190, 614.700000000]: Skip currGoal 26 that has no frontier and seen by robot
+[INFO] [1787287936.775438846, 614.700000000]: Set newGoal 27
+[INFO] [1787287936.775450958, 614.700000000]: Find middle goal point.
+[INFO] [1787287942.928198803, 620.900000000]: Call local replanning...
+[INFO] [1787287942.931610740, 620.900000000]: Find middle goal point.
+[INFO] [1787287948.702035464, 626.700000000]: Call local replanning...
+[INFO] [1787287948.705017950, 626.700000000]: Find middle goal point.
+[INFO] [1787287954.716930008, 632.700000000]: Call local replanning...
+[INFO] [1787287960.646684575, 638.600000000]: Call local replanning...
+[INFO] [1787287960.649905504, 638.600000000]: Reach vertex 27
+[INFO] [1787287960.652917049, 638.600000000]: Explore Goal 27 's frontiers...
+[INFO] [1787287965.757659625, 643.700000000]: Call local replanning...
+[INFO] [1787287965.768231838, 643.700000000]: Explore Goal 27 's frontiers...
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 648.600000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 648.600000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 648.600000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 648.600000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 648.600000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 648.600000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787287970.591297935, 648.600000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 648.600000 according to authority unknown_publisher
+[WARN] [1787287970.591333639, 648.600000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 648.600000 according to authority unknown_publisher
+[WARN] [1787287971.895403479, 649.900000000]: No frontier at vertex 27. #Frontier: 0
+[INFO] [1787287773.676929, 451.600000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 
+[INFO] [1787287774.559682, 452.500000]: Replanning request. curr_vertex_idx: 15
+[INFO] [1787287774.560497, 452.500000]:                     covered_vertices: ()
+[INFO] [1787287779.767860, 457.700000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 
+[INFO] [1787287780.546714, 458.500000]: Replanning request. curr_vertex_idx: 15
+[INFO] [1787287780.547956, 458.500000]:                     covered_vertices: ()
+[INFO] [1787287785.296771, 463.300000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 
+[INFO] [1787287786.733250, 464.700000]: Replanning request. curr_vertex_idx: 16
+[INFO] [1787287786.734356, 464.700000]:                     covered_vertices: ()
+[INFO] [1787287792.858247, 470.800000]: Replanning request. curr_vertex_idx: 16
+[INFO] [1787287792.859250, 470.800000]:                     covered_vertices: ()
+[INFO] [1787287797.932299, 475.900000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 
+[INFO] [1787287798.553281, 476.500000]: Replanning request. curr_vertex_idx: 16
+[INFO] [1787287798.554301, 476.500000]:                     covered_vertices: ()
+[INFO] [1787287804.810987, 482.800000]: Replanning request. curr_vertex_idx: 16
+[INFO] [1787287804.811967, 482.800000]:                     covered_vertices: ()
+[INFO] [1787287810.813338, 488.800000]: Replanning request. curr_vertex_idx: 17
+[INFO] [1787287810.814379, 488.800000]:                     covered_vertices: ()
+[INFO] [1787287816.808613, 494.800000]: Replanning request. curr_vertex_idx: 17
+[INFO] [1787287816.809516, 494.800000]:                     covered_vertices: ()
+[INFO] [1787287822.630241, 500.600000]: Replanning request. curr_vertex_idx: 17
+[INFO] [1787287822.631198, 500.600000]:                     covered_vertices: ()
+[INFO] [1787287827.438695, 505.400000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 29 
+[INFO] [1787287828.571184, 506.500000]: Replanning request. curr_vertex_idx: 17
+[INFO] [1787287828.572133, 506.500000]:                     covered_vertices: ()
+[INFO] [1787287831.694249, 509.700000]: Replanning request. curr_vertex_idx: 17
+[INFO] [1787287831.695221, 509.700000]:                     covered_vertices: ()
+[INFO] [1787287837.046978, 515.000000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 29 30 
+[INFO] [1787287837.584635, 515.500000]: Replanning request. curr_vertex_idx: 18
+[INFO] [1787287837.585642, 515.500000]:                     covered_vertices: ()
+[INFO] [1787287842.481629, 520.400000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 29 30 
+[INFO] [1787287843.586938, 521.500000]: Replanning request. curr_vertex_idx: 18
+[INFO] [1787287843.587880, 521.500000]:                     covered_vertices: ()
+[INFO] [1787287848.592553, 526.600000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 29 30 
+[INFO] [1787287849.572404, 527.500000]: Replanning request. curr_vertex_idx: 19
+[INFO] [1787287849.573640, 527.500000]:                     covered_vertices: ()
+[INFO] [1787287854.469230, 532.400000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 29 30 
+[INFO] [1787287855.582727, 533.500000]: Replanning request. curr_vertex_idx: 19
+[INFO] [1787287855.583724, 533.500000]:                     covered_vertices: ()
+[INFO] [1787287861.889993, 539.900000]: Replanning request. curr_vertex_idx: 19
+[INFO] [1787287861.891322, 539.900000]:                     covered_vertices: ()
+[INFO] [1787287867.822933, 545.800000]: Replanning request. curr_vertex_idx: 19
+[INFO] [1787287867.823959, 545.800000]:                     covered_vertices: ()
+[INFO] [1787287873.089059, 551.000000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 29 30 24 
+[INFO] [1787287873.773988, 551.700000]: Replanning request. curr_vertex_idx: 19
+[INFO] [1787287873.774903, 551.700000]:                     covered_vertices: ()
+[INFO] [1787287879.913598, 557.900000]: Replanning request. curr_vertex_idx: 19
+[INFO] [1787287879.914557, 557.900000]:                     covered_vertices: ()
+[INFO] [1787287885.682135, 563.600000]: Replanning request. curr_vertex_idx: 20
+[INFO] [1787287885.682966, 563.600000]:                     covered_vertices: ()
+[INFO] [1787287891.096041, 569.100000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 29 30 24 25 
+[INFO] [1787287891.679351, 569.600000]: Replanning request. curr_vertex_idx: 20
+[INFO] [1787287891.680220, 569.600000]:                     covered_vertices: ()
+[INFO] [1787287897.060710, 575.000000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 29 30 24 25 31 
+[INFO] [1787287897.605793, 575.600000]: Replanning request. curr_vertex_idx: 21
+[INFO] [1787287897.606874, 575.600000]:                     covered_vertices: ()
+[INFO] [1787287903.675695, 581.600000]: Replanning request. curr_vertex_idx: 21
+[INFO] [1787287903.676617, 581.600000]:                     covered_vertices: ()
+[INFO] [1787287908.393069, 586.400000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 29 30 24 25 31 
+[INFO] [1787287909.608676, 587.600000]: Replanning request. curr_vertex_idx: 21
+[INFO] [1787287909.609562, 587.600000]:                     covered_vertices: ()
+[INFO] [1787287912.690001, 590.700000]: Replanning request. curr_vertex_idx: 21
+[INFO] [1787287912.691025, 590.700000]:                     covered_vertices: ()
+[INFO] [1787287918.764235, 596.700000]: Replanning request. curr_vertex_idx: 21
+[INFO] [1787287918.765124, 596.700000]:                     covered_vertices: ()
+[INFO] [1787287924.694473, 602.700000]: Replanning request. curr_vertex_idx: 21
+[INFO] [1787287924.695395, 602.700000]:                     covered_vertices: ()
+[INFO] [1787287930.972344, 608.900000]: Replanning request. curr_vertex_idx: 22
+[INFO] [1787287930.973207, 608.900000]:                     covered_vertices: ()
+[INFO] [1787287936.773321, 614.700000]: Replanning request. curr_vertex_idx: 22
+[INFO] [1787287936.774261, 614.700000]:                     covered_vertices: ()
+[INFO] [1787287942.929628, 620.900000]: Replanning request. curr_vertex_idx: 23
+[INFO] [1787287942.930631, 620.900000]:                     covered_vertices: ()
+[INFO] [1787287948.703130, 626.700000]: Replanning request. curr_vertex_idx: 23
+[INFO] [1787287948.703986, 626.700000]:                     covered_vertices: ()
+[INFO] [1787287954.718323, 632.700000]: Replanning request. curr_vertex_idx: 23
+[INFO] [1787287954.719214, 632.700000]:                     covered_vertices: ()
+[INFO] [1787287959.803109, 637.800000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 29 30 24 25 31 32 33 27 
+[INFO] [1787287960.648036, 638.600000]: Replanning request. curr_vertex_idx: 23
+[INFO] [1787287960.648865, 638.600000]:                     covered_vertices: ()
+[INFO] [1787287965.758578, 643.700000]: Replanning request. curr_vertex_idx: 23
+[INFO] [1787287965.759468, 643.700000]:                     covered_vertices: ()
+[INFO] [1787287970.600012, 648.600000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 29 30 24 25 31 32 33 27 
+[INFO] [1787287971.893201, 649.900000]: Replanning request. curr_vertex_idx: 23
+[INFO] [1787287971.894083, 649.900000]:                     covered_vertices: ()
+[INFO] [1787287976.808735, 654.800000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 29 30 24 25 31 32 33 27 
+[INFO] [1787287977.681097, 655.600000]: Replanning request. curr_vertex_idx: 25
+[INFO] [1787287977.681751, 655.600000]:                     covered_vertices: ()
+[INFO] [1787287983.208706, 661.200000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 29 30 24 25 31 32 33 27 
+[INFO] [1787287983.684399, 661.600000]: Replanning request. curr_vertex_idx: 25
+[INFO] [1787287983.685445, 661.600000]:                     covered_vertices: ()
+[INFO] [1787287988.396256, 666.400000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 29 30 24 25 31 32 33 27 
+[INFO] [1787287989.684896, 667.600000]: Replanning request. curr_vertex_idx: 25
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 673.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 673.100000 according to authority unknown_publisher[INFO] [1787287971.892025340, 649.900000000]: Call local replanning...
+[INFO] [1787287971.895451586, 649.900000000]: Skip repeated visit to vertex 33
+[INFO] [1787287971.895465579, 649.900000000]: Set newGoal 34
+[INFO] [1787287977.680027177, 655.600000000]: Call local replanning...
+[INFO] [1787287983.683112838, 661.600000000]: Call local replanning...
+[INFO] [1787287989.683564552, 667.600000000]: Call local replanning...
+
+         at line Warning: 277TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 673.100000 according to authority unknown_publisher in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp         at line 
+277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 673.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: [WARN] [1787287995.097913817, 673.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 673.100000 according to authority unknown_publisher
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 673.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp[WARN] [1787287995.097937488, 673.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 673.100000 according to authority unknown_publisher
+
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 673.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 673.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 673.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787288001.675512400, 679.600000000]: No frontier at vertex 34. #Frontier: 0
+[WARN] [1787288013.426092282, 691.400000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 691.400000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 691.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp[WARN] [1787288013.426127347, 691.400000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 691.400000 according to authority unknown_publisher
+
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 691.400000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 691.400000 according to authority unknown_publisher
+
+         at line          at line 277277 in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 691.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[INFO] [1787287995.566859349, 673.500000000]: Call local replanning...
+[INFO] [1787287995.570368058, 673.500000000]: Reach vertex 34
+[INFO] [1787287995.575258119, 673.500000000]: Explore Goal 34 's frontiers...
+[INFO] [1787288001.672189774, 679.600000000]: Call local replanning...
+[INFO] [1787288001.675540013, 679.600000000]: Set newGoal 28
+[INFO] [1787288007.892745376, 685.900000000]: Call local replanning...
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 691.400000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 691.400000 according to authority unknown_publisher
+
+         at line          at line 277 in 277/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 691.400000 according to authority unknown_publisher
+         at line Warning: 277TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 691.400000 according to authority unknown_publisher in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp         at line 
+277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787288030.816391486, 708.800000000]: No frontier at vertex 28. #Frontier: 0
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 720.000000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 720.000000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787288042.029664779, 720.000000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 720.000000 according to authority unknown_publisher
+[INFO] [1787288013.836233472, 691.800000000]: Call local replanning...
+[INFO] [1787288019.773883146, 697.700000000]: Call local replanning...
+[INFO] [1787288025.767964700, 703.700000000]: Call local replanning...
+[INFO] [1787288025.771126722, 703.700000000]: Reach vertex 28
+[INFO] [1787288025.773820473, 703.700000000]: Explore Goal 28 's frontiers...
+[INFO] [1787288028.868529825, 706.800000000]: Call local replanning...
+[INFO] [1787288028.873331515, 706.800000000]: Explore Goal 28 's frontiers...
+[INFO] [1787288030.813116264, 708.800000000]: Call local replanning...
+[INFO] [1787288030.816420423, 708.800000000]: Set newGoal 22
+[INFO] [1787288030.816430852, 708.800000000]: Find middle goal point.
+[INFO] [1787288036.680936107, 714.600000000]: Call local replanning...
+[INFO] [1787288036.684411227, 714.600000000]: Find middle goal point.
+Warning: Warning: [WARN] [1787288042.029694956, 720.000000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 720.000000 according to authority unknown_publisher
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 720.000000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 720.000000 according to authority unknown_publisher
+
+         at line          at line 277 in 277/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 720.000000 according to authority unknown_publisher
+         at line Warning: 277TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 720.000000 according to authority unknown_publisher in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp         at line 
+277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 720.000000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 720.000000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 732.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 732.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787288054.420432228, 732.400000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 732.400000 according to authority unknown_publisher
+[WARN] [1787288054.420457887, 732.400000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 732.400000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 732.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 732.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp[INFO] [1787288042.688705333, 720.600000000]: Call local replanning...
+[INFO] [1787288048.786902334, 726.700000000]: Call local replanning...
+
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 732.400000 according to authority unknown_publisher
+         at line Warning: 277TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 732.400000 according to authority unknown_publisher in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp         at line 
+277 in Warning: /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cppTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 732.400000 according to authority unknown_publisher
+
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 732.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame p3at_back_left_wheel (parent p3at_back_left_hub) at time 738.600000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame p3at_back_left_wheel (parent p3at_back_left_hub) at time 738.600000 according to authority unknown_publisher
+
+[WARN] [1787288060.591028534, 738.600000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame p3at_back_left_wheel (parent p3at_back_left_hub) at time 738.600000 according to authority unknown_publisher
+         at line          at line 277277 in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame p3at_back_right_wheel (parent p3at_back_right_hub) at time 738.600000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame p3at_back_right_wheel (parent p3at_back_right_hub) at time 738.600000 according to authority unknown_publisher
+
+         at line          at line 277277 in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame p3at_front_left_wheel (parent p3at_front_left_hub) at time 738.600000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame p3at_front_left_wheel (parent p3at_front_left_hub) at time 738.600000 according to authority unknown_publisher
+
+         at line          at line 277277 in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame p3at_front_right_wheel (parent p3at_front_right_hub) at time 738.600000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame p3at_front_right_wheel (parent p3at_front_right_hub) at time 738.600000 according to authority unknown_publisher
+
+         at line          at line 277277 in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp[WARN] [1787288060.591117226, 738.600000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame p3at_back_right_wheel (parent p3at_back_right_hub) at time 738.600000 according to authority unknown_publisher
+
+
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame p3at_back_left_wheel (parent p3at_back_left_hub) at time 738.600000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame p3at_back_right_wheel (parent p3at_back_right_hub) at time 738.600000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp[WARN] [1787288060.591169735, 738.600000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame p3at_front_left_wheel (parent p3at_front_left_hub) at time 738.600000 according to authority unknown_publisher
+
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame p3at_front_left_wheel (parent p3at_front_left_hub) at time 738.600000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame p3at_front_right_wheel (parent p3at_front_right_hub) at time 738.600000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787288060.591205743, 738.600000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame p3at_front_right_wheel (parent p3at_front_right_hub) at time 738.600000 according to authority unknown_publisher
+[INFO] [1787288054.879687104, 732.800000000]: Call local replanning...
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame p3at_back_left_wheel (parent p3at_back_left_hub) at time 738.600000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame p3at_back_right_wheel (parent p3at_back_right_hub) at time 738.600000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame p3at_front_left_wheel (parent p3at_front_left_hub) at time 738.600000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame p3at_front_right_wheel (parent p3at_front_right_hub) at time 738.600000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787288063.797525538, 741.800000000]: No frontier at vertex 22. #Frontier: 0
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 747.300000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 747.300000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 747.300000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 747.300000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: [WARN] [1787288069.337759197, 747.300000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 747.300000 according to authority unknown_publisher
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 747.300000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp[INFO] [1787288061.062393594, 739.000000000]: Call local replanning...
+[INFO] [1787288061.065120285, 739.000000000]: Reach vertex 22
+[INFO] [1787288061.070226316, 739.000000000]: Explore Goal 22 's frontiers...
+[INFO] [1787288063.795081258, 741.800000000]: Call local replanning...
+[INFO] [1787288063.797555273, 741.800000000]: Set newGoal 21
+
+[WARN] [1787288069.337789451, 747.300000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 747.300000 according to authority unknown_publisher
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 747.300000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 747.300000 according to authority unknown_publisher
+
+         at line          at line 277277 in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 747.300000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787288088.035355348, 766.000000000]: No frontier at vertex 21. #Frontier: 0
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 771.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 771.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 771.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 771.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[INFO] [1787288069.827617645, 747.800000000]: Call local replanning...
+[INFO] [1787288076.051072539, 754.000000000]: Call local replanning...
+[INFO] [1787288081.794569602, 759.800000000]: Call local replanning...
+[INFO] [1787288088.032437033, 766.000000000]: Call local replanning...
+[INFO] [1787288088.035330820, 766.000000000]: Reach vertex 21
+[INFO] [1787288088.035420187, 766.000000000]: Skip repeated visit to vertex 38
+[INFO] [1787288088.035435068, 766.000000000]: Set newGoal 36
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 771.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 771.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 771.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 771.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787288093.389937077, 771.400000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 771.400000 according to authority unknown_publisher
+[WARN] [1787288093.389957305, 771.400000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 771.400000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 836.500000 according to authority unknown_publisher
+         at line [INFO] [1787288093.896908677, 771.900000000]: Call local replanning...
+[INFO] [1787288099.710835553, 777.700000000]: Call local replanning...
+[INFO] [1787288105.796454868, 783.800000000]: Call local replanning...
+[INFO] [1787288111.810225727, 789.800000000]: Call local replanning...
+[INFO] [1787288117.695107709, 795.700000000]: Call local replanning...
+[INFO] [1787288123.814108527, 801.800000000]: Call local replanning...
+[INFO] [1787288129.801307677, 807.800000000]: Call local replanning...
+[INFO] [1787288135.808210043, 813.800000000]: Call local replanning...
+[INFO] [1787288141.710502547, 819.700000000]: Call local replanning...
+[INFO] [1787288148.060092230, 826.000000000]: Call local replanning...
+[INFO] [1787288153.799164557, 831.800000000]: Call local replanning...
+[INFO] [1787288153.802019685, 831.800000000]: Skip currGoal 36 that has no frontier and seen by robot
+[INFO] [1787288153.802053593, 831.800000000]: Skip repeated visit to vertex 12
+[INFO] [1787288153.802060993, 831.800000000]: Set newGoal 13
+277Warning:  in TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 836.500000 according to authority unknown_publisher/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+         at line Warning: 277Warning:  in TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 836.500000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 836.500000 according to authority unknown_publisher/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787288158.513480970, 836.500000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 836.500000 according to authority unknown_publisher
+
+
+         at line          at line Warning: 277277TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 836.500000 according to authority unknown_publisher in  in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp         at line 
+[WARN] [1787288158.513509875, 836.500000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 836.500000 according to authority unknown_publisher
+
+277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 836.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 836.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 836.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 854.900000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 854.900000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[INFO] [1787288159.710802828, 837.700000000]: Call local replanning...
+[INFO] [1787288159.713840022, 837.700000000]: Skip currGoal 13 that has no frontier and seen by robot
+[INFO] [1787288159.713881690, 837.700000000]: Set newGoal 14
+[INFO] [1787288165.970813637, 843.900000000]: Call local replanning...
+[INFO] [1787288171.705522104, 849.700000000]: Call local replanning...
+[WARN] [1787288176.914847741, 854.900000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 854.900000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 854.900000 according to authority unknown_publisher
+         at line 277 in [WARN] [1787288176.914880309, 854.900000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 854.900000 according to authority unknown_publisher
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 854.900000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 854.900000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 854.900000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 854.900000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 854.900000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 867.200000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 867.200000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 867.200000 according to authority unknown_publisher
+
+         at line          at line 277 in 277/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 867.200000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 867.200000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 867.200000 according to authority unknown_publisher
+[INFO] [1787288177.710470086, 855.700000000]: Call local replanning...
+[INFO] [1787288177.713143448, 855.700000000]: Skip currGoal 14 that has no frontier and seen by robot
+[INFO] [1787288177.713165862, 855.700000000]: Set newGoal 18
+[INFO] [1787288183.699227843, 861.700000000]: Call local replanning...
+         at line Warning: 277TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 867.200000 according to authority unknown_publisher in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp         at line 
+277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 867.200000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787288189.252174749, 867.200000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 867.200000 according to authority unknown_publisher
+[WARN] [1787288189.252214460, 867.200000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 867.200000 according to authority unknown_publisher
+[WARN] [1787288189.762499686, 867.700000000]: No Frontiers in the map!
+[WARN] [1787288189.765568723, 867.700000000]: No frontier at vertex 18. #Frontier: 0
+double free or corruption (fasttop)
+[WARN] [1787287321.498481, 0.000000]: Robot Start At 8
+[WARN] [1787287321.547606, 0.000000]: Tsp problem solved by Concorde. 0.045967817306518555
+[INFO] [1787287989.685959, 667.600000]:                     covered_vertices: ()
+[INFO] [1787287995.097366, 673.100000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 29 30 24 25 31 32 33 27 34 
+[INFO] [1787287995.568168, 673.500000]: Replanning request. curr_vertex_idx: 25
+[INFO] [1787287995.569414, 673.500000]:                     covered_vertices: ()
+[INFO] [1787288000.407670, 678.400000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 29 30 24 25 31 32 33 27 34 
+[INFO] [1787288001.673606, 679.600000]: Replanning request. curr_vertex_idx: 25
+[INFO] [1787288001.674572, 679.600000]:                     covered_vertices: ()
+[INFO] [1787288006.701696, 684.700000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 29 30 24 25 31 32 33 27 34 
+[INFO] [1787288007.893739, 685.900000]: Replanning request. curr_vertex_idx: 26
+[INFO] [1787288007.894470, 685.900000]:                     covered_vertices: ()
+[INFO] [1787288013.837621, 691.800000]: Replanning request. curr_vertex_idx: 26
+[INFO] [1787288013.838560, 691.800000]:                     covered_vertices: ()
+[INFO] [1787288019.775180, 697.700000]: Replanning request. curr_vertex_idx: 26
+[INFO] [1787288019.775959, 697.700000]:                     covered_vertices: ()
+[INFO] [1787288025.769235, 703.700000]: Replanning request. curr_vertex_idx: 26
+[INFO] [1787288025.770130, 703.700000]:                     covered_vertices: ()
+[INFO] [1787288028.869802, 706.800000]: Replanning request. curr_vertex_idx: 26
+[INFO] [1787288028.870553, 706.800000]:                     covered_vertices: ()
+[INFO] [1787288030.814442, 708.800000]: Replanning request. curr_vertex_idx: 26
+[INFO] [1787288030.815409, 708.800000]:                     covered_vertices: ()
+[INFO] [1787288036.041790, 714.000000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 29 30 24 25 31 32 33 27 34 28 
+[INFO] [1787288036.682400, 714.600000]: Replanning request. curr_vertex_idx: 27
+[INFO] [1787288036.683278, 714.600000]:                     covered_vertices: ()
+[INFO] [1787288042.030008, 720.000000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 29 30 24 25 31 32 33 27 34 28 
+[INFO] [1787288042.689845, 720.700000]: Replanning request. curr_vertex_idx: 27
+[INFO] [1787288042.690806, 720.700000]:                     covered_vertices: ()
+[INFO] [1787288048.787986, 726.700000]: Replanning request. curr_vertex_idx: 27
+[INFO] [1787288048.788743, 726.700000]:                     covered_vertices: ()
+[INFO] [1787288054.880949, 732.800000]: Replanning request. curr_vertex_idx: 27
+[INFO] [1787288054.881860, 732.800000]:                     covered_vertices: ()
+[INFO] [1787288061.063526, 739.000000]: Replanning request. curr_vertex_idx: 27
+[INFO] [1787288061.064289, 739.000000]:                     covered_vertices: ()
+[INFO] [1787288063.796130, 741.800000]: Replanning request. curr_vertex_idx: 27
+[INFO] [1787288063.796760, 741.800000]:                     covered_vertices: ()
+[INFO] [1787288069.337511, 747.300000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 29 30 24 25 31 32 33 27 34 28 22 
+[INFO] [1787288069.829068, 747.800000]: Replanning request. curr_vertex_idx: 28
+[INFO] [1787288069.829887, 747.800000]:                     covered_vertices: ()
+[INFO] [1787288076.052298, 754.000000]: Replanning request. curr_vertex_idx: 28
+[INFO] [1787288076.053164, 754.000000]:                     covered_vertices: ()
+[INFO] [1787288081.795695, 759.800000]: Replanning request. curr_vertex_idx: 28
+[INFO] [1787288081.796545, 759.800000]:                     covered_vertices: ()
+[INFO] [1787288088.033721, 766.000000]: Replanning request. curr_vertex_idx: 28
+[INFO] [1787288088.034486, 766.000000]:                     covered_vertices: ()
+[INFO] [1787288093.898210, 771.900000]: Replanning request. curr_vertex_idx: 30
+[INFO] [1787288093.899189, 771.900000]:                     covered_vertices: ()
+[INFO] [1787288098.823071, 776.800000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 29 30 24 25 31 32 33 27 34 28 22 21 
+[INFO] [1787288099.711778, 777.700000]: Replanning request. curr_vertex_idx: 30
+[INFO] [1787288099.712479, 777.700000]:                     covered_vertices: ()
+[INFO] [1787288105.797641, 783.800000]: Replanning request. curr_vertex_idx: 30
+[INFO] [1787288105.798646, 783.800000]:                     covered_vertices: ()
+[INFO] [1787288111.811277, 789.800000]: Replanning request. curr_vertex_idx: 30
+[INFO] [1787288111.812072, 789.800000]:                     covered_vertices: ()
+[INFO] [1787288116.916503, 794.900000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 29 30 24 25 31 32 33 27 34 28 22 21 
+[INFO] [1787288117.696235, 795.700000]: Replanning request. curr_vertex_idx: 30
+[INFO] [1787288117.697183, 795.700000]:                     covered_vertices: ()
+[INFO] [1787288123.815213, 801.800000]: Replanning request. curr_vertex_idx: 30
+[INFO] [1787288123.816180, 801.800000]:                     covered_vertices: ()
+[INFO] [1787288129.802396, 807.800000]: Replanning request. curr_vertex_idx: 30
+[INFO] [1787288129.803236, 807.800000]:                     covered_vertices: ()
+[INFO] [1787288135.809503, 813.800000]: Replanning request. curr_vertex_idx: 30
+[INFO] [1787288135.810301, 813.800000]:                     covered_vertices: ()
+[INFO] [1787288140.814937, 818.800000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 29 30 24 25 31 32 33 27 34 28 22 21 17 
+[INFO] [1787288141.711767, 819.700000]: Replanning request. curr_vertex_idx: 30
+[INFO] [1787288141.712579, 819.700000]:                     covered_vertices: ()
+[INFO] [1787288148.061347, 826.000000]: Replanning request. curr_vertex_idx: 30
+[INFO] [1787288148.062145, 826.000000]:                     covered_vertices: ()
+[INFO] [1787288153.800280, 831.800000]: Replanning request. curr_vertex_idx: 30
+[INFO] [1787288153.801187, 831.800000]:                     covered_vertices: ()
+[INFO] [1787288158.513777, 836.500000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 29 30 24 25 31 32 33 27 34 28 22 21 17 
+[INFO] [1787288159.712005, 837.700000]: Replanning request. curr_vertex_idx: 32
+[INFO] [1787288159.712961, 837.700000]:                     covered_vertices: ()
+[INFO] [1787288165.219842, 843.200000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 29 30 24 25 31 32 33 27 34 28 22 21 17 
+[INFO] [1787288165.972068, 843.900000]: Replanning request. curr_vertex_idx: 33
+[INFO] [1787288165.972971, 843.900000]:                     covered_vertices: ()
+[INFO] [1787288170.428812, 848.400000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 29 30 24 25 31 32 33 27 34 28 22 21 17 
+[INFO] [1787288171.706769, 849.700000]: Replanning request. curr_vertex_idx: 33
+[INFO] [1787288171.707687, 849.700000]:                     covered_vertices: ()
+[INFO] [1787288176.915114, 854.900000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 29 30 24 25 31 32 33 27 34 28 22 21 17 13 
+[INFO] [1787288177.711483, 855.700000]: Replanning request. curr_vertex_idx: 33
+[INFO] [1787288177.712218, 855.700000]:                     covered_vertices: ()
+[INFO] [1787288182.519306, 860.500000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 29 30 24 25 31 32 33 27 34 28 22 21 17 13 14 
+[INFO] [1787288183.700211, 861.700000]: Replanning request. curr_vertex_idx: 34
+[INFO] [1787288183.700949, 861.700000]:                     covered_vertices: ()
+[INFO] [1787288189.251451, 867.200000]: Really visited vertices: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 23 29 30 24 25 31 32 33 27 34 28 22 21 17 13 14 
+[INFO] [1787288189.763733, 867.700000]: Replanning request. curr_vertex_idx: 34
+[INFO] [1787288189.764648, 867.700000]:                     covered_vertices: ()
+[INFO] [1787288200.930343, 878.300000]: Pose graph has: 485 vertices, 681 edges.
+[INFO] [1787288189.762641039, 867.700000000]: Call local replanning...
+[INFO] [1787288189.765554844, 867.700000000]: Reach vertex 18
+[INFO] [1787288189.765592370, 867.700000000]: Skip repeated visit to vertex 17
+[INFO] [1787288189.765647011, 867.700000000]: Exploration has finished.
+[31m[RVIZ-16] escalating to SIGTERM[0m
+... logging to /home/wcqw/ac-slam/catkin_ws/.ros/log/a5342f9c-9d1a-11f1-a38e-cf9a7ef17d8f/roslaunch-msxg-52463.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;/home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/launch/exploration.launch
+[1mstarted roslaunch server http://127.0.0.1:44563/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /Mapper/LoopMatchMaximumVarianceCoarse: 0.16
+ * /Mapper/LoopMatchMinimumChainSize: 4
+ * /Mapper/LoopMatchMinimumResponseCoarse: 0.6
+ * /Mapper/LoopMatchMinimumResponseFine: 0.7
+ * /Mapper/LoopSearchMaximumDistance: 4
+ * /Mapper/LoopSearchSpaceDimension: 5.0
+ * /Mapper/MinimumTravelDistance: 1.0
+ * /Mapper/MinimumTravelHeading: 0.52
+ * /Mapper/grid_resolution: 0.1
+ * /Mapper/map_frame: map
+ * /Mapper/map_update_rate: 5
+ * /Mapper/max_covariance: 0.01
+ * /Mapper/max_particles: 10000
+ * /Mapper/min_map_size: 20
+ * /Mapper/min_particles: 2500
+ * /Mapper/publish_pose_graph: True
+ * /Mapper/range_threshold: 25.0
+ * /Mapper/transform_publish_period: 0.1
+ * /Navigator/command_target_distance: 1.5
+ * /Navigator/exploration_goal_distance: 3.0
+ * /Navigator/exploration_strategy: MyPlanner
+ * /Navigator/frequency: 1
+ * /Navigator/map_inflation_radius: 1.0
+ * /Navigator/max_replanning_period: 1.0
+ * /Navigator/min_replanning_period: 5.0
+ * /Navigator/min_target_area_size: 1.0
+ * /Navigator/navigation_goal_angle: 1.0
+ * /Navigator/navigation_goal_distance: 2.0
+ * /Navigator/navigation_homing_distance: 4.0
+ * /Navigator/robot_radius: 0.5
+ * /Navigator/save_path_plan_time: /home/wcqw/ac-sla...
+ * /Navigator/use_local_planner: True
+ * /Navigator/visualize_frontiers: True
+ * /Operator/conformance_weight: 1
+ * /Operator/continue_weight: 1
+ * /Operator/escape_weight: 1
+ * /Operator/frequency: 10
+ * /Operator/local_map/cost_scaling_factor: 2.0
+ * /Operator/local_map/global_frame: odom
+ * /Operator/local_map/height: 6.0
+ * /Operator/local_map/inflation_radius: 0.75
+ * /Operator/local_map/lethal_cost_threshold: 100
+ * /Operator/local_map/map_type: costmap
+ * /Operator/local_map/max_obstacle_height: 2.0
+ * /Operator/local_map/min_obstacle_height: 0.0
+ * /Operator/local_map/observation_sources: scan
+ * /Operator/local_map/obstacle_range: 4.0
+ * /Operator/local_map/publish_frequency: 1.0
+ * /Operator/local_map/publish_voxel_map: True
+ * /Operator/local_map/raytrace_range: 4.5
+ * /Operator/local_map/resolution: 0.05
+ * /Operator/local_map/robot_base_frame: base_link
+ * /Operator/local_map/robot_radius: 0.4
+ * /Operator/local_map/rolling_window: True
+ * /Operator/local_map/scan/clearing: True
+ * /Operator/local_map/scan/data_type: LaserScan
+ * /Operator/local_map/scan/expected_update_rate: 0.4
+ * /Operator/local_map/scan/marking: True
+ * /Operator/local_map/scan/max_obstacle_height: 0.4
+ * /Operator/local_map/scan/min_obstacle_height: 0.08
+ * /Operator/local_map/scan/observation_persistence: 0.0
+ * /Operator/local_map/static_map: False
+ * /Operator/local_map/track_unknown_space: True
+ * /Operator/local_map/transform_tolerance: 0.3
+ * /Operator/local_map/update_frequency: 5.0
+ * /Operator/local_map/width: 6.0
+ * /Operator/max_free_space: 3.0
+ * /Operator/max_velocity: 1.0
+ * /Operator/publish_route: True
+ * /Operator/safety_decay: 0.99
+ * /Operator/safety_weight: 1
+ * /Stage/base_watchdog_timeout: 0
+ * /laser_frame: base_laser_link
+ * /laser_topic: base_scan
+ * /map_frame: map
+ * /map_server/frame_id: map
+ * /map_service: static_map
+ * /map_topic: map
+ * /odometry_frame: odom
+ * /offset_frame: offset
+ * /path_planner/g2o_save_path: /home/wcqw/ac-sla...
+ * /path_planner/map_width: 74.0
+ * /path_planner/need_noise: False
+ * /path_planner/only_use_tsp: True
+ * /path_planner/prior_map_save_path: /home/wcqw/ac-sla...
+ * /path_planner/robot_position: -28.0 -28.0 0
+ * /path_planner/tsp_record_path: /home/wcqw/ac-sla...
+ * /path_planner/tsp_seed: 21003
+ * /path_planner/tsp_solver: concorde
+ * /path_planner/use_drawio: True
+ * /path_planner/variance: 0.0
+ * /path_planner/xml_path: /home/wcqw/ac-sla...
+ * /pubPath/gt_save_path: /home/wcqw/ac-sla...
+ * /pubPath/robot_position: -28.0 -28.0 0
+ * /pubPath/slam_save_path: /home/wcqw/ac-sla...
+ * /robot_description: <?xml version="1....
+ * /robot_frame: base_link
+ * /robot_start_position: -28.0 -28.0 0
+ * /robot_state_publisher/publish_frequency: 30.0
+ * /robot_state_publisher/tf_prefix: 
+ * /rosdistro: noetic
+ * /rosversion: 1.17.4
+ * /use_sim_time: True
+ * /use_tf1: True
+
+NODES
+  /
+    Explore (nav2d_navigator/explore_client)
+    GetMap (nav2d_navigator/get_map_client)
+    Mapper (nav2d_karto/mapper)
+    Navigator (nav2d_navigator/navigator)
+    Operator (nav2d_operator/operator)
+    RVIZ (rviz/rviz)
+    SetGoal (nav2d_navigator/set_goal_client)
+    Stage (stage_ros/stageros)
+    exploration_button_server (cpp_solver/exploration_button_server.py)
+    map_server (map_server/map_server)
+    path_planner (cpp_solver/path_planner.py)
+    pubPath (cpp_solver/pub_path)
+    publisher (p2os_urdf/p2os_publisher_3at)
+    robot_state_publisher (robot_state_publisher/robot_state_publisher)
+    rqt_robot_steering (rqt_robot_steering/rqt_robot_steering)
+    updateDistance (cpp_solver/updateDistance)
+
+[1mROS_MASTER_URI=http://localhost:11311[0m
+]2;/home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/launch/exploration.launch http://localhost:11311
+[1mprocess[Stage-1]: started with pid [52573][0m
+[1mprocess[map_server-2]: started with pid [52574][0m
+[1mprocess[Operator-3]: started with pid [52575][0m
+[1mprocess[Mapper-4]: started with pid [52580][0m
+[1mprocess[Navigator-5]: started with pid [52585][0m
+[1mprocess[GetMap-6]: started with pid [52591][0m
+[1mprocess[Explore-7]: started with pid [52598][0m
+[1mprocess[SetGoal-8]: started with pid [52602][0m
+[1mprocess[pubPath-9]: started with pid [52606][0m
+[1mprocess[updateDistance-10]: started with pid [52618][0m
+[1mprocess[exploration_button_server-11]: started with pid [52625][0m
+[1mprocess[path_planner-12]: started with pid [52628][0m
+[1mprocess[rqt_robot_steering-13]: started with pid [52635][0m
+[1mprocess[robot_state_publisher-14]: started with pid [52637][0m
+[1mprocess[publisher-15]: started with pid [52642][0m
+[1mprocess[RVIZ-16]: started with pid [52648][0m
+[RVIZ-16] killing on exit
+[publisher-15] killing on exit
+[robot_state_publisher-14] killing on exit
+[path_planner-12] killing on exit
+[rqt_robot_steering-13] killing on exit
+[exploration_button_server-11] killing on exit
+[updateDistance-10] killing on exit
+[pubPath-9] killing on exit
+[SetGoal-8] killing on exit
+[Explore-7] killing on exit
+[GetMap-6] killing on exit
+[Navigator-5] killing on exit
+[Mapper-4] killing on exit
+[Operator-3] killing on exit
+[map_server-2] killing on exit
+[Stage-1] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+[1mdone[0m

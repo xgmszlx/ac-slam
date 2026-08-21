@@ -1,0 +1,1174 @@
+[WARN] [1787296956.232249943]: The root link base_link has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.
+0x561b039de8a0
+[INFO] [1787296956.272040184]: Inititialized robot 1, starting to map now.
+Create multimapper!!
+concorde -s 22001 /tmp/tmpsd8nu_th/problem.tsp
+Host: msxg  Current process id: 93843
+Using random seed 22001
+Number of Nodes: 72
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 8137 (from tour)
+ERROR: No dual change in basis finding code
+Did not find a basic optimal solution
+Fractional matching routine failed
+Warning: restarting running timer Miscellaneous
+No warmstart, stumbling on anyway
+Basic dual change required, but no candidate edges
+  LP Value  1: 8137.000000  (0.01 seconds)
+New lower bound: 8137.000000
+Final lower bound 8137.000000, upper bound 8137.000000
+Exact lower bound: 8137.000000
+DIFF: 0.000000
+Final LP has 86 rows, 153 columns, 440 nonzeros
+Optimal Solution: 8137.00
+Number of bbnodes: 1
+Total Running Time: 0.04 (seconds)
+[WARN] [1787296957.680540832, 0.400000000]: local_map: Parameter "plugins" not provided, loading pre-Hydro parameters
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 514.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 514.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[INFO] [1787296956.278844921]: NearestFrontierPlanner start!
+[INFO] [1787296956.280331301]: Successfully loaded exploration strategy [NearestFrontierPlanner].
+[INFO] [1787296964.582017546, 7.300000000]: Navigator is now initialized.
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 514.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 514.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 514.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 514.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 514.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 514.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787297471.987589119, 514.700000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 514.700000 according to authority unknown_publisher
+[WARN] [1787297471.987628312, 514.700000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 514.700000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 697.200000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 697.200000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 697.200000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 697.200000 according to authority unknown_publisher
+         at line 277Warning:  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cppTF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 697.200000 according to authority unknown_publisher
+
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 697.200000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 697.200000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 697.200000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787297654.506982195, 697.200000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 697.200000 according to authority unknown_publisher
+[WARN] [1787297654.507003679, 697.200000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 697.200000 according to authority unknown_publisher
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 706.700000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 706.700000 according to authority unknown_publisher
+Warning: 
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 706.700000 according to authority unknown_publisher         at line          at line 
+277         at line 277277 in  in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 706.700000 according to authority unknown_publisherWarning: Warning: 
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 706.700000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 706.700000 according to authority unknown_publisher         at line 
+
+277         at line          at line  in 277277/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp in  in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 706.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 706.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787297664.003352551, 706.700000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 706.700000 according to authority unknown_publisher
+[WARN] [1787297664.003390199, 706.700000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 706.700000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 732.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 732.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787297690.054918384, 732.700000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 732.700000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 732.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 732.700000 according to authority unknown_publisher
+         at line [WARN] [1787297690.054953891, 732.700000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 732.700000 according to authority unknown_publisher
+277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 732.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 732.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 732.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 732.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 738.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 738.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 738.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 738.400000 according to authority unknown_publisher
+         at line 277 in Warning: /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 738.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787297695.697258477, 738.400000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 738.400000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 738.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787297695.697284632, 738.400000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 738.400000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 738.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 738.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 742.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 742.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 742.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 742.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 742.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787297699.981377782, 742.700000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 742.700000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 742.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: [WARN] [1787297699.981401000, 742.700000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 742.700000 according to authority unknown_publisher
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 742.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 742.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 754.000000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 754.000000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787297711.328595286, 754.000000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 754.000000 according to authority unknown_publisher
+[WARN] [1787297711.328621440, 754.000000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 754.000000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 754.000000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 754.000000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cppWarning: 
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 754.000000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 754.000000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 754.000000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 754.000000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 772.700000 according to authority unknown_publisher
+         at line Warning: 277TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 772.700000 according to authority unknown_publisher in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp         at line 
+277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 772.700000 according to authority unknown_publisherWarning: 
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 772.700000 according to authority unknown_publisher         at line 
+277         at line  in 277/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: [WARN] [1787297729.989578907, 772.700000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 772.700000 according to authority unknown_publisher
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 772.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787297729.989598792, 772.700000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 772.700000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 772.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 772.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 772.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 778.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 778.700000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 778.700000 according to authority unknown_publisher
+
+         at line          at line 277 in 277/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 778.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 778.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787297735.982053024, 778.700000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 778.700000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 778.700000 according to authority unknown_publisher
+         at line 277 in [WARN] [1787297735.982091484, 778.700000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 778.700000 according to authority unknown_publisher
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 778.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 778.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 802.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 802.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 802.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 802.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787297759.982923305, 802.700000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 802.700000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 802.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: [WARN] [1787297759.982959911, 802.700000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 802.700000 according to authority unknown_publisher
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 802.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 802.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 802.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 820.700000 according to authority unknown_publisher
+         at line Warning: 277TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 820.700000 according to authority unknown_publisher in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp         at line 
+277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 820.700000 according to authority unknown_publisherWarning: 
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 820.700000 according to authority unknown_publisher         at line 
+277         at line  in 277/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 820.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 820.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 820.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 820.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787297777.986871007, 820.700000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 820.700000 according to authority unknown_publisher
+[WARN] [1787297777.986906405, 820.700000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 820.700000 according to authority unknown_publisher
+/home/wcqw/ac-slam/catkin_ws/src/cpp_solver/world/map3/map3.xml
+74.0
+True
+Drawio scale: 0.10277777777777777
+[INFO] [1787296956.778952, 0.000000]: Build prior map with 36 vertices.
+[INFO] [1787296956.779889, 0.000000]: Build prior map.
+[INFO] [1787296956.784164, 0.000000]: prior_map_save_path: /home/wcqw/ac-slam/catkin_ws/src/cpp_solver/results/prior_map_Phase2B_PositiveControl_trial01.pickle
+Robot position: (-28.0, -28.0)
+10: 2225.556520061729,(x, y) = (10.527777777777779, 45.986111111111114)
+11: 1243.3435570987656,(x, y) = (10.527777777777779, 33.65277777777778)
+Reverse tsp path is better!
+tsp_path VS full_tsp_path:
+[8, 7, 6, 5, 4, 3, 9, 15, 16, 10, 11, 35, 37, 38, 36, 12, 13, 14, 18, 17, 21, 22, 28, 34, 33, 27, 26, 32, 31, 25, 24, 30, 29, 23, 19, 20]
+[8, 7, 6, 5, 4, 3, 9, 15, 16, 10, 11, 35, 37, 38, 36, 12, 13, 14, 18, 17, 21, 22, 28, 34, 33, 27, 26, 32, 31, 25, 24, 30, 29, 23, 19, 20]
+[INFO] [1787296956.839163, 0.000000]: TSP_RECORD {"full_tsp_path": [8, 7, 6, 5, 4, 3, 9, 15, 16, 10, 11, 35, 37, 38, 36, 12, 13, 14, 18, 17, 21, 22, 28, 34, 33, 27, 26, 32, 31, 25, 24, 30, 29, 23, 19, 20], "initial_tsp_path": [8, 7, 6, 5, 4, 3, 9, 15, 16, 10, 11, 35, 37, 38, 36, 12, 13, 14, 18, 17, 21, 22, 28, 34, 33, 27, 26, 32, 31, 25, 24, 30, 29, 23, 19, 20], "predicted_full_tsp_length": 415.22222222222206, "predicted_tsp_length": 415.22222222222206, "seed": 22001, "solver": "concorde"}
+[INFO] [1787296956.840166, 0.000000]: tsp_record_path: /home/wcqw/ac-slam/catkin_ws/src/cpp_solver/results/tsp_record_Phase2B_PositiveControl_trial01.json
+[INFO] [1787296956.841073, 0.000000]: Find initial tsp path.
+[INFO] [1787296956.841877, 0.000000]: Find modified curr_path and loop index
+[INFO] [1787296956.845345, 0.000000]: g2o_save_path: /home/wcqw/ac-slam/catkin_ws/src/cpp_solver/results/graph_Phase2B_PositiveControl_trial01.g2o
+[INFO] [1787296957.781770, 0.500000]: Really visited vertices: 
+[INFO] [1787296969.602398, 12.300000]: Really visited vertices: 8 
+[INFO] [1787297014.315670, 57.000000]: Really visited vertices: 8 14 13 7 
+[INFO] [1787297020.522650, 63.200000]: Really visited vertices: 8 14 13 7 
+[INFO] [1787297026.017064, 68.700000]: Really visited vertices: 8 14 13 7 
+[INFO] [1787297037.924729, 80.600000]: Really visited vertices: 8 14 13 7 13 
+[INFO] [1787297057.848197, 100.500000]: Really visited vertices: 8 14 13 7 13 12 6 
+[INFO] [1787297110.548149, 153.200000]: Really visited vertices: 8 14 13 7 13 12 6 5 
+[INFO] [1787297116.466714, 159.100000]: Really visited vertices: 8 14 13 7 13 12 6 5 
+[INFO] [1787297138.460862, 181.100000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 
+[INFO] [1787297167.953409, 210.600000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 
+[INFO] [1787297174.639844, 217.300000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 
+[INFO] [1787297195.573494, 238.200000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 
+[INFO] [1787297201.068642, 243.700000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 
+[INFO] [1787297207.319174, 250.000000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 
+[INFO] [1787297213.167361, 255.800000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 
+[INFO] [1787297221.030158, 263.700000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 
+[INFO] [1787297233.738753, 276.400000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 
+[INFO] [1787297257.653538, 300.300000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 
+[INFO] [1787297263.554336, 306.200000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 
+[INFO] [1787297275.146304, 317.800000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 
+[INFO] [1787297293.261587, 335.900000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 
+[INFO] [1787297315.217135, 357.900000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 
+[INFO] [1787297326.165305, 368.800000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 
+[INFO] [1787297334.653046, 377.300000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 
+[INFO] [1787297340.034926, 382.700000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 
+[INFO] [1787297346.818207, 389.500000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 
+[INFO] [1787297356.160008, 398.800000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 
+[INFO] [1787297368.431690, 411.100000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 
+[INFO] [1787297374.668580, 417.300000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 
+[INFO] [1787297413.768838, 456.400000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 
+[INFO] [1787297431.262319, 473.900000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 
+[INFO] [1787297437.427680, 480.100000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 
+[INFO] [1787297447.669074, 490.300000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 
+[INFO] [1787297453.243886, 495.900000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 
+[INFO] [1787297465.369941, 508.000000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 
+[INFO] [1787297483.578247, 526.300000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 14 18 
+[INFO] [1787297501.647841, 544.300000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 14 18 17 
+[INFO] [1787297519.366155, 562.000000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 14 18 17 
+[INFO] [1787297591.381404, 634.100000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 14 18 17 36 35 
+[INFO] [1787297597.588981, 640.300000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 14 18 17 36 35 
+[INFO] [1787297615.589794, 658.300000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 14 18 17 36 35 
+[INFO] [1787297632.199073, 674.900000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 14 18 17 36 35 16 10 
+[INFO] [1787297638.776506, 681.400000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 14 18 17 36 35 16 10 
+[INFO] [1787297654.507310, 697.200000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 14 18 17 36 35 16 10 9 15 
+[INFO] [1787297660.386278, 703.100000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 14 18 17 36 35 16 10 9 15 
+[INFO] [1787297669.331902, 712.000000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 14 18 17 36 35 16 10 9 15 9 
+[INFO] [1787297675.798459, 718.500000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 14 18 17 36 35 16 10 9 15 9 
+[INFO] [1787297680.990181, 723.700000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 14 18 17 36 35 16 10 9 15 9 
+[INFO] [1787297695.696968, 738.400000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 14 18 17 36 35 16 10 9 15 9 3 9 
+[INFO] [1787297705.521707, 748.200000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 14 18 17 36 35 16 10 9 15 9 3 9 3 
+[INFO] [1787297711.328942, 754.000000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 14 18 17 36 35 16 10 9 15 9 3 9 3 9 
+[INFO] [1787297794.809625, 837.500000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 14 18 17 36 35 16 10 9 15 9 3 9 3 9 15 19 
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 858.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 858.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 858.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 858.700000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 858.700000 according to authority unknown_publisher
+
+         at line          at line 277277 in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 858.700000 according to authority unknown_publisher
+         at line [WARN] [1787297816.003135353, 858.700000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 858.700000 according to authority unknown_publisher
+277Warning:  in TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 858.700000 according to authority unknown_publisher/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 858.700000 according to authority unknown_publisher
+         at line 277 in [WARN] [1787297816.003171934, 858.700000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 858.700000 according to authority unknown_publisher
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 860.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 860.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 860.700000 according to authority unknown_publisherWarning: 
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 860.700000 according to authority unknown_publisher         at line 
+         at line 277277 in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: 
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 860.700000 according to authority unknown_publisher
+Warning: Warning:          at line TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 860.700000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 860.700000 according to authority unknown_publisher277
+
+ in          at line          at line /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp277277
+ in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cppWarning: /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 860.700000 according to authority unknown_publisher
+
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787297817.999843921, 860.700000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 860.700000 according to authority unknown_publisher
+[WARN] [1787297817.999884053, 860.700000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 860.700000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 869.800000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 869.800000 according to authority unknown_publisher
+         at line Warning: 277TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 869.800000 according to authority unknown_publisher in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp         at line 
+277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 869.800000 according to authority unknown_publisherWarning: 
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 869.800000 according to authority unknown_publisher         at line 
+277         at line  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp277
+ in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 869.800000 according to authority unknown_publisher
+         at line Warning: 277TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 869.800000 according to authority unknown_publisher[WARN] [1787297827.115666472, 869.800000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 869.800000 according to authority unknown_publisher
+ in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp         at line 
+277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787297827.115695393, 869.800000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 869.800000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 869.800000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 875.800000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 875.800000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 875.800000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 875.800000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 875.800000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 875.800000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp[WARN] [1787297833.147562929, 875.800000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 875.800000 according to authority unknown_publisher
+
+[WARN] [1787297833.147602742, 875.800000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 875.800000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 875.800000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 875.800000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 882.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 882.700000 according to authority unknown_publisher
+         at line 277 in Warning: /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 882.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 882.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787297840.032187981, 882.700000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 882.700000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 882.700000 according to authority unknown_publisher
+         at line [WARN] [1787297840.032218194, 882.700000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 882.700000 according to authority unknown_publisher
+277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 882.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 882.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 882.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 893.700000 according to authority unknown_publisher
+[WARN] [1787297850.996056441, 893.700000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 893.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 893.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: [WARN] [1787297850.996084128, 893.700000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 893.700000 according to authority unknown_publisher
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 893.700000 according to authority unknown_publisher
+         at line Warning: 277TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 893.700000 according to authority unknown_publisher in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp         at line 
+277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 893.700000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 893.700000 according to authority unknown_publisher
+
+         at line          at line 277277 in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 893.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 893.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 899.300000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 899.300000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 899.300000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 899.300000 according to authority unknown_publisher
+
+
+         at line          at line          at line 277277277 in  in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 899.300000 according to authority unknown_publisher
+         at line 277 in Warning: /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp[WARN] [1787297856.629396351, 899.300000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 899.300000 according to authority unknown_publisher
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 899.300000 according to authority unknown_publisher
+
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787297856.629421039, 899.300000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 899.300000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 899.300000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 899.300000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 910.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 910.700000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 910.700000 according to authority unknown_publisher
+
+         at line          at line 277277 in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 910.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 910.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 910.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 910.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 910.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787297868.004608666, 910.700000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 910.700000 according to authority unknown_publisher
+[WARN] [1787297868.004646031, 910.700000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 910.700000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 918.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 918.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787297876.039122429, 918.700000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 918.700000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 918.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 918.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787297876.039158686, 918.700000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 918.700000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 918.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 918.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 918.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 918.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: [WARN] [1787297906.869648409, 949.500000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 949.500000 according to authority unknown_publisher
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 949.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787297906.869671726, 949.500000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 949.500000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 949.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 949.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 949.500000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 949.500000 according to authority unknown_publisher
+
+         at line          at line 277277 in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 949.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 949.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 949.500000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 955.600000 according to authority unknown_publisher
+Warning:          at line TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 955.600000 according to authority unknown_publisher277
+ in          at line /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 955.600000 according to authority unknown_publisher
+         at line Warning: 277TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 955.600000 according to authority unknown_publisher in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp         at line 
+277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: [WARN] [1787297912.966693098, 955.600000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 955.600000 according to authority unknown_publisher
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 955.600000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787297912.966715912, 955.600000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 955.600000 according to authority unknown_publisher
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 955.600000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 955.600000 according to authority unknown_publisher
+
+         at line          at line 277277 in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 955.600000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 960.700000 according to authority unknown_publisher
+         at line 277 in Warning: /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cppTF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 960.700000 according to authority unknown_publisher
+
+         at line 277Warning:  in TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 960.700000 according to authority unknown_publisher/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+         at line 277 in Warning: /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cppTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 960.700000 according to authority unknown_publisher
+
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 960.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 960.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787297918.018135273, 960.700000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 960.700000 according to authority unknown_publisher
+[WARN] [1787297918.018158980, 960.700000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 960.700000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 960.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 960.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 972.000000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 972.000000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 972.000000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 972.000000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 972.000000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 972.000000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 972.000000 according to authority unknown_publisher
+[WARN] [1787297929.365782065, 972.000000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 972.000000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 972.000000 according to authority unknown_publisher
+[WARN] [1787297929.365804270, 972.000000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 972.000000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 978.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 978.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 978.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 978.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 978.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 978.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787297936.032693645, 978.700000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 978.700000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 978.700000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 978.700000 according to authority unknown_publisher
+         at line 277 in [WARN] [1787297936.032719743, 978.700000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 978.700000 according to authority unknown_publisher
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787297949.148496823, 991.800000000]: Add one Loop closure. 1 loops have been added.
+[WARN] [1787297953.844601456, 996.500000000]: No Frontiers in the map!
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1022.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp[INFO] [1787297953.844672842, 996.500000000]: Exploration has finished.
+[INFO] [1787297959.312970661, 1002.000000000]: Path planning took 0.157960668 seconds, distance is 62.67 m.
+[INFO] [1787297964.401779081, 1007.100000000]: Path planning took 0.321821089 seconds, distance is 60.44 m.
+[INFO] [1787297969.401789741, 1012.100000000]: Path planning took 0.323260839 seconds, distance is 57.60 m.
+[INFO] [1787297974.396842622, 1017.100000000]: Path planning took 0.318120334 seconds, distance is 55.70 m.
+
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1022.100000 according to authority unknown_publisher
+         at line 277Warning:  in TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1022.100000 according to authority unknown_publisher/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+         at line 277Warning:  in TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1022.100000 according to authority unknown_publisher/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: [WARN] [1787297979.442294256, 1022.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1022.100000 according to authority unknown_publisher
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1022.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1022.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787297979.442333963, 1022.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1022.100000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1022.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1022.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1027.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: [INFO] [1787297979.523646059, 1022.200000000]: Path planning took 0.443572252 seconds, distance is 54.70 m.
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1027.100000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1027.100000 according to authority unknown_publisherWarning: 
+
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1027.100000 according to authority unknown_publisher         at line          at line 
+277277         at line  in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp277/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+ in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1027.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787297984.432004626, 1027.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1027.100000 according to authority unknown_publisher
+[WARN] [1787297984.432032386, 1027.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1027.100000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1027.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1027.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1027.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1032.100000 according to authority unknown_publisher[INFO] [1787297984.512331489, 1027.200000000]: Path planning took 0.433775797 seconds, distance is 53.66 m.
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1032.100000 according to authority unknown_publisherWarning: 
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1032.100000 according to authority unknown_publisher
+         at line 
+         at line 277         at line 277 in 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1032.100000 according to authority unknown_publisher
+Warning: Warning:          at line TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1032.100000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1032.100000 according to authority unknown_publisher277
+
+ in          at line          at line /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp277277
+ in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1032.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1032.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787297989.443470376, 1032.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1032.100000 according to authority unknown_publisher
+[WARN] [1787297989.443492857, 1032.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1032.100000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1042.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1042.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[INFO] [1787297989.520930136, 1032.200000000]: Path planning took 0.441188155 seconds, distance is 52.46 m.
+[INFO] [1787297994.386718091, 1037.100000000]: Path planning took 0.307291024 seconds, distance is 51.46 m.
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1042.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1042.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1042.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1042.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1042.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787297999.430905164, 1042.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1042.100000 according to authority unknown_publisher
+[WARN] [1787297999.430927736, 1042.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1042.100000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1042.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1047.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1047.100000 according to authority unknown_publisherWarning: 
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1047.100000 according to authority unknown_publisher[INFO] [1787297999.549497276, 1042.200000000]: Path planning took 0.470111151 seconds, distance is 49.86 m.
+         at line 
+Warning: 277         at line TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1047.100000 according to authority unknown_publisher in 277
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp in          at line 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp277
+ in Warning: /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cppTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1047.100000 according to authority unknown_publisher
+
+         at line 277 in Warning: /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cppTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1047.100000 according to authority unknown_publisher
+
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1047.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787298004.435631357, 1047.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1047.100000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1047.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787298004.435664442, 1047.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1047.100000 according to authority unknown_publisher
+Warning: Warning: [INFO] [1787298004.524133954, 1047.200000000]: Path planning took 0.444400667 seconds, distance is 48.86 m.
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1052.100000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1052.100000 according to authority unknown_publisherWarning: 
+
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1052.100000 according to authority unknown_publisher         at line          at line 
+277277         at line  in  in 277/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp in 
+
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1052.100000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1052.100000 according to authority unknown_publisher
+Warning: 
+[WARN] [1787298009.438189188, 1052.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1052.100000 according to authority unknown_publisher
+         at line TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1052.100000 according to authority unknown_publisher         at line 277
+277 in          at line  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp277/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+ in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787298009.438237299, 1052.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1052.100000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1052.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1052.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1077.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1077.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1077.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1077.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cppWarning: 
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1077.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: [INFO] [1787298009.557251719, 1052.200000000]: Path planning took 0.479597835 seconds, distance is 47.46 m.
+[INFO] [1787298014.397155460, 1057.100000000]: Path planning took 0.317308450 seconds, distance is 46.46 m.
+[INFO] [1787298019.399052876, 1062.100000000]: Path planning took 0.319554325 seconds, distance is 45.16 m.
+[INFO] [1787298024.395270405, 1067.100000000]: Path planning took 0.315070928 seconds, distance is 44.06 m.
+[INFO] [1787298029.401537933, 1072.100000000]: Path planning took 0.322951575 seconds, distance is 42.76 m.
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1077.100000 according to authority unknown_publisher
+Warning:          at line TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1077.100000 according to authority unknown_publisher277
+ in          at line /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1077.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787298034.448240756, 1077.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1077.100000 according to authority unknown_publisher
+[WARN] [1787298034.448272684, 1077.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1077.100000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1107.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1107.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[INFO] [1787298034.525523890, 1077.200000000]: Path planning took 0.445386061 seconds, distance is 41.76 m.
+[INFO] [1787298039.436381057, 1082.100000000]: Path planning took 0.355875642 seconds, distance is 40.60 m.
+[INFO] [1787298044.401337030, 1087.100000000]: Path planning took 0.321244727 seconds, distance is 38.16 m.
+[INFO] [1787298049.441139792, 1092.100000000]: Path planning took 0.362261562 seconds, distance is 36.46 m.
+[INFO] [1787298054.405992456, 1097.100000000]: Path planning took 0.325361124 seconds, distance is 34.86 m.
+[INFO] [1787298059.392998246, 1102.100000000]: Path planning took 0.313007075 seconds, distance is 33.26 m.
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1107.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1107.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cppWarning: 
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1107.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1107.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787298064.433370693, 1107.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1107.100000 according to authority unknown_publisher
+[WARN] [1787298064.433398080, 1107.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1107.100000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1107.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1107.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[INFO] [1787298064.509172830, 1107.200000000]: Path planning took 0.431261746 seconds, distance is 31.96 m.
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1112.100000 according to authority unknown_publisher
+         at line 277Warning:  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cppTF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1112.100000 according to authority unknown_publisher
+
+[WARN] [1787298069.447232132, 1112.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1112.100000 according to authority unknown_publisher
+         at line Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1112.100000 according to authority unknown_publisher277
+ in          at line /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp277
+ in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1112.100000 according to authority unknown_publisher
+         at line 277Warning:  in [WARN] [1787298069.447255164, 1112.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1112.100000 according to authority unknown_publisher
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cppTF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1112.100000 according to authority unknown_publisher
+
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1112.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1112.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1112.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1117.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1117.100000 according to authority unknown_publisher
+[WARN] [1787298074.454070328, 1117.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1117.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787298074.454113021, 1117.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1117.100000 according to authority unknown_publisher
+[INFO] [1787298069.527716600, 1112.200000000]: Path planning took 0.449149502 seconds, distance is 30.66 m.
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1117.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1117.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1117.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1117.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1117.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1117.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1122.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1122.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1122.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1122.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[INFO] [1787298074.532478458, 1117.200000000]: Path planning took 0.453658198 seconds, distance is 29.16 m.
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1122.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1122.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787298079.438653475, 1122.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1122.100000 according to authority unknown_publisher
+Warning: [WARN] [1787298079.438678146, 1122.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1122.100000 according to authority unknown_publisher
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1122.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1122.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1127.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1127.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1127.100000 according to authority unknown_publisher
+[INFO] [1787298079.556013313, 1122.200000000]: Path planning took 0.476101087 seconds, distance is 27.26 m.
+         at line Warning: 277TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1127.100000 according to authority unknown_publisher in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp         at line 
+277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1127.100000 according to authority unknown_publisher
+Warning:          at line TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1127.100000 according to authority unknown_publisher277
+ in          at line /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp277
+ in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1127.100000 according to authority unknown_publisher[WARN] [1787298084.444450975, 1127.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1127.100000 according to authority unknown_publisher
+
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1127.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787298084.444475196, 1127.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1127.100000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1157.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1157.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1157.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1157.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1157.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1157.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[INFO] [1787298084.522873458, 1127.200000000]: Path planning took 0.443921616 seconds, distance is 24.56 m.
+[INFO] [1787298089.405686158, 1132.100000000]: Path planning took 0.324969949 seconds, distance is 22.56 m.
+[INFO] [1787298094.408571242, 1137.100000000]: Path planning took 0.328544179 seconds, distance is 20.53 m.
+[INFO] [1787298099.398221925, 1142.100000000]: Path planning took 0.318617204 seconds, distance is 19.33 m.
+[INFO] [1787298104.441136606, 1147.100000000]: Path planning took 0.362174295 seconds, distance is 18.19 m.
+[INFO] [1787298109.401105184, 1152.100000000]: Path planning took 0.322480201 seconds, distance is 15.95 m.
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1157.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1157.100000 according to authority unknown_publisher
+         at line 277 in [WARN] [1787298114.465921747, 1157.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1157.100000 according to authority unknown_publisher
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787298114.465940730, 1157.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1157.100000 according to authority unknown_publisher
+[INFO] [1787298114.553618069, 1157.200000000]: Path planning took 0.473688709 seconds, distance is 12.12 m.
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1162.100000 according to authority unknown_publisherWarning: 
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1162.100000 according to authority unknown_publisher         at line 
+         at line 277277 in Warning:  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cppTF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1162.100000 according to authority unknown_publisher
+
+
+         at line Warning: 277TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1162.100000 according to authority unknown_publisherWarning:  in 
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1162.100000 according to authority unknown_publisher/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp         at line 
+
+277         at line  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: 277TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1162.100000 according to authority unknown_publisher in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp         at line 
+277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1162.100000 according to authority unknown_publisher
+         at line 277[WARN] [1787298119.462566895, 1162.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1162.100000 according to authority unknown_publisher
+ in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1162.100000 according to authority unknown_publisher
+[WARN] [1787298119.462591194, 1162.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1162.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1167.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[INFO] [1787298119.529870092, 1162.200000000]: Path planning took 0.450446664 seconds, distance is 8.42 m.
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1167.100000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1167.100000 according to authority unknown_publisher
+
+         at line          at line 277 in 277/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1167.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787298124.464369228, 1167.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1167.100000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1167.100000 according to authority unknown_publisher
+         at line 277[WARN] [1787298124.464415572, 1167.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1167.100000 according to authority unknown_publisher
+ in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1167.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1167.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1167.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787298129.711387498, 1172.400000000]: Add one Loop closure. 2 loops have been added.
+Warning: [INFO] [1787298124.539808764, 1167.200000000]: Path planning took 0.460703320 seconds, distance is 4.85 m.
+[INFO] [1787298129.464930276, 1172.100000000]: Path planning took 0.385909651 seconds, distance is 1.37 m.
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1177.100000 according to authority unknown_publisherWarning: 
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1177.100000 according to authority unknown_publisher         at line 
+277         at line  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp277
+ in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1177.100000 according to authority unknown_publisher
+         at line Warning: 277TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1177.100000 according to authority unknown_publisher in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp         at line 
+277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787298134.476310327, 1177.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1177.100000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1177.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1787298134.476333196, 1177.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1177.100000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1177.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1177.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1177.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1191.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1191.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[INFO] [1787298134.598956343, 1177.300000000]: Path planning took 0.518729473 seconds, distance is 0.48 m.
+[INFO] [1787298139.411432133, 1182.100000000]: Path planning took 0.330959613 seconds, distance is 0.24 m.
+[INFO] [1787298139.411464846, 1182.100000000]: Reached target, now turning to desired direction.
+[INFO] [1787298139.411470836, 1182.100000000]: Heading: -1.01 / Desired: -2.71 / Difference: 1.70 / Tolerance: 0.10
+[INFO] [1787298141.077921265, 1183.800000000]: Heading: -2.54 / Desired: -2.71 / Difference: 0.16 / Tolerance: 0.10
+[INFO] [1787298142.078567153, 1184.800000000]: Heading: -2.87 / Desired: -2.71 / Difference: 0.17 / Tolerance: 0.10
+[INFO] [1787298143.080449346, 1185.800000000]: Heading: -2.74 / Desired: -2.71 / Difference: 0.03 / Tolerance: 0.10
+[INFO] [1787298143.080529270, 1185.800000000]: Final Heading: -2.74 / Desired: -2.71 / Difference: 0.03 / Tolerance: 0.10
+[INFO] [1787298143.080552298, 1185.800000000]: Goal reached.
+[INFO] [1787298143.403376408, 1186.100000000]: Path planning took 0.320913368 seconds, distance is 4.75 m.
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1191.100000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1191.100000 according to authority unknown_publisher
+
+         at line          at line 277277 in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1191.100000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1191.100000 according to authority unknown_publisher
+
+         at line          at line 277277 in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+[WARN] [1787298148.453467816, 1191.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1191.100000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1191.100000 according to authority unknown_publisher
+         at line 277 in [WARN] [1787298148.453502527, 1191.100000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1191.100000 according to authority unknown_publisher
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1191.100000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[INFO] [1787298148.532361840, 1191.200000000]: Path planning took 0.454202586 seconds, distance is 3.88 m.
+[INFO] [1787298153.554404938, 1196.200000000]: Path planning took 0.474124869 seconds, distance is 0.87 m.
+[INFO] [1787298155.079976400, 1197.800000000]: Reached target, now turning to desired direction.
+[INFO] [1787298155.080043453, 1197.800000000]: Heading: -0.55 / Desired: 2.56 / Difference: 3.11 / Tolerance: 0.10
+[INFO] [1787298156.079108003, 1198.800000000]: Heading: 0.24 / Desired: 2.56 / Difference: 2.32 / Tolerance: 0.10
+[INFO] [1787298157.078046198, 1199.800000000]: Heading: 1.26 / Desired: 2.56 / Difference: 1.30 / Tolerance: 0.10
+[INFO] [1787298158.404718971, 1201.100000000]: Path planning took 0.324041718 seconds, distance is 0.38 m.
+[INFO] [1787298158.404751046, 1201.100000000]: Heading: 2.65 / Desired: 2.56 / Difference: 0.09 / Tolerance: 0.10
+[INFO] [1787298158.404756378, 1201.100000000]: Final Heading: 2.65 / Desired: 2.56 / Difference: 0.09 / Tolerance: 0.10
+[INFO] [1787298158.404759954, 1201.100000000]: Goal reached.
+[INFO] [1787298158.564093487, 1201.200000000]: Path planning took 0.158414460 seconds, distance is 4.74 m.
+[INFO] [1787298163.865398046, 1206.500000000]: Path planning took 0.486549500 seconds, distance is 2.78 m.
+[INFO] [1787298168.854792340, 1211.500000000]: Path planning took 0.476190258 seconds, distance is 0.44 m.
+[INFO] [1787298173.864212957, 1216.500000000]: Path planning took 0.484644536 seconds, distance is 0.30 m.
+[INFO] [1787298177.379631218, 1220.100000000]: Reached target, now turning to desired direction.
+[INFO] [1787298177.379693520, 1220.100000000]: Heading: -0.33 / Desired: 1.62 / Difference: 1.95 / Tolerance: 0.10
+[INFO] [1787298178.853793527, 1221.500000000]: Path planning took 0.475538337 seconds, distance is 0.20 m.
+[INFO] [1787298178.853820339, 1221.500000000]: Heading: 0.61 / Desired: 1.62 / Difference: 1.01 / Tolerance: 0.10
+[INFO] [1787298180.379711700, 1223.100000000]: Heading: 1.79 / Desired: 1.62 / Difference: 0.16 / Tolerance: 0.10
+[INFO] [1787298181.379543095, 1224.100000000]: Heading: 1.70 / Desired: 1.62 / Difference: 0.08 / Tolerance: 0.10
+[INFO] [1787298181.379600056, 1224.100000000]: Final Heading: 1.70 / Desired: 1.62 / Difference: 0.08 / Tolerance: 0.10
+[INFO] [1787298181.379618050, 1224.100000000]: Goal reached.
+[INFO] [1787298181.754043179, 1224.400000000]: Path planning took 0.372335771 seconds, distance is 5.34 m.
+[INFO] [1787298186.719631233, 1229.400000000]: Path planning took 0.339979838 seconds, distance is 4.67 m.
+[INFO] [1787298191.764173468, 1234.400000000]: Path planning took 0.384554399 seconds, distance is 0.94 m.
+[INFO] [1787298196.917422802, 1239.600000000]: Path planning took 0.538250010 seconds, distance is 0.34 m.
+[INFO] [1787298197.379552340, 1240.100000000]: Reached target, now turning to desired direction.
+[INFO] [1787298197.379622728, 1240.100000000]: Heading: 2.24 / Desired: 0.80 / Difference: 1.44 / Tolerance: 0.10
+[INFO] [1787298198.378977898, 1241.100000000]: Heading: 1.39 / Desired: 0.80 / Difference: 0.59 / Tolerance: 0.10
+[INFO] [1787298199.377734777, 1242.100000000]: Heading: 0.72 / Desired: 0.80 / Difference: 0.08 / Tolerance: 0.10
+[INFO] [1787298199.377756387, 1242.100000000]: Final Heading: 0.72 / Desired: 0.80 / Difference: 0.08 / Tolerance: 0.10
+[INFO] [1787298199.377763339, 1242.100000000]: Goal reached.
+[INFO] [1787298199.756095094, 1242.400000000]: Path planning took 0.377520946 seconds, distance is 4.30 m.
+[INFO] [1787298204.721553113, 1247.400000000]: Path planning took 0.342369571 seconds, distance is 3.05 m.
+[INFO] [1787298208.380361924, 1251.100000000]: Reached target, now turning to desired direction.
+[INFO] [1787298208.380439578, 1251.100000000]: Heading: -2.57 / Desired: 0.15 / Difference: 2.72 / Tolerance: 0.10
+[INFO] [1787298209.765886872, 1252.400000000]: Path planning took 0.385687548 seconds, distance is 0.25 m.
+[INFO] [1787298209.765924750, 1252.400000000]: Heading: -1.28 / Desired: 0.15 / Difference: 1.43 / Tolerance: 0.10
+[INFO] [1787298211.379679104, 1254.100000000]: Heading: 0.10 / Desired: 0.Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1266.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1266.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp[WARN] [1787298223.682969845, 1266.400000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1266.400000 according to authority unknown_publisher
+
+[WARN] [1787298223.683000274, 1266.400000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1266.400000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1266.400000 according to authority unknown_publisher
+         at line 277 in 15 / Difference: 0.05 / Tolerance: 0.10
+[INFO] [1787298211.379769811, 1254.100000000]: Final Heading: 0.10 / Desired: 0.15 / Difference: 0.05 / Tolerance: 0.10
+[INFO] [1787298211.379783799, 1254.100000000]: Goal reached.
+[INFO] [1787298211.719440582, 1254.400000000]: Path planning took 0.337488944 seconds, distance is 0.52 m.
+[INFO] [1787298213.381503154, 1256.100000000]: Reached target, now turning to desired direction.
+[INFO] [1787298213.381593422, 1256.100000000]: Heading: 0.66 / Desired: -2.95 / Difference: 2.67 / Tolerance: 0.10
+[INFO] [1787298214.380019702, 1257.100000000]: Heading: 1.53 / Desired: -2.95 / Difference: 1.81 / Tolerance: 0.10
+[INFO] [1787298215.381232036, 1258.100000000]: Heading: 2.53 / Desired: -2.95 / Difference: 0.81 / Tolerance: 0.10
+[INFO] [1787298216.897482282, 1259.600000000]: Path planning took 0.517277410 seconds, distance is 0.34 m.
+[INFO] [1787298216.897516238, 1259.600000000]: Heading: -2.42 / Desired: -2.95 / Difference: 0.53 / Tolerance: 0.10
+[INFO] [1787298218.381348373, 1261.100000000]: Heading: -2.96 / Desired: -2.95 / Difference: 0.02 / Tolerance: 0.10
+[INFO] [1787298218.381406749, 1261.100000000]: Final Heading: -2.96 / Desired: -2.95 / Difference: 0.02 / Tolerance: 0.10
+[INFO] [1787298218.381425474, 1261.100000000]: Goal reached.
+[INFO] [1787298218.614115393, 1261.300000000]: Path planning took 0.231516992 seconds, distance is 4.71 m.
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cppWarning: Warning: 
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1266.400000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 1266.400000 according to authority unknown_publisher
+
+         at line          at line Warning: 277277TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1266.400000 according to authority unknown_publisher in  in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp         at line 
+
+277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1266.400000 according to authority unknown_publisherWarning: 
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 1266.400000 according to authority unknown_publisher         at line 
+277         at line  in 277/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[INFO] [1787298223.725672222, 1266.400000000]: Path planning took 0.347330566 seconds, distance is 3.53 m.
+[INFO] [1787298228.774775132, 1271.400000000]: Path planning took 0.393833961 seconds, distance is 0.14 m.
+[INFO] [1787298228.774809332, 1271.400000000]: Reached target, now turning to desired direction.
+[INFO] [1787298228.774819894, 1271.400000000]: Heading: -1.49 / Desired: 1.71 / Difference: 3.09 / Tolerance: 0.10
+[INFO] [1787298230.379611740, 1273.100000000]: Heading: -3.01 / Desired: 1.71 / Difference: 1.56 / Tolerance: 0.10
+[INFO] [1787298231.380118169, 1274.100000000]: Heading: 2.18 / Desired: 1.71 / Difference: 0.47 / Tolerance: 0.10
+[INFO] [1787298232.381067049, 1275.100000000]: Heading: 1.71 / Desired: 1.71 / Difference: 0.01 / Tolerance: 0.10
+[INFO] [1787298232.381143232, 1275.100000000]: Final Heading: 1.71 / Desired: 1.71 / Difference: 0.01 / Tolerance: 0.10
+[INFO] [1787298232.381175155, 1275.100000000]: Goal reached.
+double free or corruption (fasttop)
+[WARN] [1787296956.787483, 0.000000]: Robot Start At 8
+[WARN] [1787296956.837166, 0.000000]: Tsp problem solved by Concorde. 0.045999765396118164
+[INFO] [1787297800.640009, 843.300000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 14 18 17 36 35 16 10 9 15 9 3 9 3 9 15 19 
+[INFO] [1787297827.116070, 869.800000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 14 18 17 36 35 16 10 9 15 9 3 9 3 9 15 19 23 
+[INFO] [1787297833.147711, 875.800000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 14 18 17 36 35 16 10 9 15 9 3 9 3 9 15 19 23 
+[INFO] [1787297856.629887, 899.300000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 14 18 17 36 35 16 10 9 15 9 3 9 3 9 15 19 23 24 
+[INFO] [1787297881.757125, 924.400000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 14 18 17 36 35 16 10 9 15 9 3 9 3 9 15 19 23 24 30 29 30 
+[INFO] [1787297894.775351, 937.400000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 14 18 17 36 35 16 10 9 15 9 3 9 3 9 15 19 23 24 30 29 30 
+[INFO] [1787297900.601335, 943.300000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 14 18 17 36 35 16 10 9 15 9 3 9 3 9 15 19 23 24 30 29 30 
+[INFO] [1787297906.869027, 949.500000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 14 18 17 36 35 16 10 9 15 9 3 9 3 9 15 19 23 24 30 29 30 
+[INFO] [1787297912.966263, 955.600000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 14 18 17 36 35 16 10 9 15 9 3 9 3 9 15 19 23 24 30 29 30 
+[INFO] [1787297923.846856, 966.500000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 14 18 17 36 35 16 10 9 15 9 3 9 3 9 15 19 23 24 30 29 30 31 
+[INFO] [1787297929.366192, 972.000000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 14 18 17 36 35 16 10 9 15 9 3 9 3 9 15 19 23 24 30 29 30 31 
+[INFO] [1787297947.826872, 990.500000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 14 18 17 36 35 16 10 9 15 9 3 9 3 9 15 19 23 24 30 29 30 31 
+[INFO] [1787297953.141865, 995.800000]: Really visited vertices: 8 14 13 7 13 12 6 5 11 35 36 17 21 38 26 27 33 32 33 34 28 22 18 14 18 17 36 35 16 10 9 15 9 3 9 3 9 15 19 23 24 30 29 30 31 32 
+[INFO] [1787298242.119794, 1284.200000]: Pose graph has: 565 vertices, 865 edges.
+... logging to /home/wcqw/ac-slam/catkin_ws/.ros/log/143ff13a-9d31-11f1-a38e-cf9a7ef17d8f/roslaunch-msxg-93275.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;/home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/launch/exploration.launch
+[1mstarted roslaunch server http://127.0.0.1:43773/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /Mapper/LoopMatchMaximumVarianceCoarse: 0.16
+ * /Mapper/LoopMatchMinimumChainSize: 4
+ * /Mapper/LoopMatchMinimumResponseCoarse: 0.6
+ * /Mapper/LoopMatchMinimumResponseFine: 0.7
+ * /Mapper/LoopSearchMaximumDistance: 4
+ * /Mapper/LoopSearchSpaceDimension: 5.0
+ * /Mapper/MinimumTravelDistance: 1.0
+ * /Mapper/MinimumTravelHeading: 0.52
+ * /Mapper/grid_resolution: 0.1
+ * /Mapper/map_frame: map
+ * /Mapper/map_update_rate: 5
+ * /Mapper/max_covariance: 0.01
+ * /Mapper/max_particles: 10000
+ * /Mapper/min_map_size: 20
+ * /Mapper/min_particles: 2500
+ * /Mapper/publish_pose_graph: True
+ * /Mapper/range_threshold: 25.0
+ * /Mapper/transform_publish_period: 0.1
+ * /Navigator/command_target_distance: 1.5
+ * /Navigator/exploration_goal_distance: 3.0
+ * /Navigator/exploration_strategy: NearestFrontierPl...
+ * /Navigator/frequency: 1
+ * /Navigator/map_inflation_radius: 1.0
+ * /Navigator/max_replanning_period: 1.0
+ * /Navigator/min_replanning_period: 5.0
+ * /Navigator/min_target_area_size: 1.0
+ * /Navigator/navigation_goal_angle: 1.0
+ * /Navigator/navigation_goal_distance: 2.0
+ * /Navigator/navigation_homing_distance: 4.0
+ * /Navigator/robot_radius: 0.5
+ * /Navigator/save_path_plan_time: /home/wcqw/ac-sla...
+ * /Navigator/use_local_planner: True
+ * /Navigator/visualize_frontiers: True
+ * /Operator/conformance_weight: 1
+ * /Operator/continue_weight: 1
+ * /Operator/escape_weight: 1
+ * /Operator/frequency: 10
+ * /Operator/local_map/cost_scaling_factor: 2.0
+ * /Operator/local_map/global_frame: odom
+ * /Operator/local_map/height: 6.0
+ * /Operator/local_map/inflation_radius: 0.75
+ * /Operator/local_map/lethal_cost_threshold: 100
+ * /Operator/local_map/map_type: costmap
+ * /Operator/local_map/max_obstacle_height: 2.0
+ * /Operator/local_map/min_obstacle_height: 0.0
+ * /Operator/local_map/observation_sources: scan
+ * /Operator/local_map/obstacle_range: 4.0
+ * /Operator/local_map/publish_frequency: 1.0
+ * /Operator/local_map/publish_voxel_map: True
+ * /Operator/local_map/raytrace_range: 4.5
+ * /Operator/local_map/resolution: 0.05
+ * /Operator/local_map/robot_base_frame: base_link
+ * /Operator/local_map/robot_radius: 0.4
+ * /Operator/local_map/rolling_window: True
+ * /Operator/local_map/scan/clearing: True
+ * /Operator/local_map/scan/data_type: LaserScan
+ * /Operator/local_map/scan/expected_update_rate: 0.4
+ * /Operator/local_map/scan/marking: True
+ * /Operator/local_map/scan/max_obstacle_height: 0.4
+ * /Operator/local_map/scan/min_obstacle_height: 0.08
+ * /Operator/local_map/scan/observation_persistence: 0.0
+ * /Operator/local_map/static_map: False
+ * /Operator/local_map/track_unknown_space: True
+ * /Operator/local_map/transform_tolerance: 0.3
+ * /Operator/local_map/update_frequency: 5.0
+ * /Operator/local_map/width: 6.0
+ * /Operator/max_free_space: 3.0
+ * /Operator/max_velocity: 1.0
+ * /Operator/publish_route: True
+ * /Operator/safety_decay: 0.99
+ * /Operator/safety_weight: 1
+ * /Stage/base_watchdog_timeout: 0
+ * /laser_frame: base_laser_link
+ * /laser_topic: base_scan
+ * /map_frame: map
+ * /map_server/frame_id: map
+ * /map_service: static_map
+ * /map_topic: map
+ * /odometry_frame: odom
+ * /offset_frame: offset
+ * /path_planner/g2o_save_path: /home/wcqw/ac-sla...
+ * /path_planner/map_width: 74.0
+ * /path_planner/need_noise: False
+ * /path_planner/only_use_tsp: True
+ * /path_planner/prior_map_save_path: /home/wcqw/ac-sla...
+ * /path_planner/robot_position: -28.0 -28.0 0
+ * /path_planner/tsp_record_path: /home/wcqw/ac-sla...
+ * /path_planner/tsp_seed: 22001
+ * /path_planner/tsp_solver: concorde
+ * /path_planner/use_drawio: True
+ * /path_planner/variance: 0.0
+ * /path_planner/xml_path: /home/wcqw/ac-sla...
+ * /pubPath/gt_save_path: /home/wcqw/ac-sla...
+ * /pubPath/robot_position: -28.0 -28.0 0
+ * /pubPath/slam_save_path: /home/wcqw/ac-sla...
+ * /robot_description: <?xml version="1....
+ * /robot_frame: base_link
+ * /robot_start_position: -28.0 -28.0 0
+ * /robot_state_publisher/publish_frequency: 30.0
+ * /robot_state_publisher/tf_prefix: 
+ * /rosdistro: noetic
+ * /rosversion: 1.17.4
+ * /use_sim_time: True
+ * /use_tf1: True
+
+NODES
+  /
+    Explore (nav2d_navigator/explore_client)
+    GetMap (nav2d_navigator/get_map_client)
+    Mapper (nav2d_karto/mapper)
+    Navigator (nav2d_navigator/navigator)
+    Operator (nav2d_operator/operator)
+    RVIZ (rviz/rviz)
+    SetGoal (nav2d_navigator/set_goal_client)
+    Stage (stage_ros/stageros)
+    exploration_button_server (cpp_solver/exploration_button_server.py)
+    map_server (map_server/map_server)
+    path_planner (cpp_solver/path_planner.py)
+    pubPath (cpp_solver/pub_path)
+    publisher (p2os_urdf/p2os_publisher_3at)
+    robot_state_publisher (robot_state_publisher/robot_state_publisher)
+    rqt_robot_steering (rqt_robot_steering/rqt_robot_steering)
+    updateDistance (cpp_solver/updateDistance)
+
+[1mROS_MASTER_URI=http://localhost:11311[0m
+]2;/home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/launch/exploration.launch http://localhost:11311
+[1mprocess[Stage-1]: started with pid [93408][0m
+[1mprocess[map_server-2]: started with pid [93409][0m
+[1mprocess[Operator-3]: started with pid [93410][0m
+[1mprocess[Mapper-4]: started with pid [93415][0m
+[1mprocess[Navigator-5]: started with pid [93420][0m
+[1mprocess[GetMap-6]: started with pid [93426][0m
+[1mprocess[Explore-7]: started with pid [93429][0m
+[1mprocess[SetGoal-8]: started with pid [93434][0m
+[1mprocess[pubPath-9]: started with pid [93444][0m
+[1mprocess[updateDistance-10]: started with pid [93452][0m
+[1mprocess[exploration_button_server-11]: started with pid [93455][0m
+[1mprocess[path_planner-12]: started with pid [93467][0m
+[1mprocess[rqt_robot_steering-13]: started with pid [93472][0m
+[1mprocess[robot_state_publisher-14]: started with pid [93478][0m
+[1mprocess[publisher-15]: started with pid [93485][0m
+[1mprocess[RVIZ-16]: started with pid [93495][0m
+[publisher-15] killing on exit
+[RVIZ-16] killing on exit
+[rqt_robot_steering-13] killing on exit
+[robot_state_publisher-14] killing on exit
+[pubPath-9] killing on exit
+[updateDistance-10] killing on exit
+[Explore-7] killing on exit
+[SetGoal-8] killing on exit
+[exploration_button_server-11] killing on exit
+[path_planner-12] killing on exit
+[GetMap-6] killing on exit
+[Navigator-5] killing on exit
+[Mapper-4] killing on exit
+[Operator-3] killing on exit
+[map_server-2] killing on exit
+[Stage-1] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+[1mdone[0m

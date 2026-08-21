@@ -1,0 +1,22 @@
+# Phase 1 Code Baseline dependency lock (2026-08-20)
+
+ROS_DISTRO=noetic
+ROS_PYTHON_EXECUTABLE=/usr/bin/python3
+ROS_PYTHON_VERSION=3.8.10
+
+cpp_solver_upstream_commit=675299330dff0460d42c0ffd87a2f1f7f9f959da
+cpp_solver_runtime_compat_commit=5a116671143611601736c3e4218a762a6a5a9263
+cpp_solver_phase2_observation_commit=211642d66c587419253cf90f0e5ecc7da520f46e
+navigation_2d_commit=96b3e1fed08823dd1dd11ddb0eeead3bd24dd686
+p2os_source_commit=f5ef44a0d0324a5177f29928b84593910d5d14ec
+pyconcorde_commit=393a235a127dc4e887e77f1c2e7c5bd5cd28369c
+
+numpy=1.24.4
+scipy=1.10.1
+networkx=2.8.8
+tsp-solver=0.1
+tsplib95=0.7.1
+pyconcorde=0.2.0
+
+concorde_binary_source=https://www.math.uwaterloo.ca/tsp/concorde/downloads/codes/linux24/concorde.gz
+linkern_binary_source=https://www.math.uwaterloo.ca/tsp/concorde/downloads/codes/linux24/linkern.gz
