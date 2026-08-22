@@ -1,0 +1,22 @@
+LoopMatchMaximumVarianceCoarse: 0.16
+LoopMatchMinimumChainSize: 4
+LoopMatchMinimumResponseCoarse: 0.6
+LoopMatchMinimumResponseFine: 0.7
+LoopSearchMaximumDistance: 4
+LoopSearchSpaceDimension: 5.0
+MinimumTravelDistance: 1.0
+MinimumTravelHeading: 0.52
+enable_loop_diagnostics: true
+grid_resolution: 0.1
+loop_diagnostics_path: /home/wcqw/ac-slam/results/phase2c/positive_control/trial_03/karto_loop_diagnostics.jsonl
+loop_diagnostics_run_id: phase2c_pc_trial03
+map_frame: map
+map_update_rate: 5
+max_covariance: 0.01
+max_particles: 10000
+min_map_size: 20
+min_particles: 2500
+publish_pose_graph: true
+range_threshold: 25.0
+transform_publish_period: 0.1
+

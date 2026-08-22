@@ -29,6 +29,10 @@
 	<!-- -1 preserves the author's unseeded Concorde behavior. Phase 2 passes an explicit seed. -->
 	<arg name="tsp_seed" default="-1" />
 	<arg name="use_drawio" default="true" />
+	<!-- Observation-only Phase 2C loop diagnostics (default off; see mapper.yaml). -->
+	<arg name="enable_loop_diagnostics" default="false" />
+	<arg name="loop_diagnostics_path" default="" />
+	<arg name="loop_diagnostics_run_id" default="" />
 	
 	<param name="robot_start_position" type="str" value="$(arg robot_position)" />
 
@@ -67,6 +71,9 @@
 		<!-- value = map  -->
 		<param name="map_frame" value="map" />  
 		<rosparam file="$(find cpp_solver)/param/mapper.yaml"/>
+		<param name="enable_loop_diagnostics" value="$(arg enable_loop_diagnostics)" />
+		<param name="loop_diagnostics_path" type="str" value="$(arg loop_diagnostics_path)" />
+		<param name="loop_diagnostics_run_id" type="str" value="$(arg loop_diagnostics_run_id)" />
 	</node>
 
 	<!-- Start the Navigator to move the robot autonomously -->

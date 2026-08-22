@@ -1,0 +1,39 @@
+{
+  "git_commit_baseline": "547ea24dcf18d3108302f4fd15cea83565c2a2fa",
+  "git_commit_navigation_2d": "8ae4895a2666b54ad6fa42fc01a1b2912cd94a65",
+  "launch_arguments": {
+    "enable_loop_diagnostics": true,
+    "loop_diagnostics_path": "/home/wcqw/ac-slam/results/phase2c/map3/seed_21005/karto_loop_diagnostics.jsonl",
+    "loop_diagnostics_run_id": "seed_21005",
+    "map_name": "map3/map3",
+    "need_noise": false,
+    "only_use_tsp": false,
+    "strategy": "MyPlanner",
+    "suffix": "_Phase2C_seed21005",
+    "tsp_seed": 21005,
+    "tsp_solver": "concorde",
+    "variance": 0
+  },
+  "launch_file": "cpp_solver exploration.launch",
+  "map": "map3",
+  "max_process_tree_rss_kb": 1515968,
+  "method": "Graph-Based SLAM-aware",
+  "observer": "tools/phase2_observer.py (passive)",
+  "phase": "2C",
+  "python": "/usr/bin/python3 3.8.10",
+  "seed": 21005,
+  "start_pose_xyyaw": [
+    -28.0,
+    -28.0,
+    0.0
+  ],
+  "stdout_stderr": "roslaunch.log",
+  "tsp_phase2a_validation": {
+    "exact_phase2a_rerun": true,
+    "reason": null,
+    "reference_available": true,
+    "reference_sha256": "3f89b3002de039cfb747e838a5979a785f0f134df10322439f8d153394eae3a8",
+    "run_sha256": "3f89b3002de039cfb747e838a5979a785f0f134df10322439f8d153394eae3a8",
+    "seed": 21005
+  }
+}

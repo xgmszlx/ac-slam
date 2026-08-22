@@ -57,7 +57,8 @@ def wait_for_driver(driver, launch, env, timeout, monitor, trial):
     return max_rss
 
 
-def run_trial(trial, output_root, env, explore_timeout, revisit_timeout):
+def run_trial(trial, output_root, env, explore_timeout, revisit_timeout,
+              extra_launch_args=None, target_timeout=420.0):
     run_dir = output_root / 'trial_{:02d}'.format(trial)
     if run_dir.exists():
         raise RuntimeError('refusing to overwrite existing trial: {}'.format(run_dir))
@@ -88,6 +89,7 @@ def run_trial(trial, output_root, env, explore_timeout, revisit_timeout):
             '/usr/bin/python3', str(ROOT / 'tools' / 'phase2b_positive_control_driver.py'),
             '--output-dir', str(run_dir), '--first-history-index', '30',
             '--target-count', '7', '--target-stride', '5',
+            '--target-timeout', str(target_timeout),
         ], env, run_dir / 'driver.log')
 
         launch = start_process([
@@ -96,7 +98,7 @@ def run_trial(trial, output_root, env, explore_timeout, revisit_timeout):
             'only_use_tsp:=true', 'tsp_seed:={}'.format(seed),
             'map_name:=map3/map3', 'robot_position:=-28.0 -28.0 0',
             'map_width:=74.0', 'need_noise:=false', 'variance:=0',
-        ], env, run_dir / 'roslaunch.log')
+        ] + list(extra_launch_args or []), env, run_dir / 'roslaunch.log')
 
         for service in ('/StartMapping', '/StartExploration', '/Mapper/get_loggers'):
             wait_for_command(['rosservice', 'type', service], env, 180, service)

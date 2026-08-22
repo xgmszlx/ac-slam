@@ -35,12 +35,14 @@ def yaw_from_quaternion(q):
 
 
 class PositiveControlDriver:
-    def __init__(self, output_dir, first_history_index, target_count, target_stride):
+    def __init__(self, output_dir, first_history_index, target_count, target_stride,
+                 target_timeout=420.0):
         self.output_dir = os.path.abspath(output_dir)
         os.makedirs(self.output_dir, exist_ok=True)
         self.first_history_index = first_history_index
         self.target_count = target_count
         self.target_stride = target_stride
+        self.target_timeout = float(target_timeout)
         self.lock = threading.RLock()
 
         self.pose_nodes = {}
@@ -267,7 +269,7 @@ class PositiveControlDriver:
                 goal.target_angle = 0.1
                 start_time = rospy.get_time()
                 client.send_goal(goal)
-                finished = client.wait_for_result(rospy.Duration(420.0))
+                finished = client.wait_for_result(rospy.Duration(self.target_timeout))
                 state = int(client.get_state())
                 result = client.get_result()
                 row = {
@@ -360,10 +362,12 @@ def main():
     parser.add_argument('--first-history-index', type=int, default=30)
     parser.add_argument('--target-count', type=int, default=7)
     parser.add_argument('--target-stride', type=int, default=5)
+    parser.add_argument('--target-timeout', type=float, default=420.0)
     args = parser.parse_args(rospy.myargv()[1:])
     rospy.init_node('phase2b_positive_control_driver', anonymous=False)
     driver = PositiveControlDriver(
-        args.output_dir, args.first_history_index, args.target_count, args.target_stride
+        args.output_dir, args.first_history_index, args.target_count, args.target_stride,
+        target_timeout=args.target_timeout,
     )
     rospy.spin()
     if not driver.done.is_set():

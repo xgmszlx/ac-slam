@@ -144,6 +144,27 @@ MultiMapper::MultiMapper()
 		
 	if(mapperNode.getParam("LoopMatchMinimumResponseFine", param_d))
 		mMapper->SetParameters("LoopMatchMinimumResponseFine", param_d);
+
+	// Observation-only Phase 2C loop-closure diagnostics (default disabled).
+	// Enabling this only records intermediate values already computed by Karto;
+	// it never changes any matcher threshold, decision, or SLAM behavior.
+	{
+		bool enableLoopDiagnostics = false;
+		std::string loopDiagnosticsPath = "";
+		std::string loopDiagnosticsRunId = "";
+		mapperNode.param("enable_loop_diagnostics", enableLoopDiagnostics, false);
+		mapperNode.param("loop_diagnostics_path", loopDiagnosticsPath, std::string(""));
+		mapperNode.param("loop_diagnostics_run_id", loopDiagnosticsRunId, std::string(""));
+		mMapper->SetLoopDiagnostics(
+			enableLoopDiagnostics ? true : false,
+			karto::String(loopDiagnosticsPath.c_str()),
+			karto::String(loopDiagnosticsRunId.c_str()));
+		if(enableLoopDiagnostics)
+		{
+			ROS_INFO("PHASE2C_LOOP_DIAGNOSTICS_ENABLED path=%s run_id=%s",
+					 loopDiagnosticsPath.c_str(), loopDiagnosticsRunId.c_str());
+		}
+	}
 	
 	mMapper->Message += karto::delegate(this, &MultiMapper::onMessage);
 	
@@ -365,6 +386,12 @@ void MultiMapper::receiveLaserScan(const sensor_msgs::LaserScan::ConstPtr& scan)
 		if(success)
 		{	
 			// Current laser scan has been added into pose graph, edges are also added.
+
+			// Observation-only Phase 2C: anchor each accepted Karto keyscan to the
+			// ROS/sim timestamp. This lets the diagnostics JSONL (keyed by state id)
+			// be aligned to planner loop events. Does not change any behavior.
+			ROS_INFO("PHASE2C_KEYSCAN_ACCEPTED unique_id=%d state_id=%d sim_time=%.6f",
+					 laserScan->GetUniqueId(), laserScan->GetStateId(), scan->header.stamp.toSec());
 
 			// Compute the map->odom transform
 			karto::Pose2 corrected_pose = laserScan->GetCorrectedPose();

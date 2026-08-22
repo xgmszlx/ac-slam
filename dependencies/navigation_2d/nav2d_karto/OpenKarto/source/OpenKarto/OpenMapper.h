@@ -1707,7 +1707,22 @@ namespace karto
     {
       return m_pGraph->TryCloseLoop(pScan, rSensorName);
     }
-    
+
+    /**
+     * Observation-only loop-closure diagnostics (Phase 2C).
+     * When enabled, every Karto loop search appends one structured JSONL record per
+     * candidate-chain attempt (plus one record when no candidate chain is found) to
+     * the given file. It records only intermediate quantities that the original
+     * algorithm already computes (candidate counts, chain composition, coarse/fine
+     * response and variance, accept/reject decision). Enabling it never changes any
+     * matcher threshold, if condition, candidate selection/ordering, chain
+     * construction, return value, optimization, or any SLAM decision.
+     * @param enable true to enable diagnostics
+     * @param path output file path (append mode)
+     * @param runId run identifier copied into every record
+     */
+    void SetLoopDiagnostics(kt_bool enable, const karto::String& path, const karto::String& runId);
+
   protected:
     /**
      * Hook called after scan matching and before trying loop closure
@@ -1816,6 +1831,42 @@ namespace karto
     Parameter<kt_double>* m_pLoopMatchMaximumVarianceCoarse;    
     Parameter<kt_double>* m_pLoopMatchMinimumResponseCoarse;    
     Parameter<kt_double>* m_pLoopMatchMinimumResponseFine;
+
+    //////////////////////////////////////////////////////////////////////////////
+    // observation-only loop-closure diagnostics (Phase 2C)
+    // Used by MapperGraph (friend) during TryCloseLoop / FindPossibleLoopClosure.
+    // All fields below are inert when m_LoopDiagnosticsEnabled is false.
+
+    kt_bool m_LoopDiagnosticsEnabled;
+    karto::String m_LoopDiagnosticsPath;
+    karto::String m_LoopDiagnosticsRunId;
+
+    // per loop-search accumulators (reset at the start of each TryCloseLoop call)
+    kt_int32u m_DiagScansConsidered;    // scans traversed by FindPossibleLoopClosure
+    kt_int32u m_DiagScansInDistance;    // traversed scans within LoopSearchMaximumDistance
+    kt_int32u m_DiagScansNearLinked;    // in-distance scans that were graph near-linked (excluded)
+    kt_int32u m_DiagChainCount;         // candidate chains returned by FindPossibleLoopClosure
+
+    /**
+     * Resets the per loop-search diagnostic accumulators.
+     */
+    void ResetLoopDiagnostics();
+
+    /**
+     * Appends one JSONL line to the configured diagnostics file (append mode).
+     * No-op when diagnostics are disabled or the path is empty.
+     * @param rLine JSON object line (no trailing newline)
+     */
+    void AppendLoopDiagnosticsLine(const std::string& rLine);
+
+    /**
+     * Builds the shared JSON object fragment (current scan, pose, yaw and the
+     * accumulated candidate-generation counters) for one diagnostics record.
+     * Observation-only. Called by MapperGraph (friend).
+     * @param pScan current scan
+     * @return JSON fragment without surrounding braces
+     */
+    std::string BuildLoopDiagBaseFragment(LocalizedLaserScan* pScan);
   };
 
   //@}

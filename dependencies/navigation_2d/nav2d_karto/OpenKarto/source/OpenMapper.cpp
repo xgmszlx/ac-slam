@@ -26,6 +26,10 @@
 #include <iterator>
 #include <map>
 #include <iostream>
+#include <fstream>
+#include <sstream>
+#include <chrono>
+#include <string>
 
 #include <ros/ros.h>
 
@@ -42,6 +46,82 @@ namespace karto
   #define MAX_VARIANCE            500.0
   #define DISTANCE_PENALTY_GAIN   0.2
   #define ANGLE_PENALTY_GAIN      0.2
+
+  ////////////////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////////////////
+
+  // Observation-only Phase 2C loop-closure diagnostics helpers.
+  // These helpers never alter matching, candidate selection, chain construction,
+  // thresholds, return values, optimization, or any SLAM decision. They only
+  // serialize intermediate values that the original algorithm already computes.
+
+  namespace
+  {
+    std::string LoopDiagDouble(kt_double value)
+    {
+      char buffer[64];
+      snprintf(buffer, sizeof(buffer), "%.6f", value);
+      return std::string(buffer);
+    }
+
+    std::string LoopDiagBool(kt_bool value)
+    {
+      return value ? "true" : "false";
+    }
+
+    // JSON object fragment describing a candidate chain and its scan-index gap to
+    // the current scan. Returns e.g.:
+    //   "chain_size":4,"scan_ids":[12,13,14,15],"min_scan_index_gap":100,"max_scan_index_gap":103
+    std::string LoopDiagChainFragment(const LocalizedLaserScanList& rChain, kt_int32s currentStateId)
+    {
+      std::ostringstream oss;
+      oss << "\"chain_size\":" << rChain.Size() << ",\"scan_ids\":[";
+      kt_int32s minGap = 0;
+      kt_int32s maxGap = 0;
+      bool first = true;
+      bool hasGap = false;
+      karto_const_forEach(LocalizedLaserScanList, &rChain)
+      {
+        if (!first)
+        {
+          oss << ",";
+        }
+        first = false;
+        kt_int32s scanId = (*iter)->GetStateId();
+        kt_int32s gap = currentStateId - scanId;
+        if (!hasGap)
+        {
+          minGap = gap;
+          maxGap = gap;
+          hasGap = true;
+        }
+        else
+        {
+          if (gap < minGap) minGap = gap;
+          if (gap > maxGap) maxGap = gap;
+        }
+        oss << scanId;
+      }
+      oss << "],\"min_scan_index_gap\":" << minGap
+          << ",\"max_scan_index_gap\":" << maxGap;
+      return oss.str();
+    }
+
+    // No-chain reject reason derived only from already-computed counts.
+    std::string LoopDiagNoChainReason(kt_int32u inDistance, kt_int32u nearLinked)
+    {
+      if (inDistance == 0)
+      {
+        return "NO_SPATIAL_CANDIDATE";
+      }
+      if (inDistance - nearLinked == 0)
+      {
+        return "ALL_CANDIDATES_NEAR_LINKED";
+      }
+      return "CHAIN_TOO_SHORT";
+    }
+  }
 
   ////////////////////////////////////////////////////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////////////
@@ -1556,12 +1636,16 @@ namespace karto
     kt_bool loopClosed = false;  // Identifier to whether perform PG optimization
     
     kt_int32u scanIndex = 0;
+
+    // ---- Phase 2C observation-only: reset per loop-search diagnostic accumulators ----
+    m_pOpenMapper->ResetLoopDiagnostics();
     
     LocalizedLaserScanList candidateChain = FindPossibleLoopClosure(pScan, rSensorName, scanIndex);  // Only return one valid loop chain
     if(candidateChain.IsEmpty()){
       // ROS_WARN("No loop closure find.");
     }
     
+    kt_int32u chainAttempt = 0;
     while (!candidateChain.IsEmpty())
     {
 #ifdef KARTO_DEBUG2
@@ -1583,6 +1667,37 @@ namespace karto
        
       MapperEventArguments eventArguments(message.ToString());
       m_pOpenMapper->Message.Notify(this, eventArguments);
+
+      // ---- Phase 2C observation-only: classify the coarse outcome from the
+      //      already-computed response and covariance. This never changes the
+      //      original decision below. ----
+      kt_bool coarsePass = false;
+      std::string coarseReason = "NA";
+      if (((coarseResponse > m_pOpenMapper->m_pLoopMatchMinimumResponseCoarse->GetValue()) &&
+           (covariance(0, 0) < m_pOpenMapper->m_pLoopMatchMaximumVarianceCoarse->GetValue()) &&
+           (covariance(1, 1) < m_pOpenMapper->m_pLoopMatchMaximumVarianceCoarse->GetValue()))
+          ||
+          ((coarseResponse > 0.9 * m_pOpenMapper->m_pLoopMatchMinimumResponseCoarse->GetValue()) &&
+           (covariance(0, 0) < 0.01 * m_pOpenMapper->m_pLoopMatchMaximumVarianceCoarse->GetValue()) &&
+           (covariance(1, 1) < 0.01 * m_pOpenMapper->m_pLoopMatchMaximumVarianceCoarse->GetValue())))
+      {
+        coarsePass = true;
+      }
+      else
+      {
+        if (coarseResponse > m_pOpenMapper->m_pLoopMatchMinimumResponseCoarse->GetValue())
+        {
+          coarseReason = "COARSE_HIGH_VARIANCE";
+        }
+        else if (coarseResponse > 0.9 * m_pOpenMapper->m_pLoopMatchMinimumResponseCoarse->GetValue())
+        {
+          coarseReason = "COARSE_ALT_REJECT";
+        }
+        else
+        {
+          coarseReason = "COARSE_LOW_RESPONSE";
+        }
+      }
       
       if (((coarseResponse > m_pOpenMapper->m_pLoopMatchMinimumResponseCoarse->GetValue()) &&
            (covariance(0, 0) < m_pOpenMapper->m_pLoopMatchMaximumVarianceCoarse->GetValue()) &&
@@ -1612,6 +1727,29 @@ namespace karto
           MapperEventArguments eventArguments("REJECTED!");
           m_pOpenMapper->Message.Notify(this, eventArguments);
           ROS_DEBUG("Fine LC failed. Actual: %f, Required: %f", fineResponse, m_pOpenMapper->m_pLoopMatchMinimumResponseFine->GetValue());
+
+          // ---- Phase 2C observation-only: emit fine-reject record ----
+          {
+            std::ostringstream oss;
+            oss << "{\"event\":\"loop_search_chain\","
+                << m_pOpenMapper->BuildLoopDiagBaseFragment(pScan) << ","
+                << "\"chain_attempt_index\":" << chainAttempt << ","
+                << "\"chain_id\":" << chainAttempt << ","
+                << LoopDiagChainFragment(candidateChain, pScan->GetStateId()) << ","
+                << "\"coarse_attempted\":true,"
+                << "\"coarse_response\":" << LoopDiagDouble(coarseResponse) << ","
+                << "\"coarse_variance_x\":" << LoopDiagDouble(covariance(0, 0)) << ","
+                << "\"coarse_variance_y\":" << LoopDiagDouble(covariance(1, 1)) << ","
+                << "\"coarse_pass\":" << LoopDiagBool(coarsePass) << ","
+                << "\"coarse_reject_reason\":null,"
+                << "\"fine_attempted\":true,"
+                << "\"fine_response\":" << LoopDiagDouble(fineResponse) << ","
+                << "\"fine_pass\":false,"
+                << "\"accepted\":false,"
+                << "\"reject_stage\":\"FINE\","
+                << "\"reject_reason\":\"FINE_LOW_RESPONSE\"}";
+            m_pOpenMapper->AppendLoopDiagnosticsLine(oss.str());
+          }
         }
         else
         {
@@ -1631,12 +1769,83 @@ namespace karto
           ROS_WARN("Add one Loop closure. %d loops have been added.", mCountLoop);   
 
           loopClosed = true;
+
+          // ---- Phase 2C observation-only: emit accepted record ----
+          {
+            std::ostringstream oss;
+            oss << "{\"event\":\"loop_search_chain\","
+                << m_pOpenMapper->BuildLoopDiagBaseFragment(pScan) << ","
+                << "\"chain_attempt_index\":" << chainAttempt << ","
+                << "\"chain_id\":" << chainAttempt << ","
+                << LoopDiagChainFragment(candidateChain, pScan->GetStateId()) << ","
+                << "\"coarse_attempted\":true,"
+                << "\"coarse_response\":" << LoopDiagDouble(coarseResponse) << ","
+                << "\"coarse_variance_x\":" << LoopDiagDouble(covariance(0, 0)) << ","
+                << "\"coarse_variance_y\":" << LoopDiagDouble(covariance(1, 1)) << ","
+                << "\"coarse_pass\":true,"
+                << "\"coarse_reject_reason\":null,"
+                << "\"fine_attempted\":true,"
+                << "\"fine_response\":" << LoopDiagDouble(fineResponse) << ","
+                << "\"fine_pass\":true,"
+                << "\"accepted\":true,"
+                << "\"reject_stage\":\"ACCEPTED\","
+                << "\"reject_reason\":null}";
+            m_pOpenMapper->AppendLoopDiagnosticsLine(oss.str());
+          }
         }
       }else{
         ROS_DEBUG("Coarse LC failed. Actual: %f, Required: %f", coarseResponse, m_pOpenMapper->m_pLoopMatchMinimumResponseCoarse->GetValue());
         ROS_DEBUG("Value cov(0, 0): %f, cov(1, 1): %f. Required Max cov: %f", covariance(0, 0), covariance(1, 1), m_pOpenMapper->m_pLoopMatchMaximumVarianceCoarse->GetValue());
+
+        // ---- Phase 2C observation-only: emit coarse-reject record ----
+        {
+          std::ostringstream oss;
+          oss << "{\"event\":\"loop_search_chain\","
+              << m_pOpenMapper->BuildLoopDiagBaseFragment(pScan) << ","
+              << "\"chain_attempt_index\":" << chainAttempt << ","
+              << "\"chain_id\":" << chainAttempt << ","
+              << LoopDiagChainFragment(candidateChain, pScan->GetStateId()) << ","
+              << "\"coarse_attempted\":true,"
+              << "\"coarse_response\":" << LoopDiagDouble(coarseResponse) << ","
+              << "\"coarse_variance_x\":" << LoopDiagDouble(covariance(0, 0)) << ","
+              << "\"coarse_variance_y\":" << LoopDiagDouble(covariance(1, 1)) << ","
+              << "\"coarse_pass\":false,"
+              << "\"coarse_reject_reason\":\"" << coarseReason << "\","
+              << "\"fine_attempted\":false,"
+              << "\"fine_response\":null,"
+              << "\"fine_pass\":null,"
+              << "\"accepted\":false,"
+              << "\"reject_stage\":\"COARSE\","
+              << "\"reject_reason\":\"" << coarseReason << "\"}";
+          m_pOpenMapper->AppendLoopDiagnosticsLine(oss.str());
+        }
       }
+      chainAttempt++;
       candidateChain = FindPossibleLoopClosure(pScan, rSensorName, scanIndex); // Seach for new loop closure chain from new scanIndex
+    }
+    // ---- Phase 2C observation-only: if no candidate chain was ever attempted,
+    //      emit one no-chain record summarizing the candidate generation stage. ----
+    if (m_pOpenMapper->m_DiagChainCount == 0)
+    {
+      std::ostringstream oss;
+      std::string noChainReason = LoopDiagNoChainReason(
+        m_pOpenMapper->m_DiagScansInDistance, m_pOpenMapper->m_DiagScansNearLinked);
+      oss << "{\"event\":\"loop_search_no_chain\","
+          << m_pOpenMapper->BuildLoopDiagBaseFragment(pScan) << ","
+          << "\"chain_attempt_index\":null,"
+          << "\"chain_id\":null,"
+          << "\"chain_size\":0,\"scan_ids\":[],"
+          << "\"min_scan_index_gap\":null,\"max_scan_index_gap\":null,"
+          << "\"coarse_attempted\":false,"
+          << "\"coarse_response\":null,"
+          << "\"coarse_variance_x\":null,\"coarse_variance_y\":null,"
+          << "\"coarse_pass\":null,\"coarse_reject_reason\":null,"
+          << "\"fine_attempted\":false,"
+          << "\"fine_response\":null,\"fine_pass\":null,"
+          << "\"accepted\":false,"
+          << "\"reject_stage\":\"CANDIDATE\","
+          << "\"reject_reason\":\"" << noChainReason << "\"}";
+      m_pOpenMapper->AppendLoopDiagnosticsLine(oss.str());
     }
     if(!loopClosed){
       ROS_DEBUG("Reject Loop closure.");
@@ -2110,6 +2319,9 @@ namespace karto
     kt_size_t nScans = scans.Size();
     for (; rStartScanIndex < nScans; rStartScanIndex++)  // Traversing all scans
     {
+      // ---- Phase 2C observation-only: accumulate candidate-generation counters ----
+      m_pOpenMapper->m_DiagScansConsidered++;
+      
       LocalizedLaserScan* pCandidateScan = scans[rStartScanIndex];
       
       Pose2 candidateScanPose = pCandidateScan->GetReferencePose(m_pOpenMapper->m_pUseScanBarycenter->GetValue());
@@ -2117,9 +2329,13 @@ namespace karto
       kt_double squaredDistance = candidateScanPose.GetPosition().SquaredDistance(pose.GetPosition());
       if (squaredDistance < math::Square(m_pOpenMapper->m_pLoopSearchMaximumDistance->GetValue()) + KT_TOLERANCE) // 10
       {
+        // ---- Phase 2C observation-only ----
+        m_pOpenMapper->m_DiagScansInDistance++;
         // a linked scan cannot be in the chain
         if (nearLinkedScans.Contains(pCandidateScan) == true)
         {
+          // ---- Phase 2C observation-only ----
+          m_pOpenMapper->m_DiagScansNearLinked++;
           chain.Clear();
         }
         else
@@ -2132,6 +2348,8 @@ namespace karto
         // return chain if it is long "enough"
         if (chain.Size() >= m_pOpenMapper->m_pLoopMatchMinimumChainSize->GetValue())
         {
+          // ---- Phase 2C observation-only ----
+          m_pOpenMapper->m_DiagChainCount++;
           return chain;
         }
         else
@@ -2141,6 +2359,12 @@ namespace karto
       }
     }
     
+    // ---- Phase 2C observation-only: the trailing partial chain (possibly below
+    //      the minimum chain size) is also a returned candidate chain. ----
+    if (!chain.IsEmpty())
+    {
+      m_pOpenMapper->m_DiagChainCount++;
+    }
     return chain;
   }
   
@@ -2186,6 +2410,13 @@ namespace karto
     , m_pSequentialScanMatcher(NULL)
     , m_pMapperSensorManager(NULL)
     , m_pGraph(NULL)
+    , m_LoopDiagnosticsEnabled(false)
+    , m_LoopDiagnosticsPath("")
+    , m_LoopDiagnosticsRunId("")
+    , m_DiagScansConsidered(0)
+    , m_DiagScansInDistance(0)
+    , m_DiagScansNearLinked(0)
+    , m_DiagChainCount(0)
   {
     InitializeParameters();
   }
@@ -2201,6 +2432,13 @@ namespace karto
     , m_pSequentialScanMatcher(NULL)
     , m_pMapperSensorManager(NULL)
     , m_pGraph(NULL)
+    , m_LoopDiagnosticsEnabled(false)
+    , m_LoopDiagnosticsPath("")
+    , m_LoopDiagnosticsRunId("")
+    , m_DiagScansConsidered(0)
+    , m_DiagScansInDistance(0)
+    , m_DiagScansNearLinked(0)
+    , m_DiagChainCount(0)
   {
     InitializeParameters();
   }
@@ -2213,6 +2451,61 @@ namespace karto
     Reset();
 
     delete m_pMapperSensorManager;
+  }
+
+  void OpenMapper::SetLoopDiagnostics(kt_bool enable, const karto::String& path, const karto::String& runId)
+  {
+    // Observation-only: only stores configuration; does not alter any SLAM behavior.
+    m_LoopDiagnosticsEnabled = enable;
+    m_LoopDiagnosticsPath = path;
+    m_LoopDiagnosticsRunId = runId;
+  }
+
+  void OpenMapper::ResetLoopDiagnostics()
+  {
+    m_DiagScansConsidered = 0;
+    m_DiagScansInDistance = 0;
+    m_DiagScansNearLinked = 0;
+    m_DiagChainCount = 0;
+  }
+
+  void OpenMapper::AppendLoopDiagnosticsLine(const std::string& rLine)
+  {
+    if (!m_LoopDiagnosticsEnabled)
+    {
+      return;
+    }
+    if (m_LoopDiagnosticsPath.Size() == 0)
+    {
+      return;
+    }
+    std::ofstream out(m_LoopDiagnosticsPath.ToCString(), std::ios::app);
+    if (out.is_open())
+    {
+      out << rLine << "\n";
+      out.close();
+    }
+  }
+
+  std::string OpenMapper::BuildLoopDiagBaseFragment(LocalizedLaserScan* pScan)
+  {
+    std::ostringstream oss;
+    Pose2 refPose = pScan->GetReferencePose(m_pUseScanBarycenter->GetValue());
+    kt_int64s nowMs = std::chrono::duration_cast<std::chrono::milliseconds>(
+      std::chrono::steady_clock::now().time_since_epoch()).count();
+    oss << "\"wall_time_ms\":" << nowMs
+        << ",\"run_id\":\"" << m_LoopDiagnosticsRunId.ToCString() << "\""
+        << ",\"scan_id\":" << pScan->GetStateId()
+        << ",\"scan_unique_id\":" << pScan->GetUniqueId()
+        << ",\"scan_pose_x\":" << LoopDiagDouble(refPose.GetX())
+        << ",\"scan_pose_y\":" << LoopDiagDouble(refPose.GetY())
+        << ",\"scan_yaw\":" << LoopDiagDouble(refPose.GetHeading())
+        << ",\"loop_search_triggered\":true"
+        << ",\"historical_scans_considered\":" << m_DiagScansConsidered
+        << ",\"historical_scans_in_distance\":" << m_DiagScansInDistance
+        << ",\"historical_scans_filtered_near_linked\":" << m_DiagScansNearLinked
+        << ",\"candidate_chain_count\":" << m_DiagChainCount;
+    return oss.str();
   }
 
   void OpenMapper::InitializeParameters()

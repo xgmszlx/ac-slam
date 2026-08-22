@@ -38,3 +38,13 @@ LoopMatchMinimumResponseFine: 0.7
 LoopMatchMaximumVarianceCoarse: 0.16
 
 ###########################################################
+
+# Observation-only Phase 2C loop-closure diagnostics.
+# When disabled (default), Karto behavior is byte-for-byte unchanged.
+# When enabled, OpenMapper appends one JSONL record per loop-search candidate
+# chain attempt (plus one no-chain record) to loop_diagnostics_path.
+enable_loop_diagnostics: false
+loop_diagnostics_path: ""
+loop_diagnostics_run_id: ""
+
+###########################################################
