@@ -38,7 +38,8 @@ runs (seeds 21001–21005, same Concorde seeds and TSPs as Phase 2A).
 
 ## 4. Positive-control validation
 
-**Gate A = PASS (validated via a formal run instead of the explicit positive control).**
+**Gate A (revised per Phase 3A audit 13): ACCEPTED-path instrumentation validated;
+explicit positive-control validation incomplete (environmental blocker).**
 
 The explicit Phase 2B-protocol positive control could not be completed on this host
 (5 attempts): two MoveTo navigation timeouts during the revisit, and three exploration
@@ -46,7 +47,7 @@ timeouts caused by the Stage simulator intermittently running at ~0.2x real time
 environmental issue confirmed with an isolated Stage running at 4.88x wall/sim with no
 other nodes; identical instrumentation ran at 1.00x in an earlier trial).
 
-The ACCEPTED diagnostics path was instead validated by a **real accepted closure in the
+The ACCEPTED diagnostics path was validated by a **real accepted closure in the
 seed_21001 SLAM-aware run**:
 
 | | Diagnostics record | Accepted callback |
@@ -55,10 +56,14 @@ seed_21001 SLAM-aware run**:
 | match | ACCEPTED (chain 429-434, size 6, gap 245-250, coarse 0.6573, fine 0.9274) | 1 event |
 
 Structured ACCEPTED events (1) == accepted callbacks (1), with full internals recorded.
-This is a 1:1 validation that the instrumentation observes accepted closures correctly.
+This is a 1:1 validation that the instrumentation records accepted closures correctly.
+It does **not** substitute for an explicit positive-control validation, which remains
+uncompleted for environmental reasons (see `13_phase2c_scientific_audit.md`, Audit 2).
 
 Also validated structurally: all diagnostics records parse, scan ids are monotonic,
 counters are internally consistent, and no-chain reject reasons match their counts.
+The diagnostics `scan_yaw` field is **invalid** (always 0.0; barycenter-pose heading);
+all orientation statistics in this report use trajectory-derived yaw (see Audit 5).
 
 ## 5. Experiment reproducibility
 
@@ -120,13 +125,16 @@ Examples:
   dominates.
 - seed_21004 loop 4 and seed_21003 loop 3 (old "F Unknown"): now **D1/C3 Confirmed**.
 
-## 9. Phase 2B → Phase 2C label revision
+## 9. Phase 2B → Phase 2C label revision (replication-level)
 
-`results/phase2c/map3/aggregate/failure_transition_matrix.csv` (matched by seed + loop
-index; note: Phase 2C runs are independent re-runs of the same seed, so the comparison
-is at the loop-index level, not shared loop identity).
+`results/phase2c/map3/aggregate/failure_transition_matrix.csv`. Per the Phase 3A
+audit (`13_phase2c_scientific_audit.md`, Audit 1), this is a **replication-level
+comparison**: Phase 2C runs are independent re-runs of the same seeds (same TSP, same
+planned loop vertices, but different waypoint counts, timings and trajectories). It is
+**not** an event-level relabeling of the same physical loop events. Wording in earlier
+drafts ("Phase 2B label proven wrong") is withdrawn.
 
-| Old Phase 2B | New Phase 2C (all Confirmed) | Count |
+| Old Phase 2B | New Phase 2C (all Confirmed, new runs) | Count |
 |---|---|---:|
 | C. Opportunity failure (Probable) | D1 | 5 |
 | C. Opportunity failure (Probable) | C3 | 5 |
@@ -136,11 +144,11 @@ is at the loop-index level, not shared loop identity).
 | F. Unknown | C3 | 1 |
 | F. Unknown | D1 | 1 |
 
-**Previous Phase 2B inference was not fully supported.** Phase 2B's offline
-reconstruction mis-assigned several cases: half of the old "opportunity" labels are now
-D1 (coarse-response rejection) and most of the old "matching" labels are now C3
-(chain-too-short). The two old "Unknown" cases are now Confirmed. This is expected:
-Phase 2B lacked the internal candidate/chain/response telemetry that Phase 2C records.
+**Supported statement:** Phase 2B's offline taxonomy has limited predictive power for
+the actual internal rejection mechanism observed in independent re-runs of the same
+planned loops (half of the old "opportunity" cases behave as D1, most of the old
+"matching" cases behave as C3 in the new runs). The Phase 2C C3/D1 assignments are
+direct Karto-internal evidence for the *new* runs only.
 
 ## 10. Opportunity-generation findings
 
