@@ -1,0 +1,17 @@
+nohup: 忽略输入
+
+===== CASE 2: C3-opp-v26 (seed 21005, target v26) =====
+Traceback (most recent call last):
+  File "tools/run_phase4a_targeted.py", line 280, in <module>
+    main()
+  File "tools/run_phase4a_targeted.py", line 276, in main
+    run_case(seed, label, target, env, index)
+  File "tools/run_phase4a_targeted.py", line 234, in run_case
+    for line in diagnostics_path.read_text(errors='replace').splitlines():
+  File "/usr/lib/python3.8/pathlib.py", line 1236, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+  File "/usr/lib/python3.8/pathlib.py", line 1222, in open
+    return io.open(self, mode, buffering, encoding, errors, newline,
+  File "/usr/lib/python3.8/pathlib.py", line 1078, in _opener
+    return self._accessor.open(self, flags, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/wcqw/ac-slam/results/phase4a/targeted_cases/02_C3-opp-v26_21005/karto_loop_diagnostics.jsonl'
