@@ -58,7 +58,7 @@ def wait_for_driver(driver, launch, env, timeout, monitor, trial):
 
 
 def run_trial(trial, output_root, env, explore_timeout, revisit_timeout,
-              extra_launch_args=None, target_timeout=420.0):
+              extra_launch_args=None, target_timeout=420.0, extra_driver_args=None):
     run_dir = output_root / 'trial_{:02d}'.format(trial)
     if run_dir.exists():
         raise RuntimeError('refusing to overwrite existing trial: {}'.format(run_dir))
@@ -90,7 +90,7 @@ def run_trial(trial, output_root, env, explore_timeout, revisit_timeout,
             '--output-dir', str(run_dir), '--first-history-index', '30',
             '--target-count', '7', '--target-stride', '5',
             '--target-timeout', str(target_timeout),
-        ], env, run_dir / 'driver.log')
+        ] + list(extra_driver_args or []), env, run_dir / 'driver.log')
 
         launch = start_process([
             'roslaunch', 'cpp_solver', 'exploration.launch',

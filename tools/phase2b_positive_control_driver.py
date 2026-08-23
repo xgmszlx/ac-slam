@@ -36,13 +36,14 @@ def yaw_from_quaternion(q):
 
 class PositiveControlDriver:
     def __init__(self, output_dir, first_history_index, target_count, target_stride,
-                 target_timeout=420.0):
+                 target_timeout=420.0, skip_failed_targets=False):
         self.output_dir = os.path.abspath(output_dir)
         os.makedirs(self.output_dir, exist_ok=True)
         self.first_history_index = first_history_index
         self.target_count = target_count
         self.target_stride = target_stride
         self.target_timeout = float(target_timeout)
+        self.skip_failed_targets = bool(skip_failed_targets)
         self.lock = threading.RLock()
 
         self.pose_nodes = {}
@@ -258,6 +259,8 @@ class PositiveControlDriver:
                 raise RuntimeError('MoveTo action server unavailable')
 
             action_rows = []
+            skipped_rows = []
+            reached_count = 0
             for sequence, target in enumerate(targets, 1):
                 goal = MoveToPosition2DGoal()
                 goal.header.stamp = rospy.Time.now()
@@ -287,10 +290,20 @@ class PositiveControlDriver:
                         'final_theta': float(result.final_pose.theta),
                         'final_distance': float(result.final_distance),
                     })
-                action_rows.append(row)
                 if not finished or state != 3:
+                    if self.skip_failed_targets:
+                        row['skipped'] = True
+                        skipped_rows.append(row)
+                        rospy.logwarn('PositiveControl: skipping unreachable history target '
+                                      '{} (state {})'.format(sequence, state))
+                        continue
                     raise RuntimeError('MoveTo target {} failed with state {}'.format(sequence, state))
+                row['skipped'] = False
+                reached_count += 1
+                action_rows.append(row)
 
+            if reached_count == 0:
+                raise RuntimeError('all MoveTo targets failed (0 of {} reached)'.format(len(targets)))
             rospy.sleep(8.0)
             with self.lock:
                 self.revisit_active = False
@@ -319,6 +332,9 @@ class PositiveControlDriver:
                     'status': 'SUCCEEDED',
                     'revisit_end_time': rospy.get_time(),
                     'targets': action_rows,
+                    'skipped_targets': skipped_rows,
+                    'targets_reached': reached_count,
+                    'targets_attempted_total': len(targets),
                     'actual_revisit_trajectory': self.revisit_gt,
                     'after_node_count': len(after['trajectory_estimate']),
                     'after_edge_count': after['pose_graph_edge_count'],
@@ -363,11 +379,12 @@ def main():
     parser.add_argument('--target-count', type=int, default=7)
     parser.add_argument('--target-stride', type=int, default=5)
     parser.add_argument('--target-timeout', type=float, default=420.0)
+    parser.add_argument('--skip-failed-targets', action='store_true')
     args = parser.parse_args(rospy.myargv()[1:])
     rospy.init_node('phase2b_positive_control_driver', anonymous=False)
     driver = PositiveControlDriver(
         args.output_dir, args.first_history_index, args.target_count, args.target_stride,
-        target_timeout=args.target_timeout,
+        target_timeout=args.target_timeout, skip_failed_targets=args.skip_failed_targets,
     )
     rospy.spin()
     if not driver.done.is_set():

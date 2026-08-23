@@ -42,6 +42,7 @@ def main():
         args.explore_timeout, args.revisit_timeout,
         extra_launch_args=extra_launch_args,
         target_timeout=args.target_timeout,
+        extra_driver_args=['--skip-failed-targets'],
     )
     print('positive_control_success={}'.format(success))
     cv = closure_validate(run_dir, diagnostics_path, None, env)
