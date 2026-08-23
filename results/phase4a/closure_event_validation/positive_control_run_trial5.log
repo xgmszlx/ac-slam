@@ -1,0 +1,11 @@
+nohup: 忽略输入
+Traceback (most recent call last):
+  File "tools/run_phase4a_closure_positive_control.py", line 62, in <module>
+    main()
+  File "tools/run_phase4a_closure_positive_control.py", line 40, in main
+    success = run_trial(
+  File "/home/wcqw/ac-slam/tools/run_phase2b_positive_controls.py", line 141, in run_trial
+    max_rss = max(max_rss, wait_for_topic_result(
+  File "/home/wcqw/ac-slam/tools/run_phase2_pairs.py", line 141, in wait_for_topic_result
+    raise RuntimeError('{} hard timeout after {:.1f}s'.format(stage, elapsed))
+RuntimeError: history_exploration hard timeout after 2401.0s

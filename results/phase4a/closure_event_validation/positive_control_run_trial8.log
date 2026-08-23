@@ -1,0 +1,9 @@
+nohup: 忽略输入
+Traceback (most recent call last):
+  File "tools/run_phase4a_closure_positive_control.py", line 128, in <module>
+    main()
+  File "tools/run_phase4a_closure_positive_control.py", line 51, in main
+    success = run_trial(
+  File "/home/wcqw/ac-slam/tools/run_phase2b_positive_controls.py", line 165, in run_trial
+    raise RuntimeError('positive-control execution failed: {}'.format(result.get('reason')))
+RuntimeError: positive-control execution failed: RuntimeError: all MoveTo targets failed (0 of 7 reached)

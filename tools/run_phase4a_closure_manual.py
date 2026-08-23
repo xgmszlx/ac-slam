@@ -23,12 +23,12 @@ import shutil
 import subprocess
 import threading
 import time
-from pathlib import Path
+from pathlib import Path as FilePath
 
 import actionlib
 import rospy
 from geometry_msgs.msg import PoseStamped
-from nav_msgs.msg import Path
+from nav_msgs.msg import Path as NavPath
 from nav2d_navigator.msg import MoveToPosition2DAction, MoveToPosition2DGoal
 from rosgraph_msgs.msg import Log
 
@@ -110,7 +110,7 @@ class ManualDrive:
         return state == 3 and bool(finished)
 
     def run(self):
-        rospy.Subscriber('/slam_path', Path, self.on_slam_path, queue_size=10)
+        rospy.Subscriber('/slam_path', NavPath, self.on_slam_path, queue_size=10)
         rospy.Subscriber('/rosout', Log, self.on_rosout, queue_size=200)
         client = actionlib.SimpleActionClient('/MoveTo', MoveToPosition2DAction)
         if not client.wait_for_server(rospy.Duration(30.0)):
@@ -223,7 +223,7 @@ def main():
             'map_name:=map3/map3', 'robot_position:=-28.0 -28.0 0',
             'map_width:=74.0', 'need_noise:=false', 'variance:=0',
         ], env, run_dir / 'roslaunch.log')
-        for service in ('/StartMapping', '/StartExploration', '/MoveTo'):
+        for service in ('/StartMapping', '/StartExploration'):
             wait_for_command(['rosservice', 'type', service], env, 180, service)
 
         mapping_result = subprocess.Popen(
@@ -251,7 +251,7 @@ def main():
         stop_process(observer); observer = None
         stop_process(launch); launch = None
         stop_process(roscore); roscore = None
-        rosout_source = Path(env['ROS_LOG_DIR']) / ros_run_id / 'rosout.log'
+        rosout_source = FilePath(env['ROS_LOG_DIR']) / ros_run_id / 'rosout.log'
         if rosout_source.is_file():
             shutil.copy2(rosout_source, run_dir / 'rosout.log')
         # re-read validation from the copied rosout (authoritative)

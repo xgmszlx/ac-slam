@@ -1,0 +1,14 @@
+nohup: 忽略输入
+[WARN] [1787485661.048663, 12.900000]: PHASE4A_MANUAL start pose=(0.99, -0.11, -0.52)
+[WARN] [1787485727.192401, 26.900000]: PHASE4A_MANUAL out rot=0.0 -> state=3 finished=True (14.0s)
+[WARN] [1787485822.193739, 46.000000]: PHASE4A_MANUAL back-to-start -> state=3 finished=True (18.0s)
+Traceback (most recent call last):
+  File "tools/run_phase4a_closure_manual.py", line 306, in <module>
+    main()
+  File "tools/run_phase4a_closure_manual.py", line 254, in main
+    rosout_source = Path(env['ROS_LOG_DIR']) / ros_run_id / 'rosout.log'
+  File "/opt/ros/noetic/lib/python3/dist-packages/nav_msgs/msg/_Path.py", line 82, in __init__
+    super(Path, self).__init__(*args, **kwds)
+  File "/opt/ros/noetic/lib/python3/dist-packages/genpy/message.py", line 353, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['header', 'poses'] args are('/home/wcqw/ac-slam/catkin_ws/.ros/log',)
