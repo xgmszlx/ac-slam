@@ -231,10 +231,11 @@ def run_case(seed, label, target_vertex, env, index):
                                   r'chain=\[(\d+),(\d+)\]', rl)
         closure_unattr = len(re.findall(r'PHASE4A_CLOSURE_UNATTRIBUTED', rl))
         diag_acc = []
-        for line in diagnostics_path.read_text(errors='replace').splitlines():
-            r = json.loads(line)
-            if r.get('accepted'):
-                diag_acc.append(r)
+        if diagnostics_path.is_file():
+            for line in diagnostics_path.read_text(errors='replace').splitlines():
+                r = json.loads(line)
+                if r.get('accepted'):
+                    diag_acc.append(r)
         summary = {
             'seed': seed, 'case': label, 'target_vertex': target_vertex,
             'gate_decisions': decisions, 'repairs': repairs,
