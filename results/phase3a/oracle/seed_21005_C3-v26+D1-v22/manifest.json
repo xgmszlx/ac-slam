@@ -1,0 +1,48 @@
+{
+  "case_label": "C3-v26+D1-v22",
+  "early_stopped": true,
+  "git_commit_baseline": "dbc01b344a556b78101ce5a5c755d3c681b6d541",
+  "git_commit_navigation_2d": "8ae4895a2666b54ad6fa42fc01a1b2912cd94a65",
+  "keyscan_wall_span_ms": [
+    69069506,
+    77387064
+  ],
+  "launch_arguments": {
+    "enable_loop_diagnostics": true,
+    "loop_diagnostics_path": "/home/wcqw/ac-slam/results/phase3a/oracle/seed_21005_C3-v26+D1-v22/karto_loop_diagnostics.jsonl",
+    "loop_diagnostics_run_id": "seed_21005_C3-v26+D1-v22",
+    "map_name": "map3/map3",
+    "need_noise": false,
+    "only_use_tsp": false,
+    "oracle_after": 8,
+    "oracle_before": 8,
+    "oracle_densify_m": 0.5,
+    "oracle_mode": 1,
+    "strategy": "MyPlanner",
+    "suffix": "_Phase3A_C3-v26+D1-v22_seed21005",
+    "tsp_seed": 21005,
+    "tsp_solver": "concorde",
+    "variance": 0
+  },
+  "launch_file": "cpp_solver exploration.launch",
+  "map": "map3",
+  "method": "Graph-Based SLAM-aware",
+  "observer": "tools/phase2_observer.py (passive)",
+  "oracle_after": 8,
+  "oracle_before": 8,
+  "oracle_densify_m": 0.5,
+  "oracle_mode": 1,
+  "phase": "3A-oracle",
+  "python": "/usr/bin/python3 3.8.10",
+  "seed": 21005,
+  "start_pose_xyyaw": [
+    -28.0,
+    -28.0,
+    0.0
+  ],
+  "stdout_stderr": "roslaunch.log",
+  "stop_grace_sim": 40.0,
+  "target_loop_finished_sim": "\u001b[0m[INFO]",
+  "target_loop_vertex": 22,
+  "variant": "V1-history-trace"
+}

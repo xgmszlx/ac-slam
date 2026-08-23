@@ -64,17 +64,23 @@ def probe_stage(env, probe_dir):
                 'map3' / 'map3.world'),
         ], env, probe_dir / 'stage.log')
         time.sleep(8)
-        out = command_output([
-            '/usr/bin/python3', '-c',
-            "import time, rospy;"
-            "from rosgraph_msgs.msg import Clock;"
-            "n=[0];"
-            "def cb(m): n[0]+=1\n"
-            "rospy.init_node('probe', anonymous=True);"
-            "rospy.Subscriber('/clock', Clock, cb);"
-            "time.sleep(20);"
-            "print('CLOCK_MSGS', n[0])",
-        ], env, timeout=40)
+        code = (
+            "import time, rospy\n"
+            "from rosgraph_msgs.msg import Clock\n"
+            "sw=ss=last_s=None\n"
+            "def cb(m):\n"
+            "    global sw, ss, last_s\n"
+            "    t=time.time(); s=m.clock.to_sec()\n"
+            "    if sw is None: sw, ss = t, s\n"
+            "    last_s = s\n"
+            "rospy.init_node('probe', anonymous=True)\n"
+            "rospy.Subscriber('/clock', Clock, cb)\n"
+            "time.sleep(20)\n"
+            "wall = time.time() - sw\n"
+            "sim = (last_s - ss) if (last_s is not None and ss is not None) else 0.0\n"
+            "print('PROBE wall=%.2f sim=%.2f ratio=%.2f' % (wall, sim, (wall/sim if sim > 0 else 0.0)))\n"
+        )
+        out = command_output(['/usr/bin/python3', '-c', code], env, timeout=40)
         return out.stdout.strip()
     finally:
         stop_process(stage)
