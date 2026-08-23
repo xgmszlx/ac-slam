@@ -1,21 +1,24 @@
 # Phase 3B: Phase 4 Experiment Design (design only — no batch runs)
+# Revised in Phase 4A (spec §20) after the gate redesign and the literature correction.
 
-Date: 2026-08-23
+Date: 2026-08-23 (rev. 2026-08-23)
 
 ## 1. Objective
 
-Evaluate the Selective Realization-Aware method (spec `20_...`) against Original and
-Always-Trace on the same map3 protocol, then (only if the Phase 4 gate passes) extend
-to other maps.
+Evaluate the Selective Realization-Aware method (spec `20_...`, redesigned gate in
+`22_...`) against Original and Always-Trace on the same map3 protocol, then (only if
+the Phase 4 gate passes) extend to other maps.
 
 ## 2. Conditions (first round, map3 only)
 
 - **A — Original Graph-Based**: current baseline (`oracle_mode=0`), = Phase 2C runs.
-- **B — Always-Trace Oracle V1**: Phase 3A oracle (`oracle_mode=1`), for cost/regression
-  reference (existing Phase 3A runs can be reused as B).
-- **C — Proposed Selective Realization-Aware**: implement gates + bounded repair +
-  early stop (new variant, `oracle_mode=2`, default off; reuses the observation-only
-  `/Mapper/loop_closed` publish).
+- **B — Always-Trace Oracle V1**: Phase 3A oracle (`oracle_mode=1`). **Explicit status:
+  mechanism upper-bound / stress-test**, NOT a normal competitor — it shows what
+  unbounded dense re-traversal can achieve and at what cost (Phase 3A: +22–28
+  waypoints/loop, S-reference regression). Existing Phase 3A runs are reused as B.
+- **C — Proposed Selective Realization-Aware**: `oracle_mode=2` (redesigned gate G1′
+  span<4.0 m config-grounded; bounded repair ≤12 m / ≤24 wp / 0.5 m densify;
+  forward/reverse; early stop on attributable `/Mapper/loop_closed`; default off).
 
 Seeds: same 5 seeds 21001–21005, same map3/start/TSP; TSP must remain byte-identical
 to Phase 2C for each seed (loop selection held fixed).
@@ -24,17 +27,25 @@ to Phase 2C for each seed (loop selection held fixed).
 
 1. **Active Loop Acceptance Rate** = `accepted_active_loops / executed_active_loops`
    (diagnostics ACCEPTED records inside loop windows, cross-checked 1:1 with
-   "Add one Loop" callbacks).
-2. **Extra Loop Cost per Accepted Closure** — reported separately in **distance (m)**
-   and **time (sim s)**: loop execution distance/time minus the corresponding V0-loop
-   baseline of the same seed+vertex (from Phase 2C).
+   "Add one Loop" callbacks and `/Mapper/loop_closed` events).
+2. **Active Loop Overhead** — reported per active loop as
+   - active-loop **distance** (m) and
+   - active-loop **time** (sim s),
+   and as totals over the run.
 
 ## 4. Secondary metrics
 
+- **Extra Cost per Accepted Closure** — only reported when accepted count > 0:
+  (total active-loop distance of the condition − baseline active-loop distance) /
+  accepted active loops.
+- **Incremental Distance per Additional Accepted Closure**, when `N_condition >
+  N_original`:
+  `(D_condition − D_original) / (N_condition − N_original)`
+  where D = total active-loop distance and N = accepted active loops. This quantifies
+  the marginal cost of each extra closure gained by C (or B).
 - C3 count/rate, D1 count/rate (per-loop dominant vote from diagnostics)
 - valid-chain persistence (fraction of keyscans with chain ≥ 4; longest consecutive)
 - best coarse response, best fine response per loop
-- loop execution distance/time (extra waypoints, extra trace length)
 - total exploration distance/time
 - APE / RPE (trajectory_gt vs trajectory_slam, evo)
 - **Regression Rate** (defined): for loops that in the same seed/vertex were accepted
