@@ -1,15 +1,16 @@
 #!/usr/bin/python3
 """Phase 4A Stage C: validate the observation-only /Mapper/loop_closed event 1:1.
 
-Runs seed 21003 with oracle_mode=1 (V1 history-trace), which in Phase 3A produced an
-ACCEPTED closure at v15 (scan 284). After the run we compare, per accepted closure:
+Runs seed 21001 with oracle_mode=0 (original V0 baseline), which in Phase 2C produced
+a naturally accepted closure at the v26 loop. We monitor the run and stop shortly after
+the FIRST accepted closure (any 'Add one Loop' callback). Then we compare, per accepted
+closure:
   Karto internal accepted (diagnostics ACCEPTED record + 'Add one Loop' callback)
   == published loop_closed event (PHASE4A_LOOP_CLOSED in rosout, current_scan id)
-Checking: count 1:1, no duplicates, no misses, no wrong attribution, no delay beyond
-the loop window. Early-stop after the v15 loop finishes + grace.
+Checking: count 1:1, no duplicates, no misses, no wrong attribution, no delay.
+If no closure occurs by the deadline the validation is reported INCONCLUSIVE.
 """
 
-import argparse
 import json
 import re
 import shutil
@@ -19,12 +20,10 @@ from pathlib import Path
 
 from run_phase2c_pairs import (
     AUTHOR_RESULTS,
-    BASELINE,
     ROOT,
     activated_environment,
     command_output,
     copy_author_outputs,
-    now_utc,
     parse_action_status,
     start_process,
     stop_process,
@@ -33,14 +32,13 @@ from run_phase2c_pairs import (
     write_command_result,
 )
 
-SEED = 21003
-TARGET_VERTEX = 15
+SEED = 21001
 OUT_ROOT = ROOT / 'results' / 'phase4a' / 'closure_event_validation'
 
 
 def main():
     OUT_ROOT.mkdir(parents=True, exist_ok=True)
-    seed_dir = OUT_ROOT / 'seed_{}_v1'.format(SEED)
+    seed_dir = OUT_ROOT / 'seed_{}_v0'.format(SEED)
     if seed_dir.exists():
         raise RuntimeError('refusing to overwrite: {}'.format(seed_dir))
     seed_dir.mkdir(parents=True)
@@ -75,7 +73,7 @@ def main():
             'enable_loop_diagnostics:=true',
             'loop_diagnostics_path:={}'.format(diagnostics_path),
             'loop_diagnostics_run_id:={}'.format(run_id),
-            'oracle_mode:=1', 'oracle_before:=8', 'oracle_after:=8', 'oracle_densify_m:=0.5',
+            'oracle_mode:=0',
         ], env, seed_dir / 'roslaunch.log')
 
         deadline = time.monotonic() + 180
@@ -109,18 +107,20 @@ def main():
         write_command_result(['rosservice', 'call', '/StartExploration', '{}'], env,
                              seed_dir / 'start_exploration_service.txt', timeout=30)
 
-        # early stop after target loop finishes + grace
-        target_seen = False
-        deadline = time.monotonic() + 9000
+        # early stop shortly after the FIRST accepted closure (any 'Add one Loop'
+        # callback); hard deadline in case no closure fires (validation INCONCLUSIVE)
+        closure_seen = False
+        deadline = time.monotonic() + 10800
         while time.monotonic() < deadline:
             if launch.poll() is not None or observer.poll() is not None:
                 raise RuntimeError('launch/observer exited early')
-            if not target_seen:
+            if not closure_seen:
                 text = seed_dir.joinpath('roslaunch.log').read_text(errors='replace')
-                if 'PHASE2_LOOP_EXECUTION_FINISHED vertex={}'.format(TARGET_VERTEX) in text:
-                    target_seen = True
-                    deadline = time.monotonic() + 200
+                if 'Add one Loop' in text:
+                    closure_seen = True
+                    deadline = time.monotonic() + 90
             time.sleep(2)
+        (seed_dir / 'closure_seen.txt').write_text('{}\n'.format(closure_seen))
 
         stop_process(observer); observer = None
         stop_process(launch); launch = None
@@ -149,14 +149,16 @@ def main():
                 evts.append((int(m.group(1)), int(m.group(2)), int(m.group(3)), int(m.group(4))))
 
         diag_scans = [(r['scan_id'], r['chain_size']) for r in diag_acc]
+        n = len(evts)
         result = {
             'diagnostics_accepted_records': len(diag_acc),
             'accepted_callback_times': cb_times,
             'loop_closed_events': evts,
-            'one_to_one': len(diag_acc) == len(evts) == len(cb_times),
-            'attribution_ok': all(e[1] == d[0] for e, d in zip(evts, diag_scans)) if evts else None,
-            'no_duplicates': len({e[0] for e in evts}) == len(evts),
-            'seq_contiguous': evts == sorted(evts) and (not evts or evts[-1][0] == len(evts)),
+            'inconclusive_no_closure': n == 0,
+            'one_to_one': (n > 0) and len(diag_acc) == len(evts) == len(cb_times),
+            'attribution_ok': all(e[1] == d[0] for e, d in zip(evts, diag_scans)) if n else None,
+            'no_duplicates': len({e[0] for e in evts}) == n,
+            'seq_contiguous': evts == sorted(evts) and (not evts or evts[-1][0] == n),
         }
         (seed_dir / 'closure_event_validation.json').write_text(
             json.dumps(result, indent=2, sort_keys=True) + '\n')
