@@ -18,6 +18,7 @@ import actionlib
 import rospy
 from nav_msgs.msg import Odometry, Path
 from nav2d_navigator.msg import (
+    ExploreAction,
     ExploreActionResult,
     MoveToPosition2DAction,
     MoveToPosition2DGoal,
@@ -49,6 +50,7 @@ class PositiveControlDriver:
         self.lock = threading.RLock()
         self._revisit_started = False
         self.early_history_revisit = False
+        self.early_history_cancelled = False
 
         self.pose_nodes = {}
         self.pose_edges = {}
@@ -182,6 +184,8 @@ class PositiveControlDriver:
     def _watchdog(self):
         """Early-history trigger: start the revisit once the saved trajectory has
         at least min_poses poses, even if the exploration action is not finished.
+        The Navigator rejects MoveTo goals while it is EXPLORING, so we first
+        cancel the Explore action to return the Navigator to IDLE.
         Used by the Phase 4A closure validation to avoid waiting for a full map
         exploration (which is several x slower on this host than during Phase 2B).
         """
@@ -196,6 +200,20 @@ class PositiveControlDriver:
                 with self.lock:
                     self._revisit_started = True
                     self.early_history_revisit = True
+                rospy.logwarn('PositiveControl: history sufficient ({} poses); '
+                              'cancelling exploration for early revisit'.format(self.min_poses))
+                try:
+                    client = actionlib.SimpleActionClient('/Explore', ExploreAction)
+                    if client.wait_for_server(rospy.Duration(10.0)):
+                        client.cancel_goal()
+                        rospy.sleep(3.0)
+                    else:
+                        rospy.logwarn('PositiveControl: Explore action server unavailable '
+                                      'for cancel; proceeding anyway')
+                except Exception as exc:  # noqa: BLE001
+                    rospy.logwarn('PositiveControl: explore-cancel failed: {}'.format(exc))
+                with self.lock:
+                    self.early_history_cancelled = True
                 threading.Thread(target=self.run_revisit, daemon=True).start()
                 return
             time.sleep(2.0)
@@ -261,7 +279,8 @@ class PositiveControlDriver:
 
     def run_revisit(self):
         try:
-            if self.explore_result is not None and self.explore_result['status'] != 3:
+            if (self.explore_result is not None and self.explore_result['status'] != 3
+                    and not self.early_history_cancelled):
                 raise RuntimeError('exploration action did not succeed: {}'.format(self.explore_result))
             rospy.sleep(5.0)
             with self.lock:
@@ -360,6 +379,8 @@ class PositiveControlDriver:
                     'skipped_targets': skipped_rows,
                     'targets_reached': reached_count,
                     'targets_attempted_total': len(targets),
+                    'early_history_revisit': self.early_history_revisit,
+                    'exploration_cancelled_by_driver': self.early_history_cancelled,
                     'actual_revisit_trajectory': self.revisit_gt,
                     'after_node_count': len(after['trajectory_estimate']),
                     'after_edge_count': after['pose_graph_edge_count'],
