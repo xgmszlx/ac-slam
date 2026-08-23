@@ -41,6 +41,47 @@ CASES = [
     (21001, 'S-ref-v26', 26),
 ]
 
+# Set by --no-diagnostics on the CLI. Phase 4A trial 9 proved that the
+# per-loop-search diagnostic file I/O perturbs Karto closure acceptance
+# (no-diagnostics positive control: accepted closure; every diagnostics-enabled
+# trial: zero). Targeted cases must therefore run diagnostics-OFF.
+NO_DIAGNOSTICS = False
+
+
+def validate_callback_vs_event(seed_dir):
+    """Diagnostics-free 1:1: 'Add one Loop closure.' callbacks vs PHASE4A_LOOP_CLOSED."""
+    rosout = (seed_dir / 'rosout.log').read_text(errors='replace')
+    cb_times, evts = [], []
+    for line in rosout.splitlines():
+        if 'Add one Loop closure.' in line:
+            m = re.match(r'^([0-9.]+) WARN', line)
+            if m:
+                cb_times.append(float(m.group(1)))
+        m = re.search(r'PHASE4A_LOOP_CLOSED seq=(\d+) current_scan=(\d+) '
+                      r'chain_start=(\d+) chain_end=(\d+)', line)
+        if m:
+            evts.append((int(m.group(1)), int(m.group(2)), int(m.group(3)), int(m.group(4))))
+    n = len(evts)
+    delays = None
+    if n and len(cb_times) == n:
+        delays = [et - ct for ct, (et, *_) in zip(cb_times, evts)]
+    result = {
+        'mode': 'diagnostics_off',
+        'accepted_callbacks_count': len(cb_times),
+        'accepted_callback_times': cb_times,
+        'loop_closed_events': evts,
+        'inconclusive_no_closure': n == 0,
+        'one_to_one': (n > 0) and len(cb_times) == n,
+        'attribution_ok': all(0 <= e[1] and e[2] <= e[3] for e in evts) if n else None,
+        'no_duplicates': len({e[0] for e in evts}) == n,
+        'seq_contiguous': evts == sorted(evts) and (not evts or evts[-1][0] == n),
+        'event_after_callback_ok': (delays is not None and all(d >= 0 for d in delays)),
+        'max_callback_to_event_delay_s': max(delays) if delays else None,
+    }
+    (seed_dir / 'closure_event_validation.json').write_text(
+        json.dumps(result, indent=2, sort_keys=True) + '\n')
+    return result
+
 
 def closure_validate(seed_dir, diagnostics_path, ros_run_id, env):
     """Phase 4A Stage C: 1:1 validation of the /Mapper/loop_closed event.
@@ -111,15 +152,20 @@ def run_case(seed, label, target_vertex, env, index):
         observer = start_process(
             ['/usr/bin/python3', str(ROOT / 'tools' / 'phase2_observer.py'),
              '--output-dir', str(seed_dir)], env, seed_dir / 'observer.log')
-        launch = start_process([
+        launch_args = [
             'roslaunch', 'cpp_solver', 'exploration.launch',
             'suffix:={}'.format(suffix), 'strategy:=MyPlanner',
             'only_use_tsp:=false', 'tsp_seed:={}'.format(seed),
             'map_name:=map3/map3', 'robot_position:=-28.0 -28.0 0',
             'map_width:=74.0', 'need_noise:=false', 'variance:=0',
-            'enable_loop_diagnostics:=true',
-            'loop_diagnostics_path:={}'.format(diagnostics_path),
-            'loop_diagnostics_run_id:={}'.format(run_id),
+        ]
+        if not NO_DIAGNOSTICS:
+            launch_args += [
+                'enable_loop_diagnostics:=true',
+                'loop_diagnostics_path:={}'.format(diagnostics_path),
+                'loop_diagnostics_run_id:={}'.format(run_id),
+            ]
+        launch = start_process(launch_args + [
             'oracle_mode:=2',
             'oracle_span_gate:=4.0', 'oracle_repair_max_len:=12.0',
             'oracle_repair_max_wp:=24', 'oracle_repair_densify:=0.5',
@@ -200,7 +246,10 @@ def run_case(seed, label, target_vertex, env, index):
         }
         (seed_dir / 'targeted_summary.json').write_text(
             json.dumps(summary, indent=2, sort_keys=True) + '\n')
-        cv = closure_validate(seed_dir, diagnostics_path, ros_run_id, env)
+        if NO_DIAGNOSTICS:
+            cv = validate_callback_vs_event(seed_dir)
+        else:
+            cv = closure_validate(seed_dir, diagnostics_path, ros_run_id, env)
         print(json.dumps(summary, indent=2, sort_keys=True))
         print('CLOSURE_VALIDATION: {}'.format(json.dumps(cv)))
     finally:
@@ -212,9 +261,12 @@ def run_case(seed, label, target_vertex, env, index):
 
 
 def main():
+    global NO_DIAGNOSTICS
     only = None
     if '--case' in sys.argv:
         only = int(sys.argv[sys.argv.index('--case') + 1])
+    if '--no-diagnostics' in sys.argv:
+        NO_DIAGNOSTICS = True
     OUT_ROOT.mkdir(parents=True, exist_ok=True)
     env = activated_environment()
     for index, (seed, label, target) in enumerate(CASES, start=1):
