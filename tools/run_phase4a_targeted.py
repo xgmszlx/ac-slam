@@ -60,21 +60,25 @@ def validate_callback_vs_event(seed_dir):
         m = re.search(r'PHASE4A_LOOP_CLOSED seq=(\d+) current_scan=(\d+) '
                       r'chain_start=(\d+) chain_end=(\d+)', line)
         if m:
-            evts.append((int(m.group(1)), int(m.group(2)), int(m.group(3)), int(m.group(4))))
+            tm = re.match(r'^([0-9.]+) INFO', line)
+            t = float(tm.group(1)) if tm else None
+            evts.append((t, int(m.group(1)), int(m.group(2)),
+                         int(m.group(3)), int(m.group(4))))
     n = len(evts)
     delays = None
-    if n and len(cb_times) == n:
-        delays = [et - ct for ct, (et, *_) in zip(cb_times, evts)]
+    if n and len(cb_times) == n and all(e[0] is not None for e in evts):
+        delays = [et[0] - ct for ct, et in zip(cb_times, evts)]
+    evts_out = [(e[1], e[2], e[3], e[4]) for e in evts]
     result = {
         'mode': 'diagnostics_off',
         'accepted_callbacks_count': len(cb_times),
         'accepted_callback_times': cb_times,
-        'loop_closed_events': evts,
+        'loop_closed_events': evts_out,
         'inconclusive_no_closure': n == 0,
         'one_to_one': (n > 0) and len(cb_times) == n,
-        'attribution_ok': all(0 <= e[1] and e[2] <= e[3] for e in evts) if n else None,
-        'no_duplicates': len({e[0] for e in evts}) == n,
-        'seq_contiguous': evts == sorted(evts) and (not evts or evts[-1][0] == n),
+        'attribution_ok': all(0 <= e[2] and e[3] <= e[4] for e in evts) if n else None,
+        'no_duplicates': len({e[1] for e in evts}) == n,
+        'seq_contiguous': sorted(e[1] for e in evts) == list(range(1, n + 1)),
         'event_after_callback_ok': (delays is not None and all(d >= 0 for d in delays)),
         'max_callback_to_event_delay_s': max(delays) if delays else None,
     }
