@@ -26,6 +26,9 @@ def main():
     parser.add_argument('--explore-timeout', type=int, default=2400)
     parser.add_argument('--revisit-timeout', type=int, default=2400)
     parser.add_argument('--target-timeout', type=float, default=420.0)
+    parser.add_argument('--min-poses', type=int, default=None,
+                        help='start the revisit once /slam_path has this many poses '
+                             '(skip waiting for full exploration)')
     args = parser.parse_args()
     args.output_root.mkdir(parents=True, exist_ok=True)
     run_dir = args.output_root / 'trial_{:02d}'.format(args.trial)
@@ -43,6 +46,7 @@ def main():
         extra_launch_args=extra_launch_args,
         target_timeout=args.target_timeout,
         extra_driver_args=['--skip-failed-targets'],
+        min_poses=args.min_poses,
     )
     print('positive_control_success={}'.format(success))
     cv = closure_validate(run_dir, diagnostics_path, None, env)

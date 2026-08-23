@@ -12,6 +12,7 @@ import json
 import math
 import os
 import threading
+import time
 
 import actionlib
 import rospy
@@ -36,7 +37,7 @@ def yaw_from_quaternion(q):
 
 class PositiveControlDriver:
     def __init__(self, output_dir, first_history_index, target_count, target_stride,
-                 target_timeout=420.0, skip_failed_targets=False):
+                 target_timeout=420.0, skip_failed_targets=False, min_poses=None):
         self.output_dir = os.path.abspath(output_dir)
         os.makedirs(self.output_dir, exist_ok=True)
         self.first_history_index = first_history_index
@@ -44,7 +45,10 @@ class PositiveControlDriver:
         self.target_stride = target_stride
         self.target_timeout = float(target_timeout)
         self.skip_failed_targets = bool(skip_failed_targets)
+        self.min_poses = int(min_poses) if min_poses else None
         self.lock = threading.RLock()
+        self._revisit_started = False
+        self.early_history_revisit = False
 
         self.pose_nodes = {}
         self.pose_edges = {}
@@ -175,6 +179,27 @@ class PositiveControlDriver:
             }
         threading.Thread(target=self.run_revisit, daemon=True).start()
 
+    def _watchdog(self):
+        """Early-history trigger: start the revisit once the saved trajectory has
+        at least min_poses poses, even if the exploration action is not finished.
+        Used by the Phase 4A closure validation to avoid waiting for a full map
+        exploration (which is several x slower on this host than during Phase 2B).
+        """
+        while not rospy.is_shutdown():
+            if self.explore_result is not None:
+                return
+            with self.lock:
+                enough = (self.min_poses is not None
+                          and not self._revisit_started
+                          and len(self.slam_path) >= self.min_poses)
+            if enough:
+                with self.lock:
+                    self._revisit_started = True
+                    self.early_history_revisit = True
+                threading.Thread(target=self.run_revisit, daemon=True).start()
+                return
+            time.sleep(2.0)
+
     def select_targets(self, before):
         path = before['trajectory_estimate']
         final_index = self.first_history_index + self.target_stride * (self.target_count - 1)
@@ -236,7 +261,7 @@ class PositiveControlDriver:
 
     def run_revisit(self):
         try:
-            if self.explore_result['status'] != 3:
+            if self.explore_result is not None and self.explore_result['status'] != 3:
                 raise RuntimeError('exploration action did not succeed: {}'.format(self.explore_result))
             rospy.sleep(5.0)
             with self.lock:
@@ -380,12 +405,16 @@ def main():
     parser.add_argument('--target-stride', type=int, default=5)
     parser.add_argument('--target-timeout', type=float, default=420.0)
     parser.add_argument('--skip-failed-targets', action='store_true')
+    parser.add_argument('--min-poses', type=int, default=None)
     args = parser.parse_args(rospy.myargv()[1:])
     rospy.init_node('phase2b_positive_control_driver', anonymous=False)
     driver = PositiveControlDriver(
         args.output_dir, args.first_history_index, args.target_count, args.target_stride,
         target_timeout=args.target_timeout, skip_failed_targets=args.skip_failed_targets,
+        min_poses=args.min_poses,
     )
+    if args.min_poses:
+        threading.Thread(target=driver._watchdog, daemon=True).start()
     rospy.spin()
     if not driver.done.is_set():
         raise SystemExit('ROS shutdown before positive control completed')

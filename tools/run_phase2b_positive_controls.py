@@ -58,7 +58,8 @@ def wait_for_driver(driver, launch, env, timeout, monitor, trial):
 
 
 def run_trial(trial, output_root, env, explore_timeout, revisit_timeout,
-              extra_launch_args=None, target_timeout=420.0, extra_driver_args=None):
+              extra_launch_args=None, target_timeout=420.0, extra_driver_args=None,
+              min_poses=None):
     run_dir = output_root / 'trial_{:02d}'.format(trial)
     if run_dir.exists():
         raise RuntimeError('refusing to overwrite existing trial: {}'.format(run_dir))
@@ -90,7 +91,9 @@ def run_trial(trial, output_root, env, explore_timeout, revisit_timeout,
             '--output-dir', str(run_dir), '--first-history-index', '30',
             '--target-count', '7', '--target-stride', '5',
             '--target-timeout', str(target_timeout),
-        ] + list(extra_driver_args or []), env, run_dir / 'driver.log')
+        ] + list(extra_driver_args or [])
+          + (['--min-poses', str(min_poses)] if min_poses else []),
+          env, run_dir / 'driver.log')
 
         launch = start_process([
             'roslaunch', 'cpp_solver', 'exploration.launch',
@@ -138,17 +141,25 @@ def run_trial(trial, output_root, env, explore_timeout, revisit_timeout,
             ['rosservice', 'call', '/StartExploration', '{}'], env,
             run_dir / 'start_exploration_service.txt', timeout=30,
         )
-        max_rss = max(max_rss, wait_for_topic_result(
-            explore_result, run_dir / 'explore_result.txt', launch, driver,
-            env, explore_timeout, monitor, 'history_exploration',
-        ))
-        explore_stream.close()
-        if parse_action_status(run_dir / 'explore_result.txt') != 3:
-            raise RuntimeError('Nearest-Frontier history exploration did not SUCCEED')
-
-        max_rss = max(max_rss, wait_for_driver(
-            driver, launch, env, revisit_timeout, monitor, trial
-        ))
+        if min_poses:
+            # Early-history mode (Phase 4A closure validation): the driver starts
+            # the revisit once /slam_path has >= min_poses poses; we do NOT wait
+            # for the full Nearest-Frontier exploration to complete. The revisit
+            # timeout covers history build-up + the revisit itself.
+            max_rss = max(max_rss, wait_for_driver(
+                driver, launch, env, revisit_timeout, monitor, trial
+            ))
+        else:
+            max_rss = max(max_rss, wait_for_topic_result(
+                explore_result, run_dir / 'explore_result.txt', launch, driver,
+                env, explore_timeout, monitor, 'history_exploration',
+            ))
+            explore_stream.close()
+            if parse_action_status(run_dir / 'explore_result.txt') != 3:
+                raise RuntimeError('Nearest-Frontier history exploration did not SUCCEED')
+            max_rss = max(max_rss, wait_for_driver(
+                driver, launch, env, revisit_timeout, monitor, trial
+            ))
         result = json.loads((run_dir / 'positive_control.json').read_text())
         if result.get('status') != 'SUCCEEDED':
             raise RuntimeError('positive-control execution failed: {}'.format(result.get('reason')))
