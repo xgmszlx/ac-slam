@@ -23,7 +23,7 @@ success observed online, Stop=execution stops after accepted closure.
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | **Graph-Based SLAM-Aware Exploration** (Bai et al., 2308.16522) — our baseline | 2024 RA-L | 2D laser | Karto (grid) | prior-graph vertex | D-opt informative loop edges over TSP | No (topology-based objective) | Yes (up to 7 SLAM pose-graph poses) | No (position-only waypoints) | re-traverse ≤7 historical poses through the vertex | No (fixed reliable-loop state machine) | Indirect (Karto accepts/rejects; not used for adaptation) | No | 
 | **Lighthouses & Global Graph Stabilization** (Deshpande et al., 2306.10463) | 2023 ICRA | narrow-FoV depth+stereo | keyframe pose-graph vSLAM | lighthouse = spatially-clustered keyframes (panoramic view) | view-score threshold; timer / relative-uncertainty trigger | Heuristic (feature count correlates with LC likelihood) | Yes (travel back to created lighthouses) | **Yes** (in-place rotation emulates panoramic; bi-directional hull views) | travel to lighthouse + in-place rotation; GGS traverses convex-hull vertices both directions | Yes (preempts FE; connects lighthouses) | Yes (SLAM reports LC) | No per-revisit (continues to next plan; GGS is a phase) |
-| **Probabilistic Active Loop Closure** (Yin et al., ICRA 2024) | 2024 ICRA | (indoor robot, on-device) | pose graph | pose on the pose graph | reward = P(loop closure at pose) × uncertainty reduction − travel cost; argmax | **Yes** (probabilistic reward of getting a loop closure at a pose) | Not stated in AB | Not stated in AB | navigate to the chosen pose (execution detail not in abstract) | Selection-level; execution not detailed | Not stated in AB | Not stated in AB |
+| **Probabilistic Active Loop Closure** (Yin et al., ICRA 2024) | 2024 ICRA | depth (narrow-FoV) | keyframe pose graph vSLAM | keyframe cluster τ (lighthouse or passive cluster) | reward R= −ct·l + PLC·ΔU; branch-and-bound argmax | **Yes** (PLC = tanh(view)×exp(−rel.uncertainty²)) | Partial (keyframes of the cluster; no trajectory-segment re-traversal) | **Yes** (drive to τ*, 360° in-place rotation) | drive to target + in-place 360° rotation; path-coverage refinement stage afterwards | Yes (refinement stage) | Yes | No per-revisit |
 | **Region Based SLAM-Aware Exploration** (Maheshwari et al., 2504.10416) | 2025 arXiv | (indoor robot) | pose graph + keyframe marginalization | region (partition of environment) | partition → explore+stabilize each region before next | No | Partial (keyframes) | No | region-by-region exploration; in-region stabilization; checkpoint resume | Yes (region sequencing) | Yes (stability check) | Not per-loop |
 | **Loop-Aware Exploration Graph** (Pittol et al., 10.1016/j.robot.2022.104179) | 2022 RAS | 2D (indoor) | pose graph | loop candidates on an exploration graph | graph-based representation for exploration + active LC | No (AB) | Partial (graph of visited structure) | No (AB) | revisit to close loops (AB) | No (AB) | Not stated | No |
 | **Exploration with Global Consistency via Re-integration + Active LC** (Zhang et al., ICRA 2022) | 2022 ICRA | RGB-D | dense/voxel + LC | frame (LC detection) | frame pruning + active LC (drift correction focus) | No | No | No | re-integration mapping after detected LC (not target revisit) | No | Yes (detects LC online) | N/A |
@@ -97,13 +97,90 @@ bounds the regression risk that Always-Trace exhibited.
 
 ## 4. Honest limitations of this review
 
-- Probabilistic ALC full text could not be retrieved (PDF fetch failed); its row is
-  abstract-level. Its execution details (whether it adapts after selection, stops on
-  closure) are marked "not stated in AB".
 - Loop-Aware Exploration Graph, A3RGB-D, Zhang et al. ICRA 2022, Lehner 2017, Stachniss
-  2004, Suresh 2020 are abstract-level rows; they are included for boundary completeness
-  but not deeply read.
+  2004 are abstract-level rows; they are included for boundary completeness but not
+  deeply read.
 - The boundary claim rests on the *combination* of properties in Q3, which no found
-  abstract/full-text describes; if a deeper read of Probabilistic ALC or a not-yet-found
-  paper describes per-loop selective bounded repair with early stop, the Q3 claim must
-  be narrowed.
+  abstract/full-text describes; if a deeper read reveals a paper that describes
+  per-loop selective bounded repair with early stop, the Q3 claim must be narrowed.
+
+## 5. Corrected nearest-neighbor boundary before implementation (Phase 4A)
+
+Re-verified the nearest neighbors with primary sources. Corrections to §2–§3:
+
+### A. Graph-Based SLAM-Aware Exploration (our baseline, RA-L 2024) — history revisit is in the paper
+
+Original text (Sec. V-A "Hierarchical Autonomous Exploration"):
+
+> "Active loop-closing: if current vertex is a loop-closing vertex, the robot will
+> follow a segment of its previous trajectory to establish loop closures in current
+> region."
+
+**Conclusion: history-trajectory revisit itself is NOT a contribution of this project.**
+It is already the baseline's designed behavior (and the reliable-loop path in the code
+implements it as ≤7 SLAM pose-graph poses). Our claimed gap is not "revisit history";
+it is the *post-selection, failure-conditioned adaptation* of that already-existing
+revisit.
+
+### B. Active SLAM using 3D Submap Saliency for Underwater Volumetric Exploration (ICRA 2020) — top similarity nearest neighbor
+
+- Revisit execution replays a **cached/historical path**: the planner finds the closest
+  node on the cached pose/trajectory graph (`GETCLOSESTNODE`), traces back through the
+  pose tree (`RETRACETREE`), interpolates poses along it (`INTERPOLATE`), and builds a
+  smooth revisit trajectory (`GETREVISITTRAJECTORY`) that the robot then executes. This
+  is a historical-trajectory replay mechanism, methodologically very close to our V1 /
+  selective revisit.
+- Evidence: abstract (balancing volumetric exploration vs revisitation to reduce pose
+  uncertainty) + code function names as provided in the Phase 4A spec; the full PDF was
+  not retrievable from the CMU/author mirrors at review time. Row is upgraded to a
+  **highest-similarity nearest neighbor** in §2.
+- Difference from our method: their revisit target selection is saliency/uncertainty
+  driven and the revisit is a full replay; no per-loop realizability gate, no bounded
+  corrective cap keyed to "historical support sufficient vs insufficient", no acceptedclosure early stop, no easy-loop preservation.
+
+### C. Lighthouses & Global Graph Stabilization (ICRA 2023) — confirmed
+
+Lighthouse construction = in-place rotation generating a spatially clustered set of
+keyframes (panoramic view emulation); LH-ALC drives the robot back to a lighthouse and
+rotates in place; orientation/viewpoint is explicitly handled ("views have
+directionality"); GGS traverses the convex hull of keyframes in both directions. The
+revisit is **unconditional** (always rotate at lighthouses), not gated on whether the
+selected target's history support is sufficient.
+
+### D. Probabilistic Active Loop Closure (ICRA 2024) — correction of "selection-level" simplification
+
+Full text retrieved (amazon.science PDF). The paper is NOT only selection-level:
+- **PLC**: `PLC(pτ) = tanh(cv·sv(pv)) · exp(−(l⁻(p′r,pv,G′))²/c²l)`; for a keyframe cluster
+  `PLC(pτ) = 1 − Πᵢ(1 − PLC(pvi))`. Loop closure is explicitly modeled as a
+  probabilistic event at keyframe clusters.
+- **ALC candidate τ** = a cluster of keyframes (from proactive lighthouses + passive
+  downsampled keyframe neighborhoods) with representative pose, view scores, PLC, ΔU,
+  reward `R(τ) = −ct·l(pr,pτ,M) + PLC·ΔU`; target selection via branch-and-bound.
+- **Execution**: "The ALC planner guides the robot to target τ*, rotating 360° there
+  to enhance loop closure chances for robots with limited field of view." After
+  exploration, a **path coverage refinement** stage further stabilizes the pose graph.
+- So: drive-to-target + 360° in-place rotation + refinement stage. This is closer to
+  Lighthouses than to "selection-only". It still does **not** do a bounded corrective
+  re-traversal of the selected target's historical trajectory segment, and does **not**
+  early-stop on an accepted closure.
+
+### E. Perception-Aware Planning for Active SLAM in Dynamic Environments (Remote Sensing 2022)
+
+NBVP next-best-view + Active Loop Closing Planner (ALCP). The paper uses **yaw change
+> 45°** in key-waypoint selection (per the Phase 4A spec; full text behind MDPI
+anti-bot, marked AB-level). The 45° there is a *key-waypoint selection* criterion in
+ALCP, **not** a realizability gate for an already-selected loop. Consequence: we must
+**not present 0.78 rad (≈45°) as a newly introduced mechanism threshold**; our G2 is a
+different role (post-selection realizability gate for an already-selected loop) but the
+number itself is not a novel threshold value.
+
+### F. Narrowest claim (revised)
+
+> The method does NOT introduce trajectory revisiting itself.
+> The investigated gap is: post-selection, failure-conditioned adaptation of an
+> already-selected informative active-loop action, where the execution policy preserves
+> the original action when historical support appears sufficient, and applies only a
+> bounded corrective revisit otherwise.
+
+No occurrence of "first", "first-ever", "no prior work", or "novel trajectory revisit"
+is claimed without direct evidence.
