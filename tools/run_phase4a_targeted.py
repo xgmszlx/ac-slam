@@ -14,6 +14,7 @@ import json
 import re
 import shutil
 import subprocess
+import sys
 import time
 from pathlib import Path
 
@@ -39,6 +40,51 @@ CASES = [
     (21005, 'C3-opp-v26', 26),
     (21001, 'S-ref-v26', 26),
 ]
+
+
+def closure_validate(seed_dir, diagnostics_path, ros_run_id, env):
+    """Phase 4A Stage C: 1:1 validation of the /Mapper/loop_closed event.
+
+    Compares, per accepted closure:
+      Karto internal accepted  (diagnostics ACCEPTED record + 'Add one Loop' callback)
+      == published loop_closed event (PHASE4A_LOOP_CLOSED in rosout, current_scan id)
+    Checks: count 1:1, no duplicates, no wrong attribution, seq contiguous.
+    Writes closure_event_validation.json into seed_dir.
+    """
+    diag_acc = []
+    for line in diagnostics_path.read_text(errors='replace').splitlines():
+        r = json.loads(line)
+        if r.get('accepted'):
+            diag_acc.append(r)
+    rosout_path = seed_dir / 'rosout.log'
+    cb_times, evts = [], []
+    if rosout_path.is_file():
+        rosout = rosout_path.read_text(errors='replace')
+        for line in rosout.splitlines():
+            if 'Add one Loop' in line:
+                m = re.match(r'^([0-9.]+) WARN', line)
+                if m:
+                    cb_times.append(float(m.group(1)))
+            m = re.search(r'PHASE4A_LOOP_CLOSED seq=(\d+) current_scan=(\d+) '
+                          r'chain_start=(\d+) chain_end=(\d+)', line)
+            if m:
+                evts.append((int(m.group(1)), int(m.group(2)),
+                             int(m.group(3)), int(m.group(4))))
+    diag_scans = [(r['scan_id'], r['chain_size']) for r in diag_acc]
+    n = len(evts)
+    result = {
+        'diagnostics_accepted_records': len(diag_acc),
+        'accepted_callback_times': cb_times,
+        'loop_closed_events': evts,
+        'inconclusive_no_closure': n == 0,
+        'one_to_one': (n > 0) and len(diag_acc) == len(evts) == len(cb_times),
+        'attribution_ok': all(e[1] == d[0] for e, d in zip(evts, diag_scans)) if n else None,
+        'no_duplicates': len({e[0] for e in evts}) == n,
+        'seq_contiguous': evts == sorted(evts) and (not evts or evts[-1][0] == n),
+    }
+    (seed_dir / 'closure_event_validation.json').write_text(
+        json.dumps(result, indent=2, sort_keys=True) + '\n')
+    return result
 
 
 def run_case(seed, label, target_vertex, env, index):
@@ -154,7 +200,9 @@ def run_case(seed, label, target_vertex, env, index):
         }
         (seed_dir / 'targeted_summary.json').write_text(
             json.dumps(summary, indent=2, sort_keys=True) + '\n')
+        cv = closure_validate(seed_dir, diagnostics_path, ros_run_id, env)
         print(json.dumps(summary, indent=2, sort_keys=True))
+        print('CLOSURE_VALIDATION: {}'.format(json.dumps(cv)))
     finally:
         for process in (mapping_result, explore_result):
             if process is not None and process.poll() is None:
@@ -164,9 +212,14 @@ def run_case(seed, label, target_vertex, env, index):
 
 
 def main():
+    only = None
+    if '--case' in sys.argv:
+        only = int(sys.argv[sys.argv.index('--case') + 1])
     OUT_ROOT.mkdir(parents=True, exist_ok=True)
     env = activated_environment()
     for index, (seed, label, target) in enumerate(CASES, start=1):
+        if only is not None and index != only:
+            continue
         print('\n===== CASE {}: {} (seed {}, target v{}) ====='.format(index, label, seed, target))
         run_case(seed, label, target, env, index)
 
