@@ -51,6 +51,7 @@ add_message_files(
   FILES
   PoseGraph.msg
   EdgeDistance.msg
+  LoopClosureEvent.msg
 )
 
 ## Generate services in the 'srv' folder

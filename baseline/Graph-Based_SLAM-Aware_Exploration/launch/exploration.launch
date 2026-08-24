@@ -33,6 +33,11 @@
 	<arg name="enable_loop_diagnostics" default="false" />
 	<arg name="loop_diagnostics_path" default="" />
 	<arg name="loop_diagnostics_run_id" default="" />
+	<!-- Phase 3A revisit-realization oracle (default off; mode 0 == V0 baseline). -->
+	<arg name="oracle_mode" default="0" />
+	<arg name="oracle_before" default="8" />
+	<arg name="oracle_after" default="8" />
+	<arg name="oracle_densify_m" default="0.5" />
 	
 	<param name="robot_start_position" type="str" value="$(arg robot_position)" />
 
@@ -115,6 +120,10 @@
 		<param name="tsp_seed" type="int" value="$(arg tsp_seed)" />
         <param name="need_noise" type="bool" value="$(arg need_noise)" />
         <param name="variance" type="double" value="$(arg variance)" />
+        <param name="oracle_mode" type="int" value="$(arg oracle_mode)" />
+        <param name="oracle_before" type="int" value="$(arg oracle_before)" />
+        <param name="oracle_after" type="int" value="$(arg oracle_after)" />
+        <param name="oracle_densify_m" type="double" value="$(arg oracle_densify_m)" />
 	</node>
 
 	<!-- Load rqt_robot_steering control panel -->

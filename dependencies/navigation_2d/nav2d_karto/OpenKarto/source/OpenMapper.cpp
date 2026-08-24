@@ -1768,6 +1768,19 @@ namespace karto
           mCountLoop++;
           ROS_WARN("Add one Loop closure. %d loops have been added.", mCountLoop);   
 
+          // Phase 4A observation-only: expose the accepted closure with its Karto
+          // state ids to the ROS layer (no behavior change).
+          if (candidateChain.Size() > 0)
+          {
+            kt_int64s chainStart = candidateChain.Front()->GetStateId();
+            kt_int64s chainEnd = candidateChain.Back()->GetStateId();
+            std::ostringstream lcMsg;
+            lcMsg << "LoopClosureObserved current_scan=" << pScan->GetStateId()
+                  << " chain_start=" << chainStart << " chain_end=" << chainEnd;
+            MapperEventArguments eventArgs3(lcMsg.str().c_str());
+            m_pOpenMapper->LoopClosureObserved.Notify(this, eventArgs3);
+          }
+
           loopClosed = true;
 
           // ---- Phase 2C observation-only: emit accepted record ----

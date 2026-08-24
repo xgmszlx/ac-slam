@@ -15,6 +15,7 @@
 #include "cpp_solver/TspPathList.h"
 #include "cpp_solver/RequestGraph.h"
 #include "cpp_solver/ReliableLoop.h"
+#include "cpp_solver/LoopClosureEvent.h"
 
 #include "AStar/AStar2.h"
 
@@ -65,6 +66,7 @@ private:
         unsigned int getWaypointToGoal(GridMap* map, const int& current_goal, unsigned int start);
 
         void handleStopExploration(const std_msgs::Bool::ConstPtr& msg);  // Server handle function for stop exploration
+        void handleLoopClosureEvent(const cpp_solver::LoopClosureEvent::ConstPtr& msg);  // Phase 4A early-stop
 
         void debugMarker(const std::vector<std::pair<double, double>>& points); // Use marker of type "points" to debug. marker id is 2.
 
@@ -115,6 +117,12 @@ private:
 
         // Subscribe TSP plan for navigation
         ros::Subscriber SubStopExploration;
+
+        // Phase 4A: online accepted-closure event (observation-only early stop)
+        ros::Subscriber SubLoopClosure;
+        bool mSelectiveRepair;        // true while executing a bounded repair path
+        ros::Time mActiveLoopStartTime;  // sim time when the current loop execution started
+        bool mClosureSeenThisLoop;    // an attributable closure was received during this loop
 
         // Client ask for python server for tsp planner and prior graph
         ros::ServiceClient clientTspPlan;

@@ -66,6 +66,32 @@ class PathPlanner:
         self.need_noise = rospy.get_param('/path_planner/need_noise', False)
         self.variance = rospy.get_param('/path_planner/variance', 0)
 
+        # Phase 3A revisit-realization oracle (independent variant, default OFF).
+        # oracle_mode 0 == V0 (baseline, byte-identical original behavior).
+        # oracle_mode 1 == V1 history-trace: longer contiguous SLAM history window
+        # spanning the loop vertex, densified for position-only navigation.
+        self.oracle_mode = int(rospy.get_param('/path_planner/oracle_mode', 0))
+        self.oracle_before = int(rospy.get_param('/path_planner/oracle_before', 8))
+        self.oracle_after = int(rospy.get_param('/path_planner/oracle_after', 8))
+        self.oracle_densify_m = float(rospy.get_param('/path_planner/oracle_densify_m', 0.5))
+        # Phase 4A selective layer (oracle_mode=2) prototype defaults.
+        # G1': span gate = min_chain(4) x min_travel(1.0 m) from fixed Karto config.
+        self.oracle_span_gate = float(rospy.get_param('/path_planner/oracle_span_gate', 4.0))
+        self.oracle_repair_max_len = float(rospy.get_param('/path_planner/oracle_repair_max_len', 12.0))
+        self.oracle_repair_max_wp = int(rospy.get_param('/path_planner/oracle_repair_max_wp', 24))
+        self.oracle_repair_densify = float(rospy.get_param('/path_planner/oracle_repair_densify', 0.5))
+        self.oracle_dir_lambda = float(rospy.get_param('/path_planner/oracle_dir_lambda', 1.0))
+        if self.oracle_mode > 0:
+            rospy.loginfo('PHASE3A_ORACLE_ENABLED mode=%d before=%d after=%d densify_m=%.3f',
+                          self.oracle_mode, self.oracle_before, self.oracle_after,
+                          self.oracle_densify_m)
+        if self.oracle_mode == 2:
+            rospy.loginfo('PHASE4A_SELECTIVE_ENABLED span_gate=%.2f max_len=%.1f max_wp=%d '
+                          'densify=%.2f dir_lambda=%.2f',
+                          self.oracle_span_gate, self.oracle_repair_max_len,
+                          self.oracle_repair_max_wp, self.oracle_repair_densify,
+                          self.oracle_dir_lambda)
+
         print(self.xml_path)
         print(self.map_width)
         print(self.use_drawio)
@@ -667,6 +693,88 @@ class PathPlanner:
                 rospy.loginfo(f"New edge added into prior_map from {vertex1} to {vertex2}")
         return
 
+    @staticmethod
+    def _densify(points, spacing_m):
+        """Linear interpolation between consecutive points at ~spacing_m. Returns a
+        list of (x, y); the first and last points are always preserved."""
+        if len(points) < 2:
+            return list(points)
+        out = [points[0]]
+        for a, b in zip(points, points[1:]):
+            dist = math.hypot(b[0] - a[0], b[1] - a[1])
+            n = max(1, int(round(dist / spacing_m)))
+            for i in range(1, n + 1):
+                t = i / n
+                out.append((a[0] + t * (b[0] - a[0]), a[1] + t * (b[1] - a[1])))
+        return out
+
+    @staticmethod
+    def _path_length(points):
+        return sum(math.hypot(points[i + 1][0] - points[i][0],
+                              points[i + 1][1] - points[i][1])
+                   for i in range(len(points) - 1))
+
+    def _build_bounded_repair(self, map_vertex, closest_pose, robot_pose):
+        """Bounded history-trace repair (oracle_mode=2). Returns (waypoints, planned_len)
+        or (None, None) if the segment cannot be built. SLAM pose graph only; no GT."""
+        ordered = sorted(self.pose_graph.nodes())
+        try:
+            idx = ordered.index(closest_pose)
+        except ValueError:
+            return None, None
+        n = len(ordered)
+        # grow a contiguous window around the closest pose up to max length / max poses
+        lo = idx
+        hi = idx + 1
+        seg_pts = [self.pose_graph.nodes()[p]["pose"] for p in ordered[lo:hi]]
+        while True:
+            if lo > 0 and (hi - lo) < n and len(seg_pts) < self.oracle_repair_max_wp:
+                lo -= 1
+                seg_pts.insert(0, self.pose_graph.nodes()[ordered[lo]]["pose"])
+            if self._path_length([(x, y) for (x, y, _) in seg_pts]) >= self.oracle_repair_max_len:
+                break
+            if hi < n and (hi - lo) < n and len(seg_pts) < self.oracle_repair_max_wp:
+                seg_pts.append(self.pose_graph.nodes()[ordered[hi]]["pose"])
+                hi += 1
+            if self._path_length([(x, y) for (x, y, _) in seg_pts]) >= self.oracle_repair_max_len:
+                break
+            if (lo == 0 and hi == n) or len(seg_pts) >= self.oracle_repair_max_wp:
+                break
+        pts = [(x, y) for (x, y, _) in seg_pts]
+        if len(pts) < 3:
+            return None, None
+        # direction selection: forward (history order) vs reverse, scored by entry
+        # distance (Euclidean proxy for A*) + heading alignment (yaw as direction cue)
+        robot_x, robot_y, robot_theta = robot_pose
+        def heading_score(entry_pose):
+            ex, ey, et = entry_pose
+            d = math.hypot(ex - robot_x, ey - robot_y)
+            ang = abs(PathPlanner._wrap(et - robot_theta))
+            return d + self.oracle_dir_lambda * ang
+        fwd = heading_score(seg_pts[0])
+        rev = heading_score(seg_pts[-1])
+        if rev < fwd:
+            pts = pts[::-1]
+            direction = 'reverse'
+        else:
+            direction = 'forward'
+        trace = self._densify(pts, self.oracle_repair_densify)
+        planned_len = self._path_length(trace)
+        if len(trace) > self.oracle_repair_max_wp:
+            # keep endpoints; subsample to the cap
+            step = (len(trace) - 1) / float(self.oracle_repair_max_wp - 1)
+            trace = [trace[int(round(i * step))] for i in range(self.oracle_repair_max_wp)]
+            planned_len = self._path_length(trace)
+        return trace, planned_len
+
+    @staticmethod
+    def _wrap(a):
+        while a > math.pi:
+            a -= 2 * math.pi
+        while a < -math.pi:
+            a += 2 * math.pi
+        return a
+
     def handle_reliable_loop(self, request: ReliableLoopRequest) -> ReliableLoopResponse:
         map_vertex = request.goal_vertex
         response = ReliableLoopResponse()
@@ -686,12 +794,80 @@ class PathPlanner:
             if dist < min_dist:
                 closest_pose_idx = i
                 min_dist = dist
-        # Add 7 poses after closest_pose_idx
+
+        if self.oracle_mode == 1:
+            # V1 history-trace oracle: a long contiguous window of SLAM-estimated
+            # historical poses (global pose-graph order) spanning the vertex passage,
+            # densified to help position-only navigation re-traverse the history.
+            # Same loop vertex / planning / Karto / thresholds; GT is never used here.
+            closest_pose = self.vertices_to_poses[map_vertex][closest_pose_idx]
+            ordered = sorted(self.pose_graph.nodes())
+            try:
+                idx = ordered.index(closest_pose)
+            except ValueError:
+                idx = -1
+            if idx >= 0:
+                lo = max(0, idx - self.oracle_before)
+                hi = min(len(ordered), idx + self.oracle_after + 1)
+                window = [self.pose_graph.nodes()[p]["pose"] for p in ordered[lo:hi]]
+                pts = [(x, y) for (x, y, _) in window]
+                if len(pts) >= 3:
+                    trace = self._densify(pts, self.oracle_densify_m)
+                    trace_len = sum(math.hypot(trace[i+1][0] - trace[i][0],
+                                               trace[i+1][1] - trace[i][1])
+                                    for i in range(len(trace) - 1))
+                    for x, y in trace:
+                        response.loop_x_coords.append(x)
+                        response.loop_y_coords.append(y)
+                    rospy.loginfo('PHASE3A_ORACLE_V1 vertex=%d window_poses=%d '
+                                  'trace_len_m=%.2f waypoints=%d',
+                                  map_vertex, len(window), trace_len, len(trace))
+                    return response
+
+        # V0 baseline: 7 poses after closest_pose_idx
         for k in range(closest_pose_idx, min(closest_pose_idx+7, len(self.vertices_to_poses[map_vertex]))):
             pose = self.vertices_to_poses[map_vertex][k]
             pose_x, pose_y, _ = self.pose_graph.nodes()[pose]["pose"]
             response.loop_x_coords.append(pose_x)
             response.loop_y_coords.append(pose_y)
+        v0_pts = [(response.loop_x_coords[i], response.loop_y_coords[i])
+                  for i in range(len(response.loop_x_coords))]
+
+        if self.oracle_mode == 2:
+            # Phase 4A Selective Realization-Aware (redesigned gate):
+            # G1' primary: contiguous history span (V0 path length) < 4.0 m
+            # (= LoopMatchMinimumChainSize 4 x MinimumTravelDistance 1.0 m, fixed
+            #  Karto config) -> REPAIR; else NO_REPAIR = original baseline path.
+            # Yaw is NOT a repair trigger (unstable online cue); it is only used
+            # for direction selection inside the repair.
+            span = self._path_length(v0_pts)
+            closest_pose = self.vertices_to_poses[map_vertex][closest_pose_idx]
+            # robot proxy = latest pose graph node (current SLAM pose, theta available)
+            robot_pose = self.pose_graph.nodes()[max(self.pose_graph.nodes())]["pose"] \
+                if self.pose_graph.number_of_nodes() > 0 else None
+            if span is not None and span < self.oracle_span_gate and robot_pose is not None:
+                trace, planned_len = self._build_bounded_repair(
+                    map_vertex, closest_pose, robot_pose)
+                if trace is not None:
+                    response.loop_x_coords = [x for x, _ in trace]
+                    response.loop_y_coords = [y for _, y in trace]
+                    response.selective_repair = True
+                    rospy.loginfo('PHASE4A_SELECTIVE_REPAIR vertex=%d span_m=%.2f '
+                                  'planned_len_m=%.2f waypoints=%d',
+                                  map_vertex, span, planned_len, len(trace))
+                    return response
+                else:
+                    rospy.logwarn('PHASE4A_SELECTIVE_REPAIR_FAILED vertex=%d span_m=%.2f '
+                                  '-> fallback to original', map_vertex, span)
+            else:
+                reason = ('repair' if (span is not None and span < self.oracle_span_gate)
+                          else 'no_repair')
+                rospy.loginfo('PHASE4A_SELECTIVE_DECISION vertex=%d span_m=%s gate=%.2f '
+                              'decision=%s',
+                              map_vertex,
+                              ('%.2f' % span) if span is not None else 'None',
+                              self.oracle_span_gate,
+                              'REPAIR' if reason == 'repair' else 'NO_REPAIR')
         return response
 
     def handle_edge_distance(self, msg: EdgeDistance):

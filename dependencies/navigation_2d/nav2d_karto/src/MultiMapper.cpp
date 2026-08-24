@@ -167,7 +167,15 @@ MultiMapper::MultiMapper()
 	}
 	
 	mMapper->Message += karto::delegate(this, &MultiMapper::onMessage);
-	
+
+	// Phase 4A observation-only: expose each Karto-accepted loop closure as a
+	// small structured topic (default ON; publishing one int/scan-id message per
+	// closure cannot change SLAM behavior). No matcher internals are published.
+	mLoopClosurePublisher = mapperNode.advertise<cpp_solver::LoopClosureEvent>(
+		"loop_closed", 10);
+	mLoopClosureSeq = 0;
+	mMapper->LoopClosureObserved += karto::delegate(this, &MultiMapper::onLoopClosureObserved);
+
 	mLaser = NULL;
 	
 	// Initialize Variables
@@ -916,6 +924,33 @@ void MultiMapper::receiveInitialPose(const geometry_msgs::PoseWithCovarianceStam
 void MultiMapper::onMessage(const void* sender, karto::MapperEventArguments& args)
 {
 	ROS_DEBUG("OpenMapper: %s\n", args.GetEventMessage().ToCString());
+}
+
+void MultiMapper::onLoopClosureObserved(const void* sender, karto::MapperEventArguments& args)
+{
+	// Phase 4A observation-only: publish the accepted-closure event with the Karto
+	// state ids carried in the event message. No matcher internals are exposed.
+	const char* msg = args.GetEventMessage().ToCString();
+	int currentScan = -1, chainStart = -1, chainEnd = -1;
+	if (sscanf(msg, "LoopClosureObserved current_scan=%d chain_start=%d chain_end=%d",
+			   &currentScan, &chainStart, &chainEnd) == 3)
+	{
+		mLoopClosureSeq++;
+		cpp_solver::LoopClosureEvent ev;
+		ev.seq = mLoopClosureSeq;
+		ev.loop_count = mLoopClosureSeq;  // per-mapper accepted-closure counter
+		ev.current_scan = currentScan;
+		ev.chain_start = chainStart;
+		ev.chain_end = chainEnd;
+		ev.stamp = ros::Time::now();
+		mLoopClosurePublisher.publish(ev);
+		ROS_INFO("PHASE4A_LOOP_CLOSED seq=%d current_scan=%d chain_start=%d chain_end=%d",
+				 mLoopClosureSeq, currentScan, chainStart, chainEnd);
+	}
+	else
+	{
+		ROS_WARN("PHASE4A_LOOP_CLOSED_UNPARSED msg=%s", msg);
+	}
 }
 
 void MultiMapper::publishTransform()

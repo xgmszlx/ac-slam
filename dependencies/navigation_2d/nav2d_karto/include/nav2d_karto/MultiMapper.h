@@ -15,6 +15,7 @@
 #include <nav_msgs/Path.h>
 
 #include <cpp_solver/PoseGraph.h>
+#include <cpp_solver/LoopClosureEvent.h>
 
 
 #include <OpenKarto/OpenKarto.h>
@@ -41,6 +42,7 @@ public:
 	void receiveInitialPose(const geometry_msgs::PoseWithCovarianceStamped::ConstPtr& pose);
 	void sendLocalizedScan(const sensor_msgs::LaserScan::ConstPtr& scan, const karto::Pose2& pose);
 	void onMessage(const void* sender, karto::MapperEventArguments& args);
+	void onLoopClosureObserved(const void* sender, karto::MapperEventArguments& args);
 	bool getMap(nav_msgs::GetMap::Request  &req, nav_msgs::GetMap::Response &res);
 	void publishLoop();
 	void publishTransform();
@@ -84,6 +86,8 @@ private:
 
 	// publish covariance
 	ros::Publisher mCovPublisher;
+	ros::Publisher mLoopClosurePublisher;  // Phase 4A observation-only /Mapper/loop_closed
+	int mLoopClosureSeq;                   // per-mapper accepted-closure event sequence
 
 	// Everything related to KARTO
 	karto::LaserRangeFinderPtr mLaser;

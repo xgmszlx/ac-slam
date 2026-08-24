@@ -1595,6 +1595,14 @@ namespace karto
      * Event fires after a loop was closed. 
      */
     BasicEvent<MapperEventArguments> PostLoopClosed;
+
+    /**
+     * Phase 4A observation-only: fires once per accepted loop closure with the
+     * Karto state ids of the closing scan and the matched chain encoded in the
+     * event message ("LoopClosureObserved current_scan=.. chain_start=.. chain_end=..").
+     * Does not alter any SLAM behavior.
+     */
+    BasicEvent<MapperEventArguments> LoopClosureObserved;
     
     /**
      * Event fires when the scans have been changed. 

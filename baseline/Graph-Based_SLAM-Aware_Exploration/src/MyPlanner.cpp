@@ -72,6 +72,12 @@ MyPlanner::MyPlanner()
 	// Stop exploration
 	this->SubStopExploration = robotNode.subscribe("stop_exploration", 1, &MyPlanner::handleStopExploration, this);
 
+	// Phase 4A: online accepted-closure event (observation-only early stop).
+	this->SubLoopClosure = robotNode.subscribe("/Mapper/loop_closed", 10,
+		&MyPlanner::handleLoopClosureEvent, this);
+	this->mSelectiveRepair = false;
+	this->mClosureSeenThisLoop = false;
+
 	// Prior graph request test
 	ROS_INFO("Waiting for prior_graph_service ...");
 	bool priorGraphServiceAvailable = ros::service::waitForService("prior_graph_service", ros::Duration(30.0));
@@ -220,6 +226,8 @@ void MyPlanner::setReliableLoopPath(const int& currGoal){
 			for(int i = 0; i < x_pos.size(); i++){
 				this->mClosingPath.push_back(std::make_pair(x_pos[i], y_pos[i]));
 			}
+			this->mSelectiveRepair = res.selective_repair;  // Phase 4A
+			this->mClosureSeenThisLoop = false;
 			ROS_INFO("Set reliable loop closing path from reliable_loop_service.");
 			getReliableLoop = true;
 		}
@@ -323,9 +331,20 @@ bool MyPlanner::getUsefulGoalIndex(){
  */
 bool MyPlanner::performReliableLooping(GridMap* map, unsigned int start, unsigned int &goal){
 	if(!this->mLoopExecutionStartLogged){
+		this->mActiveLoopStartTime = ros::Time::now();  // Phase 4A attribution baseline
 		ROS_INFO("PHASE2_LOOP_EXECUTION_STARTED vertex=%d waypoints=%zu",
 				 this->mActiveLoopVertex, this->mClosingPath.size());
 		this->mLoopExecutionStartLogged = true;
+	}
+	// Phase 4A early stop: during a bounded repair, an attributable accepted closure
+	// (event sim stamp >= this loop's start) terminates the remaining repair trace.
+	if(this->mSelectiveRepair && this->mClosureSeenThisLoop){
+		if(this->mCurrClosingIdx < (int)this->mClosingPath.size()){
+			ROS_INFO("PHASE4A_EARLY_STOP vertex=%d at_waypoint=%d of %zu (closure received)",
+					 this->mActiveLoopVertex, this->mCurrClosingIdx, this->mClosingPath.size());
+		}
+		this->mCurrClosingIdx = this->mClosingPath.size();
+		this->mSelectiveRepair = false;
 	}
 	// Down: Find reliable looping around the pose graph vertices
 	if(this->loopVertexReached(map, start)){
@@ -342,6 +361,26 @@ bool MyPlanner::performReliableLooping(GridMap* map, unsigned int start, unsigne
 		return true;
 	}
 	return false;
+}
+
+void MyPlanner::handleLoopClosureEvent(const cpp_solver::LoopClosureEvent::ConstPtr& msg)
+{
+	// Phase 4A observation-only: only used to early-stop a bounded repair when the
+	// accepted closure is attributable to the current active loop (event sim stamp
+	// at or after the loop start). No SLAM state is modified here.
+	if(!this->mLoopExecutionStartLogged){
+		return;  // no active loop yet
+	}
+	if(msg->stamp >= this->mActiveLoopStartTime){
+		this->mClosureSeenThisLoop = true;
+		ROS_INFO("PHASE4A_CLOSURE_ATTRIBUTED seq=%d scan=%d chain=[%d,%d] (active loop v%d)",
+				 msg->seq, msg->current_scan, msg->chain_start, msg->chain_end,
+				 this->mActiveLoopVertex);
+	} else {
+		ROS_INFO("PHASE4A_CLOSURE_UNATTRIBUTED seq=%d scan=%d stamp=%.3f loop_start=%.3f",
+				 msg->seq, msg->current_scan, msg->stamp.toSec(),
+				 this->mActiveLoopStartTime.toSec());
+	}
 }
 
 

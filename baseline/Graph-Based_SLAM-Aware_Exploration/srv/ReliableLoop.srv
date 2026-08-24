@@ -2,3 +2,6 @@ int32 goal_vertex
 ---
 float32[] loop_x_coords
 float32[] loop_y_coords
+# Phase 4A: true when the Selective Realization-Aware layer produced a bounded
+# repair path (executor may early-stop on an accepted closure). False = baseline.
+bool selective_repair
