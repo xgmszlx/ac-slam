@@ -7,6 +7,20 @@ a Phase 4B performance observation. The first complete Phase 4B seed may serve a
 the pipeline pilot and remain formal only if no scientific or evaluation parameter
 is changed afterwards.
 
+### Pilot pipeline amendment (before formal inclusion)
+
+The fresh seed-21001 A/B/C attempt under root commit `f673001` completed, but is
+retained only as `pilot_seed_21001_attempt1` and excluded from formal statistics.
+It exposed an offline derived-cost frame-mixing bug and a missing safe-resume path.
+Neither planner behavior nor any scientific/map threshold was changed. The formal
+suite starts fresh only after the repaired pipeline passes preflight again.
+
+Early-stop saved distance is now reported conservatively as the remaining polyline
+length from the next planned waypoint to the end, entirely in the planner map frame.
+It omits the unknown current-to-next-waypoint segment and is therefore a lower bound,
+not measured counterfactual travel. Saved time remains N/A because the unexecuted
+counterfactual duration is not observed.
+
 ## 1. Scientific question and conditions
 
 The experiment tests whether an already-selected informative active-loop action is

@@ -1,0 +1,18 @@
+{
+  "formal_inclusion": false,
+  "pilot_role": "pipeline validation only",
+  "reason": [
+    "offline early-stop saved-distance calculation mixed Stage absolute GT coordinates with map-relative planned-path coordinates",
+    "suite runner lacked a safe resume path"
+  ],
+  "raw_runs_validity": {
+    "A_original": "VALID",
+    "B_always_trace": "VALID",
+    "C_selective": "VALID"
+  },
+  "scientific_parameters_changed_after_pilot": false,
+  "planned_action": "fix only derived evaluation and orchestration, rerun preflight, then run all five fresh formal seeds",
+  "online_source_commit": "f6730011536956620270e8459bc9c0ec2b582469",
+  "baseline_commit": "7993bf8b93e503b352d89e3992b8e5d7b08e4459",
+  "navigation_2d_commit": "062283d364d891603a546b83e557ab638ffaa163"
+}

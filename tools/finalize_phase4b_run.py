@@ -28,18 +28,19 @@ def polyline_length(points):
     )
 
 
-def saved_planned_distance(loop):
+def saved_remaining_polyline_lower_bound(loop):
     early = loop.get('early_stop')
     path = loop.get('planned_loop_path') or []
-    trajectory = loop.get('actual_loop_trajectory') or []
-    if not early or not path or not trajectory:
+    if not early or not path:
         return None
     next_index = int(early.get('at_waypoint', 0))
     if next_index >= len(path):
         return 0.0
-    current = trajectory[-1][1:3]
-    remaining = [current] + path[next_index:]
-    return polyline_length(remaining)
+    # Both terms are in the planner map frame. Do not connect raw Stage-GT position
+    # (absolute Stage world frame) to the map-relative planned path. The unobserved
+    # current-to-next-waypoint segment is omitted, so this is a conservative lower
+    # bound on the planned distance skipped by early stop.
+    return polyline_length(path[next_index:])
 
 
 def metric_value(metrics, key):
@@ -93,6 +94,7 @@ def main():
         closure_records.append(record)
 
     for loop in loops:
+        loop.pop('early_stop_saved_planned_distance_m_estimate', None)
         start = loop.get('actual_start_time')
         end = loop.get('actual_end_time')
         planned_start = loop.get('planned_start_time')
@@ -131,7 +133,9 @@ def main():
                 loop['phase4b_execution_policy'] = 'NO_REPAIR'
             else:
                 loop['phase4b_execution_policy'] = loop.get('execution_policy') or 'UNKNOWN'
-        loop['early_stop_saved_planned_distance_m_estimate'] = saved_planned_distance(loop)
+        loop['early_stop_saved_remaining_polyline_m_lower_bound'] = (
+            saved_remaining_polyline_lower_bound(loop)
+        )
         loop['early_stop_saved_time_s'] = None
         loop['early_stop_saved_time_status'] = 'N/A: counterfactual travel time not observed'
         if start is not None and end is not None:
@@ -225,8 +229,8 @@ def main():
             'repair_distance_m': repair_distance,
             'repair_time_s': repair_time,
             'early_stop_count': sum(bool(loop.get('early_stopped')) for loop in executed),
-            'early_stop_saved_planned_distance_m_estimate': sum(
-                float(loop.get('early_stop_saved_planned_distance_m_estimate') or 0.0)
+            'early_stop_saved_remaining_polyline_m_lower_bound': sum(
+                float(loop.get('early_stop_saved_remaining_polyline_m_lower_bound') or 0.0)
                 for loop in executed
             ),
         },

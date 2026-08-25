@@ -1,0 +1,53 @@
+{
+  "accepted_closure_source": "/Mapper/loop_closed",
+  "commits": {
+    "baseline": "7993bf8b93e503b352d89e3992b8e5d7b08e4459",
+    "navigation_2d": "062283d364d891603a546b83e557ab638ffaa163",
+    "root": "f6730011536956620270e8459bc9c0ec2b582469"
+  },
+  "condition": "A",
+  "created_utc": "2026-08-25T03:02:16.221301+00:00",
+  "diagnostics_enabled": false,
+  "full_command": "full_command.txt",
+  "launch_arguments": {
+    "enable_loop_diagnostics": "false",
+    "loop_diagnostics_path": "",
+    "loop_diagnostics_run_id": "",
+    "map_name": "map3/map3",
+    "map_width": "74.0",
+    "need_noise": "false",
+    "only_use_tsp": "false",
+    "oracle_after": "8",
+    "oracle_before": "8",
+    "oracle_densify_m": "0.5",
+    "oracle_dir_lambda": "1.0",
+    "oracle_mode": "0",
+    "oracle_repair_densify": "0.5",
+    "oracle_repair_max_len": "12.0",
+    "oracle_repair_max_wp": "24",
+    "oracle_span_gate": "4.0",
+    "robot_position": "-28.0 -28.0 0",
+    "strategy": "MyPlanner",
+    "suffix": "_Phase4B_seed21001_A",
+    "tsp_seed": "21001",
+    "tsp_solver": "concorde",
+    "variance": "0"
+  },
+  "launch_file": "cpp_solver exploration.launch",
+  "map": "map3",
+  "mapper_params": "mapper_params.yaml",
+  "method": "Original",
+  "oracle_mode": 0,
+  "phase": "4B",
+  "protocol_manifest": "results/phase4b/map3/protocol_manifest.json",
+  "protocol_manifest_sha256": "522a6f086af4d043e013fa00dc22660df7b7ef76d494a9848549f51055dc1873",
+  "scientific_variable": {
+    "oracle_mode": 0
+  },
+  "seed": 21001,
+  "start_pose_xyyaw": [
+    -28.0,
+    -28.0,
+    0.0
+  ]
+}

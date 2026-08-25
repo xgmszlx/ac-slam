@@ -569,7 +569,8 @@ class Phase2Observer:
             'chain_start': int(msg.chain_start),
             'chain_end': int(msg.chain_end),
             'stamp': float(msg.stamp.to_sec()),
-            'received_sim_time': float(rospy.get_time()),
+            'received_ros_time': float(rospy.get_time()),
+            'received_wall_time_utc': self.wall_time(),
         }
         with self.lock:
             self.loop_closed_events.append(event)

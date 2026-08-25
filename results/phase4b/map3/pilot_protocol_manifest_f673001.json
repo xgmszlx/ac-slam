@@ -1,0 +1,111 @@
+{
+  "commits": {
+    "baseline": "7993bf8b93e503b352d89e3992b8e5d7b08e4459",
+    "navigation_2d": "062283d364d891603a546b83e557ab638ffaa163",
+    "root": "f6730011536956620270e8459bc9c0ec2b582469"
+  },
+  "conditions": {
+    "A": {
+      "name": "Original",
+      "oracle_mode": 0
+    },
+    "B": {
+      "name": "Always-Trace",
+      "oracle_mode": 1
+    },
+    "C": {
+      "name": "Selective",
+      "oracle_mode": 2
+    }
+  },
+  "counterbalanced_order": {
+    "21001": [
+      "A",
+      "B",
+      "C"
+    ],
+    "21002": [
+      "B",
+      "C",
+      "A"
+    ],
+    "21003": [
+      "C",
+      "A",
+      "B"
+    ],
+    "21004": [
+      "A",
+      "C",
+      "B"
+    ],
+    "21005": [
+      "B",
+      "A",
+      "C"
+    ]
+  },
+  "diagnostics_enabled": false,
+  "formal_seeds": [
+    21001,
+    21002,
+    21003,
+    21004,
+    21005
+  ],
+  "mapping_protocol": {
+    "boundary_tolerance_m": 0.2,
+    "free_thresh": 0.196,
+    "gt_unknown": "excluded",
+    "occupied_thresh": 0.65,
+    "registration": "identity map frame"
+  },
+  "only_scientific_variable": "oracle_mode",
+  "phase": "4B",
+  "preflight_attempt": "preflight/attempt_20260825T110007",
+  "protocol_frozen_date": "2026-08-25",
+  "runtime": {
+    "evo": "1.31.1 (workspace-pinned)",
+    "os_release": "NAME=\"Ubuntu\"\nVERSION=\"20.04.6 LTS (Focal Fossa)\"\nID=ubuntu\nID_LIKE=debian\nPRETTY_NAME=\"Ubuntu 20.04.6 LTS\"\nVERSION_ID=\"20.04\"\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nVERSION_CODENAME=focal\nUBUNTU_CODENAME=focal\n",
+    "platform": "Linux-5.15.0-139-generic-x86_64-with-glibc2.29",
+    "python": "Python 3.8.10",
+    "ros_distribution": "noetic"
+  },
+  "source_sha256": {
+    "baseline/Graph-Based_SLAM-Aware_Exploration/launch/exploration.launch": "0c3ea311ec33f1cbaf2d767144f3226eb99cc0594b9637f89e6d1d9a64632c2a",
+    "baseline/Graph-Based_SLAM-Aware_Exploration/msg/LoopClosureEvent.msg": "f7047df1980a76bb6267a1eafd92fc1faef79130722f9554e513338dde19426c",
+    "baseline/Graph-Based_SLAM-Aware_Exploration/param/costmap.yaml": "00f1c1969824999889b6089af8fe6cee1887ce1cd119172dadaa3b12fe809d91",
+    "baseline/Graph-Based_SLAM-Aware_Exploration/param/mapper.yaml": "024a076d52c5ee7266c98fa78d03384506f440d65edc10153b065df1c54a35c0",
+    "baseline/Graph-Based_SLAM-Aware_Exploration/param/navigator.yaml": "ecefb73a3d13b09e1f9d4864063d5bd31f74ff6672c618614a8d8bd7a88998b1",
+    "baseline/Graph-Based_SLAM-Aware_Exploration/param/operator.yaml": "e4f2bff2f12f3eb27211abea036a650d1d28b729e39bd385f3f5b7988dd5b65d",
+    "baseline/Graph-Based_SLAM-Aware_Exploration/param/ros.yaml": "42e1cca7804dcb142687d8f572d6e6a36f79bcbb85f0935b3f371010d95e83aa",
+    "baseline/Graph-Based_SLAM-Aware_Exploration/scripts/path_planner.py": "dcd66c620cbe3dde91e005fe4be8020a02da7955e2f19c41a5c671f5abaec7c1",
+    "baseline/Graph-Based_SLAM-Aware_Exploration/src/MyPlanner.cpp": "025bd3fc0044ce8f9500480809c3e838dfe62958f57b4281e3745938668364c6",
+    "baseline/Graph-Based_SLAM-Aware_Exploration/src/MyPlanner.h": "c3d110e92ae650885601c76d6fd158130333530ed50b513972d6597237b5423b",
+    "baseline/Graph-Based_SLAM-Aware_Exploration/srv/ReliableLoop.srv": "33ca57957065dad969399c9be9f9a59e37a88422b38d81b15583fb40f0c6e950",
+    "baseline/Graph-Based_SLAM-Aware_Exploration/world/map3/map3.png": "235d1ee5a2975ffd9b6c888de9564248cebcf106c0ca74197e00160db83396db",
+    "baseline/Graph-Based_SLAM-Aware_Exploration/world/map3/map3.world": "3e6025772409a1d257c4abc655a2b4c776a01a30f4dc878a160070261ff21038",
+    "baseline/Graph-Based_SLAM-Aware_Exploration/world/map3/map3.xml": "2a35cc777d3da512e5304f02f3d3a6328dc479b1a4164f9a3ef986fb24883bd8",
+    "baseline/Graph-Based_SLAM-Aware_Exploration/world/map3/map3.yaml": "fc85746121b64e3672cf2c9a71e449b3cde7bfa3c8ef8941c234800d891f7c04",
+    "dependencies/navigation_2d/nav2d_karto/OpenKarto/source/OpenKarto/OpenMapper.h": "04b98eb7491f2d4ffb994e1c92503c87e069872ca537c649be37f7ce1922cf1e",
+    "dependencies/navigation_2d/nav2d_karto/OpenKarto/source/OpenMapper.cpp": "6c787ff1bb862572d7ab140d7758db7d2b408561496d377011646a3bdd9a8cfb",
+    "dependencies/navigation_2d/nav2d_karto/include/nav2d_karto/MultiMapper.h": "57b00f81ea73d8b4907c14759eece9a87a8602842be2a10ffc613ca5b01b6ede",
+    "dependencies/navigation_2d/nav2d_karto/src/MultiMapper.cpp": "8e7b5c6d637896cdc00217fa0357e38f769976c30a2648954c0df7b22510b5bd",
+    "docs/research_log/26_phase4b_protocol_freeze.md": "595e2a3ef15a204aed171783bfa5751274eae288308ac39d7968d01d3a707d89",
+    "docs/research_log/27_mapping_evaluation_protocol.md": "0bfcee68fcde3209b5da9ee97102032e1d840be5e37589f26175472937fd42bf",
+    "tools/aggregate_phase4b.py": "7e08ac4085170067bfd21e57dc55177a1046491a9690ac0ab7321c393ead80d3",
+    "tools/evaluate_mapping.py": "956e8fb48fa3ada736eb6e7a771ef7ac2af239a5ea7cfb4847c4a37316b20017",
+    "tools/evaluate_slam_run.py": "0dff77399e823c1caf705db078a08e84c3c9bb1f5a18033ca99985716d36e12a",
+    "tools/finalize_phase4b_run.py": "965ec2cce89f1168a880226951764a8ebde23db0e59cc546cd1e2e5eb3c965c0",
+    "tools/phase2_observer.py": "a7016ead73b9d01197240b2592c790c2438f30439262f790ad04a3ab49e04b86",
+    "tools/preflight_phase4b.py": "f4dd9aee8cba84833f206ab59af6bb6b4a74abdb66c0c5fc9395dce7ba0f90da",
+    "tools/run_phase4b_suite.py": "6ead652bbf520444b7e64044e8f4225cb67a24b15925e8ed048bbabd5ae8d2d3",
+    "tools/test_phase4a_selective.py": "1740c3c9a960842838c1f20fd85c11e031c3a76873f873656c45037a276498ef",
+    "tools/test_phase4b_mapping.py": "663a44fe503ce89502850706c3842589fbd91b8a6b297a19a5153e567e630146"
+  },
+  "trajectory_protocol": {
+    "alignment": "none",
+    "projection": "xy",
+    "timestamp_max_diff_s": 0.05
+  }
+}

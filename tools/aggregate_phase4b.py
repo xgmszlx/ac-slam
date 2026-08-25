@@ -58,8 +58,8 @@ def flatten_run(seed, label, summary):
         'repair_distance_m': cost.get('repair_distance_m'),
         'repair_time_s': cost.get('repair_time_s'),
         'early_stop_count': cost.get('early_stop_count'),
-        'early_stop_saved_planned_distance_m_estimate': cost.get(
-            'early_stop_saved_planned_distance_m_estimate'
+        'early_stop_saved_remaining_polyline_m_lower_bound': cost.get(
+            'early_stop_saved_remaining_polyline_m_lower_bound'
         ),
         'total_exploration_distance_m': exploration.get('total_distance_m'),
         'total_exploration_sim_time_s': exploration.get('sim_time_s'),
@@ -203,8 +203,8 @@ def main():
                         'reached_waypoints': len(set(loop.get('waypoints_reached') or [])),
                         'early_stopped': loop.get('early_stopped'),
                         'span_m': (loop.get('gate_decision') or {}).get('span_m'),
-                        'saved_planned_distance_m_estimate': loop.get(
-                            'early_stop_saved_planned_distance_m_estimate'
+                        'saved_remaining_polyline_m_lower_bound': loop.get(
+                            'early_stop_saved_remaining_polyline_m_lower_bound'
                         ),
                     })
 
@@ -246,7 +246,7 @@ def main():
     repair_fields = [
         'seed', 'condition', 'method', 'repair_trigger_count', 'no_repair_count',
         'repair_distance_m', 'repair_time_s', 'early_stop_count',
-        'early_stop_saved_planned_distance_m_estimate',
+        'early_stop_saved_remaining_polyline_m_lower_bound',
     ]
     write_csv(aggregate / 'repair_summary.csv', runs, repair_fields)
 

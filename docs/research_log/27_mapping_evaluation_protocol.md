@@ -55,6 +55,13 @@ Let `Occ_gt` and `Occ_est` be occupied cells inside the frozen GT-known domain:
 The evaluator also stores intersection, union, GT occupied and estimated occupied
 counts. Free-space IoU is an explicitly secondary diagnostic using the same rule.
 
+Construct-validity note frozen before formal inclusion: the Stage bitmap contains
+filled obstacle interiors, whereas a 2D LiDAR occupancy map often marks primarily
+the observed obstacle surface. Occupied IoU is therefore expected to be sensitive
+to wall thickness and obstacle-interior representation. It remains required and is
+reported unchanged, but Boundary F1 is interpreted alongside it; neither metric may
+be silently substituted for the other.
+
 ## 4. Primary metric 2: occupied-boundary F1
 
 An occupied boundary is an occupied cell that is not preserved by one iteration of

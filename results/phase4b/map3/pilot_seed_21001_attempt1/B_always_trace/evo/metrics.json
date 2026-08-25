@@ -1,0 +1,224 @@
+{
+  "inputs": {
+    "gt": "/home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_gt.txt",
+    "slam": "/home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_slam.txt"
+  },
+  "loops": [
+    {
+      "actual_end_time": 601.2,
+      "actual_start_time": 492.1,
+      "cumulative_after": {
+        "ape_se2_translation_m": {
+          "command": "env PYTHONPATH=/home/wcqw/ac-slam/evaluation/evo-1.31.1-target/site-packages /usr/bin/python3 -m evo.main_ape tum /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_gt.txt /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_slam.txt -r trans_part --project_to_plane xy --t_max_diff 0.05 --t_offset 0 --no_warnings --t_end 601.200000000 --save_results /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/evo/loop_1_after_ape_se2_translation.zip",
+          "result_archive": "loop_1_after_ape_se2_translation.zip",
+          "rmse": 0.14329,
+          "stdout_stderr": "loop_1_after_ape_se2_translation.txt"
+        },
+        "rpe_rotation_1m_deg": {
+          "command": "env PYTHONPATH=/home/wcqw/ac-slam/evaluation/evo-1.31.1-target/site-packages /usr/bin/python3 -m evo.main_rpe tum /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_gt.txt /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_slam.txt -r angle_deg --project_to_plane xy --t_max_diff 0.05 --t_offset 0 --no_warnings -d 1 -u m --all_pairs --pairs_from_reference --t_end 601.200000000 --save_results /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/evo/loop_1_after_rpe_rotation_1m.zip",
+          "result_archive": "loop_1_after_rpe_rotation_1m.zip",
+          "rmse": 0.203765,
+          "stdout_stderr": "loop_1_after_rpe_rotation_1m.txt"
+        },
+        "rpe_translation_1m_m": {
+          "command": "env PYTHONPATH=/home/wcqw/ac-slam/evaluation/evo-1.31.1-target/site-packages /usr/bin/python3 -m evo.main_rpe tum /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_gt.txt /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_slam.txt -r trans_part --project_to_plane xy --t_max_diff 0.05 --t_offset 0 --no_warnings -d 1 -u m --all_pairs --pairs_from_reference --t_end 601.200000000 --save_results /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/evo/loop_1_after_rpe_translation_1m.zip",
+          "result_archive": "loop_1_after_rpe_translation_1m.zip",
+          "rmse": 0.037475,
+          "stdout_stderr": "loop_1_after_rpe_translation_1m.txt"
+        }
+      },
+      "cumulative_before": {
+        "ape_se2_translation_m": {
+          "command": "env PYTHONPATH=/home/wcqw/ac-slam/evaluation/evo-1.31.1-target/site-packages /usr/bin/python3 -m evo.main_ape tum /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_gt.txt /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_slam.txt -r trans_part --project_to_plane xy --t_max_diff 0.05 --t_offset 0 --no_warnings --t_end 492.100000000 --save_results /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/evo/loop_1_before_ape_se2_translation.zip",
+          "result_archive": "loop_1_before_ape_se2_translation.zip",
+          "rmse": 0.146898,
+          "stdout_stderr": "loop_1_before_ape_se2_translation.txt"
+        },
+        "rpe_rotation_1m_deg": {
+          "command": "env PYTHONPATH=/home/wcqw/ac-slam/evaluation/evo-1.31.1-target/site-packages /usr/bin/python3 -m evo.main_rpe tum /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_gt.txt /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_slam.txt -r angle_deg --project_to_plane xy --t_max_diff 0.05 --t_offset 0 --no_warnings -d 1 -u m --all_pairs --pairs_from_reference --t_end 492.100000000 --save_results /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/evo/loop_1_before_rpe_rotation_1m.zip",
+          "result_archive": "loop_1_before_rpe_rotation_1m.zip",
+          "rmse": 0.188157,
+          "stdout_stderr": "loop_1_before_rpe_rotation_1m.txt"
+        },
+        "rpe_translation_1m_m": {
+          "command": "env PYTHONPATH=/home/wcqw/ac-slam/evaluation/evo-1.31.1-target/site-packages /usr/bin/python3 -m evo.main_rpe tum /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_gt.txt /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_slam.txt -r trans_part --project_to_plane xy --t_max_diff 0.05 --t_offset 0 --no_warnings -d 1 -u m --all_pairs --pairs_from_reference --t_end 492.100000000 --save_results /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/evo/loop_1_before_rpe_translation_1m.zip",
+          "result_archive": "loop_1_before_rpe_translation_1m.zip",
+          "rmse": 0.02869,
+          "stdout_stderr": "loop_1_before_rpe_translation_1m.txt"
+        }
+      },
+      "loop_id": "1",
+      "status": "COMPUTED"
+    },
+    {
+      "actual_end_time": 1107.3,
+      "actual_start_time": 947.3,
+      "cumulative_after": {
+        "ape_se2_translation_m": {
+          "command": "env PYTHONPATH=/home/wcqw/ac-slam/evaluation/evo-1.31.1-target/site-packages /usr/bin/python3 -m evo.main_ape tum /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_gt.txt /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_slam.txt -r trans_part --project_to_plane xy --t_max_diff 0.05 --t_offset 0 --no_warnings --t_end 1107.300000000 --save_results /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/evo/loop_2_after_ape_se2_translation.zip",
+          "result_archive": "loop_2_after_ape_se2_translation.zip",
+          "rmse": 0.344569,
+          "stdout_stderr": "loop_2_after_ape_se2_translation.txt"
+        },
+        "rpe_rotation_1m_deg": {
+          "command": "env PYTHONPATH=/home/wcqw/ac-slam/evaluation/evo-1.31.1-target/site-packages /usr/bin/python3 -m evo.main_rpe tum /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_gt.txt /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_slam.txt -r angle_deg --project_to_plane xy --t_max_diff 0.05 --t_offset 0 --no_warnings -d 1 -u m --all_pairs --pairs_from_reference --t_end 1107.300000000 --save_results /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/evo/loop_2_after_rpe_rotation_1m.zip",
+          "result_archive": "loop_2_after_rpe_rotation_1m.zip",
+          "rmse": 0.276372,
+          "stdout_stderr": "loop_2_after_rpe_rotation_1m.txt"
+        },
+        "rpe_translation_1m_m": {
+          "command": "env PYTHONPATH=/home/wcqw/ac-slam/evaluation/evo-1.31.1-target/site-packages /usr/bin/python3 -m evo.main_rpe tum /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_gt.txt /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_slam.txt -r trans_part --project_to_plane xy --t_max_diff 0.05 --t_offset 0 --no_warnings -d 1 -u m --all_pairs --pairs_from_reference --t_end 1107.300000000 --save_results /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/evo/loop_2_after_rpe_translation_1m.zip",
+          "result_archive": "loop_2_after_rpe_translation_1m.zip",
+          "rmse": 0.054617,
+          "stdout_stderr": "loop_2_after_rpe_translation_1m.txt"
+        }
+      },
+      "cumulative_before": {
+        "ape_se2_translation_m": {
+          "command": "env PYTHONPATH=/home/wcqw/ac-slam/evaluation/evo-1.31.1-target/site-packages /usr/bin/python3 -m evo.main_ape tum /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_gt.txt /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_slam.txt -r trans_part --project_to_plane xy --t_max_diff 0.05 --t_offset 0 --no_warnings --t_end 947.300000000 --save_results /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/evo/loop_2_before_ape_se2_translation.zip",
+          "result_archive": "loop_2_before_ape_se2_translation.zip",
+          "rmse": 0.255009,
+          "stdout_stderr": "loop_2_before_ape_se2_translation.txt"
+        },
+        "rpe_rotation_1m_deg": {
+          "command": "env PYTHONPATH=/home/wcqw/ac-slam/evaluation/evo-1.31.1-target/site-packages /usr/bin/python3 -m evo.main_rpe tum /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_gt.txt /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_slam.txt -r angle_deg --project_to_plane xy --t_max_diff 0.05 --t_offset 0 --no_warnings -d 1 -u m --all_pairs --pairs_from_reference --t_end 947.300000000 --save_results /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/evo/loop_2_before_rpe_rotation_1m.zip",
+          "result_archive": "loop_2_before_rpe_rotation_1m.zip",
+          "rmse": 0.223069,
+          "stdout_stderr": "loop_2_before_rpe_rotation_1m.txt"
+        },
+        "rpe_translation_1m_m": {
+          "command": "env PYTHONPATH=/home/wcqw/ac-slam/evaluation/evo-1.31.1-target/site-packages /usr/bin/python3 -m evo.main_rpe tum /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_gt.txt /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_slam.txt -r trans_part --project_to_plane xy --t_max_diff 0.05 --t_offset 0 --no_warnings -d 1 -u m --all_pairs --pairs_from_reference --t_end 947.300000000 --save_results /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/evo/loop_2_before_rpe_translation_1m.zip",
+          "result_archive": "loop_2_before_rpe_translation_1m.zip",
+          "rmse": 0.035342,
+          "stdout_stderr": "loop_2_before_rpe_translation_1m.txt"
+        }
+      },
+      "loop_id": "2",
+      "status": "COMPUTED"
+    },
+    {
+      "actual_end_time": 1235.4,
+      "actual_start_time": 1189.5,
+      "cumulative_after": {
+        "ape_se2_translation_m": {
+          "command": "env PYTHONPATH=/home/wcqw/ac-slam/evaluation/evo-1.31.1-target/site-packages /usr/bin/python3 -m evo.main_ape tum /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_gt.txt /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_slam.txt -r trans_part --project_to_plane xy --t_max_diff 0.05 --t_offset 0 --no_warnings --t_end 1235.400000000 --save_results /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/evo/loop_3_after_ape_se2_translation.zip",
+          "result_archive": "loop_3_after_ape_se2_translation.zip",
+          "rmse": 0.614126,
+          "stdout_stderr": "loop_3_after_ape_se2_translation.txt"
+        },
+        "rpe_rotation_1m_deg": {
+          "command": "env PYTHONPATH=/home/wcqw/ac-slam/evaluation/evo-1.31.1-target/site-packages /usr/bin/python3 -m evo.main_rpe tum /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_gt.txt /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_slam.txt -r angle_deg --project_to_plane xy --t_max_diff 0.05 --t_offset 0 --no_warnings -d 1 -u m --all_pairs --pairs_from_reference --t_end 1235.400000000 --save_results /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/evo/loop_3_after_rpe_rotation_1m.zip",
+          "result_archive": "loop_3_after_rpe_rotation_1m.zip",
+          "rmse": 0.268692,
+          "stdout_stderr": "loop_3_after_rpe_rotation_1m.txt"
+        },
+        "rpe_translation_1m_m": {
+          "command": "env PYTHONPATH=/home/wcqw/ac-slam/evaluation/evo-1.31.1-target/site-packages /usr/bin/python3 -m evo.main_rpe tum /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_gt.txt /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_slam.txt -r trans_part --project_to_plane xy --t_max_diff 0.05 --t_offset 0 --no_warnings -d 1 -u m --all_pairs --pairs_from_reference --t_end 1235.400000000 --save_results /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/evo/loop_3_after_rpe_translation_1m.zip",
+          "result_archive": "loop_3_after_rpe_translation_1m.zip",
+          "rmse": 0.053569,
+          "stdout_stderr": "loop_3_after_rpe_translation_1m.txt"
+        }
+      },
+      "cumulative_before": {
+        "ape_se2_translation_m": {
+          "command": "env PYTHONPATH=/home/wcqw/ac-slam/evaluation/evo-1.31.1-target/site-packages /usr/bin/python3 -m evo.main_ape tum /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_gt.txt /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_slam.txt -r trans_part --project_to_plane xy --t_max_diff 0.05 --t_offset 0 --no_warnings --t_end 1189.500000000 --save_results /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/evo/loop_3_before_ape_se2_translation.zip",
+          "result_archive": "loop_3_before_ape_se2_translation.zip",
+          "rmse": 0.436657,
+          "stdout_stderr": "loop_3_before_ape_se2_translation.txt"
+        },
+        "rpe_rotation_1m_deg": {
+          "command": "env PYTHONPATH=/home/wcqw/ac-slam/evaluation/evo-1.31.1-target/site-packages /usr/bin/python3 -m evo.main_rpe tum /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_gt.txt /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_slam.txt -r angle_deg --project_to_plane xy --t_max_diff 0.05 --t_offset 0 --no_warnings -d 1 -u m --all_pairs --pairs_from_reference --t_end 1189.500000000 --save_results /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/evo/loop_3_before_rpe_rotation_1m.zip",
+          "result_archive": "loop_3_before_rpe_rotation_1m.zip",
+          "rmse": 0.267049,
+          "stdout_stderr": "loop_3_before_rpe_rotation_1m.txt"
+        },
+        "rpe_translation_1m_m": {
+          "command": "env PYTHONPATH=/home/wcqw/ac-slam/evaluation/evo-1.31.1-target/site-packages /usr/bin/python3 -m evo.main_rpe tum /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_gt.txt /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_slam.txt -r trans_part --project_to_plane xy --t_max_diff 0.05 --t_offset 0 --no_warnings -d 1 -u m --all_pairs --pairs_from_reference --t_end 1189.500000000 --save_results /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/evo/loop_3_before_rpe_translation_1m.zip",
+          "result_archive": "loop_3_before_rpe_translation_1m.zip",
+          "rmse": 0.053701,
+          "stdout_stderr": "loop_3_before_rpe_translation_1m.txt"
+        }
+      },
+      "loop_id": "3",
+      "status": "COMPUTED"
+    },
+    {
+      "actual_end_time": 1544.7,
+      "actual_start_time": 1429.3,
+      "cumulative_after": {
+        "ape_se2_translation_m": {
+          "command": "env PYTHONPATH=/home/wcqw/ac-slam/evaluation/evo-1.31.1-target/site-packages /usr/bin/python3 -m evo.main_ape tum /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_gt.txt /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_slam.txt -r trans_part --project_to_plane xy --t_max_diff 0.05 --t_offset 0 --no_warnings --t_end 1544.700000000 --save_results /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/evo/loop_4_after_ape_se2_translation.zip",
+          "result_archive": "loop_4_after_ape_se2_translation.zip",
+          "rmse": 0.792283,
+          "stdout_stderr": "loop_4_after_ape_se2_translation.txt"
+        },
+        "rpe_rotation_1m_deg": {
+          "command": "env PYTHONPATH=/home/wcqw/ac-slam/evaluation/evo-1.31.1-target/site-packages /usr/bin/python3 -m evo.main_rpe tum /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_gt.txt /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_slam.txt -r angle_deg --project_to_plane xy --t_max_diff 0.05 --t_offset 0 --no_warnings -d 1 -u m --all_pairs --pairs_from_reference --t_end 1544.700000000 --save_results /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/evo/loop_4_after_rpe_rotation_1m.zip",
+          "result_archive": "loop_4_after_rpe_rotation_1m.zip",
+          "rmse": 0.272638,
+          "stdout_stderr": "loop_4_after_rpe_rotation_1m.txt"
+        },
+        "rpe_translation_1m_m": {
+          "command": "env PYTHONPATH=/home/wcqw/ac-slam/evaluation/evo-1.31.1-target/site-packages /usr/bin/python3 -m evo.main_rpe tum /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_gt.txt /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_slam.txt -r trans_part --project_to_plane xy --t_max_diff 0.05 --t_offset 0 --no_warnings -d 1 -u m --all_pairs --pairs_from_reference --t_end 1544.700000000 --save_results /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/evo/loop_4_after_rpe_translation_1m.zip",
+          "result_archive": "loop_4_after_rpe_translation_1m.zip",
+          "rmse": 0.055738,
+          "stdout_stderr": "loop_4_after_rpe_translation_1m.txt"
+        }
+      },
+      "cumulative_before": {
+        "ape_se2_translation_m": {
+          "command": "env PYTHONPATH=/home/wcqw/ac-slam/evaluation/evo-1.31.1-target/site-packages /usr/bin/python3 -m evo.main_ape tum /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_gt.txt /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_slam.txt -r trans_part --project_to_plane xy --t_max_diff 0.05 --t_offset 0 --no_warnings --t_end 1429.300000000 --save_results /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/evo/loop_4_before_ape_se2_translation.zip",
+          "result_archive": "loop_4_before_ape_se2_translation.zip",
+          "rmse": 0.78472,
+          "stdout_stderr": "loop_4_before_ape_se2_translation.txt"
+        },
+        "rpe_rotation_1m_deg": {
+          "command": "env PYTHONPATH=/home/wcqw/ac-slam/evaluation/evo-1.31.1-target/site-packages /usr/bin/python3 -m evo.main_rpe tum /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_gt.txt /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_slam.txt -r angle_deg --project_to_plane xy --t_max_diff 0.05 --t_offset 0 --no_warnings -d 1 -u m --all_pairs --pairs_from_reference --t_end 1429.300000000 --save_results /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/evo/loop_4_before_rpe_rotation_1m.zip",
+          "result_archive": "loop_4_before_rpe_rotation_1m.zip",
+          "rmse": 0.256834,
+          "stdout_stderr": "loop_4_before_rpe_rotation_1m.txt"
+        },
+        "rpe_translation_1m_m": {
+          "command": "env PYTHONPATH=/home/wcqw/ac-slam/evaluation/evo-1.31.1-target/site-packages /usr/bin/python3 -m evo.main_rpe tum /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_gt.txt /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_slam.txt -r trans_part --project_to_plane xy --t_max_diff 0.05 --t_offset 0 --no_warnings -d 1 -u m --all_pairs --pairs_from_reference --t_end 1429.300000000 --save_results /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/evo/loop_4_before_rpe_translation_1m.zip",
+          "result_archive": "loop_4_before_rpe_translation_1m.zip",
+          "rmse": 0.050648,
+          "stdout_stderr": "loop_4_before_rpe_translation_1m.txt"
+        }
+      },
+      "loop_id": "4",
+      "status": "COMPUTED"
+    }
+  ],
+  "protocol": {
+    "alignment": "none (identity; GT and Karto share the map frame)",
+    "ape": "translation-part RMSE on planar SE(2) poses, metres",
+    "evo_version": "1.31.1",
+    "projection": "xy plane before metric evaluation",
+    "python": "/usr/bin/python3 (3.8)",
+    "rpe_rotation": "rotation-angle RMSE, all reference pairs at 1 m delta, degrees",
+    "rpe_translation": "translation-part RMSE, all reference pairs at 1 m delta, metres",
+    "scale_correction": false,
+    "timestamp_association": "nearest timestamp, max difference 0.05 s, offset 0 s",
+    "trajectory_format": "TUM"
+  },
+  "whole_run": {
+    "ape_se2_translation_m": {
+      "command": "env PYTHONPATH=/home/wcqw/ac-slam/evaluation/evo-1.31.1-target/site-packages /usr/bin/python3 -m evo.main_ape tum /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_gt.txt /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_slam.txt -r trans_part --project_to_plane xy --t_max_diff 0.05 --t_offset 0 --no_warnings --save_results /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/evo/ape_se2_translation.zip",
+      "result_archive": "ape_se2_translation.zip",
+      "rmse": 0.792283,
+      "stdout_stderr": "ape_se2_translation.txt"
+    },
+    "rpe_rotation_1m_deg": {
+      "command": "env PYTHONPATH=/home/wcqw/ac-slam/evaluation/evo-1.31.1-target/site-packages /usr/bin/python3 -m evo.main_rpe tum /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_gt.txt /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_slam.txt -r angle_deg --project_to_plane xy --t_max_diff 0.05 --t_offset 0 --no_warnings -d 1 -u m --all_pairs --pairs_from_reference --save_results /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/evo/rpe_rotation_1m.zip",
+      "result_archive": "rpe_rotation_1m.zip",
+      "rmse": 0.272638,
+      "stdout_stderr": "rpe_rotation_1m.txt"
+    },
+    "rpe_translation_1m_m": {
+      "command": "env PYTHONPATH=/home/wcqw/ac-slam/evaluation/evo-1.31.1-target/site-packages /usr/bin/python3 -m evo.main_rpe tum /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_gt.txt /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/trajectory_slam.txt -r trans_part --project_to_plane xy --t_max_diff 0.05 --t_offset 0 --no_warnings -d 1 -u m --all_pairs --pairs_from_reference --save_results /home/wcqw/ac-slam/results/phase4b/map3/seed_21001/B_always_trace/evo/rpe_translation_1m.zip",
+      "result_archive": "rpe_translation_1m.zip",
+      "rmse": 0.055738,
+      "stdout_stderr": "rpe_translation_1m.txt"
+    }
+  }
+}

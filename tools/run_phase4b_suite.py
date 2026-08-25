@@ -259,6 +259,13 @@ def run_one(seed, label, condition, seed_dir, env, explore_timeout,
         run_id = write_command_result(
             ['rosparam', 'get', '/run_id'], env, run_dir / 'ros_run_id.txt', timeout=10
         ).strip()
+        # The observer starts before exploration.launch. Set the same global value
+        # explicitly so rospy uses simulated time from initialization; launch later
+        # writes the identical value.
+        write_command_result(
+            ['rosparam', 'set', '/use_sim_time', 'true'], env,
+            run_dir / 'use_sim_time_pre_observer.txt', timeout=10,
+        )
         observer = start_process([
             '/usr/bin/python3', str(ROOT / 'tools' / 'phase2_observer.py'),
             '--output-dir', str(run_dir),
@@ -429,6 +436,8 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--seeds', type=int, nargs='+', default=list(ORDERS))
     parser.add_argument('--explore-timeout', type=int, default=18000)
+    parser.add_argument('--resume', action='store_true',
+                        help='append only new seed directories to an existing suite state')
     args = parser.parse_args()
     if any(seed not in ORDERS for seed in args.seeds):
         raise SystemExit('seeds must be selected from {}'.format(sorted(ORDERS)))
@@ -436,16 +445,42 @@ def main():
     env = activated_environment()
     suite_state_path = OUTPUT_ROOT / 'suite_state.json'
     if suite_state_path.exists():
-        raise SystemExit('refusing to overwrite existing Phase 4B suite_state.json')
-    state = {
-        'status': 'RUNNING', 'started_wall_time_utc': now_utc(),
-        'seeds': args.seeds, 'orders': {str(seed): ORDERS[seed] for seed in args.seeds},
-        'completed_runs': [],
-    }
+        if not args.resume:
+            raise SystemExit(
+                'suite_state.json exists; use --resume only after inspecting the prior stop'
+            )
+        state = json.loads(suite_state_path.read_text())
+        history_dir = OUTPUT_ROOT / 'suite_state_history'
+        history_dir.mkdir(exist_ok=True)
+        token = datetime.datetime.now().strftime('%Y%m%dT%H%M%S')
+        shutil.copy2(suite_state_path, history_dir / ('before_resume_' + token + '.json'))
+        state.setdefault('resume_events', []).append({
+            'resumed_wall_time_utc': now_utc(), 'requested_seeds': args.seeds,
+            'previous_status': state.get('status'),
+        })
+        previous_seeds = set(state.get('seeds', []))
+        state['seeds'] = sorted(previous_seeds | set(args.seeds))
+        state.setdefault('orders', {}).update({
+            str(seed): ORDERS[seed] for seed in args.seeds
+        })
+        state['status'] = 'RUNNING'
+    else:
+        if args.resume:
+            raise SystemExit('--resume requested but suite_state.json does not exist')
+        state = {
+            'status': 'RUNNING', 'started_wall_time_utc': now_utc(),
+            'seeds': args.seeds,
+            'orders': {str(seed): ORDERS[seed] for seed in args.seeds},
+            'completed_runs': [],
+        }
     suite_state_path.write_text(json.dumps(state, indent=2, sort_keys=True) + '\n')
     try:
         for seed in args.seeds:
             seed_dir = OUTPUT_ROOT / 'seed_{}'.format(seed)
+            if seed_dir.exists():
+                raise TechnicalInvalid(
+                    'resume refuses existing seed directory: {}'.format(seed_dir)
+                )
             seed_dir.mkdir(parents=True, exist_ok=False)
             for label in ORDERS[seed]:
                 outcome = run_one(

@@ -1,0 +1,465 @@
+-- Using CATKIN_DEVEL_PREFIX: /home/wcqw/ac-slam/catkin_ws/devel
+-- Using CMAKE_PREFIX_PATH: /home/wcqw/ac-slam/catkin_ws/devel;/opt/ros/noetic
+-- This workspace overlays: /home/wcqw/ac-slam/catkin_ws/devel;/opt/ros/noetic
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using Debian Python package layout
+-- Using empy: /usr/lib/python3/dist-packages/em.py
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /home/wcqw/ac-slam/catkin_ws/build/test_results
+-- Forcing gtest/gmock from source, though one was otherwise available.
+-- Found gtest sources under '/usr/src/googletest': gtests will be built
+-- Found gmock sources under '/usr/src/googletest': gmock will be built
+-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+-- Using Python nosetests: /usr/bin/nosetests3
+-- catkin 0.8.12
+-- BUILD_SHARED_LIBS is on
+-- BUILD_SHARED_LIBS is on
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- ~~  traversing 11 packages in topological order:
+-- ~~  - nav2d (metapackage)
+-- ~~  - nav2d_tutorials
+-- ~~  - nav2d_msgs
+-- ~~  - nav2d_localizer
+-- ~~  - nav2d_karto
+-- ~~  - p2os_urdf
+-- ~~  - nav2d_operator
+-- ~~  - nav2d_navigator
+-- ~~  - cpp_solver
+-- ~~  - nav2d_exploration
+-- ~~  - nav2d_remote
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- +++ processing catkin metapackage: 'nav2d'
+-- ==> add_subdirectory(navigation_2d/nav2d)
+-- +++ processing catkin package: 'nav2d_tutorials'
+-- ==> add_subdirectory(navigation_2d/nav2d_tutorials)
+-- +++ processing catkin package: 'nav2d_msgs'
+-- ==> add_subdirectory(navigation_2d/nav2d_msgs)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- nav2d_msgs: 2 messages, 0 services
+-- +++ processing catkin package: 'nav2d_localizer'
+-- ==> add_subdirectory(navigation_2d/nav2d_localizer)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'nav2d_karto'
+-- ==> add_subdirectory(navigation_2d/nav2d_karto)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+CMake Warning at /opt/ros/noetic/share/catkin/cmake/catkin_package.cmake:166 (message):
+  catkin_package() DEPENDS on 'Eigen3' but neither 'Eigen3_INCLUDE_DIRS' nor
+  'Eigen3_LIBRARIES' is defined.
+Call Stack (most recent call first):
+  /opt/ros/noetic/share/catkin/cmake/catkin_package.cmake:102 (_catkin_package)
+  navigation_2d/nav2d_karto/CMakeLists.txt:37 (catkin_package)
+
+
+---------------------------------
+/home/wcqw/ac-slam/catkin_ws/devel/include/opt/ros/noetic/include/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp/usr/include/home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_localizer/include
+-- +++ processing catkin package: 'p2os_urdf'
+-- ==> add_subdirectory(p2os_urdf)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'nav2d_operator'
+-- ==> add_subdirectory(navigation_2d/nav2d_operator)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- nav2d_operator: 1 messages, 0 services
+-- +++ processing catkin package: 'nav2d_navigator'
+-- ==> add_subdirectory(navigation_2d/nav2d_navigator)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- Generating .msg files for action nav2d_navigator/Explore /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_navigator/action/Explore.action
+-- Generating .msg files for action nav2d_navigator/GetFirstMap /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_navigator/action/GetFirstMap.action
+-- Generating .msg files for action nav2d_navigator/Localize /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_navigator/action/Localize.action
+-- Generating .msg files for action nav2d_navigator/MoveToPosition2D /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_navigator/action/MoveToPosition2D.action
+-- nav2d_navigator: 28 messages, 0 services
+-- +++ processing catkin package: 'cpp_solver'
+-- ==> add_subdirectory(cpp_solver)
+EIGEN3_INCLUDE_DIR: /usr/include/eigen3
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- cpp_solver: 3 messages, 4 services
+project_name cpp_solver
+-- +++ processing catkin package: 'nav2d_exploration'
+-- ==> add_subdirectory(navigation_2d/nav2d_exploration)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'nav2d_remote'
+-- ==> add_subdirectory(navigation_2d/nav2d_remote)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/wcqw/ac-slam/catkin_ws/build
+[  0%] Built target geometry_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target sensor_msgs_generate_messages_py
+[  0%] Built target sensor_msgs_generate_messages_cpp
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target geometry_msgs_generate_messages_eus
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target sensor_msgs_generate_messages_eus
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target nav_msgs_generate_messages_py
+[  0%] Built target geometry_msgs_generate_messages_nodejs
+[  0%] Built target geometry_msgs_generate_messages_cpp
+[  0%] Built target sensor_msgs_generate_messages_nodejs
+[  0%] Built target geometry_msgs_generate_messages_lisp
+[  0%] Built target sensor_msgs_generate_messages_lisp
+[  0%] Built target map_msgs_generate_messages_cpp
+[  1%] Built target p2os_publisher_3at
+[  1%] Built target nav_msgs_generate_messages_lisp
+[  1%] Built target tf_generate_messages_lisp
+[  1%] Built target rosgraph_msgs_generate_messages_py
+[  1%] Built target nav_msgs_generate_messages_cpp
+[  1%] Built target tf_generate_messages_cpp
+[  1%] Built target tf2_msgs_generate_messages_lisp
+[  1%] Built target tf2_msgs_generate_messages_py
+[  1%] Built target rosgraph_msgs_generate_messages_eus
+[  1%] Built target nav_msgs_generate_messages_nodejs
+[  1%] Built target actionlib_generate_messages_py
+[  1%] Built target rosgraph_msgs_generate_messages_lisp
+[  1%] Built target roscpp_generate_messages_lisp
+[  1%] Built target roscpp_generate_messages_py
+[  1%] Built target roscpp_generate_messages_nodejs
+[  2%] Built target rosgraph_msgs_generate_messages_cpp
+[  5%] Built target SelfLocalizer
+[  5%] Built target actionlib_msgs_generate_messages_eus
+[  5%] Built target tf_generate_messages_py
+[  5%] Built target actionlib_msgs_generate_messages_nodejs
+[  5%] Built target tf2_msgs_generate_messages_eus
+[  5%] Built target roscpp_generate_messages_eus
+[  5%] Built target actionlib_generate_messages_lisp
+[  5%] Built target tf_generate_messages_nodejs
+[  5%] Built target roscpp_generate_messages_cpp
+[  5%] Built target p2os_publisher
+[  5%] Built target _nav2d_msgs_generate_messages_check_deps_RobotPose
+[  5%] Built target _nav2d_msgs_generate_messages_check_deps_LocalizedScan
+[  6%] Built target p2os_publisher_3dx
+[  6%] Built target actionlib_generate_messages_nodejs
+[  6%] Built target rosgraph_msgs_generate_messages_nodejs
+[  6%] Built target actionlib_generate_messages_eus
+[  6%] Built target actionlib_msgs_generate_messages_lisp
+[  6%] Built target nav_msgs_generate_messages_eus
+[  6%] Built target actionlib_msgs_generate_messages_py
+[  6%] Built target actionlib_msgs_generate_messages_cpp
+[  6%] Built target dynamic_reconfigure_generate_messages_lisp
+[  6%] Built target map_msgs_generate_messages_eus
+[  6%] Built target map_msgs_generate_messages_py
+[  6%] Built target costmap_2d_gencfg
+[  6%] Built target map_msgs_generate_messages_nodejs
+[  6%] Built target costmap_2d_generate_messages_cpp
+[  6%] Built target costmap_2d_generate_messages_lisp
+[  6%] Built target map_msgs_generate_messages_lisp
+[  6%] Built target tf_generate_messages_eus
+[  6%] Built target actionlib_generate_messages_cpp
+[  6%] Built target visualization_msgs_generate_messages_eus
+[  6%] Built target visualization_msgs_generate_messages_lisp
+[  6%] Built target costmap_2d_generate_messages_py
+[  6%] Built target tf2_msgs_generate_messages_nodejs
+[  6%] Built target visualization_msgs_generate_messages_cpp
+[  6%] Built target tf2_msgs_generate_messages_cpp
+[  6%] Built target visualization_msgs_generate_messages_nodejs
+[  6%] Built target dynamic_reconfigure_generate_messages_nodejs
+[  6%] Built target _nav2d_navigator_generate_messages_check_deps_LocalizeFeedback
+[  6%] Built target visualization_msgs_generate_messages_py
+[  6%] Built target dynamic_reconfigure_generate_messages_py
+[  6%] Built target costmap_2d_generate_messages_nodejs
+[  6%] Built target dynamic_reconfigure_generate_messages_cpp
+[  6%] Built target costmap_2d_generate_messages_eus
+[  6%] Built target dynamic_reconfigure_generate_messages_eus
+[  6%] Built target dynamic_reconfigure_gencfg
+Scanning dependencies of target OpenKarto
+[  6%] Built target _nav2d_navigator_generate_messages_check_deps_MoveToPosition2DResult
+[  6%] Built target _nav2d_navigator_generate_messages_check_deps_GetFirstMapActionGoal
+[  6%] Built target _nav2d_operator_generate_messages_check_deps_cmd
+[  6%] Built target _nav2d_navigator_generate_messages_check_deps_ExploreActionGoal
+[  6%] Built target _nav2d_navigator_generate_messages_check_deps_ExploreFeedback
+[  6%] Built target _nav2d_navigator_generate_messages_check_deps_ExploreActionFeedback
+[  6%] Built target _nav2d_navigator_generate_messages_check_deps_GetFirstMapGoal
+[  6%] Built target _nav2d_navigator_generate_messages_check_deps_GetFirstMapAction
+[  6%] Built target _nav2d_navigator_generate_messages_check_deps_GetFirstMapActionFeedback
+[  6%] Built target _nav2d_navigator_generate_messages_check_deps_ExploreActionResult
+[  6%] Built target _nav2d_navigator_generate_messages_check_deps_ExploreAction
+[  6%] Built target _nav2d_navigator_generate_messages_check_deps_MoveToPosition2DActionFeedback
+[  6%] Built target _nav2d_navigator_generate_messages_check_deps_ExploreResult
+[  6%] Built target _nav2d_navigator_generate_messages_check_deps_ExploreGoal
+[  6%] Built target _nav2d_navigator_generate_messages_check_deps_MoveToPosition2DFeedback
+[  6%] Building CXX object navigation_2d/nav2d_karto/CMakeFiles/OpenKarto.dir/OpenKarto/source/OccupancyGrid.cpp.o
+[  7%] Building CXX object navigation_2d/nav2d_karto/CMakeFiles/OpenKarto.dir/OpenKarto/source/OpenKarto.cpp.o
+[  7%] Built target _nav2d_navigator_generate_messages_check_deps_MoveToPosition2DActionGoal
+[  7%] Building CXX object navigation_2d/nav2d_karto/CMakeFiles/OpenKarto.dir/OpenKarto/source/OpenMapper.cpp.o
+[  7%] Built target gridastar
+[  8%] Built target MapInflationTool
+[  8%] Built target _nav2d_navigator_generate_messages_check_deps_MoveToPosition2DGoal
+[  8%] Built target _nav2d_navigator_generate_messages_check_deps_LocalizeActionGoal
+[  8%] Built target _nav2d_navigator_generate_messages_check_deps_GetFirstMapFeedback
+[  8%] Built target _nav2d_navigator_generate_messages_check_deps_LocalizeActionFeedback
+[  8%] Built target _nav2d_navigator_generate_messages_check_deps_LocalizeAction
+[  8%] Built target _nav2d_navigator_generate_messages_check_deps_MoveToPosition2DActionResult
+[  8%] Built target _nav2d_navigator_generate_messages_check_deps_MoveToPosition2DAction
+[  8%] Built target _catkin_empty_exported_target
+[  8%] Built target nav2d_msgs_generate_messages_cpp
+[  9%] Built target nav2d_msgs_generate_messages_lisp
+[ 10%] Built target nav2d_msgs_generate_messages_py
+[ 11%] Built target nav2d_operator_generate_messages_cpp
+[ 11%] Built target nav2d_msgs_generate_messages_nodejs
+[ 12%] Built target nav2d_msgs_generate_messages_eus
+[ 12%] Built target _nav2d_navigator_generate_messages_check_deps_LocalizeActionResult
+[ 12%] Built target _nav2d_navigator_generate_messages_check_deps_GetFirstMapActionResult
+[ 13%] Built target nav2d_operator_generate_messages_nodejs
+[ 13%] Built target _nav2d_navigator_generate_messages_check_deps_LocalizeGoal
+[ 13%] Built target _nav2d_navigator_generate_messages_check_deps_GetFirstMapResult
+[ 13%] Built target _nav2d_navigator_generate_messages_check_deps_LocalizeResult
+[ 13%] Built target _cpp_solver_generate_messages_check_deps_TspPathList
+[ 13%] Built target nav2d_operator_generate_messages_eus
+[ 13%] Built target nav2d_operator_generate_messages_py
+[ 13%] Built target nav2d_operator_generate_messages_lisp
+[ 13%] Built target _cpp_solver_generate_messages_check_deps_PoseGraph
+[ 13%] Built target _cpp_solver_generate_messages_check_deps_RequestGraph
+[ 13%] Built target _cpp_solver_generate_messages_check_deps_ReliableLoop
+[ 13%] Built target _cpp_solver_generate_messages_check_deps_LoopClosureEvent
+[ 13%] Built target _cpp_solver_generate_messages_check_deps_ExplorationButton
+[ 13%] Built target _cpp_solver_generate_messages_check_deps_EdgeDistance
+[ 21%] Built target nav2d_navigator_generate_messages_cpp
+[ 29%] Built target nav2d_navigator_generate_messages_py
+[ 38%] Built target nav2d_navigator_generate_messages_lisp
+[ 38%] Built target nav2d_msgs_generate_messages
+[ 38%] Generating EusLisp code from cpp_solver/LoopClosureEvent.msg
+[ 38%] Built target nav2d_operator_generate_messages
+[ 38%] Generating Lisp code from cpp_solver/LoopClosureEvent.msg
+[ 38%] Generating EusLisp code from cpp_solver/ReliableLoop.srv
+[ 39%] Generating Lisp code from cpp_solver/ReliableLoop.srv
+[ 39%] Built target RobotOperator
+[ 40%] Generating Javascript code from cpp_solver/LoopClosureEvent.msg
+[ 41%] Generating Javascript code from cpp_solver/ReliableLoop.srv
+[ 58%] Built target nav2d_navigator_generate_messages_nodejs
+[ 59%] Built target nav2d_navigator_generate_messages_eus
+[ 60%] Generating Python from MSG cpp_solver/LoopClosureEvent
+[ 61%] Generating Python code from SRV cpp_solver/ReliableLoop
+[ 61%] Built target nav2d_navigator_generate_messages
+[ 62%] Built target localizer
+[ 62%] Generating C++ code from cpp_solver/LoopClosureEvent.msg
+[ 63%] Built target cpp_solver_generate_messages_lisp
+[ 64%] Built target explore_client
+[ 64%] Built target cpp_solver_generate_messages_nodejs
+[ 64%] Generating C++ code from cpp_solver/ReliableLoop.srv
+[ 64%] Built target localize_client
+[ 65%] Built target operator
+[ 69%] Built target cpp_solver_generate_messages_eus
+[ 70%] Built target RobotNavigator
+[ 71%] Built target get_map_client
+[ 71%] Built target set_goal_client
+[ 71%] Generating Python msg __init__.py for cpp_solver
+[ 71%] Generating Python srv __init__.py for cpp_solver
+[ 73%] Built target remote_joy
+[ 73%] Built target sim_joy
+[ 74%] Built target updateDistance
+[ 75%] Built target navigator
+[ 75%] Built target pub_path
+[ 76%] Built target ExplorationPlugins
+[ 76%] Built target cpp_solver_generate_messages_py
+[ 78%] Built target cpp_solver_generate_messages_cpp
+[ 78%] Built target cpp_solver_generate_messages
+[ 78%] Built target cpp_solver_gencpp
+Scanning dependencies of target CppExplorationPlugins
+[ 78%] Building CXX object cpp_solver/CMakeFiles/CppExplorationPlugins.dir/src/exploration_plugins.cpp.o
+[ 78%] Building CXX object cpp_solver/CMakeFiles/CppExplorationPlugins.dir/src/MyPlanner.cpp.o
+In file included from /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/OpenKarto/source/OpenMapper.cpp:19:
+/usr/include/tbb/tbb_thread.h:21:145: note: #pragma message: TBB Warning: tbb/tbb_thread.h is deprecated. For details, please see Deprecated Features appendix in the TBB reference manual.
+   21 | #pragma message("TBB Warning: tbb/tbb_thread.h is deprecated. For details, please see Deprecated Features appendix in the TBB reference manual.")
+      |                                                                                                                                                 ^
+In file included from /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/OpenKarto/source/OpenKarto/OpenMapper.h:24,
+                 from /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/OpenKarto/source/OccupancyGrid.cpp:19:
+/usr/include/tbb/mutex.h:21:140: note: #pragma message: TBB Warning: tbb/mutex.h is deprecated. For details, please see Deprecated Features appendix in the TBB reference manual.
+   21 | #pragma message("TBB Warning: tbb/mutex.h is deprecated. For details, please see Deprecated Features appendix in the TBB reference manual.")
+      |                                                                                                                                            ^
+In file included from /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/OpenKarto/source/OpenKarto/OpenMapper.h:24,
+                 from /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/OpenKarto/source/OpenKarto/OpenKarto.h:45,
+                 from /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/OpenKarto/source/OpenKarto.cpp:18:
+/usr/include/tbb/mutex.h:21:140: note: #pragma message: TBB Warning: tbb/mutex.h is deprecated. For details, please see Deprecated Features appendix in the TBB reference manual.
+   21 | #pragma message("TBB Warning: tbb/mutex.h is deprecated. For details, please see Deprecated Features appendix in the TBB reference manual.")
+      |                                                                                                                                            ^
+In file included from /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/OpenKarto/source/OpenKarto/OpenMapper.h:24,
+                 from /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/OpenKarto/source/OpenMapper.cpp:36:
+/usr/include/tbb/mutex.h:21:140: note: #pragma message: TBB Warning: tbb/mutex.h is deprecated. For details, please see Deprecated Features appendix in the TBB reference manual.
+   21 | #pragma message("TBB Warning: tbb/mutex.h is deprecated. For details, please see Deprecated Features appendix in the TBB reference manual.")
+      |                                                                                                                                            ^
+In file included from /opt/ros/noetic/include/ros/ros.h:40,
+                 from /home/wcqw/ac-slam/catkin_ws/src/cpp_solver/src/MyPlanner.cpp:1:
+/home/wcqw/ac-slam/catkin_ws/src/cpp_solver/src/MyPlanner.cpp: In member function ‘virtual int MyPlanner::findExplorationTarget(GridMap*, unsigned int, unsigned int&)’:
+/home/wcqw/ac-slam/catkin_ws/src/cpp_solver/src/MyPlanner.cpp:603:13: warning: format ‘%d’ expects argument of type ‘int’, but argument 9 has type ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wformat=]
+  603 |    ROS_WARN("No frontier reachable at vertex %d. #Frontier: %d", currGoal, vertex_to_frontiers[currGoal].size());
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                                              |
+      |                                                                                                              std::vector<int>::size_type {aka long unsigned int}
+/opt/ros/noetic/include/ros/console.h:351:165: note: in definition of macro ‘ROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER’
+  351 |     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, __VA_ARGS__)
+      |                                                                                                                                                                     ^~~~~~~~~~~
+/opt/ros/noetic/include/ros/console.h:390:7: note: in expansion of macro ‘ROSCONSOLE_PRINT_AT_LOCATION’
+  390 |       ROSCONSOLE_PRINT_AT_LOCATION(__VA_ARGS__); \
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/ros/noetic/include/ros/console.h:575:35: note: in expansion of macro ‘ROS_LOG_COND’
+  575 | #define ROS_LOG(level, name, ...) ROS_LOG_COND(true, level, name, __VA_ARGS__)
+      |                                   ^~~~~~~~~~~~
+/opt/ros/noetic/include/rosconsole/macros_generated.h:162:23: note: in expansion of macro ‘ROS_LOG’
+  162 | #define ROS_WARN(...) ROS_LOG(::ros::console::levels::Warn, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+      |                       ^~~~~~~
+/home/wcqw/ac-slam/catkin_ws/src/cpp_solver/src/MyPlanner.cpp:603:4: note: in expansion of macro ‘ROS_WARN’
+  603 |    ROS_WARN("No frontier reachable at vertex %d. #Frontier: %d", currGoal, vertex_to_frontiers[currGoal].size());
+      |    ^~~~~~~~
+/home/wcqw/ac-slam/catkin_ws/src/cpp_solver/src/MyPlanner.cpp:603:62: note: format string is defined here
+  603 |    ROS_WARN("No frontier reachable at vertex %d. #Frontier: %d", currGoal, vertex_to_frontiers[currGoal].size());
+      |                                                             ~^
+      |                                                              |
+      |                                                              int
+      |                                                             %ld
+In file included from /opt/ros/noetic/include/ros/ros.h:40,
+                 from /home/wcqw/ac-slam/catkin_ws/src/cpp_solver/src/MyPlanner.cpp:1:
+/home/wcqw/ac-slam/catkin_ws/src/cpp_solver/src/MyPlanner.cpp:605:14: warning: format ‘%d’ expects argument of type ‘int’, but argument 8 has type ‘std::vector<unsigned int>::size_type’ {aka ‘long unsigned int’} [-Wformat=]
+  605 |     ROS_WARN("Size: %d. Center: %d, %d", this->mFrontiers[v].size(), this->mCenterOfFrontier[v].first, this->mCenterOfFrontier[v].second);
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                  |
+      |                                                                  std::vector<unsigned int>::size_type {aka long unsigned int}
+/opt/ros/noetic/include/ros/console.h:351:165: note: in definition of macro ‘ROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER’
+  351 |     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, __VA_ARGS__)
+      |                                                                                                                                                                     ^~~~~~~~~~~
+/opt/ros/noetic/include/ros/console.h:390:7: note: in expansion of macro ‘ROSCONSOLE_PRINT_AT_LOCATION’
+  390 |       ROSCONSOLE_PRINT_AT_LOCATION(__VA_ARGS__); \
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/ros/noetic/include/ros/console.h:575:35: note: in expansion of macro ‘ROS_LOG_COND’
+  575 | #define ROS_LOG(level, name, ...) ROS_LOG_COND(true, level, name, __VA_ARGS__)
+      |                                   ^~~~~~~~~~~~
+/opt/ros/noetic/include/rosconsole/macros_generated.h:162:23: note: in expansion of macro ‘ROS_LOG’
+  162 | #define ROS_WARN(...) ROS_LOG(::ros::console::levels::Warn, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+      |                       ^~~~~~~
+/home/wcqw/ac-slam/catkin_ws/src/cpp_solver/src/MyPlanner.cpp:605:5: note: in expansion of macro ‘ROS_WARN’
+  605 |     ROS_WARN("Size: %d. Center: %d, %d", this->mFrontiers[v].size(), this->mCenterOfFrontier[v].first, this->mCenterOfFrontier[v].second);
+      |     ^~~~~~~~
+/home/wcqw/ac-slam/catkin_ws/src/cpp_solver/src/MyPlanner.cpp:605:22: note: format string is defined here
+  605 |     ROS_WARN("Size: %d. Center: %d, %d", this->mFrontiers[v].size(), this->mCenterOfFrontier[v].first, this->mCenterOfFrontier[v].second);
+      |                     ~^
+      |                      |
+      |                      int
+      |                     %ld
+In file included from /opt/ros/noetic/include/ros/ros.h:40,
+                 from /home/wcqw/ac-slam/catkin_ws/src/cpp_solver/src/MyPlanner.cpp:1:
+/home/wcqw/ac-slam/catkin_ws/src/cpp_solver/src/MyPlanner.cpp: In member function ‘int MyPlanner::findDistanceToFrontiers(GridMap*, unsigned int, const std::vector<int>&)’:
+/home/wcqw/ac-slam/catkin_ws/src/cpp_solver/src/MyPlanner.cpp:968:13: warning: format ‘%d’ expects argument of type ‘int’, but argument 8 has type ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wformat=]
+  968 |   ROS_ERROR("Can not find path to %d local frontiers.", currFrontiers.size());
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~
+      |                                                                           |
+      |                                                                           std::vector<int>::size_type {aka long unsigned int}
+/opt/ros/noetic/include/ros/console.h:351:165: note: in definition of macro ‘ROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER’
+  351 |     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, __VA_ARGS__)
+      |                                                                                                                                                                     ^~~~~~~~~~~
+/opt/ros/noetic/include/ros/console.h:390:7: note: in expansion of macro ‘ROSCONSOLE_PRINT_AT_LOCATION’
+  390 |       ROSCONSOLE_PRINT_AT_LOCATION(__VA_ARGS__); \
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/ros/noetic/include/ros/console.h:575:35: note: in expansion of macro ‘ROS_LOG_COND’
+  575 | #define ROS_LOG(level, name, ...) ROS_LOG_COND(true, level, name, __VA_ARGS__)
+      |                                   ^~~~~~~~~~~~
+/opt/ros/noetic/include/rosconsole/macros_generated.h:214:24: note: in expansion of macro ‘ROS_LOG’
+  214 | #define ROS_ERROR(...) ROS_LOG(::ros::console::levels::Error, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+      |                        ^~~~~~~
+/home/wcqw/ac-slam/catkin_ws/src/cpp_solver/src/MyPlanner.cpp:968:3: note: in expansion of macro ‘ROS_ERROR’
+  968 |   ROS_ERROR("Can not find path to %d local frontiers.", currFrontiers.size());
+      |   ^~~~~~~~~
+/home/wcqw/ac-slam/catkin_ws/src/cpp_solver/src/MyPlanner.cpp:968:36: note: format string is defined here
+  968 |   ROS_ERROR("Can not find path to %d local frontiers.", currFrontiers.size());
+      |                                   ~^
+      |                                    |
+      |                                    int
+      |                                   %ld
+[ 78%] Linking CXX shared library /home/wcqw/ac-slam/catkin_ws/devel/lib/libOpenKarto.so
+[ 87%] Built target OpenKarto
+Scanning dependencies of target MultiMapper
+[ 87%] Building CXX object navigation_2d/nav2d_karto/CMakeFiles/MultiMapper.dir/src/MultiMapper.cpp.o
+In file included from /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/OpenKarto/source/OpenKarto/OpenMapper.h:24,
+                 from /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/OpenKarto/source/OpenKarto/OpenKarto.h:45,
+                 from /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/include/nav2d_karto/MultiMapper.h:21,
+                 from /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/src/MultiMapper.cpp:6:
+/usr/include/tbb/mutex.h:21:140: note: #pragma message: TBB Warning: tbb/mutex.h is deprecated. For details, please see Deprecated Features appendix in the TBB reference manual.
+   21 | #pragma message("TBB Warning: tbb/mutex.h is deprecated. For details, please see Deprecated Features appendix in the TBB reference manual.")
+      |                                                                                                                                            ^
+[ 88%] Linking CXX shared library /home/wcqw/ac-slam/catkin_ws/devel/lib/libCppExplorationPlugins.so
+[ 88%] Built target CppExplorationPlugins
+/home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/src/MultiMapper.cpp: In member function ‘void MultiMapper::receiveLocalizedScan(const ConstPtr&)’:
+/home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/src/MultiMapper.cpp:793:26: warning: ‘__builtin___sprintf_chk’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
+  793 |  sprintf(robot, "robot_%d", scan->robot_id);
+      |                          ^
+In file included from /usr/include/stdio.h:867,
+                 from /usr/include/c++/9/cstdio:42,
+                 from /usr/include/c++/9/ext/string_conversions.h:43,
+                 from /usr/include/c++/9/bits/basic_string.h:6496,
+                 from /usr/include/c++/9/string:55,
+                 from /usr/include/c++/9/bits/locale_classes.h:40,
+                 from /usr/include/c++/9/bits/ios_base.h:41,
+                 from /usr/include/c++/9/ios:42,
+                 from /usr/include/c++/9/istream:38,
+                 from /usr/include/c++/9/sstream:38,
+                 from /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/src/MultiMapper.cpp:1:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:36:34: note: ‘__builtin___sprintf_chk’ output between 8 and 11 bytes into a destination of size 10
+   36 |   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+      |          ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   37 |       __bos (__s), __fmt, __va_arg_pack ());
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 88%] Linking CXX shared library /home/wcqw/ac-slam/catkin_ws/devel/lib/libMultiMapper.so
+[ 88%] Built target MultiMapper
+Scanning dependencies of target mapper
+[ 88%] Building CXX object navigation_2d/nav2d_karto/CMakeFiles/mapper.dir/src/MapperNode.cpp.o
+[ 88%] Building CXX object navigation_2d/nav2d_karto/CMakeFiles/mapper.dir/src/SpaSolver.cpp.o
+[ 88%] Building CXX object navigation_2d/nav2d_karto/CMakeFiles/mapper.dir/OpenKarto/source/OccupancyGrid.cpp.o
+[ 88%] Building CXX object navigation_2d/nav2d_karto/CMakeFiles/mapper.dir/OpenKarto/source/OpenKarto.cpp.o
+[ 88%] Building CXX object navigation_2d/nav2d_karto/CMakeFiles/mapper.dir/OpenKarto/source/OpenMapper.cpp.o
+In file included from /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/OpenKarto/source/OpenMapper.cpp:19:
+/usr/include/tbb/tbb_thread.h:21:145: note: #pragma message: TBB Warning: tbb/tbb_thread.h is deprecated. For details, please see Deprecated Features appendix in the TBB reference manual.
+   21 | #pragma message("TBB Warning: tbb/tbb_thread.h is deprecated. For details, please see Deprecated Features appendix in the TBB reference manual.")
+      |                                                                                                                                                 ^
+In file included from /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/OpenKarto/source/OpenKarto/OpenMapper.h:24,
+                 from /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/OpenKarto/source/OccupancyGrid.cpp:19:
+/usr/include/tbb/mutex.h:21:140: note: #pragma message: TBB Warning: tbb/mutex.h is deprecated. For details, please see Deprecated Features appendix in the TBB reference manual.
+   21 | #pragma message("TBB Warning: tbb/mutex.h is deprecated. For details, please see Deprecated Features appendix in the TBB reference manual.")
+      |                                                                                                                                            ^
+In file included from /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/OpenKarto/source/OpenKarto/OpenMapper.h:24,
+                 from /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/OpenKarto/source/OpenKarto/OpenKarto.h:45,
+                 from /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/OpenKarto/source/OpenKarto.cpp:18:
+/usr/include/tbb/mutex.h:21:140: note: #pragma message: TBB Warning: tbb/mutex.h is deprecated. For details, please see Deprecated Features appendix in the TBB reference manual.
+   21 | #pragma message("TBB Warning: tbb/mutex.h is deprecated. For details, please see Deprecated Features appendix in the TBB reference manual.")
+      |                                                                                                                                            ^
+In file included from /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/src/MapperNode.cpp:4:
+/home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/include/nav2d_karto/SpaSolver.h:27: warning: "EIGEN_DEFAULT_IO_FORMAT" redefined
+   27 | #define EIGEN_DEFAULT_IO_FORMAT Eigen::IOFormat(10)
+      | 
+In file included from /usr/include/eigen3/Eigen/Core:88,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/include/nav2d_karto/MultiMapper.h:23,
+                 from /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/src/MapperNode.cpp:3:
+/usr/include/eigen3/Eigen/src/Core/util/Macros.h:810: note: this is the location of the previous definition
+  810 | #define EIGEN_DEFAULT_IO_FORMAT Eigen::IOFormat()
+      | 
+In file included from /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/OpenKarto/source/OpenKarto/OpenMapper.h:24,
+                 from /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/include/nav2d_karto/SpaSolver.h:21,
+                 from /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/src/SpaSolver.cpp:20:
+/usr/include/tbb/mutex.h:21:140: note: #pragma message: TBB Warning: tbb/mutex.h is deprecated. For details, please see Deprecated Features appendix in the TBB reference manual.
+   21 | #pragma message("TBB Warning: tbb/mutex.h is deprecated. For details, please see Deprecated Features appendix in the TBB reference manual.")
+      |                                                                                                                                            ^
+In file included from /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/OpenKarto/source/OpenKarto/OpenMapper.h:24,
+                 from /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/OpenKarto/source/OpenMapper.cpp:36:
+/usr/include/tbb/mutex.h:21:140: note: #pragma message: TBB Warning: tbb/mutex.h is deprecated. For details, please see Deprecated Features appendix in the TBB reference manual.
+   21 | #pragma message("TBB Warning: tbb/mutex.h is deprecated. For details, please see Deprecated Features appendix in the TBB reference manual.")
+      |                                                                                                                                            ^
+In file included from /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/OpenKarto/source/OpenKarto/OpenMapper.h:24,
+                 from /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/OpenKarto/source/OpenKarto/OpenKarto.h:45,
+                 from /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/include/nav2d_karto/MultiMapper.h:21,
+                 from /home/wcqw/ac-slam/catkin_ws/src/navigation_2d/nav2d_karto/src/MapperNode.cpp:3:
+/usr/include/tbb/mutex.h:21:140: note: #pragma message: TBB Warning: tbb/mutex.h is deprecated. For details, please see Deprecated Features appendix in the TBB reference manual.
+   21 | #pragma message("TBB Warning: tbb/mutex.h is deprecated. For details, please see Deprecated Features appendix in the TBB reference manual.")
+      |                                                                                                                                            ^
+[ 89%] Linking CXX executable /home/wcqw/ac-slam/catkin_ws/devel/lib/nav2d_karto/mapper
+[100%] Built target mapper
+Base path: /home/wcqw/ac-slam/catkin_ws
+Source space: /home/wcqw/ac-slam/catkin_ws/src
+Build space: /home/wcqw/ac-slam/catkin_ws/build
+Devel space: /home/wcqw/ac-slam/catkin_ws/devel
+Install space: /home/wcqw/ac-slam/catkin_ws/install
+####
+#### Running command: "make cmake_check_build_system" in "/home/wcqw/ac-slam/catkin_ws/build"
+####
+####
+#### Running command: "make -j24 -l24" in "/home/wcqw/ac-slam/catkin_ws/build"
+####
