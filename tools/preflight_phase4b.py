@@ -210,7 +210,7 @@ def main():
         summary['checks']['free_disk_bytes'] = free_bytes
 
         run_logged(
-            ['bash', '-lc', 'source catkin_ws/activate.sh && catkin_make'],
+            ['bash', '-lc', 'source catkin_ws/activate.sh && cd catkin_ws && catkin_make'],
             env, attempt_dir / 'catkin_build.log', timeout=1800,
         )
         summary['checks']['catkin_build'] = 'PASS'
