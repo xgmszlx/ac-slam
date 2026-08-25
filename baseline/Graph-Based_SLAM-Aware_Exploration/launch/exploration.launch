@@ -38,6 +38,13 @@
 	<arg name="oracle_before" default="8" />
 	<arg name="oracle_after" default="8" />
 	<arg name="oracle_densify_m" default="0.5" />
+	<!-- Phase 4A selective prototype parameters. Phase 4B passes these explicitly
+	     and identically in all conditions; oracle_mode is the only condition variable. -->
+	<arg name="oracle_span_gate" default="4.0" />
+	<arg name="oracle_repair_max_len" default="12.0" />
+	<arg name="oracle_repair_max_wp" default="24" />
+	<arg name="oracle_repair_densify" default="0.5" />
+	<arg name="oracle_dir_lambda" default="1.0" />
 	
 	<param name="robot_start_position" type="str" value="$(arg robot_position)" />
 
@@ -124,6 +131,11 @@
         <param name="oracle_before" type="int" value="$(arg oracle_before)" />
         <param name="oracle_after" type="int" value="$(arg oracle_after)" />
         <param name="oracle_densify_m" type="double" value="$(arg oracle_densify_m)" />
+        <param name="oracle_span_gate" type="double" value="$(arg oracle_span_gate)" />
+        <param name="oracle_repair_max_len" type="double" value="$(arg oracle_repair_max_len)" />
+        <param name="oracle_repair_max_wp" type="int" value="$(arg oracle_repair_max_wp)" />
+        <param name="oracle_repair_densify" type="double" value="$(arg oracle_repair_densify)" />
+        <param name="oracle_dir_lambda" type="double" value="$(arg oracle_dir_lambda)" />
 	</node>
 
 	<!-- Load rqt_robot_steering control panel -->

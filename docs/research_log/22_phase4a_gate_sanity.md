@@ -65,8 +65,9 @@ On the 21-loop retrospective (descriptive; no fitting):
 | D yaw-only (0.78) | 14/21 | ✓ (at 0.78) | ✓ all 3 |
 
 A is the only formulation that both protects S and catches all three oracle-rescued
-D1 targets. But A's VALUES are case-informed (§2, §3). B is the most config-grounded
-(LoopMatchMinimumChainSize=4, MinimumTravelDistance=1.0) but misses the medium-span D1.
+D1 targets. But A's VALUES are case-informed (§2, §3). B is the simplest
+configuration-inspired prototype heuristic (using the numbers 4 and 1.0, without a
+dimensional derivation) but misses the medium-span D1.
 C and D each miss part of the mechanism.
 
 **Mechanism mapping (backend-aligned, not label-tuned):**
@@ -115,11 +116,11 @@ online realizability cue.
 **GATE_REDESIGN_REQUIRED (minimal, within this phase — no new experiments beyond the
 audit).**
 
-Redesigned gate (simpler, more mechanism-aligned, no case-informed value):
+Redesigned gate (simpler prototype rule; not a theoretical backend threshold):
 - **G1′ (primary repair trigger) — history-continuity support**: repair if the
-  contiguous history span at the selected loop vertex `span < 4.0 m`
-  = `LoopMatchMinimumChainSize (4) × MinimumTravelDistance (1.0 m)`, a **fixed SLAM
-  configuration value** (mapper.yaml), NOT a data-fitted threshold. Protects the S
+  contiguous history span at the selected loop vertex `span < 4.0 m`. The numerical
+  value is configuration-inspired, but `LoopMatchMinimumChainSize` is a scan count
+  and does not dimensionally derive a distance threshold. Protects the S
   reference (span 4.81 m > 4.0). Catches the short-history failures (all short-span
   C3 + the short-span D1 s21003l1 that Phase 3A rescued).
 - **G2 (yaw)**: demoted to direction-selection cue + secondary diagnostic (not a
@@ -131,6 +132,6 @@ Redesigned gate (simpler, more mechanism-aligned, no case-informed value):
   what the selective method avoids). Phase 4B's Always-Trace (B) condition provides the
   upper bound for these.
 
-This redesign is the simpler, backend-grounded, single-feature gate the spec asks for
-(no ML, no logistic regression, no accepted-label optimization; the 4.0 m value is a
-product of two fixed Karto parameters).
+This redesign is a simple, single-feature prototype gate (no ML, no logistic
+regression, no accepted-label optimization). Its 4.0 m value is frozen for testing,
+not claimed as a Karto-derived or mathematically justified threshold.

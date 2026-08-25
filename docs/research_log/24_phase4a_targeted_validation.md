@@ -20,8 +20,8 @@ host. **All Stage D targeted cases therefore run with diagnostics OFF.**
 ## 1. Purpose
 
 Validate the minimal Selective Realization-Aware execution (oracle_mode=2):
-(1) the redesigned gate G1' (contiguous history span < 4.0 m =
-LoopMatchMinimumChainSize 4 × MinimumTravelDistance 1.0) triggers REPAIR only
+(1) the redesigned G1' prototype heuristic (contiguous history span < 4.0 m;
+configuration-inspired, not a theoretically derived Karto threshold) triggers REPAIR only
 when the baseline loop's span is short; (2) the bounded repair re-traces the
 contiguous pose-graph segment (≤ 12 m / ≤ 24 wp, 0.5 m densify); (3) the
 early-stop on an attributable accepted closure (PHASE4A_EARLY_STOP); (4) the S

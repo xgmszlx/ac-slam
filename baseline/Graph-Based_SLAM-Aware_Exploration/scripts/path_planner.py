@@ -75,7 +75,9 @@ class PathPlanner:
         self.oracle_after = int(rospy.get_param('/path_planner/oracle_after', 8))
         self.oracle_densify_m = float(rospy.get_param('/path_planner/oracle_densify_m', 0.5))
         # Phase 4A selective layer (oracle_mode=2) prototype defaults.
-        # G1': span gate = min_chain(4) x min_travel(1.0 m) from fixed Karto config.
+        # The 4.0 m span gate is a configuration-inspired lightweight heuristic.
+        # LoopMatchMinimumChainSize is a scan count, so it does not theoretically
+        # or dimensionally derive this metric threshold.
         self.oracle_span_gate = float(rospy.get_param('/path_planner/oracle_span_gate', 4.0))
         self.oracle_repair_max_len = float(rospy.get_param('/path_planner/oracle_repair_max_len', 12.0))
         self.oracle_repair_max_wp = int(rospy.get_param('/path_planner/oracle_repair_max_wp', 24))
@@ -836,8 +838,8 @@ class PathPlanner:
         if self.oracle_mode == 2:
             # Phase 4A Selective Realization-Aware (redesigned gate):
             # G1' primary: contiguous history span (V0 path length) < 4.0 m
-            # (= LoopMatchMinimumChainSize 4 x MinimumTravelDistance 1.0 m, fixed
-            #  Karto config) -> REPAIR; else NO_REPAIR = original baseline path.
+            # (configuration-inspired prototype heuristic, not a theoretical Karto
+            # threshold) -> REPAIR; else NO_REPAIR = original baseline path.
             # Yaw is NOT a repair trigger (unstable online cue); it is only used
             # for direction selection inside the repair.
             span = self._path_length(v0_pts)

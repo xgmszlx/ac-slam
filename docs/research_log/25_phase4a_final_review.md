@@ -2,6 +2,11 @@
 
 Date: 2026-08-24 (session 2026-08-23 ~11:00 → 08-24 01:15)
 
+> **Phase 4B terminology correction (2026-08-25):** the 4.0 m span gate is a
+> configuration-inspired lightweight prototype heuristic. It is not theoretically
+> or dimensionally derived from Karto: `LoopMatchMinimumChainSize` is a scan count.
+> This correction changes no Phase 4A code, threshold or result.
+
 ## A. Repository state
 
 | repo | HEAD | status |
@@ -36,9 +41,9 @@ The original gate (G1 span<4.5, G2 yaw>0.78) was **case-informed**:
   12/21 traj tangent) and misfires on the S reference (online 0.804/2.333 vs
   offline 0.561).
 
-Verdict: **REJECT the old gate; adopt G1' = contiguous history span < 4.0 m** =
-`LoopMatchMinimumChainSize` (4) × `MinimumTravelDistance` (1.0 m), a fixed Karto
-config product, NOT data-fitted. Yaw is demoted to a direction-selection cue.
+Verdict: **REJECT the old gate; adopt G1' = contiguous history span < 4.0 m** as a
+frozen, configuration-inspired prototype heuristic. It is not a theoretical Karto
+threshold and is not claimed optimal. Yaw is demoted to a direction-selection cue.
 Gate audit CSVs: `gate_decision_matrix.csv`, `threshold_stability.csv`,
 `leave_one_seed_out.csv`, `gate_formulations.csv`, `online_g2_validation.csv`.
 
@@ -109,8 +114,8 @@ correctly NOT repaired (regression guard).
 
 - **A. Corrected literature boundary**: PASS (contribution = post-selection
   failure-conditioned adaptation, not history revisit).
-- **B. Gate overfitting check**: PASS (old case-informed gate rejected; G1'
-  grounded in fixed Karto config).
+- **B. Gate overfitting check**: PASS for the historical targeted sanity check (old
+  case-informed gate rejected; G1' frozen as a lightweight prototype heuristic).
 - **C. Minimal selective execution implemented**: PASS (oracle_mode=2, default
   off, bounded repair, early-stop; unit-tested).
 - **D. Accepted-closure online attribution**: PASS (1:1, attribution, no dup,

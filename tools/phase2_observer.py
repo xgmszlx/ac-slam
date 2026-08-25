@@ -21,7 +21,7 @@ from nav2d_navigator.msg import ExploreActionResult
 from rosgraph_msgs.msg import Log
 from visualization_msgs.msg import Marker
 
-from cpp_solver.msg import PoseGraph
+from cpp_solver.msg import LoopClosureEvent, PoseGraph
 
 
 class Phase2Observer:
@@ -53,6 +53,10 @@ class Phase2Observer:
         self.latest_slam_path = []
         self.closure_edges = []
         self.karto_closure_events = []
+        self.loop_closed_events = []
+        self.gate_events = []
+        self.repair_events = []
+        self.early_stop_events = []
 
         self.plan_history = []
         self.current_path = []
@@ -81,6 +85,7 @@ class Phase2Observer:
         rospy.Subscriber('/map', OccupancyGrid, self.on_map, queue_size=2)
         rospy.Subscriber('/slam_pose_graph', PoseGraph, self.on_pose_graph, queue_size=100)
         rospy.Subscriber('/Mapper/closure_edges', Marker, self.on_closure_edges, queue_size=20)
+        rospy.Subscriber('/Mapper/loop_closed', LoopClosureEvent, self.on_loop_closed, queue_size=20)
         rospy.Subscriber('/slam_path', Path, self.on_slam_path, queue_size=10)
         rospy.on_shutdown(self.close)
 
@@ -120,8 +125,15 @@ class Phase2Observer:
             'waypoints_planned': None,
             'waypoints_reached': [],
             'executed_loop': False,
+            'execution_finished': False,
+            'all_planned_waypoints_reached': False,
+            'early_stopped': False,
+            'execution_policy': None,
             'successful_slam_loop': False,
             'karto_closure_events_during_execution': 0,
+            'accepted_closure_events_during_execution': 0,
+            'accepted_closure_events': [],
+            'accepted_active_loop': False,
             'snapshot_before': None,
             'snapshot_after': None,
         }
@@ -197,6 +209,12 @@ class Phase2Observer:
             'Karto accepted-loop event during execution AND a new pose-graph edge '
             'with node-index gap > default ScanBufferSize 70'
         )
+        loop['accepted_active_loop'] = bool(
+            loop.get('accepted_closure_events_during_execution', 0) > 0
+        )
+        loop['accepted_active_loop_criterion'] = (
+            '/Mapper/loop_closed Karto-accepted event timestamp inside active-loop interval'
+        )
 
     def on_rosout(self, msg):
         text = msg.msg.strip()
@@ -263,6 +281,96 @@ class Phase2Observer:
                 }, timestamp)
                 return
 
+            match = re.match(
+                r'PHASE3A_ORACLE_V1 vertex=(-?\d+) window_poses=(\d+) '
+                r'trace_len_m=([0-9.]+) waypoints=(\d+)', text
+            )
+            if match:
+                vertex, window_poses, trace_len, waypoints = match.groups()
+                record = {
+                    'timestamp': timestamp, 'vertex': int(vertex),
+                    'policy': 'ALWAYS_TRACE', 'window_poses': int(window_poses),
+                    'planned_length_m': float(trace_len), 'waypoints': int(waypoints),
+                }
+                self.repair_events.append(record)
+                if self.active_loop is not None and self.active_loop['loop_vertex'] == int(vertex):
+                    self.active_loop['execution_policy'] = 'ALWAYS_TRACE'
+                    self.active_loop['repair_plan'] = record
+                self.emit('REPAIR_PLANNED', record, timestamp)
+                return
+
+            match = re.match(
+                r'PHASE4A_SELECTIVE_REPAIR vertex=(-?\d+) span_m=([0-9.]+) '
+                r'planned_len_m=([0-9.]+) waypoints=(\d+)', text
+            )
+            if match:
+                vertex, span, planned_len, waypoints = match.groups()
+                gate = {
+                    'timestamp': timestamp, 'vertex': int(vertex),
+                    'span_m': float(span), 'gate_m': 4.0, 'decision': 'REPAIR',
+                }
+                repair = {
+                    'timestamp': timestamp, 'vertex': int(vertex),
+                    'policy': 'SELECTIVE_REPAIR', 'span_m': float(span),
+                    'planned_length_m': float(planned_len), 'waypoints': int(waypoints),
+                }
+                self.gate_events.append(gate)
+                self.repair_events.append(repair)
+                if self.active_loop is not None and self.active_loop['loop_vertex'] == int(vertex):
+                    self.active_loop['execution_policy'] = 'SELECTIVE_REPAIR'
+                    self.active_loop['gate_decision'] = gate
+                    self.active_loop['repair_plan'] = repair
+                self.emit('GATE_DECISION', gate, timestamp)
+                self.emit('REPAIR_PLANNED', repair, timestamp)
+                return
+
+            match = re.match(
+                r'PHASE4A_SELECTIVE_DECISION vertex=(-?\d+) span_m=([0-9.]+|None) '
+                r'gate=([0-9.]+) decision=(REPAIR|NO_REPAIR)', text
+            )
+            if match:
+                vertex, span, gate_value, decision = match.groups()
+                record = {
+                    'timestamp': timestamp, 'vertex': int(vertex),
+                    'span_m': None if span == 'None' else float(span),
+                    'gate_m': float(gate_value), 'decision': decision,
+                }
+                self.gate_events.append(record)
+                if self.active_loop is not None and self.active_loop['loop_vertex'] == int(vertex):
+                    self.active_loop['execution_policy'] = decision
+                    self.active_loop['gate_decision'] = record
+                self.emit('GATE_DECISION', record, timestamp)
+                return
+
+            match = re.match(
+                r'PHASE4A_SELECTIVE_REPAIR_FAILED vertex=(-?\d+) span_m=([0-9.]+)', text
+            )
+            if match:
+                record = {
+                    'timestamp': timestamp, 'vertex': int(match.group(1)),
+                    'span_m': float(match.group(2)), 'policy': 'REPAIR_FAILED_FALLBACK',
+                }
+                self.repair_events.append(record)
+                self.emit('REPAIR_FAILED', record, timestamp)
+                return
+
+            match = re.match(
+                r'PHASE4A_EARLY_STOP vertex=(-?\d+) at_waypoint=(\d+) of (\d+)', text
+            )
+            if match:
+                vertex, waypoint, planned = map(int, match.groups())
+                record = {
+                    'timestamp': timestamp, 'vertex': vertex,
+                    'at_waypoint': waypoint, 'planned_waypoints': planned,
+                    'saved_waypoints': max(0, planned - waypoint),
+                }
+                self.early_stop_events.append(record)
+                if self.active_loop is not None and self.active_loop['loop_vertex'] == vertex:
+                    self.active_loop['early_stopped'] = True
+                    self.active_loop['early_stop'] = record
+                self.emit('EARLY_STOP', record, timestamp)
+                return
+
             match = re.match(r'PHASE2_LOOP_EXECUTION_STARTED vertex=(-?\d+) waypoints=(\d+)', text)
             if match:
                 vertex, waypoint_count = (int(match.group(1)), int(match.group(2)))
@@ -271,6 +379,7 @@ class Phase2Observer:
                 self.active_loop['actual_start_time'] = timestamp
                 self.active_loop['waypoints_planned'] = waypoint_count
                 self.active_loop['_start_karto_events'] = len(self.karto_closure_events)
+                self.active_loop['_start_loop_closed_events'] = len(self.loop_closed_events)
                 self.active_loop['_distance'] = 0.0
                 self.active_loop['_prev_gt'] = self.current_gt
                 self.snapshot(self.active_loop, 'before', timestamp)
@@ -294,12 +403,22 @@ class Phase2Observer:
                 self.active_loop['extra_time'] = timestamp - self.active_loop['actual_start_time']
                 self.active_loop['extra_distance'] = self.active_loop.pop('_distance', 0.0)
                 self.active_loop.pop('_prev_gt', None)
-                self.active_loop['executed_loop'] = (
+                self.active_loop['all_planned_waypoints_reached'] = (
                     len(set(self.active_loop['waypoints_reached'])) >= int(match.group(2))
                 )
+                # Preserve the historical field while exposing early-stop-aware execution
+                # separately for the Phase 4B denominator.
+                self.active_loop['executed_loop'] = self.active_loop['all_planned_waypoints_reached']
+                self.active_loop['execution_finished'] = True
                 self.active_loop['karto_closure_events_during_execution'] = (
                     len(self.karto_closure_events) - self.active_loop.pop('_start_karto_events', 0)
                 )
+                start_index = self.active_loop.pop('_start_loop_closed_events', 0)
+                accepted = self.loop_closed_events[start_index:]
+                accepted = [event for event in accepted if event['stamp'] <= timestamp + 1e-9]
+                self.active_loop['accepted_closure_events'] = accepted
+                self.active_loop['accepted_closure_events_during_execution'] = len(accepted)
+                self.active_loop['accepted_active_loop'] = bool(accepted)
                 self.emit('LOOP_FINISHED', {
                     'loop_id': self.active_loop['loop_id'],
                     'vertex': self.active_loop['loop_vertex'],
@@ -442,6 +561,23 @@ class Phase2Observer:
                 self.finalize_loop_graph_evidence(self.pending_after_loop, after)
                 self.pending_after_loop = None
 
+    def on_loop_closed(self, msg):
+        event = {
+            'seq': int(msg.seq),
+            'loop_count': int(msg.loop_count),
+            'current_scan': int(msg.current_scan),
+            'chain_start': int(msg.chain_start),
+            'chain_end': int(msg.chain_end),
+            'stamp': float(msg.stamp.to_sec()),
+            'received_sim_time': float(rospy.get_time()),
+        }
+        with self.lock:
+            self.loop_closed_events.append(event)
+            if self.active_loop is not None and self.active_loop.get('actual_start_time') is not None:
+                if event['stamp'] + 1e-9 >= self.active_loop['actual_start_time']:
+                    self.active_loop.setdefault('accepted_closure_events', []).append(event)
+            self.emit('KARTO_LOOP_ACCEPTED', event, event['stamp'])
+
     def on_slam_path(self, msg):
         with self.lock:
             self.latest_slam_path = []
@@ -457,6 +593,12 @@ class Phase2Observer:
         with self.lock:
             if self.events_file.closed:
                 return
+            if self.explore_active and self.explore_end is None:
+                # A runner timeout or navigation failure can end the process before an
+                # Explore result message. Preserve the observed interval without
+                # relabelling it as a successful action.
+                self.explore_end = rospy.get_time()
+                self.explore_active = False
             if self.pending_after_loop is not None:
                 after = self.snapshot(self.pending_after_loop, 'after', rospy.get_time())
                 self.finalize_loop_graph_evidence(self.pending_after_loop, after)
@@ -470,6 +612,7 @@ class Phase2Observer:
                 loop.pop('_distance', None)
                 loop.pop('_prev_gt', None)
                 loop.pop('_start_karto_events', None)
+                loop.pop('_start_loop_closed_events', None)
             loops_payload = {'loops': self.loops}
             with open(os.path.join(self.output_dir, 'loops.json'), 'w') as output:
                 json.dump(loops_payload, output, indent=2, sort_keys=True)
@@ -487,6 +630,10 @@ class Phase2Observer:
                 'pose_graph_edge_count': len(self.pose_edges),
                 'karto_closure_edge_count': len(self.closure_edges),
                 'karto_closure_events': self.karto_closure_events,
+                'loop_closed_events': self.loop_closed_events,
+                'gate_events': self.gate_events,
+                'repair_events': self.repair_events,
+                'early_stop_events': self.early_stop_events,
                 'initial_planned_high_level_path': self.initial_planned_path,
                 'initial_loop_flags': self.initial_loop_flags,
                 'plan_history': self.plan_history,
@@ -496,6 +643,7 @@ class Phase2Observer:
                 'loops_planned': len(self.loops),
                 'loops_executed': sum(loop['executed_loop'] for loop in self.loops),
                 'successful_slam_loops': sum(loop['successful_slam_loop'] for loop in self.loops),
+                'accepted_active_loops': sum(loop.get('accepted_active_loop', False) for loop in self.loops),
                 'final_map': self.map_summary,
             }
             with open(os.path.join(self.output_dir, 'observer_summary.json'), 'w') as output:

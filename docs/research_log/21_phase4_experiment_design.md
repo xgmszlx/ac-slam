@@ -3,6 +3,12 @@
 
 Date: 2026-08-23 (rev. 2026-08-23)
 
+> **Phase 4B supersession (2026-08-25):** this is the historical Phase 4A design.
+> Formal Phase 4B uses fresh A/B/C runs, diagnostics OFF and the mapping layer frozen
+> in docs 26-27. Its 4.0 m gate is a configuration-inspired prototype heuristic,
+> not a backend-derived threshold. Where this document says runs are reused or the
+> gate is config-grounded, docs 26-27 take precedence.
+
 ## 1. Objective
 
 Evaluate the Selective Realization-Aware method (spec `20_...`, redesigned gate in
@@ -17,7 +23,8 @@ the Phase 4 gate passes) extend to other maps.
   unbounded dense re-traversal can achieve and at what cost (Phase 3A: +22–28
   waypoints/loop, S-reference regression). Existing Phase 3A runs are reused as B.
 - **C — Proposed Selective Realization-Aware**: `oracle_mode=2` (redesigned gate G1′
-  span<4.0 m config-grounded; bounded repair ≤12 m / ≤24 wp / 0.5 m densify;
+  span<4.0 m configuration-inspired prototype heuristic; bounded repair ≤12 m /
+  ≤24 wp / 0.5 m densify;
   forward/reverse; early stop on attributable `/Mapper/loop_closed`; default off).
 
 Seeds: same 5 seeds 21001–21005, same map3/start/TSP; TSP must remain byte-identical
