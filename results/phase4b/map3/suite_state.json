@@ -1,0 +1,159 @@
+{
+  "completed_runs": [
+    {
+      "condition": "A",
+      "finished_wall_time_utc": "2026-08-25T04:49:43.099829+00:00",
+      "seed": 21001,
+      "validity": "VALID"
+    },
+    {
+      "condition": "B",
+      "finished_wall_time_utc": "2026-08-25T05:15:47.048466+00:00",
+      "seed": 21001,
+      "validity": "VALID"
+    },
+    {
+      "condition": "C",
+      "finished_wall_time_utc": "2026-08-25T05:40:24.361594+00:00",
+      "seed": 21001,
+      "validity": "VALID"
+    },
+    {
+      "condition": "B",
+      "finished_wall_time_utc": "2026-08-25T06:04:36.503786+00:00",
+      "seed": 21002,
+      "validity": "VALID"
+    },
+    {
+      "condition": "C",
+      "finished_wall_time_utc": "2026-08-25T06:25:15.887771+00:00",
+      "seed": 21002,
+      "validity": "VALID"
+    },
+    {
+      "condition": "A",
+      "finished_wall_time_utc": "2026-08-25T06:45:12.379754+00:00",
+      "seed": 21002,
+      "validity": "VALID"
+    },
+    {
+      "condition": "C",
+      "finished_wall_time_utc": "2026-08-25T07:09:27.342149+00:00",
+      "seed": 21003,
+      "validity": "VALID"
+    },
+    {
+      "condition": "A",
+      "finished_wall_time_utc": "2026-08-25T07:32:39.448233+00:00",
+      "seed": 21003,
+      "validity": "VALID"
+    },
+    {
+      "condition": "B",
+      "finished_wall_time_utc": "2026-08-25T07:58:48.652452+00:00",
+      "seed": 21003,
+      "validity": "VALID"
+    },
+    {
+      "condition": "A",
+      "finished_wall_time_utc": "2026-08-25T08:22:38.444461+00:00",
+      "seed": 21004,
+      "validity": "VALID"
+    },
+    {
+      "condition": "C",
+      "finished_wall_time_utc": "2026-08-26T01:46:21.497319+00:00",
+      "seed": 21004,
+      "validity": "VALID"
+    },
+    {
+      "condition": "B",
+      "finished_wall_time_utc": "2026-08-26T02:16:20.210347+00:00",
+      "seed": 21004,
+      "validity": "VALID"
+    },
+    {
+      "condition": "B",
+      "finished_wall_time_utc": "2026-08-26T02:53:01.995156+00:00",
+      "seed": 21005,
+      "validity": "VALID"
+    },
+    {
+      "condition": "A",
+      "finished_wall_time_utc": "2026-08-26T03:16:30.094895+00:00",
+      "seed": 21005,
+      "validity": "VALID"
+    },
+    {
+      "condition": "C",
+      "finished_wall_time_utc": "2026-08-26T03:41:49.657030+00:00",
+      "seed": 21005,
+      "validity": "VALID"
+    }
+  ],
+  "finished_wall_time_utc": "2026-08-26T03:41:49.657185+00:00",
+  "orders": {
+    "21001": [
+      "A",
+      "B",
+      "C"
+    ],
+    "21002": [
+      "B",
+      "C",
+      "A"
+    ],
+    "21003": [
+      "C",
+      "A",
+      "B"
+    ],
+    "21004": [
+      "A",
+      "C",
+      "B"
+    ],
+    "21005": [
+      "B",
+      "A",
+      "C"
+    ]
+  },
+  "resume_events": [
+    {
+      "reason": "external terminal interruption archived as technical-invalid partial attempt",
+      "remaining_runs": [
+        [
+          21004,
+          "C"
+        ],
+        [
+          21004,
+          "B"
+        ],
+        [
+          21005,
+          "B"
+        ],
+        [
+          21005,
+          "A"
+        ],
+        [
+          21005,
+          "C"
+        ]
+      ],
+      "resumed_wall_time_utc": "2026-08-26T01:21:19.323781+00:00"
+    }
+  ],
+  "seeds": [
+    21001,
+    21002,
+    21003,
+    21004,
+    21005
+  ],
+  "started_wall_time_utc": "2026-08-25T04:24:13.912655+00:00",
+  "status": "COMPLETED"
+}

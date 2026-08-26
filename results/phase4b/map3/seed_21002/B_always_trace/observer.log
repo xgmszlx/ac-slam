@@ -1,0 +1,8 @@
+[ERROR] [1787637850.464399, 1423.300000]: bad callback: <bound method Phase2Observer.on_ground_truth of <__main__.Phase2Observer object at 0x7fe3f499e730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/wcqw/ac-slam/tools/phase2_observer.py", line 499, in on_ground_truth
+    self.gt_writer.writerow([
+ValueError: I/O operation on closed file.
+

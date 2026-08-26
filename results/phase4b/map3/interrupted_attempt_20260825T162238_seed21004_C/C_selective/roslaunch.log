@@ -1,0 +1,608 @@
+[WARN] [1787646160.416095002]: The root link base_link has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.
+0x55f7eced0960
+[INFO] [1787646160.476808947]: Inititialized robot 1, starting to map now.
+Create multimapper!!
+concorde -s 21004 /tmp/tmpeegwth1w/problem.tsp
+Host: msxg  Current process id: 168964
+Using random seed 21004
+Number of Nodes: 72
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 8137 (from tour)
+ERROR: No dual change in basis finding code
+Did not find a basic optimal solution
+Fractional matching routine failed
+Warning: restarting running timer Miscellaneous
+No warmstart, stumbling on anyway
+Basic dual change required, but no candidate edges
+  LP Value  1: 8127.000000  (0.01 seconds)
+  LP Value  2: 8137.000000  (0.01 seconds)
+New lower bound: 8137.000000
+Final lower bound 8137.000000, upper bound 8137.000000
+Exact lower bound: 8137.000000
+DIFF: 0.000000
+Final LP has 99 rows, 160 columns, 536 nonzeros
+Optimal Solution: 8137.00
+Number of bbnodes: 1
+Total Running Time: 0.04 (seconds)
+[WARN] [1787646161.700344048, 0.400000000]: local_map: Parameter "plugins" not provided, loading pre-Hydro parameters
+[WARN] [1787646179.160107774, 17.800000000]: No frontier at vertex 8. #Frontier: 0
+[WARN] [1787646192.074986149, 30.700000000]: No frontier at vertex 7. #Frontier: 0
+[INFO] [1787646161.805595072, 0.500000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=0 state_id=0 sim_time=0.300000
+[INFO] [1787646170.617830957, 9.300000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=1 state_id=1 sim_time=9.300000
+[INFO] [1787646171.313207000, 10.000000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=2 state_id=2 sim_time=10.000000
+[INFO] [1787646171.909852887, 10.600000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=3 state_id=3 sim_time=10.600000
+[INFO] [1787646172.515478857, 11.200000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=4 state_id=4 sim_time=11.200000
+[INFO] [1787646173.016218584, 11.700000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=5 state_id=5 sim_time=11.700000
+[INFO] [1787646173.715734994, 12.400000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=6 state_id=6 sim_time=12.400000
+[INFO] [1787646174.316335174, 13.000000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=7 state_id=7 sim_time=13.000000
+[INFO] [1787646174.913400235, 13.600000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=8 state_id=8 sim_time=13.600000
+[INFO] [1787646175.620204439, 14.300000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=9 state_id=9 sim_time=14.300000
+[INFO] [1787646176.221335819, 14.900000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=10 state_id=10 sim_time=14.900000
+[INFO] [1787646176.709726438, 15.400000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=11 state_id=11 sim_time=15.400000
+[INFO] [1787646180.212299564, 18.900000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=12 state_id=12 sim_time=18.900000
+[INFO] [1787646180.821993151, 19.500000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=13 state_id=13 sim_time=19.500000
+[INFO] [1787646181.511683368, 20.200000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=14 state_id=14 sim_time=20.200000
+[INFO] [1787646182.125912606, 20.800000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=15 state_id=15 sim_time=20.800000
+[INFO] [1787646183.727827328, 22.400000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=16 state_id=16 sim_time=22.400000
+[INFO] [1787646185.126619272, 23.800000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=17 state_id=17 sim_time=23.800000
+[INFO] [1787646186.520500254, 25.200000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=18 state_id=18 sim_time=25.200000
+[INFO] [1787646187.918733745, 26.600000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=19 state_id=19 sim_time=26.600000
+[INFO] [1787646189.215778283, 27.900000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=20 state_id=20 sim_time=27.900000
+[INFO] [1787646190.622335412, 29.300000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=21 state_id=21 sim_time=29.300000
+[INFO] [1787646191.920416469, 30.600000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=22 state_id=22 sim_time=30.600000
+[INFO] [1787646193.422201584, 32.100000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=23 state_id=23 sim_time=32.100000
+[INFO] [1787646194.720262264, 33.400000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=24 state_id=24 sim_time=33.400000
+[INFO] [1787646196.310623204, 35.000000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=25 state_id=25 sim_time=35.000000
+[INFO] [1787646198.822412145, 37.500000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=26 state_id=26 sim_time=37.500000
+[INFO] [1787646200.822862897, 39.500000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=27 state_id=27 sim_time=39.500000
+[INFO] [1787646202.117868504, 40.800000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=28 state_id=28 sim_time=40.800000
+[INFO] [1787646204.314903616, 43.000000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=29 state_id=29 sim_time=43.000000
+[INFO] [1787646208.109707906, 46.800000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=30 state_id=30 sim_time=46.800000
+[INFO] [1787646212.629164013, 51.300000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=31 state_id=31 sim_time=51.300000
+[INFO] [1787646216.416766304, 55.100000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=32 state_id=32 sim_time=55.100000
+[INFO] [1787646217.726175156, 56.400000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=33 state_id=33 sim_time=56.400000
+[INFO] [1787646219.118056026, 57.800000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=34 state_id=34 sim_time=57.800000
+[INFO] [1787646220.414558975, 59.100000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=35 state_id=35 sim_time=59.100000
+[INFO] [17876462[INFO] [1787646160.885116, 0.000000]: PHASE3A_ORACLE_ENABLED mode=2 before=8 after=8 densify_m=0.500
+[INFO] [1787646160.886045, 0.000000]: PHASE4A_SELECTIVE_ENABLED span_gate=4.00 max_len=12.0 max_wp=24 densify=0.50 dir_lambda=1.00
+/home/wcqw/ac-slam/catkin_ws/src/cpp_solver/world/map3/map3.xml
+74.0
+True
+Drawio scale: 0.10277777777777777
+[INFO] [1787646160.887878, 0.000000]: Build prior map with 36 vertices.
+[INFO] [1787646160.888712, 0.000000]: Build prior map.
+[INFO] [1787646160.895362, 0.000000]: prior_map_save_path: /home/wcqw/ac-slam/catkin_ws/src/cpp_solver/results/prior_map_Phase4B_seed21004_C.pickle
+Robot position: (-28.0, -28.0)
+10: 2225.556520061729,(x, y) = (10.527777777777779, 45.986111111111114)
+11: 1243.3435570987656,(x, y) = (10.527777777777779, 33.65277777777778)
+Reverse tsp path is better!
+tsp_path VS full_tsp_path:
+[8, 7, 6, 5, 4, 3, 9, 15, 16, 10, 11, 35, 37, 20, 19, 23, 29, 30, 24, 25, 31, 32, 26, 27, 33, 34, 28, 22, 21, 38, 36, 12, 13, 17, 18, 14]
+[8, 7, 6, 5, 4, 3, 9, 15, 16, 10, 11, 35, 37, 20, 19, 23, 29, 30, 24, 25, 31, 32, 26, 27, 33, 34, 28, 22, 21, 38, 36, 12, 13, 17, 18, 14]
+[INFO] [1787646160.975397, 0.000000]: TSP_RECORD {"full_tsp_path": [8, 7, 6, 5, 4, 3, 9, 15, 16, 10, 11, 35, 37, 20, 19, 23, 29, 30, 24, 25, 31, 32, 26, 27, 33, 34, 28, 22, 21, 38, 36, 12, 13, 17, 18, 14], "initial_tsp_path": [8, 7, 6, 5, 4, 3, 9, 15, 16, 10, 11, 35, 37, 20, 19, 23, 29, 30, 24, 25, 31, 32, 26, 27, 33, 34, 28, 22, 21, 38, 36, 12, 13, 17, 18, 14], "predicted_full_tsp_length": 415.222222222222, "predicted_tsp_length": 415.222222222222, "seed": 21004, "solver": "concorde"}
+[INFO] [1787646160.976431, 0.000000]: tsp_record_path: /home/wcqw/ac-slam/catkin_ws/src/cpp_solver/results/tsp_record_Phase4B_seed21004_C.json
+[INFO] [1787646160.977418, 0.000000]: Find initial tsp path.
+tsp_d_opt: 46.41588833612801, tsp_dist: 415.222222222222
+current idx: 0 / 35
+max_candidate_dist: 44.76564224112674
+Iter <built-in function iter>: 0 / 36
+Iter <built-in function iter>: 20 / 36
+#candidates: 84
+current obj: 0.11634956757431472, resistance: 1.1078112871742416, dis_incre: 1.0643564356435644 tsp_obj: 0.11178565561283177
+Optimization ratio: 1.0
+No candidate is better than current_d_opt. Iteration stops.
+#Add edges: 5, [(8, 14), (35, 36), (22, 18), (15, 19), (26, 38)]
+Time cost: 0.08s for best one; 0.03s for all.
+  
+optimized tsp path: [8, 7, 6, 5, 4, 3, 9, 15, 16, 10, 11, 35, 37, 20, 19, 15, 19, 23, 29, 30, 24, 25, 31, 32, 26, 27, 33, 34, 28, 22, 21, 38, 26, 38, 36, 35, 36, 12, 13, 17, 18, 22, 18, 14, 8]
+non-optimized tsp path: [8, 7, 6, 5, 4, 3, 9, 15, 16, 10, 11, 35, 37, 20, 19, 23, 29, 30, 24, 25, 31, 32, 26, 27, 33, 34, 28, 22, 21, 38, 36, 12, 13, 17, 18, 14]
+[INFO] [1787646161.099084, 0.000000]: Find modified curr_path and loop index
+[INFO] [1787646161.104248, 0.000000]: g2o_save_path: /home/wcqw/ac-slam/catkin_ws/src/cpp_solver/results/graph_Phase4B_seed21004_C.g2o
+[INFO] [1787646161.130207, 0.000000]: Replanning request. curr_vertex_idx: 0
+[INFO] [1787646161.131531, 0.000000]:                     covered_vertices: ()
+[INFO] [1787646161.132432, 0.000000]: Handle local replanning...
+[INFO] [1787646161.133207, 0.000000]: curr path length: 45, is_loop length: 45
+[INFO] [1787646161.133895, 0.000000]: Send new plan: 8  ---> 7 6 5 4 3 9 15 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646161.816987, 0.500000]: Really visited vertices: 
+[INFO] [1787646174.920533, 13.600000]: Really visited vertices: 8 
+[INFO] [1787646179.155961, 17.800000]: Replanning request. curr_vertex_idx: 0
+[INFO] [1787646179.156976, 17.800000]:                     covered_vertices: ()
+[INFO] [1787646179.157788, 17.800000]: Handle local replanning...
+[INFO] [1787646179.158460, 17.800000]: curr path length: 45, is_loop length: 45
+[INFO] [1787646179.159026, 17.800000]: Send new plan: 8  ---> 7 6 5 4 3 9 15 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646180.058156, 18.700000]: Replanning request. curr_vertex_idx: 1
+[INFO] [1787646180.059517, 18.700000]:                     covered_vertices: ()
+[INFO] [1787646180.060149, 18.700000]: Handle local replanning...
+[INFO] [1787646180.060998, 18.700000]: curr path length: 45, is_loop length: 45
+[INFO] [1787646180.061738, 18.700000]: Send new plan: 8 7  ---> 6 5 4 3 9 15 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646185.131906, 23.800000]: Really visited vertices: 8 
+[INFO] [1787646186.065939, 24.700000]: Replanning request. curr_vertex_idx: 1
+[INFO] [1787646186.066955, 24.700000]:                     covered_vertices: ()
+[INFO] [1787646186.067653, 24.700000]: Handle local replanning...
+[INFO] [1787646186.068169, 24.700000]: curr path length: 45, is_loop length: 45
+[INFO] [1787646186.068697, 24.700000]: Send new plan: 8 7  ---> 6 5 4 3 9 15 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646191.928611, 30.600000]: Really visited vertices: 8 7 
+[INFO] [1787646192.070147, 30.700000]: Replanning request. curr_vertex_idx: 1
+[INFO] [1787646192.071349, 30.700000]:                     covered_vertices: ()
+[INFO] [1787646192.072119, 30.700000]: Handle local replanning...
+[INFO] [1787646192.073015, 30.700000]: curr path length: 45, is_loop length: 45
+[INFO] [1787646192.073902, 30.700000]: Send new plan: 8 7  ---> 6 5 4 3 9 15 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646198.119042, 36.800000]: Replanning request. curr_vertex_idx: 2
+[INFO] [1787646198.120228, 36.800000]:                     covered_vertices: ()
+[INFO] [1787646198.120994, 36.800000]: Handle local replanning...
+[INFO] [1787646198.121655, 36.800000]: curr path length: 45, is_loop length: 45
+[INFO] [1787646198.122311, 36.800000]: Send new plan: 8 7 6  ---> 5 4 3 9 15 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646204.123374, 42.800000]: Replanning request. curr_vertex_idx: 2
+[INFO] [1787646204.124282, 42.800000]:                     covered_vertices: ()
+[INFO] [1787646204.124837, 42.800000]: Handle local replanning...
+[INFO] [1787646204.125366, 42.800000]: curr path length: 45, is_loop length: 45
+[INFO] [1787646204.125869, 42.800000]: Send new plan: 8 7 6  ---> 5 4 3 9 15 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646210.134314, 48.800000]: Replanning request. curr_vertex_idx: 2
+[INFO] [1787646210.135373, 48.800000]:                     covered_vertices: ()
+[INFO] [1787646210.136245, 48.800000]: Handle local replanning...
+[INFO] [1787646210.136945, 48.800000]: curr path length: 45, is_loop length: 45
+[INFO] [1787646210.137825, 48.800000]: Send new plan: 8 7 6  ---> 5 4 3 9 15 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646216.135533, 54.800000]: Replanning request. curr_vertex_idx: 2
+[INFO] [1787646216.136314, 54.800000]:                     covered_vertices: ()
+[INFO] [1787646216.136874, 54.800000]: Handle local replanning...
+[INFO] [1787646216.137300, 54.800000]: curr path length: 45, is_loop length: 45
+[INFO] [1787646216.137674, 54.800000]: Send new plan: 8 7 6  ---> 5 4 3 9 15 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646221.740614, 60.400000]: Really visited vertices: 8 7 6 
+[INFO] [1787646222.097078, 60.700000]: Replanning request. curr_vertex_idx: 2
+[INFO] [1787646222.098181, 60.800000]:                     covered_vertices: ()
+[INFO] [1787646222.099087, 60.800000]: Handle local replanning...
+[INFO] [1787646222.099831, 60.800000]: curr path length: 45, is_loop length: 45
+[WARN] [1787646222.101618472, 60.800000000]: No frontier at vertex 6. #Frontier: 0
+[WARN] [1787646250.149391078, 88.800000000]: No frontier at vertex 5. #Frontier: 0
+21.723664791, 60.400000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=36 state_id=36 sim_time=60.400000
+[INFO] [1787646223.022405752, 61.700000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=37 state_id=37 sim_time=61.700000
+[INFO] [1787646223.720203249, 62.400000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=38 state_id=38 sim_time=62.400000
+[INFO] [1787646225.329913575, 64.000000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=39 state_id=39 sim_time=64.000000
+[INFO] [1787646226.628027889, 65.300000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=40 state_id=40 sim_time=65.300000
+[INFO] [1787646227.824750978, 66.500000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=41 state_id=41 sim_time=66.500000
+[INFO] [1787646229.219036734, 67.900000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=42 state_id=42 sim_time=67.900000
+[INFO] [1787646230.614489505, 69.300000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=43 state_id=43 sim_time=69.300000
+[INFO] [1787646231.913928156, 70.600000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=44 state_id=44 sim_time=70.600000
+[INFO] [1787646233.609746831, 72.300000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=45 state_id=45 sim_time=72.300000
+[INFO] [1787646237.419754655, 76.100000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=46 state_id=46 sim_time=76.100000
+[INFO] [1787646240.320867389, 79.000000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=47 state_id=47 sim_time=79.000000
+[INFO] [1787646241.720858360, 80.400000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=48 state_id=48 sim_time=80.400000
+[INFO] [1787646243.015483504, 81.700000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=49 state_id=49 sim_time=81.700000
+[INFO] [1787646244.411929809, 83.100000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=50 state_id=50 sim_time=83.100000
+[INFO] [1787646245.921555533, 84.600000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=51 state_id=51 sim_time=84.600000
+[INFO] [1787646246.414049724, 85.100000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=52 state_id=52 sim_time=85.100000
+[INFO] [1787646247.122040591, 85.800000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=53 state_id=53 sim_time=85.800000
+[INFO] [1787646247.728716536, 86.400000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=54 state_id=54 sim_time=86.400000
+[INFO] [1787646248.319206321, 87.000000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=55 state_id=55 sim_time=87.000000
+[INFO] [1787646249.128853504, 87.800000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=56 state_id=56 sim_time=87.800000
+[INFO] [1787646250.323996231, 89.000000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=57 state_id=57 sim_time=89.000000
+[INFO] [1787646250.927415751, 89.600000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=58 state_id=58 sim_time=89.600000
+[INFO] [1787646251.515596697, 90.200000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=59 state_id=59 sim_time=90.200000
+[INFO] [1787646252.115134006, 90.800000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=60 state_id=60 sim_time=90.800000
+[INFO] [1787646252.721367038, 91.400000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=61 state_id=61 sim_time=91.400000
+[INFO] [1787646253.427761170, 92.100000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=62 state_id=62 sim_time=92.100000
+[INFO] [1787646254.922665547, 93.600000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=63 state_id=63 sim_time=93.600000
+[INFO] [1787646256.324709811, 95.000000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=64 state_id=64 sim_time=95.000000
+[INFO] [1787646257.728502061, 96.400000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=65 state_id=65 sim_time=96.400000
+[INFO] [1787646259.126503063, 97.800000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=66 state_id=66 sim_time=97.800000
+[INFO] [1787646261.036934572, 99.700000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=67 state_id=67 sim_time=99.700000
+[INFO] [1787646263.829205674, 102.500000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=68 state_id=68 sim_time=102.500000
+[INFO] [1787646267.727529448, 106.400000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=69 state_id=69 sim_time=106.400000
+[INFO] [1787646271.832000667, 110.500000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=70 state_id=70 sim_time=110.500000
+[INFO] [1787646273.221808086, 111.900000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=71 state_id=71 sim_time=111.900000
+[WARN] [1787646278.190509892, 116.800000000]: No frontier at vertex 4. #Frontier: 0
+[INFO] [1787646222.100554, 60.800000]: Send new plan: 8 7 6  ---> 5 4 3 9 15 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646227.835667, 66.500000]: Really visited vertices: 8 7 6 
+[INFO] [1787646228.097593, 66.700000]: Replanning request. curr_vertex_idx: 3
+[INFO] [1787646228.098622, 66.800000]:                     covered_vertices: ()
+[INFO] [1787646228.099470, 66.800000]: Handle local replanning...
+[INFO] [1787646228.100268, 66.800000]: curr path length: 45, is_loop length: 45
+[INFO] [1787646228.100980, 66.800000]: Send new plan: 8 7 6 5  ---> 4 3 9 15 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646233.622543, 72.300000]: Really visited vertices: 8 7 6 
+[INFO] [1787646234.116362, 72.800000]: Replanning request. curr_vertex_idx: 3
+[INFO] [1787646234.117126, 72.800000]:                     covered_vertices: ()
+[INFO] [1787646234.117635, 72.800000]: Handle local replanning...
+[INFO] [1787646234.118048, 72.800000]: curr path length: 45, is_loop length: 45
+[INFO] [1787646234.118440, 72.800000]: Send new plan: 8 7 6 5  ---> 4 3 9 15 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646240.173482, 78.800000]: Replanning request. curr_vertex_idx: 3
+[INFO] [1787646240.174352, 78.800000]:                     covered_vertices: ()
+[INFO] [1787646240.174934, 78.800000]: Handle local replanning...
+[INFO] [1787646240.175461, 78.800000]: curr path length: 45, is_loop length: 45
+[INFO] [1787646240.175998, 78.800000]: Send new plan: 8 7 6 5  ---> 4 3 9 15 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646245.199361, 83.900000]: Replanning request. curr_vertex_idx: 3
+[INFO] [1787646245.200330, 83.900000]:                     covered_vertices: ()
+[INFO] [1787646245.201040, 83.900000]: Handle local replanning...
+[INFO] [1787646245.201525, 83.900000]: curr path length: 45, is_loop length: 45
+[INFO] [1787646245.201941, 83.900000]: Send new plan: 8 7 6 5  ---> 4 3 9 15 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646250.145597, 88.800000]: Replanning request. curr_vertex_idx: 3
+[INFO] [1787646250.146501, 88.800000]:                     covered_vertices: ()
+[INFO] [1787646250.147212, 88.800000]: Handle local replanning...
+[INFO] [1787646250.147815, 88.800000]: curr path length: 45, is_loop length: 45
+[INFO] [1787646250.148415, 88.800000]: Send new plan: 8 7 6 5  ---> 4 3 9 15 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646256.145382, 94.800000]: Replanning request. curr_vertex_idx: 4
+[INFO] [1787646256.146531, 94.800000]:                     covered_vertices: ()
+[INFO] [1787646256.147358, 94.800000]: Handle local replanning...
+[INFO] [1787646256.147956, 94.800000]: curr path length: 45, is_loop length: 45
+[INFO] [1787646256.148577, 94.800000]: Send new plan: 8 7 6 5 4  ---> 3 9 15 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646261.066644, 99.700000]: Really visited vertices: 8 7 6 5 
+[INFO] [1787646262.151106, 100.800000]: Replanning request. curr_vertex_idx: 4
+[INFO] [1787646262.152001, 100.800000]:                     covered_vertices: ()
+[INFO] [1787646262.152583, 100.800000]: Handle local replanning...
+[INFO] [1787646262.153117, 100.800000]: curr path length: 45, is_loop length: 45
+[INFO] [1787646262.153773, 100.800000]: Send new plan: 8 7 6 5 4  ---> 3 9 15 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646267.744259, 106.400000]: Really visited vertices: 8 7 6 5 
+[INFO] [1787646268.212927, 106.900000]: Replanning request. curr_vertex_idx: 4
+[INFO] [1787646268.213776, 106.900000]:                     covered_vertices: ()
+[INFO] [1787646268.214431, 106.900000]: Handle local replanning...
+[INFO] [1787646268.214916, 106.900000]: curr path length: 45, is_loop length: 45
+[INFO] [1787646268.215397, 106.900000]: Send new plan: 8 7 6 5 4  ---> 3 9 15 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646273.253250, 111.900000]: Really visited vertices: 8 7 6 5 
+[INFO] [1787646274.226167, 112.900000]: Replanning request. curr_vertex_idx: 4
+[INFO] [1787646274.227018, 112.900000]:                     covered_vertices: ()
+[INFO] [1787646274.227627, 112.900000]: Handle local replanning...
+[INFO] [1787646274.228269, 112.900000]: curr path length: 45, is_loop length: 45
+[INFO] [1787646274.228808, 112.900000]: Send new plan: 8 7 6 5 4  ---> 3 9 15 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646278.187479, 116.800000]: Replanning request. curr_vertex_idx: 4
+[INFO] [1787646278.188267, 116.800000]:                     covered_vertices: ()
+[INFO] [1787646278.188817, 116.800000]: Handle local replanning...
+[INFO] [1787646278.189344, 116.800000]: curr path length: 45, is_loop length: 45
+[INFO] [1787646278.189891, 116.800000]: Send new plan: 8 7 6 5 4  ---> 3 9 15 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646284.174583, 122.800000]: Replanning request. curr_vertex_idx: 5
+[INFO] [1787646284.175434, 122.800000]:                     covered_vertices: ()
+[INFO] [1787646284.176174, 122.800000]: Handle local replanning...
+[INFO] [1787646284.176659, 122.800000]: curr path length: 45, is_loop length: 45
+[INFO] [1787646284.177169, 122.800000]: Send new plan: 8 7 6 5 4 3  ---> 9 15 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646289.341006, 128.000000]: Really visited vertices: 8 7 6 5 4 
+[INFO] [1787646290.165913, 128.800000]: Replanning request. curr_vertex_idx: 5
+[INFO] [1787646290.166853, 128.800000]:                     covered_vertices: ()
+[INFO] [1787646290.167511, 128.800000]: Handle local replanning...
+[INFO] [1787646290.168151, 128.800000]: curr path length: 45, is_loop length: 45
+[INFO] [1787646290.168669, 128.800000]: Send new plan: 8 7 6 5 4 3  ---> 9 15 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646296.210802, 134.900000]: Replanning request. curr_vertex_idx: 5
+[INFO] [1787646296.211769, 134.900000]:                     covered_vertices: ()
+[INFO] [1787646296.212470, 134.900000]: Handle local replanning...
+[INFO] [1787646296.213130, 134.900000]: curr path length: 45, is_loop length: 45
+[INFO] [1787646296.213858, 134.900000]: Send new plan: 8 7 6 5 4 3  ---> 9 15 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646301.273904, 139.900000]: Replanning request. curr_vertex_idx: 5
+[INFO] [1787646301.274800, 139.900000]:                     covered_vertices: ()
+[INFO] [1787646301.275386, 139.900000]: Handle local replanning...
+[INFO] [1787646301.275860, 139.900000]: curr path length: 45, is_loop length: 45
+[INFO] [1787646301.276307, 139.900000]: Send new plan: 8 7 6 5 4 3  ---> 9 15 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646307.226707, 145.900000]: Replanning request. curr_vertex_idx: 5
+[INFO] [1787646307.227582, 145.900000]:                     covered_vertices: ()
+[INFO] [1787646307.228357, 145.900000]: Handle local replanning...
+[INFO] [1787646307.228913, 145.900000]: curr path length: 45, is_loop length: 45
+[WARN] [1787646307.230235140, 145.900000000]: No frontier at vertex 3. #Frontier: 0
+[INFO] [1787646274.624411316, 113.300000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=72 state_id=72 sim_time=113.300000
+[INFO] [1787646275.910155931, 114.600000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=73 state_id=73 sim_time=114.600000
+[INFO] [1787646277.225095852, 115.900000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=74 state_id=74 sim_time=115.900000
+[INFO] [1787646278.524152569, 117.200000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=75 state_id=75 sim_time=117.200000
+[INFO] [1787646279.223550216, 117.900000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=76 state_id=76 sim_time=117.900000
+[INFO] [1787646279.820293358, 118.500000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=77 state_id=77 sim_time=118.500000
+[INFO] [1787646280.428735323, 119.100000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=78 state_id=78 sim_time=119.100000
+[INFO] [1787646280.922063891, 119.600000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=79 state_id=79 sim_time=119.600000
+[INFO] [1787646281.620428042, 120.300000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=80 state_id=80 sim_time=120.300000
+[INFO] [1787646282.131821185, 120.800000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=81 state_id=81 sim_time=120.800000
+[INFO] [1787646282.920808969, 121.600000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=82 state_id=82 sim_time=121.600000
+[INFO] [1787646284.040703868, 122.700000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=83 state_id=83 sim_time=122.700000
+[INFO] [1787646285.428480127, 124.100000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=84 state_id=84 sim_time=124.100000
+[INFO] [1787646286.731587978, 125.400000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=85 state_id=85 sim_time=125.400000
+[INFO] [1787646288.026129959, 126.700000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=86 state_id=86 sim_time=126.700000
+[INFO] [1787646289.320330799, 128.000000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=87 state_id=87 sim_time=128.000000
+[INFO] [1787646290.621580686, 129.300000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=88 state_id=88 sim_time=129.300000
+[INFO] [1787646292.028211938, 130.700000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=89 state_id=89 sim_time=130.700000
+[INFO] [1787646293.330829377, 132.000000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=90 state_id=90 sim_time=132.000000
+[INFO] [1787646294.728084399, 133.400000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=91 state_id=91 sim_time=133.400000
+[INFO] [1787646296.063725758, 134.700000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=92 state_id=92 sim_time=134.700000
+[INFO] [1787646297.424989884, 136.100000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=93 state_id=93 sim_time=136.100000
+[INFO] [1787646298.715531759, 137.400000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=94 state_id=94 sim_time=137.400000
+[INFO] [1787646300.107455132, 138.800000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=95 state_id=95 sim_time=138.800000
+[INFO] [1787646301.413425067, 140.100000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=96 state_id=96 sim_time=140.100000
+[INFO] [1787646302.218655419, 140.900000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=97 state_id=97 sim_time=140.900000
+[INFO] [1787646302.814390358, 141.500000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=98 state_id=98 sim_time=141.500000
+[INFO] [1787646303.333861559, 142.000000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=99 state_id=99 sim_time=142.000000
+[INFO] [1787646304.032806203, 142.700000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=100 state_id=100 sim_time=142.700000
+[INFO] [1787646304.829797265, 143.500000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=101 state_id=101 sim_time=143.500000
+[INFO] [1787646305.725857878, 144.400000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=102 state_id=102 sim_time=144.400000
+[INFO] [1787646307.231172772, 145.900000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=103 state_id=103 sim_time=145.900000
+[INFO] [1787646308.131573242, 146.800000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=104 state_id=104 sim_time=146.800000
+[INFO] [1787646308.736213541, 147.400000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=105 state_id=105 sim_time=147.400000
+[INFO] [1787646309.430642655, 148.100000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=106 state_id=106 sim_time=148.100000
+[INFO] [1787646310.028[INFO] [1787646160.492905629]: Waiting for prior_graph_service ...
+[INFO] [1787646160.493549743]: waitForService: Service [/prior_graph_service] has not been advertised, waiting...
+[INFO] [1787646161.109201170]: waitForService: Service [/prior_graph_service] is now available.
+[INFO] [1787646161.126897572]: Receive response of service prior_graph_service.
+[INFO] [1787646161.127930251]: Load prior_map.
+[INFO] [1787646161.127961552]: Publishing prior graph......
+[INFO] [1787646161.128372406]: Draw prior_map in RVIZ.
+[INFO] [1787646161.128381869]: Waiting for path_plan_service ...
+[INFO] [1787646161.134712424]: Receive tsp path: 8 7 6 5 4 3 9 15 16 10 11 35 37 20 19 15 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26 38 36 35 36 12 13 17 18 22 18 14 8
+[INFO] [1787646161.134753482]: Receive loop index: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 1 0 0 1
+[INFO] [1787646161.134761315]: Waiting for reliable_loop_service ...
+[INFO] [1787646161.135217177]: reliable_loop_service is available.
+[INFO] [1787646161.135543009]: MyPlanner is initialized and running!!
+[INFO] [1787646161.135567240]: Successfully loaded exploration strategy [MyPlanner].
+[INFO] [1787646169.802395410, 8.500000000]: Navigator is now initialized.
+[INFO] [1787646179.154746343, 17.800000000]: Call local replanning...
+[INFO] [1787646179.160071177, 17.800000000]: Reach vertex 8
+[INFO] [1787646179.160178650, 17.800000000]: Set newGoal 7
+[INFO] [1787646180.056759267, 18.700000000]: Call local replanning...
+[INFO] [1787646186.064668347, 24.700000000]: Call local replanning...
+[INFO] [1787646192.068605197, 30.700000000]: Call local replanning...
+[INFO] [1787646192.074968593, 30.700000000]: Reach vertex 7
+[INFO] [1787646192.075003641, 30.700000000]: Set newGoal 6
+[INFO] [1787646198.117808301, 36.800000000]: Call local replanning...
+[INFO] [1787646204.122146296, 42.800000000]: Call local replanning...
+[INFO] [1787646210.133083341, 48.800000000]: Call local replanning...
+[INFO] [1787646216.134341768, 54.800000000]: Call local replanning...
+[INFO] [1787646216.138494594, 54.800000000]: Reach vertex 6
+[INFO] [1787646216.149146166, 54.800000000]: Explore Goal 6 's frontiers...
+[INFO] [1787646222.095996714, 60.700000000]: Call local replanning...
+[INFO] [1787646222.101643194, 60.800000000]: Set newGoal 5
+[INFO] [1787646228.096608091, 66.700000000]: Call local replanning...
+[INFO] [1787646234.115409842, 72.800000000]: Call local replanning...
+[INFO] [1787646240.172222978, 78.800000000]: Call local replanning...
+[INFO] [1787646245.198075901, 83.900000000]: Call local replanning...
+[INFO] [1787646245.202681961, 83.900000000]: Reach vertex 5
+[INFO] [1787646245.205320413, 83.900000000]: Explore Goal 5 's frontiers...
+[INFO] [1787646250.144333579, 88.800000000]: Call local replanning...
+[INFO] [1787646250.149415724, 88.800000000]: Set newGoal 4
+[INFO] [1787646256.144136192, 94.800000000]: Call local replanning...
+[INFO] [1787646262.149910167, 100.800000000]: Call local replanning...
+[INFO] [1787646268.211674116, 106.900000000]: Call local replanning...
+[INFO] [1787646274.225086027, 112.900000000]: Call local replanning...
+[INFO] [1787646274.229742964, 112.900000000]: Reach vertex 4
+[INFO] [1787646274.236283610, 112.900000000]: Explore Goal 4 's frontiers...
+[INFO] [1787646278.186253555, 116.800000000]: Call local replanning...
+[INFO] [1787646278.190532021, 116.800000000]: Set newGoal 3
+[INFO] [1787646284.173411844, 122.800000000]: Call local replanning...
+[INFO] [1787646290.164830848, 128.800000000]: Call local replanning...
+[INFO] [1787646296.209576675, 134.900000000]: Call local replanning...
+[INFO] [1787646301.272518269, 139.900000000]: Call local replanning...
+[INFO] [1787646301.277225825, 139.900000000]: Reach vertex 3
+[INFO] [1787646301.280205167, 139.900000000]: Explore Goal 3 's frontiers...
+[INFO] [1787646307.225658353, 145.900000000]: Call local replanning...
+[INFO] [1787646307.230260316, 145.900000000]: Set newGoal 9
+[INFO] [1787646313.166252777, 151.800000000]: Call local replanning...
+[INFO] [1787646319.211001585, 157.900000000]: [WARN] [1787646336.248281181, 174.900000000]: No frontier at vertex 9. #Frontier: 0
+X I/O error
+[WARN] [1787646160.898443, 0.000000]: Robot Start At 8
+[WARN] [1787646160.973481, 0.000000]: Tsp problem solved by Concorde. 0.07147049903869629
+<class 'networkx.utils.decorators.argmap'> compilation 4:4: FutureWarning: laplacian_matrix will return a scipy.sparse array instead of a matrix in Networkx 3.0.
+[INFO] [1787646307.229481, 145.900000]: Send new plan: 8 7 6 5 4 3  ---> 9 15 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646312.491514, 151.100000]: Really visited vertices: 8 7 6 5 4 3 
+[INFO] [1787646313.167330, 151.800000]: Replanning request. curr_vertex_idx: 6
+[INFO] [1787646313.168269, 151.800000]:                     covered_vertices: ()
+[INFO] [1787646313.168973, 151.800000]: Handle local replanning...
+[INFO] [1787646313.169510, 151.800000]: curr path length: 45, is_loop length: 45
+[INFO] [1787646313.170035, 151.800000]: Send new plan: 8 7 6 5 4 3 9  ---> 15 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646319.212109, 157.900000]: Replanning request. curr_vertex_idx: 6
+[INFO] [1787646319.213141, 157.900000]:                     covered_vertices: ()
+[INFO] [1787646319.213887, 157.900000]: Handle local replanning...
+[INFO] [1787646319.214480, 157.900000]: curr path length: 45, is_loop length: 45
+[INFO] [1787646319.214940, 157.900000]: Send new plan: 8 7 6 5 4 3 9  ---> 15 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646325.229706, 163.900000]: Replanning request. curr_vertex_idx: 6
+[INFO] [1787646325.230587, 163.900000]:                     covered_vertices: ()
+[INFO] [1787646325.231106, 163.900000]: Handle local replanning...
+[INFO] [1787646325.231505, 163.900000]: curr path length: 45, is_loop length: 45
+[INFO] [1787646325.232334, 163.900000]: Send new plan: 8 7 6 5 4 3 9  ---> 15 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646331.310960, 170.000000]: Replanning request. curr_vertex_idx: 6
+[INFO] [1787646331.311769, 170.000000]:                     covered_vertices: ()
+[INFO] [1787646331.312443, 170.000000]: Handle local replanning...
+[INFO] [1787646331.313101, 170.000000]: curr path length: 45, is_loop length: 45
+[INFO] [1787646331.313681, 170.000000]: Send new plan: 8 7 6 5 4 3 9  ---> 15 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646334.220443, 172.900000]: Replanning request. curr_vertex_idx: 6
+[INFO] [1787646334.221493, 172.900000]:                     covered_vertices: ()
+[INFO] [1787646334.222318, 172.900000]: Handle local replanning...
+[INFO] [1787646334.222960, 172.900000]: curr path length: 45, is_loop length: 45
+[INFO] [1787646334.223655, 172.900000]: Send new plan: 8 7 6 5 4 3 9  ---> 15 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646336.244385, 174.900000]: Replanning request. curr_vertex_idx: 6
+[INFO] [1787646336.245176, 174.900000]:                     covered_vertices: ()
+[INFO] [1787646336.245929, 174.900000]: Handle local replanning...
+[INFO] [1787646336.246625, 174.900000]: curr path length: 45, is_loop length: 45
+[INFO] [1787646336.247333, 174.900000]: Send new plan: 8 7 6 5 4 3 9  ---> 15 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646341.760021, 180.400000]: Really visited vertices: 8 7 6 5 4 3 9 
+[INFO] [1787646342.281403, 180.900000]: Replanning request. curr_vertex_idx: 7
+[INFO] [1787646342.282208, 180.900000]:                     covered_vertices: ()
+[INFO] [1787646342.282854, 180.900000]: Handle local replanning...
+[INFO] [1787646342.283343, 180.900000]: curr path length: 45, is_loop length: 45
+[INFO] [1787646342.283826, 180.900000]: Send new plan: 8 7 6 5 4 3 9 15  ---> 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646347.153272, 185.800000]: Really visited vertices: 8 7 6 5 4 3 9 
+[INFO] [1787646348.199739, 186.900000]: Replanning request. curr_vertex_idx: 7
+[INFO] [1787646348.200470, 186.900000]:                     covered_vertices: ()
+[INFO] [1787646348.201051, 186.900000]: Handle local replanning...
+[INFO] [1787646348.201729, 186.900000]: curr path length: 45, is_loop length: 45
+[INFO] [1787646348.202254, 186.900000]: Send new plan: 8 7 6 5 4 3 9 15  ---> 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646354.239877, 192.900000]: Replanning request. curr_vertex_idx: 7
+[INFO] [1787646354.240761, 192.900000]:                     covered_vertices: ()
+[INFO] [1787646354.241429, 192.900000]: Handle local replanning...
+[INFO] [1787646354.242027, 192.900000]: curr path length: 45, is_loop length: 45
+[INFO] [1787646354.242635, 192.900000]: Send new plan: 8 7 6 5 4 3 9 15  ---> 16 10 11 35 37 20 19 15(L) 19 23 29 30 24 25 31 32 26 27 33 34 28 22 21 38 26(L) 38 36 35(L) 36 12 13 17 18 22(L) 18 14 8(L) 
+[INFO] [1787646358.206978, 193.800000]: Pose graph has: 132 vertices, 194 edges.
+[31m[Stage-1] process has died [pid 168609, exit code 1, cmd /opt/ros/noetic/lib/stage_ros/stageros /home/wcqw/ac-slam/catkin_ws/src/cpp_solver/world/map3/map3.world __name:=Stage __log:=/home/wcqw/ac-slam/catkin_ws/.ros/log/22332228-a05e-11f1-a1fb-ad5a2dc41d37/Stage-1.log].
+log file: /home/wcqw/ac-slam/catkin_ws/.ros/log/22332228-a05e-11f1-a1fb-ad5a2dc41d37/Stage-1*.log[0m
+... logging to /home/wcqw/ac-slam/catkin_ws/.ros/log/22332228-a05e-11f1-a1fb-ad5a2dc41d37/roslaunch-msxg-168495.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;/home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/launch/exploration.launch
+[1mstarted roslaunch server http://127.0.0.1:37299/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /Mapper/LoopMatchMaximumVarianceCoarse: 0.16
+ * /Mapper/LoopMatchMinimumChainSize: 4
+ * /Mapper/LoopMatchMinimumResponseCoarse: 0.6
+ * /Mapper/LoopMatchMinimumResponseFine: 0.7
+ * /Mapper/LoopSearchMaximumDistance: 4
+ * /Mapper/LoopSearchSpaceDimension: 5.0
+ * /Mapper/MinimumTravelDistance: 1.0
+ * /Mapper/MinimumTravelHeading: 0.52
+ * /Mapper/enable_loop_diagnostics: False
+ * /Mapper/grid_resolution: 0.1
+ * /Mapper/loop_diagnostics_path: 
+ * /Mapper/loop_diagnostics_run_id: 
+ * /Mapper/map_frame: map
+ * /Mapper/map_update_rate: 5
+ * /Mapper/max_covariance: 0.01
+ * /Mapper/max_particles: 10000
+ * /Mapper/min_map_size: 20
+ * /Mapper/min_particles: 2500
+ * /Mapper/publish_pose_graph: True
+ * /Mapper/range_threshold: 25.0
+ * /Mapper/transform_publish_period: 0.1
+ * /Navigator/command_target_distance: 1.5
+ * /Navigator/exploration_goal_distance: 3.0
+ * /Navigator/exploration_strategy: MyPlanner
+ * /Navigator/frequency: 1
+ * /Navigator/map_inflation_radius: 1.0
+ * /Navigator/max_replanning_period: 1.0
+ * /Navigator/min_replanning_period: 5.0
+ * /Navigator/min_target_area_size: 1.0
+ * /Navigator/navigation_goal_angle: 1.0
+ * /Navigator/navigation_goal_distance: 2.0
+ * /Navigator/navigation_homing_distance: 4.0
+ * /Navigator/robot_radius: 0.5
+ * /Navigator/save_path_plan_time: /home/wcqw/ac-sla...
+ * /Navigator/use_local_planner: True
+ * /Navigator/visualize_frontiers: True
+ * /Operator/conformance_weight: 1
+ * /Operator/continue_weight: 1
+ * /Operator/escape_weight: 1
+ * /Operator/frequency: 10
+ * /Operator/local_map/cost_scaling_factor: 2.0
+ * /Operator/local_map/global_frame: odom
+ * /Operator/local_map/height: 6.0
+ * /Operator/local_map/inflation_radius: 0.75
+ * /Operator/local_map/lethal_cost_threshold: 100
+ * /Operator/local_map/map_type: costmap
+ * /Operator/local_map/max_obstacle_height: 2.0
+ * /Operator/local_map/min_obstacle_height: 0.0
+ * /Operator/local_map/observation_sources: scan
+ * /Operator/local_map/obstacle_range: 4.0
+ * /Operator/local_map/publish_frequency: 1.0
+ * /Operator/local_map/publish_voxel_map: True
+ * /Operator/local_map/raytrace_range: 4.5
+ * /Operator/local_map/resolution: 0.05
+ * /Operator/local_map/robot_base_frame: base_link
+ * /Operator/local_map/robot_radius: 0.4
+ * /Operator/local_map/rolling_window: True
+ * /Operator/local_map/scan/clearing: True
+ * /Operator/local_map/scan/data_type: LaserScan
+ * /Operator/local_map/scan/expected_update_rate: 0.4
+ * /Operator/local_map/scan/marking: True
+ * /Operator/local_map/scan/max_obstacle_height: 0.4
+ * /Operator/local_map/scan/min_obstacle_height: 0.08
+ * /Operator/local_map/scan/observation_persistence: 0.0
+ * /Operator/local_map/static_map: False
+ * /Operator/local_map/track_unknown_space: True
+ * /Operator/local_map/transform_tolerance: 0.3
+ * /Operator/local_map/update_frequency: 5.0
+ * /Operator/local_map/width: 6.0
+ * /Operator/max_free_space: 3.0
+ * /Operator/max_velocity: 1.0
+ * /Operator/publish_route: True
+ * /Operator/safety_decay: 0.99
+ * /Operator/safety_weight: 1
+ * /Stage/base_watchdog_timeout: 0
+ * /laser_frame: base_laser_link
+ * /laser_topic: base_scan
+ * /map_frame: map
+ * /map_server/frame_id: map
+ * /map_service: static_map
+ * /map_topic: map
+ * /odometry_frame: odom
+ * /offset_frame: offset
+ * /path_planner/g2o_save_path: /home/wcqw/ac-sla...
+ * /path_planner/map_width: 74.0
+ * /path_planner/need_noise: False
+ * /path_planner/only_use_tsp: False
+ * /path_planner/oracle_after: 8
+ * /path_planner/oracle_before: 8
+ * /path_planner/oracle_densify_m: 0.5
+ * /path_planner/oracle_dir_lambda: 1.0
+ * /path_planner/oracle_mode: 2
+ * /path_planner/oracle_repair_densify: 0.5
+ * /path_planner/oracle_repair_max_len: 12.0
+ * /path_planner/oracle_repair_max_wp: 24
+ * /path_planner/oracle_span_gate: 4.0
+ * /path_planner/prior_map_save_path: /home/wcqw/ac-sla...
+ * /path_planner/robot_position: -28.0 -28.0 0
+ * /path_planner/tsp_record_path: /home/wcqw/ac-sla...
+ * /path_planner/tsp_seed: 21004
+ * /path_planner/tsp_solver: concorde
+ * /path_planner/use_drawio: True
+ * /path_planner/variance: 0.0
+ * /path_planner/xml_path: /home/wcqw/ac-sla...
+ * /pubPath/gt_save_path: /home/wcqw/ac-sla...
+ * /pubPath/robot_position: -28.0 -28.0 0
+ * /pubPath/slam_save_path: /home/wcqw/ac-sla...
+ * /robot_description: <?xml version="1....
+ * /robot_frame: base_link
+ * /robot_start_position: -28.0 -28.0 0
+ * /robot_state_publisher/publish_frequency: 30.0
+ * /robot_state_publisher/tf_prefix: 
+ * /rosdistro: noetic
+ * /rosversion: 1.17.4
+ * /use_sim_time: True
+ * /use_tf1: True
+
+NODES
+  /
+    Explore (nav2d_navigator/explore_client)
+    GetMap (nav2d_navigator/get_map_client)
+    Mapper (nav2d_karto/mapper)
+    Navigator (nav2d_navigator/navigator)
+    Operator (nav2d_operator/operator)
+    RVIZ (rviz/rviz)
+    SetGoal (nav2d_navigator/set_goal_client)
+    Stage (stage_ros/stageros)
+    exploration_button_server (cpp_solver/exploration_button_server.py)
+    map_server (map_server/map_server)
+    path_planner (cpp_solver/path_planner.py)
+    pubPath (cpp_solver/pub_path)
+    publisher (p2os_urdf/p2os_publisher_3at)
+    robot_state_publisher (robot_state_publisher/robot_state_publisher)
+    rqt_robot_steering (rqt_robot_steering/rqt_robot_steering)
+    updateDistance (cpp_solver/updateDistance)
+
+[1mROS_MASTER_URI=http://localhost:11311[0m
+]2;/home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/launch/exploration.launch http://localhost:11311
+[1mprocess[Stage-1]: started with pid [168609][0m
+[1mprocess[map_server-2]: started with pid [168610][0m
+[1mprocess[Operator-3]: started with pid [168611][0m
+[1mprocess[Mapper-4]: started with pid [168616][0m
+[1mprocess[Navigator-5]: started with pid [168621][0m
+[1mprocess[GetMap-6]: started with pid [168625][0m
+[1mprocess[Explore-7]: started with pid [168630][0m
+[1mprocess[SetGoal-8]: started with pid [168635][0m
+[1mprocess[pubPath-9]: started with pid [168642][0m
+[1mprocess[updateDistance-10]: started with pid [168654][0m
+[1mprocess[exploration_button_server-11]: started with pid [168658][0m
+[1mprocess[path_planner-12]: started with pid [168665][0m
+[1mprocess[rqt_robot_steering-13]: started with pid [168667][0m
+[1mprocess[robot_state_publisher-14]: started with pid [168670][0m
+[1mprocess[publisher-15]: started with pid [168673][0m
+[1mprocess[RVIZ-16]: started with pid [168675][0m
+[1m[rqt_robot_steering-13] process has finished cleanly
+log file: /home/wcqw/ac-slam/catkin_ws/.ros/log/22332228-a05e-11f1-a1fb-ad5a2dc41d37/rqt_robot_steering-13*.log[0m
+[1m[RVIZ-16] process has finished cleanly
+log file: /home/wcqw/ac-slam/catkin_ws/.ros/log/22332228-a05e-11f1-a1fb-ad5a2dc41d37/RVIZ-16*.log[0m
+[publisher-15] killing on exit
+[robot_state_publisher-14] killing on exit
+[path_planner-12] killing on exit
+[exploration_button_server-11] killing on exit
+[updateDistance-10] killing on exit
+[pubPath-9] killing on exit
+[SetGoal-8] killing on exit
+[Explore-7] killing on exit
+[GetMap-6] killing on exit
+[Navigator-5] killing on exit
+[Mapper-4] killing on exit
+[Operator-3] killing on exit
+[map_server-2] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+[1mdone[0m
