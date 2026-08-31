@@ -1,0 +1,98 @@
+{
+  "individual_loops_are_independent_inference_units": false,
+  "multiple_outcome_policy": "outcome groups are reported separately; no post-hoc primary switching and no individual-loop pseudo-replication",
+  "optional_inference": [
+    "paired exact randomization/permutation over map-seed blocks",
+    "map-seed cluster bootstrap"
+  ],
+  "phase4b_strong_attribution_descriptive": {
+    "paired_seed_contrasts": {
+      "B-A": {
+        "direction_count": {
+          "negative": 0,
+          "positive": 1,
+          "tie": 4
+        },
+        "max": 0.4,
+        "mean": 0.08,
+        "median": 0.0,
+        "min": 0.0,
+        "n": 5
+      },
+      "C-A": {
+        "direction_count": {
+          "negative": 0,
+          "positive": 2,
+          "tie": 3
+        },
+        "max": 0.25,
+        "mean": 0.09,
+        "median": 0.0,
+        "min": 0.0,
+        "n": 5
+      },
+      "C-B": {
+        "direction_count": {
+          "negative": 1,
+          "positive": 2,
+          "tie": 2
+        },
+        "max": 0.25,
+        "mean": 0.009999999999999998,
+        "median": 0.0,
+        "min": -0.4,
+        "n": 5
+      }
+    },
+    "per_method": {
+      "A": {
+        "executed_loops": 21,
+        "pooled_rate_descriptive": 0.0,
+        "seed_rate": {
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "n": 5
+        },
+        "target_loops": 0
+      },
+      "B": {
+        "executed_loops": 21,
+        "pooled_rate_descriptive": 0.09523809523809523,
+        "seed_rate": {
+          "max": 0.4,
+          "mean": 0.08,
+          "median": 0.0,
+          "min": 0.0,
+          "n": 5
+        },
+        "target_loops": 2
+      },
+      "C": {
+        "executed_loops": 21,
+        "pooled_rate_descriptive": 0.09523809523809523,
+        "seed_rate": {
+          "max": 0.25,
+          "mean": 0.09,
+          "median": 0.0,
+          "min": 0.0,
+          "n": 5
+        },
+        "target_loops": 2
+      }
+    }
+  },
+  "planned_paired_blocks": 15,
+  "pooled_interval_warning": "Wilson/Jeffreys intervals, if shown, are descriptive and do not account for within-seed dependence",
+  "primary_paired_unit": "map-seed",
+  "rare_event_reporting": [
+    "per-map raw numerator/denominator",
+    "per-seed rates",
+    "pooled rates as descriptive only",
+    "paired map-seed differences",
+    "mean median range and positive/tie/negative direction count"
+  ],
+  "status": "FROZEN_BEFORE_M2_M3_PERFORMANCE_RUNS",
+  "strong_acceptance_rate": "number of executed active-loop actions with at least one TARGET_ATTRIBUTABLE accepted constraint divided by executed active-loop actions"
+}

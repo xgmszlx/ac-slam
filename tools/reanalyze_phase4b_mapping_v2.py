@@ -67,6 +67,7 @@ def reanalyze(root, gt_yaml, output_dir, detail_dir):
             "occupied_boundary_f1": result["occupied_boundary_f1"]["f1"],
             "symmetric_boundary_distance_mean_m": result["symmetric_boundary_distance"]["mean_m"],
             "symmetric_boundary_distance_median_m": result["symmetric_boundary_distance"]["median_m"],
+            "symmetric_boundary_distance_p95_m": result["symmetric_boundary_distance"]["p95_m"],
             "occupied_iou_secondary": result["occupied_iou"]["value"],
             "observed_coverage_global": 1.0 - result["supporting"]["estimated_unknown_ratio"],
             "detail": str(detail_path),
@@ -84,6 +85,7 @@ def reanalyze(root, gt_yaml, output_dir, detail_dir):
                 "local_boundary_recall": local["boundary_f1"]["recall"],
                 "local_symmetric_boundary_distance_mean_m": local["symmetric_boundary_distance"]["mean_m"],
                 "local_symmetric_boundary_distance_median_m": local["symmetric_boundary_distance"]["median_m"],
+                "local_symmetric_boundary_distance_p95_m": local["symmetric_boundary_distance"]["p95_m"],
                 "local_distance_status": local["symmetric_boundary_distance"]["status"],
                 "local_observed_coverage": local["observed_coverage"],
                 "local_domain_cells": local["domain_cells"],
@@ -96,6 +98,26 @@ def reanalyze(root, gt_yaml, output_dir, detail_dir):
         with (output_dir / name).open("w", newline="", encoding="utf-8") as stream:
             writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
             writer.writeheader(); writer.writerows(rows)
+
+    by_block = {(row["map"], row["seed"], row["condition"]): row for row in global_rows}
+    paired_rows = []
+    for map_name, seed in sorted({(row["map"], row["seed"]) for row in global_rows}):
+        for left, right in (("B", "A"), ("C", "A"), ("C", "B")):
+            lhs, rhs = by_block[(map_name, seed, left)], by_block[(map_name, seed, right)]
+            paired_rows.append({
+                "map": map_name, "seed": seed, "contrast": "{}-{}".format(left, right),
+                "boundary_f1_delta": lhs["occupied_boundary_f1"] - rhs["occupied_boundary_f1"],
+                "symmetric_distance_delta_m": (
+                    lhs["symmetric_boundary_distance_mean_m"]
+                    - rhs["symmetric_boundary_distance_mean_m"]
+                ),
+                "occupied_iou_delta_secondary": (
+                    lhs["occupied_iou_secondary"] - rhs["occupied_iou_secondary"]
+                ),
+            })
+    with (output_dir / "paired_seed_mapping_v2.csv").open("w", newline="", encoding="utf-8") as stream:
+        writer = csv.DictWriter(stream, fieldnames=list(paired_rows[0]))
+        writer.writeheader(); writer.writerows(paired_rows)
 
     method_stats = {}
     for condition in ("A", "B", "C"):
@@ -126,6 +148,21 @@ def reanalyze(root, gt_yaml, output_dir, detail_dir):
         ],
         "occupied_iou_role": "secondary construct-limited metric",
         "inference_warning": "loop rows are descriptive; the formal paired unit remains map-seed",
+        "local_target_comparability": {
+            "same_loop_vertex_sequence_across_A_B_C_for_each_seed": all(
+                len({
+                    tuple(int(row["vertex"]) for row in local_rows
+                          if row["seed"] == seed and row["condition"] == condition)
+                    for condition in ("A", "B", "C")
+                }) == 1
+                for seed in sorted({row["seed"] for row in local_rows})
+            ),
+            "coordinate_frame": "prior-map and map frame share the recorded start-relative coordinates",
+        },
+        "local_availability": {
+            key: sum(row["local_boundary_status"] == key for row in local_rows)
+            for key in sorted({row["local_boundary_status"] for row in local_rows})
+        },
         "method_stats": method_stats,
     }
     (output_dir / "phase4b_mapping_reanalysis.json").write_text(

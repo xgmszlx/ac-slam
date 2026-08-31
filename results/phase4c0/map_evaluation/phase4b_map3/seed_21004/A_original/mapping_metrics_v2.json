@@ -63,13 +63,12 @@
       "radius_m": 5.0,
       "symmetric_boundary_distance": {
         "estimated_boundary_cells": 5,
-        "estimated_to_gt_mean_m": 5.263826391823283,
-        "estimated_to_gt_median_m": 5.263078946776308,
+        "estimated_to_gt_mean_m": 1.3,
         "gt_boundary_cells": 7,
-        "gt_to_est_mean_m": 5.342779218633985,
-        "gt_to_est_median_m": 5.341348144429457,
-        "mean_m": 5.303302805228634,
-        "median_m": 5.302213545602882,
+        "gt_to_est_mean_m": 0.5,
+        "mean_m": 0.9,
+        "median_m": 0.9,
+        "p95_m": 0.99,
         "status": "AVAILABLE"
       },
       "target_id": "loop_1",
@@ -104,7 +103,8 @@
         "gt_to_est_mean_m": null,
         "mean_m": null,
         "median_m": null,
-        "status": "ONE_EMPTY_DISTANCE_UNDEFINED"
+        "p95_m": null,
+        "status": "NOT_APPLICABLE_NO_GT_BOUNDARY"
       },
       "target_id": "loop_2",
       "vertex": 26,
@@ -133,11 +133,12 @@
       "radius_m": 5.0,
       "symmetric_boundary_distance": {
         "estimated_boundary_cells": 0,
-        "estimated_to_gt_mean_m": 0.0,
+        "estimated_to_gt_mean_m": null,
         "gt_boundary_cells": 0,
-        "gt_to_est_mean_m": 0.0,
+        "gt_to_est_mean_m": null,
         "mean_m": null,
         "median_m": null,
+        "p95_m": null,
         "status": "NOT_APPLICABLE_NO_GT_BOUNDARY"
       },
       "target_id": "loop_3",
@@ -167,13 +168,12 @@
       "radius_m": 5.0,
       "symmetric_boundary_distance": {
         "estimated_boundary_cells": 152,
-        "estimated_to_gt_mean_m": 2.257174827056436,
-        "estimated_to_gt_median_m": 1.6340020031478217,
+        "estimated_to_gt_mean_m": 1.4523237955281292,
         "gt_boundary_cells": 26,
         "gt_to_est_mean_m": 1.103041176299551,
-        "gt_to_est_median_m": 1.1,
-        "mean_m": 1.6801080016779935,
-        "median_m": 1.367001001573911,
+        "mean_m": 1.27768248591384,
+        "median_m": 1.2000000000000002,
+        "p95_m": 1.9500000000000002,
         "status": "AVAILABLE"
       },
       "target_id": "loop_4",
@@ -203,13 +203,12 @@
       "radius_m": 5.0,
       "symmetric_boundary_distance": {
         "estimated_boundary_cells": 144,
-        "estimated_to_gt_mean_m": 1.4321672647100927,
-        "estimated_to_gt_median_m": 1.4807439802027353,
+        "estimated_to_gt_mean_m": 1.2523883283846287,
         "gt_boundary_cells": 80,
-        "gt_to_est_mean_m": 0.47809633357403636,
-        "gt_to_est_median_m": 0.0,
-        "mean_m": 0.9551317991420645,
-        "median_m": 0.7403719901013677,
+        "gt_to_est_mean_m": 0.4410228543910891,
+        "mean_m": 0.846705591387859,
+        "median_m": 0.7250000000000001,
+        "p95_m": 2.628324187458337,
         "status": "AVAILABLE"
       },
       "target_id": "loop_5",
@@ -240,7 +239,7 @@
     "boundary_tolerance_m": 0.2,
     "estimated_unknown_policy": "neither occupied nor free inside GT-known domain; therefore false negative where the GT class is occupied/free",
     "gt_unknown_policy": "excluded from evaluation domain",
-    "local_boundary_policy": "score boundary points whose centres lie inside the frozen circular ROI; nearest-neighbour search uses the full opposite boundary to avoid crop-edge artifacts",
+    "local_boundary_policy": "score boundary points whose centres lie inside the frozen circular ROI; nearest-neighbour search for F1 and distance uses the full opposite boundary to avoid crop-edge artifacts",
     "local_coverage_policy": "all GT-known cells in the circular ROI form the denominator; estimated unknown/out-of-bounds cells are unobserved, and unobserved GT boundary remains in local recall",
     "local_radius_m": 5.0,
     "occupied_boundary": "occupied minus one 8-neighbour 3x3 binary erosion",
@@ -270,6 +269,7 @@
     "gt_to_est_median_m": 0.8,
     "mean_m": 0.8525366573718709,
     "median_m": 0.6000000000000001,
+    "p95_m": 2.5936263672131936,
     "status": "AVAILABLE"
   }
 }

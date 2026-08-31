@@ -1,0 +1,68 @@
+{
+  "boundary_thickening": {
+    "boundary_f1": 0.03870967741935484,
+    "symmetric_boundary_distance_mean_m": 0.2903006105250828,
+    "symmetric_boundary_distance_median_m": 0.30000000000000004,
+    "symmetric_boundary_distance_p95_m": 0.30000000000000004
+  },
+  "checks": {
+    "boundary_thickening_worse": true,
+    "double_wall_worse": true,
+    "empty_local_roi_not_false_perfect": true,
+    "identity": true,
+    "resolution_conversion": true,
+    "translation_1_2_4_monotonic": true,
+    "unknown_masking_penalizes_recall_and_coverage": true
+  },
+  "double_wall": {
+    "boundary_f1": 0.8827586206896552,
+    "symmetric_boundary_distance_mean_m": 0.043209876543209874,
+    "symmetric_boundary_distance_median_m": 0.0,
+    "symmetric_boundary_distance_p95_m": 0.2
+  },
+  "empty_local_roi_status": "NOT_APPLICABLE_NO_GT_BOUNDARY",
+  "frozen_boundary_tolerance_m": 0.2,
+  "frozen_local_radius_m": 5.0,
+  "identity": {
+    "boundary_f1": 1.0,
+    "symmetric_boundary_distance_mean_m": 0.0,
+    "symmetric_boundary_distance_median_m": 0.0,
+    "symmetric_boundary_distance_p95_m": 0.0
+  },
+  "passed": 7,
+  "resolution_conversion": {
+    "boundary_f1": 1.0,
+    "symmetric_boundary_distance_mean_m": 0.0,
+    "symmetric_boundary_distance_median_m": 0.0,
+    "symmetric_boundary_distance_p95_m": 0.0
+  },
+  "status": "PASS",
+  "total": 7,
+  "translations": [
+    {
+      "boundary_f1": 1.0,
+      "cells": 1,
+      "symmetric_boundary_distance_mean_m": 0.06290322580645161,
+      "symmetric_boundary_distance_median_m": 0.1,
+      "symmetric_boundary_distance_p95_m": 0.1
+    },
+    {
+      "boundary_f1": 1.0,
+      "cells": 2,
+      "symmetric_boundary_distance_mean_m": 0.12580645161290321,
+      "symmetric_boundary_distance_median_m": 0.2,
+      "symmetric_boundary_distance_p95_m": 0.2
+    },
+    {
+      "boundary_f1": 0.3870967741935484,
+      "cells": 4,
+      "symmetric_boundary_distance_mean_m": 0.25161290322580643,
+      "symmetric_boundary_distance_median_m": 0.4,
+      "symmetric_boundary_distance_p95_m": 0.4
+    }
+  ],
+  "unknown_masking": {
+    "local_boundary_recall": 0.0,
+    "local_observed_coverage": 0.69921875
+  }
+}

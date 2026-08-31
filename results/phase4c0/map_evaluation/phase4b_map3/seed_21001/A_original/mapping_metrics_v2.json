@@ -68,6 +68,7 @@
         "gt_to_est_mean_m": null,
         "mean_m": null,
         "median_m": null,
+        "p95_m": null,
         "status": "ONE_EMPTY_DISTANCE_UNDEFINED"
       },
       "target_id": "loop_1",
@@ -97,11 +98,12 @@
       "radius_m": 5.0,
       "symmetric_boundary_distance": {
         "estimated_boundary_cells": 0,
-        "estimated_to_gt_mean_m": 0.0,
+        "estimated_to_gt_mean_m": null,
         "gt_boundary_cells": 0,
-        "gt_to_est_mean_m": 0.0,
+        "gt_to_est_mean_m": null,
         "mean_m": null,
         "median_m": null,
+        "p95_m": null,
         "status": "NOT_APPLICABLE_NO_GT_BOUNDARY"
       },
       "target_id": "loop_2",
@@ -131,13 +133,12 @@
       "radius_m": 5.0,
       "symmetric_boundary_distance": {
         "estimated_boundary_cells": 84,
-        "estimated_to_gt_mean_m": 2.883071899916588,
-        "estimated_to_gt_median_m": 2.0024984394500787,
+        "estimated_to_gt_mean_m": 2.0251181013908583,
         "gt_boundary_cells": 80,
-        "gt_to_est_mean_m": 2.350172533600955,
-        "gt_to_est_median_m": 1.9531685271668051,
-        "mean_m": 2.6166222167587714,
-        "median_m": 1.9778334833084419,
+        "gt_to_est_mean_m": 1.8989225336009554,
+        "mean_m": 1.9620203174959068,
+        "median_m": 1.95524865872714,
+        "p95_m": 3.1584691396078814,
         "status": "AVAILABLE"
       },
       "target_id": "loop_3",
@@ -172,7 +173,8 @@
         "gt_to_est_mean_m": null,
         "mean_m": null,
         "median_m": null,
-        "status": "ONE_EMPTY_DISTANCE_UNDEFINED"
+        "p95_m": null,
+        "status": "NOT_APPLICABLE_NO_GT_BOUNDARY"
       },
       "target_id": "loop_4",
       "vertex": 26,
@@ -202,7 +204,7 @@
     "boundary_tolerance_m": 0.2,
     "estimated_unknown_policy": "neither occupied nor free inside GT-known domain; therefore false negative where the GT class is occupied/free",
     "gt_unknown_policy": "excluded from evaluation domain",
-    "local_boundary_policy": "score boundary points whose centres lie inside the frozen circular ROI; nearest-neighbour search uses the full opposite boundary to avoid crop-edge artifacts",
+    "local_boundary_policy": "score boundary points whose centres lie inside the frozen circular ROI; nearest-neighbour search for F1 and distance uses the full opposite boundary to avoid crop-edge artifacts",
     "local_coverage_policy": "all GT-known cells in the circular ROI form the denominator; estimated unknown/out-of-bounds cells are unobserved, and unobserved GT boundary remains in local recall",
     "local_radius_m": 5.0,
     "occupied_boundary": "occupied minus one 8-neighbour 3x3 binary erosion",
@@ -232,6 +234,7 @@
     "gt_to_est_median_m": 0.4,
     "mean_m": 0.7622317676106767,
     "median_m": 0.35000000000000003,
+    "p95_m": 2.8,
     "status": "AVAILABLE"
   }
 }

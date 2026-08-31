@@ -30,7 +30,10 @@ def parse_world(path):
 
 
 def skeleton_metrics(free, resolution):
-    skeleton, clearance = medial_axis(free, return_distance=True)
+    # medial_axis uses random tie-breaking for equidistant pixels.  Fix the
+    # generator so the blind topology inventory and map selection are exactly
+    # reproducible across reruns.
+    skeleton, clearance = medial_axis(free, return_distance=True, rng=0)
     points = np.argwhere(skeleton)
     index = {tuple(point): idx for idx, point in enumerate(points)}
     degrees = np.zeros(len(points), dtype=int)

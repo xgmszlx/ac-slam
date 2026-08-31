@@ -5,12 +5,22 @@
     "symmetric_boundary_distance_mean_m"
   ],
   "inference_warning": "loop rows are descriptive; the formal paired unit remains map-seed",
+  "local_availability": {
+    "AVAILABLE": 24,
+    "ESTIMATED_BOUNDARY_WITHOUT_GT": 3,
+    "NOT_APPLICABLE_NO_GT_BOUNDARY": 27,
+    "NO_ESTIMATED_BOUNDARY": 9
+  },
   "local_loop_rows": 63,
   "local_secondary_metrics": [
     "local_boundary_f1",
     "local_symmetric_boundary_distance_mean_m",
     "local_observed_coverage"
   ],
+  "local_target_comparability": {
+    "coordinate_frame": "prior-map and map frame share the recorded start-relative coordinates",
+    "same_loop_vertex_sequence_across_A_B_C_for_each_seed": true
+  },
   "method_stats": {
     "A": {
       "global_boundary_f1": {
@@ -42,9 +52,9 @@
         "n": 21
       },
       "local_symmetric_distance_m_loop_descriptive": {
-        "max": 5.303302805228634,
-        "mean": 1.3608783428404059,
-        "median": 0.9551317991420645,
+        "max": 1.9620203174959068,
+        "mean": 0.6993003671231401,
+        "median": 0.684213821697635,
         "min": 0.0,
         "n": 9
       },
@@ -86,9 +96,9 @@
         "n": 21
       },
       "local_symmetric_distance_m_loop_descriptive": {
-        "max": 2.5063519366839584,
-        "mean": 1.1468338547365988,
-        "median": 1.1910265822513078,
+        "max": 1.7397130794740758,
+        "mean": 0.654039683850995,
+        "median": 0.5894271460167799,
         "min": 0.0,
         "n": 8
       },
@@ -130,9 +140,9 @@
         "n": 21
       },
       "local_symmetric_distance_m_loop_descriptive": {
-        "max": 2.115158313958913,
-        "mean": 0.8549291938570904,
-        "median": 0.8116831107327257,
+        "max": 1.2043485667547118,
+        "mean": 0.4940930607027373,
+        "median": 0.43478984338895355,
         "min": 0.0,
         "n": 7
       },

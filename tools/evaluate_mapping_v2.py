@@ -29,14 +29,14 @@ def symmetric_boundary_distance(gt_boundary, est_boundary, resolution):
     est_count = int(est_boundary.sum())
     if gt_count == 0 and est_count == 0:
         return {
-            "mean_m": 0.0, "median_m": 0.0,
+            "mean_m": 0.0, "median_m": 0.0, "p95_m": 0.0,
             "estimated_to_gt_mean_m": 0.0, "gt_to_est_mean_m": 0.0,
             "estimated_boundary_cells": 0, "gt_boundary_cells": 0,
             "status": "BOTH_EMPTY",
         }
     if gt_count == 0 or est_count == 0:
         return {
-            "mean_m": None, "median_m": None,
+            "mean_m": None, "median_m": None, "p95_m": None,
             "estimated_to_gt_mean_m": None, "gt_to_est_mean_m": None,
             "estimated_boundary_cells": est_count, "gt_boundary_cells": gt_count,
             "status": "ONE_EMPTY_DISTANCE_UNDEFINED",
@@ -46,6 +46,7 @@ def symmetric_boundary_distance(gt_boundary, est_boundary, resolution):
     return {
         "mean_m": float(0.5 * (np.mean(est_to_gt) + np.mean(gt_to_est))),
         "median_m": float(0.5 * (np.median(est_to_gt) + np.median(gt_to_est))),
+        "p95_m": float(0.5 * (np.percentile(est_to_gt, 95) + np.percentile(gt_to_est, 95))),
         "estimated_to_gt_mean_m": float(np.mean(est_to_gt)),
         "gt_to_est_mean_m": float(np.mean(gt_to_est)),
         "estimated_to_gt_median_m": float(np.median(est_to_gt)),
@@ -104,12 +105,40 @@ def local_boundary_scores(gt_boundary, est_boundary, mask, resolution, tolerance
 
 
 def local_symmetric_distance(gt_boundary, est_boundary, mask, resolution):
-    result = symmetric_boundary_distance(gt_boundary & mask, est_boundary & mask, resolution)
-    if result["status"] == "BOTH_EMPTY":
-        result["mean_m"] = None
-        result["median_m"] = None
-        result["status"] = "NOT_APPLICABLE_NO_GT_BOUNDARY"
-    return result
+    local_gt = gt_boundary & mask
+    local_est = est_boundary & mask
+    gt_count, est_count = int(local_gt.sum()), int(local_est.sum())
+    if gt_count == 0:
+        return {
+            "mean_m": None, "median_m": None, "p95_m": None,
+            "estimated_to_gt_mean_m": None, "gt_to_est_mean_m": None,
+            "estimated_boundary_cells": est_count, "gt_boundary_cells": 0,
+            "status": "NOT_APPLICABLE_NO_GT_BOUNDARY",
+        }
+    if est_count == 0 or int(est_boundary.sum()) == 0:
+        return {
+            "mean_m": None, "median_m": None, "p95_m": None,
+            "estimated_to_gt_mean_m": None, "gt_to_est_mean_m": None,
+            "estimated_boundary_cells": est_count, "gt_boundary_cells": gt_count,
+            "status": "ONE_EMPTY_DISTANCE_UNDEFINED",
+        }
+
+    # Only source points are restricted to the ROI.  Search each source against
+    # the complete opposite boundary so the circular crop cannot create an
+    # artificial nearest-neighbour penalty at its edge.
+    distance_to_gt = distance_transform_edt(~gt_boundary, sampling=resolution)
+    distance_to_est = distance_transform_edt(~est_boundary, sampling=resolution)
+    est_to_gt = distance_to_gt[local_est]
+    gt_to_est = distance_to_est[local_gt]
+    return {
+        "mean_m": float(0.5 * (np.mean(est_to_gt) + np.mean(gt_to_est))),
+        "median_m": float(0.5 * (np.median(est_to_gt) + np.median(gt_to_est))),
+        "p95_m": float(0.5 * (np.percentile(est_to_gt, 95) + np.percentile(gt_to_est, 95))),
+        "estimated_to_gt_mean_m": float(np.mean(est_to_gt)),
+        "gt_to_est_mean_m": float(np.mean(gt_to_est)),
+        "estimated_boundary_cells": est_count, "gt_boundary_cells": gt_count,
+        "status": "AVAILABLE",
+    }
 
 
 def evaluate_maps_v2(gt, estimated, boundary_tolerance_m=0.20, local_targets=None, local_radius_m=5.0):
@@ -129,7 +158,8 @@ def evaluate_maps_v2(gt, estimated, boundary_tolerance_m=0.20, local_targets=Non
         "local_radius_m": float(local_radius_m),
         "local_boundary_policy": (
             "score boundary points whose centres lie inside the frozen circular ROI; "
-            "nearest-neighbour search uses the full opposite boundary to avoid crop-edge artifacts"
+            "nearest-neighbour search for F1 and distance uses the full opposite boundary "
+            "to avoid crop-edge artifacts"
         ),
         "local_coverage_policy": (
             "all GT-known cells in the circular ROI form the denominator; estimated unknown/out-of-bounds "
