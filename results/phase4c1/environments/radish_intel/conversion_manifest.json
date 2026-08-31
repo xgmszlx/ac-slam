@@ -1,0 +1,79 @@
+{
+  "artifacts": {
+    "floorplan.inc": "9087664e52773d63ea7e0546b10eadfe2e224a242b5b31dacb5cd756f6347059",
+    "hokuyo.inc": "63187469b0c9173f2ab1e5086723283d8e920007e1a77030a64d583cdf19dc32",
+    "p3at.inc": "a619126df1a551ba06f552a3f981e00fdfd12c8daf779cf35d4d79f98579c2b1",
+    "radish_intel.png": "9a32567e11665cc799a07cec25996e786d3776a30106b33f3deb5eff14717737",
+    "radish_intel.world": "717fa1544c17520dafffb5bfe1cd1e0f283c34e16a29402da463c787f9f624a6",
+    "radish_intel.xml": "6f7c4a7d39a7dc04991d13569f0ef3e831207e61e34ceeb9bc93f0e2b8bfac0c",
+    "radish_intel.yaml": "0a98854f0b24ec2ca302ff5905d8039280a5aa62af8eba3e7a2510ed5a0093f0"
+  },
+  "candidate": "radish_intel",
+  "free_area_m2": 467.14250000000004,
+  "height_m": 29.05,
+  "license": "CC BY 1.0 via the Radish repository policy",
+  "license_url": "https://creativecommons.org/licenses/by/1.0/",
+  "parameters": {
+    "junction_rule": "connected clusters of medial-axis pixels with degree != 2",
+    "maximum_prior_edge_segment_m": 12.0,
+    "medial_axis_rng_seed": 0,
+    "minimum_free_component_px": 16,
+    "minimum_terminal_branch_m": 2.0,
+    "prior_grid_resolution_m": 1.0,
+    "robot_clearance_m": 0.45,
+    "source_free_gray_min": 250,
+    "source_occupied_gray_max": 128,
+    "start_rule": "prior-graph node nearest the arithmetic mean of all prior-node pixels",
+    "thin_ray_opening_radius_px": 1
+  },
+  "radish_page": "https://radish.sourceforge.net/",
+  "raw_free_component_count": 7,
+  "source": {
+    "dataset": "Intel Research Lab",
+    "description": "Intel Research Lab indoor office mapping dataset",
+    "map_sha256": "82c2a35bf3e46c0003c2dd8e75faa3c8e9905d9f431ad8b4b327c4314131d607",
+    "map_url": "https://www.ipb.uni-bonn.de/html/projects/radish/intel.gfs.png",
+    "original_file": "intel.gfs.png",
+    "provider": "Dirk Haehnel",
+    "resolution_m": 0.05,
+    "resolution_status": "GMapping delta=0.05 m and corrected-log/raster extent agreement"
+  },
+  "source_page": "https://www.ipb.uni-bonn.de/datasets/",
+  "topology": {
+    "junction_count": 68,
+    "junction_density_per_100m": 44.99235987869139,
+    "median_corridor_width_m": 1.6124515496597098,
+    "prior_cycle_rank": 0,
+    "prior_edges": 1,
+    "prior_nodes": 2,
+    "skeleton_cycle_count": 25,
+    "skeleton_length_m": 151.13677118368966
+  },
+  "validation": {
+    "all_edges_traversable": true,
+    "candidate": "radish_intel",
+    "largest_free_component_selected": true,
+    "map_size_consistent": true,
+    "prior_connected": true,
+    "prior_cycle_rank": 0,
+    "prior_edges": 1,
+    "prior_nodes": 2,
+    "roundtrip": {
+      "edge_count_equal": true,
+      "node_count_equal": true,
+      "positions_equal_1e_6": true,
+      "read_drawio_success": true
+    },
+    "source_sha256_verified": true,
+    "start_is_traversable": true,
+    "start_node": 0,
+    "start_pose": [
+      -3.95,
+      9.0,
+      0.0
+    ],
+    "start_rule": "prior-graph node nearest the arithmetic mean of all prior-node pixels",
+    "status": "PASS"
+  },
+  "width_m": 28.950000000000003
+}

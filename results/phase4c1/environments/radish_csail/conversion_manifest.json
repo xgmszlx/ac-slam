@@ -1,0 +1,79 @@
+{
+  "artifacts": {
+    "floorplan.inc": "9087664e52773d63ea7e0546b10eadfe2e224a242b5b31dacb5cd756f6347059",
+    "hokuyo.inc": "63187469b0c9173f2ab1e5086723283d8e920007e1a77030a64d583cdf19dc32",
+    "p3at.inc": "a619126df1a551ba06f552a3f981e00fdfd12c8daf779cf35d4d79f98579c2b1",
+    "radish_csail.png": "f61442177a0e5932c498d4006f8d2d4a127ee9296c6e4f2b8447748d22f2ecf6",
+    "radish_csail.world": "4aabff03f8db822ede0d22f30185fe99b01034a747a9383ea6e0c2672efd72cf",
+    "radish_csail.xml": "29af412a6cdba3f102f8e2de37b81157748e21f5798203fc8e9a42b66dc8a99c",
+    "radish_csail.yaml": "0e319d595461c6443bb992e5c7e99b0ad3f3eb5abb03f9497d84e276a74d3948"
+  },
+  "candidate": "radish_csail",
+  "free_area_m2": 649.7700000000001,
+  "height_m": 66.8,
+  "license": "CC BY 1.0 via the Radish repository policy",
+  "license_url": "https://creativecommons.org/licenses/by/1.0/",
+  "parameters": {
+    "junction_rule": "connected clusters of medial-axis pixels with degree != 2",
+    "maximum_prior_edge_segment_m": 12.0,
+    "medial_axis_rng_seed": 0,
+    "minimum_free_component_px": 16,
+    "minimum_terminal_branch_m": 2.0,
+    "prior_grid_resolution_m": 1.0,
+    "robot_clearance_m": 0.45,
+    "source_free_gray_min": 250,
+    "source_occupied_gray_max": 128,
+    "start_rule": "prior-graph node nearest the arithmetic mean of all prior-node pixels",
+    "thin_ray_opening_radius_px": 1
+  },
+  "radish_page": "https://radish.sourceforge.net/",
+  "raw_free_component_count": 19,
+  "source": {
+    "dataset": "MIT CSAIL",
+    "description": "MIT CSAIL indoor laboratory/building mapping dataset",
+    "map_sha256": "86345085e6e902d8bf9466504c648c66b8982c2e171fed99fc220210d71f54f7",
+    "map_url": "https://www.ipb.uni-bonn.de/html/projects/radish/csail.corrected.png",
+    "original_file": "csail.corrected.png",
+    "provider": "Cyrill Stachniss",
+    "resolution_m": 0.1,
+    "resolution_status": "inferred from corrected-log metric extent and public raster dimensions"
+  },
+  "source_page": "https://www.ipb.uni-bonn.de/datasets/",
+  "topology": {
+    "junction_count": 73,
+    "junction_density_per_100m": 28.239009808287953,
+    "median_corridor_width_m": 1.697056274847714,
+    "prior_cycle_rank": 0,
+    "prior_edges": 7,
+    "prior_nodes": 8,
+    "skeleton_cycle_count": 31,
+    "skeleton_length_m": 258.50764773832475
+  },
+  "validation": {
+    "all_edges_traversable": true,
+    "candidate": "radish_csail",
+    "largest_free_component_selected": true,
+    "map_size_consistent": true,
+    "prior_connected": true,
+    "prior_cycle_rank": 0,
+    "prior_edges": 7,
+    "prior_nodes": 8,
+    "roundtrip": {
+      "edge_count_equal": true,
+      "node_count_equal": true,
+      "positions_equal_1e_6": true,
+      "read_drawio_success": true
+    },
+    "source_sha256_verified": true,
+    "start_is_traversable": true,
+    "start_node": 6,
+    "start_pose": [
+      -2.5500000000000003,
+      12.850000000000001,
+      0.0
+    ],
+    "start_rule": "prior-graph node nearest the arithmetic mean of all prior-node pixels",
+    "status": "PASS"
+  },
+  "width_m": 48.2
+}

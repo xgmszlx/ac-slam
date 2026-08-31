@@ -1,0 +1,109 @@
+{
+  "M1": "map3",
+  "M2": "map8",
+  "M2_frozen": true,
+  "M2_opportunities": [
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "M3": "radish_mexico",
+  "candidate_results": {
+    "radish_csail": {
+      "each_seed_at_least_2": false,
+      "opportunity_adequacy": "FAIL",
+      "per_seed_counts": {
+        "21001": 0,
+        "21002": 0,
+        "21003": 0,
+        "21004": 0,
+        "21005": 0
+      },
+      "primary_m3_eligible": false,
+      "prior_validation": "PASS",
+      "scale_adequacy": "PASS",
+      "topology_distance": null,
+      "total": 0,
+      "total_at_least_10": false
+    },
+    "radish_fr079": {
+      "each_seed_at_least_2": false,
+      "opportunity_adequacy": "FAIL",
+      "per_seed_counts": {
+        "21001": 0,
+        "21002": 0,
+        "21003": 0,
+        "21004": 0,
+        "21005": 0
+      },
+      "primary_m3_eligible": false,
+      "prior_validation": "PASS",
+      "scale_adequacy": "FAIL",
+      "topology_distance": null,
+      "total": 0,
+      "total_at_least_10": false
+    },
+    "radish_intel": {
+      "each_seed_at_least_2": false,
+      "opportunity_adequacy": "FAIL",
+      "per_seed_counts": {
+        "21001": 0,
+        "21002": 0,
+        "21003": 0,
+        "21004": 0,
+        "21005": 0
+      },
+      "primary_m3_eligible": false,
+      "prior_validation": "PASS",
+      "scale_adequacy": "FAIL",
+      "topology_distance": null,
+      "total": 0,
+      "total_at_least_10": false
+    },
+    "radish_mexico": {
+      "each_seed_at_least_2": true,
+      "opportunity_adequacy": "PASS",
+      "per_seed_counts": {
+        "21001": 11,
+        "21002": 11,
+        "21003": 11,
+        "21004": 11,
+        "21005": 11
+      },
+      "primary_m3_eligible": true,
+      "prior_validation": "PASS",
+      "scale_adequacy": "PASS",
+      "topology_distance": {
+        "distance_to_map3": 3.9063058337134224,
+        "distance_to_map8": 3.677961811390863,
+        "minimum_distance_to_frozen_maps": 3.677961811390863
+      },
+      "total": 55,
+      "total_at_least_10": true
+    }
+  },
+  "formal_performance_runs_started": false,
+  "opportunity_criterion": {
+    "minimum_five_seed_total": 10,
+    "minimum_per_seed": 2
+  },
+  "performance_results_consulted": false,
+  "scale_gate": {
+    "minimum_free_area_m2": 500.0,
+    "minimum_height_m": 30.0,
+    "minimum_width_m": 45.0
+  },
+  "selection_rule": "among prior/scale/opportunity PASS candidates, maximize minimum standardized topology distance to map3 and map8",
+  "status": "READY_FOR_PHASE4C_FORMAL",
+  "topology_features": [
+    "aspect_ratio",
+    "free_fraction",
+    "skeleton_length_per_free_area",
+    "junction_density_per_100m",
+    "log1p_skeleton_cycles",
+    "median_corridor_width_m",
+    "log1p_prior_cycle_rank"
+  ]
+}

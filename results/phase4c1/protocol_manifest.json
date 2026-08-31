@@ -1,0 +1,79 @@
+{
+  "environments": {
+    "M1": "map3",
+    "M2": "map8",
+    "M3": "radish_mexico"
+  },
+  "formal_performance_runs_started": false,
+  "frozen_attribution": "unique active interval AND accepted historical chain overlaps fixed 7-scan H_star",
+  "frozen_local_roi": "5.0 m circle centered on method-neutral high-level loop vertex",
+  "frozen_mapping_metrics": {
+    "local": [
+      "local_boundary_f1",
+      "local_symmetric_boundary_distance",
+      "local_observed_coverage"
+    ],
+    "primary": {
+      "boundary_f1_tolerance_m": 0.2,
+      "symmetric_boundary_distance": true
+    },
+    "secondary": [
+      "occupied_iou"
+    ]
+  },
+  "frozen_online_settings": {
+    "active_loop_proxy_m": 4.0,
+    "d_opt_changed": false,
+    "direction_cue_changed": false,
+    "early_stop_changed": false,
+    "frontier_logic_changed": false,
+    "karto_changed": false,
+    "navigation_parameters_changed": false,
+    "neutral_attribution_history_scans": 7,
+    "nominal_repair_budget_m": 12.0,
+    "repair_densification_m": 0.5,
+    "repair_waypoint_cap": 24,
+    "tsp_objective_changed": false
+  },
+  "future_new_runs": 30,
+  "future_order": {
+    "21001": [
+      "A",
+      "B",
+      "C"
+    ],
+    "21002": [
+      "B",
+      "C",
+      "A"
+    ],
+    "21003": [
+      "C",
+      "A",
+      "B"
+    ],
+    "21004": [
+      "A",
+      "C",
+      "B"
+    ],
+    "21005": [
+      "B",
+      "A",
+      "C"
+    ]
+  },
+  "generation_base_checkpoint": "cbd86bb29524d4ad3cbaaff37314addb8e0f4704",
+  "individual_loop_use": "descriptive only",
+  "map3_policy": "reuse Phase4B raw runs with neutral attribution and unified offline evaluator",
+  "method_parameters_changed": false,
+  "primary_unit": "map-seed",
+  "selection_sequence_fields": [
+    "selected_loop_vertex_sequence",
+    "selection_order",
+    "selection_timestamp",
+    "initial_tsp_hash",
+    "full_tsp_hash"
+  ],
+  "status": "READY_FOR_PHASE4C_FORMAL"
+}

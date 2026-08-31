@@ -1,0 +1,121 @@
+{
+  "candidates": {
+    "radish_csail": {
+      "all_edges_traversable": true,
+      "candidate": "radish_csail",
+      "largest_free_component_selected": true,
+      "map_size_consistent": true,
+      "prior_connected": true,
+      "prior_cycle_rank": 0,
+      "prior_edges": 7,
+      "prior_nodes": 8,
+      "roundtrip": {
+        "edge_count_equal": true,
+        "node_count_equal": true,
+        "positions_equal_1e_6": true,
+        "read_drawio_success": true
+      },
+      "source_sha256_verified": true,
+      "start_is_traversable": true,
+      "start_node": 6,
+      "start_pose": [
+        -2.5500000000000003,
+        12.850000000000001,
+        0.0
+      ],
+      "start_rule": "prior-graph node nearest the arithmetic mean of all prior-node pixels",
+      "status": "PASS"
+    },
+    "radish_fr079": {
+      "all_edges_traversable": true,
+      "candidate": "radish_fr079",
+      "largest_free_component_selected": true,
+      "map_size_consistent": true,
+      "prior_connected": true,
+      "prior_cycle_rank": 0,
+      "prior_edges": 1,
+      "prior_nodes": 2,
+      "roundtrip": {
+        "edge_count_equal": true,
+        "node_count_equal": true,
+        "positions_equal_1e_6": true,
+        "read_drawio_success": true
+      },
+      "source_sha256_verified": true,
+      "start_is_traversable": true,
+      "start_node": 0,
+      "start_pose": [
+        -20.25,
+        1.675,
+        0.0
+      ],
+      "start_rule": "prior-graph node nearest the arithmetic mean of all prior-node pixels",
+      "status": "PASS"
+    },
+    "radish_intel": {
+      "all_edges_traversable": true,
+      "candidate": "radish_intel",
+      "largest_free_component_selected": true,
+      "map_size_consistent": true,
+      "prior_connected": true,
+      "prior_cycle_rank": 0,
+      "prior_edges": 1,
+      "prior_nodes": 2,
+      "roundtrip": {
+        "edge_count_equal": true,
+        "node_count_equal": true,
+        "positions_equal_1e_6": true,
+        "read_drawio_success": true
+      },
+      "source_sha256_verified": true,
+      "start_is_traversable": true,
+      "start_node": 0,
+      "start_pose": [
+        -3.95,
+        9.0,
+        0.0
+      ],
+      "start_rule": "prior-graph node nearest the arithmetic mean of all prior-node pixels",
+      "status": "PASS"
+    },
+    "radish_mexico": {
+      "all_edges_traversable": true,
+      "candidate": "radish_mexico",
+      "largest_free_component_selected": true,
+      "map_size_consistent": true,
+      "prior_connected": true,
+      "prior_cycle_rank": 28,
+      "prior_edges": 192,
+      "prior_nodes": 165,
+      "roundtrip": {
+        "edge_count_equal": true,
+        "node_count_equal": true,
+        "positions_equal_1e_6": true,
+        "read_drawio_success": true
+      },
+      "source_sha256_verified": true,
+      "start_is_traversable": true,
+      "start_node": 59,
+      "start_pose": [
+        -6.25,
+        -1.6,
+        0.0
+      ],
+      "start_rule": "prior-graph node nearest the arithmetic mean of all prior-node pixels",
+      "status": "PASS"
+    }
+  },
+  "parameters": {
+    "junction_rule": "connected clusters of medial-axis pixels with degree != 2",
+    "maximum_prior_edge_segment_m": 12.0,
+    "medial_axis_rng_seed": 0,
+    "minimum_free_component_px": 16,
+    "minimum_terminal_branch_m": 2.0,
+    "prior_grid_resolution_m": 1.0,
+    "robot_clearance_m": 0.45,
+    "source_free_gray_min": 250,
+    "source_occupied_gray_max": 128,
+    "start_rule": "prior-graph node nearest the arithmetic mean of all prior-node pixels",
+    "thin_ray_opening_radius_px": 1
+  }
+}

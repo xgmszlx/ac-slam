@@ -1,0 +1,79 @@
+{
+  "artifacts": {
+    "floorplan.inc": "9087664e52773d63ea7e0546b10eadfe2e224a242b5b31dacb5cd756f6347059",
+    "hokuyo.inc": "63187469b0c9173f2ab1e5086723283d8e920007e1a77030a64d583cdf19dc32",
+    "p3at.inc": "a619126df1a551ba06f552a3f981e00fdfd12c8daf779cf35d4d79f98579c2b1",
+    "radish_mexico.png": "b58741fbe042261c43d1f6b8500ad40612e4d6c8178f6a96ecbbb300c822ac2e",
+    "radish_mexico.world": "d17f1bc50ec33c7e1ab7ce528fce450a2f86341c7376aec1338d0115d89959c4",
+    "radish_mexico.xml": "1efee1830bd9b29462a948d3dd67bf5338b7fc2658ec85962421ea665f33c75b",
+    "radish_mexico.yaml": "1e84884a09665f6b3ddd85fb2cc1d9b22403a7e38d8fac238f89c4eed328e886"
+  },
+  "candidate": "radish_mexico",
+  "free_area_m2": 3873.1925000000006,
+  "height_m": 53.85,
+  "license": "CC BY 1.0 via the Radish repository policy",
+  "license_url": "https://creativecommons.org/licenses/by/1.0/",
+  "parameters": {
+    "junction_rule": "connected clusters of medial-axis pixels with degree != 2",
+    "maximum_prior_edge_segment_m": 12.0,
+    "medial_axis_rng_seed": 0,
+    "minimum_free_component_px": 16,
+    "minimum_terminal_branch_m": 2.0,
+    "prior_grid_resolution_m": 1.0,
+    "robot_clearance_m": 0.45,
+    "source_free_gray_min": 250,
+    "source_occupied_gray_max": 128,
+    "start_rule": "prior-graph node nearest the arithmetic mean of all prior-node pixels",
+    "thin_ray_opening_radius_px": 1
+  },
+  "radish_page": "https://radish.sourceforge.net/",
+  "raw_free_component_count": 92,
+  "source": {
+    "dataset": "Acapulco Convention Center",
+    "description": "large indoor convention-center mapping dataset in Acapulco, Mexico",
+    "map_sha256": "cda4456749a16505437ef1b2203d37ee9ba1598d1d0f92cf5afc530fec93c308",
+    "map_url": "https://www.ipb.uni-bonn.de/html/projects/radish/mexico.gfs.png",
+    "original_file": "mexico.gfs.png",
+    "provider": "Nick Roy",
+    "resolution_m": 0.05,
+    "resolution_status": "inferred from corrected-log metric extent and public raster dimensions"
+  },
+  "source_page": "https://www.ipb.uni-bonn.de/datasets/",
+  "topology": {
+    "junction_count": 873,
+    "junction_density_per_100m": 39.22909608541178,
+    "median_corridor_width_m": 3.710795063055895,
+    "prior_cycle_rank": 28,
+    "prior_edges": 192,
+    "prior_nodes": 165,
+    "skeleton_cycle_count": 1307,
+    "skeleton_length_m": 2225.3890278258145
+  },
+  "validation": {
+    "all_edges_traversable": true,
+    "candidate": "radish_mexico",
+    "largest_free_component_selected": true,
+    "map_size_consistent": true,
+    "prior_connected": true,
+    "prior_cycle_rank": 28,
+    "prior_edges": 192,
+    "prior_nodes": 165,
+    "roundtrip": {
+      "edge_count_equal": true,
+      "node_count_equal": true,
+      "positions_equal_1e_6": true,
+      "read_drawio_success": true
+    },
+    "source_sha256_verified": true,
+    "start_is_traversable": true,
+    "start_node": 59,
+    "start_pose": [
+      -6.25,
+      -1.6,
+      0.0
+    ],
+    "start_rule": "prior-graph node nearest the arithmetic mean of all prior-node pixels",
+    "status": "PASS"
+  },
+  "width_m": 101.55000000000001
+}

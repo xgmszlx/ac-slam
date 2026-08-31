@@ -1,0 +1,24 @@
+include "p3at.inc"
+include "floorplan.inc"
+
+name "Phase4C-1 radish_fr079"
+interval_sim 100
+quit_time 0
+resolution 0.025
+show_clock 0
+show_clock_interval 100
+threads 2
+
+floorplan
+(
+  name "radish_fr079"
+  bitmap "radish_fr079.png"
+  size [45.550000 18.400000 2.000]
+  pose [0.000 0.000 0.000 0.000]
+)
+
+pioneer3at
+(
+  name "robot"
+  pose [-20.250000 1.675000 0.000 0.000000]
+)
