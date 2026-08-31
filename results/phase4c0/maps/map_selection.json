@@ -1,0 +1,60 @@
+{
+  "M1": "map3",
+  "M2": "map4",
+  "M3": "map7",
+  "all_pair_scores": [
+    {
+      "distance_M1_first": 3.9305310140538445,
+      "distance_M1_second": 4.62276058339641,
+      "distance_between_new_maps": 4.5735397003646865,
+      "diversity_score": 13.126831297814942,
+      "maps": [
+        "map4",
+        "map7"
+      ]
+    },
+    {
+      "distance_M1_first": 3.9305310140538445,
+      "distance_M1_second": 4.342864681148261,
+      "distance_between_new_maps": 3.5947338028736735,
+      "diversity_score": 11.868129498075778,
+      "maps": [
+        "map4",
+        "map8"
+      ]
+    },
+    {
+      "distance_M1_first": 4.62276058339641,
+      "distance_M1_second": 4.342864681148261,
+      "distance_between_new_maps": 2.545812324791012,
+      "diversity_score": 11.511437589335682,
+      "maps": [
+        "map7",
+        "map8"
+      ]
+    }
+  ],
+  "label_policy": "topology-distinct; corridor/room labels are descriptive only and are not forced",
+  "pair_rule": "maximize d(M1,M2)+d(M1,M3)+d(M2,M3)",
+  "performance_results_consulted": false,
+  "selected_pair_metrics": {
+    "distance_M1_first": 3.9305310140538445,
+    "distance_M1_second": 4.62276058339641,
+    "distance_between_new_maps": 4.5735397003646865,
+    "diversity_score": 13.126831297814942,
+    "maps": [
+      "map4",
+      "map7"
+    ]
+  },
+  "selection_features": [
+    "aspect_ratio",
+    "obstacle_fraction_known",
+    "skeleton_junction_density_per_100m",
+    "skeleton_cycle_count",
+    "median_corridor_width_m",
+    "prior_graph_cycle_rank"
+  ],
+  "selection_status": "FROZEN_BEFORE_NEW_MAP_PERFORMANCE_RUNS",
+  "standardization": "population z-score across existing author maps"
+}

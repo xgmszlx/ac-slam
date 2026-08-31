@@ -1,0 +1,150 @@
+{
+  "formal_runs": 15,
+  "global_primary_metrics": [
+    "occupied_boundary_f1",
+    "symmetric_boundary_distance_mean_m"
+  ],
+  "inference_warning": "loop rows are descriptive; the formal paired unit remains map-seed",
+  "local_loop_rows": 63,
+  "local_secondary_metrics": [
+    "local_boundary_f1",
+    "local_symmetric_boundary_distance_mean_m",
+    "local_observed_coverage"
+  ],
+  "method_stats": {
+    "A": {
+      "global_boundary_f1": {
+        "max": 0.5585871364291201,
+        "mean": 0.41058688810762467,
+        "median": 0.391957362057004,
+        "min": 0.3158841371973536,
+        "n": 5
+      },
+      "global_symmetric_distance_m": {
+        "max": 0.8525366573718709,
+        "mean": 0.6094510992827168,
+        "median": 0.6023020541700921,
+        "min": 0.38562071087325794,
+        "n": 5
+      },
+      "local_boundary_f1_loop_descriptive": {
+        "max": 1.0,
+        "mean": 0.2561308938580742,
+        "median": 0.0,
+        "min": 0.0,
+        "n": 14
+      },
+      "local_observed_coverage_loop_descriptive": {
+        "max": 1.0,
+        "mean": 0.9899460196938402,
+        "median": 1.0,
+        "min": 0.9335548172757475,
+        "n": 21
+      },
+      "local_symmetric_distance_m_loop_descriptive": {
+        "max": 5.303302805228634,
+        "mean": 1.3608783428404059,
+        "median": 0.9551317991420645,
+        "min": 0.0,
+        "n": 9
+      },
+      "occupied_iou_secondary": {
+        "max": 0.08329784835808932,
+        "mean": 0.06645129400028708,
+        "median": 0.06127131782945736,
+        "min": 0.04997309987283576,
+        "n": 5
+      }
+    },
+    "B": {
+      "global_boundary_f1": {
+        "max": 0.5841958433903082,
+        "mean": 0.5045264666986138,
+        "median": 0.5234996555466301,
+        "min": 0.4361416862266569,
+        "n": 5
+      },
+      "global_symmetric_distance_m": {
+        "max": 0.5283644826327049,
+        "mean": 0.47707649270424624,
+        "median": 0.45887606614870136,
+        "min": 0.44784819836779094,
+        "n": 5
+      },
+      "local_boundary_f1_loop_descriptive": {
+        "max": 1.0,
+        "mean": 0.30614226837124664,
+        "median": 0.03529411764705883,
+        "min": 0.0,
+        "n": 11
+      },
+      "local_observed_coverage_loop_descriptive": {
+        "max": 1.0,
+        "mean": 0.9973479494024466,
+        "median": 1.0,
+        "min": 0.9720684772815034,
+        "n": 21
+      },
+      "local_symmetric_distance_m_loop_descriptive": {
+        "max": 2.5063519366839584,
+        "mean": 1.1468338547365988,
+        "median": 1.1910265822513078,
+        "min": 0.0,
+        "n": 8
+      },
+      "occupied_iou_secondary": {
+        "max": 0.09171862207947604,
+        "mean": 0.08043284143496772,
+        "median": 0.07766435685368701,
+        "min": 0.0723437636189314,
+        "n": 5
+      }
+    },
+    "C": {
+      "global_boundary_f1": {
+        "max": 0.5455183656132634,
+        "mean": 0.4495401344079289,
+        "median": 0.48550994461069896,
+        "min": 0.32782043482885925,
+        "n": 5
+      },
+      "global_symmetric_distance_m": {
+        "max": 0.6803233504839454,
+        "mean": 0.5198980948385974,
+        "median": 0.47632899927642014,
+        "min": 0.4178422105916319,
+        "n": 5
+      },
+      "local_boundary_f1_loop_descriptive": {
+        "max": 1.0,
+        "mean": 0.2735916818321265,
+        "median": 0.0,
+        "min": 0.0,
+        "n": 11
+      },
+      "local_observed_coverage_loop_descriptive": {
+        "max": 1.0,
+        "mean": 0.994905219890456,
+        "median": 1.0,
+        "min": 0.9685663174035267,
+        "n": 21
+      },
+      "local_symmetric_distance_m_loop_descriptive": {
+        "max": 2.115158313958913,
+        "mean": 0.8549291938570904,
+        "median": 0.8116831107327257,
+        "min": 0.0,
+        "n": 7
+      },
+      "occupied_iou_secondary": {
+        "max": 0.07584459037678844,
+        "mean": 0.06751094427031404,
+        "median": 0.07089723119577192,
+        "min": 0.055986987733737725,
+        "n": 5
+      }
+    }
+  },
+  "occupied_iou_role": "secondary construct-limited metric",
+  "status": "OFFLINE_REANALYSIS_COMPLETED"
+}

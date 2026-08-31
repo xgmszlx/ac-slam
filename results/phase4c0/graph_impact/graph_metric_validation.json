@@ -1,0 +1,17 @@
+{
+  "accepted_events": 7,
+  "baseline_metric": "normalized weighted spanning-tree D-opt: exp(log(det(reduced weighted Laplacian))/(N-1)); edge weight is the D-opt geometric mean of the inverse 3x3 edge covariance",
+  "eta_real_available": false,
+  "final_graph_closure_edge_ablation_available": 5,
+  "implementation_validation": {
+    "absolute_error": 0.0,
+    "pass": true,
+    "toy_baseline_dense_value": 73.68062997280772,
+    "toy_sparse_value": 73.68062997280772
+  },
+  "interval_pre_post_available": 6,
+  "interval_pre_post_causal_interpretation": "not valid; node/odometry growth occurs during intervals",
+  "pose_correction_available": 6,
+  "pose_correction_definition": "index-aligned /slam_path historical positions common to before/after snapshots; continuous mean/median/max only",
+  "predicted_gain_available": false
+}

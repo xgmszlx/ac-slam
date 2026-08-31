@@ -1,0 +1,14 @@
+{
+  "PASSIVE_OR_UNRELATED": "current Karto keyscan acquisition timestamp does not lie in exactly one active-loop interval",
+  "TARGET_ATTRIBUTABLE": "current Karto keyscan acquisition timestamp lies in exactly one active-loop execution interval AND the accepted historical chain has at least one exact scan-id overlap with the history ids reconstructed from the frozen reliable-loop selection",
+  "TEMPORALLY_ASSOCIATED": "current Karto keyscan acquisition timestamp lies in exactly one active-loop interval, but exact intended-history overlap is absent or cannot be established",
+  "callback_grace_period_s": null,
+  "notes": [
+    "Classification follows scan acquisition and history identity, not callback arrival alone.",
+    "The intended-id replay mirrors oracle modes 0/1/2 at the frozen Phase 4B parameters.",
+    "The 4.0 m gate remains a configuration-inspired lightweight prototype proxy."
+  ],
+  "primary": "TARGET_ATTRIBUTABLE",
+  "spatial_threshold_m": null,
+  "version": "phase4c0-v1"
+}
