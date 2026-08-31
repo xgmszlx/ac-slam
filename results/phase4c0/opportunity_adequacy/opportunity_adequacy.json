@@ -1,0 +1,64 @@
+{
+  "audit_scope": "offline initial high-level planning only; no robot exploration",
+  "criterion": "each seed >=2 planned active loops AND five-seed total >=10",
+  "formal_performance_runs_started": false,
+  "maps": {
+    "map4": {
+      "each_seed_at_least_2": false,
+      "opportunity_adequacy": "FAIL",
+      "per_seed_counts": {
+        "21001": 1,
+        "21002": 1,
+        "21003": 1,
+        "21004": 1,
+        "21005": 1
+      },
+      "total_at_least_10": false,
+      "total_planned_active_loop_opportunities": 5
+    },
+    "map7": {
+      "each_seed_at_least_2": false,
+      "opportunity_adequacy": "FAIL",
+      "per_seed_counts": {
+        "21001": 1,
+        "21002": 1,
+        "21003": 1,
+        "21004": 1,
+        "21005": 1
+      },
+      "total_at_least_10": false,
+      "total_planned_active_loop_opportunities": 5
+    },
+    "map8": {
+      "each_seed_at_least_2": true,
+      "opportunity_adequacy": "PASS",
+      "per_seed_counts": {
+        "21001": 3,
+        "21002": 3,
+        "21003": 3,
+        "21004": 3,
+        "21005": 3
+      },
+      "total_at_least_10": true,
+      "total_planned_active_loop_opportunities": 15
+    }
+  },
+  "next_ranked_author_candidates_passing": [
+    "map8"
+  ],
+  "seed21001_offline_vs_startup_smoke": {
+    "map4": {
+      "full_tsp_equal": true,
+      "initial_tsp_equal": true
+    },
+    "map7": {
+      "full_tsp_equal": true,
+      "initial_tsp_equal": true
+    }
+  },
+  "selected_map_status": {
+    "map4": "FAIL",
+    "map7": "FAIL"
+  },
+  "status": "PASS"
+}

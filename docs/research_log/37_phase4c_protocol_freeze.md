@@ -2,7 +2,12 @@
 
 Date frozen: 2026-08-31
 
-Status: **FROZEN; M2/M3 FORMAL RUNS NOT STARTED**.
+Status after Phase 4C-0.5 amendment: **BLOCKED; M2/M3 FORMAL RUNS NOT STARTED**.
+
+The original map4/map7 matrix remains preserved as `NOT_STARTED`, but Phase 4C-0.5
+found that both maps fail the frozen initial active-loop opportunity criterion.
+Document 41 supersedes the earlier authorization language; no row may execute until
+two adequate new author maps are frozen.
 
 ## Study matrix
 
@@ -53,11 +58,23 @@ stdout/stderr/rosout, observer events and loop intervals, keyscan acquisition
 records, accepted typed events, trajectories, loop table, final map, pose graph,
 repair records, exploration outcome, and validity state.
 
+Every run must additionally save `selected_loop_vertex_sequence`, `selection_order`,
+`selection_timestamp`, `initial_tsp_hash`, and `full_tsp_hash`. If A/B/C sequences
+are identical, the paper may say loop targets were matched. If they differ, it may
+only say the high-level selection algorithm/objective was held fixed; a common
+selected-loop subset is secondary and the primary analysis remains map-seed.
+
 Offline outputs use the common strong attribution in document 31; evo trajectory
 protocol from Phase 4B; global Boundary F1 at 0.20 m; symmetric boundary distance;
 5 m local revisit metrics plus coverage; and secondary occupied IoU. Strict causal
 graph pre/post is not a formal required success endpoint. Final-edge ablation and
 continuous correction are exploratory where source graphs permit them.
+
+Phase 4C-0.5 supersedes document 31's target construction. The primary H* is now
+the method-neutral high-level loop vertex, the original baseline closest historical
+anchor, and exactly seven chronological pre-loop keyscans from that anchor. H* is
+constructed before `oracle_mode` branching. The 5 m local ROI remains centred on
+the high-level prior vertex and never on an executed replay/repair path.
 
 ROS/catkin runs use system Python 3.8. The Phase 4C offline map/topology tools use
 the existing Conda Python 3.12 environment and must run in a clean shell (or with

@@ -1,5 +1,9 @@
 # Phase 4C Blind Map Selection
 
+> **Topology selection remains historically valid, but formal authorization is
+> superseded by documents 40--41.** map4 and map7 both fail the subsequently frozen
+> active-loop opportunity-adequacy gate.
+
 Date frozen: 2026-08-31
 
 ## Inventory and selection rule

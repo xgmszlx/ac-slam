@@ -13,7 +13,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 PHASE4B = ROOT / "results/phase4b/map3"
-ATTRIBUTION = ROOT / "results/phase4c0/attribution/phase4b_event_attribution.csv"
+ATTRIBUTION = ROOT / "results/phase4c0/attribution_neutrality/phase4b_neutral_attribution.csv"
 STATS_DIR = ROOT / "results/phase4c0/statistics"
 PROTOCOL_DIR = ROOT / "results/phase4c0/protocol"
 METHODS = {
@@ -175,14 +175,15 @@ def main():
     )
 
     tracked_sources = [
-        "tools/audit_phase4c0_attribution.py", "tools/analyze_phase4c0_graph_impact.py",
+        "tools/audit_phase4c0_attribution.py", "tools/audit_phase4c05_neutrality.py",
+        "tools/audit_phase4c05_opportunities.py", "tools/analyze_phase4c0_graph_impact.py",
         "tools/evaluate_mapping_v2.py", "tools/reanalyze_phase4b_mapping_v2.py",
         "tools/inventory_phase4c_maps.py", "tools/validate_phase4c0_mapping.py",
         "baseline/Graph-Based_SLAM-Aware_Exploration/scripts/path_planner.py",
         "dependencies/navigation_2d/nav2d_karto/OpenKarto/source/OpenMapper.cpp",
     ]
     protocol = {
-        "phase": "4C", "status": "FROZEN_NOT_STARTED",
+        "phase": "4C", "status": "BLOCKED_OPPORTUNITY_ADEQUACY_NOT_STARTED",
         "scope": "2D LiDAR active SLAM for planar indoor ground robots",
         "selection_frozen_before_new_map_performance": True,
         "maps": MAPS, "new_formal_run_count": len(matrix),
@@ -215,8 +216,39 @@ def main():
         "attribution": {
             "primary": "TARGET_ATTRIBUTABLE",
             "current_measurement_rule": "current keyscan acquisition time lies in exactly one active interval",
-            "history_identity_rule": "accepted historical chain exactly overlaps replayed intended history ids",
+            "history_identity_rule": (
+                "accepted historical chain has non-empty overlap with H*: original baseline closest "
+                "historical anchor plus exactly seven chronological pre-loop keyscans"
+            ),
+            "target_constructed_before_oracle_branch": True,
+            "oracle_mode_used_to_construct_target": False,
+            "target_cardinality": 7,
             "grace_period_s": None, "spatial_threshold_m": None,
+        },
+        "local_revisit_roi": {
+            "centre": "method-neutral high-level prior-graph loop vertex position",
+            "radius_m": 5.0,
+            "execution_replay_or_repair_path_used": False,
+        },
+        "selection_sequence_protocol": {
+            "required_fields_per_run": [
+                "selected_loop_vertex_sequence", "selection_order", "selection_timestamp",
+                "initial_tsp_hash", "full_tsp_hash",
+            ],
+            "paper_wording_if_sequences_equal": "loop targets matched",
+            "paper_wording_if_sequences_differ": (
+                "high-level selection algorithm/objective held fixed; do not claim all selected loops held fixed"
+            ),
+            "secondary_analysis_if_sequences_differ": "common selected-loop subset",
+            "primary_analysis_unit": "map-seed",
+        },
+        "opportunity_adequacy": {
+            "criterion": "each seed >=2 initial planned active loops and five-seed total >=10",
+            "map4": {"counts": [1, 1, 1, 1, 1], "total": 5, "status": "FAIL"},
+            "map7": {"counts": [1, 1, 1, 1, 1], "total": 5, "status": "FAIL"},
+            "map8_next_candidate": {"counts": [3, 3, 3, 3, 3], "total": 15, "status": "PASS"},
+            "formal_run_authorized": False,
+            "blocking_reason": "only one remaining author map passes, but two adequate new maps are required",
         },
         "outcome_groups": {
             "loop_realization": ["target-attributable active-loop acceptance rate"],
@@ -266,12 +298,23 @@ def main():
             "case_3": "REOPEN_EXECUTION_HYPOTHESIS",
             "case_4": "REASSESS_LOOP_UTILITY",
         },
+        "formal_hypotheses": {
+            "H1_realization_gap": "Original planner-selected loops often fail to become target-attributable constraints",
+            "H2_execution_leverage": "blind stronger revisit can alter realization",
+            "H3_selective_efficiency": "selective execution retains realization benefit while reducing revisit cost",
+            "H4_supporting_non_degradation": "SLAM trajectory and local-map outcomes show no systematic degradation",
+        },
+        "efficiency_presentation": (
+            "two-dimensional Pareto-style realization rate versus active-loop distance/time; "
+            "no single closure-per-meter score"
+        ),
     }
     (PROTOCOL_DIR / "phase4c_protocol.json").write_text(
         json.dumps(protocol, indent=2, sort_keys=True) + "\n", encoding="utf-8"
     )
     print(json.dumps({
-        "status": "PASS", "new_formal_runs": len(matrix),
+        "status": "BLOCKED_OPPORTUNITY_ADEQUACY_NOT_STARTED",
+        "new_formal_runs": len(matrix),
         "maps": ["map4", "map7"], "primary_unit": "map-seed",
     }, indent=2, sort_keys=True))
 

@@ -1,5 +1,8 @@
 # Phase 4C-0 Final Review
 
+> **Superseded by the blocking Phase 4C-0.5 gate in document 41.** No formal run was
+> started between the reviews. The current decision is `PROTOCOL_BLOCKED`.
+
 ## A. Repository State
 
 Phase 4C-0 was isolated on `research/phase4c0-scientific-audit`. Phase 4B raw data

@@ -1,0 +1,47 @@
+{
+  "accepted_event_class_counts": {
+    "PASSIVE_OR_UNRELATED": 1,
+    "TARGET_ATTRIBUTABLE": 1,
+    "TEMPORALLY_ASSOCIATED": 5
+  },
+  "all_target_sets_size_7": true,
+  "constructed_before_oracle_branch": true,
+  "executed_action_counts": {
+    "A": 21,
+    "B": 21,
+    "C": 21
+  },
+  "frozen_h_star": "method-neutral high-level loop vertex -> original baseline closest historical anchor -> exactly seven chronological pre-loop keyscans from that anchor",
+  "independent_run_identity_note": "numeric scan ids differ across stochastic A/B/C histories; equality means the same pre-branch vertex/anchor/K=7 construction and cardinality, not shared scan ids",
+  "local_roi_neutrality": {
+    "centre": "method-neutral high-level prior-graph loop vertex position",
+    "execution_replay_or_repair_path_used": false,
+    "per_seed_A_B_C_roi_sequences_equal": {
+      "21001": true,
+      "21002": true,
+      "21003": true,
+      "21004": true,
+      "21005": true
+    },
+    "radius_m": 5.0,
+    "status": "PASS"
+  },
+  "oracle_mode_used": false,
+  "phase4b_selected_loop_vertex_sequences_equal": {
+    "21001": true,
+    "21002": true,
+    "21003": true,
+    "21004": true,
+    "21005": true
+  },
+  "prior_failure_reason": "target ids were reconstructed from oracle-mode-specific executed V0, Always-Trace, or Selective-repair paths",
+  "prior_phase4c0_definition_neutrality": "FAIL",
+  "status": "PASS",
+  "target_attributable_action_counts": {
+    "A": 0,
+    "B": 0,
+    "C": 1
+  },
+  "target_set_rows": 63,
+  "window_provenance": "K=7 and forward direction predate Phase 4A/4B in the author's V0 reliable-loop rule; the accepted chains were not used to select K"
+}

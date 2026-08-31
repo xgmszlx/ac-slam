@@ -1,5 +1,10 @@
 # Active-Loop Attribution Audit
 
+> **Superseded for Phase 4C primary attribution by document 39.** This document's
+> oracle-mode-specific target reconstruction failed the Phase 4C-0.5 neutrality
+> audit. Its historical outputs are retained, but A=0/B=2/C=2 must not be used as
+> the formal neutral result.
+
 Date frozen: 2026-08-31
 
 ## Final definitions

@@ -2,9 +2,12 @@
   "attribution": {
     "current_measurement_rule": "current keyscan acquisition time lies in exactly one active interval",
     "grace_period_s": null,
-    "history_identity_rule": "accepted historical chain exactly overlaps replayed intended history ids",
+    "history_identity_rule": "accepted historical chain has non-empty overlap with H*: original baseline closest historical anchor plus exactly seven chronological pre-loop keyscans",
+    "oracle_mode_used_to_construct_target": false,
     "primary": "TARGET_ATTRIBUTABLE",
-    "spatial_threshold_m": null
+    "spatial_threshold_m": null,
+    "target_cardinality": 7,
+    "target_constructed_before_oracle_branch": true
   },
   "conditions": {
     "A": {
@@ -58,6 +61,13 @@
       "no systematic pose-graph trajectory or map degradation"
     ]
   },
+  "efficiency_presentation": "two-dimensional Pareto-style realization rate versus active-loop distance/time; no single closure-per-meter score",
+  "formal_hypotheses": {
+    "H1_realization_gap": "Original planner-selected loops often fail to become target-attributable constraints",
+    "H2_execution_leverage": "blind stronger revisit can alter realization",
+    "H3_selective_efficiency": "selective execution retains realization benefit while reducing revisit cost",
+    "H4_supporting_non_degradation": "SLAM trajectory and local-map outcomes show no systematic degradation"
+  },
   "formal_seeds": [
     21001,
     21002,
@@ -65,6 +75,11 @@
     21004,
     21005
   ],
+  "local_revisit_roi": {
+    "centre": "method-neutral high-level prior-graph loop vertex position",
+    "execution_replay_or_repair_path_used": false,
+    "radius_m": 5.0
+  },
   "maps": {
     "map3": {
       "map_name": "map3/map3",
@@ -119,6 +134,44 @@
     ]
   },
   "only_scientific_variable": "oracle_mode",
+  "opportunity_adequacy": {
+    "blocking_reason": "only one remaining author map passes, but two adequate new maps are required",
+    "criterion": "each seed >=2 initial planned active loops and five-seed total >=10",
+    "formal_run_authorized": false,
+    "map4": {
+      "counts": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "status": "FAIL",
+      "total": 5
+    },
+    "map7": {
+      "counts": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "status": "FAIL",
+      "total": 5
+    },
+    "map8_next_candidate": {
+      "counts": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "status": "PASS",
+      "total": 15
+    }
+  },
   "outcome_groups": {
     "execution_efficiency": [
       "active-loop distance_m",
@@ -173,12 +226,27 @@
   ],
   "scope": "2D LiDAR active SLAM for planar indoor ground robots",
   "selection_frozen_before_new_map_performance": true,
+  "selection_sequence_protocol": {
+    "paper_wording_if_sequences_differ": "high-level selection algorithm/objective held fixed; do not claim all selected loops held fixed",
+    "paper_wording_if_sequences_equal": "loop targets matched",
+    "primary_analysis_unit": "map-seed",
+    "required_fields_per_run": [
+      "selected_loop_vertex_sequence",
+      "selection_order",
+      "selection_timestamp",
+      "initial_tsp_hash",
+      "full_tsp_hash"
+    ],
+    "secondary_analysis_if_sequences_differ": "common selected-loop subset"
+  },
   "source_freeze": {
     "branch": "research/phase4c0-scientific-audit",
     "file_sha256": {
       "baseline/Graph-Based_SLAM-Aware_Exploration/scripts/path_planner.py": "dcd66c620cbe3dde91e005fe4be8020a02da7955e2f19c41a5c671f5abaec7c1",
       "dependencies/navigation_2d/nav2d_karto/OpenKarto/source/OpenMapper.cpp": "6c787ff1bb862572d7ab140d7758db7d2b408561496d377011646a3bdd9a8cfb",
       "tools/analyze_phase4c0_graph_impact.py": "8050f3fb0c04df5bd1fe950e6a9934d02788249cae27a346358b8075e701e6ad",
+      "tools/audit_phase4c05_neutrality.py": "38e250320290e3f8f84fbc592c586aa3e5449be17022e98ab679b58ed46eac28",
+      "tools/audit_phase4c05_opportunities.py": "28c89038ad04bb5ef08c5786db01b08a4c545b496c896d623dab897f9e1436a5",
       "tools/audit_phase4c0_attribution.py": "d69267d941d5d3152f16200ef641c187204508b18545478c4eda7c40edc28f61",
       "tools/evaluate_mapping_v2.py": "3b340d0b7f09b568bf399372c669d5d2236da00dbc7447927f15461a9532169f",
       "tools/inventory_phase4c_maps.py": "88212e9900a8cdd7761a6080b7dccb30c2ce21f3dd66c87ee48a137fc6a4a238",
@@ -186,7 +254,7 @@
       "tools/validate_phase4c0_mapping.py": "690363779ab828aa6ff29eef4038b61146b7718aa7f53cb74fe8cb5285c20e0c"
     },
     "formal_preflight_requirement": "record clean final Phase4C-0 root HEAD and verify these file hashes",
-    "generation_base_root_commit": "d5174ba2fe6ef26200944d96432a2a2504b25576",
+    "generation_base_root_commit": "336ba7666540fef0d4660167218d4c34e5f8311c",
     "offline_python": {
       "executable": "/home/wcqw/anaconda3/bin/python",
       "invocation": "run in a clean shell or with PYTHONPATH unset; never inherit the catkin Python 3.8 package path into Python 3.12",
@@ -194,7 +262,7 @@
     },
     "ros_python": "/usr/bin/python3 3.8"
   },
-  "status": "FROZEN_NOT_STARTED",
+  "status": "BLOCKED_OPPORTUNITY_ADEQUACY_NOT_STARTED",
   "validity_policy": {
     "navigation_or_exploration_failure": "retain as experimental outcome",
     "technical_fault": "TECHNICAL_INVALID; preserve raw attempt and stop, no automatic retry"
