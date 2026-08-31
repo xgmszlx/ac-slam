@@ -95,13 +95,19 @@ def no_ros_master(env):
     return command_output(['rosparam', 'list'], env, timeout=5).returncode != 0
 
 
-def launch_command(seed, condition, suffix):
+def launch_command(seed, condition, suffix, map_config=None):
+    map_config = map_config or {
+        'map_name': 'map3/map3', 'robot_position': '-28.0 -28.0 0',
+        'map_width': 74.0,
+    }
     return [
         'roslaunch', 'cpp_solver', 'exploration.launch',
         'suffix:={}'.format(suffix), 'strategy:=MyPlanner',
         'only_use_tsp:=false', 'tsp_solver:=concorde',
-        'tsp_seed:={}'.format(seed), 'map_name:=map3/map3',
-        'robot_position:=-28.0 -28.0 0', 'map_width:=74.0',
+        'tsp_seed:={}'.format(seed),
+        'map_name:={}'.format(map_config['map_name']),
+        'robot_position:={}'.format(map_config['robot_position']),
+        'map_width:={}'.format(map_config['map_width']),
         'need_noise:=false', 'variance:=0',
         'enable_loop_diagnostics:=false',
         'loop_diagnostics_path:=', 'loop_diagnostics_run_id:=',
@@ -125,20 +131,26 @@ def save_command_result_allow_failure(command, env, path, timeout=60):
     return code
 
 
-def write_manifest(run_dir, seed, label, condition, command, protocol_manifest):
+def write_manifest(run_dir, seed, label, condition, command, protocol_manifest,
+                   map_config=None, phase='4B'):
+    map_config = map_config or {
+        'id': 'map3', 'start_pose': [-28.0, -28.0, 0.0],
+        'frozen_sha256': {},
+    }
     launch_args = {}
     for token in command[3:]:
         if ':=' in token:
             key, value = token.split(':=', 1)
             launch_args[key] = value
     manifest = {
-        'phase': '4B',
+        'phase': phase,
         'seed': seed,
         'condition': label,
         'method': condition['name'],
         'oracle_mode': condition['oracle_mode'],
-        'map': 'map3',
-        'start_pose_xyyaw': [-28.0, -28.0, 0.0],
+        'map': map_config['id'],
+        'start_pose_xyyaw': map_config['start_pose'],
+        'frozen_environment_sha256': map_config.get('frozen_sha256', {}),
         'launch_file': 'cpp_solver exploration.launch',
         'launch_arguments': launch_args,
         'scientific_variable': {'oracle_mode': condition['oracle_mode']},
@@ -160,7 +172,9 @@ def write_manifest(run_dir, seed, label, condition, command, protocol_manifest):
     )
 
 
-def evaluate_offline(run_dir, env, oracle_mode, seed, validity, exploration_wall_s):
+def evaluate_offline(run_dir, env, oracle_mode, seed, validity, exploration_wall_s,
+                     gt_map_yaml=None):
+    gt_map_yaml = Path(gt_map_yaml) if gt_map_yaml else GT_MAP_YAML
     evaluation_errors = []
     if (run_dir / 'trajectory_gt.txt').is_file() and (run_dir / 'trajectory_slam.txt').is_file():
         try:
@@ -180,7 +194,7 @@ def evaluate_offline(run_dir, env, oracle_mode, seed, validity, exploration_wall
         try:
             write_command_result([
                 '/usr/bin/python3', str(ROOT / 'tools' / 'evaluate_mapping.py'),
-                '--gt-yaml', str(GT_MAP_YAML),
+                '--gt-yaml', str(gt_map_yaml),
                 '--estimated-yaml', str(run_dir / 'final_map.yaml'),
                 '--output', str(run_dir / 'mapping_metrics.json'),
                 '--boundary-tolerance-m', '0.20',
@@ -218,21 +232,40 @@ def evaluate_offline(run_dir, env, oracle_mode, seed, validity, exploration_wall
 
 
 def run_one(seed, label, condition, seed_dir, env, explore_timeout,
-            protocol_manifest):
+            protocol_manifest, map_config=None, phase_tag='Phase4B',
+            attempt_name=None):
+    map_config = map_config or {
+        'id': 'map3', 'map_name': 'map3/map3',
+        'robot_position': '-28.0 -28.0 0', 'map_width': 74.0,
+        'start_pose': [-28.0, -28.0, 0.0],
+        'gt_yaml': str(GT_MAP_YAML), 'frozen_sha256': {},
+    }
     run_dir = seed_dir / condition['directory']
+    if attempt_name:
+        run_dir = run_dir / attempt_name
     if run_dir.exists():
         raise TechnicalInvalid('refusing to overwrite existing run: {}'.format(run_dir))
     run_dir.mkdir(parents=True)
-    suffix = '_Phase4B_seed{}_{}'.format(seed, label)
+    if phase_tag == 'Phase4B' and map_config['id'] == 'map3':
+        suffix = '_Phase4B_seed{}_{}'.format(seed, label)
+        manifest_phase = '4B'
+    else:
+        suffix = '_{}_{}_seed{}_{}_{}'.format(
+            phase_tag, map_config['id'], seed, label, attempt_name or 'attempt_01'
+        )
+        manifest_phase = '4C_FORMAL'
     tsp_source = AUTHOR_RESULTS / 'tsp_record{}.json'.format(suffix)
     if tsp_source.exists():
         raise TechnicalInvalid('pre-existing author output: {}'.format(tsp_source))
-    command = launch_command(seed, condition, suffix)
+    command = launch_command(seed, condition, suffix, map_config)
     (run_dir / 'full_command.txt').write_text(
         shlex.join(command) + '\n', encoding='utf-8'
     )
     shutil.copy2(MAPPER_PARAMS, run_dir / 'mapper_params.yaml')
-    write_manifest(run_dir, seed, label, condition, command, protocol_manifest)
+    write_manifest(
+        run_dir, seed, label, condition, command, protocol_manifest,
+        map_config=map_config, phase=manifest_phase,
+    )
     run_state = {
         'status': 'RUNNING', 'validity': None,
         'started_wall_time_utc': now_utc(),
@@ -396,7 +429,8 @@ def run_one(seed, label, condition, seed_dir, env, explore_timeout,
         if not (run_dir / 'loops.json').is_file() or not (run_dir / 'observer_summary.json').is_file():
             raise TechnicalInvalid('observer final artifacts missing')
         errors = evaluate_offline(
-            run_dir, env, condition['oracle_mode'], seed, validity, exploration_wall_s
+            run_dir, env, condition['oracle_mode'], seed, validity,
+            exploration_wall_s, gt_map_yaml=map_config['gt_yaml'],
         )
         if errors and validity == 'VALID':
             raise TechnicalInvalid('offline evaluation incomplete: {}'.format(errors))
