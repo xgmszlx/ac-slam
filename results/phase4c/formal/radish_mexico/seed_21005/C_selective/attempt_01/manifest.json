@@ -1,0 +1,62 @@
+{
+  "accepted_closure_source": "/Mapper/loop_closed",
+  "commits": {
+    "baseline": "7993bf8b93e503b352d89e3992b8e5d7b08e4459",
+    "navigation_2d": "062283d364d891603a546b83e557ab638ffaa163",
+    "root": "342e7c1e4af47e3c256a87bf3511d3d910e34748"
+  },
+  "condition": "C",
+  "created_utc": "2026-09-12T02:03:10.427409+00:00",
+  "diagnostics_enabled": false,
+  "frozen_environment_sha256": {
+    "floorplan.inc": "9087664e52773d63ea7e0546b10eadfe2e224a242b5b31dacb5cd756f6347059",
+    "hokuyo.inc": "63187469b0c9173f2ab1e5086723283d8e920007e1a77030a64d583cdf19dc32",
+    "p3at.inc": "a619126df1a551ba06f552a3f981e00fdfd12c8daf779cf35d4d79f98579c2b1",
+    "radish_mexico.png": "b58741fbe042261c43d1f6b8500ad40612e4d6c8178f6a96ecbbb300c822ac2e",
+    "radish_mexico.world": "d17f1bc50ec33c7e1ab7ce528fce450a2f86341c7376aec1338d0115d89959c4",
+    "radish_mexico.xml": "1efee1830bd9b29462a948d3dd67bf5338b7fc2658ec85962421ea665f33c75b",
+    "radish_mexico.yaml": "1e84884a09665f6b3ddd85fb2cc1d9b22403a7e38d8fac238f89c4eed328e886"
+  },
+  "full_command": "full_command.txt",
+  "launch_arguments": {
+    "enable_loop_diagnostics": "false",
+    "loop_diagnostics_path": "",
+    "loop_diagnostics_run_id": "",
+    "map_name": "radish_mexico/radish_mexico",
+    "map_width": "101.55",
+    "need_noise": "false",
+    "only_use_tsp": "false",
+    "oracle_after": "8",
+    "oracle_before": "8",
+    "oracle_densify_m": "0.5",
+    "oracle_dir_lambda": "1.0",
+    "oracle_mode": "2",
+    "oracle_repair_densify": "0.5",
+    "oracle_repair_max_len": "12.0",
+    "oracle_repair_max_wp": "24",
+    "oracle_span_gate": "4.0",
+    "robot_position": "-6.25 -1.6 0",
+    "strategy": "MyPlanner",
+    "suffix": "_Phase4C_radish_mexico_seed21005_C_attempt_01",
+    "tsp_seed": "21005",
+    "tsp_solver": "concorde",
+    "variance": "0"
+  },
+  "launch_file": "cpp_solver exploration.launch",
+  "map": "radish_mexico",
+  "mapper_params": "mapper_params.yaml",
+  "method": "Selective",
+  "oracle_mode": 2,
+  "phase": "4C_FORMAL",
+  "protocol_manifest": "results/phase4c/formal/protocol_manifest.json",
+  "protocol_manifest_sha256": "53e96b36b419d7ec70a4990a578e5817c2d0af6a5319e3c896ff915afab6ea6f",
+  "scientific_variable": {
+    "oracle_mode": 2
+  },
+  "seed": 21005,
+  "start_pose_xyyaw": [
+    -6.25,
+    -1.6,
+    0.0
+  ]
+}

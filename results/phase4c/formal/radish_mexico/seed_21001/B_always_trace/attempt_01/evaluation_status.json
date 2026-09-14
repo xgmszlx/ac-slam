@@ -1,0 +1,7 @@
+{
+  "errors": [
+    "phase2 finalize: RuntimeError: command failed: ['/usr/bin/python3', '/home/wcqw/ac-slam/tools/finalize_phase2_run.py', '--run-dir', '/home/wcqw/ac-slam/results/phase4c/formal/radish_mexico/seed_21001/B_always_trace/attempt_01']\nTraceback (most recent call last):\n  File \"/home/wcqw/ac-slam/tools/finalize_phase2_run.py\", line 148, in <module>\n    main()\n  File \"/home/wcqw/ac-slam/tools/finalize_phase2_run.py\", line 86, in main\n    high_level_path_length = planned_graph_path_length(run_dir, planned)\n  File \"/home/wcqw/ac-slam/tools/finalize_phase2_run.py\", line 47, in planned_graph_path_length\n    raise ValueError('recorded high-level path has no prior edge: {} -> {}'.format(\nValueError: recorded high-level path has no prior edge: 109 -> 100\n"
+  ],
+  "offline_only": true,
+  "status": "PARTIAL"
+}

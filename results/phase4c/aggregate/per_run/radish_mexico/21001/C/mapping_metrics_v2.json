@@ -1,0 +1,485 @@
+{
+  "grid": {
+    "estimated": {
+      "free_cells": 364293,
+      "free_thresh": 0.196,
+      "height": 611,
+      "image": "/home/wcqw/ac-slam/results/phase4c/formal/radish_mexico/seed_21001/C_selective/attempt_01/final_map.pgm",
+      "image_sha256": "315f030d8086f73af8cfa793008a57694b986359a4525b5f21f2586f6af249c8",
+      "negate": 0,
+      "occupied_cells": 19511,
+      "occupied_thresh": 0.65,
+      "origin_xyyaw": [
+        -44.59544,
+        -33.234875,
+        0.0
+      ],
+      "resolution_m": 0.1,
+      "unknown_cells": 238194,
+      "width": 1018,
+      "yaml": "/home/wcqw/ac-slam/results/phase4c/formal/radish_mexico/seed_21001/C_selective/attempt_01/final_map.yaml",
+      "yaml_sha256": "c34fecaa7622cffa9310d3e70f5208bfbcd640b8749df28807ddaa475d08eea8"
+    },
+    "evaluation_domain_cells": 2187387,
+    "gt": {
+      "free_cells": 1549277,
+      "free_thresh": 0.196,
+      "height": 1077,
+      "image": "/home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/world/radish_mexico/radish_mexico.png",
+      "image_sha256": "b58741fbe042261c43d1f6b8500ad40612e4d6c8178f6a96ecbbb300c822ac2e",
+      "negate": 0,
+      "occupied_cells": 638110,
+      "occupied_thresh": 0.65,
+      "origin_xyyaw": [
+        -50.775,
+        -26.925,
+        0.0
+      ],
+      "resolution_m": 0.05,
+      "unknown_cells": 0,
+      "width": 2031,
+      "yaml": "/home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/world/radish_mexico/radish_mexico.yaml",
+      "yaml_sha256": "1e84884a09665f6b3ddd85fb2cc1d9b22403a7e38d8fac238f89c4eed328e886"
+    }
+  },
+  "local_revisit": [
+    {
+      "boundary_f1": {
+        "estimated_boundary_cells": 1193,
+        "estimated_matched_cells": 131,
+        "f1": 0.12391202397322884,
+        "gt_boundary_cells": 837,
+        "gt_matched_cells": 119,
+        "precision": 0.10980720871751885,
+        "recall": 0.14217443249701314,
+        "status": "AVAILABLE"
+      },
+      "domain_cells": 31405,
+      "estimated_boundary_cells": 1193,
+      "gt_boundary_cells": 837,
+      "loop_id": 1,
+      "observed_cells": 30006,
+      "observed_coverage": 0.9554529533513771,
+      "radius_m": 5.0,
+      "symmetric_boundary_distance": {
+        "estimated_boundary_cells": 1193,
+        "estimated_to_gt_mean_m": 1.2389641083644323,
+        "gt_boundary_cells": 837,
+        "gt_to_est_mean_m": 0.9506687689169605,
+        "mean_m": 1.0948164386406964,
+        "median_m": 1.1728182529813904,
+        "p95_m": 1.9353146092854066,
+        "status": "AVAILABLE"
+      },
+      "target_id": "loop_1",
+      "vertex": 59,
+      "xy": [
+        -26.0,
+        1.0
+      ]
+    },
+    {
+      "boundary_f1": {
+        "estimated_boundary_cells": 851,
+        "estimated_matched_cells": 0,
+        "f1": 0.0,
+        "gt_boundary_cells": 544,
+        "gt_matched_cells": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "status": "AVAILABLE"
+      },
+      "domain_cells": 31403,
+      "estimated_boundary_cells": 851,
+      "gt_boundary_cells": 544,
+      "loop_id": 2,
+      "observed_cells": 30010,
+      "observed_coverage": 0.9556411807789065,
+      "radius_m": 5.0,
+      "symmetric_boundary_distance": {
+        "estimated_boundary_cells": 851,
+        "estimated_to_gt_mean_m": 2.158571711189398,
+        "gt_boundary_cells": 544,
+        "gt_to_est_mean_m": 1.9856411528108717,
+        "mean_m": 2.072106432000135,
+        "median_m": 2.0007775733736377,
+        "p95_m": 3.590823503561163,
+        "status": "AVAILABLE"
+      },
+      "target_id": "loop_2",
+      "vertex": 41,
+      "xy": [
+        -14.0,
+        8.0
+      ]
+    },
+    {
+      "boundary_f1": {
+        "estimated_boundary_cells": 0,
+        "estimated_matched_cells": 0,
+        "f1": 0.0,
+        "gt_boundary_cells": 254,
+        "gt_matched_cells": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "status": "NO_ESTIMATED_BOUNDARY"
+      },
+      "domain_cells": 31406,
+      "estimated_boundary_cells": 0,
+      "gt_boundary_cells": 254,
+      "loop_id": 3,
+      "observed_cells": 31406,
+      "observed_coverage": 1.0,
+      "radius_m": 5.0,
+      "symmetric_boundary_distance": {
+        "estimated_boundary_cells": 0,
+        "estimated_to_gt_mean_m": null,
+        "gt_boundary_cells": 254,
+        "gt_to_est_mean_m": null,
+        "mean_m": null,
+        "median_m": null,
+        "p95_m": null,
+        "status": "ONE_EMPTY_DISTANCE_UNDEFINED"
+      },
+      "target_id": "loop_3",
+      "vertex": 82,
+      "xy": [
+        -6.999999999999998,
+        -5.0
+      ]
+    },
+    {
+      "boundary_f1": {
+        "estimated_boundary_cells": 1186,
+        "estimated_matched_cells": 0,
+        "f1": 0.0,
+        "gt_boundary_cells": 437,
+        "gt_matched_cells": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "status": "AVAILABLE"
+      },
+      "domain_cells": 31407,
+      "estimated_boundary_cells": 1186,
+      "gt_boundary_cells": 437,
+      "loop_id": 4,
+      "observed_cells": 30704,
+      "observed_coverage": 0.9776164549304295,
+      "radius_m": 5.0,
+      "symmetric_boundary_distance": {
+        "estimated_boundary_cells": 1186,
+        "estimated_to_gt_mean_m": 1.5385426466309335,
+        "gt_boundary_cells": 437,
+        "gt_to_est_mean_m": 1.4498114502344213,
+        "mean_m": 1.4941770484326775,
+        "median_m": 1.538756594989446,
+        "p95_m": 1.995000162345153,
+        "status": "AVAILABLE"
+      },
+      "target_id": "loop_4",
+      "vertex": 69,
+      "xy": [
+        -22.999999999999996,
+        -0.9999999999999996
+      ]
+    },
+    {
+      "boundary_f1": {
+        "estimated_boundary_cells": 603,
+        "estimated_matched_cells": 1,
+        "f1": 0.0016273393002441008,
+        "gt_boundary_cells": 626,
+        "gt_matched_cells": 1,
+        "precision": 0.001658374792703151,
+        "recall": 0.001597444089456869,
+        "status": "AVAILABLE"
+      },
+      "domain_cells": 31405,
+      "estimated_boundary_cells": 603,
+      "gt_boundary_cells": 626,
+      "loop_id": 5,
+      "observed_cells": 30234,
+      "observed_coverage": 0.9627129437987582,
+      "radius_m": 5.0,
+      "symmetric_boundary_distance": {
+        "estimated_boundary_cells": 603,
+        "estimated_to_gt_mean_m": 1.3975730373649715,
+        "gt_boundary_cells": 626,
+        "gt_to_est_mean_m": 2.051635869941046,
+        "mean_m": 1.7246044536530087,
+        "median_m": 1.7516648189186452,
+        "p95_m": 3.0761700161637897,
+        "status": "AVAILABLE"
+      },
+      "target_id": "loop_5",
+      "vertex": 58,
+      "xy": [
+        -36.99999999999999,
+        1.0
+      ]
+    },
+    {
+      "boundary_f1": {
+        "estimated_boundary_cells": 743,
+        "estimated_matched_cells": 0,
+        "f1": 0.0,
+        "gt_boundary_cells": 710,
+        "gt_matched_cells": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "status": "AVAILABLE"
+      },
+      "domain_cells": 31406,
+      "estimated_boundary_cells": 743,
+      "gt_boundary_cells": 710,
+      "loop_id": 6,
+      "observed_cells": 31142,
+      "observed_coverage": 0.9915939629370184,
+      "radius_m": 5.0,
+      "symmetric_boundary_distance": {
+        "estimated_boundary_cells": 743,
+        "estimated_to_gt_mean_m": 1.619970976834572,
+        "gt_boundary_cells": 710,
+        "gt_to_est_mean_m": 1.5625144433487126,
+        "mean_m": 1.5912427100916422,
+        "median_m": 1.5892487629981464,
+        "p95_m": 2.041625323189695,
+        "status": "AVAILABLE"
+      },
+      "target_id": "loop_6",
+      "vertex": 166,
+      "xy": [
+        -33.0,
+        -13.0
+      ]
+    },
+    {
+      "boundary_f1": {
+        "estimated_boundary_cells": 1629,
+        "estimated_matched_cells": 0,
+        "f1": 0.0,
+        "gt_boundary_cells": 678,
+        "gt_matched_cells": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "status": "AVAILABLE"
+      },
+      "domain_cells": 31409,
+      "estimated_boundary_cells": 1629,
+      "gt_boundary_cells": 678,
+      "loop_id": 7,
+      "observed_cells": 30765,
+      "observed_coverage": 0.9794963227100513,
+      "radius_m": 5.0,
+      "symmetric_boundary_distance": {
+        "estimated_boundary_cells": 1629,
+        "estimated_to_gt_mean_m": 1.9346953508324922,
+        "gt_boundary_cells": 678,
+        "gt_to_est_mean_m": 1.524341125875516,
+        "mean_m": 1.7295182383540042,
+        "median_m": 1.6357023862878572,
+        "p95_m": 2.780596538892243,
+        "status": "AVAILABLE"
+      },
+      "target_id": "loop_7",
+      "vertex": 87,
+      "xy": [
+        -24.999999999999996,
+        -6.0
+      ]
+    },
+    {
+      "boundary_f1": {
+        "estimated_boundary_cells": 825,
+        "estimated_matched_cells": 74,
+        "f1": 0.09581233577476231,
+        "gt_boundary_cells": 496,
+        "gt_matched_cells": 51,
+        "precision": 0.08969696969696969,
+        "recall": 0.1028225806451613,
+        "status": "AVAILABLE"
+      },
+      "domain_cells": 31406,
+      "estimated_boundary_cells": 825,
+      "gt_boundary_cells": 496,
+      "loop_id": 8,
+      "observed_cells": 29908,
+      "observed_coverage": 0.9523021078774756,
+      "radius_m": 5.0,
+      "symmetric_boundary_distance": {
+        "estimated_boundary_cells": 825,
+        "estimated_to_gt_mean_m": 1.682270372874035,
+        "gt_boundary_cells": 496,
+        "gt_to_est_mean_m": 1.3205434728246406,
+        "mean_m": 1.5014069228493376,
+        "median_m": 1.2366752363514908,
+        "p95_m": 3.318673027351184,
+        "status": "AVAILABLE"
+      },
+      "target_id": "loop_8",
+      "vertex": 106,
+      "xy": [
+        2.0,
+        -10.0
+      ]
+    },
+    {
+      "boundary_f1": {
+        "estimated_boundary_cells": 1398,
+        "estimated_matched_cells": 123,
+        "f1": 0.1435845828720942,
+        "gt_boundary_cells": 223,
+        "gt_matched_cells": 87,
+        "precision": 0.08798283261802575,
+        "recall": 0.3901345291479821,
+        "status": "AVAILABLE"
+      },
+      "domain_cells": 31406,
+      "estimated_boundary_cells": 1398,
+      "gt_boundary_cells": 223,
+      "loop_id": 9,
+      "observed_cells": 26746,
+      "observed_coverage": 0.8516207094185825,
+      "radius_m": 5.0,
+      "symmetric_boundary_distance": {
+        "estimated_boundary_cells": 1398,
+        "estimated_to_gt_mean_m": 1.9098201602189344,
+        "gt_boundary_cells": 223,
+        "gt_to_est_mean_m": 0.38205197812559916,
+        "mean_m": 1.1459360691722669,
+        "median_m": 1.0902912999332643,
+        "p95_m": 2.404263156753134,
+        "status": "AVAILABLE"
+      },
+      "target_id": "loop_9",
+      "vertex": 100,
+      "xy": [
+        14.0,
+        -9.0
+      ]
+    },
+    {
+      "boundary_f1": {
+        "estimated_boundary_cells": 1118,
+        "estimated_matched_cells": 92,
+        "f1": 0.08577670781091273,
+        "gt_boundary_cells": 748,
+        "gt_matched_cells": 67,
+        "precision": 0.08228980322003578,
+        "recall": 0.08957219251336898,
+        "status": "AVAILABLE"
+      },
+      "domain_cells": 31407,
+      "estimated_boundary_cells": 1118,
+      "gt_boundary_cells": 748,
+      "loop_id": 10,
+      "observed_cells": 25767,
+      "observed_coverage": 0.8204221988728627,
+      "radius_m": 5.0,
+      "symmetric_boundary_distance": {
+        "estimated_boundary_cells": 1118,
+        "estimated_to_gt_mean_m": 1.7031302075239994,
+        "gt_boundary_cells": 748,
+        "gt_to_est_mean_m": 1.5457092917411301,
+        "mean_m": 1.6244197496325647,
+        "median_m": 1.5905651875938616,
+        "p95_m": 3.2324351889361562,
+        "status": "AVAILABLE"
+      },
+      "target_id": "loop_10",
+      "vertex": 64,
+      "xy": [
+        27.999999999999996,
+        1.0
+      ]
+    },
+    {
+      "boundary_f1": {
+        "estimated_boundary_cells": 1381,
+        "estimated_matched_cells": 286,
+        "f1": 0.17897631630714472,
+        "gt_boundary_cells": 1504,
+        "gt_matched_cells": 237,
+        "precision": 0.20709630702389573,
+        "recall": 0.15757978723404256,
+        "status": "AVAILABLE"
+      },
+      "domain_cells": 31405,
+      "estimated_boundary_cells": 1381,
+      "gt_boundary_cells": 1504,
+      "loop_id": 11,
+      "observed_cells": 18175,
+      "observed_coverage": 0.5787295016717083,
+      "radius_m": 5.0,
+      "symmetric_boundary_distance": {
+        "estimated_boundary_cells": 1381,
+        "estimated_to_gt_mean_m": 0.7379117349428966,
+        "gt_boundary_cells": 1504,
+        "gt_to_est_mean_m": 0.897946963236831,
+        "mean_m": 0.8179293490898638,
+        "median_m": 0.6577415848360086,
+        "p95_m": 2.3170705570537367,
+        "status": "AVAILABLE"
+      },
+      "target_id": "loop_11",
+      "vertex": 65,
+      "xy": [
+        39.0,
+        1.0
+      ]
+    }
+  ],
+  "occupied_boundary_f1": {
+    "estimated_boundary_cells": 62894,
+    "estimated_matched_cells": 11355,
+    "f1": 0.15319005003153224,
+    "gt_boundary_cells": 72274,
+    "gt_matched_cells": 9615,
+    "precision": 0.1805418640887843,
+    "recall": 0.13303539308741733
+  },
+  "occupied_iou": {
+    "estimated_occupied_cells": 73212,
+    "gt_occupied_cells": 638110,
+    "intersection_cells": 20508,
+    "union_cells": 690814,
+    "value": 0.029686717408738097
+  },
+  "protocol": {
+    "boundary_tolerance_m": 0.2,
+    "estimated_unknown_policy": "neither occupied nor free inside GT-known domain; therefore false negative where the GT class is occupied/free",
+    "gt_unknown_policy": "excluded from evaluation domain",
+    "local_boundary_policy": "score boundary points whose centres lie inside the frozen circular ROI; nearest-neighbour search for F1 and distance uses the full opposite boundary to avoid crop-edge artifacts",
+    "local_coverage_policy": "all GT-known cells in the circular ROI form the denominator; estimated unknown/out-of-bounds cells are unobserved, and unobserved GT boundary remains in local recall",
+    "local_radius_m": 5.0,
+    "occupied_boundary": "occupied minus one 8-neighbour 3x3 binary erosion",
+    "registration": "identity map-frame rule; deterministic cell-centre resampling",
+    "registration_transform_xyyaw": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sampling": "nearest source cell at each GT cell centre",
+    "symmetric_boundary_distance": "0.5 * (mean estimated-boundary to nearest GT-boundary distance + mean GT-boundary to nearest estimated-boundary distance)"
+  },
+  "supporting": {
+    "estimated_unknown_cells_in_gt_known_domain": 703599,
+    "estimated_unknown_ratio": 0.32166187327619666,
+    "free_intersection_cells": 1128735,
+    "free_iou": 0.6164184940566364,
+    "free_union_cells": 1831118,
+    "gt_unknown_cells_excluded": 0
+  },
+  "symmetric_boundary_distance": {
+    "estimated_boundary_cells": 62894,
+    "estimated_to_gt_mean_m": 1.2415941194415194,
+    "estimated_to_gt_median_m": 1.044030650891055,
+    "gt_boundary_cells": 72274,
+    "gt_to_est_mean_m": 1.9356585836881528,
+    "gt_to_est_median_m": 1.4422205101855958,
+    "mean_m": 1.588626351564836,
+    "median_m": 1.2431255805383254,
+    "p95_m": 4.60420676888959,
+    "status": "AVAILABLE"
+  }
+}

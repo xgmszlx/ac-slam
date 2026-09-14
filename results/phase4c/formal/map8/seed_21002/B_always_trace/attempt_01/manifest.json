@@ -1,0 +1,62 @@
+{
+  "accepted_closure_source": "/Mapper/loop_closed",
+  "commits": {
+    "baseline": "7993bf8b93e503b352d89e3992b8e5d7b08e4459",
+    "navigation_2d": "062283d364d891603a546b83e557ab638ffaa163",
+    "root": "342e7c1e4af47e3c256a87bf3511d3d910e34748"
+  },
+  "condition": "B",
+  "created_utc": "2026-08-31T09:16:38.950233+00:00",
+  "diagnostics_enabled": false,
+  "frozen_environment_sha256": {
+    "floorplan.inc": "9087664e52773d63ea7e0546b10eadfe2e224a242b5b31dacb5cd756f6347059",
+    "hokuyo.inc": "63187469b0c9173f2ab1e5086723283d8e920007e1a77030a64d583cdf19dc32",
+    "map8.png": "22a27847ccef060409e63ed6bea949265c52f8ca4f35545a4756697de0ed1046",
+    "map8.world": "6beefe415afd84c587f5c31b81a1d09fa176230e146685ed11ad25836e663cb5",
+    "map8.xml": "ec78c76cfb3747f99e744e8efb166f07df580ef1a5aedce5653bdaf37ae4d9a3",
+    "map8.yaml": "b4380d64c3d1508fcdf4f24af5593203c5cef896707b65975f3e3c784a1f6544",
+    "p3at.inc": "a619126df1a551ba06f552a3f981e00fdfd12c8daf779cf35d4d79f98579c2b1"
+  },
+  "full_command": "full_command.txt",
+  "launch_arguments": {
+    "enable_loop_diagnostics": "false",
+    "loop_diagnostics_path": "",
+    "loop_diagnostics_run_id": "",
+    "map_name": "map8/map8",
+    "map_width": "86.8",
+    "need_noise": "false",
+    "only_use_tsp": "false",
+    "oracle_after": "8",
+    "oracle_before": "8",
+    "oracle_densify_m": "0.5",
+    "oracle_dir_lambda": "1.0",
+    "oracle_mode": "1",
+    "oracle_repair_densify": "0.5",
+    "oracle_repair_max_len": "12.0",
+    "oracle_repair_max_wp": "24",
+    "oracle_span_gate": "4.0",
+    "robot_position": "0.0 0.0 0",
+    "strategy": "MyPlanner",
+    "suffix": "_Phase4C_map8_seed21002_B_attempt_01",
+    "tsp_seed": "21002",
+    "tsp_solver": "concorde",
+    "variance": "0"
+  },
+  "launch_file": "cpp_solver exploration.launch",
+  "map": "map8",
+  "mapper_params": "mapper_params.yaml",
+  "method": "Always-Trace",
+  "oracle_mode": 1,
+  "phase": "4C_FORMAL",
+  "protocol_manifest": "results/phase4c/formal/protocol_manifest.json",
+  "protocol_manifest_sha256": "53e96b36b419d7ec70a4990a578e5817c2d0af6a5319e3c896ff915afab6ea6f",
+  "scientific_variable": {
+    "oracle_mode": 1
+  },
+  "seed": 21002,
+  "start_pose_xyyaw": [
+    0.0,
+    0.0,
+    0.0
+  ]
+}

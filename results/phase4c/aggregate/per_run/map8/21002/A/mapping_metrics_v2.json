@@ -1,0 +1,205 @@
+{
+  "grid": {
+    "estimated": {
+      "free_cells": 455197,
+      "free_thresh": 0.196,
+      "height": 688,
+      "image": "/home/wcqw/ac-slam/results/phase4c/formal/map8/seed_21002/A_original/attempt_01/final_map.pgm",
+      "image_sha256": "c8097240623b4cc315f6bcb446edadd1dcce0a0d668e37981eeb7989cdd50491",
+      "negate": 0,
+      "occupied_cells": 15080,
+      "occupied_thresh": 0.65,
+      "origin_xyyaw": [
+        -42.862893,
+        -34.491957,
+        0.0
+      ],
+      "resolution_m": 0.1,
+      "unknown_cells": 120027,
+      "width": 858,
+      "yaml": "/home/wcqw/ac-slam/results/phase4c/formal/map8/seed_21002/A_original/attempt_01/final_map.yaml",
+      "yaml_sha256": "4b9b4338e1cdff1f196ddbe14ee68bd04d5671474cd092983c622d74f43e789b"
+    },
+    "evaluation_domain_cells": 923704,
+    "gt": {
+      "free_cells": 837034,
+      "free_thresh": 0.196,
+      "height": 867,
+      "image": "/home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/world/map8/map8.png",
+      "image_sha256": "22a27847ccef060409e63ed6bea949265c52f8ca4f35545a4756697de0ed1046",
+      "negate": 0,
+      "occupied_cells": 86670,
+      "occupied_thresh": 0.65,
+      "origin_xyyaw": [
+        -43.4,
+        -34.68,
+        0.0
+      ],
+      "resolution_m": 0.08,
+      "unknown_cells": 16991,
+      "width": 1085,
+      "yaml": "/home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/world/map8/map8.yaml",
+      "yaml_sha256": "b4380d64c3d1508fcdf4f24af5593203c5cef896707b65975f3e3c784a1f6544"
+    }
+  },
+  "local_revisit": [
+    {
+      "boundary_f1": {
+        "estimated_boundary_cells": 235,
+        "estimated_matched_cells": 173,
+        "f1": 0.6674365775346778,
+        "gt_boundary_cells": 249,
+        "gt_matched_cells": 152,
+        "precision": 0.7361702127659574,
+        "recall": 0.6104417670682731,
+        "status": "AVAILABLE"
+      },
+      "domain_cells": 12030,
+      "estimated_boundary_cells": 235,
+      "gt_boundary_cells": 249,
+      "loop_id": 1,
+      "observed_cells": 10969,
+      "observed_coverage": 0.9118038237738986,
+      "radius_m": 5.0,
+      "symmetric_boundary_distance": {
+        "estimated_boundary_cells": 235,
+        "estimated_to_gt_mean_m": 0.10847892910621018,
+        "gt_boundary_cells": 249,
+        "gt_to_est_mean_m": 0.15647983951350133,
+        "mean_m": 0.13247938430985576,
+        "median_m": 0.16,
+        "p95_m": 0.35795196460223405,
+        "status": "AVAILABLE"
+      },
+      "target_id": "loop_1",
+      "vertex": 20,
+      "xy": [
+        1.622429906542056,
+        -0.48672897196261683
+      ]
+    },
+    {
+      "boundary_f1": {
+        "estimated_boundary_cells": 246,
+        "estimated_matched_cells": 223,
+        "f1": 0.9509594882729211,
+        "gt_boundary_cells": 210,
+        "gt_matched_cells": 210,
+        "precision": 0.9065040650406504,
+        "recall": 1.0,
+        "status": "AVAILABLE"
+      },
+      "domain_cells": 12054,
+      "estimated_boundary_cells": 246,
+      "gt_boundary_cells": 210,
+      "loop_id": 2,
+      "observed_cells": 11242,
+      "observed_coverage": 0.9326364692218351,
+      "radius_m": 5.0,
+      "symmetric_boundary_distance": {
+        "estimated_boundary_cells": 246,
+        "estimated_to_gt_mean_m": 0.11954508167788341,
+        "gt_boundary_cells": 210,
+        "gt_to_est_mean_m": 0.10144783355418888,
+        "mean_m": 0.11049645761603615,
+        "median_m": 0.16,
+        "p95_m": 0.2,
+        "status": "AVAILABLE"
+      },
+      "target_id": "loop_2",
+      "vertex": 38,
+      "xy": [
+        -3.244859813084112,
+        -11.803177570093458
+      ]
+    },
+    {
+      "boundary_f1": {
+        "estimated_boundary_cells": 120,
+        "estimated_matched_cells": 59,
+        "f1": 0.5600773490375319,
+        "gt_boundary_cells": 83,
+        "gt_matched_cells": 54,
+        "precision": 0.49166666666666664,
+        "recall": 0.6506024096385542,
+        "status": "AVAILABLE"
+      },
+      "domain_cells": 12178,
+      "estimated_boundary_cells": 120,
+      "gt_boundary_cells": 83,
+      "loop_id": 3,
+      "observed_cells": 11964,
+      "observed_coverage": 0.9824273279684678,
+      "radius_m": 5.0,
+      "symmetric_boundary_distance": {
+        "estimated_boundary_cells": 120,
+        "estimated_to_gt_mean_m": 0.19172396424368793,
+        "gt_boundary_cells": 83,
+        "gt_to_est_mean_m": 0.2016733185325299,
+        "mean_m": 0.1966986413881089,
+        "median_m": 0.19656854249492378,
+        "p95_m": 0.36,
+        "status": "AVAILABLE"
+      },
+      "target_id": "loop_3",
+      "vertex": 35,
+      "xy": [
+        -31.637383177570094,
+        11.722056074766355
+      ]
+    }
+  ],
+  "occupied_boundary_f1": {
+    "estimated_boundary_cells": 19371,
+    "estimated_matched_cells": 13062,
+    "f1": 0.6229881055379191,
+    "gt_boundary_cells": 19182,
+    "gt_matched_cells": 11105,
+    "precision": 0.6743069536936658,
+    "recall": 0.5789281618183714
+  },
+  "occupied_iou": {
+    "estimated_occupied_cells": 19920,
+    "gt_occupied_cells": 86670,
+    "intersection_cells": 11940,
+    "union_cells": 94650,
+    "value": 0.126148969889065
+  },
+  "protocol": {
+    "boundary_tolerance_m": 0.2,
+    "estimated_unknown_policy": "neither occupied nor free inside GT-known domain; therefore false negative where the GT class is occupied/free",
+    "gt_unknown_policy": "excluded from evaluation domain",
+    "local_boundary_policy": "score boundary points whose centres lie inside the frozen circular ROI; nearest-neighbour search for F1 and distance uses the full opposite boundary to avoid crop-edge artifacts",
+    "local_coverage_policy": "all GT-known cells in the circular ROI form the denominator; estimated unknown/out-of-bounds cells are unobserved, and unobserved GT boundary remains in local recall",
+    "local_radius_m": 5.0,
+    "occupied_boundary": "occupied minus one 8-neighbour 3x3 binary erosion",
+    "registration": "identity map-frame rule; deterministic cell-centre resampling",
+    "registration_transform_xyyaw": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sampling": "nearest source cell at each GT cell centre",
+    "symmetric_boundary_distance": "0.5 * (mean estimated-boundary to nearest GT-boundary distance + mean GT-boundary to nearest estimated-boundary distance)"
+  },
+  "supporting": {
+    "estimated_unknown_cells_in_gt_known_domain": 198538,
+    "estimated_unknown_ratio": 0.21493681958722707,
+    "free_intersection_cells": 695559,
+    "free_iou": 0.8214736613359064,
+    "free_union_cells": 846721,
+    "gt_unknown_cells_excluded": 16991
+  },
+  "symmetric_boundary_distance": {
+    "estimated_boundary_cells": 19371,
+    "estimated_to_gt_mean_m": 0.15257722314046357,
+    "estimated_to_gt_median_m": 0.16,
+    "gt_boundary_cells": 19182,
+    "gt_to_est_mean_m": 0.2354037229183834,
+    "gt_to_est_median_m": 0.16,
+    "mean_m": 0.1939904730294235,
+    "median_m": 0.16,
+    "p95_m": 0.48,
+    "status": "AVAILABLE"
+  }
+}

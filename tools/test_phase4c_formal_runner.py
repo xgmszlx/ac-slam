@@ -9,7 +9,10 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from analyze_phase4c_formal import summarize_paired_effects, tsp_pairing_audit
+from analyze_phase4c_formal import (
+    complete_block_keys, load_loop_insertions, summarize_paired_effects,
+    tsp_pairing_audit,
+)
 import run_phase4b_suite as phase4b
 from phase4c_formal_common import CONDITIONS, MAPS, verify_environment
 from run_phase4c_formal import canonical_hash, formal_selection_record
@@ -82,6 +85,35 @@ class Phase4CFormalRunnerTest(unittest.TestCase):
         self.assertEqual(record['positive_count'], 1)
         self.assertEqual(record['tie_count'], 1)
         self.assertEqual(record['negative_count'], 1)
+
+    def test_sequence_audit_keeps_zero_loop_blocks(self):
+        run_meta = {
+            ('map8', 21001, label): {'loops': [1]} for label in 'ABC'
+        }
+        run_meta.update({
+            ('radish_mexico', 21001, label): {'loops': []} for label in 'ABC'
+        })
+        self.assertEqual(
+            complete_block_keys(run_meta),
+            [('map8', 21001), ('radish_mexico', 21001)],
+        )
+
+    def test_planned_loops_come_from_insertion_events(self):
+        with tempfile.TemporaryDirectory() as directory:
+            events = Path(directory) / 'events.csv'
+            events.write_text(
+                'timestamp,event,data\n'
+                '8.4,LOOP_INSERTED,"{""path_index"": 11, ""vertex"": 59}"\n'
+                '8.4,LOOP_INSERTED,"{""path_index"": 17, ""vertex"": 41}"\n'
+                '9.1,GOAL_REACHED,"{""vertex"": 1}"\n',
+                encoding='utf-8',
+            )
+            self.assertEqual(load_loop_insertions(directory), [
+                {'selection_order': 1, 'selection_timestamp': 8.4,
+                 'path_index': 11, 'loop_vertex': 59},
+                {'selection_order': 2, 'selection_timestamp': 8.4,
+                 'path_index': 17, 'loop_vertex': 41},
+            ])
 
 
 if __name__ == '__main__':

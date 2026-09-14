@@ -1,0 +1,51 @@
+{
+  "events": [
+    {
+      "active_end": 972.5,
+      "active_start": 948.4,
+      "attribution_class": "TEMPORALLY_ASSOCIATED",
+      "baseline_anchor_scan": 406,
+      "chain_end": 418,
+      "chain_start": 413,
+      "condition": "C",
+      "current_scan": 490,
+      "current_scan_time": 971.8,
+      "event_seq": 1,
+      "h_star_ids": "[406, 407, 408, 409, 410, 411, 412]",
+      "loop_id": 2,
+      "map": "map3",
+      "matched_h_star_ids": "[]",
+      "method": "Selective",
+      "run_dir": "results/phase4b/map3/seed_21005/C_selective",
+      "seed": 21005,
+      "vertex": 26
+    },
+    {
+      "active_end": 1476.5,
+      "active_start": 1464.8,
+      "attribution_class": "TEMPORALLY_ASSOCIATED",
+      "baseline_anchor_scan": 0,
+      "chain_end": 18,
+      "chain_start": 15,
+      "condition": "C",
+      "current_scan": 728,
+      "current_scan_time": 1475.5,
+      "event_seq": 2,
+      "h_star_ids": "[0, 1, 2, 3, 4, 5, 6]",
+      "loop_id": 5,
+      "map": "map3",
+      "matched_h_star_ids": "[]",
+      "method": "Selective",
+      "run_dir": "results/phase4b/map3/seed_21005/C_selective",
+      "seed": 21005,
+      "vertex": 8
+    }
+  ],
+  "frozen_rule": "unique active interval AND accepted historical chain overlaps fixed 7-scan H*",
+  "passive_or_unrelated_events": 0,
+  "target_attributable_loop_ids": [],
+  "temporally_associated_loop_ids": [
+    2,
+    5
+  ]
+}

@@ -54,6 +54,23 @@ def canonical_hash(value):
     return hashlib.sha256(raw).hexdigest()
 
 
+def load_loop_insertions(run_dir):
+    """Read high-level planned-loop insertions from the append-only event log."""
+    rows = []
+    with (Path(run_dir) / 'events.csv').open(newline='', encoding='utf-8') as stream:
+        for event in csv.DictReader(stream):
+            if event['event'] != 'LOOP_INSERTED':
+                continue
+            data = json.loads(event['data'])
+            rows.append({
+                'selection_order': len(rows) + 1,
+                'selection_timestamp': float(event['timestamp']),
+                'path_index': data.get('path_index'),
+                'loop_vertex': int(data['vertex']),
+            })
+    return rows
+
+
 def result_path(path):
     """Use a repository-relative path when possible, else a stable absolute path."""
     try:
@@ -98,6 +115,13 @@ def load_prior(run_dir):
 def attribute_run(map_id, seed, label, run_dir):
     manifest = load_json(run_dir / 'manifest.json')
     loops = load_json(run_dir / 'loops.json', {'loops': []})['loops']
+    insertions = load_loop_insertions(run_dir)
+    executed_vertices = [int(loop['loop_vertex']) for loop in loops]
+    inserted_vertices = [item['loop_vertex'] for item in insertions]
+    if loops and executed_vertices != inserted_vertices:
+        raise RuntimeError(
+            'planned/executed loop sequence mismatch requires explicit handling: {}'.format(run_dir)
+        )
     events = load_json(run_dir / 'closure_events.json', {'events': []})['events']
     prior = load_prior(run_dir)
     keyscan_times = parse_keyscan_times(run_dir / 'rosout.log')
@@ -158,7 +182,7 @@ def attribute_run(map_id, seed, label, run_dir):
             'attribution_class': attribution, 'run_dir': str(run_dir.relative_to(ROOT)),
         })
     loop_rows = []
-    for loop in loops:
+    for order, loop in enumerate(loops, start=1):
         loop_id = int(loop['loop_id'])
         policy = loop.get('phase4b_execution_policy') or loop.get('execution_policy')
         generated = (loop.get('repair_plan') or {}).get('planned_length_m')
@@ -166,6 +190,9 @@ def attribute_run(map_id, seed, label, run_dir):
             'map': map_id, 'seed': seed, 'condition': label,
             'method': METHOD_NAMES[label], 'loop_id': loop_id,
             'loop_vertex': int(loop['loop_vertex']),
+            'selection_order': order,
+            'selection_timestamp': insertions[order - 1]['selection_timestamp'],
+            'planned_source': 'LOOP_INSERTED event',
             'planned': True, 'executed': loop.get('actual_start_time') is not None,
             'execution_finished': bool(loop.get('execution_finished')),
             'target_attributable': loop_id in target_loop_ids,
@@ -182,6 +209,26 @@ def attribute_run(map_id, seed, label, run_dir):
             ),
             'run_dir': str(run_dir.relative_to(ROOT)),
         })
+    if not loops:
+        for insertion in insertions:
+            loop_rows.append({
+                'map': map_id, 'seed': seed, 'condition': label,
+                'method': METHOD_NAMES[label],
+                'loop_id': insertion['selection_order'],
+                'loop_vertex': insertion['loop_vertex'],
+                'selection_order': insertion['selection_order'],
+                'selection_timestamp': insertion['selection_timestamp'],
+                'planned_source': 'LOOP_INSERTED event; execution never started',
+                'planned': True, 'executed': False, 'execution_finished': False,
+                'target_attributable': False, 'temporally_associated': False,
+                'execution_policy': 'NOT_REACHED',
+                'active_loop_distance_m': None, 'active_loop_time_s': None,
+                'actual_generated_repair_length_m': None,
+                'actual_executed_repair_length_m': None,
+                'early_stopped': False,
+                'avoided_nominal_repair_path_length_lower_bound_m': None,
+                'run_dir': str(run_dir.relative_to(ROOT)),
+            })
     payload = {
         'frozen_rule': 'unique active interval AND accepted historical chain overlaps fixed 7-scan H*',
         'target_attributable_loop_ids': sorted(target_loop_ids),
@@ -365,6 +412,11 @@ def summarize_paired_effects(rows):
     return summary
 
 
+def complete_block_keys(run_meta):
+    """Return every observed map-seed block, including blocks with zero loops."""
+    return sorted({(map_id, int(seed)) for map_id, seed, _ in run_meta})
+
+
 def tsp_pairing_audit(inventory):
     by_block = defaultdict(dict)
     for map_id, seed, label, run_dir in inventory:
@@ -407,7 +459,7 @@ def aggregate():
         raw_loops = load_json(run_dir / 'loops.json', {'loops': []})['loops']
         for loop in raw_loops:
             raw_loop_lookup[(map_id, seed, label, int(loop['loop_id']))] = {'raw_loop': loop}
-        global_row, local = evaluate_map_run(map_id, seed, label, run_dir, prior, raw_loops)
+        global_row, local = evaluate_map_run(map_id, seed, label, run_dir, prior, loops_flat)
         if global_row:
             global_map_rows.append(global_row)
         local_rows.extend(local)
@@ -442,6 +494,34 @@ def aggregate():
                     'material_correction_threshold': None,
                     'events': per_run_pose,
                 }, indent=2, sort_keys=True) + '\n', encoding='utf-8'
+            )
+            planned = sorted(meta['loops'], key=lambda row: row['selection_order'])
+            runtime_record = load_json(meta['run_dir'] / 'selection_sequence.json', {})
+            observed_record = {
+                'source': 'append-only events.csv LOOP_INSERTED records',
+                'runtime_record': result_path(meta['run_dir'] / 'selection_sequence.json'),
+                'runtime_record_planned_loop_count': runtime_record.get('planned_loop_count'),
+                'observed_planned_loop_count': len(planned),
+                'instrumentation_discrepancy': (
+                    runtime_record.get('planned_loop_count') != len(planned)
+                ),
+                'selected_loop_vertex_sequence': [row['loop_vertex'] for row in planned],
+                'selection_order': [row['selection_order'] for row in planned],
+                'selection_timestamp': [row['selection_timestamp'] for row in planned],
+                'executed_loop_count': sum(row['executed'] for row in planned),
+                'interpretation': (
+                    'runtime loops.json starts a record only when execution becomes the next loop target; '
+                    'LOOP_INSERTED is authoritative for high-level planned actions'
+                ),
+            }
+            observed_path = (
+                AGGREGATE / 'per_run' / map_id / str(seed) / label
+                / 'selection_sequence_observed.json'
+            )
+            observed_path.parent.mkdir(parents=True, exist_ok=True)
+            observed_path.write_text(
+                json.dumps(observed_record, indent=2, sort_keys=True) + '\n',
+                encoding='utf-8',
             )
     run_rows = []
     for (map_id, seed, label), meta in sorted(run_meta.items()):
@@ -501,7 +581,12 @@ def aggregate():
     for row in loop_rows:
         loops_by_block[(row['map'], int(row['seed']))].setdefault(row['condition'], []).append(row)
     local_lookup = {(r['map'], int(r['seed']), r['condition'], int(r['loop_id'])): r for r in local_rows}
-    for (map_id, seed), by_condition in sorted(loops_by_block.items()):
+    # Iterate over the complete run inventory, not only blocks that produced
+    # loop rows.  A method-neutral empty sequence (for example, an exploration
+    # failure before any active loop) is still a valid selection-sequence
+    # observation and must remain visible in the 15-block audit.
+    for map_id, seed in complete_block_keys(run_meta):
+        by_condition = loops_by_block[(map_id, seed)]
         seqs = {label: [r['loop_vertex'] for r in by_condition.get(label, [])] for label in 'ABC'}
         common = set(seqs['A']).intersection(seqs['B']).intersection(seqs['C'])
         tsp_hashes = {}
@@ -586,6 +671,20 @@ def aggregate():
     ax.set_xlabel('Active-loop distance (m)'); ax.set_ylabel('TARGET_ATTRIBUTABLE realization rate')
     ax.grid(alpha=0.25); ax.legend(); fig.tight_layout()
     fig.savefig(AGGREGATE / 'realization_cost_pareto.png', dpi=180); plt.close(fig)
+    fig, ax = plt.subplots(figsize=(6.5, 4.5))
+    map_ids = ('map3', 'map8', 'radish_mexico')
+    matched = [sum(r['map'] == map_id and r['exact_sequence_match'] for r in sequences)
+               for map_id in map_ids]
+    totals = [sum(r['map'] == map_id for r in sequences) for map_id in map_ids]
+    ax.bar(map_ids, matched, color='tab:blue')
+    for index, (value, total) in enumerate(zip(matched, totals)):
+        ax.text(index, value + 0.08, '{}/{}'.format(value, total), ha='center')
+    ax.set_ylim(0, max(totals) + 0.7)
+    ax.set_ylabel('Blocks with exact A/B/C sequence match')
+    ax.grid(axis='y', alpha=0.25)
+    fig.tight_layout()
+    fig.savefig(AGGREGATE / 'selection_sequence_overlap.png', dpi=180)
+    plt.close(fig)
     summary = {
         'status': 'COMPLETE' if len(run_rows) == 45 else 'INCOMPLETE',
         'formal_method_runs': len(run_rows), 'expected_method_runs': 45,

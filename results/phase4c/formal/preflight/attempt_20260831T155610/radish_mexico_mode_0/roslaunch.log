@@ -1,0 +1,450 @@
+[WARN] [1788163043.996596110]: The root link base_link has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.
+0x5589a78b8910
+[INFO] [1788163044.064131614]: Inititialized robot 1, starting to map now.
+Create multimapper!!
+concorde -s 21001 /tmp/tmpy5qsbtss/problem.tsp
+Host: msxg  Current process id: 33444
+Using random seed 21001
+Number of Nodes: 330
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 11389 (from tour)
+  LP Value  1: 11100.000000  (0.05 seconds)
+  LP Value  2: 11250.966667  (0.12 seconds)
+  LP Value  3: 11353.000000  (0.17 seconds)
+  LP Value  4: 11367.000000  (0.29 seconds)
+  LP Value  5: 11369.000000  (1.24 seconds)
+  LP Value  6: 11373.000000  (1.72 seconds)
+  LP Value  7: 11373.333333  (1.85 seconds)
+New lower bound: 11338.333333
+  LP Value  1: 11338.789474  (2.11 seconds)
+New lower bound: 11338.789474
+New upperbound from x-heuristic: 11383.00
+Final lower bound 11338.789474, upper bound 11383.000000
+Exact lower bound: 11338.789474
+DIFF: 0.000000
+Time for Total: 2.15 seconds (2.15 total in 1 calls)
+Final LP has 485 rows, 981 columns, 6698 nonzeros
+LOWER BOUND: 11338.789474   ACTIVE NODES: 1
+
+Task 0: Branching on node 0
+BBnode 0 split into 1 (11345.57) 2 (11340.80) (0.14 seconds)
+LOWER BOUND: 11340.800000   ACTIVE NODES: 2
+
+Task 1: Cutting on node 2
+New upperbound from x-heuristic: 11382.00
+TOUR FOUND - upperbound is 11382.00
+Writing Pool: 95 cuts
+BBnode 2 (now 3) done cutting: lowerbound 11345.50 (0.42 seconds)
+LOWER BOUND: 11345.500000   ACTIVE NODES: 2
+
+Task 2: Branching on node 3
+BBnode 3 split into 4 (11345.50) 5 (11346.40) (0.13 seconds)
+LOWER BOUND: 11345.500000   ACTIVE NODES: 3
+
+Task 3: Cutting on node 4
+[WARN] [1788163048.349309039, 0.200000000]: local_map: Parameter "plugins" not provided, loading pre-Hydro parameters
+[INFO] [1788163048.425137388, 0.200000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=0 state_id=0 sim_time=0.100000
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 0.200000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 0.200000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 0.200000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp[INFO] [1788163044.088149615]: Waiting for prior_graph_service ...
+[INFO] [1788163044.089614172]: waitForService: Service [/prior_graph_service] has not been advertised, waiting...
+
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 0.200000 according to authority unknown_publisher
+         at line Warning: 277TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 0.200000 according to authority unknown_publisher in 
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp         at line 
+277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cppWarning: 
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 0.200000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1788163048.426502708, 0.200000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 0.200000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 0.200000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+[WARN] [1788163048.426528104, 0.200000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 0.200000 according to authority unknown_publisher
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 0.200000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Writing Pool: 150 cuts
+BBnode 4 (now 6) done cutting: lowerbound 11353.00 (0.83 seconds)
+LOWER BOUND: 11345.571429   ACTIVE NODES: 3
+
+Task 4: Cutting on node 1
+New upperbound from x-heuristic: 11361.00
+TOUR FOUND - upperbound is 11361.00
+Writing Pool: 160 cuts
+BBnode 1 (now 7) can be pruned: upperbound 11361.00 (0.19 seconds)
+LOWER BOUND: 11346.400000   ACTIVE NODES: 2
+
+Task 5: Cutting on node 5
+Writing Pool: 181 cuts
+BBnode 5 (now 8) done cutting: lowerbound 11354.50 (0.47 seconds)
+LOWER BOUND: 11353.000000   ACTIVE NODES: 2
+
+Task 6: Branching on node 6
+BBnode 6 split into 9 (11353.00) 10 (11353.00) (0.04 seconds)
+LOWER BOUND: 11353.000000   ACTIVE NODES: 3
+
+Task 7: Cutting on node 10
+New upperbound from x-heuristic: 11360.00
+TOUR FOUND - upperbound is 11360.00
+Writing Pool: 181 cuts
+BBnode 10 (now 11) done cutting: lowerbound 11353.40 (0.25 seconds)
+LOWER BOUND: 11353.000000   ACTIVE NODES: 3
+
+Task 8: Cutting on node 9
+Writing Pool: 234 cuts
+BBnode 9 (now 12) done cutting: lowerbound 11354.50 (1.18 seconds)
+LOWER BOUND: 11353.400000   ACTIVE NODES: 3
+
+Task 9: Branching on node 11
+BBnode 11 split into 13 (11353.40) 14 (11357.62) (0.21 seconds)
+LOWER BOUND: 11353.400000   ACTIVE NODES: 4
+
+Task 10: Cutting on node 13
+New upperbound from x-heuristic: 11359.00
+TOUR FOUND - upperbound is 11359.00
+Writing Pool: 246 cuts
+BBnode 13 (now 15) done cutting: lowerbound 11354.67 (0.50 seconds)
+LOWER BOUND: 11354.500000   ACTIVE NODES: 4
+
+Task 11: Branching on node 8
+BBnode 8 split into 16 (11355.50) 17 (11356.12) (0.14 seconds)
+LOWER BOUND: 11354.500000   ACTIVE NODES: 5
+
+Task 12: Branching on node 12
+BBnode 12 split into 18 (11358.50X) 19 (11357.00) (0.19 seconds)
+Child 0 is pruned
+LOWER BOUND: 11354.666667   ACTIVE NODES: 5
+
+Task 13: Branching on node 15
+BBnode 15 split into 20 (11359.00X) 21 (11357.00) (0.22 seconds)
+Child 0 is pruned
+LOWER BOUND: 11355.500000   ACTIVE NODES: 5
+
+Task 14: Cutting on node 16
+Writing Pool: 255 cuts
+BBnode 16 (now 22) done cutting: lowerbound 11358.00 (0.28 seconds)
+LOWER BOUND: 11356.125000   ACTIVE NODES: 5
+
+Task 15: Cutting on node 17
+Writing Pool: 255 cuts
+BBnode 17 (now 23) can be pruned: upperbound 11359.00 (0.09 seconds)
+LOWER BOUND: 11357.000000   ACTIVE NODES: 4
+
+Task 16: Cutting on node 21
+Writing Pool: 255 cuts
+BBnode 21 (now 24) done cutting: lowerbound 11357.00 (0.12 seconds)
+LOWER BOUND: 11357.000000   ACTIVE NODES: 4
+
+Task 17: Branching on node 24
+BBnode 24 split into 25 (11361.40X) 26 (11361.00X) (0.16 seconds)
+Child 0 is pruned
+Child 1 is pruned
+LOWER BOUND: 11357.000000   ACTIVE NODES: 3
+
+Task 18: Cutting on node 19
+Writing Pool: 255 cuts
+BBnode 19 (now 27) done cutting: lowerbound 11357.00 (0.12 seconds)
+LOWER BOUND: 11357.000000   ACTIVE NODES: 3
+
+Task 19: Branching on node 27
+BBnode 27 split into 28 (11357.00) 29 (11357.00) (0.13 seconds)
+LOWER BOUND: 11357.000000   ACTIVE NODES: 4
+
+Task 20: Cutting on node 28
+Writing Pool: 255 cuts
+BBnode 28 (now 30) done cutting: lowerbound 11357.00 (0.19 seconds)
+LOWER BOUND: 11357.000000   ACTIVE NODES: 4
+
+Task 21: Branching on node 30
+BBnode 30 split into 31 (11359.50X) 32 (11357.00) (0.30 seconds)
+Child 0 is pruned
+LOWER BOUND: 11357.000000   ACTIVE NODES: 4
+
+Task 22: Cutting on node 32
+Writing Pool: 272 cuts
+BBnode 32 (now 33) can be pruned: upperbound 11359.00 (0.22 seconds)
+LOWER BOUND: 11357.000000   ACTIVE NODES: 3
+
+Task 23: Cutting on node 29
+Writing Pool: 286 cuts
+BBnode 29 (now 34) can be pruned: upperbound 11359.00 (0.11 seconds)
+LOWER BOUND: 11357.625000   ACTIVE NODES: 2
+
+Task 24: Cutting on node 14
+Writing Pool: 296 cuts
+BBnode 14 (now 35) can be pruned: upperbound 11359.00 (0.13 seconds)
+LOWER BOUND: 11358.000000   ACTIVE NODES: 1
+
+Task 25: Branching on node 22
+BBnode 22 split into 36 (11358.00) 37 (11358.00) (0.01 seconds)
+LOWER BOUND: 11358.000000   ACTIVE NODES: 2
+
+Task 26: Cutting on node 36
+Writing Pool: 296 cuts
+BBnode 36 (now 38) can be pruned: upperbound 11359.00 (0.05 seconds)
+LOWER BOUND: 11358.000000   ACTIVE NODES: 1
+
+Task 27: Cutting on node 37
+Writing Pool: 296 cuts
+BBnode 37 (now 39) can be pruned: upperbound 11359.00 (0.05 seconds)
+
+Task 28: Exit
+Optimal Solution: 11359.00
+Number of bbnodes: 23
+Total Running Time: 9.26 (seconds)  Branching Time: 6.87 (seconds)
+/home/wcqw/ac-slam/catkin_ws/src/cpp_solver/world/radish_mexico/radish_mexico.xml
+101.55
+True
+Drawio scale: 0.049999999999999996
+[INFO] [1788163044.478034, 0.000000]: Build prior map with 165 vertices.
+[INFO] [1788163044.478715, 0.000000]: Build prior map.
+[INFO] [1788163044.486246, 0.000000]: prior_map_save_path: /home/wcqw/ac-slam/catkin_ws/src/cpp_solver/results/prior_map_Phase4C_preflight_20260831T155610_radish_mexico_mode0.pickle
+Robot position: (-6.25, -1.6)
+10: 976.0,(x, y) = (20.0, 24.0)
+11: 2128.9999999999995,(x, y) = (-39.99999999999999, 23.0)
+Reverse tsp path is better!
+tsp_path VS full_tsp_path:
+[62, 82, 98, 106, 90, 81, 63, 70, 52, 51, 57, 56, 48, 30, 4, 147, 7, 9, 20, 5, 16, 10, 148, 24, 6, 14, 15, 22, 37, 31, 42, 44, 28, 33, 29, 41, 36, 38, 32, 149, 146, 3, 18, 8, 13, 27, 19, 12, 26, 23, 21, 17, 25, 11, 43, 40, 150, 35, 39, 45, 49, 73, 58, 154, 54, 50, 74, 59, 157, 156, 155, 55, 69, 60, 46, 47, 61, 80, 79, 89, 78, 87, 163, 86, 75, 162, 77, 88, 85, 97, 166, 111, 133, 124, 129, 104, 108, 92, 105, 116, 130, 134, 137, 125, 138, 117, 139, 140, 121, 141, 112, 122, 123, 142, 165, 100, 109, 99, 113, 126, 127, 143, 118, 102, 94, 83, 91, 93, 101, 167, 114, 110, 135, 128, 145, 144, 131, 136, 119, 120, 115, 132, 164, 96, 107, 103, 95, 84, 153, 68, 71, 64, 53, 152, 151, 34, 65, 158, 72, 161, 160, 66, 159, 67, 76]
+[62, 82, 98, 106, 90, 81, 63, 70, 63, 52, 48, 56, 57, 51, 57, 56, 48, 30, 20, 9, 4, 9, 147, 7, 147, 9, 20, 16, 5, 16, 148, 10, 148, 16, 20, 30, 24, 15, 6, 15, 14, 15, 24, 22, 24, 37, 31, 37, 42, 44, 33, 28, 33, 29, 33, 41, 36, 38, 36, 32, 149, 18, 146, 3, 146, 18, 8, 18, 13, 18, 27, 18, 19, 12, 19, 26, 19, 23, 21, 17, 21, 25, 11, 25, 39, 43, 35, 40, 35, 150, 35, 43, 39, 45, 49, 45, 58, 73, 58, 154, 54, 50, 54, 59, 74, 59, 157, 156, 155, 55, 69, 55, 60, 47, 46, 47, 61, 80, 79, 89, 78, 87, 163, 86, 75, 162, 77, 88, 85, 88, 97, 111, 166, 111, 124, 133, 124, 129, 104, 108, 92, 105, 116, 130, 134, 137, 134, 125, 138, 125, 117, 139, 117, 140, 117, 121, 141, 121, 122, 112, 122, 123, 142, 123, 126, 113, 109, 165, 100, 165, 109, 99, 109, 113, 126, 127, 143, 127, 118, 101, 102, 94, 102, 101, 91, 83, 91, 93, 91, 101, 118, 167, 114, 110, 114, 135, 114, 128, 131, 145, 131, 144, 131, 136, 131, 119, 115, 120, 115, 132, 115, 107, 164, 96, 164, 107, 103, 95, 84, 68, 153, 68, 64, 71, 64, 53, 64, 68, 153, 152, 151, 34, 151, 152, 153, 68, 84, 72, 158, 65, 158, 72, 161, 160, 66, 159, 67, 76]
+[INFO] [1788163054.500512, 6.300000]: TSP_RECORD {"full_tsp_path": [62, 82, 98, 106, 90, 81, 63, 70, 63, 52, 48, 56, 57, 51, 57, 56, 48, 30, 20, 9, 4, 9, 147, 7, 147, 9, 20, 16, 5, 16, 148, 10, 148, 16, 20, 30, 24, 15, 6, 15, 14, 15, 24, 22, 24, 37, 31, 37, 42, 44, 33, 28, 33, 29, 33, 41, 36, 38, 36, 32, 149, 18, 146, 3, 146, 18, 8, 18, 13, 18, 27, 18, 19, 12, 19, 26, 19, 23, 21, 17, 21, 25, 11, 25, 39, 43, 35, 40, 35, 150, 35, 43, 39, 45, 49, 45, 58, 73, 58, 154, 54, 50, 54, 59, 74, 59, 157, 156, 155, 55, 69, 55, 60, 47, 46, 47, 61, 80, 79, 89, 78, 87, 163, 86, 75, 162, 77, 88, 85, 88, 97, 111, 166, 111, 124, 133, 124, 129, 104, 108, 92, 105, 116, 130, 134, 137, 134, 125, 138, 125, 117, 139, 117, 140, 117, 121, 141, 121, 122, 112, 122, 123, 142, 123, 126, 113, 109, 165, 100, 165, 109, 99, 109, 113, 126, 127, 143, 127, 118, 101, 102, 94, 102, 101, 91, 83, 91, 93, 91, 101, 118, 167, 114, 110, 114, 135, 114, 128, 131, 145, 131, 144, 131, 136, 131, 119, 115, 120, 115, 132, 115, 107, 164, 96, 164, 107, 103, 95, 84, 68, 153, 68, 64, 71, 64, 53, 64, 68, 153, 152, 151, 34, 151, 152, 153, 68, 84, 72, 158, 65, 158, 72, 161, 160, 66, 159, 67, 76], "initial_tsp_path": [62, 82, 98, 106, 90, 81, 63, 70, 52, 51, 57, 56, 48, 30, 4, 147, 7, 9, 20, 5, 16, 10, 148, 24, 6, 14, 15, 22, 37, 31, 42, 44, 28, 33, 29, 41, 36, 38, 32, 149, 146, 3, 18, 8, 13, 27, 19, 12, 26, 23, 21, 17, 25, 11, 43, 40, 150, 35, 39, 45, 49, 73, 58, 154, 54, 50, 74, 59, 157, 156, 155, 55, 69, 60, 46, 47, 61, 80, 79, 89, 78, 87, 163, 86, 75, 162, 77, 88, 85, 97, 166, 111, 133, 124, 129, 104, 108, 92, 105, 116, 130, 134, 137, 125, 138, 117, 139, 140, 121, 141, 112, 122, 123, 142, 165, 100, 109, 99, 113, 126, 127, 143, 118, 102, 94, 83, 91, 93, 101, 167, 114, 110, 135, 128, 145, 144, 131, 136, 119, 120, 115, 132, 164, 96, 107, 103, 95, 84, 153, 68, 71, 64, 53, 152, 151, 34, 65, 158, 72, 161, 160, 66, 159, 67, 76], "predicted_full_tsp_length": 943.7374965464255, "predicted_tsp_length": 943.7374965464253, "seed": 21001, "solver": "concorde"}
+[INFO] [1788163054.501423, 6.300000]: tsp_record_path: /home/wcqw/ac-slam/catkin_ws/src/cpp_solver/results/tsp_record_Phase4C_preflight_20260831T155610_radish_mexico_mode0.json
+[INFO] [1788163054.502515, 6.300000]: Find initial tsp path.
+tsp_d_opt: 46.415888336128056, tsp_dist: 943.7374965464255
+current idx: 0 / 247
+current idx: 50 / 247
+current idx: 100 / 247
+current idx: 150 / 247
+current idx: 200 / 247
+max_candidate_dist: 25.844674681139235
+Iter <built-in function iter>: 0 / 248
+Iter <built-in function iter>: 20 / 248
+Iter <built-in function iter>: 40 / 248
+Iter <built-in function iter>: 60 / 248
+Iter <built-in function iter>: 80 / 248
+Iter <built-in function iter>: 100 / 248
+Iter <built-in function iter>: 120 / 248
+Iter <built-in function iter>: 140 / 248
+Iter <built-in function iter>: 160 / 248
+Iter <built-in function iter>: 180 / 248
+Iter <built-in function iter>: 200 / 248
+Iter <built-in function iter>: 220 / 248
+Iter <built-in function iter>: 240 / 248
+#candidates: 455
+current obj: 0.04994326157411685, resistance: 1.0222619725472655, dis_incre: 1.0067016043587134 tsp_obj: 0.04918304984806197
+Optimization ratio: 1.0
+No candidate is better than current_d_opt. Iteration stops.
+#Add edges: 11, [(82, 80), (87, 92), (41, 47), (69, 78), (58, 77), (106, 123), (64, 153), (100, 109), (166, 104), (59, 69), (65, 72)]
+Time cost: 0.61s for best one; 2.26s for all.
+  
+optimized tsp path: [62, 82, 98, 106, 90, 81, 63, 70, 63, 52, 48, 56, 57, 51, 57, 56, 48, 30, 20, 9, 4, 9, 147, 7, 147, 9, 20, 16, 5, 16, 148, 10, 148, 16, 20, 30, 24, 15, 6, 15, 14, 15, 24, 22, 24, 37, 31, 37, 42, 44, 33, 28, 33, 29, 33, 41, 36, 38, 36, 32, 149, 18, 146, 3, 146, 18, 8, 18, 13, 18, 27, 18, 19, 12, 19, 26, 19, 23, 21, 17, 21, 25, 11, 25, 39, 43, 35, 40, 35, 150, 35, 43, 39, 45, 49, 45, 58, 73, 58, 154, 54, 50, 54, 59, 74, 59, 157, 156, 155, 55, 69, 59, 69, 55, 60, 47, 41, 47, 46, 47, 61, 80, 82, 80, 79, 89, 78, 69, 78, 87, 163, 86, 75, 162, 77, 58, 77, 88, 85, 88, 97, 111, 166, 111, 124, 133, 124, 129, 104, 166, 104, 108, 92, 87, 92, 105, 116, 130, 134, 137, 134, 125, 138, 125, 117, 139, 117, 140, 117, 121, 141, 121, 122, 112, 122, 123, 106, 123, 142, 123, 126, 113, 109, 100, 109, 165, 100, 165, 109, 99, 109, 113, 126, 127, 143, 127, 118, 101, 102, 94, 102, 101, 91, 83, 91, 93, 91, 101, 118, 167, 114, 110, 114, 135, 114, 128, 131, 145, 131, 144, 131, 136, 131, 119, 115, 120, 115, 132, 115, 107, 164, 96, 164, 107, 103, 95, 84, 68, 153, 64, 153, 68, 64, 71, 64, 53, 64, 68, 153, 152, 151, 34, 151, 152, 153, 68, 84, 72, 65, 72, 158, 65, 158, 72, 161, 160, 66, 159, 67, 76]
+non-optimized tsp path: [62, 82, 98, 106, 90, 81, 63, 70, 63, 52, 48, 56, 57, 51, 57, 56, 48, 30, 20, 9, 4, 9, 147, 7, 147, 9, 20, 16, 5, 16, 148, 10, 148, 16, 20, 30, 24, 15, 6, 15, 14, 15, 24, 22, 24, 37, 31, 37, 42, 44, 33, 28, 33, 29, 33, 41, 36, 38, 36, 32, 149, 18, 146, 3, 146, 18, 8, 18, 13, 18, 27, 18, 19, 12, 19, 26, 19, 23, 21, 17, 21, 25, 11, 25, 39, 43, 35, 40, 35, 150, 35, 43, 39, 45, 49, 45, 58, 73, 58, 154, 54, 50, 54, 59, 74, 59, 157, 156, 155, 55, 69, 55, 60, 47, 46, 47, 61, 80, 79, 89, 78, 87, 163, 86, 75, 162, 77, 88, 85, 88, 97, 111, 166, 111, 124, 133, 124, 129, 104, 108, 92, 105, 116, 130, 134, 137, 134, 125, 138, 125, 117, 139, 117, 140, 117, 121, 141, 121, 122, 112, 122, 123, 142, 123, 126, 113, 109, 165, 100, 165, 109, 99, 109, 113, 126, 127, 143, 127, 118, 101, 102, 94, 102, 101, 91, 83, 91, 93, 91, 101, 118, 167, 114, 110, 114, 135, 114, 128, 131, 145, 131, 144, 131, 136, 131, 119, 115, 120, 115, 132, 115, 107, 164, 96, 164, 107, 103, 95, 84, 68, 153, 68, 64, 71, 64, 53, 64, 68, 153, 152, 151, 34, 151, 152, 153, 68, 84, 72, 158, 65, 158, 72, 161, 160, 66, 159, 67, 76]
+double free or corruption (fasttop)
+[INFO] [1788163057.399665944, 9.200000000]: waitForService: Service [/prior_graph_service] is now available.
+[INFO] [1788163057.403113185, 9.200000000]: Receive response of service prior_graph_service.
+[INFO] [1788163057.404421424, 9.200000000]: Load prior_map.
+[INFO] [1788163057.404450963, 9.200000000]: Publishing prior graph......
+[INFO] [1788163057.405097842, 9.200000000]: Draw prior_map in RVIZ.
+[INFO] [1788163057.405107534, 9.200000000]: Waiting for path_plan_service ...
+[INFO] [1788163057.411715177, 9.200000000]: Receive tsp path: 62 82 98 106 90 81 63 70 63 52 48 56 57 51 57 56 48 30 20 9 4 9 147 7 147 9 20 16 5 16 148 10 148 16 20 30 24 15 6 15 14 15 24 22 24 37 31 37 42 44 33 28 33 29 33 41 36 38 36 32 149 18 146 3 146 18 8 18 13 18 27 18 19 12 19 26 19 23 21 17 21 25 11 25 39 43 35 40 35 150 35 43 39 45 49 45 58 73 58 154 54 50 54 59 74 59 157 156 155 55 69 59 69 55 60 47 41 47 46 47 61 80 82 80 79 89 78 69 78 87 163 86 75 162 77 58 77 88 85 88 97 111 166 111 124 133 124 129 104 166 104 108 92 87 92 105 116 130 134 137 134 125 138 125 117 139 117 140 117 121 141 121 122 112 122 123 106 123 142 123 126 113 109 100 109 165 100 165 109 99 109 113 126 127 143 127 118 101 102 94 102 101 91 83 91 93 91 101 118 167 114 110 114 135 114 128 131 145 131 144 131 136 131 119 115 120 115 132 115 107 164 96 164 107 103 95 84 68 153 64 153 68 64 71 64 53 64 68 153 152 151 34 151 152 153 68 84 72 65 72 158 65 158 72 161 160 66 159 67 76
+[INFO] [1788163057.411778547, 9.200000000]: Receive loop index: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0
+[INFO] [1788163057.411788793, 9.200000000]: Waiting for reliable_loop_service ...
+[INFO] [1788163057.412149070, 9.200000000]: reliable_loop_service is available.
+[INFO] [1788163057.413130436, 9.200000000]: MyPlanner is initialized and running!!
+[INFO] [1788163057.413209841, 9.200000000]: Successfully loaded exploration strategy [MyPlanner].
+[WARN] [1788163044.553631, 0.000000]: Robot Start At 62
+[WARN] [1788163054.497786, 6.300000]: Tsp problem solved by Concorde. 9.89234972000122
+<class 'networkx.utils.decorators.argmap'> compilation 4:4: FutureWarning: laplacian_matrix will return a scipy.sparse array instead of a matrix in Networkx 3.0.
+[INFO] [1788163057.394597, 9.200000]: Find modified curr_path and loop index
+[INFO] [1788163057.398608, 9.200000]: g2o_save_path: /home/wcqw/ac-slam/catkin_ws/src/cpp_solver/results/graph_Phase4C_preflight_20260831T155610_radish_mexico_mode0.g2o
+[INFO] [1788163057.407844, 9.200000]: Replanning request. curr_vertex_idx: 0
+[INFO] [1788163057.408677, 9.200000]:                     covered_vertices: ()
+[INFO] [1788163057.409403, 9.200000]: Handle local replanning...
+[INFO] [1788163057.410131, 9.200000]: curr path length: 270, is_loop length: 270
+[INFO] [1788163057.410881, 9.200000]: Send new plan: 62  ---> 82 98 106 90 81 63 70 63 52 48 56 57 51 57 56 48 30 20 9 4 9 147 7 147 9 20 16 5 16 148 10 148 16 20 30 24 15 6 15 14 15 24 22 24 37 31 37 42 44 33 28 33 29 33 41 36 38 36 32 149 18 146 3 146 18 8 18 13 18 27 18 19 12 19 26 19 23 21 17 21 25 11 25 39 43 35 40 35 150 35 43 39 45 49 45 58 73 58 154 54 50 54 59 74 59 157 156 155 55 69 59(L) 69 55 60 47 41(L) 47 46 47 61 80 82(L) 80 79 89 78 69(L) 78 87 163 86 75 162 77 58(L) 77 88 85 88 97 111 166 111 124 133 124 129 104 166(L) 104 108 92 87(L) 92 105 116 130 134 137 134 125 138 125 117 139 117 140 117 121 141 121 122 112 122 123 106(L) 123 142 123 126 113 109 100(L) 109 165 100 165 109 99 109 113 126 127 143 127 118 101 102 94 102 101 91 83 91 93 91 101 118 167 114 110 114 135 114 128 131 145 131 144 131 136 131 119 115 120 115 132 115 107 164 96 164 107 103 95 84 68 153 64(L) 153 68 64 71 64 53 64 68 153 152 151 34 151 152 153 68 84 72 65(L) 72 158 65 158 72 161 160 66 159 67 76 
+[INFO] [1788163059.760246, 11.000000]: Pose graph has: 0 vertices, 0 edges.
+[31m[RVIZ-16] escalating to SIGTERM[0m
+... logging to /home/wcqw/ac-slam/catkin_ws/.ros/log/98e755da-a511-11f1-921f-c18b8a8af72c/roslaunch-msxg-33082.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;/home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/launch/exploration.launch
+[1mstarted roslaunch server http://127.0.0.1:42717/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /Mapper/LoopMatchMaximumVarianceCoarse: 0.16
+ * /Mapper/LoopMatchMinimumChainSize: 4
+ * /Mapper/LoopMatchMinimumResponseCoarse: 0.6
+ * /Mapper/LoopMatchMinimumResponseFine: 0.7
+ * /Mapper/LoopSearchMaximumDistance: 4
+ * /Mapper/LoopSearchSpaceDimension: 5.0
+ * /Mapper/MinimumTravelDistance: 1.0
+ * /Mapper/MinimumTravelHeading: 0.52
+ * /Mapper/enable_loop_diagnostics: False
+ * /Mapper/grid_resolution: 0.1
+ * /Mapper/loop_diagnostics_path: 
+ * /Mapper/loop_diagnostics_run_id: 
+ * /Mapper/map_frame: map
+ * /Mapper/map_update_rate: 5
+ * /Mapper/max_covariance: 0.01
+ * /Mapper/max_particles: 10000
+ * /Mapper/min_map_size: 20
+ * /Mapper/min_particles: 2500
+ * /Mapper/publish_pose_graph: True
+ * /Mapper/range_threshold: 25.0
+ * /Mapper/transform_publish_period: 0.1
+ * /Navigator/command_target_distance: 1.5
+ * /Navigator/exploration_goal_distance: 3.0
+ * /Navigator/exploration_strategy: MyPlanner
+ * /Navigator/frequency: 1
+ * /Navigator/map_inflation_radius: 1.0
+ * /Navigator/max_replanning_period: 1.0
+ * /Navigator/min_replanning_period: 5.0
+ * /Navigator/min_target_area_size: 1.0
+ * /Navigator/navigation_goal_angle: 1.0
+ * /Navigator/navigation_goal_distance: 2.0
+ * /Navigator/navigation_homing_distance: 4.0
+ * /Navigator/robot_radius: 0.5
+ * /Navigator/save_path_plan_time: /home/wcqw/ac-sla...
+ * /Navigator/use_local_planner: True
+ * /Navigator/visualize_frontiers: True
+ * /Operator/conformance_weight: 1
+ * /Operator/continue_weight: 1
+ * /Operator/escape_weight: 1
+ * /Operator/frequency: 10
+ * /Operator/local_map/cost_scaling_factor: 2.0
+ * /Operator/local_map/global_frame: odom
+ * /Operator/local_map/height: 6.0
+ * /Operator/local_map/inflation_radius: 0.75
+ * /Operator/local_map/lethal_cost_threshold: 100
+ * /Operator/local_map/map_type: costmap
+ * /Operator/local_map/max_obstacle_height: 2.0
+ * /Operator/local_map/min_obstacle_height: 0.0
+ * /Operator/local_map/observation_sources: scan
+ * /Operator/local_map/obstacle_range: 4.0
+ * /Operator/local_map/publish_frequency: 1.0
+ * /Operator/local_map/publish_voxel_map: True
+ * /Operator/local_map/raytrace_range: 4.5
+ * /Operator/local_map/resolution: 0.05
+ * /Operator/local_map/robot_base_frame: base_link
+ * /Operator/local_map/robot_radius: 0.4
+ * /Operator/local_map/rolling_window: True
+ * /Operator/local_map/scan/clearing: True
+ * /Operator/local_map/scan/data_type: LaserScan
+ * /Operator/local_map/scan/expected_update_rate: 0.4
+ * /Operator/local_map/scan/marking: True
+ * /Operator/local_map/scan/max_obstacle_height: 0.4
+ * /Operator/local_map/scan/min_obstacle_height: 0.08
+ * /Operator/local_map/scan/observation_persistence: 0.0
+ * /Operator/local_map/static_map: False
+ * /Operator/local_map/track_unknown_space: True
+ * /Operator/local_map/transform_tolerance: 0.3
+ * /Operator/local_map/update_frequency: 5.0
+ * /Operator/local_map/width: 6.0
+ * /Operator/max_free_space: 3.0
+ * /Operator/max_velocity: 1.0
+ * /Operator/publish_route: True
+ * /Operator/safety_decay: 0.99
+ * /Operator/safety_weight: 1
+ * /Stage/base_watchdog_timeout: 0
+ * /laser_frame: base_laser_link
+ * /laser_topic: base_scan
+ * /map_frame: map
+ * /map_server/frame_id: map
+ * /map_service: static_map
+ * /map_topic: map
+ * /odometry_frame: odom
+ * /offset_frame: offset
+ * /path_planner/g2o_save_path: /home/wcqw/ac-sla...
+ * /path_planner/map_width: 101.55
+ * /path_planner/need_noise: False
+ * /path_planner/only_use_tsp: False
+ * /path_planner/oracle_after: 8
+ * /path_planner/oracle_before: 8
+ * /path_planner/oracle_densify_m: 0.5
+ * /path_planner/oracle_dir_lambda: 1.0
+ * /path_planner/oracle_mode: 0
+ * /path_planner/oracle_repair_densify: 0.5
+ * /path_planner/oracle_repair_max_len: 12.0
+ * /path_planner/oracle_repair_max_wp: 24
+ * /path_planner/oracle_span_gate: 4.0
+ * /path_planner/prior_map_save_path: /home/wcqw/ac-sla...
+ * /path_planner/robot_position: -6.25 -1.6 0
+ * /path_planner/tsp_record_path: /home/wcqw/ac-sla...
+ * /path_planner/tsp_seed: 21001
+ * /path_planner/tsp_solver: concorde
+ * /path_planner/use_drawio: True
+ * /path_planner/variance: 0.0
+ * /path_planner/xml_path: /home/wcqw/ac-sla...
+ * /pubPath/gt_save_path: /home/wcqw/ac-sla...
+ * /pubPath/robot_position: -6.25 -1.6 0
+ * /pubPath/slam_save_path: /home/wcqw/ac-sla...
+ * /robot_description: <?xml version="1....
+ * /robot_frame: base_link
+ * /robot_start_position: -6.25 -1.6 0
+ * /robot_state_publisher/publish_frequency: 30.0
+ * /robot_state_publisher/tf_prefix: 
+ * /rosdistro: noetic
+ * /rosversion: 1.17.4
+ * /use_sim_time: True
+ * /use_tf1: True
+
+NODES
+  /
+    Explore (nav2d_navigator/explore_client)
+    GetMap (nav2d_navigator/get_map_client)
+    Mapper (nav2d_karto/mapper)
+    Navigator (nav2d_navigator/navigator)
+    Operator (nav2d_operator/operator)
+    RVIZ (rviz/rviz)
+    SetGoal (nav2d_navigator/set_goal_client)
+    Stage (stage_ros/stageros)
+    exploration_button_server (cpp_solver/exploration_button_server.py)
+    map_server (map_server/map_server)
+    path_planner (cpp_solver/path_planner.py)
+    pubPath (cpp_solver/pub_path)
+    publisher (p2os_urdf/p2os_publisher_3at)
+    robot_state_publisher (robot_state_publisher/robot_state_publisher)
+    rqt_robot_steering (rqt_robot_steering/rqt_robot_steering)
+    updateDistance (cpp_solver/updateDistance)
+
+[1mROS_MASTER_URI=http://localhost:11311[0m
+]2;/home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/launch/exploration.launch http://localhost:11311
+[1mprocess[Stage-1]: started with pid [33168][0m
+[1mprocess[map_server-2]: started with pid [33169][0m
+[1mprocess[Operator-3]: started with pid [33170][0m
+[1mprocess[Mapper-4]: started with pid [33172][0m
+[1mprocess[Navigator-5]: started with pid [33180][0m
+[1mprocess[GetMap-6]: started with pid [33182][0m
+[1mprocess[Explore-7]: started with pid [33186][0m
+[1mprocess[SetGoal-8]: started with pid [33193][0m
+[1mprocess[pubPath-9]: started with pid [33202][0m
+[1mprocess[updateDistance-10]: started with pid [33211][0m
+[1mprocess[exploration_button_server-11]: started with pid [33217][0m
+[1mprocess[path_planner-12]: started with pid [33222][0m
+[1mprocess[rqt_robot_steering-13]: started with pid [33223][0m
+[1mprocess[robot_state_publisher-14]: started with pid [33225][0m
+[1mprocess[publisher-15]: started with pid [33226][0m
+[1mprocess[RVIZ-16]: started with pid [33228][0m
+[RVIZ-16] killing on exit
+[publisher-15] killing on exit
+[robot_state_publisher-14] killing on exit
+[rqt_robot_steering-13] killing on exit
+[path_planner-12] killing on exit
+[updateDistance-10] killing on exit
+[exploration_button_server-11] killing on exit
+[Explore-7] killing on exit
+[SetGoal-8] killing on exit
+[pubPath-9] killing on exit
+[GetMap-6] killing on exit
+[Navigator-5] killing on exit
+[Mapper-4] killing on exit
+[Operator-3] killing on exit
+[map_server-2] killing on exit
+[Stage-1] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+[1mdone[0m

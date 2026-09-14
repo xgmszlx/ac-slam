@@ -1,0 +1,82 @@
+{
+  "grid": {
+    "estimated": {
+      "free_cells": 375790,
+      "free_thresh": 0.196,
+      "height": 539,
+      "image": "/home/wcqw/ac-slam/results/phase4c/formal/radish_mexico/seed_21003/C_selective/attempt_01/final_map.pgm",
+      "image_sha256": "23e833b9a130eae2efda072f987064f525e18c252bc224dbfd23b3595a3da085",
+      "negate": 0,
+      "occupied_cells": 19280,
+      "occupied_thresh": 0.65,
+      "origin_xyyaw": [
+        -44.93887,
+        -25.915801,
+        0.0
+      ],
+      "resolution_m": 0.1,
+      "unknown_cells": 162256,
+      "width": 1034,
+      "yaml": "/home/wcqw/ac-slam/results/phase4c/formal/radish_mexico/seed_21003/C_selective/attempt_01/final_map.yaml",
+      "yaml_sha256": "43df4fcfbebf0218af0d56d0e979d2bf5eee9d535a1e4662f86eba1f8ea15a31"
+    },
+    "evaluation_domain_cells": 2187387,
+    "gt": {
+      "free_cells": 1549277,
+      "free_thresh": 0.196,
+      "height": 1077,
+      "image": "/home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/world/radish_mexico/radish_mexico.png",
+      "image_sha256": "b58741fbe042261c43d1f6b8500ad40612e4d6c8178f6a96ecbbb300c822ac2e",
+      "negate": 0,
+      "occupied_cells": 638110,
+      "occupied_thresh": 0.65,
+      "origin_xyyaw": [
+        -50.775,
+        -26.925,
+        0.0
+      ],
+      "resolution_m": 0.05,
+      "unknown_cells": 0,
+      "width": 2031,
+      "yaml": "/home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/world/radish_mexico/radish_mexico.yaml",
+      "yaml_sha256": "1e84884a09665f6b3ddd85fb2cc1d9b22403a7e38d8fac238f89c4eed328e886"
+    }
+  },
+  "occupied_boundary_f1": {
+    "estimated_boundary_cells": 62056,
+    "estimated_matched_cells": 11366,
+    "f1": 0.15846220123881805,
+    "gt_boundary_cells": 72274,
+    "gt_matched_cells": 10092,
+    "precision": 0.18315714838210648,
+    "recall": 0.13963527686304894
+  },
+  "occupied_iou": {
+    "estimated_occupied_cells": 70856,
+    "gt_occupied_cells": 638110,
+    "intersection_cells": 21260,
+    "union_cells": 687706,
+    "value": 0.030914373293238682
+  },
+  "protocol": {
+    "boundary_tolerance_m": 0.2,
+    "estimated_unknown_policy": "neither occupied nor free inside GT-known domain; therefore false negative where the GT class is occupied/free",
+    "gt_unknown_policy": "excluded from evaluation domain",
+    "occupied_boundary": "occupied minus one 8-neighbour 3x3 binary erosion",
+    "registration": "identity map-frame rule; deterministic cell-centre resampling",
+    "registration_transform_xyyaw": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sampling": "nearest source cell at each GT cell centre"
+  },
+  "supporting": {
+    "estimated_unknown_cells_in_gt_known_domain": 670689,
+    "estimated_unknown_ratio": 0.3066165246479018,
+    "free_intersection_cells": 1156881,
+    "free_iou": 0.629342337608079,
+    "free_union_cells": 1838238,
+    "gt_unknown_cells_excluded": 0
+  }
+}

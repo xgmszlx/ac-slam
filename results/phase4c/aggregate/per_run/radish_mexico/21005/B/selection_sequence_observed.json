@@ -1,0 +1,48 @@
+{
+  "executed_loop_count": 0,
+  "instrumentation_discrepancy": true,
+  "interpretation": "runtime loops.json starts a record only when execution becomes the next loop target; LOOP_INSERTED is authoritative for high-level planned actions",
+  "observed_planned_loop_count": 11,
+  "runtime_record": "results/phase4c/formal/radish_mexico/seed_21005/B_always_trace/attempt_01/selection_sequence.json",
+  "runtime_record_planned_loop_count": 0,
+  "selected_loop_vertex_sequence": [
+    59,
+    41,
+    82,
+    69,
+    58,
+    166,
+    87,
+    106,
+    100,
+    153,
+    65
+  ],
+  "selection_order": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "selection_timestamp": [
+    2.3,
+    2.3,
+    2.3,
+    2.3,
+    2.3,
+    2.3,
+    2.3,
+    2.3,
+    2.3,
+    2.3,
+    2.3
+  ],
+  "source": "append-only events.csv LOOP_INSERTED records"
+}

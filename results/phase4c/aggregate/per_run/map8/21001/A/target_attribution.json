@@ -1,0 +1,72 @@
+{
+  "events": [
+    {
+      "active_end": "",
+      "active_start": "",
+      "attribution_class": "PASSIVE_OR_UNRELATED",
+      "baseline_anchor_scan": "",
+      "chain_end": 351,
+      "chain_start": 345,
+      "condition": "A",
+      "current_scan": 361,
+      "current_scan_time": 432.6,
+      "event_seq": 1,
+      "h_star_ids": "",
+      "loop_id": "",
+      "map": "map8",
+      "matched_h_star_ids": "[]",
+      "method": "Original",
+      "run_dir": "results/phase4c/formal/map8/seed_21001/A_original/attempt_01",
+      "seed": 21001,
+      "vertex": ""
+    },
+    {
+      "active_end": 711.9,
+      "active_start": 671.8,
+      "attribution_class": "TEMPORALLY_ASSOCIATED",
+      "baseline_anchor_scan": 1,
+      "chain_end": 13,
+      "chain_start": 9,
+      "condition": "A",
+      "current_scan": 501,
+      "current_scan_time": 690.5,
+      "event_seq": 2,
+      "h_star_ids": "[1, 2, 3, 4, 5, 6, 7]",
+      "loop_id": 1,
+      "map": "map8",
+      "matched_h_star_ids": "[]",
+      "method": "Original",
+      "run_dir": "results/phase4c/formal/map8/seed_21001/A_original/attempt_01",
+      "seed": 21001,
+      "vertex": 20
+    },
+    {
+      "active_end": 1126.4,
+      "active_start": 1086.2,
+      "attribution_class": "TARGET_ATTRIBUTABLE",
+      "baseline_anchor_scan": 488,
+      "chain_end": 490,
+      "chain_start": 486,
+      "condition": "A",
+      "current_scan": 814,
+      "current_scan_time": 1098.3,
+      "event_seq": 3,
+      "h_star_ids": "[488, 489, 490, 491, 492, 493, 494]",
+      "loop_id": 2,
+      "map": "map8",
+      "matched_h_star_ids": "[488, 489, 490]",
+      "method": "Original",
+      "run_dir": "results/phase4c/formal/map8/seed_21001/A_original/attempt_01",
+      "seed": 21001,
+      "vertex": 38
+    }
+  ],
+  "frozen_rule": "unique active interval AND accepted historical chain overlaps fixed 7-scan H*",
+  "passive_or_unrelated_events": 1,
+  "target_attributable_loop_ids": [
+    2
+  ],
+  "temporally_associated_loop_ids": [
+    1
+  ]
+}

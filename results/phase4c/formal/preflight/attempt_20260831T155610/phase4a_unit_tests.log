@@ -1,0 +1,20 @@
+== Phase 4A selective-logic unit tests ==
+  [PASS] densify length
+  [PASS] densify endpoints preserved
+  [PASS] densify monotonic
+  [PASS] gate fires for span<4.0
+  [PASS] gate does NOT fire for span>=4.0
+  [PASS] S-reference span protected
+  [PASS] repair built
+  [PASS] repair length <= max
+  [PASS] repair waypoints <= max
+  [PASS] repair starts at/near robot side (forward, +x history)
+  [PASS] direction choice deterministic
+  [PASS] waypoints capped
+  [PASS] V0 returns consecutive poses after closest
+  [PASS] V0 selective_repair False
+  [PASS] early stop sets idx to end
+  [PASS] early stop disables repair
+  [PASS] fallback: repair returns None on tiny graph
+
+PASS=17 FAIL=0

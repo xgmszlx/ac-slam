@@ -1,0 +1,24 @@
+{
+  "executed_loop_count": 3,
+  "instrumentation_discrepancy": false,
+  "interpretation": "runtime loops.json starts a record only when execution becomes the next loop target; LOOP_INSERTED is authoritative for high-level planned actions",
+  "observed_planned_loop_count": 3,
+  "runtime_record": "results/phase4c/formal/map8/seed_21003/A_original/attempt_01/selection_sequence.json",
+  "runtime_record_planned_loop_count": 3,
+  "selected_loop_vertex_sequence": [
+    20,
+    38,
+    35
+  ],
+  "selection_order": [
+    1,
+    2,
+    3
+  ],
+  "selection_timestamp": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "source": "append-only events.csv LOOP_INSERTED records"
+}

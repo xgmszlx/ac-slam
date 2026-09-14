@@ -1,0 +1,39 @@
+{
+  "inputs": {
+    "gt": "/home/wcqw/ac-slam/results/phase4c/formal/radish_mexico/seed_21005/C_selective/attempt_01/trajectory_gt.txt",
+    "slam": "/home/wcqw/ac-slam/results/phase4c/formal/radish_mexico/seed_21005/C_selective/attempt_01/trajectory_slam.txt"
+  },
+  "loops": [],
+  "protocol": {
+    "alignment": "none (identity; GT and Karto share the map frame)",
+    "ape": "translation-part RMSE on planar SE(2) poses, metres",
+    "evo_version": "1.31.1",
+    "projection": "xy plane before metric evaluation",
+    "python": "/usr/bin/python3 (3.8)",
+    "rpe_rotation": "rotation-angle RMSE, all reference pairs at 1 m delta, degrees",
+    "rpe_translation": "translation-part RMSE, all reference pairs at 1 m delta, metres",
+    "scale_correction": false,
+    "timestamp_association": "nearest timestamp, max difference 0.05 s, offset 0 s",
+    "trajectory_format": "TUM"
+  },
+  "whole_run": {
+    "ape_se2_translation_m": {
+      "command": "env PYTHONPATH=/home/wcqw/ac-slam/evaluation/evo-1.31.1-target/site-packages /usr/bin/python3 -m evo.main_ape tum /home/wcqw/ac-slam/results/phase4c/formal/radish_mexico/seed_21005/C_selective/attempt_01/trajectory_gt.txt /home/wcqw/ac-slam/results/phase4c/formal/radish_mexico/seed_21005/C_selective/attempt_01/trajectory_slam.txt -r trans_part --project_to_plane xy --t_max_diff 0.05 --t_offset 0 --no_warnings --save_results /home/wcqw/ac-slam/results/phase4c/formal/radish_mexico/seed_21005/C_selective/attempt_01/evo/ape_se2_translation.zip",
+      "result_archive": "ape_se2_translation.zip",
+      "rmse": 0.175283,
+      "stdout_stderr": "ape_se2_translation.txt"
+    },
+    "rpe_rotation_1m_deg": {
+      "command": "env PYTHONPATH=/home/wcqw/ac-slam/evaluation/evo-1.31.1-target/site-packages /usr/bin/python3 -m evo.main_rpe tum /home/wcqw/ac-slam/results/phase4c/formal/radish_mexico/seed_21005/C_selective/attempt_01/trajectory_gt.txt /home/wcqw/ac-slam/results/phase4c/formal/radish_mexico/seed_21005/C_selective/attempt_01/trajectory_slam.txt -r angle_deg --project_to_plane xy --t_max_diff 0.05 --t_offset 0 --no_warnings -d 1 -u m --all_pairs --pairs_from_reference --save_results /home/wcqw/ac-slam/results/phase4c/formal/radish_mexico/seed_21005/C_selective/attempt_01/evo/rpe_rotation_1m.zip",
+      "result_archive": "rpe_rotation_1m.zip",
+      "rmse": 2.45312,
+      "stdout_stderr": "rpe_rotation_1m.txt"
+    },
+    "rpe_translation_1m_m": {
+      "command": "env PYTHONPATH=/home/wcqw/ac-slam/evaluation/evo-1.31.1-target/site-packages /usr/bin/python3 -m evo.main_rpe tum /home/wcqw/ac-slam/results/phase4c/formal/radish_mexico/seed_21005/C_selective/attempt_01/trajectory_gt.txt /home/wcqw/ac-slam/results/phase4c/formal/radish_mexico/seed_21005/C_selective/attempt_01/trajectory_slam.txt -r trans_part --project_to_plane xy --t_max_diff 0.05 --t_offset 0 --no_warnings -d 1 -u m --all_pairs --pairs_from_reference --save_results /home/wcqw/ac-slam/results/phase4c/formal/radish_mexico/seed_21005/C_selective/attempt_01/evo/rpe_translation_1m.zip",
+      "result_archive": "rpe_translation_1m.zip",
+      "rmse": 0.030314,
+      "stdout_stderr": "rpe_translation_1m.txt"
+    }
+  }
+}

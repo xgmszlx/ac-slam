@@ -61,9 +61,77 @@ off; and identical frozen TSP input under modes 0/1/2 for both new maps. It writ
 `results/phase4c/formal/protocol_manifest.json`. The performance runner refuses a
 different commit or a dirty tracked worktree.
 
-## Execution state
+## Execution record
 
-At this protocol-freeze checkpoint, performance runs remain **NOT_STARTED**.
-Preflight and each formal attempt will be recorded below after execution; no
-scientific source will be edited between the passing preflight and completion of
-the matrix.
+The detached formal suite finished at
+`2026-09-12T02:58:08.185019+00:00`. The selected dataset contains all 30 new
+map8/Mexico cells. Together with the 15 reused map3 cells, the aggregate contains
+45 method-runs and all 15 planned map-seed blocks.
+
+| Map | Selected cells | Outcome |
+| --- | ---: | --- |
+| map3 (reused Phase 4B) | 15 | 15 `VALID` |
+| map8 | 15 | 15 `VALID` |
+| radish_mexico | 15 | 15 `EXPERIMENTAL_FAILURE` |
+
+Mexico was not censored or rerun for an unfavorable outcome. Four interrupted
+attempts were retained as `TECHNICAL_INVALID`, followed by explicitly selected
+attempts:
+
+- map8/21002/C `attempt_01`: external runner/session interruption;
+- radish_mexico/21002/B `attempt_01`: external runner/session interruption;
+- radish_mexico/21002/A `attempt_01`: external detached-runner interruption;
+- radish_mexico/21004/B `attempt_01`: external detached-runner interruption.
+
+All other cells selected `attempt_01`; the four cells above selected
+`attempt_02`. Automatic retry remained disabled. Mexico seed 21004/B ended at
+the frozen 18,001 s hard timeout; the other 14 selected Mexico cells returned
+Explore action status 4. These are experimental failures under the frozen
+definition, not technical invalidations.
+
+## Post-run aggregation audit
+
+The original runtime `selection_sequence.json` and `loops.json` files did not
+record a Mexico loop until that loop became the next executable target. In every
+Mexico run, navigation failed before this transition, while the append-only
+`events.csv` already contained eleven `LOOP_INSERTED` records. Therefore the
+runtime summary's zero planned-loop count was an instrumentation omission.
+
+The offline analyzer was minimally amended after the runs to use
+`LOOP_INSERTED` as the authoritative planned high-level sequence, create
+unexecuted `NOT_REACHED` rows, and write a separate
+`selection_sequence_observed.json`. No raw artifact, planner, treatment,
+attribution rule, metric, or selected attempt was changed. The correction
+changes Mexico from `0 planned / 0 executed` to `11 planned / 0 executed` per
+run. Unit tests cover both zero-loop blocks and event-based recovery.
+
+The final offline commands were:
+
+```bash
+source catkin_ws/activate.sh
+/usr/bin/python3 -m unittest \
+  tools/test_phase4a_selective.py \
+  tools/test_phase4b_mapping.py \
+  tools/test_phase4c0_mapping.py \
+  tools/test_phase4c_formal_runner.py
+
+env -u PYTHONPATH /home/wcqw/anaconda3/bin/python \
+  tools/analyze_phase4c_formal.py \
+  > results/phase4c/aggregate/analyzer_stdout.json
+```
+
+The ROS-side suite passed 19/19 tests with system Python 3.8. The analyzer's
+focused suite passed 7/7 under the frozen offline environment (Python 3.12.7,
+NumPy 1.26.4, SciPy 1.13.1, Matplotlib 3.9.2). The split is deliberate: ROS
+runtime remains isolated from Conda, while the offline statistical/plotting
+stack uses the pinned Conda environment.
+
+## Integrity conclusion
+
+The formal method code remained frozen during all performance attempts. The
+protocol manifest records root commit
+`342e7c1e4af47e3c256a87bf3511d3d910e34748`, baseline commit
+`7993bf8b93e503b352d89e3992b8e5d7b08e4459`, and navigation commit
+`062283d364d891603a546b83e557ab638ffaa163`. The analyzer change is explicitly
+post-hoc and observation-only. All raw and invalid attempts remain preserved
+under `results/phase4c/formal/`.

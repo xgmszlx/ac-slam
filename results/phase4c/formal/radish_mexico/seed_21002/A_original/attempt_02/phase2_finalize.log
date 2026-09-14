@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/wcqw/ac-slam/tools/finalize_phase2_run.py", line 148, in <module>
+    main()
+  File "/home/wcqw/ac-slam/tools/finalize_phase2_run.py", line 86, in main
+    high_level_path_length = planned_graph_path_length(run_dir, planned)
+  File "/home/wcqw/ac-slam/tools/finalize_phase2_run.py", line 47, in planned_graph_path_length
+    raise ValueError('recorded high-level path has no prior edge: {} -> {}'.format(
+ValueError: recorded high-level path has no prior edge: 109 -> 100

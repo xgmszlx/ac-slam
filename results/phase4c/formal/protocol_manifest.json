@@ -1,0 +1,137 @@
+{
+  "automatic_retry": false,
+  "commits": {
+    "baseline": "7993bf8b93e503b352d89e3992b8e5d7b08e4459",
+    "navigation_2d": "062283d364d891603a546b83e557ab638ffaa163",
+    "root": "342e7c1e4af47e3c256a87bf3511d3d910e34748"
+  },
+  "conditions": {
+    "A": {
+      "directory": "A_original",
+      "name": "Original",
+      "oracle_mode": 0
+    },
+    "B": {
+      "directory": "B_always_trace",
+      "name": "Always-Trace",
+      "oracle_mode": 1
+    },
+    "C": {
+      "directory": "C_selective",
+      "name": "Selective",
+      "oracle_mode": 2
+    }
+  },
+  "counterbalanced_order": {
+    "21001": [
+      "A",
+      "B",
+      "C"
+    ],
+    "21002": [
+      "B",
+      "C",
+      "A"
+    ],
+    "21003": [
+      "C",
+      "A",
+      "B"
+    ],
+    "21004": [
+      "A",
+      "C",
+      "B"
+    ],
+    "21005": [
+      "B",
+      "A",
+      "C"
+    ]
+  },
+  "diagnostics_enabled": false,
+  "environment_sha256": {
+    "map8": {
+      "floorplan.inc": "9087664e52773d63ea7e0546b10eadfe2e224a242b5b31dacb5cd756f6347059",
+      "hokuyo.inc": "63187469b0c9173f2ab1e5086723283d8e920007e1a77030a64d583cdf19dc32",
+      "map8.png": "22a27847ccef060409e63ed6bea949265c52f8ca4f35545a4756697de0ed1046",
+      "map8.world": "6beefe415afd84c587f5c31b81a1d09fa176230e146685ed11ad25836e663cb5",
+      "map8.xml": "ec78c76cfb3747f99e744e8efb166f07df580ef1a5aedce5653bdaf37ae4d9a3",
+      "map8.yaml": "b4380d64c3d1508fcdf4f24af5593203c5cef896707b65975f3e3c784a1f6544",
+      "p3at.inc": "a619126df1a551ba06f552a3f981e00fdfd12c8daf779cf35d4d79f98579c2b1"
+    },
+    "radish_mexico": {
+      "floorplan.inc": "9087664e52773d63ea7e0546b10eadfe2e224a242b5b31dacb5cd756f6347059",
+      "hokuyo.inc": "63187469b0c9173f2ab1e5086723283d8e920007e1a77030a64d583cdf19dc32",
+      "p3at.inc": "a619126df1a551ba06f552a3f981e00fdfd12c8daf779cf35d4d79f98579c2b1",
+      "radish_mexico.png": "b58741fbe042261c43d1f6b8500ad40612e4d6c8178f6a96ecbbb300c822ac2e",
+      "radish_mexico.world": "d17f1bc50ec33c7e1ab7ce528fce450a2f86341c7376aec1338d0115d89959c4",
+      "radish_mexico.xml": "1efee1830bd9b29462a948d3dd67bf5338b7fc2658ec85962421ea665f33c75b",
+      "radish_mexico.yaml": "1e84884a09665f6b3ddd85fb2cc1d9b22403a7e38d8fac238f89c4eed328e886"
+    }
+  },
+  "experimental_failures_retained": true,
+  "formal_maps": [
+    "map8",
+    "radish_mexico"
+  ],
+  "formal_performance_runs_started": false,
+  "formal_seeds": [
+    21001,
+    21002,
+    21003,
+    21004,
+    21005
+  ],
+  "initial_tsp_mismatch": "BLOCKER before StartMapping",
+  "mapping_protocol": {
+    "boundary_f1_tolerance_m": 0.2,
+    "local_roi_radius_m": 5.0,
+    "secondary": "occupied_iou",
+    "symmetric_boundary_distance": true
+  },
+  "only_scientific_variable": "oracle_mode",
+  "outcome_based_stopping": false,
+  "phase": "4C_FORMAL",
+  "preflight_attempt": "preflight/attempt_20260831T155610",
+  "runtime": {
+    "explore_wall_timeout_s": 18000,
+    "platform": "Linux-5.15.0-139-generic-x86_64-with-glibc2.29",
+    "ros": "Noetic",
+    "ros_python": "/usr/bin/python3 3.8"
+  },
+  "scientific_base_commit": "3ffaa2672816d5f5f20e0d8019054bdd47f2961b",
+  "source_sha256": {
+    "baseline/Graph-Based_SLAM-Aware_Exploration/launch/exploration.launch": "0c3ea311ec33f1cbaf2d767144f3226eb99cc0594b9637f89e6d1d9a64632c2a",
+    "baseline/Graph-Based_SLAM-Aware_Exploration/param/costmap.yaml": "00f1c1969824999889b6089af8fe6cee1887ce1cd119172dadaa3b12fe809d91",
+    "baseline/Graph-Based_SLAM-Aware_Exploration/param/mapper.yaml": "024a076d52c5ee7266c98fa78d03384506f440d65edc10153b065df1c54a35c0",
+    "baseline/Graph-Based_SLAM-Aware_Exploration/param/navigator.yaml": "ecefb73a3d13b09e1f9d4864063d5bd31f74ff6672c618614a8d8bd7a88998b1",
+    "baseline/Graph-Based_SLAM-Aware_Exploration/param/operator.yaml": "e4f2bff2f12f3eb27211abea036a650d1d28b729e39bd385f3f5b7988dd5b65d",
+    "baseline/Graph-Based_SLAM-Aware_Exploration/param/ros.yaml": "42e1cca7804dcb142687d8f572d6e6a36f79bcbb85f0935b3f371010d95e83aa",
+    "baseline/Graph-Based_SLAM-Aware_Exploration/scripts/path_planner.py": "dcd66c620cbe3dde91e005fe4be8020a02da7955e2f19c41a5c671f5abaec7c1",
+    "baseline/Graph-Based_SLAM-Aware_Exploration/src/MyPlanner.cpp": "025bd3fc0044ce8f9500480809c3e838dfe62958f57b4281e3745938668364c6",
+    "dependencies/navigation_2d/nav2d_karto/OpenKarto/source/OpenMapper.cpp": "6c787ff1bb862572d7ab140d7758db7d2b408561496d377011646a3bdd9a8cfb",
+    "dependencies/navigation_2d/nav2d_karto/src/MultiMapper.cpp": "8e7b5c6d637896cdc00217fa0357e38f769976c30a2648954c0df7b22510b5bd",
+    "tools/analyze_phase4c_formal.py": "6094e2831893a8c0015d6b39d40f083565ecd3c01b52158a25db3e666645a525",
+    "tools/audit_phase4c05_neutrality.py": "38e250320290e3f8f84fbc592c586aa3e5449be17022e98ab679b58ed46eac28",
+    "tools/evaluate_mapping.py": "956e8fb48fa3ada736eb6e7a771ef7ac2af239a5ea7cfb4847c4a37316b20017",
+    "tools/evaluate_mapping_v2.py": "3b340d0b7f09b568bf399372c669d5d2236da00dbc7447927f15461a9532169f",
+    "tools/evaluate_slam_run.py": "0dff77399e823c1caf705db078a08e84c3c9bb1f5a18033ca99985716d36e12a",
+    "tools/finalize_phase2_run.py": "9020773aca2f8dadde9b1c66cbbaf0c8234d105ba831b5cd3688397389d1dbd1",
+    "tools/finalize_phase4b_run.py": "4e4661aadde651f1d35259a8d9dd24e38acf6efdb55a6df3a3984872fb71ca55",
+    "tools/phase2_observer.py": "e01e7f076b2ffc4e1b9d2b1439f56275520bcb3429c6f84cf04a9e261ce55229",
+    "tools/phase4c_formal_common.py": "b5ab18842d1d017fbaaeeea0c0b71f33505fba3855eef8c1535b815db7d19e96",
+    "tools/preflight_phase4c_formal.py": "4d224e51056a17fd4d4e40b4d4b2d2a8ec15366322e16859dc4f168ce4074a4a",
+    "tools/run_phase4b_suite.py": "34211bf0d77884699aaa98b84dd9cd8c8488b9bd3567b6a841643ca27982a094",
+    "tools/run_phase4c_formal.py": "ab7808d932a30d8dcbc0f309f23033f3da1072ab0f1357e958aedb8e80ab6429",
+    "tools/test_phase4c_formal_runner.py": "cafc96d54f041521097aba00ecffc43c9ed238e899b1f4fd1adecf04c2acb88f"
+  },
+  "status": "PREFLIGHT_PASS_NOT_STARTED",
+  "technical_invalid_preservation": "attempt_N; no deletion or automatic retry",
+  "trajectory_protocol": {
+    "alignment": "none",
+    "evo_version": "1.31.1",
+    "projection": "xy",
+    "timestamp_max_diff_s": 0.05
+  }
+}

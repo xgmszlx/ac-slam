@@ -1,0 +1,50 @@
+{
+  "events": [
+    {
+      "active_end": "",
+      "active_start": "",
+      "attribution_class": "PASSIVE_OR_UNRELATED",
+      "baseline_anchor_scan": "",
+      "chain_end": 72,
+      "chain_start": 69,
+      "condition": "C",
+      "current_scan": 158,
+      "current_scan_time": 196.3,
+      "event_seq": 1,
+      "h_star_ids": "",
+      "loop_id": "",
+      "map": "map8",
+      "matched_h_star_ids": "[]",
+      "method": "Selective",
+      "run_dir": "results/phase4c/formal/map8/seed_21004/C_selective/attempt_01",
+      "seed": 21004,
+      "vertex": ""
+    },
+    {
+      "active_end": 669.9,
+      "active_start": 653.8,
+      "attribution_class": "TEMPORALLY_ASSOCIATED",
+      "baseline_anchor_scan": 1,
+      "chain_end": 17,
+      "chain_start": 9,
+      "condition": "C",
+      "current_scan": 478,
+      "current_scan_time": 667.9,
+      "event_seq": 2,
+      "h_star_ids": "[1, 2, 3, 4, 5, 6, 7]",
+      "loop_id": 1,
+      "map": "map8",
+      "matched_h_star_ids": "[]",
+      "method": "Selective",
+      "run_dir": "results/phase4c/formal/map8/seed_21004/C_selective/attempt_01",
+      "seed": 21004,
+      "vertex": 20
+    }
+  ],
+  "frozen_rule": "unique active interval AND accepted historical chain overlaps fixed 7-scan H*",
+  "passive_or_unrelated_events": 1,
+  "target_attributable_loop_ids": [],
+  "temporally_associated_loop_ids": [
+    1
+  ]
+}

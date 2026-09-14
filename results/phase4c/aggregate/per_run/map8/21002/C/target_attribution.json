@@ -1,0 +1,73 @@
+{
+  "events": [
+    {
+      "active_end": 704.4,
+      "active_start": 690.2,
+      "attribution_class": "TEMPORALLY_ASSOCIATED",
+      "baseline_anchor_scan": 17,
+      "chain_end": 12,
+      "chain_start": 8,
+      "condition": "C",
+      "current_scan": 499,
+      "current_scan_time": 702.3,
+      "event_seq": 1,
+      "h_star_ids": "[17, 18, 19, 20, 21, 22, 23]",
+      "loop_id": 1,
+      "map": "map8",
+      "matched_h_star_ids": "[]",
+      "method": "Selective",
+      "run_dir": "results/phase4c/formal/map8/seed_21002/C_selective/attempt_02",
+      "seed": 21002,
+      "vertex": 20
+    },
+    {
+      "active_end": 1187.8,
+      "active_start": 1102.5,
+      "attribution_class": "TEMPORALLY_ASSOCIATED",
+      "baseline_anchor_scan": 483,
+      "chain_end": 470,
+      "chain_start": 463,
+      "condition": "C",
+      "current_scan": 874,
+      "current_scan_time": 1187.5,
+      "event_seq": 2,
+      "h_star_ids": "[483, 484, 485, 486, 487, 488, 489]",
+      "loop_id": 2,
+      "map": "map8",
+      "matched_h_star_ids": "[]",
+      "method": "Selective",
+      "run_dir": "results/phase4c/formal/map8/seed_21002/C_selective/attempt_02",
+      "seed": 21002,
+      "vertex": 38
+    },
+    {
+      "active_end": 1481.8,
+      "active_start": 1443.5,
+      "attribution_class": "TARGET_ATTRIBUTABLE",
+      "baseline_anchor_scan": 405,
+      "chain_end": 412,
+      "chain_start": 406,
+      "condition": "C",
+      "current_scan": 1087,
+      "current_scan_time": 1476.6,
+      "event_seq": 3,
+      "h_star_ids": "[405, 406, 407, 408, 409, 410, 411]",
+      "loop_id": 3,
+      "map": "map8",
+      "matched_h_star_ids": "[406, 407, 408, 409, 410, 411]",
+      "method": "Selective",
+      "run_dir": "results/phase4c/formal/map8/seed_21002/C_selective/attempt_02",
+      "seed": 21002,
+      "vertex": 35
+    }
+  ],
+  "frozen_rule": "unique active interval AND accepted historical chain overlaps fixed 7-scan H*",
+  "passive_or_unrelated_events": 0,
+  "target_attributable_loop_ids": [
+    3
+  ],
+  "temporally_associated_loop_ids": [
+    1,
+    2
+  ]
+}
