@@ -8,9 +8,11 @@ Date: 2026-09-14
 
 ## Rule-based justification
 
-The formal results do not satisfy `METHOD_GENERALIZATION_SUPPORTED`: although C
-is cheaper than B on the two executable maps, it does not retain a clear
-realization benefit and exhibits systematic map8 map-geometry regression.
+The formal results do not satisfy `METHOD_GENERALIZATION_SUPPORTED`: C meets the
+narrow H3 tradeoff rule on the two executable maps (the same pooled realization
+count as B at lower cost), but Mexico never reaches the treatment and C exhibits
+systematic map8 map-geometry regression. The cross-environment and supporting-H4
+requirements therefore fail.
 
 They do not satisfy `REDESIGN_REALIZABILITY_GATE`: B is not clearly better than A
 in target-attributable realization, so there is no demonstrated B benefit for C

@@ -25,17 +25,19 @@ change trajectories/cost substantially and individual paired outcomes varied;
 the experiment is simply too event-sparse, and one environment never reached
 the intervention.
 
-## H3 — Selective Efficiency: INCONCLUSIVE
+## H3 — Selective Efficiency: SUPPORTED (executable-map scope)
 
 C and B each produced 5/36 target-attributable events over the two evaluable
 maps. C used substantially less active-loop distance/time in 9/10 and 10/10
-paired blocks respectively. This supports the cost half of H3.
+paired blocks respectively. This meets the frozen H3 rule: realization was close
+(identical when pooled over executable loops) and C cost was clearly lower.
 
-However, C did not demonstrate a stable realization advantage, and on map8 it
-showed systematic global and local map-geometry regression relative to B. Mexico
-provides no active-loop comparison. The decision rule requires retained
-realization benefit without systematic degradation, so formal support for H3 is
-not established.
+The support is explicitly bounded to map3 and map8. Mexico provides no
+active-loop comparison, C did not demonstrate a stable realization advantage,
+and on map8 it showed systematic global and local map-geometry regression
+relative to B. Those facts block the stronger method-generalization decision via
+supporting H4; they do not retroactively change the narrower H3 cost/realization
+criterion.
 
 ## Supporting H4 — No systematic degradation: NOT SUPPORTED
 
@@ -62,4 +64,5 @@ condition even without inferential significance claims.
    improves, while APE/rotation results are mixed or worse.
 9. C systematically harms the two primary local geometry measures on map8, but
    not consistently on map3; Mexico is incomplete.
-10. H1 is supported; H2 and H3 are inconclusive.
+10. H1 is supported; H2 is inconclusive; H3 is supported within the two
+    environments where active loops executed.
