@@ -1,0 +1,17 @@
+{
+  "protocol_version": "p1_preflight_v6",
+  "completed_episodes": 1,
+  "remaining_episodes": 3,
+  "suite_disposition": "PAUSED_OUTCOME_DEFINITION_INCOMPLETE",
+  "analysis_eligible": true,
+  "explicit_target_constraint": false,
+  "target_backend_measurement_marker_evidence": true,
+  "target_marker_edge_pairs": [
+    [17, 40],
+    [14, 41],
+    [15, 49]
+  ],
+  "marker_endpoint_error_max_m": 0.0,
+  "conclusion": "No explicit TryCloseLoop callback is not equivalent to no target-attributable backend graph measurement.",
+  "next_step": "Cross-check one episode with a default-off full pose-graph observer carrying exact IDs and covariance; do not continue the action matrix yet."
+}

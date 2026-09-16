@@ -1,0 +1,69 @@
+{
+  "decision": "OBSERVER_VALIDATED_FOR_SINGLE_EPISODE_ONLY",
+  "evidence_status": "ANALYZED_NOT_INDEPENDENTLY_VERIFIED",
+  "protocol_version": "p1_preflight_v7",
+  "suite_status": "PAUSED",
+  "completed_conditions": 1,
+  "pending_conditions": 3,
+  "attempt_01": {
+    "classification": "TECHNICAL_INVALID",
+    "reason": "The full-graph observer was published only by the periodic pose-graph path. Repeated get_map calls invoked sendMap and reset the same update timer, leaving the observer at 9 nodes while slam_path had 43 nodes.",
+    "scientific_outcome_selected": false
+  },
+  "uniform_outcome_blind_repair": {
+    "change": "Publish the default-off full graph observer immediately beside slam_path in every successful sendMap call, without changing the incremental pose-graph topic or its cursor.",
+    "planner_changed": false,
+    "karto_graph_construction_changed": false,
+    "karto_matching_changed": false,
+    "seed_or_condition_changed": false
+  },
+  "attempt_02": {
+    "analysis_eligible": true,
+    "action_completed": true,
+    "before_node_counts": {
+      "slam_path": 32,
+      "full_pose_graph": 32
+    },
+    "after_node_counts": {
+      "slam_path": 48,
+      "full_pose_graph": 48
+    },
+    "before_full_edge_count": 36,
+    "after_full_edge_count": 70,
+    "frozen_target_scan_ids": [13, 14, 15, 16, 17],
+    "explicit_try_close_loop_events": 0,
+    "target_explicit_constraints": 0,
+    "target_nonexplicit_full_graph_constraints": [
+      {
+        "edge_index": 49,
+        "source": 16,
+        "target": 38,
+        "covariance_upper_triangle": "0.000770155 -0.000285777 0 0.000919938 0 7.8237e-06"
+      },
+      {
+        "edge_index": 51,
+        "source": 13,
+        "target": 39,
+        "covariance_upper_triangle": "0.00104281 -0.000329883 0 0.00279363 0 3.47994e-05"
+      },
+      {
+        "edge_index": 69,
+        "source": 14,
+        "target": 47,
+        "covariance_upper_triangle": "0.000515596 2.24057e-08 0 0.000318022 0 5.93442e-06"
+      }
+    ],
+    "target_marker_pairs": [[16, 38], [13, 39], [14, 47]],
+    "exact_graph_marker_pair_agreement": true,
+    "target_constraint": false,
+    "target_backend_measurement": true,
+    "target_nonexplicit_full_graph_constraint": true
+  },
+  "interpretation": [
+    "The v6 marker-positive observation is confirmed by exact graph IDs and covariance in one fresh episode.",
+    "No explicit TryCloseLoop closure occurred; the accepted target-attributable measurements followed a non-explicit Karto graph-link path.",
+    "The earlier 0/21 explicit-closure statement remains valid, but 0/21 backend-measurement failure is not valid.",
+    "The exact construction subtype of historical marker-only constraints cannot be recovered for the old 21 runs from their saved artifacts."
+  ],
+  "next_gate": "Do not run the larger intervention screen. First freeze the corrected dependent-variable taxonomy and decide whether the remaining three v7 preflight sentinel conditions are needed for repeatability and observer-perturbation checks."
+}

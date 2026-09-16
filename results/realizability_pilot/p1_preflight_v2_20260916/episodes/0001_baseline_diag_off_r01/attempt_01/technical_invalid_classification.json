@@ -1,0 +1,15 @@
+{
+  "classification": "TECHNICAL_INVALID",
+  "counts_as_constraint_realization_outcome": false,
+  "failure_layer": "pilot_harness_pose_measurement_construct",
+  "reason": "The v2 arrival gate treated /slam_path as a continuous robot pose, but MultiMapper publishes it as the corrected keyscan path from sendMap().",
+  "evidence": {
+    "history_01_to_03_independently_reached": true,
+    "history_04_action_state": 3,
+    "history_04_action_result_position": [6.425570030182015, 6.4951809660556],
+    "history_04_target_position": [6.512144546097174, 6.4942282273722185],
+    "history_04_stale_slam_path_position": [8.453501154355463, 6.336504422536938],
+    "v2_reported_path_error_m": 1.9477531360621256
+  },
+  "protocol_disposition": "Retain v2 artifacts; use live TF plus Stage GT in v3; keep /slam_path and /others as freshness-labelled diagnostics."
+}

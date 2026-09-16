@@ -1,0 +1,14 @@
+{
+  "classification": "TECHNICAL_INVALID",
+  "counts_as_constraint_realization_outcome": false,
+  "failure_layer": "pilot_observer_lifecycle_and_route_canonicalization",
+  "reason": "The driver subscribed to the incremental pose graph after initial mapping and missed nodes after the planner advanced the publication cursor; the route also rotated with the variable post-mapping heading.",
+  "validated_subresult": {
+    "tf_and_gt_arrival_gate": "PASS",
+    "history_moves_confirmed": 4,
+    "tf_position_error_range_m": [0.07093395445839494, 0.2685442183595766],
+    "gt_position_error_range_m": [0.15786696090621394, 0.2587967791327726],
+    "maximum_stale_slam_path_error_m": 1.811927119674912
+  },
+  "protocol_disposition": "Retain v3 artifacts; subscribe before StartMapping behind a ROS gate and use a fixed map-axis route in v4."
+}

@@ -6,4 +6,14 @@ int32 loop_count     # total accepted closures in this mapper (mCountLoop)
 int32 current_scan   # Karto state id of the scan that closed the loop
 int32 chain_start    # Karto state id of the first scan of the matched chain
 int32 chain_end      # Karto state id of the last scan of the matched chain
+int32 historical_scan # exact historical endpoint selected by LinkChainToScan
+float64 measurement_dx
+float64 measurement_dy
+float64 measurement_dyaw
+float64 covariance_xx
+float64 covariance_xy
+float64 covariance_xt
+float64 covariance_yy
+float64 covariance_yt
+float64 covariance_tt
 time  stamp          # ROS time at emission (sim time when use_sim_time)

@@ -1,0 +1,12 @@
+[WARN] [1789527805.470170, 29.100000]: PILOT_MOVE history_01 state=3 finished=True tf_error=0.262/0.027 gt_error=0.417/0.027 path_error=0.451 reached=True
+[WARN] [1789527824.469989, 48.100000]: PILOT_MOVE history_02 state=3 finished=True tf_error=0.138/0.000 gt_error=0.024/0.000 path_error=0.586 reached=True
+[WARN] [1789527848.470105, 72.100000]: PILOT_MOVE history_03 state=3 finished=True tf_error=0.121/0.048 gt_error=0.251/0.045 path_error=1.021 reached=True
+[WARN] [1789527866.470734, 90.100000]: PILOT_MOVE history_04 state=3 finished=True tf_error=0.237/0.040 gt_error=0.200/0.035 path_error=0.387 reached=True
+Traceback (most recent call last):
+  File "/home/wcqw/ac-slam/tools/realizability_pilot/pilot_driver.py", line 708, in <module>
+    main()
+  File "/home/wcqw/ac-slam/tools/realizability_pilot/pilot_driver.py", line 687, in main
+    result = driver.run()
+  File "/home/wcqw/ac-slam/tools/realizability_pilot/pilot_driver.py", line 484, in run
+    raise RuntimeError(
+RuntimeError: full pose graph/path node-count mismatch before probe: 9 vs 43

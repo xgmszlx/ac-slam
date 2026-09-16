@@ -1757,6 +1757,18 @@ namespace karto
           m_pOpenMapper->PreLoopClosed.Notify(this, eventArguments1);
           
           pScan->SetSensorPose(bestPose);
+
+          // Observation-only identity snapshot. LinkChainToScan selects this same
+          // closest scan from the same corrected current pose below. Capture the
+          // exact endpoint and LinkInfo payload before graph optimization.
+          LocalizedLaserScan* pObservedHistoricalScan = GetClosestScanToPose(
+            candidateChain,
+            pScan->GetReferencePose(m_pOpenMapper->m_pUseScanBarycenter->GetValue()));
+          LinkInfo observedLink(
+            pObservedHistoricalScan->GetSensorPose(), bestPose, covariance);
+          const Pose2 observedMeasurement = observedLink.GetPoseDifference();
+          const Matrix3 observedCovariance = observedLink.GetCovariance();
+
           LinkChainToScan(candidateChain, pScan, bestPose, covariance);
           CorrectPoses();
 
@@ -1776,7 +1788,17 @@ namespace karto
             kt_int64s chainEnd = candidateChain.Back()->GetStateId();
             std::ostringstream lcMsg;
             lcMsg << "LoopClosureObserved current_scan=" << pScan->GetStateId()
-                  << " chain_start=" << chainStart << " chain_end=" << chainEnd;
+                  << " chain_start=" << chainStart << " chain_end=" << chainEnd
+                  << " historical_scan=" << pObservedHistoricalScan->GetStateId()
+                  << " measurement_dx=" << observedMeasurement.GetX()
+                  << " measurement_dy=" << observedMeasurement.GetY()
+                  << " measurement_dyaw=" << observedMeasurement.GetHeading()
+                  << " covariance_xx=" << observedCovariance(0, 0)
+                  << " covariance_xy=" << observedCovariance(0, 1)
+                  << " covariance_xt=" << observedCovariance(0, 2)
+                  << " covariance_yy=" << observedCovariance(1, 1)
+                  << " covariance_yt=" << observedCovariance(1, 2)
+                  << " covariance_tt=" << observedCovariance(2, 2);
             MapperEventArguments eventArgs3(lcMsg.str().c_str());
             m_pOpenMapper->LoopClosureObserved.Notify(this, eventArgs3);
           }

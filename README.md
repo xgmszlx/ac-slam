@@ -2,7 +2,7 @@
 
 Reproducible research workspace for the public Graph-Based SLAM-Aware
 Exploration baseline. The repository preserves the code baseline, pinned
-third-party source snapshots, Phase 1/2 experiment tooling, research logs, and
+third-party source snapshots, Phase 1--4 experiment tooling, research logs, and
 raw experiment archives used for the reported observations.
 
 The code baseline is intentionally defined as:
@@ -16,12 +16,12 @@ in this baseline.
 ## Repository layout
 
 ```text
-baseline/       pinned author baseline at commit 211642d66c...
+baseline/       author baseline plus separately documented experiment layers
 dependencies/   pinned navigation_2d, pyconcorde, and p2os source
 catkin_ws/      portable catkin workspace metadata and helper scripts
-docs/           Phase 0–2 research and mechanism audit logs
+docs/           Phase 0–4 research, protocol, and mechanism audit logs
 tools/          reproducible experiment, collection, and analysis scripts
-results/        Phase 1/2 raw runs, trajectories, maps, graphs, and summaries
+results/        raw runs, trajectories, maps, pose graphs, and summaries
 evaluation/     evo environment reconstruction notes
 ```
 
@@ -59,15 +59,31 @@ under `baseline/` and `dependencies/`.
 - Phase 1: environment and three public-code baseline smoke runs completed.
 - Phase 2A: five paired map3 Prior-TSP vs SLAM-aware runs completed.
 - Phase 2B: active-loop failure-mechanism diagnosis completed.
-- Current measured behavior: 21 planned and executed active loops produced zero
-  confirmed Karto loop constraints, while 3/3 valid positive-control revisits
-  produced accepted Karto closures.
+- Phase 4B/4C: controlled A/B/C evaluation completed on map3 and map8; the
+  Radish Mexico environment exposed a separate planned-to-executed blocker.
+- Formal Phase 4C contains 15 map-seed blocks and 45 method-runs. Initial TSP,
+  full TSP, and planned-loop sequences match exactly within every A/B/C block.
+- On the two maps where loops executed, Original, Always-Trace, and Selective
+  each produced 5 target-attributable accepted events out of 36 executed loops.
+  Selective reduced active-loop cost relative to Always-Trace, but did not meet
+  the no-degradation condition because map8 geometry regressed systematically.
+- The current rule-based decision is `REOPEN_EXECUTION_HYPOTHESIS`, not method
+  generalization or a final algorithm claim.
+- A subsequent constraint-realization Pilot corrected an important measurement
+  boundary: zero explicit `TryCloseLoop` callbacks does not imply zero backend
+  measurements. A fresh v7 episode recorded three exact target-attributable,
+  non-explicit graph constraints with covariance while explicit callbacks stayed
+  at zero. The earlier `0/21 explicit closures` observation remains valid; the
+  stronger `0/21 backend constraints` interpretation does not.
 
 Primary reports:
 
 - `docs/research_log/06_phase1_smoke_runs.md`
 - `docs/research_log/07_phase2a_paired_loop_effectiveness.md`
 - `docs/research_log/08_karto_loop_closure_mechanism.md`
+- `docs/research_log/53_phase4c_final_decision.md`
+- `docs/research_log/54_constraint_realizability_pilot_protocol.md`
 
-No final algorithmic solution or paper-intent variant is mixed into this code
-baseline.
+The Pilot v7 evidence is currently `ANALYZED_NOT_INDEPENDENTLY_VERIFIED`: one
+fresh observer-validation episode is complete and three sentinel conditions are
+still pending. No final method-generalization claim is made.

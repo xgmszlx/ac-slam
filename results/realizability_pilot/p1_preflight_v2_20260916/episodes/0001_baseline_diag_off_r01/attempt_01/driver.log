@@ -1,0 +1,14 @@
+[WARN] [1789524583.591214, 33.400000]: PILOT_MOVE history_01 state=3 finished=True position_error=0.517 heading_error=0.105 reached=True
+[WARN] [1789524594.690456, 44.500000]: PILOT_MOVE history_02 state=3 finished=True position_error=0.550 heading_error=0.105 reached=True
+[WARN] [1789524613.691221, 63.500000]: PILOT_MOVE history_03 state=3 finished=True position_error=0.367 heading_error=0.031 reached=True
+[WARN] [1789524623.691485, 73.500000]: PILOT_MOVE history_04 state=3 finished=True position_error=1.948 heading_error=0.201 reached=False
+Traceback (most recent call last):
+  File "/home/wcqw/ac-slam/tools/realizability_pilot/pilot_driver.py", line 417, in <module>
+    main()
+  File "/home/wcqw/ac-slam/tools/realizability_pilot/pilot_driver.py", line 396, in main
+    result = driver.run()
+  File "/home/wcqw/ac-slam/tools/realizability_pilot/pilot_driver.py", line 278, in run
+    self.move_to(client, waypoint[0], waypoint[1], waypoint[2],
+  File "/home/wcqw/ac-slam/tools/realizability_pilot/pilot_driver.py", line 211, in move_to
+    raise RuntimeError(
+RuntimeError: MoveTo history_04 reported success but independent pose error is 1.948 m / 0.201 rad

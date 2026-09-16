@@ -1,0 +1,35 @@
+{
+  "classification": "TECHNICAL_INVALID",
+  "counts_as_constraint_realization_outcome": false,
+  "failure_layer": "pilot_target_identity_from_incomplete_incremental_graph",
+  "reason": "The v4 target freezer used the cursor-truncated incremental /slam_pose_graph node set instead of the complete corrected Karto vertex sequence on /slam_path.",
+  "evidence": {
+    "intended_target_reference": [
+      6.2,
+      0.0
+    ],
+    "incremental_pose_graph_node_count": 8,
+    "incremental_pose_graph_node_id_range": [
+      1,
+      8
+    ],
+    "full_slam_path_node_count": 33,
+    "incorrect_selected_anchor": {
+      "id": 1,
+      "x": 1.003567099571228,
+      "y": -0.11292849481105804
+    },
+    "nearest_full_path_anchor": {
+      "id": 16,
+      "x": 5.820574617297583,
+      "y": 0.09399340095007006
+    },
+    "probe_tf_error_to_incorrect_anchor_m": 0.03284020333051212,
+    "probe_gt_error_to_intended_history_pose_m": 5.069374437665757
+  },
+  "validated_subresult": {
+    "history_moves_confirmed": 4,
+    "history_tf_and_gt_arrival_gate": "PASS"
+  },
+  "protocol_disposition": "Retain v4 artifacts; use the full ordered /slam_path vertex sequence for node identity and add pre-probe identity gates in v5."
+}

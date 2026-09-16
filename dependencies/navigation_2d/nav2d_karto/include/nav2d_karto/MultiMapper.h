@@ -54,6 +54,7 @@ private:
 	// Private methods
 	bool updateMap();
 	bool sendMap();
+	void publishFullPoseGraphObserver();
 	void setRobotPose(double x, double y, double yaw);
 	karto::LocalizedRangeScan* createFromRosMessage(const sensor_msgs::LaserScan& scan, const karto::Identifier& robot);
 
@@ -86,6 +87,7 @@ private:
 
 	// publish covariance
 	ros::Publisher mCovPublisher;
+	ros::Publisher mFullPoseGraphPublisher;  // observation-only complete graph snapshot
 	ros::Publisher mLoopClosurePublisher;  // Phase 4A observation-only /Mapper/loop_closed
 	int mLoopClosureSeq;                   // per-mapper accepted-closure event sequence
 
@@ -104,6 +106,7 @@ private:
 	int mState;	                // What am I doing? (waiting, localizing, mapping)
 	int mMapUpdateRate;	        // Publish the map every # received updates.
 	bool mPublishPoseGraph;	    // Whether or not to publish the pose graph as marker-message.
+	bool mPublishFullPoseGraphObserver; // default false; independent of planner cursor
 	int mNodesAdded;            // Number of nodes added to the pose graph.
 	int mMinMapSize;            // Minimum map size (# of nodes) needed for localization.
 	ros::WallTime mLastMapUpdate;

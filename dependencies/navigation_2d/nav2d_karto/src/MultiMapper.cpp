@@ -26,6 +26,7 @@ MultiMapper::MultiMapper()
 	mapperNode.param("range_threshold", mRangeThreshold, 30.0);
 	mapperNode.param("map_update_rate", mMapUpdateRate, 1);
 	mapperNode.param("publish_pose_graph", mPublishPoseGraph, true);
+	mapperNode.param("enable_full_pose_graph_observer", mPublishFullPoseGraphObserver, false);
 	mapperNode.param("max_covariance", mMaxCovariance, 0.05);
 	mapperNode.param("min_map_size", mMinMapSize, 50);
 
@@ -56,6 +57,8 @@ MultiMapper::MultiMapper()
 
 	// Pub covariance
 	mCovPublisher = robotNode.advertise<cpp_solver::PoseGraph>("slam_pose_graph", 2);
+	mFullPoseGraphPublisher = robotNode.advertise<cpp_solver::PoseGraph>(
+		"slam_pose_graph_full", 1, true);
 
 	// Initialize KARTO-Mapper
 	mMapper = new karto::OpenMapper(true);
@@ -500,7 +503,53 @@ void MultiMapper::publishPoseGraph(){
 		poseGraph.covariance.push_back(ss.str());
 	}
 	mCovPublisher.publish(poseGraph);
+
 	return;
+}
+
+void MultiMapper::publishFullPoseGraphObserver()
+{
+	if(!mPublishFullPoseGraphObserver) return;
+
+	// This snapshot is emitted from sendMap(), immediately beside /slam_path,
+	// so both topics describe the same complete graph state even when a get_map
+	// service call resets the normal periodic publication timer. It never uses
+	// or changes the planner-controlled incremental publication cursor.
+	cpp_solver::PoseGraph fullGraph;
+	fullGraph.vertex_start_idx = 0;
+	karto::MapperGraph::VertexList vertices = mMapper->GetGraph()->GetVertices();
+	for(int i = 0; i < vertices.Size(); i++)
+	{
+		fullGraph.vertices.push_back(i);
+		fullGraph.vertex_x.push_back(
+			vertices[i]->GetVertexObject()->GetCorrectedPose().GetX());
+		fullGraph.vertex_y.push_back(
+			vertices[i]->GetVertexObject()->GetCorrectedPose().GetY());
+		fullGraph.vertex_theta.push_back(
+			vertices[i]->GetVertexObject()->GetCorrectedPose().GetHeading());
+	}
+
+	fullGraph.edge_start_idx = 0;
+	karto::MapperGraph::EdgeList edges = mMapper->GetGraph()->GetEdges();
+	for(int i = 0; i < edges.Size(); i++)
+	{
+		int id1 = -1;
+		int id2 = -1;
+		for(int j = 0; j < vertices.Size(); j++)
+		{
+			if(vertices[j] == edges[i]->GetSource()) id1 = j;
+			if(vertices[j] == edges[i]->GetTarget()) id2 = j;
+			if(id1 != -1 && id2 != -1) break;
+		}
+		fullGraph.edges_start.push_back(id1);
+		fullGraph.edges_end.push_back(id2);
+		std::vector<double> cov = edges[i]->GetCovarianceVector();
+		std::stringstream ss;
+		ss << cov[0] << " " << cov[1] << " " << cov[2] << " "
+		   << cov[4] << " " << cov[5] << " " << cov[8];
+		fullGraph.covariance.push_back(ss.str());
+	}
+	mFullPoseGraphPublisher.publish(fullGraph);
 }
 
 
@@ -582,8 +631,9 @@ bool MultiMapper::sendMap()
 		}
 		mVerticesPublisher.publish(marker);
 
-        // Publish topic /slam_path
+		// Publish topic /slam_path
 		mPathPublisher.publish(pathAftPgo);  // Up-to-date pose estimation of robot, to store the slam path
+		publishFullPoseGraphObserver();
 		
 		// Publish the edges
 		karto::MapperGraph::EdgeList edges = mMapper->GetGraph()->GetEdges();
@@ -932,8 +982,19 @@ void MultiMapper::onLoopClosureObserved(const void* sender, karto::MapperEventAr
 	// state ids carried in the event message. No matcher internals are exposed.
 	const char* msg = args.GetEventMessage().ToCString();
 	int currentScan = -1, chainStart = -1, chainEnd = -1;
-	if (sscanf(msg, "LoopClosureObserved current_scan=%d chain_start=%d chain_end=%d",
-			   &currentScan, &chainStart, &chainEnd) == 3)
+	int historicalScan = -1;
+	double measurementDx = 0.0, measurementDy = 0.0, measurementDyaw = 0.0;
+	double covarianceXx = 0.0, covarianceXy = 0.0, covarianceXt = 0.0;
+	double covarianceYy = 0.0, covarianceYt = 0.0, covarianceTt = 0.0;
+	if (sscanf(msg,
+			   "LoopClosureObserved current_scan=%d chain_start=%d chain_end=%d "
+			   "historical_scan=%d measurement_dx=%lf measurement_dy=%lf "
+			   "measurement_dyaw=%lf covariance_xx=%lf covariance_xy=%lf "
+			   "covariance_xt=%lf covariance_yy=%lf covariance_yt=%lf covariance_tt=%lf",
+			   &currentScan, &chainStart, &chainEnd, &historicalScan,
+			   &measurementDx, &measurementDy, &measurementDyaw,
+			   &covarianceXx, &covarianceXy, &covarianceXt,
+			   &covarianceYy, &covarianceYt, &covarianceTt) == 13)
 	{
 		mLoopClosureSeq++;
 		cpp_solver::LoopClosureEvent ev;
@@ -942,10 +1003,20 @@ void MultiMapper::onLoopClosureObserved(const void* sender, karto::MapperEventAr
 		ev.current_scan = currentScan;
 		ev.chain_start = chainStart;
 		ev.chain_end = chainEnd;
+		ev.historical_scan = historicalScan;
+		ev.measurement_dx = measurementDx;
+		ev.measurement_dy = measurementDy;
+		ev.measurement_dyaw = measurementDyaw;
+		ev.covariance_xx = covarianceXx;
+		ev.covariance_xy = covarianceXy;
+		ev.covariance_xt = covarianceXt;
+		ev.covariance_yy = covarianceYy;
+		ev.covariance_yt = covarianceYt;
+		ev.covariance_tt = covarianceTt;
 		ev.stamp = ros::Time::now();
 		mLoopClosurePublisher.publish(ev);
-		ROS_INFO("PHASE4A_LOOP_CLOSED seq=%d current_scan=%d chain_start=%d chain_end=%d",
-				 mLoopClosureSeq, currentScan, chainStart, chainEnd);
+		ROS_INFO("PHASE4A_LOOP_CLOSED seq=%d current_scan=%d chain_start=%d chain_end=%d historical_scan=%d",
+				 mLoopClosureSeq, currentScan, chainStart, chainEnd, historicalScan);
 	}
 	else
 	{

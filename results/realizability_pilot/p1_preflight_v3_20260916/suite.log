@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/home/wcqw/ac-slam/tools/realizability_pilot/run_pilot.py", line 459, in <module>
+    main()
+  File "/home/wcqw/ac-slam/tools/realizability_pilot/run_pilot.py", line 408, in main
+    raise SystemExit(execute_suite(args.suite_dir.resolve(), args.max_episodes,
+  File "/home/wcqw/ac-slam/tools/realizability_pilot/run_pilot.py", line 312, in execute_suite
+    result = run_episode(episode['spec'], run_dir, env, episode_timeout=2700)
+  File "/home/wcqw/ac-slam/tools/realizability_pilot/run_pilot.py", line 217, in run_episode
+    max_rss = max(max_rss, wait_for_driver(
+  File "/home/wcqw/ac-slam/tools/realizability_pilot/run_pilot.py", line 125, in wait_for_driver
+    raise RuntimeError('pilot driver exited with code {}'.format(driver.returncode))
+RuntimeError: pilot driver exited with code 1

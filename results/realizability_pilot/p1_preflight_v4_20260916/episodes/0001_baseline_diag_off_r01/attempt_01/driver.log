@@ -1,0 +1,15 @@
+[WARN] [1789525218.896612, 29.100000]: PILOT_MOVE history_01 state=3 finished=True tf_error=0.144/0.009 gt_error=0.085/0.009 path_error=1.296 reached=True
+[WARN] [1789525239.996526, 50.200000]: PILOT_MOVE history_02 state=3 finished=True tf_error=0.170/0.000 gt_error=0.060/0.000 path_error=0.466 reached=True
+[WARN] [1789525263.999150, 74.200000]: PILOT_MOVE history_03 state=3 finished=True tf_error=0.137/0.006 gt_error=0.223/0.006 path_error=0.877 reached=True
+[WARN] [1789525271.997901, 82.200000]: PILOT_MOVE history_04 state=3 finished=True tf_error=0.122/0.011 gt_error=0.352/0.011 path_error=1.521 reached=True
+[WARN] [1789525298.997675, 109.200000]: PILOT_MOVE probe_arrival state=3 finished=True tf_error=0.033/0.011 gt_error=5.069/0.602 path_error=0.235 reached=False
+Traceback (most recent call last):
+  File "/home/wcqw/ac-slam/tools/realizability_pilot/pilot_driver.py", line 551, in <module>
+    main()
+  File "/home/wcqw/ac-slam/tools/realizability_pilot/pilot_driver.py", line 530, in main
+    result = driver.run()
+  File "/home/wcqw/ac-slam/tools/realizability_pilot/pilot_driver.py", line 437, in run
+    self.move_to(client, x, y, theta, label, expected_gt)
+  File "/home/wcqw/ac-slam/tools/realizability_pilot/pilot_driver.py", line 309, in move_to
+    raise RuntimeError(
+RuntimeError: MoveTo probe_arrival reported success but independent pose error is TF 0.033 m/0.011 rad and GT 5.069 m/0.602 rad

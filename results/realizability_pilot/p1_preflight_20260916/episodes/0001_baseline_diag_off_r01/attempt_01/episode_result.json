@@ -1,0 +1,73 @@
+{
+  "episode_id": "0001_baseline_diag_off_r01",
+  "moves": [
+    {
+      "action_finished": true,
+      "action_state": 3,
+      "end_time": 32.3,
+      "final_distance": 0.0,
+      "final_theta": 0.05580675021325171,
+      "final_x": -5.879365881038349,
+      "final_y": -6.348863439106329,
+      "label": "history_01",
+      "start_time": 12.1,
+      "target_theta": 0.0,
+      "target_x": -20.0,
+      "target_y": -28.0
+    },
+    {
+      "action_finished": true,
+      "action_state": 3,
+      "end_time": 32.5,
+      "final_distance": 0.0,
+      "final_theta": 0.006968100255901907,
+      "final_x": -5.879365881038349,
+      "final_y": -6.348863439106329,
+      "label": "history_02",
+      "start_time": 32.3,
+      "target_theta": 0.0,
+      "target_x": -16.0,
+      "target_y": -28.0
+    },
+    {
+      "action_finished": true,
+      "action_state": 3,
+      "end_time": 34.5,
+      "final_distance": 0.0,
+      "final_theta": 1.5104587075628342,
+      "final_x": -5.851161751595669,
+      "final_y": -6.380372049110721,
+      "label": "history_03",
+      "start_time": 32.5,
+      "target_theta": 1.5707963267948966,
+      "target_x": -16.0,
+      "target_y": -20.0
+    },
+    {
+      "action_finished": true,
+      "action_state": 3,
+      "end_time": 36.5,
+      "final_distance": 0.0,
+      "final_theta": -3.09083671523064,
+      "final_x": -5.85812378781061,
+      "final_y": -6.358083552891749,
+      "label": "history_04",
+      "start_time": 34.5,
+      "target_theta": 3.141592653589793,
+      "target_x": -20.0,
+      "target_y": -20.0
+    },
+    {
+      "action_finished": false,
+      "action_state": 1,
+      "end_time": 398.5,
+      "label": "probe_arrival",
+      "start_time": 38.5,
+      "target_theta": -1.9902552366256714,
+      "target_x": -5.919658184051514,
+      "target_y": -6.5459747314453125
+    }
+  ],
+  "reason": "RuntimeError: MoveTo probe_arrival failed with state 1",
+  "status": "FAILED"
+}

@@ -1,0 +1,14 @@
+{
+  "classification": "TECHNICAL_INVALID",
+  "counts_as_constraint_realization_outcome": false,
+  "failure_layer": "pilot_harness_coordinate_contract",
+  "reason": "Stage-world coordinates were sent as Karto-local map goals; Navigator projected the history goals to the current known-map boundary, and the boundary probe timed out.",
+  "evidence": {
+    "history_action_states": [3, 3, 3, 3],
+    "actual_history_pose_region": "approximately x=-5.9, y=-6.3 in the Karto map frame",
+    "probe_action_state": 1,
+    "probe_finished": false,
+    "repeated_warning": "Robot cannot move further in this direction!"
+  },
+  "protocol_disposition": "Retain v1 artifacts; repair coordinate and independent-arrival checks in v2; do not silently retry under the v1 protocol."
+}

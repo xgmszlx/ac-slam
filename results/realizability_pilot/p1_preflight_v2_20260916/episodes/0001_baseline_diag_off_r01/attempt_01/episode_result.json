@@ -1,0 +1,123 @@
+{
+  "episode_id": "0001_baseline_diag_off_r01",
+  "moves": [
+    {
+      "action_finished": true,
+      "action_state": 3,
+      "end_time": 33.4,
+      "final_distance": 0.20000000298023224,
+      "final_theta": -0.01120478439031478,
+      "final_x": 6.870199733632301,
+      "final_y": 0.5629093510773386,
+      "heading_tolerance_rad": 0.35,
+      "independently_reached": true,
+      "label": "history_01",
+      "observed_heading_error_rad": 0.10503333011243611,
+      "observed_position_error_m": 0.5171338645329688,
+      "position_tolerance_m": 0.75,
+      "slam_pose_after": [
+        6.496224973823718,
+        0.5675348408628874,
+        -0.021848022932854427
+      ],
+      "slam_pose_before": [
+        1.0314283808628173,
+        0.016439228327960638,
+        0.08318530717958167
+      ],
+      "start_time": 17.3,
+      "target_theta": 0.08318530717958167,
+      "target_x": 7.010680963002125,
+      "target_y": 0.5149756452329114
+    },
+    {
+      "action_finished": true,
+      "action_state": 3,
+      "end_time": 44.5,
+      "final_distance": 0.10000000149011612,
+      "final_theta": 0.09337302682558805,
+      "final_x": 11.126668745764661,
+      "final_y": 0.8555855953163318,
+      "heading_tolerance_rad": 0.35,
+      "independently_reached": true,
+      "label": "history_02",
+      "observed_heading_error_rad": 0.10533480976083975,
+      "observed_position_error_m": 0.5504397802382095,
+      "position_tolerance_m": 0.75,
+      "slam_pose_after": [
+        10.45173170873191,
+        0.92369232703938,
+        -0.02214950258125808
+      ],
+      "slam_pose_before": [
+        6.496224973823718,
+        0.5675348408628874,
+        -0.021848022932854427
+      ],
+      "start_time": 33.4,
+      "target_theta": 0.08318530717958167,
+      "target_x": 10.996849351094996,
+      "target_y": 0.8473332565028785
+    },
+    {
+      "action_finished": true,
+      "action_state": 3,
+      "end_time": 63.5,
+      "final_distance": 0.1414213627576828,
+      "final_theta": 1.6231478096654945,
+      "final_x": 10.601503584759811,
+      "final_y": 6.999617909510098,
+      "heading_tolerance_rad": 0.35,
+      "independently_reached": true,
+      "label": "history_03",
+      "observed_heading_error_rad": 0.031150160885893955,
+      "observed_position_error_m": 0.3667831670574317,
+      "position_tolerance_m": 0.75,
+      "slam_pose_after": [
+        10.724875665450194,
+        6.53814308792617,
+        1.6228314730885842
+      ],
+      "slam_pose_before": [
+        10.45173170873191,
+        0.92369232703938,
+        -0.02214950258125808
+      ],
+      "start_time": 44.5,
+      "target_theta": 1.6539816339744782,
+      "target_x": 10.498312934190045,
+      "target_y": 6.826585838642186
+    },
+    {
+      "action_finished": true,
+      "action_state": 3,
+      "end_time": 73.5,
+      "final_distance": 0.10000000149011612,
+      "final_theta": 3.1303128960063726,
+      "final_x": 6.425570030182015,
+      "final_y": 6.4951809660556,
+      "heading_tolerance_rad": 0.35,
+      "independently_reached": false,
+      "label": "history_04",
+      "observed_heading_error_rad": 0.20112049219402595,
+      "observed_position_error_m": 1.9477531360621256,
+      "position_tolerance_m": 0.75,
+      "slam_pose_after": [
+        8.453501154355463,
+        6.336504422536938,
+        -2.857286854216186
+      ],
+      "slam_pose_before": [
+        10.724875665450194,
+        6.53814308792617,
+        1.6228314730885842
+      ],
+      "start_time": 63.5,
+      "target_theta": -3.058407346410212,
+      "target_x": 6.512144546097174,
+      "target_y": 6.4942282273722185
+    }
+  ],
+  "reason": "RuntimeError: MoveTo history_04 reported success but independent pose error is 1.948 m / 0.201 rad",
+  "status": "FAILED"
+}

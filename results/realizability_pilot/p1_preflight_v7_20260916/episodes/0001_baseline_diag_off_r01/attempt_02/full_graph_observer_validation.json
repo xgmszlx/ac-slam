@@ -1,0 +1,96 @@
+{
+  "after_counts": {
+    "full_graph_edges": 70,
+    "full_graph_nodes": 48,
+    "slam_path_nodes": 48
+  },
+  "before_counts": {
+    "full_graph_edges": 36,
+    "full_graph_nodes": 32,
+    "slam_path_nodes": 32
+  },
+  "checks": {
+    "after_node_count_matches": true,
+    "after_node_ids_match": true,
+    "all_full_edge_endpoints_resolved": true,
+    "all_target_covariances_positive_definite": true,
+    "backend_measurement_flag_matches_edges": true,
+    "before_node_count_matches": true,
+    "before_node_ids_match": true,
+    "exact_marker_target_pairs_match": true,
+    "target_measurement_present": true
+  },
+  "exact_target_pairs": [
+    [
+      13,
+      39
+    ],
+    [
+      14,
+      47
+    ],
+    [
+      16,
+      38
+    ]
+  ],
+  "explicit_target_constraint": false,
+  "marker_target_pairs": [
+    [
+      13,
+      39
+    ],
+    [
+      14,
+      47
+    ],
+    [
+      16,
+      38
+    ]
+  ],
+  "run_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_preflight_v7_20260916/episodes/0001_baseline_diag_off_r01/attempt_02",
+  "status": "PASS",
+  "target_backend_measurement": true,
+  "target_covariance_checks": [
+    {
+      "leading_principal_minors": [
+        0.000770155,
+        6.26826356661e-07,
+        4.904101366608666e-12
+      ],
+      "pair": [
+        16,
+        38
+      ],
+      "positive_definite": true,
+      "value_count": 6
+    },
+    {
+      "leading_principal_minors": [
+        0.00104281,
+        2.8044025066109998e-06,
+        9.759152458855883e-11
+      ],
+      "pair": [
+        13,
+        39
+      ],
+      "positive_definite": true,
+      "value_count": 6
+    },
+    {
+      "leading_principal_minors": [
+        0.000515596,
+        1.6397087060998462e-07,
+        9.73072013965305e-13
+      ],
+      "pair": [
+        14,
+        47
+      ],
+      "positive_definite": true,
+      "value_count": 6
+    }
+  ]
+}
