@@ -45,6 +45,7 @@ from run_phase2_pairs import (  # noqa: E402
 
 DEFAULT_ROOT = ROOT / 'results' / 'realizability_pilot'
 ACTIVE_CHILDREN = []
+TERMINAL_EPISODE_STATUSES = {'SUCCEEDED', 'TECHNICAL_INVALID_FINAL'}
 
 
 def interrupt_handler(_signum, _frame):
@@ -138,6 +139,7 @@ def run_episode(spec, run_dir, env, episode_timeout):
 
     suffix = '_RealizabilityPilot_{}'.format(spec['episode_id'])
     diagnostics_path = run_dir / 'karto_loop_diagnostics.jsonl'
+    edge_provenance_path = run_dir / 'karto_edge_provenance.jsonl'
     run_id = 'realizability_{}'.format(spec['episode_id'])
     roscore = launch = mapping_result = driver = None
     mapping_stream = None
@@ -172,6 +174,9 @@ def run_episode(spec, run_dir, env, episode_timeout):
             'need_noise:=false', 'variance:=0', 'oracle_mode:=0',
             'enable_loop_diagnostics:={}'.format(
                 'true' if spec['diagnostics_enabled'] else 'false'),
+            'enable_edge_provenance:=true',
+            'edge_provenance_path:={}'.format(edge_provenance_path),
+            'edge_provenance_run_id:={}'.format(run_id),
             'enable_full_pose_graph_observer:=true',
         ]
         if spec['diagnostics_enabled']:
@@ -257,6 +262,7 @@ def run_episode(spec, run_dir, env, episode_timeout):
                 ['git', '-C', str(ROOT / 'dependencies' / 'navigation_2d'),
                  'rev-parse', 'HEAD'], text=True).strip(),
             'diagnostics_enabled': spec['diagnostics_enabled'],
+            'edge_provenance_enabled': True,
             'max_process_tree_rss_kb': max_rss,
             'analysis_eligible': result['analysis_eligible'],
             'target_constraint': result['target_constraint'],
@@ -319,7 +325,7 @@ def execute_suite(suite_dir, max_episodes=None, retry_failed=False):
     env = activated_environment()
     try:
         for episode in state['episodes']:
-            if episode['status'] == 'SUCCEEDED':
+            if episode['status'] in TERMINAL_EPISODE_STATUSES:
                 continue
             if episode['status'] == 'FAILED' and not retry_failed:
                 continue
@@ -357,8 +363,11 @@ def execute_suite(suite_dir, max_episodes=None, retry_failed=False):
             finally:
                 atomic_json(state_path, state)
 
-        pending = [episode for episode in state['episodes'] if episode['status'] != 'SUCCEEDED']
-        state['status'] = 'SUCCEEDED' if not pending else 'PAUSED'
+        unfinished = [episode for episode in state['episodes']
+                      if episode['status'] not in TERMINAL_EPISODE_STATUSES]
+        invalid = [episode for episode in state['episodes']
+                   if episode['status'] == 'TECHNICAL_INVALID_FINAL']
+        state['status'] = ('SUCCEEDED' if not unfinished and not invalid else 'PAUSED')
         state['finished_utc'] = now_utc()
         atomic_json(state_path, state)
     except KeyboardInterrupt:

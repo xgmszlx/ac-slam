@@ -1,0 +1,16 @@
+[WARN] [1789540538.386367, 29.000000]: PILOT_MOVE history_01 state=3 finished=True tf_error=0.270/0.022 gt_error=0.401/0.022 path_error=0.451 reached=True
+[WARN] [1789540556.386159, 47.000000]: PILOT_MOVE history_02 state=3 finished=True tf_error=0.159/0.000 gt_error=0.018/0.000 path_error=0.502 reached=True
+[WARN] [1789540580.387447, 71.000000]: PILOT_MOVE history_03 state=3 finished=True tf_error=0.114/0.017 gt_error=0.194/0.017 path_error=1.061 reached=True
+[WARN] [1789540596.486766, 87.100000]: PILOT_MOVE history_04 state=3 finished=True tf_error=0.270/0.116 gt_error=0.179/0.116 path_error=0.475 reached=True
+Traceback (most recent call last):
+  File "/home/wcqw/ac-slam/tools/realizability_pilot/pilot_driver.py", line 720, in <module>
+    main()
+  File "/home/wcqw/ac-slam/tools/realizability_pilot/pilot_driver.py", line 699, in main
+    result = driver.run()
+  File "/home/wcqw/ac-slam/tools/realizability_pilot/pilot_driver.py", line 537, in run
+    self.move_to(client, x, y, theta, label, expected_gt)
+  File "/home/wcqw/ac-slam/tools/realizability_pilot/pilot_driver.py", line 299, in move_to
+    rospy.sleep(float(self.spec['goal_settle_s']))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/timer.py", line 165, in sleep
+    raise rospy.exceptions.ROSInterruptException("ROS shutdown request")
+rospy.exceptions.ROSInterruptException: ROS shutdown request

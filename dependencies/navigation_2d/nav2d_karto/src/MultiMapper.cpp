@@ -168,6 +168,26 @@ MultiMapper::MultiMapper()
 					 loopDiagnosticsPath.c_str(), loopDiagnosticsRunId.c_str());
 		}
 	}
+
+	// Observation-only edge-creation provenance (default disabled). This is
+	// independent of the legacy TryCloseLoop diagnostics switch.
+	{
+		bool enableEdgeProvenance = false;
+		std::string edgeProvenancePath = "";
+		std::string edgeProvenanceRunId = "";
+		mapperNode.param("enable_edge_provenance", enableEdgeProvenance, false);
+		mapperNode.param("edge_provenance_path", edgeProvenancePath, std::string(""));
+		mapperNode.param("edge_provenance_run_id", edgeProvenanceRunId, std::string(""));
+		mMapper->SetEdgeProvenanceDiagnostics(
+			enableEdgeProvenance ? true : false,
+			karto::String(edgeProvenancePath.c_str()),
+			karto::String(edgeProvenanceRunId.c_str()));
+		if(enableEdgeProvenance)
+		{
+			ROS_INFO("EDGE_PROVENANCE_ENABLED path=%s run_id=%s",
+					 edgeProvenancePath.c_str(), edgeProvenanceRunId.c_str());
+		}
+	}
 	
 	mMapper->Message += karto::delegate(this, &MultiMapper::onMessage);
 
@@ -475,6 +495,8 @@ void MultiMapper::publishPoseGraph(){
 	karto::MapperGraph::VertexList vertices = mMapper->GetGraph()->GetVertices();
 	for(int i = mVertexReceiveIdx; i < vertices.Size(); i++) {
 		poseGraph.vertices.push_back(i);
+		poseGraph.vertex_unique_ids.push_back(
+			vertices[i]->GetVertexObject()->GetUniqueId());
 		poseGraph.vertex_x.push_back(vertices[i]->GetVertexObject()->GetCorrectedPose().GetX());
 		poseGraph.vertex_y.push_back(vertices[i]->GetVertexObject()->GetCorrectedPose().GetY());
 		poseGraph.vertex_theta.push_back(vertices[i]->GetVertexObject()->GetCorrectedPose().GetHeading());
@@ -518,10 +540,12 @@ void MultiMapper::publishFullPoseGraphObserver()
 	cpp_solver::PoseGraph fullGraph;
 	fullGraph.vertex_start_idx = 0;
 	karto::MapperGraph::VertexList vertices = mMapper->GetGraph()->GetVertices();
-	for(int i = 0; i < vertices.Size(); i++)
-	{
-		fullGraph.vertices.push_back(i);
-		fullGraph.vertex_x.push_back(
+		for(int i = 0; i < vertices.Size(); i++)
+		{
+			fullGraph.vertices.push_back(i);
+			fullGraph.vertex_unique_ids.push_back(
+				vertices[i]->GetVertexObject()->GetUniqueId());
+			fullGraph.vertex_x.push_back(
 			vertices[i]->GetVertexObject()->GetCorrectedPose().GetX());
 		fullGraph.vertex_y.push_back(
 			vertices[i]->GetVertexObject()->GetCorrectedPose().GetY());

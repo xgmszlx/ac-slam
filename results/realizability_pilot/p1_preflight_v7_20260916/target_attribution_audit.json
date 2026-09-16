@@ -1,0 +1,372 @@
+{
+  "all_provenance_runs_reconciled": true,
+  "attribution_rule": {
+    "AMBIGUOUS": "all remaining cases; never forced into target success",
+    "ORDINARY_RECENT_OR_SEQUENTIAL": "state-id gap is 1 or source is post-probe",
+    "TARGET_ATTRIBUTABLE": "source in frozen H_target and target state id > before_max_state_id",
+    "WRONG_TARGET_HISTORICAL": "source is pre-probe non-target, target is post-probe, and gap > 1"
+  },
+  "episode_audits": [
+    {
+      "ambiguous_pairs": [],
+      "attempt": 2,
+      "before_max_state_id": 31,
+      "episode_id": "0001_baseline_diag_off_r01",
+      "freeze_timestamp_sim": 81.0,
+      "outcome_selected": true,
+      "provenance_validation_errors": [],
+      "reconciliation": null,
+      "status": "VALID",
+      "target_history_state_ids": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "target_history_unique_ids": null,
+      "target_pairs": [
+        [
+          16,
+          38
+        ],
+        [
+          13,
+          39
+        ],
+        [
+          14,
+          47
+        ]
+      ],
+      "target_selection_rule": "contiguous pre-probe slam_path scans within frozen target_segment_radius_m of the preselected anchor",
+      "wrong_target_pairs": [
+        [
+          30,
+          32
+        ],
+        [
+          29,
+          33
+        ],
+        [
+          28,
+          34
+        ],
+        [
+          26,
+          35
+        ],
+        [
+          26,
+          36
+        ],
+        [
+          20,
+          37
+        ],
+        [
+          11,
+          40
+        ],
+        [
+          1,
+          41
+        ],
+        [
+          2,
+          42
+        ],
+        [
+          2,
+          43
+        ],
+        [
+          2,
+          44
+        ],
+        [
+          11,
+          46
+        ]
+      ]
+    },
+    {
+      "ambiguous_pairs": [],
+      "attempt": 1,
+      "before_max_state_id": 32,
+      "episode_id": "0002_baseline_diag_on_r01",
+      "freeze_timestamp_sim": 85.2,
+      "outcome_selected": true,
+      "provenance_validation_errors": [],
+      "reconciliation": {
+        "exact_count_match": true,
+        "exact_pair_set_match": true,
+        "first_record_after_snapshot_cut": null,
+        "full_graph_edge_count": 73,
+        "missing_from_provenance": [],
+        "not_in_full_graph": [],
+        "provenance_constraint_count": 73,
+        "records_after_snapshot_cut": 0
+      },
+      "status": "VALID",
+      "target_history_state_ids": [
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "target_history_unique_ids": [
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "target_pairs": [
+        [
+          15,
+          40
+        ],
+        [
+          14,
+          41
+        ],
+        [
+          14,
+          48
+        ]
+      ],
+      "target_selection_rule": "contiguous pre-probe slam_path scans within frozen target_segment_radius_m of the preselected anchor",
+      "wrong_target_pairs": [
+        [
+          30,
+          33
+        ],
+        [
+          30,
+          34
+        ],
+        [
+          29,
+          35
+        ],
+        [
+          29,
+          36
+        ],
+        [
+          27,
+          37
+        ],
+        [
+          22,
+          38
+        ],
+        [
+          21,
+          39
+        ],
+        [
+          11,
+          42
+        ],
+        [
+          1,
+          43
+        ],
+        [
+          2,
+          44
+        ],
+        [
+          2,
+          45
+        ],
+        [
+          2,
+          46
+        ],
+        [
+          11,
+          47
+        ]
+      ]
+    },
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "finished_utc": "2026-09-16T06:32:34.309748+00:00",
+          "reason": "RuntimeError: pilot driver exited with code 1",
+          "run_dir": "episodes/0003_align60_diag_on_r01/attempt_01",
+          "started_utc": "2026-09-16T06:30:48.993881+00:00",
+          "status": "FAILED"
+        },
+        {
+          "analysis_eligible": true,
+          "attempt": 2,
+          "episode_id": "0003_align60_diag_on_r01",
+          "finished_utc": "2026-09-16T06:35:06.624635+00:00",
+          "reason": "Post-run provenance reconciliation found constraints through state 50 while the saved full-graph observer snapshot ended at state 49; the observer snapshot was stale at the outcome cut.",
+          "run_dir": "episodes/0003_align60_diag_on_r01/attempt_02",
+          "started_utc": "2026-09-16T06:33:10.780660+00:00",
+          "status": "TECHNICAL_INVALID",
+          "target_backend_measurement": true,
+          "target_constraint": false,
+          "target_nonexplicit_full_graph_constraint": true
+        },
+        {
+          "attempt": 3,
+          "finished_utc": "2026-09-16T06:41:19.526839+00:00",
+          "reason": "RuntimeError: pilot driver exited with code 1",
+          "run_dir": "episodes/0003_align60_diag_on_r01/attempt_03",
+          "started_utc": "2026-09-16T06:39:11.965195+00:00",
+          "status": "FAILED"
+        },
+        {
+          "attempt": 4,
+          "finished_utc": "2026-09-16T06:44:08.730729+00:00",
+          "reason": "RuntimeError: pilot driver exited with code 1",
+          "run_dir": "episodes/0003_align60_diag_on_r01/attempt_04",
+          "started_utc": "2026-09-16T06:42:11.358040+00:00",
+          "status": "FAILED"
+        }
+      ],
+      "episode_id": "0003_align60_diag_on_r01",
+      "outcome_selected": false,
+      "scientific_reason": "Two independently executed probe attempts violated the frozen Stage-GT arrival gate; one otherwise completed attempt failed observer completeness, and one refresh attempt stopped before intervention due an incorrect service name. No outcome is selected for this condition.",
+      "scientific_status": "NO_VALID_POST_REPAIR_ATTEMPT",
+      "status": "TECHNICAL_INVALID_FINAL"
+    },
+    {
+      "ambiguous_pairs": [],
+      "attempt": 2,
+      "before_max_state_id": 33,
+      "episode_id": "0004_sweep90_diag_on_r01",
+      "freeze_timestamp_sim": 83.0,
+      "outcome_selected": true,
+      "provenance_validation_errors": [],
+      "reconciliation": {
+        "exact_count_match": true,
+        "exact_pair_set_match": true,
+        "first_record_after_snapshot_cut": null,
+        "full_graph_edge_count": 91,
+        "missing_from_provenance": [],
+        "not_in_full_graph": [],
+        "provenance_constraint_count": 91,
+        "records_after_snapshot_cut": 0
+      },
+      "status": "VALID",
+      "target_history_state_ids": [
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "target_history_unique_ids": [
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "target_pairs": [
+        [
+          18,
+          39
+        ],
+        [
+          15,
+          40
+        ],
+        [
+          15,
+          48
+        ],
+        [
+          17,
+          49
+        ],
+        [
+          17,
+          51
+        ],
+        [
+          16,
+          52
+        ],
+        [
+          14,
+          53
+        ],
+        [
+          16,
+          54
+        ],
+        [
+          17,
+          55
+        ]
+      ],
+      "target_selection_rule": "contiguous pre-probe slam_path scans within frozen target_segment_radius_m of the preselected anchor",
+      "wrong_target_pairs": [
+        [
+          30,
+          34
+        ],
+        [
+          29,
+          35
+        ],
+        [
+          27,
+          36
+        ],
+        [
+          28,
+          37
+        ],
+        [
+          22,
+          38
+        ],
+        [
+          12,
+          41
+        ],
+        [
+          1,
+          42
+        ],
+        [
+          2,
+          43
+        ],
+        [
+          2,
+          44
+        ],
+        [
+          2,
+          45
+        ],
+        [
+          2,
+          46
+        ],
+        [
+          12,
+          47
+        ],
+        [
+          22,
+          50
+        ]
+      ]
+    }
+  ],
+  "schema_version": 1
+}

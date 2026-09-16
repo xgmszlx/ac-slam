@@ -1,0 +1,9 @@
+{
+  "classification": "TECHNICAL_INVALID",
+  "reason": "The probe-arrival action reported SUCCEEDED and passed the TF gate, but the frozen independent Stage-GT position error was 0.802 m, exceeding the preregistered 0.75 m tolerance. The intended intervention was therefore not confirmed as realized.",
+  "scientific_outcome_selected": false,
+  "threshold_changed": false,
+  "action_changed": false,
+  "seed_changed": false,
+  "retry_rule": "Append one exact-condition attempt_02; preserve attempt_01 and stop fail-closed again if the retry fails."
+}

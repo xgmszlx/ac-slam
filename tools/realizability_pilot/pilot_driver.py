@@ -12,6 +12,7 @@ import actionlib
 import rospy
 import tf
 from nav_msgs.msg import Odometry, Path
+from nav_msgs.srv import GetMap
 from nav2d_msgs.msg import RobotPose
 from nav2d_navigator.msg import MoveToPosition2DAction, MoveToPosition2DGoal
 from visualization_msgs.msg import Marker
@@ -50,8 +51,11 @@ class PilotDriver:
         self.pose_edges = {}
         self.full_pose_nodes = {}
         self.full_pose_edges = {}
+        self.full_pose_graph_received_time = None
+        self.full_pose_graph_message_count = 0
         self.slam_path = []
         self.slam_path_received_time = None
+        self.slam_path_message_count = 0
         self.mapper_keyscan_pose = None
         self.gt_pose = None
         self.probe_gt = []
@@ -96,6 +100,7 @@ class PilotDriver:
         for index, node_id in enumerate(msg.vertices):
             nodes[int(node_id)] = {
                 'id': int(node_id),
+                'unique_id': int(msg.vertex_unique_ids[index]),
                 'x': float(msg.vertex_x[index]),
                 'y': float(msg.vertex_y[index]),
                 'theta': float(msg.vertex_theta[index]),
@@ -111,6 +116,8 @@ class PilotDriver:
         with self.lock:
             self.full_pose_nodes = nodes
             self.full_pose_edges = edges
+            self.full_pose_graph_received_time = float(rospy.get_time())
+            self.full_pose_graph_message_count += 1
 
     def on_slam_path(self, msg):
         path = []
@@ -125,6 +132,7 @@ class PilotDriver:
         with self.lock:
             self.slam_path = path
             self.slam_path_received_time = float(rospy.get_time())
+            self.slam_path_message_count += 1
 
     def on_mapper_keyscan_pose(self, msg):
         sample = {
@@ -212,10 +220,34 @@ class PilotDriver:
                     self.full_pose_nodes[key] for key in sorted(self.full_pose_nodes)],
                 'full_pose_edges': [
                     self.full_pose_edges[key] for key in sorted(self.full_pose_edges)],
+                'full_pose_graph_received_time': self.full_pose_graph_received_time,
+                'full_pose_graph_message_count': self.full_pose_graph_message_count,
+                'full_pose_graph_age_s': (
+                    None if self.full_pose_graph_received_time is None
+                    else float(rospy.get_time()) - self.full_pose_graph_received_time),
                 'closure_marker_edges': list(self.closure_marker_edges),
                 'slam_path': full_path_nodes,
                 'loop_events': list(self.loop_events),
             }
+
+    def refresh_graph_observers(self):
+        """Request one atomic mapper publication and wait for both observers."""
+        service_name = '/get_map'
+        rospy.wait_for_service(service_name, timeout=30.0)
+        with self.lock:
+            previous_path_count = self.slam_path_message_count
+            previous_graph_count = self.full_pose_graph_message_count
+        service = rospy.ServiceProxy(service_name, GetMap)
+        service()
+        deadline = time.monotonic() + 15.0
+        while time.monotonic() < deadline and not rospy.is_shutdown():
+            with self.lock:
+                path_updated = self.slam_path_message_count > previous_path_count
+                graph_updated = self.full_pose_graph_message_count > previous_graph_count
+            if path_updated and graph_updated:
+                return
+            rospy.sleep(0.05)
+        raise RuntimeError('forced mapper observer refresh did not arrive within 15 s')
 
     def write_json(self, name, payload):
         path = os.path.join(self.output_dir, name)
@@ -478,6 +510,7 @@ class PilotDriver:
                 'history_{:02d}'.format(index), gt_waypoint))
         rospy.sleep(float(self.spec['history_hold_s']))
 
+        self.refresh_graph_observers()
         before = self.snapshot('before_probe')
         self.write_json('pose_graph_before.json', before)
         if len(before['full_pose_nodes']) != len(before['nodes']):
@@ -494,13 +527,21 @@ class PilotDriver:
         freeze_checks = target_freeze_checks(
             len(before['nodes']), anchor['id'], anchor_distance,
             len(segment), route_start_node_count, self.spec)
+        full_unique_by_state = {
+            node['id']: node['unique_id'] for node in before['full_pose_nodes']
+        }
         frozen_target = {
             'target_id': self.spec['target_id'],
             'frozen_before_probe': True,
             'target_reference': target_reference,
             'anchor_scan': anchor,
             'historical_scan_ids': [node['id'] for node in segment],
-            'segment_nodes': segment,
+            'historical_unique_ids': [
+                full_unique_by_state[node['id']] for node in segment],
+            'segment_nodes': [dict(
+                node,
+                unique_id=full_unique_by_state[node['id']])
+                for node in segment],
             'target_segment_radius_m': float(self.spec['target_segment_radius_m']),
             'anchor_to_reference_distance_m': anchor_distance,
             'route_start_node_count': route_start_node_count,
@@ -516,6 +557,7 @@ class PilotDriver:
         with self.lock:
             self.probe_gt = []
             self.probe_active = True
+        rospy.set_param('/constraint_realizability_pilot/probe_phase', 'DURING_PROBE')
         probe_start = float(rospy.get_time())
         probe_event_index = len(self.loop_events)
         action_completed = False
@@ -530,8 +572,10 @@ class PilotDriver:
         finally:
             with self.lock:
                 self.probe_active = False
+            rospy.set_param('/constraint_realizability_pilot/probe_phase', 'AFTER_PROBE')
         probe_end = float(rospy.get_time())
 
+        self.refresh_graph_observers()
         after = self.snapshot('after_probe')
         self.write_json('pose_graph_after.json', after)
         if len(after['full_pose_nodes']) != len(after['nodes']):
@@ -679,6 +723,7 @@ def main():
     args = parser.parse_args(rospy.myargv()[1:])
     spec = json.loads(open(args.spec).read())
     rospy.init_node('constraint_realizability_pilot_driver', anonymous=False)
+    rospy.set_param('/constraint_realizability_pilot/probe_phase', 'BEFORE_PROBE')
     driver = PilotDriver(spec, args.output_dir)
     if args.start_gate_param:
         rospy.set_param(args.start_gate_param + '_subscriber_ready', True)

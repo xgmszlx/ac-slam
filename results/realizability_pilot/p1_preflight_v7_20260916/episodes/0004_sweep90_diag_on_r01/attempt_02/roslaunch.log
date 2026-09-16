@@ -1,0 +1,362 @@
+[WARN] [1789541147.208489640]: The root link base_link has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.
+0x55bee4e3d210
+[INFO] [1789541147.256473449]: PHASE2C_LOOP_DIAGNOSTICS_ENABLED path=/home/wcqw/ac-slam/results/realizability_pilot/p1_preflight_v7_20260916/episodes/0004_sweep90_diag_on_r01/attempt_02/karto_loop_diagnostics.jsonl run_id=realizability_0004_sweep90_diag_on_r01
+[INFO] [1789541147.258783577]: EDGE_PROVENANCE_ENABLED path=/home/wcqw/ac-slam/results/realizability_pilot/p1_preflight_v7_20260916/episodes/0004_sweep90_diag_on_r01/attempt_02/karto_edge_provenance.jsonl run_id=realizability_0004_sweep90_diag_on_r01
+[INFO] [1789541147.259291966]: Inititialized robot 1, starting to map now.
+Create multimapper!!
+concorde -s 31004 /tmp/tmpsj4ec0ga/problem.tsp
+Host: msxg  Current process id: 59396
+Using random seed 31004
+Number of Nodes: 72
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 8137 (from tour)
+ERROR: No dual change in basis finding code
+Did not find a basic optimal solution
+Fractional matching routine failed
+Warning: restarting running timer Miscellaneous
+No warmstart, stumbling on anyway
+Basic dual change required, but no candidate edges
+  LP Value  1: 8132.000000  (0.01 seconds)
+  LP Value  2: 8137.000000  (0.01 seconds)
+New lower bound: 8137.000000
+Final lower bound 8137.000000, upper bound 8137.000000
+Exact lower bound: 8137.000000
+DIFF: 0.000000
+Final LP has 92 rows, 197 columns, 583 nonzeros
+Optimal Solution: 8137.00
+Number of bbnodes: 1
+Total Running Time: 0.04 (seconds)
+[WARN] [1789541148.458099733, 0.400000000]: local_map: Parameter "plugins" not provided, loading pre-Hydro parameters
+[INFO] [1789541148.533508106, 0.400000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=0 state_id=0 sim_time=0.200000
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 0.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 0.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 0.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 0.400000 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: [INFO] [1789541147.253505579]: NearestFrontierPlanner start!
+[INFO] [1789541147.255397236]: Successfully loaded exploration strategy [NearestFrontierPlanner].
+TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 0.400000 according to authority unknown_publisherWarning: 
+         at line TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 0.400000 according to authority unknown_publisher277
+ in          at line [WARN] [1789541148.534551219, 0.400000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame odom (parent offset) at time 0.400000 according to authority unknown_publisher
+/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp277
+ in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 0.400000 according to authority unknown_publisherTF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 0.400000 according to authority unknown_publisher
+
+         at line [WARN] [1789541148.534599615, 0.400000000]: TF_REPEATED_DATA ignoring data with redundant timestamp for frame offset (parent map) at time 0.400000 according to authority unknown_publisher
+         at line 277277 in  in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp/tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+
+[INFO] [1789541156.479777925, 8.400000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=1 state_id=1 sim_time=8.400000
+[INFO] [1789541157.169226087, 9.100000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=2 state_id=2 sim_time=9.100000
+[INFO] [1789541157.772850831, 9.700000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=3 state_id=3 sim_time=9.700000
+[INFO] [1789541158.276714565, 10.200000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=4 state_id=4 sim_time=10.200000
+[INFO] [1789541158.977067696, 10.900000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=5 state_id=5 sim_time=10.900000
+[INFO] [1789541159.578740963, 11.500000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=6 state_id=6 sim_time=11.500000
+[INFO] [1789541160.079205594, 12.000000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=7 state_id=7 sim_time=12.000000
+[INFO] [1789541160.776193681, 12.700000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=8 state_id=8 sim_time=12.700000
+[INFO] [1789541161.379798890, 13.300000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=9 state_id=9 sim_time=13.300000
+[INFO] [1789541161.973903026, 13.900000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=10 state_id=10 sim_time=13.900000
+[INFO] [1789541162.681197952, 14.600000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=11 state_id=11 sim_time=14.600000
+[INFO] [1789541166.080472474, 18.000000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=12 state_id=12 sim_time=18.000000
+[INFO] [1789541167.376015282, 19.300000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=13 state_id=13 sim_time=19.300000
+[INFO] [1789541168.780619568, 20.700000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=14 state_id=14 sim_time=20.700000
+[INFO] [1789541170.278377675, 22.200000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=15 state_id=15 sim_time=22.200000
+[INFO] [1789541173.180756457, 25.100000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=16 state_id=16 sim_time=25.100000
+[INFO] [1789541178.078690296, 30.000000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=17 state_id=17 sim_time=30.000000
+[INFO] [1789541182.980378068, 34.900000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=18 state_id=18 sim_time=34.900000
+[INFO] [1789541187.673098870, 39.600000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=19 state_id=19 sim_time=39.600000
+[INFO] [1789541192.681448904, 44.600000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=20 state_id=20 sim_time=44.600000
+[INFO] [1789541197.981777085, 49.900000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=21 state_id=21 sim_time=49.900000
+[INFO] [1789541198.782601682, 50.700000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=22 state_id=22 sim_time=50.700000
+[INFO] [1789541200.075942547, 52.000000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=23 state_id=23 sim_time=52.000000
+[INFO] [1789541201.584754362, 53.500000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=24 state_id=24 sim_time=53.500000
+[INFO] [1789541205.382430316, 57.300000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=25 state_id=25 sim_time=57.300000
+[INFO] [1789541210.084520345, 62.000000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=26 state_id=26 sim_time=62.000000
+[INFO] [1789541214.683711201, 66.600000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=27 state_id=27 sim_time=66.600000
+[INFO] [1789541219.275520805, 71.200000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=28 state_id=28 sim_time=71.200000
+[INFO] [1789541222.080978317, 74.000000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=29 state_id=29 sim_time=74.000000
+[INFO] [1789541222.790652155, 74.700000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=30 state_id=30 sim_time=74.700000
+[INFO] [1789541224.388676859, 76.300000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=31 state_id=31 sim_time=76.300000
+[INFO] [1789541225.691703394, 77.600000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=32 state_id=32 sim_time=77.600000
+[INFO] [1789541226.893288387, 78.800000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=33 state_id=33 sim_time=78.800000
+[INFO] [1789541231.792911159, 83.700000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=34 state_id=34 sim_time=83.700000
+[INFO] [1789541232.390752169, 84.300000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=35 state_id=35 sim_time=84.300000
+[INFO] [1789541233.093422511, 85.000000000]: PHASE2C_KEYSCAN_ACCEPTED unique_id=36 state_id=36 sim_time=85.000000
+[INFO] [17895412[INFO] [1789541155.761245487, 7.700000000]: Navigator is now initialized.
+[INFO] [1789541164.071622593, 16.000000000]: Path planning took 0.058846711 seconds, distance is 5.40 m.
+[INFO] [1789541169.097585792, 21.000000000]: Path planning took 0.137936756 seconds, distance is 2.20 m.
+[INFO] [1789541174.092809814, 26.000000000]: Path planning took 0.132848262 seconds, distance is 0.34 m.
+[INFO] [1789541174.960654286, 26.900000000]: Reached target, now turning to desired direction.
+[INFO] [1789541174.960722387, 26.900000000]: Heading: -0.19 / Desired: 0.00 / Difference: 0.19 / Tolerance: 0.10
+[INFO] [1789541175.959686959, 27.900000000]: Heading: -0.05 / Desired: 0.00 / Difference: 0.05 / Tolerance: 0.10
+[INFO] [1789541175.959778184, 27.900000000]: Final Heading: -0.05 / Desired: 0.00 / Difference: 0.05 / Tolerance: 0.10
+[INFO] [1789541175.959819836, 27.900000000]: Goal reached.
+[INFO] [1789541177.081267157, 29.000000000]: Path planning took 0.115495681 seconds, distance is 3.80 m.
+[INFO] [1789541182.094715980, 34.000000000]: Path planning took 0.134967049 seconds, distance is 2.80 m.
+[INFO] [1789541187.087479303, 39.000000000]: Path planning took 0.126737713 seconds, distance is 1.80 m.
+[INFO] [1789541192.103073273, 44.000000000]: Path planning took 0.143663169 seconds, distance is 0.80 m.
+[INFO] [1789541195.960842088, 47.900000000]: Reached target, now turning to desired direction.
+[INFO] [1789541195.960903389, 47.900000000]: Heading: -0.00 / Desired: 0.00 / Difference: 0.00 / Tolerance: 0.10
+[INFO] [1789541195.960938858, 47.900000000]: Final Heading: -0.00 / Desired: 0.00 / Difference: 0.00 / Tolerance: 0.10
+[INFO] [1789541195.960961117, 47.900000000]: Goal reached.
+[INFO] [1789541197.092409144, 49.000000000]: Path planning took 0.125645777 seconds, distance is 6.00 m.
+[INFO] [1789541202.105414551, 54.000000000]: Path planning took 0.144732520 seconds, distance is 4.04 m.
+[INFO] [1789541207.101113088, 59.000000000]: Path planning took 0.140201160 seconds, distance is 2.80 m.
+[INFO] [1789541212.102073207, 64.000000000]: Path planning took 0.142028418 seconds, distance is 1.84 m.
+[INFO] [1789541217.101542726, 69.000000000]: Path planning took 0.142340256 seconds, distance is 0.70 m.
+[INFO] [1789541219.959783064, 71.900000000]: Reached target, now turning to desired direction.
+[INFO] [1789541219.959859506, 71.900000000]: Heading: 1.54 / Desired: 1.57 / Difference: 0.03 / Tolerance: 0.10
+[INFO] [1789541219.959891884, 71.900000000]: Final Heading: 1.54 / Desired: 1.57 / Difference: 0.03 / Tolerance: 0.10
+[INFO] [1789541219.959915769, 71.900000000]: Goal reached.
+[INFO] [1789541221.090035563, 73.000000000]: Path planning took 0.128512382 seconds, distance is 4.04 m.
+[INFO] [1789541226.104835307, 78.000000000]: Path planning took 0.144788360 seconds, distance is 1.54 m.
+[INFO] [1789541227.960908786, 79.900000000]: Reached target, now turning to desired direction.
+[INFO] [1789541227.960986534, 79.900000000]: Heading: -3.12 / Desired: 3.14 / Difference: 0.02 / Tolerance: 0.10
+[INFO] [1789541227.961048063, 79.900000000]: Final Heading: -3.12 / Desired: 3.14 / Difference: 0.02 / Tolerance: 0.10
+[INFO] [1789541227.961073640, 79.900000000]: Goal reached.
+[INFO] [1789541231.189402152, 83.100000000]: Path planning took 0.091986476 seconds, distance is 6.52 m.
+[INFO] [1789541236.207530628, 88.100000000]: Path planning took 0.147939640 seconds, distance is 5.80 m.
+[INFO] [1789541241.202828049, 93.100000000]: Path planning took 0.143115000 seconds, distance is 2.27 m.
+[INFO] [1789541244.061388923, 96.000000000]: Reached target, now turning to desired direction.
+[INFO] [1789541244.061468441, 96.000000000]: Heading: -1.54 / Desired: 1.52 / Difference: 3.05 / Tolerance: 0.10
+[INFO] [1789541245.059523855, 97.000000000]: Heading: -0.69 / Desired: 1.52 / Difference: 2.21 / Tolerance: 0.10
+[INFO] [1789541246.216097074, 98.100000000]: Path planning took 0.155722626 seconds, distance is 0.10 m.
+[INFO] [1789541246.216129853, 98.100000000]: Heading: 0.51 / Desired: 1.52 / Difference: 1.01 / Tolerance: 0.10
+[INFO] [1789541248.059456524, 100.000000000]double free or corruption (fasttop)
+: Heading: 1.60 / Desired: 1.52 / Difference: 0.08 / Tolerance: 0.10
+[INFO] [1789541248.059608271, 100.000000000]: Final Heading: 1.60 / Desired: 1.52 / Difference: 0.08 / Tolerance: 0.10
+[INFO] [1789541248.059637438, 100.000000000]: Goal reached.
+[INFO] [1789541249.211861356, 101.100000000]: Path planning took 0.144908572 seconds, distance is 0.20 m.
+[INFO] [1789541249.211903333, 101.100000000]: Reached target, now turning to desired direction.
+[INFO] [1789541249.211918136, 101.100000000]: Heading: 1.62 / Desired: -0.58 / Difference: 2.19 / Tolerance: 0.10
+[INFO] [1789541251.059629405, 103.000000000]: Heading: -0.08 / Desired: -0.58 / Difference: 0.49 / Tolerance: 0.10
+[INFO] [1789541252.059472422, 104.000000000]: Heading: -0.73 / Desired: -0.58 / Difference: 0.15 / Tolerance: 0.10
+[INFO] [1789541253.059423375, 105.000000000]: Heading: -0.66 / Desired: -0.58 / Difference: 0.08 / Tolerance: 0.10
+[INFO] [1789541253.059507391, 105.000000000]: Final Heading: -0.66 / Desired: -0.58 / Difference: 0.08 / Tolerance: 0.10
+[INFO] [1789541253.059544084, 105.000000000]: Goal reached.
+[INFO] [1789541254.211731640, 106.100000000]: Path planning took 0.144673818 seconds, distance is 0.20 m.
+[INFO] [1789541254.211771376, 106.100000000]: Reached target, now turning to desired direction.
+[INFO] [1789541254.211782731, 106.100000000]: Heading: -0.63 / Desired: -0.05 / Difference: 0.57 / Tolerance: 0.10
+[INFO] [1789541256.060233811, 108.000000000]: Heading: 0.02 / Desired: -0.05 / Difference: 0.08 / Tolerance: 0.10
+[INFO] [1789541256.060293225, 108.000000000]: Final Heading: 0.02 / Desired: -0.05 / Difference: 0.08 / Tolerance: 0.10
+[INFO] [1789541256.060313408, 108.000000000]: Goal reached.
+[INFO] [1789541257.206383586, 109.100000000]: Path planning took 0.138798777 seconds, distance is 0.24 m.
+[INFO] [1789541257.206403543, 109.100000000]: Reached target, now turning to desired direction.
+[INFO] [1789541257.206408633, 109.100000000]: Heading: 0.06 / Desired: 0.47 / Difference: 0.41 / Tolerance: 0.10
+[INFO] [1789541259.060315875, 111.000000000]: Heading: 0.53 / Desired: 0.47 / Difference: 0.06 / Tolerance: 0.10
+[INFO] [1789541259.060406743, 111.000000000]: Final Heading: 0.53 / Desired: 0.47 / Difference: 0.06 / Tolerance: 0.10
+[INFO] [1789541259.060440057, 111.000000000]: Goal reached.
+[WARN] [1789541147.774969, 0.000000]: Robot Start At 8
+[WARN] [1789541147.827260, 0.000000]: Tsp problem solved by Concorde. 0.048886775970458984
+/home/wcqw/ac-slam/catkin_ws/src/cpp_solver/world/map3/map3.xml
+74.0
+True
+Drawio scale: 0.10277777777777777
+[INFO] [1789541147.757828, 0.000000]: Build prior map with 36 vertices.
+[INFO] [1789541147.758873, 0.000000]: Build prior map.
+[INFO] [1789541147.771569, 0.000000]: prior_map_save_path: /home/wcqw/ac-slam/catkin_ws/src/cpp_solver/results/prior_map_RealizabilityPilot_0004_sweep90_diag_on_r01.pickle
+Robot position: (-28.0, -28.0)
+10: 2225.556520061729,(x, y) = (10.527777777777779, 45.986111111111114)
+11: 1243.3435570987656,(x, y) = (10.527777777777779, 33.65277777777778)
+Original tsp path is better!
+tsp_path VS full_tsp_path:
+[8, 7, 6, 5, 4, 3, 9, 15, 16, 10, 11, 35, 36, 12, 13, 14, 18, 17, 21, 22, 28, 34, 33, 27, 26, 32, 31, 25, 24, 30, 29, 23, 19, 20, 37, 38]
+[8, 7, 6, 5, 4, 3, 9, 15, 16, 10, 11, 35, 36, 12, 13, 14, 18, 17, 21, 22, 28, 34, 33, 27, 26, 32, 31, 25, 24, 30, 29, 23, 19, 20, 37, 38]
+[INFO] [1789541147.829090, 0.000000]: TSP_RECORD {"full_tsp_path": [8, 7, 6, 5, 4, 3, 9, 15, 16, 10, 11, 35, 36, 12, 13, 14, 18, 17, 21, 22, 28, 34, 33, 27, 26, 32, 31, 25, 24, 30, 29, 23, 19, 20, 37, 38], "initial_tsp_path": [8, 7, 6, 5, 4, 3, 9, 15, 16, 10, 11, 35, 36, 12, 13, 14, 18, 17, 21, 22, 28, 34, 33, 27, 26, 32, 31, 25, 24, 30, 29, 23, 19, 20, 37, 38], "predicted_full_tsp_length": 415.22222222222206, "predicted_tsp_length": 415.22222222222206, "seed": 31004, "solver": "concorde"}
+[INFO] [1789541147.829831, 0.000000]: tsp_record_path: /home/wcqw/ac-slam/catkin_ws/src/cpp_solver/results/tsp_record_RealizabilityPilot_0004_sweep90_diag_on_r01.json
+[INFO] [1789541147.830407, 0.000000]: Find initial tsp path.
+[INFO] [1789541147.830955, 0.000000]: Find modified curr_path and loop index
+[INFO] [1789541147.833586, 0.000000]: g2o_save_path: /home/wcqw/ac-slam/catkin_ws/src/cpp_solver/results/graph_RealizabilityPilot_0004_sweep90_diag_on_r01.g2o
+[INFO] [1789541148.535060, 0.400000]: Really visited vertices: 
+[INFO] [1789541160.781389, 12.700000]: Really visited vertices: 8 
+[INFO] [1789541268.333416, 119.600000]: Pose graph has: 9 vertices, 8 edges.
+... logging to /home/wcqw/ac-slam/catkin_ws/.ros/log/3e5f2940-b19a-11f1-adfe-6108f89b02ce/roslaunch-msxg-59010.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;/home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/launch/exploration.launch
+[1mstarted roslaunch server http://127.0.0.1:44847/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /Mapper/LoopMatchMaximumVarianceCoarse: 0.16
+ * /Mapper/LoopMatchMinimumChainSize: 4
+ * /Mapper/LoopMatchMinimumResponseCoarse: 0.6
+ * /Mapper/LoopMatchMinimumResponseFine: 0.7
+ * /Mapper/LoopSearchMaximumDistance: 4
+ * /Mapper/LoopSearchSpaceDimension: 5.0
+ * /Mapper/MinimumTravelDistance: 1.0
+ * /Mapper/MinimumTravelHeading: 0.52
+ * /Mapper/edge_provenance_path: /home/wcqw/ac-sla...
+ * /Mapper/edge_provenance_run_id: realizability_000...
+ * /Mapper/enable_edge_provenance: True
+ * /Mapper/enable_full_pose_graph_observer: True
+ * /Mapper/enable_loop_diagnostics: True
+ * /Mapper/grid_resolution: 0.1
+ * /Mapper/loop_diagnostics_path: /home/wcqw/ac-sla...
+ * /Mapper/loop_diagnostics_run_id: realizability_000...
+ * /Mapper/map_frame: map
+ * /Mapper/map_update_rate: 5
+ * /Mapper/max_covariance: 0.01
+ * /Mapper/max_particles: 10000
+ * /Mapper/min_map_size: 20
+ * /Mapper/min_particles: 2500
+ * /Mapper/publish_pose_graph: True
+ * /Mapper/range_threshold: 25.0
+ * /Mapper/transform_publish_period: 0.1
+ * /Navigator/command_target_distance: 1.5
+ * /Navigator/exploration_goal_distance: 3.0
+ * /Navigator/exploration_strategy: NearestFrontierPl...
+ * /Navigator/frequency: 1
+ * /Navigator/map_inflation_radius: 1.0
+ * /Navigator/max_replanning_period: 1.0
+ * /Navigator/min_replanning_period: 5.0
+ * /Navigator/min_target_area_size: 1.0
+ * /Navigator/navigation_goal_angle: 1.0
+ * /Navigator/navigation_goal_distance: 2.0
+ * /Navigator/navigation_homing_distance: 4.0
+ * /Navigator/robot_radius: 0.5
+ * /Navigator/save_path_plan_time: /home/wcqw/ac-sla...
+ * /Navigator/use_local_planner: True
+ * /Navigator/visualize_frontiers: True
+ * /Operator/conformance_weight: 1
+ * /Operator/continue_weight: 1
+ * /Operator/escape_weight: 1
+ * /Operator/frequency: 10
+ * /Operator/local_map/cost_scaling_factor: 2.0
+ * /Operator/local_map/global_frame: odom
+ * /Operator/local_map/height: 6.0
+ * /Operator/local_map/inflation_radius: 0.75
+ * /Operator/local_map/lethal_cost_threshold: 100
+ * /Operator/local_map/map_type: costmap
+ * /Operator/local_map/max_obstacle_height: 2.0
+ * /Operator/local_map/min_obstacle_height: 0.0
+ * /Operator/local_map/observation_sources: scan
+ * /Operator/local_map/obstacle_range: 4.0
+ * /Operator/local_map/publish_frequency: 1.0
+ * /Operator/local_map/publish_voxel_map: True
+ * /Operator/local_map/raytrace_range: 4.5
+ * /Operator/local_map/resolution: 0.05
+ * /Operator/local_map/robot_base_frame: base_link
+ * /Operator/local_map/robot_radius: 0.4
+ * /Operator/local_map/rolling_window: True
+ * /Operator/local_map/scan/clearing: True
+ * /Operator/local_map/scan/data_type: LaserScan
+ * /Operator/local_map/scan/expected_update_rate: 0.4
+ * /Operator/local_map/scan/marking: True
+ * /Operator/local_map/scan/max_obstacle_height: 0.4
+ * /Operator/local_map/scan/min_obstacle_height: 0.08
+ * /Operator/local_map/scan/observation_persistence: 0.0
+ * /Operator/local_map/static_map: False
+ * /Operator/local_map/track_unknown_space: True
+ * /Operator/local_map/transform_tolerance: 0.3
+ * /Operator/local_map/update_frequency: 5.0
+ * /Operator/local_map/width: 6.0
+ * /Operator/max_free_space: 3.0
+ * /Operator/max_velocity: 1.0
+ * /Operator/publish_route: True
+ * /Operator/safety_decay: 0.99
+ * /Operator/safety_weight: 1
+ * /Stage/base_watchdog_timeout: 0
+ * /laser_frame: base_laser_link
+ * /laser_topic: base_scan
+ * /map_frame: map
+ * /map_server/frame_id: map
+ * /map_service: static_map
+ * /map_topic: map
+ * /odometry_frame: odom
+ * /offset_frame: offset
+ * /path_planner/g2o_save_path: /home/wcqw/ac-sla...
+ * /path_planner/map_width: 74.0
+ * /path_planner/need_noise: False
+ * /path_planner/only_use_tsp: True
+ * /path_planner/oracle_after: 8
+ * /path_planner/oracle_before: 8
+ * /path_planner/oracle_densify_m: 0.5
+ * /path_planner/oracle_dir_lambda: 1.0
+ * /path_planner/oracle_mode: 0
+ * /path_planner/oracle_repair_densify: 0.5
+ * /path_planner/oracle_repair_max_len: 12.0
+ * /path_planner/oracle_repair_max_wp: 24
+ * /path_planner/oracle_span_gate: 4.0
+ * /path_planner/prior_map_save_path: /home/wcqw/ac-sla...
+ * /path_planner/robot_position: -28.0 -28.0 0
+ * /path_planner/tsp_record_path: /home/wcqw/ac-sla...
+ * /path_planner/tsp_seed: 31004
+ * /path_planner/tsp_solver: concorde
+ * /path_planner/use_drawio: True
+ * /path_planner/variance: 0.0
+ * /path_planner/xml_path: /home/wcqw/ac-sla...
+ * /pubPath/gt_save_path: /home/wcqw/ac-sla...
+ * /pubPath/robot_position: -28.0 -28.0 0
+ * /pubPath/slam_save_path: /home/wcqw/ac-sla...
+ * /robot_description: <?xml version="1....
+ * /robot_frame: base_link
+ * /robot_start_position: -28.0 -28.0 0
+ * /robot_state_publisher/publish_frequency: 30.0
+ * /robot_state_publisher/tf_prefix: 
+ * /rosdistro: noetic
+ * /rosversion: 1.17.4
+ * /use_sim_time: True
+ * /use_tf1: True
+
+NODES
+  /
+    Explore (nav2d_navigator/explore_client)
+    GetMap (nav2d_navigator/get_map_client)
+    Mapper (nav2d_karto/mapper)
+    Navigator (nav2d_navigator/navigator)
+    Operator (nav2d_operator/operator)
+    RVIZ (rviz/rviz)
+    SetGoal (nav2d_navigator/set_goal_client)
+    Stage (stage_ros/stageros)
+    exploration_button_server (cpp_solver/exploration_button_server.py)
+    map_server (map_server/map_server)
+    path_planner (cpp_solver/path_planner.py)
+    pubPath (cpp_solver/pub_path)
+    publisher (p2os_urdf/p2os_publisher_3at)
+    robot_state_publisher (robot_state_publisher/robot_state_publisher)
+    rqt_robot_steering (rqt_robot_steering/rqt_robot_steering)
+    updateDistance (cpp_solver/updateDistance)
+
+[1mROS_MASTER_URI=http://localhost:11311[0m
+]2;/home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/launch/exploration.launch http://localhost:11311
+[1mprocess[Stage-1]: started with pid [59109][0m
+[1mprocess[map_server-2]: started with pid [59110][0m
+[1mprocess[Operator-3]: started with pid [59111][0m
+[1mprocess[Mapper-4]: started with pid [59116][0m
+[1mprocess[Navigator-5]: started with pid [59121][0m
+[1mprocess[GetMap-6]: started with pid [59123][0m
+[1mprocess[Explore-7]: started with pid [59132][0m
+[1mprocess[SetGoal-8]: started with pid [59139][0m
+[1mprocess[pubPath-9]: started with pid [59147][0m
+[1mprocess[updateDistance-10]: started with pid [59152][0m
+[1mprocess[exploration_button_server-11]: started with pid [59157][0m
+[1mprocess[path_planner-12]: started with pid [59162][0m
+[1mprocess[rqt_robot_steering-13]: started with pid [59165][0m
+[1mprocess[robot_state_publisher-14]: started with pid [59166][0m
+[1mprocess[publisher-15]: started with pid [59168][0m
+[1mprocess[RVIZ-16]: started with pid [59170][0m
+[RVIZ-16] killing on exit
+[publisher-15] killing on exit
+[rqt_robot_steering-13] killing on exit
+[path_planner-12] killing on exit
+[robot_state_publisher-14] killing on exit
+[updateDistance-10] killing on exit
+[pubPath-9] killing on exit
+[SetGoal-8] killing on exit
+[Explore-7] killing on exit
+[exploration_button_server-11] killing on exit
+[GetMap-6] killing on exit
+[Navigator-5] killing on exit
+[Mapper-4] killing on exit
+[Operator-3] killing on exit
+[map_server-2] killing on exit
+[Stage-1] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+[1mdone[0m

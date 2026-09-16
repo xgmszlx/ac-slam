@@ -14,6 +14,10 @@ sys.path.insert(0, str(THIS_DIR))
 from aggregate_episode_table import diagnostic_stages  # noqa: E402
 from protocol import (episode_specs, goal_errors, resolve_local_waypoints,
                       resolve_marker_edges, target_freeze_checks)  # noqa: E402
+from provenance_analysis import (  # noqa: E402
+    PROVENANCE_VALUES, classify_constraint, constraint_records, load_jsonl,
+    reconcile_full_graph, validate_constraint_records,
+)
 
 
 class PilotProtocolTest(unittest.TestCase):
@@ -98,6 +102,99 @@ class PilotProtocolTest(unittest.TestCase):
             path.write_text('\n'.join(json.dumps(row) for row in records) + '\n')
             stages = diagnostic_stages(path, {7, 8}, 20, 30)
         self.assertEqual(stages, {'opportunity': True, 'coarse': False, 'fine': False})
+
+
+class EdgeProvenanceTest(unittest.TestCase):
+    def setUp(self):
+        self.root = THIS_DIR.parents[1]
+        self.mapper_cpp = (
+            self.root / 'dependencies/navigation_2d/nav2d_karto/OpenKarto/source/'
+            'OpenMapper.cpp').read_text()
+
+    @staticmethod
+    def record(sequence, pair):
+        return {
+            '_line_number': sequence,
+            'record_type': 'constraint_created',
+            'creation_sequence': sequence,
+            'canonical_edge_identity': list(pair),
+            'creation_provenance': 'NEAR_CHAIN',
+            'solver_add_constraint_called': True,
+        }
+
+    def test_provenance_enum_matches_schema_and_jsonl_serialization(self):
+        schema = json.loads((THIS_DIR / 'edge_provenance_schema.json').read_text())
+        self.assertEqual(tuple(schema['creation_provenance']), PROVENANCE_VALUES)
+        rows = [self.record(1, (3, 8)), {
+            'record_type': 'try_close_loop_context',
+            'current_keyscan_state_id': 8,
+        }]
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / 'records.jsonl'
+            path.write_text('\n'.join(json.dumps(row) for row in rows) + '\n')
+            loaded = load_jsonl(path)
+        self.assertEqual(len(loaded), 2)
+        self.assertEqual(constraint_records(loaded)[0]['canonical_edge_identity'], [3, 8])
+
+    def test_duplicate_new_edge_record_is_rejected(self):
+        records = [self.record(1, (3, 8)), self.record(2, (3, 8))]
+        self.assertIn('duplicate_new_edge_record', validate_constraint_records(records))
+
+    def test_only_new_edge_branch_records_and_adds_solver_constraint(self):
+        start = self.mapper_cpp.index('void MapperGraph::LinkObjects')
+        end = self.mapper_cpp.index('#ifdef USE_TBB', start)
+        body = self.mapper_cpp[start:end]
+        branch = body.index('if (isNewEdge == true)')
+        solver = body.index('m_pScanSolver->AddConstraint(pEdge)')
+        record = body.index('RecordNewConstraint')
+        self.assertLess(branch, solver)
+        self.assertLess(solver, record)
+        self.assertEqual(body.count('RecordNewConstraint'), 1)
+
+    def test_existing_edge_covariance_update_is_not_recorded_as_new(self):
+        start = self.mapper_cpp.index('void MapperGraph::LinkObjects')
+        end = self.mapper_cpp.index('#ifdef USE_TBB', start)
+        body = self.mapper_cpp[start:end]
+        covariance = body.index('pEdge->AddCovariance(rCovariance)')
+        new_branch = body.index('if (isNewEdge == true)')
+        record = body.index('RecordNewConstraint')
+        self.assertLess(covariance, new_branch)
+        self.assertGreater(record, new_branch)
+
+    def test_target_attribution_is_deterministic(self):
+        for _ in range(3):
+            self.assertEqual(
+                classify_constraint(13, 39, {13, 14, 15}, 31),
+                'TARGET_ATTRIBUTABLE')
+            self.assertEqual(
+                classify_constraint(12, 39, {13, 14, 15}, 31),
+                'WRONG_TARGET_HISTORICAL')
+            self.assertEqual(
+                classify_constraint(38, 39, {13, 14, 15}, 31),
+                'ORDINARY_RECENT_OR_SEQUENTIAL')
+
+    def test_wrong_target_does_not_count_as_target_success(self):
+        labels = [
+            classify_constraint(12, 39, {13, 14, 15}, 31),
+            classify_constraint(13, 39, {13, 14, 15}, 31),
+        ]
+        self.assertEqual(labels.count('TARGET_ATTRIBUTABLE'), 1)
+        self.assertEqual(labels.count('WRONG_TARGET_HISTORICAL'), 1)
+
+    def test_full_graph_reconciliation(self):
+        snapshot = {'full_pose_edges': [
+            {'start': 0, 'end': 1}, {'start': 3, 'end': 8},
+        ]}
+        records = [self.record(1, (0, 1)), self.record(2, (3, 8))]
+        result = reconcile_full_graph(snapshot, records)
+        self.assertTrue(result['exact_pair_set_match'])
+        self.assertTrue(result['exact_count_match'])
+
+    def test_diagnostics_and_provenance_are_default_disabled(self):
+        launch = (self.root / 'baseline/Graph-Based_SLAM-Aware_Exploration/'
+                  'launch/exploration.launch').read_text()
+        self.assertIn('<arg name="enable_loop_diagnostics" default="false"', launch)
+        self.assertIn('<arg name="enable_edge_provenance" default="false"', launch)
 
 
 if __name__ == '__main__':

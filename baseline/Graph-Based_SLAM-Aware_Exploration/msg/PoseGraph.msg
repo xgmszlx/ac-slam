@@ -1,5 +1,6 @@
 int32 vertex_start_idx
 int32[] vertices
+int32[] vertex_unique_ids
 float32[] vertex_x 
 float32[] vertex_y
 float32[] vertex_theta

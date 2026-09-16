@@ -1,0 +1,16 @@
+[WARN] [1789540783.785982, 28.800000]: PILOT_MOVE history_01 state=3 finished=True tf_error=0.262/0.021 gt_error=0.432/0.020 path_error=0.405 reached=True
+[WARN] [1789540801.787769, 46.800000]: PILOT_MOVE history_02 state=3 finished=True tf_error=0.182/0.000 gt_error=0.021/0.000 path_error=0.545 reached=True
+[WARN] [1789540825.788969, 70.800000]: PILOT_MOVE history_03 state=3 finished=True tf_error=0.103/0.007 gt_error=0.268/0.007 path_error=0.882 reached=True
+[WARN] [1789540843.789426, 88.800000]: PILOT_MOVE history_04 state=3 finished=True tf_error=0.275/0.200 gt_error=0.379/0.200 path_error=0.267 reached=True
+Traceback (most recent call last):
+  File "/home/wcqw/ac-slam/tools/realizability_pilot/pilot_driver.py", line 753, in <module>
+    main()
+  File "/home/wcqw/ac-slam/tools/realizability_pilot/pilot_driver.py", line 732, in main
+    result = driver.run()
+  File "/home/wcqw/ac-slam/tools/realizability_pilot/pilot_driver.py", line 513, in run
+    self.refresh_graph_observers()
+  File "/home/wcqw/ac-slam/tools/realizability_pilot/pilot_driver.py", line 236, in refresh_graph_observers
+    rospy.wait_for_service(service_name, timeout=30.0)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_service.py", line 148, in wait_for_service
+    raise ROSException("timeout exceeded while waiting for service %s"%resolved_name)
+rospy.exceptions.ROSException: timeout exceeded while waiting for service /Mapper/get_map

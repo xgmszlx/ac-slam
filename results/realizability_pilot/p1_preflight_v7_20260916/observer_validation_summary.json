@@ -1,0 +1,45 @@
+{
+  "episodes": [
+    {
+      "after_full_graph_age_s": "",
+      "attempt": 2,
+      "before_full_graph_age_s": "",
+      "episode_id": "0001_baseline_diag_off_r01",
+      "full_graph_provenance_exact_count_match": "",
+      "full_graph_provenance_exact_pair_set_match": "",
+      "observer_cut_complete": true,
+      "provenance_available": false,
+      "slam_path_full_graph_after_equal": true,
+      "slam_path_full_graph_before_equal": true
+    },
+    {
+      "after_full_graph_age_s": "",
+      "attempt": 1,
+      "before_full_graph_age_s": "",
+      "episode_id": "0002_baseline_diag_on_r01",
+      "full_graph_provenance_exact_count_match": true,
+      "full_graph_provenance_exact_pair_set_match": true,
+      "observer_cut_complete": true,
+      "provenance_available": true,
+      "slam_path_full_graph_after_equal": true,
+      "slam_path_full_graph_before_equal": true
+    },
+    {
+      "after_full_graph_age_s": 0.0,
+      "attempt": 2,
+      "before_full_graph_age_s": 0.0,
+      "episode_id": "0004_sweep90_diag_on_r01",
+      "full_graph_provenance_exact_count_match": true,
+      "full_graph_provenance_exact_pair_set_match": true,
+      "observer_cut_complete": true,
+      "provenance_available": true,
+      "slam_path_full_graph_after_equal": true,
+      "slam_path_full_graph_before_equal": true
+    }
+  ],
+  "excluded_conditions": [
+    "0003_align60_diag_on_r01"
+  ],
+  "note": "Exact full-graph/provenance reconciliation is required only for runs executed after provenance instrumentation was enabled.",
+  "status": "PASS_FOR_VALID_EPISODES"
+}

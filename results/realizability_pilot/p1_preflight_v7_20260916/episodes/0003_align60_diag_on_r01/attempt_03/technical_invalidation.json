@@ -1,0 +1,7 @@
+{
+  "classification": "TECHNICAL_INVALID",
+  "reason": "The observation-only refresh used the wrong resolved ROS service name /Mapper/get_map; the actual existing service is /get_map. The attempt stopped before target freeze and probe execution.",
+  "scientific_outcome_selected": false,
+  "uniform_repair": "Use the existing /get_map service name; no planner, action, seed, graph, matcher, or threshold change.",
+  "scientific_intervention_started": false
+}

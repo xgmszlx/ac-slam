@@ -1,0 +1,11 @@
+{
+  "classification": "TECHNICAL_INVALID",
+  "reason": "The saved after-probe full graph had 75 edges through state 49, while provenance recorded three additional constraints to state 50 before the outcome snapshot call returned. The full graph and slam_path observers were mutually consistent but jointly stale, so observer completeness failed.",
+  "scientific_outcome_selected": false,
+  "uniform_outcome_blind_repair": "Force the existing /Mapper/get_map publication immediately before each before/after snapshot and wait for fresh slam_path and full-graph messages.",
+  "planner_changed": false,
+  "karto_graph_construction_changed": false,
+  "matching_threshold_changed": false,
+  "action_changed": false,
+  "seed_changed": false
+}

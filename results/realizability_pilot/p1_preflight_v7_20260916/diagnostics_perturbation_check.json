@@ -1,0 +1,190 @@
+{
+  "comparison": "baseline_diag_off_vs_baseline_diag_on",
+  "deltas_on_minus_off": {
+    "actual_probe_distance_m": 0.6594667421417828,
+    "after_edge_count": 3.0,
+    "after_node_count": 1.0,
+    "n_target_constraints": 0.0,
+    "new_edge_count": 0.0,
+    "probe_duration_s": -1.0,
+    "try_close_loop_events": 0.0
+  },
+  "executed_waypoint_labels_match": true,
+  "limitations": [
+    "The diagnostics-off episode predates edge-provenance logging, so its provenance distribution is UNKNOWN_NOT_RECORDED.",
+    "The frozen runner used sequence-dependent TSP seeds (31001 versus 31002), so this pair cannot causally isolate instrumentation.",
+    "One pair can detect material pairwise divergence but cannot establish absence of small stochastic or systematic effects."
+  ],
+  "off": {
+    "action_signature": [
+      {
+        "action_state": 3,
+        "independently_reached": true,
+        "label": "history_01",
+        "target_theta": 0.0,
+        "target_x": 6.2,
+        "target_y": 0.0
+      },
+      {
+        "action_state": 3,
+        "independently_reached": true,
+        "label": "history_02",
+        "target_theta": 0.0,
+        "target_x": 10.2,
+        "target_y": 0.0
+      },
+      {
+        "action_state": 3,
+        "independently_reached": true,
+        "label": "history_03",
+        "target_theta": 1.5707963267948966,
+        "target_x": 10.2,
+        "target_y": 6.0
+      },
+      {
+        "action_state": 3,
+        "independently_reached": true,
+        "label": "history_04",
+        "target_theta": 3.141592653589793,
+        "target_x": 6.2,
+        "target_y": 6.0
+      },
+      {
+        "action_state": 3,
+        "independently_reached": true,
+        "label": "probe_arrival",
+        "target_theta": -0.059868974028852225,
+        "target_x": 5.938608988182913,
+        "target_y": 0.1009556274276175
+      }
+    ],
+    "summary": {
+      "action_completed": true,
+      "actual_probe_distance_m": 6.434575193116817,
+      "after_edge_count": 70,
+      "after_full_graph_age_s": "",
+      "after_node_count": 48,
+      "ambiguous_pairs": "[]",
+      "analysis_eligible": true,
+      "attempt": 2,
+      "before_edge_count": 36,
+      "before_full_graph_age_s": "",
+      "before_node_count": 32,
+      "condition_id": "baseline_diag_off",
+      "diagnostics_enabled": false,
+      "episode_id": "0001_baseline_diag_off_r01",
+      "full_graph_provenance_exact_count_match": "",
+      "full_graph_provenance_exact_pair_set_match": "",
+      "has_explicit_target_loop": false,
+      "has_target_constraint": true,
+      "n_ambiguous_constraints": 0,
+      "n_ordinary_recent_or_sequential_constraints": 19,
+      "n_target_constraints": 3,
+      "n_target_explicit_constraints": 0,
+      "n_target_nonexplicit_constraints": 3,
+      "n_wrong_target_constraints": 12,
+      "new_edge_count": 34,
+      "observer_cut_complete": true,
+      "probe_duration_s": 24.0,
+      "provenance_available": false,
+      "provenance_counts_new_edges": "{\"UNKNOWN_NOT_RECORDED\":34}",
+      "provenance_validation_errors": "[]",
+      "run_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_preflight_v7_20260916/episodes/0001_baseline_diag_off_r01/attempt_02",
+      "slam_path_full_graph_after_equal": true,
+      "slam_path_full_graph_before_equal": true,
+      "target_pairs": "[[16,38],[13,39],[14,47]]",
+      "try_close_loop_events": 0,
+      "valid_status": "VALID",
+      "wrong_target_pairs": "[[30,32],[29,33],[28,34],[26,35],[26,36],[20,37],[11,40],[1,41],[2,42],[2,43],[2,44],[11,46]]"
+    }
+  },
+  "on": {
+    "action_signature": [
+      {
+        "action_state": 3,
+        "independently_reached": true,
+        "label": "history_01",
+        "target_theta": 0.0,
+        "target_x": 6.2,
+        "target_y": 0.0
+      },
+      {
+        "action_state": 3,
+        "independently_reached": true,
+        "label": "history_02",
+        "target_theta": 0.0,
+        "target_x": 10.2,
+        "target_y": 0.0
+      },
+      {
+        "action_state": 3,
+        "independently_reached": true,
+        "label": "history_03",
+        "target_theta": 1.5707963267948966,
+        "target_x": 10.2,
+        "target_y": 6.0
+      },
+      {
+        "action_state": 3,
+        "independently_reached": true,
+        "label": "history_04",
+        "target_theta": 3.141592653589793,
+        "target_x": 6.2,
+        "target_y": 6.0
+      },
+      {
+        "action_state": 3,
+        "independently_reached": true,
+        "label": "probe_arrival",
+        "target_theta": -0.059599519960348846,
+        "target_x": 5.839642347649921,
+        "target_y": 0.10937276335596798
+      }
+    ],
+    "summary": {
+      "action_completed": true,
+      "actual_probe_distance_m": 7.0940419352586,
+      "after_edge_count": 73,
+      "after_full_graph_age_s": "",
+      "after_node_count": 49,
+      "ambiguous_pairs": "[]",
+      "analysis_eligible": true,
+      "attempt": 1,
+      "before_edge_count": 39,
+      "before_full_graph_age_s": "",
+      "before_node_count": 33,
+      "condition_id": "baseline_diag_on",
+      "diagnostics_enabled": true,
+      "episode_id": "0002_baseline_diag_on_r01",
+      "full_graph_provenance_exact_count_match": true,
+      "full_graph_provenance_exact_pair_set_match": true,
+      "has_explicit_target_loop": false,
+      "has_target_constraint": true,
+      "n_ambiguous_constraints": 0,
+      "n_ordinary_recent_or_sequential_constraints": 18,
+      "n_target_constraints": 3,
+      "n_target_explicit_constraints": 0,
+      "n_target_nonexplicit_constraints": 3,
+      "n_wrong_target_constraints": 13,
+      "new_edge_count": 34,
+      "observer_cut_complete": true,
+      "probe_duration_s": 23.0,
+      "provenance_available": true,
+      "provenance_counts_new_edges": "{\"NEAR_CHAIN\":3,\"PREVIOUS_SCAN\":16,\"RUNNING_SCAN_CHAIN\":15}",
+      "provenance_validation_errors": "[]",
+      "run_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_preflight_v7_20260916/episodes/0002_baseline_diag_on_r01/attempt_01",
+      "slam_path_full_graph_after_equal": true,
+      "slam_path_full_graph_before_equal": true,
+      "target_pairs": "[[15,40],[14,41],[14,48]]",
+      "try_close_loop_events": 0,
+      "valid_status": "VALID",
+      "wrong_target_pairs": "[[30,33],[30,34],[29,35],[29,36],[27,37],[22,38],[21,39],[11,42],[1,43],[2,44],[2,45],[2,46],[11,47]]"
+    }
+  },
+  "pairwise_gate_checks_passed": true,
+  "planned_action_exact_match": true,
+  "replicate_count_per_condition": 1,
+  "status": "INCONCLUSIVE_FOR_CAUSAL_NON_PERTURBATION_SINGLE_PAIR_SEED_CONFOUNDED",
+  "tsp_seed_off": 31001,
+  "tsp_seed_on": 31002
+}

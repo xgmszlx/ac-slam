@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Karto edge provenance JSONL record",
+  "schema_version": 1,
+  "canonical_edge_identity": "Directed [source_state_id, target_state_id] pair at first graph-edge creation; this is an observer identity, not an official Karto numeric edge ID.",
+  "record_types": [
+    "constraint_created",
+    "try_close_loop_context"
+  ],
+  "creation_provenance": [
+    "PREVIOUS_SCAN",
+    "RUNNING_SCAN_CHAIN",
+    "NEAR_CHAIN",
+    "TRY_CLOSE_LOOP",
+    "FIRST_SCAN_CROSS_SENSOR",
+    "CUSTOM_OBJECT_LAST_SCAN",
+    "OTHER"
+  ],
+  "constraint_created_required_fields": [
+    "run_id",
+    "creation_sequence",
+    "canonical_edge_identity",
+    "source_state_id",
+    "target_state_id",
+    "source_unique_id",
+    "target_unique_id",
+    "source_pose",
+    "target_pose",
+    "creation_provenance",
+    "creation_function",
+    "creation_stage",
+    "current_keyscan_state_id",
+    "current_keyscan_unique_id",
+    "relative_mean",
+    "covariance_3x3",
+    "matcher_type",
+    "match_response",
+    "match_threshold",
+    "coarse_response",
+    "coarse_threshold",
+    "solver_add_constraint_called",
+    "graph_edge_count_after_creation",
+    "wall_time",
+    "sim_time",
+    "before_or_during_probe"
+  ],
+  "compatibility": {
+    "target_backend_measurement": "Deprecated compatibility field. For v7 historical outputs it means at least one exact target-attributable full-graph constraint. New analyses use target_pose_graph_constraint and target_constraint_realized.",
+    "target_constraint": "Legacy explicit TryCloseLoop-plus-edge outcome. It is not renamed or silently widened."
+  }
+}

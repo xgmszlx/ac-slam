@@ -29,6 +29,8 @@
 
 #include <ros/ros.h>
 
+#include <string>
+
 #include <OpenKarto/Event.h>
 #include <OpenKarto/Pair.h>
 #include <OpenKarto/Geometry.h>
@@ -577,6 +579,53 @@ namespace karto
   class ScanMatcher;
 
   /**
+   * Observation-only provenance for the complete set of MapperGraph constraint
+   * creation call sites. These values never participate in a SLAM decision.
+   */
+  enum ConstraintCreationProvenance
+  {
+    ConstraintProvenance_PreviousScan,
+    ConstraintProvenance_RunningScanChain,
+    ConstraintProvenance_NearChain,
+    ConstraintProvenance_TryCloseLoop,
+    ConstraintProvenance_FirstScanCrossSensor,
+    ConstraintProvenance_CustomObjectLastScan,
+    ConstraintProvenance_Other
+  };
+
+  struct ConstraintCreationContext
+  {
+    ConstraintCreationContext()
+      : provenance(ConstraintProvenance_Other)
+      , creationFunction("UNKNOWN")
+      , creationStage("UNKNOWN")
+      , matcherType("NONE")
+      , hasMatchResponse(false)
+      , matchResponse(0.0)
+      , hasMatchThreshold(false)
+      , matchThreshold(0.0)
+      , hasCoarseResponse(false)
+      , coarseResponse(0.0)
+      , hasCoarseThreshold(false)
+      , coarseThreshold(0.0)
+    {
+    }
+
+    ConstraintCreationProvenance provenance;
+    std::string creationFunction;
+    std::string creationStage;
+    std::string matcherType;
+    kt_bool hasMatchResponse;
+    kt_double matchResponse;
+    kt_bool hasMatchThreshold;
+    kt_double matchThreshold;
+    kt_bool hasCoarseResponse;
+    kt_double coarseResponse;
+    kt_bool hasCoarseThreshold;
+    kt_double coarseThreshold;
+  };
+
+  /**
    * Graph for graph SLAM algorithm
    */
   class KARTO_EXPORT MapperGraph : public Graph<LocalizedObjectPtr>
@@ -625,7 +674,8 @@ namespace karto
      * @param pScan scan
      * @param rCovariance match uncertainty
      */
-    void AddEdges(LocalizedLaserScan* pScan, const Matrix3& rCovariance);
+    void AddEdges(LocalizedLaserScan* pScan, const Matrix3& rCovariance,
+                  kt_bool hasMatchResponse = false, kt_double matchResponse = 0.0);
     
     /**
      * Tries to close a loop using the given scan with the scans from the given sensor
@@ -666,7 +716,9 @@ namespace karto
      * @param rMean mean
      * @param rCovariance match uncertainty
      */
-    void LinkChainToScan(const LocalizedLaserScanList& rChain, LocalizedLaserScan* pScan, const Pose2& rMean, const Matrix3& rCovariance);
+    void LinkChainToScan(const LocalizedLaserScanList& rChain, LocalizedLaserScan* pScan,
+                         const Pose2& rMean, const Matrix3& rCovariance,
+                         const ConstraintCreationContext& rContext);
 
     std::vector<std::tuple<int, int>> covariance_lists;
 
@@ -700,7 +752,9 @@ namespace karto
      * @param rMean mean
      * @param rCovariance match uncertainty
      */
-    void LinkObjects(LocalizedObject* pFromObject, LocalizedObject* pToObject, const Pose2& rMean, const Matrix3& rCovariance);
+    void LinkObjects(LocalizedObject* pFromObject, LocalizedObject* pToObject,
+                     const Pose2& rMean, const Matrix3& rCovariance,
+                     const ConstraintCreationContext& rContext);
     
     /**
      * Finds nearby chains of scans and link them to scan if response is high enough
@@ -1731,6 +1785,14 @@ namespace karto
      */
     void SetLoopDiagnostics(kt_bool enable, const karto::String& path, const karto::String& runId);
 
+    /**
+     * Enables append-only, observation-only graph-edge provenance records.
+     * Disabled by default. The path receives JSONL constraint-created and
+     * TryCloseLoop-context records.
+     */
+    void SetEdgeProvenanceDiagnostics(kt_bool enable, const karto::String& path,
+                                      const karto::String& runId);
+
   protected:
     /**
      * Hook called after scan matching and before trying loop closure
@@ -1855,6 +1917,12 @@ namespace karto
     kt_int32u m_DiagScansNearLinked;    // in-distance scans that were graph near-linked (excluded)
     kt_int32u m_DiagChainCount;         // candidate chains returned by FindPossibleLoopClosure
 
+    // Observation-only edge provenance. Inert unless explicitly enabled.
+    kt_bool m_EdgeProvenanceEnabled;
+    karto::String m_EdgeProvenancePath;
+    karto::String m_EdgeProvenanceRunId;
+    kt_int64u m_EdgeCreationSequence;
+
     /**
      * Resets the per loop-search diagnostic accumulators.
      */
@@ -1875,6 +1943,16 @@ namespace karto
      * @return JSON fragment without surrounding braces
      */
     std::string BuildLoopDiagBaseFragment(LocalizedLaserScan* pScan);
+
+    void AppendEdgeProvenanceLine(const std::string& rLine);
+    void RecordNewConstraint(Edge<LocalizedObjectPtr>* pEdge,
+                             LocalizedObject* pFromObject,
+                             LocalizedObject* pToObject,
+                             const ConstraintCreationContext& rContext,
+                             kt_bool solverAddConstraintCalled);
+    void RecordTryCloseLoopContext(LocalizedLaserScan* pScan,
+                                   const LocalizedLaserScanList* pNearLinkedScans,
+                                   const char* stage);
   };
 
   //@}

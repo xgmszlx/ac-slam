@@ -70,6 +70,25 @@ namespace karto
       return value ? "true" : "false";
     }
 
+    const char* ConstraintProvenanceName(ConstraintCreationProvenance provenance)
+    {
+      switch (provenance)
+      {
+        case ConstraintProvenance_PreviousScan: return "PREVIOUS_SCAN";
+        case ConstraintProvenance_RunningScanChain: return "RUNNING_SCAN_CHAIN";
+        case ConstraintProvenance_NearChain: return "NEAR_CHAIN";
+        case ConstraintProvenance_TryCloseLoop: return "TRY_CLOSE_LOOP";
+        case ConstraintProvenance_FirstScanCrossSensor: return "FIRST_SCAN_CROSS_SENSOR";
+        case ConstraintProvenance_CustomObjectLastScan: return "CUSTOM_OBJECT_LAST_SCAN";
+        default: return "OTHER";
+      }
+    }
+
+    std::string OptionalDiagDouble(kt_bool available, kt_double value)
+    {
+      return available ? LoopDiagDouble(value) : "null";
+    }
+
     // JSON object fragment describing a candidate chain and its scan-index gap to
     // the current scan. Returns e.g.:
     //   "chain_size":4,"scan_ids":[12,13,14,15],"min_scan_index_gap":100,"max_scan_index_gap":103
@@ -1555,7 +1574,7 @@ namespace karto
     LocalizedLaserScan* pScan = dynamic_cast<LocalizedLaserScan*>(pObject);
     if (pScan != NULL)
     {      
-      AddEdges(pScan, covariance);
+      AddEdges(pScan, covariance, false, 0.0);
     }
     else
     {
@@ -1565,12 +1584,18 @@ namespace karto
       LocalizedLaserScan* pLastScan = pSensorManager->GetLastScan(rSensorName);
       if (pLastScan != NULL)
       {
-        LinkObjects(pLastScan, pObject, pObject->GetCorrectedPose(), covariance);
+        ConstraintCreationContext context;
+        context.provenance = ConstraintProvenance_CustomObjectLastScan;
+        context.creationFunction = "MapperGraph::AddEdges(LocalizedObject*)";
+        context.creationStage = "ADD_EDGES_BEFORE_TRY_CLOSE_LOOP";
+        LinkObjects(pLastScan, pObject, pObject->GetCorrectedPose(), covariance,
+                    context);
       }
     }
   }
 
-  void MapperGraph::AddEdges(LocalizedLaserScan* pScan, const Matrix3& rCovariance)
+  void MapperGraph::AddEdges(LocalizedLaserScan* pScan, const Matrix3& rCovariance,
+                             kt_bool hasMatchResponse, kt_double matchResponse)
   {
     MapperSensorManager* pSensorManager = m_pOpenMapper->m_pMapperSensorManager;
     
@@ -1600,7 +1625,17 @@ namespace karto
         Pose2 bestPose;
         Matrix3 covariance;
         kt_double response = m_pOpenMapper->m_pSequentialScanMatcher->MatchScan(pScan, pSensorManager->GetScans(rCandidateSensorName), bestPose, covariance);
-        LinkObjects(pSensorManager->GetScans(rCandidateSensorName)[0], pScan, bestPose, covariance);
+        ConstraintCreationContext context;
+        context.provenance = ConstraintProvenance_FirstScanCrossSensor;
+        context.creationFunction = "MapperGraph::AddEdges(LocalizedLaserScan*)";
+        context.creationStage = "ADD_EDGES_BEFORE_TRY_CLOSE_LOOP";
+        context.matcherType = "SEQUENTIAL_CROSS_SENSOR";
+        context.hasMatchResponse = true;
+        context.matchResponse = response;
+        context.hasMatchThreshold = true;
+        context.matchThreshold = m_pOpenMapper->m_pLinkMatchMinimumResponseFine->GetValue();
+        LinkObjects(pSensorManager->GetScans(rCandidateSensorName)[0], pScan,
+                    bestPose, covariance, context);
         
         // only add to means and covariances if response was high "enough"
         if (response > m_pOpenMapper->m_pLinkMatchMinimumResponseFine->GetValue())
@@ -1613,13 +1648,29 @@ namespace karto
     else
     {
       // link to previous scan
-      LinkObjects(pLastScan, pScan, pScan->GetSensorPose(), rCovariance);
+      ConstraintCreationContext previousContext;
+      previousContext.provenance = ConstraintProvenance_PreviousScan;
+      previousContext.creationFunction = "MapperGraph::AddEdges(LocalizedLaserScan*)";
+      previousContext.creationStage = "ADD_EDGES_BEFORE_TRY_CLOSE_LOOP";
+      previousContext.matcherType = "SEQUENTIAL_RUNNING_BUFFER";
+      previousContext.hasMatchResponse = hasMatchResponse;
+      previousContext.matchResponse = matchResponse;
+      LinkObjects(pLastScan, pScan, pScan->GetSensorPose(), rCovariance,
+                  previousContext);
 
       // link to running scans
       Pose2 scanPose = pScan->GetSensorPose();
       means.Add(scanPose);
       covariances.Add(rCovariance);
-      LinkChainToScan(pSensorManager->GetRunningScans(rSensorName), pScan, scanPose, rCovariance);
+      ConstraintCreationContext runningContext;
+      runningContext.provenance = ConstraintProvenance_RunningScanChain;
+      runningContext.creationFunction = "MapperGraph::LinkChainToScan";
+      runningContext.creationStage = "ADD_EDGES_BEFORE_TRY_CLOSE_LOOP";
+      runningContext.matcherType = "SEQUENTIAL_RUNNING_BUFFER";
+      runningContext.hasMatchResponse = hasMatchResponse;
+      runningContext.matchResponse = matchResponse;
+      LinkChainToScan(pSensorManager->GetRunningScans(rSensorName), pScan,
+                      scanPose, rCovariance, runningContext);
     }
     
     // link to other near chains (chains that include new scan are invalid)
@@ -1769,7 +1820,20 @@ namespace karto
           const Pose2 observedMeasurement = observedLink.GetPoseDifference();
           const Matrix3 observedCovariance = observedLink.GetCovariance();
 
-          LinkChainToScan(candidateChain, pScan, bestPose, covariance);
+          ConstraintCreationContext loopContext;
+          loopContext.provenance = ConstraintProvenance_TryCloseLoop;
+          loopContext.creationFunction = "MapperGraph::LinkChainToScan";
+          loopContext.creationStage = "TRY_CLOSE_LOOP";
+          loopContext.matcherType = "LOOP_COARSE_AND_SEQUENTIAL_FINE";
+          loopContext.hasMatchResponse = true;
+          loopContext.matchResponse = fineResponse;
+          loopContext.hasMatchThreshold = true;
+          loopContext.matchThreshold = m_pOpenMapper->m_pLoopMatchMinimumResponseFine->GetValue();
+          loopContext.hasCoarseResponse = true;
+          loopContext.coarseResponse = coarseResponse;
+          loopContext.hasCoarseThreshold = true;
+          loopContext.coarseThreshold = m_pOpenMapper->m_pLoopMatchMinimumResponseCoarse->GetValue();
+          LinkChainToScan(candidateChain, pScan, bestPose, covariance, loopContext);
           CorrectPoses();
 
           MapperEventArguments eventArguments2("Loop closed!");
@@ -1885,6 +1949,9 @@ namespace karto
     if(!loopClosed){
       ROS_DEBUG("Reject Loop closure.");
     }
+
+    m_pOpenMapper->RecordTryCloseLoopContext(
+      pScan, NULL, "POST_TRY_CLOSE_LOOP");
     
     return loopClosed;
   }
@@ -1936,7 +2003,9 @@ namespace karto
     return pEdge;
   }
   
-  void MapperGraph::LinkObjects(LocalizedObject* pFromObject, LocalizedObject* pToObject, const Pose2& rMean, const Matrix3& rCovariance)
+  void MapperGraph::LinkObjects(LocalizedObject* pFromObject, LocalizedObject* pToObject,
+                                const Pose2& rMean, const Matrix3& rCovariance,
+                                const ConstraintCreationContext& rContext)
   {
     kt_bool isNewEdge = true;
     Edge<LocalizedObjectPtr>* pEdge = AddEdge(pFromObject, pToObject, isNewEdge);
@@ -1957,10 +2026,14 @@ namespace karto
       {
         pEdge->SetLabel(new LinkInfo(pFromObject->GetCorrectedPose(), rMean, rCovariance));
       }
+      kt_bool solverAddConstraintCalled = false;
       if (m_pOpenMapper->m_pScanSolver != NULL)
       {
         m_pOpenMapper->m_pScanSolver->AddConstraint(pEdge);
+        solverAddConstraintCalled = true;
       }
+      m_pOpenMapper->RecordNewConstraint(
+        pEdge, pFromObject, pToObject, rContext, solverAddConstraintCalled);
     }
   }
   
@@ -1970,6 +2043,7 @@ namespace karto
   public:
     Parallel_LinkNearChains(OpenMapper* pMapper, LocalizedLaserScan* pScan, const List<LocalizedLaserScanList>* pChains,
                             kt_bool* pWasChainLinked, Pose2List* pMeans, List<Matrix3>* pCovariances,
+                            List<kt_double>* pResponses,
                             kt_int32u minChainSize, kt_double minResponse)
       : m_pOpenMapper(pMapper)
       , m_pScan(pScan)
@@ -1977,6 +2051,7 @@ namespace karto
       , m_pWasChainLinked(pWasChainLinked)
       , m_pMeans(pMeans)
       , m_pCovariances(pCovariances)
+      , m_pResponses(pResponses)
       , m_MinChainSize(minChainSize)
       , m_MinResponse(minResponse)
     {      
@@ -2005,6 +2080,7 @@ namespace karto
           m_pWasChainLinked[i] = true;
           m_pMeans->Set(i, mean);
           m_pCovariances->Set(i, covariance);
+          m_pResponses->Set(i, response);
         }
       }
     }
@@ -2016,6 +2092,7 @@ namespace karto
     kt_bool* m_pWasChainLinked;
     Pose2List* m_pMeans;
     List<Matrix3>* m_pCovariances;
+    List<kt_double>* m_pResponses;
     kt_int32u m_MinChainSize;
     kt_double m_MinResponse;
   };
@@ -2038,8 +2115,12 @@ namespace karto
       List<Matrix3> covariances;
       covariances.Resize(nearChains.Size());
 
+      List<kt_double> responses;
+      responses.Resize(nearChains.Size());
+
       int grainSize = 100;
-      Parallel_LinkNearChains myTask(m_pOpenMapper, pScan, &nearChains, pWasChainLinked, &means, &covariances,
+      Parallel_LinkNearChains myTask(m_pOpenMapper, pScan, &nearChains, pWasChainLinked,
+        &means, &covariances, &responses,
         m_pOpenMapper->m_pLoopMatchMinimumChainSize->GetValue(),
         m_pOpenMapper->m_pLinkMatchMinimumResponseFine->GetValue());
       tbb::parallel_for(tbb::blocked_range<kt_int32s>(0, static_cast<kt_int32s>(nearChains.Size()), grainSize), myTask);
@@ -2050,7 +2131,16 @@ namespace karto
         {
           rMeans.Add(means[i]);
           rCovariances.Add(covariances[i]);
-          LinkChainToScan(nearChains[i], pScan, means[i], covariances[i]);
+          ConstraintCreationContext context;
+          context.provenance = ConstraintProvenance_NearChain;
+          context.creationFunction = "MapperGraph::LinkChainToScan";
+          context.creationStage = "ADD_EDGES_BEFORE_TRY_CLOSE_LOOP";
+          context.matcherType = "SEQUENTIAL_NEAR_CHAIN";
+          context.hasMatchResponse = true;
+          context.matchResponse = responses[i];
+          context.hasMatchThreshold = true;
+          context.matchThreshold = m_pOpenMapper->m_pLinkMatchMinimumResponseFine->GetValue();
+          LinkChainToScan(nearChains[i], pScan, means[i], covariances[i], context);
         }
       }
 
@@ -2090,7 +2180,16 @@ namespace karto
 #endif
           rMeans.Add(mean);
           rCovariances.Add(covariance);
-          LinkChainToScan(*iter, pScan, mean, covariance);
+          ConstraintCreationContext context;
+          context.provenance = ConstraintProvenance_NearChain;
+          context.creationFunction = "MapperGraph::LinkChainToScan";
+          context.creationStage = "ADD_EDGES_BEFORE_TRY_CLOSE_LOOP";
+          context.matcherType = "SEQUENTIAL_NEAR_CHAIN";
+          context.hasMatchResponse = true;
+          context.matchResponse = response;
+          context.hasMatchThreshold = true;
+          context.matchThreshold = m_pOpenMapper->m_pLinkMatchMinimumResponseFine->GetValue();
+          LinkChainToScan(*iter, pScan, mean, covariance, context);
         }
         else
         {
@@ -2102,7 +2201,11 @@ namespace karto
     }
   }
   
-  void MapperGraph::LinkChainToScan(const LocalizedLaserScanList& rChain, LocalizedLaserScan* pScan, const Pose2& rMean, const Matrix3& rCovariance)
+  void MapperGraph::LinkChainToScan(const LocalizedLaserScanList& rChain,
+                                    LocalizedLaserScan* pScan,
+                                    const Pose2& rMean,
+                                    const Matrix3& rCovariance,
+                                    const ConstraintCreationContext& rContext)
   {
     Pose2 pose = pScan->GetReferencePose(m_pOpenMapper->m_pUseScanBarycenter->GetValue());
 
@@ -2114,7 +2217,7 @@ namespace karto
     kt_double squaredDistance = pose.GetPosition().SquaredDistance(closestScanPose.GetPosition());
     if (squaredDistance < math::Square(m_pOpenMapper->m_pLinkScanMaximumDistance->GetValue()) + KT_TOLERANCE)
     {
-      LinkObjects(pClosestScan, pScan, rMean, rCovariance); // From cloestscan in the chain, to the pscan
+      LinkObjects(pClosestScan, pScan, rMean, rCovariance, rContext); // From closest scan in the chain to pScan
 #ifdef KARTO_DEBUG2
       std::cout << "Linking scan " << pScan->GetStateId() << " to chain scan " << pClosestScan->GetStateId() << std::endl;
 #endif
@@ -2346,9 +2449,18 @@ namespace karto
     
     Pose2 pose = pScan->GetReferencePose(m_pOpenMapper->m_pUseScanBarycenter->GetValue());
     
+    const kt_bool isFirstSearchForCurrentTryCloseLoop = (rStartScanIndex == 0);
+
     // find neighbor scans of pScan, we will not consider these close scans as loop closures
     // BFS starting from current pScan is used to find neighbors
     const LocalizedLaserScanList nearLinkedScans = FindNearLinkedScans(pScan, m_pOpenMapper->m_pLoopSearchMaximumDistance->GetValue());
+    if (isFirstSearchForCurrentTryCloseLoop)
+    {
+      // Reuse the exact near-linked set already computed by the original
+      // candidate-generation path; do not perform a second traversal.
+      m_pOpenMapper->RecordTryCloseLoopContext(
+        pScan, &nearLinkedScans, "PRE_TRY_CLOSE_LOOP");
+    }
     
     LocalizedLaserScanList scans = m_pOpenMapper->m_pMapperSensorManager->GetScans(rSensorName);
     kt_size_t nScans = scans.Size();
@@ -2452,6 +2564,10 @@ namespace karto
     , m_DiagScansInDistance(0)
     , m_DiagScansNearLinked(0)
     , m_DiagChainCount(0)
+    , m_EdgeProvenanceEnabled(false)
+    , m_EdgeProvenancePath("")
+    , m_EdgeProvenanceRunId("")
+    , m_EdgeCreationSequence(0)
   {
     InitializeParameters();
   }
@@ -2474,6 +2590,10 @@ namespace karto
     , m_DiagScansInDistance(0)
     , m_DiagScansNearLinked(0)
     , m_DiagChainCount(0)
+    , m_EdgeProvenanceEnabled(false)
+    , m_EdgeProvenancePath("")
+    , m_EdgeProvenanceRunId("")
+    , m_EdgeCreationSequence(0)
   {
     InitializeParameters();
   }
@@ -2494,6 +2614,18 @@ namespace karto
     m_LoopDiagnosticsEnabled = enable;
     m_LoopDiagnosticsPath = path;
     m_LoopDiagnosticsRunId = runId;
+  }
+
+  void OpenMapper::SetEdgeProvenanceDiagnostics(kt_bool enable,
+                                                const karto::String& path,
+                                                const karto::String& runId)
+  {
+    // Observation-only configuration. The disabled path performs no logging,
+    // sequence increments, parameter reads, or extra graph traversals.
+    m_EdgeProvenanceEnabled = enable;
+    m_EdgeProvenancePath = path;
+    m_EdgeProvenanceRunId = runId;
+    m_EdgeCreationSequence = 0;
   }
 
   void OpenMapper::ResetLoopDiagnostics()
@@ -2520,6 +2652,153 @@ namespace karto
       out << rLine << "\n";
       out.close();
     }
+  }
+
+  void OpenMapper::AppendEdgeProvenanceLine(const std::string& rLine)
+  {
+    if (!m_EdgeProvenanceEnabled || m_EdgeProvenancePath.Size() == 0)
+    {
+      return;
+    }
+    std::ofstream out(m_EdgeProvenancePath.ToCString(), std::ios::app);
+    if (out.is_open())
+    {
+      out << rLine << "\n";
+      out.close();
+    }
+  }
+
+  void OpenMapper::RecordNewConstraint(
+    Edge<LocalizedObjectPtr>* pEdge,
+    LocalizedObject* pFromObject,
+    LocalizedObject* pToObject,
+    const ConstraintCreationContext& rContext,
+    kt_bool solverAddConstraintCalled)
+  {
+    if (!m_EdgeProvenanceEnabled)
+    {
+      return;
+    }
+
+    LinkInfo* pLinkInfo = static_cast<LinkInfo*>(pEdge->GetLabel());
+    if (pLinkInfo == NULL)
+    {
+      return;
+    }
+    const Pose2 relativeMean = pLinkInfo->GetPoseDifference();
+    const Matrix3 covariance = pLinkInfo->GetCovariance();
+    const Pose2 sourcePose = pFromObject->GetCorrectedPose();
+    const Pose2 targetPose = pToObject->GetCorrectedPose();
+    LocalizedLaserScan* pCurrentScan = dynamic_cast<LocalizedLaserScan*>(pToObject);
+    std::string probePhase("UNAVAILABLE");
+    ros::param::getCached("/constraint_realizability_pilot/probe_phase", probePhase);
+
+    m_EdgeCreationSequence++;
+    std::ostringstream oss;
+    oss << "{\"record_type\":\"constraint_created\""
+        << ",\"schema_version\":1"
+        << ",\"run_id\":\"" << m_EdgeProvenanceRunId.ToCString() << "\""
+        << ",\"creation_sequence\":" << m_EdgeCreationSequence
+        << ",\"canonical_edge_identity\":[" << pFromObject->GetStateId()
+        << "," << pToObject->GetStateId() << "]"
+        << ",\"source_state_id\":" << pFromObject->GetStateId()
+        << ",\"target_state_id\":" << pToObject->GetStateId()
+        << ",\"source_unique_id\":" << pFromObject->GetUniqueId()
+        << ",\"target_unique_id\":" << pToObject->GetUniqueId()
+        << ",\"source_pose\":{" << "\"x\":" << LoopDiagDouble(sourcePose.GetX())
+        << ",\"y\":" << LoopDiagDouble(sourcePose.GetY())
+        << ",\"yaw\":" << LoopDiagDouble(sourcePose.GetHeading()) << "}"
+        << ",\"target_pose\":{" << "\"x\":" << LoopDiagDouble(targetPose.GetX())
+        << ",\"y\":" << LoopDiagDouble(targetPose.GetY())
+        << ",\"yaw\":" << LoopDiagDouble(targetPose.GetHeading()) << "}"
+        << ",\"creation_provenance\":\""
+        << ConstraintProvenanceName(rContext.provenance) << "\""
+        << ",\"creation_function\":\"" << rContext.creationFunction << "\""
+        << ",\"creation_stage\":\"" << rContext.creationStage << "\""
+        << ",\"current_keyscan_state_id\":"
+        << (pCurrentScan != NULL ? static_cast<kt_int64s>(pCurrentScan->GetStateId()) : -1)
+        << ",\"current_keyscan_unique_id\":"
+        << (pCurrentScan != NULL ? static_cast<kt_int64s>(pCurrentScan->GetUniqueId()) : -1)
+        << ",\"relative_mean\":{" << "\"x\":" << LoopDiagDouble(relativeMean.GetX())
+        << ",\"y\":" << LoopDiagDouble(relativeMean.GetY())
+        << ",\"yaw\":" << LoopDiagDouble(relativeMean.GetHeading()) << "}"
+        << ",\"covariance_3x3\":[["
+        << LoopDiagDouble(covariance(0, 0)) << "," << LoopDiagDouble(covariance(0, 1))
+        << "," << LoopDiagDouble(covariance(0, 2)) << "],["
+        << LoopDiagDouble(covariance(1, 0)) << "," << LoopDiagDouble(covariance(1, 1))
+        << "," << LoopDiagDouble(covariance(1, 2)) << "],["
+        << LoopDiagDouble(covariance(2, 0)) << "," << LoopDiagDouble(covariance(2, 1))
+        << "," << LoopDiagDouble(covariance(2, 2)) << "]]"
+        << ",\"matcher_type\":\"" << rContext.matcherType << "\""
+        << ",\"match_response\":"
+        << OptionalDiagDouble(rContext.hasMatchResponse, rContext.matchResponse)
+        << ",\"match_threshold\":"
+        << OptionalDiagDouble(rContext.hasMatchThreshold, rContext.matchThreshold)
+        << ",\"coarse_response\":"
+        << OptionalDiagDouble(rContext.hasCoarseResponse, rContext.coarseResponse)
+        << ",\"coarse_threshold\":"
+        << OptionalDiagDouble(rContext.hasCoarseThreshold, rContext.coarseThreshold)
+        << ",\"solver_add_constraint_called\":"
+        << LoopDiagBool(solverAddConstraintCalled)
+        << ",\"graph_edge_count_after_creation\":"
+        << (m_pGraph != NULL ? m_pGraph->GetEdges().Size() : 0)
+        << ",\"wall_time\":" << LoopDiagDouble(ros::WallTime::now().toSec())
+        << ",\"sim_time\":" << LoopDiagDouble(ros::Time::now().toSec())
+        << ",\"before_or_during_probe\":\"" << probePhase << "\"}"
+        ;
+    AppendEdgeProvenanceLine(oss.str());
+  }
+
+  void OpenMapper::RecordTryCloseLoopContext(
+    LocalizedLaserScan* pScan,
+    const LocalizedLaserScanList* pNearLinkedScans,
+    const char* stage)
+  {
+    if (!m_EdgeProvenanceEnabled)
+    {
+      return;
+    }
+    std::ostringstream oss;
+    oss << "{\"record_type\":\"try_close_loop_context\""
+        << ",\"schema_version\":1"
+        << ",\"run_id\":\"" << m_EdgeProvenanceRunId.ToCString() << "\""
+        << ",\"stage\":\"" << stage << "\""
+        << ",\"current_keyscan_state_id\":" << pScan->GetStateId()
+        << ",\"current_keyscan_unique_id\":" << pScan->GetUniqueId()
+        << ",\"graph_edges\":[";
+    bool firstEdge = true;
+    if (m_pGraph != NULL)
+    {
+      const MapperGraph::EdgeList& edges = m_pGraph->GetEdges();
+      karto_const_forEach(MapperGraph::EdgeList, &edges)
+      {
+        if (!firstEdge) oss << ",";
+        firstEdge = false;
+        oss << "[" << (*iter)->GetSource()->GetVertexObject()->GetStateId()
+            << "," << (*iter)->GetTarget()->GetVertexObject()->GetStateId() << "]";
+      }
+    }
+    oss << "]";
+    if (pNearLinkedScans != NULL)
+    {
+      oss << ",\"near_linked_scan_ids\":[";
+      bool firstScan = true;
+      karto_const_forEach(LocalizedLaserScanList, pNearLinkedScans)
+      {
+        if (!firstScan) oss << ",";
+        firstScan = false;
+        oss << (*iter)->GetStateId();
+      }
+      oss << "]";
+    }
+    else
+    {
+      oss << ",\"near_linked_scan_ids\":null";
+    }
+    oss << ",\"wall_time\":" << LoopDiagDouble(ros::WallTime::now().toSec())
+        << ",\"sim_time\":" << LoopDiagDouble(ros::Time::now().toSec())
+        << "}";
+    AppendEdgeProvenanceLine(oss.str());
   }
 
   std::string OpenMapper::BuildLoopDiagBaseFragment(LocalizedLaserScan* pScan)
@@ -2703,13 +2982,19 @@ namespace karto
       
       Matrix3 covariance;
       covariance.SetToIdentity();
+      kt_bool hasSequentialMatchResponse = false;
+      kt_double sequentialMatchResponse = 0.0;
       
       // correct scan (if not first scan)
       if (m_pUseScanMatching->GetValue() && pLastScan != NULL)
       {
         Pose2 bestPose;
         // Get running scan will register this scan to the local map (formed by running scans)
-        m_pSequentialScanMatcher->MatchScan(pScan, m_pMapperSensorManager->GetRunningScans(pScan->GetSensorIdentifier()), bestPose, covariance);
+        sequentialMatchResponse = m_pSequentialScanMatcher->MatchScan(
+          pScan,
+          m_pMapperSensorManager->GetRunningScans(pScan->GetSensorIdentifier()),
+          bestPose, covariance);
+        hasSequentialMatchResponse = true;
         pScan->SetSensorPose(bestPose);
       }
       
@@ -2722,7 +3007,8 @@ namespace karto
       {
         // add to graph
         m_pGraph->AddVertex(pScan);
-        m_pGraph->AddEdges(pScan, covariance);  // 简单依据AddEdges,这个函数里实际上尝试给当前的scan添加三种边
+        m_pGraph->AddEdges(pScan, covariance, hasSequentialMatchResponse,
+                           sequentialMatchResponse);  // AddEdges tries the ordinary graph-link paths before explicit loop search.
         
         m_pMapperSensorManager->AddRunningScan(pScan); // Add current scan to running scan. Before this, RunningScan has been used to add edges for pScan
         

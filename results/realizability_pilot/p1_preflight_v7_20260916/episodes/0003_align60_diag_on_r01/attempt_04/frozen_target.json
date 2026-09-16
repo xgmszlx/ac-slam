@@ -1,0 +1,186 @@
+{
+  "anchor_scan": {
+    "id": 21,
+    "observed_time": 95.2,
+    "theta": -2.841170400143661,
+    "x": 6.063300255793123,
+    "y": -0.2514338483216946
+  },
+  "anchor_to_reference_distance_m": 0.2861918939244833,
+  "frozen_before_probe": true,
+  "historical_scan_ids": [
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27
+  ],
+  "historical_unique_ids": [
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27
+  ],
+  "route_start_node_count": 11,
+  "segment_nodes": [
+    {
+      "id": 14,
+      "observed_time": 95.2,
+      "theta": 0.15472018090770104,
+      "unique_id": 14,
+      "x": 3.945880053875183,
+      "y": 0.03154590242063781
+    },
+    {
+      "id": 15,
+      "observed_time": 95.2,
+      "theta": 0.03367350185325476,
+      "unique_id": 15,
+      "x": 4.935972458043736,
+      "y": 0.1302850852819855
+    },
+    {
+      "id": 16,
+      "observed_time": 95.2,
+      "theta": -0.05783581410948654,
+      "unique_id": 16,
+      "x": 5.897506722164996,
+      "y": 0.09992000702776614
+    },
+    {
+      "id": 17,
+      "observed_time": 95.2,
+      "theta": -0.6815856478680586,
+      "unique_id": 17,
+      "x": 6.727651229131414,
+      "y": -0.11704010253561666
+    },
+    {
+      "id": 18,
+      "observed_time": 95.2,
+      "theta": -1.1502533627814162,
+      "unique_id": 18,
+      "x": 6.642136860093303,
+      "y": -0.17768043331452318
+    },
+    {
+      "id": 19,
+      "observed_time": 95.2,
+      "theta": -1.705232014531197,
+      "unique_id": 19,
+      "x": 6.543755776721422,
+      "y": -0.20320571094627626
+    },
+    {
+      "id": 20,
+      "observed_time": 95.2,
+      "theta": -2.225194602288436,
+      "unique_id": 20,
+      "x": 6.449580521598625,
+      "y": -0.16495323465603842
+    },
+    {
+      "id": 21,
+      "observed_time": 95.2,
+      "theta": -2.841170400143661,
+      "unique_id": 21,
+      "x": 6.063300255793123,
+      "y": -0.2514338483216946
+    },
+    {
+      "id": 22,
+      "observed_time": 95.2,
+      "theta": -2.0963028924397604,
+      "unique_id": 22,
+      "x": 6.106666985420352,
+      "y": -0.37827952106493573
+    },
+    {
+      "id": 23,
+      "observed_time": 95.2,
+      "theta": -1.4963039033881653,
+      "unique_id": 23,
+      "x": 6.211910962637443,
+      "y": -0.4046447827300257
+    },
+    {
+      "id": 24,
+      "observed_time": 95.2,
+      "theta": -0.997531491629209,
+      "unique_id": 24,
+      "x": 6.3120361752076475,
+      "y": -0.37112096070340944
+    },
+    {
+      "id": 25,
+      "observed_time": 95.2,
+      "theta": -0.29629102344857694,
+      "unique_id": 25,
+      "x": 6.38891103384134,
+      "y": -0.2778041517257963
+    },
+    {
+      "id": 26,
+      "observed_time": 95.2,
+      "theta": 0.13241136388940553,
+      "unique_id": 26,
+      "x": 7.067726722050011,
+      "y": -0.10155707308679049
+    },
+    {
+      "id": 27,
+      "observed_time": 95.2,
+      "theta": 0.12614327378918502,
+      "unique_id": 27,
+      "x": 8.041643560312636,
+      "y": 0.029574863169298558
+    }
+  ],
+  "target_id": "map3_grid_anchor_01",
+  "target_identity_gate": {
+    "checks": {
+      "anchor_acquired_after_route_start": true,
+      "anchor_within_reference_radius": true,
+      "minimum_history_node_count": true,
+      "minimum_target_segment_scans": true
+    },
+    "observed": {
+      "anchor_distance_m": 0.2861918939244833,
+      "anchor_id": 21,
+      "node_count": 54,
+      "route_start_node_count": 11,
+      "segment_count": 14
+    },
+    "passed": true,
+    "thresholds": {
+      "minimum_history_node_count": 20,
+      "minimum_target_segment_scans": 3,
+      "target_anchor_max_distance_m": 1.0
+    }
+  },
+  "target_reference": [
+    6.2,
+    0.0,
+    0.0
+  ],
+  "target_segment_radius_m": 2.5
+}

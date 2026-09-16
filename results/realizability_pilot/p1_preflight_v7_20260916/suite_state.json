@@ -89,7 +89,20 @@
       "status": "SUCCEEDED"
     },
     {
-      "attempts": [],
+      "attempts": [
+        {
+          "analysis_eligible": true,
+          "attempt": 1,
+          "episode_id": "0002_baseline_diag_on_r01",
+          "finished_utc": "2026-09-16T06:30:48.992062+00:00",
+          "run_dir": "episodes/0002_baseline_diag_on_r01/attempt_01",
+          "started_utc": "2026-09-16T06:28:54.760809+00:00",
+          "status": "SUCCEEDED",
+          "target_backend_measurement": true,
+          "target_constraint": false,
+          "target_nonexplicit_full_graph_constraint": true
+        }
+      ],
       "episode_id": "0002_baseline_diag_on_r01",
       "spec": {
         "condition_id": "baseline_diag_on",
@@ -152,11 +165,51 @@
         "target_reached_radius_m": 1.0,
         "target_segment_radius_m": 2.5
       },
-      "status": "PENDING"
+      "status": "SUCCEEDED"
     },
     {
-      "attempts": [],
+      "attempts": [
+        {
+          "attempt": 1,
+          "finished_utc": "2026-09-16T06:32:34.309748+00:00",
+          "reason": "RuntimeError: pilot driver exited with code 1",
+          "run_dir": "episodes/0003_align60_diag_on_r01/attempt_01",
+          "started_utc": "2026-09-16T06:30:48.993881+00:00",
+          "status": "FAILED"
+        },
+        {
+          "analysis_eligible": true,
+          "attempt": 2,
+          "episode_id": "0003_align60_diag_on_r01",
+          "finished_utc": "2026-09-16T06:35:06.624635+00:00",
+          "reason": "Post-run provenance reconciliation found constraints through state 50 while the saved full-graph observer snapshot ended at state 49; the observer snapshot was stale at the outcome cut.",
+          "run_dir": "episodes/0003_align60_diag_on_r01/attempt_02",
+          "started_utc": "2026-09-16T06:33:10.780660+00:00",
+          "status": "TECHNICAL_INVALID",
+          "target_backend_measurement": true,
+          "target_constraint": false,
+          "target_nonexplicit_full_graph_constraint": true
+        },
+        {
+          "attempt": 3,
+          "finished_utc": "2026-09-16T06:41:19.526839+00:00",
+          "reason": "RuntimeError: pilot driver exited with code 1",
+          "run_dir": "episodes/0003_align60_diag_on_r01/attempt_03",
+          "started_utc": "2026-09-16T06:39:11.965195+00:00",
+          "status": "FAILED"
+        },
+        {
+          "attempt": 4,
+          "finished_utc": "2026-09-16T06:44:08.730729+00:00",
+          "reason": "RuntimeError: pilot driver exited with code 1",
+          "run_dir": "episodes/0003_align60_diag_on_r01/attempt_04",
+          "started_utc": "2026-09-16T06:42:11.358040+00:00",
+          "status": "FAILED"
+        }
+      ],
       "episode_id": "0003_align60_diag_on_r01",
+      "scientific_reason": "Two independently executed probe attempts violated the frozen Stage-GT arrival gate; one otherwise completed attempt failed observer completeness, and one refresh attempt stopped before intervention due an incorrect service name. No outcome is selected for this condition.",
+      "scientific_status": "NO_VALID_POST_REPAIR_ATTEMPT",
       "spec": {
         "condition_id": "align60_diag_on",
         "delta_yaw_deg": 60.0,
@@ -218,10 +271,30 @@
         "target_reached_radius_m": 1.0,
         "target_segment_radius_m": 2.5
       },
-      "status": "PENDING"
+      "status": "TECHNICAL_INVALID_FINAL"
     },
     {
-      "attempts": [],
+      "attempts": [
+        {
+          "attempt": 1,
+          "finished_utc": "2026-09-16T06:36:42.524024+00:00",
+          "run_dir": "episodes/0004_sweep90_diag_on_r01/attempt_01",
+          "started_utc": "2026-09-16T06:35:06.627120+00:00",
+          "status": "INTERRUPTED"
+        },
+        {
+          "analysis_eligible": true,
+          "attempt": 2,
+          "episode_id": "0004_sweep90_diag_on_r01",
+          "finished_utc": "2026-09-16T06:47:49.471049+00:00",
+          "run_dir": "episodes/0004_sweep90_diag_on_r01/attempt_02",
+          "started_utc": "2026-09-16T06:45:45.298455+00:00",
+          "status": "SUCCEEDED",
+          "target_backend_measurement": true,
+          "target_constraint": false,
+          "target_nonexplicit_full_graph_constraint": true
+        }
+      ],
       "episode_id": "0004_sweep90_diag_on_r01",
       "spec": {
         "condition_id": "sweep90_diag_on",
@@ -284,11 +357,11 @@
         "target_reached_radius_m": 1.0,
         "target_segment_radius_m": 2.5
       },
-      "status": "PENDING"
+      "status": "SUCCEEDED"
     }
   ],
-  "finished_utc": "2026-09-16T03:08:44.091637+00:00",
-  "last_started_utc": "2026-09-16T03:06:53.300378+00:00",
+  "finished_utc": "2026-09-16T06:47:49.473158+00:00",
+  "last_started_utc": "2026-09-16T06:45:45.172580+00:00",
   "profile": "preflight",
   "protocol_version": "p1_preflight_v7",
   "repeats": 1,
