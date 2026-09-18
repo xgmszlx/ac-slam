@@ -1,0 +1,111 @@
+{
+  "aligned_heading_error_rad": {
+    "max": 0.2151057874120097,
+    "median": 0.07300659638101029,
+    "min": 0.012382487555673727,
+    "q25": 0.026038708212425488,
+    "q75": 0.10983742199383989
+  },
+  "aligned_map_goal_failures": 0,
+  "aligned_position_error_m": {
+    "max": 0.32426462038798454,
+    "median": 0.18146134807186587,
+    "min": 0.12215170242981964,
+    "q25": 0.14211814002001696,
+    "q75": 0.2370148820312747
+  },
+  "alignment_heading_rmse_rad": {
+    "max": 0.02345808812345041,
+    "median": 0.006273345515869871,
+    "min": 0.002350361043658208,
+    "q25": 0.0045861757111599856,
+    "q75": 0.008809187573209245
+  },
+  "alignment_position_rmse_m": {
+    "max": 0.09755965421849966,
+    "median": 0.022210508179385392,
+    "min": 0.00961714527898649,
+    "q25": 0.018764789740692137,
+    "q75": 0.025753514263538422
+  },
+  "attempts_audited": 17,
+  "attempts_discovered": 17,
+  "attempts_not_audited": [],
+  "audit_version": "v9-frame-gauge-audit-1",
+  "blocks_with_nonidentical_preprobe_signatures": [
+    "n1_map3_grid_anchor_01_seed42001",
+    "n1_map3_grid_anchor_01_seed42002",
+    "n1_map3_grid_anchor_03_seed42003",
+    "n1_map3_grid_anchor_03_seed42004"
+  ],
+  "class_counts": {
+    "G0_FRAME_ALIGNED": 2,
+    "G2_TRUE_TRAJECTORY_OR_MAP_DIVERGENCE": 15
+  },
+  "classification_rules": {
+    "g0_rule": "reliable fit, transformed map anchor agrees with its claimed historical world pose within 0.5 normalized gate units, and |raw_norm-aligned_norm| <= 0.25",
+    "g1_rule": "not assignable in this corpus: the old raw gate already compares two Stage-world poses, so it contains no direct map/world subtraction that a global gauge transform can repair",
+    "g2_rule": "unreliable fit, target-correspondence mismatch, or raw/aligned difference not compatible with one global target transform",
+    "heading_fit_rmse_mad_rad": 0.0019006645611337487,
+    "heading_fit_rmse_median_rad": 0.006273345515869871,
+    "heading_fit_rmse_upper_rad": 0.15,
+    "outcome_blindness": "thresholds use all history-only fit residuals; no old status, action outcome, or new constraint outcome is used",
+    "position_fit_rmse_mad_m": 0.0035430060841530296,
+    "position_fit_rmse_median_m": 0.022210508179385392,
+    "position_fit_rmse_upper_m": 0.25
+  },
+  "fit_definition": "one no-scale SE(2) transform from history move endpoint map TF poses to Stage world base poses; probe excluded",
+  "input_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_dir_dec_v8_20260916/n1_blocks",
+  "old_gate_failures": 9,
+  "raw_heading_error_rad": {
+    "max": 0.7982632169339487,
+    "median": 0.08929793164515318,
+    "min": 0.01602840869875026,
+    "q25": 0.06916227419942501,
+    "q75": 0.5834226897853063
+  },
+  "raw_position_error_m": {
+    "max": 0.8410560508005273,
+    "median": 0.5241272751794914,
+    "min": 0.11411992636593789,
+    "q25": 0.3163001921561123,
+    "q75": 0.7046225836346798
+  },
+  "retrospective_relabel_performed": false,
+  "saved_gt_trajectory_note": "trajectory_gt.txt is a shifted laser trajectory, not the raw Stage base pose used by the old gate",
+  "target_correspondence_heading_error_rad": {
+    "max": 0.6674351566354915,
+    "median": 0.060391855007742544,
+    "min": 0.003844322181585258,
+    "q25": 0.028914031616661787,
+    "q75": 0.5995233578127228
+  },
+  "target_correspondence_position_error_m": {
+    "max": 0.7089129436322092,
+    "median": 0.4269516634315009,
+    "min": 0.027390201437830473,
+    "q25": 0.36876240624130263,
+    "q75": 0.5838217363961773
+  },
+  "transform_tx_m": {
+    "max": -27.98918674889613,
+    "median": -28.03021003802818,
+    "min": -28.088324559112806,
+    "q25": -28.04018153440015,
+    "q75": -28.022724338830166
+  },
+  "transform_ty_m": {
+    "max": -27.81887487585671,
+    "median": -27.951587648906887,
+    "min": -28.01327085634714,
+    "q25": -27.982762115454705,
+    "q75": -27.94712765583439
+  },
+  "transform_yaw_rad": {
+    "max": 0.0025681072097990002,
+    "median": -0.006406879352695689,
+    "min": -0.01675081684066711,
+    "q25": -0.007435170805789511,
+    "q75": -0.003773912524005705
+  }
+}

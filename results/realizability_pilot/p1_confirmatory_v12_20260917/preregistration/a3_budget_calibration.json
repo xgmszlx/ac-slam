@@ -1,0 +1,49 @@
+{
+  "allowed_observables": [
+    "GT distance",
+    "duration",
+    "raw scan count",
+    "yaw trajectory",
+    "start pose"
+  ],
+  "backend_was_not_launched": true,
+  "completed_utc": "2026-09-17T09:12:07Z",
+  "forbidden_observables": [
+    "Karto keyscans",
+    "constraints",
+    "utility",
+    "posterior"
+  ],
+  "initial_dwell_s": 3.2,
+  "observed_allowed_metrics": {
+    "branch_start_gt_pose": [
+      -21.818481921839947,
+      -22.022605938121117,
+      -3.1243018469448613
+    ],
+    "distance_m": 13.951024137104328,
+    "duration_s": 65.7,
+    "raw_scan_count": 659,
+    "yaw_excursion_rad": 10.364187149888402
+  },
+  "reference_arms": [
+    {
+      "arm": "A1_dwell",
+      "distance_m": 13.948350504925944,
+      "duration_s": 66.30000000000001,
+      "raw_scan_count": 666
+    },
+    {
+      "arm": "A2_sweep90",
+      "distance_m": 13.958440810479201,
+      "duration_s": 65.69999999999999,
+      "raw_scan_count": 658
+    }
+  ],
+  "science_outcomes_inspected": false,
+  "selected_a3_dwell_s": 3.5,
+  "selection_rule": "selected dwell = initial dwell + mean v10 A1/A2 duration - observed calibration duration, rounded to 0.1 s and clipped at zero",
+  "single_physical_calibration": true,
+  "status": "CALIBRATION_COMPLETE",
+  "target_duration_s": 66.0
+}

@@ -1,0 +1,601 @@
+{
+  "blocks": [
+    {
+      "active_seed": 71001,
+      "arm_order": [
+        "A1_DWELL",
+        "A3_MIN_TRIGGER",
+        "A2_SWEEP90"
+      ],
+      "block_id": "target_A_H1",
+      "branches": {
+        "A1_DWELL": {
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_A/H1/A1_DWELL/raw_attempt_01",
+          "distance_m": 14.238795277744597,
+          "duration_s": 65.7,
+          "prefix_hash": "8dbc326639211d690f9c13428b5461bd993d4df82d6bfe2880db608734f3b87d",
+          "prefix_identity_passed": true,
+          "raw_scan_count": 660,
+          "start_heading_error_rad": 0.012163325117248823,
+          "start_position_error_m": 0.040682205401131724,
+          "status": "REPLAYED",
+          "technical_replay_attempts": []
+        },
+        "A2_SWEEP90": {
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_A/H1/A2_SWEEP90/raw_attempt_01",
+          "distance_m": 14.230245001177227,
+          "duration_s": 65.39999999999999,
+          "prefix_hash": "8dbc326639211d690f9c13428b5461bd993d4df82d6bfe2880db608734f3b87d",
+          "prefix_identity_passed": true,
+          "raw_scan_count": 656,
+          "start_heading_error_rad": 0.011039080586576768,
+          "start_position_error_m": 0.03923451708811661,
+          "status": "REPLAYED",
+          "technical_replay_attempts": []
+        },
+        "A3_MIN_TRIGGER": {
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_A/H1/A3_MIN_TRIGGER/raw_attempt_01",
+          "distance_m": 14.232940067166766,
+          "duration_s": 65.7,
+          "prefix_hash": "8dbc326639211d690f9c13428b5461bd993d4df82d6bfe2880db608734f3b87d",
+          "prefix_identity_passed": true,
+          "raw_scan_count": 658,
+          "start_heading_error_rad": 0.011833341625165692,
+          "start_position_error_m": 0.038869828207530856,
+          "status": "REPLAYED",
+          "technical_replay_attempts": []
+        }
+      },
+      "budget_gate": {
+        "observed": {
+          "distance_range_m": 0.008550276567369508,
+          "raw_scan_relative_range": 0.0060790273556231,
+          "time_range_s": 0.30000000000001137
+        },
+        "passed": true,
+        "thresholds": {
+          "pairwise_distance_range_m_max": 0.1,
+          "pairwise_time_range_s_max": 1.5,
+          "raw_scan_relative_range_max": 0.03
+        }
+      },
+      "canonical_prefix_hash": "8dbc326639211d690f9c13428b5461bd993d4df82d6bfe2880db608734f3b87d",
+      "history_attempts": [
+        {
+          "attempt": 1,
+          "dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_A/H1/history/attempt_01",
+          "reason": "RuntimeError: canonical history replay not exact",
+          "seed": 71001,
+          "status": "TECHNICAL_INVALID_HISTORY"
+        },
+        {
+          "attempt": 2,
+          "dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_A/H1/history/attempt_02",
+          "prefix_hash": "8dbc326639211d690f9c13428b5461bd993d4df82d6bfe2880db608734f3b87d",
+          "seed": 71001,
+          "status": "SUCCEEDED"
+        }
+      ],
+      "history_status": "VALID",
+      "planned_seed": 71001,
+      "reserve_cursor": 0,
+      "reserve_seeds": [
+        71005,
+        71006
+      ],
+      "status": "COLLECTED",
+      "target_label": "target_A"
+    },
+    {
+      "active_seed": 71002,
+      "arm_order": [
+        "A3_MIN_TRIGGER",
+        "A2_SWEEP90",
+        "A1_DWELL"
+      ],
+      "block_id": "target_A_H2",
+      "branches": {
+        "A1_DWELL": {
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_A/H2/A1_DWELL/raw_attempt_01",
+          "distance_m": 14.41312381967918,
+          "duration_s": 65.9,
+          "prefix_hash": "7ebf74d1cd178c24f50b4d28e2345f94813c2fce03d7cddf3bf562ed365292b2",
+          "prefix_identity_passed": true,
+          "raw_scan_count": 661,
+          "start_heading_error_rad": 0.012759748444761689,
+          "start_position_error_m": 0.04230240068796126,
+          "status": "REPLAYED",
+          "technical_replay_attempts": []
+        },
+        "A2_SWEEP90": {
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_A/H2/A2_SWEEP90/raw_attempt_01",
+          "distance_m": 14.417086262197403,
+          "duration_s": 66.19999999999999,
+          "prefix_hash": "7ebf74d1cd178c24f50b4d28e2345f94813c2fce03d7cddf3bf562ed365292b2",
+          "prefix_identity_passed": true,
+          "raw_scan_count": 664,
+          "start_heading_error_rad": 0.012482062059811394,
+          "start_position_error_m": 0.044318172131287456,
+          "status": "REPLAYED",
+          "technical_replay_attempts": []
+        },
+        "A3_MIN_TRIGGER": {
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_A/H2/A3_MIN_TRIGGER/raw_attempt_01",
+          "distance_m": 14.4167327815316,
+          "duration_s": 66.1,
+          "prefix_hash": "7ebf74d1cd178c24f50b4d28e2345f94813c2fce03d7cddf3bf562ed365292b2",
+          "prefix_identity_passed": true,
+          "raw_scan_count": 663,
+          "start_heading_error_rad": 0.012030452117524515,
+          "start_position_error_m": 0.04351468032194087,
+          "status": "REPLAYED",
+          "technical_replay_attempts": []
+        }
+      },
+      "budget_gate": {
+        "observed": {
+          "distance_range_m": 0.003962442518222531,
+          "raw_scan_relative_range": 0.004527162977867203,
+          "time_range_s": 0.29999999999998295
+        },
+        "passed": true,
+        "thresholds": {
+          "pairwise_distance_range_m_max": 0.1,
+          "pairwise_time_range_s_max": 1.5,
+          "raw_scan_relative_range_max": 0.03
+        }
+      },
+      "canonical_prefix_hash": "7ebf74d1cd178c24f50b4d28e2345f94813c2fce03d7cddf3bf562ed365292b2",
+      "history_attempts": [
+        {
+          "attempt": 1,
+          "dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_A/H2/history/attempt_01",
+          "prefix_hash": "7ebf74d1cd178c24f50b4d28e2345f94813c2fce03d7cddf3bf562ed365292b2",
+          "seed": 71002,
+          "status": "SUCCEEDED"
+        }
+      ],
+      "history_status": "VALID",
+      "planned_seed": 71002,
+      "reserve_cursor": 0,
+      "reserve_seeds": [
+        71005,
+        71006
+      ],
+      "status": "COLLECTED",
+      "target_label": "target_A"
+    },
+    {
+      "active_seed": 71003,
+      "arm_order": [
+        "A2_SWEEP90",
+        "A1_DWELL",
+        "A3_MIN_TRIGGER"
+      ],
+      "block_id": "target_A_H3",
+      "branches": {
+        "A1_DWELL": {
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_A/H3/A1_DWELL/raw_attempt_01",
+          "distance_m": 13.892900273572225,
+          "duration_s": 64.7,
+          "prefix_hash": "1ea91ef060012cbed33a12d2c1a79e82fb1f0fdbbdfba2d5dfc2b238529a42af",
+          "prefix_identity_passed": true,
+          "raw_scan_count": 650,
+          "start_heading_error_rad": 0.012948799320301239,
+          "start_position_error_m": 0.03402538493084905,
+          "status": "REPLAYED",
+          "technical_replay_attempts": []
+        },
+        "A2_SWEEP90": {
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_A/H3/A2_SWEEP90/raw_attempt_01",
+          "distance_m": 13.89532744910006,
+          "duration_s": 64.6,
+          "prefix_hash": "1ea91ef060012cbed33a12d2c1a79e82fb1f0fdbbdfba2d5dfc2b238529a42af",
+          "prefix_identity_passed": true,
+          "raw_scan_count": 648,
+          "start_heading_error_rad": 0.014650192046563149,
+          "start_position_error_m": 0.03773606695031922,
+          "status": "REPLAYED",
+          "technical_replay_attempts": []
+        },
+        "A3_MIN_TRIGGER": {
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_A/H3/A3_MIN_TRIGGER/raw_attempt_01",
+          "distance_m": 13.895335149990489,
+          "duration_s": 65.3,
+          "prefix_hash": "1ea91ef060012cbed33a12d2c1a79e82fb1f0fdbbdfba2d5dfc2b238529a42af",
+          "prefix_identity_passed": true,
+          "raw_scan_count": 655,
+          "start_heading_error_rad": 0.014799744782671098,
+          "start_position_error_m": 0.03733198926095588,
+          "status": "REPLAYED",
+          "technical_replay_attempts": []
+        }
+      },
+      "budget_gate": {
+        "observed": {
+          "distance_range_m": 0.002434876418263343,
+          "raw_scan_relative_range": 0.010752688172043012,
+          "time_range_s": 0.7000000000000028
+        },
+        "passed": true,
+        "thresholds": {
+          "pairwise_distance_range_m_max": 0.1,
+          "pairwise_time_range_s_max": 1.5,
+          "raw_scan_relative_range_max": 0.03
+        }
+      },
+      "canonical_prefix_hash": "1ea91ef060012cbed33a12d2c1a79e82fb1f0fdbbdfba2d5dfc2b238529a42af",
+      "history_attempts": [
+        {
+          "attempt": 1,
+          "dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_A/H3/history/attempt_01",
+          "prefix_hash": "1ea91ef060012cbed33a12d2c1a79e82fb1f0fdbbdfba2d5dfc2b238529a42af",
+          "seed": 71003,
+          "status": "SUCCEEDED"
+        }
+      ],
+      "history_status": "VALID",
+      "planned_seed": 71003,
+      "reserve_cursor": 0,
+      "reserve_seeds": [
+        71005,
+        71006
+      ],
+      "status": "COLLECTED",
+      "target_label": "target_A"
+    },
+    {
+      "active_seed": 71004,
+      "arm_order": [
+        "A1_DWELL",
+        "A2_SWEEP90",
+        "A3_MIN_TRIGGER"
+      ],
+      "block_id": "target_A_H4",
+      "branches": {
+        "A1_DWELL": {
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_A/H4/A1_DWELL/raw_attempt_01",
+          "distance_m": 13.986465483668926,
+          "duration_s": 65.2,
+          "prefix_hash": "351b490e91970238894d1fc73394f8b05aaf4dbd040cf1ffa3dd636cc3912d4e",
+          "prefix_identity_passed": true,
+          "raw_scan_count": 654,
+          "start_heading_error_rad": 0.01716987695535321,
+          "start_position_error_m": 0.03783691178466444,
+          "status": "REPLAYED",
+          "technical_replay_attempts": []
+        },
+        "A2_SWEEP90": {
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_A/H4/A2_SWEEP90/raw_attempt_01",
+          "distance_m": 13.977459699540661,
+          "duration_s": 65.0,
+          "prefix_hash": "351b490e91970238894d1fc73394f8b05aaf4dbd040cf1ffa3dd636cc3912d4e",
+          "prefix_identity_passed": true,
+          "raw_scan_count": 652,
+          "start_heading_error_rad": 0.017360767593357362,
+          "start_position_error_m": 0.041544759148811415,
+          "status": "REPLAYED",
+          "technical_replay_attempts": []
+        },
+        "A3_MIN_TRIGGER": {
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_A/H4/A3_MIN_TRIGGER/raw_attempt_01",
+          "distance_m": 13.982396303709296,
+          "duration_s": 65.10000000000001,
+          "prefix_hash": "351b490e91970238894d1fc73394f8b05aaf4dbd040cf1ffa3dd636cc3912d4e",
+          "prefix_identity_passed": true,
+          "raw_scan_count": 654,
+          "start_heading_error_rad": 0.017237210612789156,
+          "start_position_error_m": 0.03207030279593022,
+          "status": "REPLAYED",
+          "technical_replay_attempts": []
+        }
+      },
+      "budget_gate": {
+        "observed": {
+          "distance_range_m": 0.009005784128264693,
+          "raw_scan_relative_range": 0.003061224489795918,
+          "time_range_s": 0.20000000000000284
+        },
+        "passed": true,
+        "thresholds": {
+          "pairwise_distance_range_m_max": 0.1,
+          "pairwise_time_range_s_max": 1.5,
+          "raw_scan_relative_range_max": 0.03
+        }
+      },
+      "canonical_prefix_hash": "351b490e91970238894d1fc73394f8b05aaf4dbd040cf1ffa3dd636cc3912d4e",
+      "history_attempts": [
+        {
+          "attempt": 1,
+          "dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_A/H4/history/attempt_01",
+          "prefix_hash": "351b490e91970238894d1fc73394f8b05aaf4dbd040cf1ffa3dd636cc3912d4e",
+          "seed": 71004,
+          "status": "SUCCEEDED"
+        }
+      ],
+      "history_status": "VALID",
+      "planned_seed": 71004,
+      "reserve_cursor": 0,
+      "reserve_seeds": [
+        71005,
+        71006
+      ],
+      "status": "COLLECTED",
+      "target_label": "target_A"
+    },
+    {
+      "active_seed": 72001,
+      "arm_order": [
+        "A3_MIN_TRIGGER",
+        "A1_DWELL",
+        "A2_SWEEP90"
+      ],
+      "block_id": "target_B_H1",
+      "branches": {
+        "A1_DWELL": {
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_B/H1/A1_DWELL/raw_attempt_01",
+          "distance_m": 9.552592012079785,
+          "duration_s": 52.900000000000006,
+          "prefix_hash": "61f35daa3b99ee307bb7dc8044e702d40ce556b30084dbe895dbb6f2b3ca455c",
+          "prefix_identity_passed": true,
+          "raw_scan_count": 531,
+          "start_heading_error_rad": 0.012977851001456209,
+          "start_position_error_m": 0.03571424898399552,
+          "status": "REPLAYED",
+          "technical_replay_attempts": []
+        },
+        "A2_SWEEP90": {
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_B/H1/A2_SWEEP90/raw_attempt_01",
+          "distance_m": 9.545485506203942,
+          "duration_s": 53.0,
+          "prefix_hash": "61f35daa3b99ee307bb7dc8044e702d40ce556b30084dbe895dbb6f2b3ca455c",
+          "prefix_identity_passed": true,
+          "raw_scan_count": 532,
+          "start_heading_error_rad": 0.013318803747848218,
+          "start_position_error_m": 0.036452578054738324,
+          "status": "REPLAYED",
+          "technical_replay_attempts": []
+        },
+        "A3_MIN_TRIGGER": {
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_B/H1/A3_MIN_TRIGGER/raw_attempt_01",
+          "distance_m": 9.55090142540642,
+          "duration_s": 53.2,
+          "prefix_hash": "61f35daa3b99ee307bb7dc8044e702d40ce556b30084dbe895dbb6f2b3ca455c",
+          "prefix_identity_passed": true,
+          "raw_scan_count": 534,
+          "start_heading_error_rad": 0.015110236248791596,
+          "start_position_error_m": 0.037855259371447326,
+          "status": "REPLAYED",
+          "technical_replay_attempts": []
+        }
+      },
+      "budget_gate": {
+        "observed": {
+          "distance_range_m": 0.007106505875842828,
+          "raw_scan_relative_range": 0.005635566687539136,
+          "time_range_s": 0.29999999999999716
+        },
+        "passed": true,
+        "thresholds": {
+          "pairwise_distance_range_m_max": 0.1,
+          "pairwise_time_range_s_max": 1.5,
+          "raw_scan_relative_range_max": 0.03
+        }
+      },
+      "canonical_prefix_hash": "61f35daa3b99ee307bb7dc8044e702d40ce556b30084dbe895dbb6f2b3ca455c",
+      "history_attempts": [
+        {
+          "attempt": 1,
+          "dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_B/H1/history/attempt_01",
+          "reason": "ValueError: TARGET_REFERENCE_MATCH_INVALID",
+          "seed": 72001,
+          "status": "TECHNICAL_INVALID_HISTORY"
+        },
+        {
+          "attempt": 2,
+          "dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_B/H1/history/attempt_02",
+          "prefix_hash": "61f35daa3b99ee307bb7dc8044e702d40ce556b30084dbe895dbb6f2b3ca455c",
+          "seed": 72001,
+          "status": "SUCCEEDED"
+        }
+      ],
+      "history_status": "VALID",
+      "planned_seed": 72001,
+      "reserve_cursor": 0,
+      "reserve_seeds": [
+        72005,
+        72006
+      ],
+      "status": "COLLECTED",
+      "target_label": "target_B"
+    },
+    {
+      "active_seed": 72006,
+      "arm_order": [
+        "A2_SWEEP90",
+        "A3_MIN_TRIGGER",
+        "A1_DWELL"
+      ],
+      "block_id": "target_B_H2",
+      "branches": {
+        "A1_DWELL": {
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_B/H2/A1_DWELL/raw_attempt_01",
+          "distance_m": 10.239439397408047,
+          "duration_s": 53.900000000000006,
+          "raw_scan_count": 541,
+          "start_heading_error_rad": 0.015593557603494457,
+          "start_position_error_m": 0.04271701701305241,
+          "status": "CAPTURED"
+        },
+        "A2_SWEEP90": {
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_B/H2/A2_SWEEP90/raw_attempt_01",
+          "distance_m": 10.24008774003369,
+          "duration_s": 54.1,
+          "prefix_identity_passed": false,
+          "raw_scan_count": 542,
+          "start_heading_error_rad": 0.016699645516549566,
+          "start_position_error_m": 0.04124855837263342,
+          "status": "TECHNICAL_INVALID_PREFIX_FINAL",
+          "technical_replay_attempts": [
+            {
+              "attempt": 1,
+              "failed_prefix_hash": "3726919be366aae5f14ff3dfdc5d25d45079796d2b33bcdce8c4ca93304d6046",
+              "preserved_dir": "target_B/H2/A2_SWEEP90/replay_attempt_01_prefix_mismatch",
+              "status": "TECHNICAL_INVALID_PREFIX"
+            },
+            {
+              "attempt": 2,
+              "failed_prefix_hash": "3726919be366aae5f14ff3dfdc5d25d45079796d2b33bcdce8c4ca93304d6046",
+              "preserved_dir": "target_B/H2/A2_SWEEP90/replay_attempt_02_prefix_mismatch",
+              "status": "TECHNICAL_INVALID_PREFIX"
+            }
+          ]
+        },
+        "A3_MIN_TRIGGER": {
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_B/H2/A3_MIN_TRIGGER/raw_attempt_01",
+          "distance_m": 10.256111149526326,
+          "duration_s": 54.1,
+          "raw_scan_count": 542,
+          "start_heading_error_rad": 0.017103856315169082,
+          "start_position_error_m": 0.030298629648461525,
+          "status": "CAPTURED"
+        }
+      },
+      "budget_gate": {
+        "observed": {
+          "distance_range_m": 0.016671752118279315,
+          "raw_scan_relative_range": 0.0018461538461538463,
+          "time_range_s": 0.19999999999999574
+        },
+        "passed": true,
+        "thresholds": {
+          "pairwise_distance_range_m_max": 0.1,
+          "pairwise_time_range_s_max": 1.5,
+          "raw_scan_relative_range_max": 0.03
+        }
+      },
+      "canonical_prefix_hash": "f6161cffe49777779799183557ff4bae0d0cb25e5168923e20bd4a05fc69c63a",
+      "history_attempts": [
+        {
+          "attempt": 1,
+          "dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_B/H2/history/attempt_01",
+          "reason": "RuntimeError: canonical history replay not exact",
+          "seed": 72002,
+          "status": "TECHNICAL_INVALID_HISTORY"
+        },
+        {
+          "attempt": 2,
+          "dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_B/H2/history/attempt_02",
+          "reason": "ValueError: TARGET_REFERENCE_MATCH_INVALID",
+          "seed": 72002,
+          "status": "TECHNICAL_INVALID_HISTORY"
+        },
+        {
+          "attempt": 3,
+          "dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_B/H2/history/attempt_03",
+          "reason": "RuntimeError: canonical history replay not exact",
+          "seed": 72005,
+          "status": "TECHNICAL_INVALID_HISTORY"
+        },
+        {
+          "attempt": 4,
+          "dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_B/H2/history/attempt_04",
+          "reason": "ValueError: TARGET_REFERENCE_MATCH_INVALID",
+          "seed": 72005,
+          "status": "TECHNICAL_INVALID_HISTORY"
+        },
+        {
+          "attempt": 5,
+          "dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_B/H2/history/attempt_05",
+          "prefix_hash": "f6161cffe49777779799183557ff4bae0d0cb25e5168923e20bd4a05fc69c63a",
+          "seed": 72006,
+          "status": "SUCCEEDED"
+        }
+      ],
+      "history_status": "VALID",
+      "planned_seed": 72002,
+      "reserve_cursor": 2,
+      "reserve_seeds": [
+        72005,
+        72006
+      ],
+      "status": "TECHNICAL_INVALID_PREFIX",
+      "target_label": "target_B"
+    },
+    {
+      "active_seed": 72005,
+      "arm_order": [
+        "A1_DWELL",
+        "A3_MIN_TRIGGER",
+        "A2_SWEEP90"
+      ],
+      "block_id": "target_B_H3",
+      "branches": {},
+      "history_attempts": [
+        {
+          "attempt": 1,
+          "dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_B/H3/history/attempt_01",
+          "reason": "ValueError: TARGET_REFERENCE_MATCH_INVALID",
+          "seed": 72003,
+          "status": "TECHNICAL_INVALID_HISTORY"
+        },
+        {
+          "attempt": 2,
+          "dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_B/H3/history/attempt_02",
+          "reason": "RuntimeError: canonical history replay not exact",
+          "seed": 72003,
+          "status": "TECHNICAL_INVALID_HISTORY"
+        },
+        {
+          "attempt": 3,
+          "dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_B/H3/history/attempt_03",
+          "reason": "ValueError: TARGET_REFERENCE_MATCH_INVALID",
+          "seed": 72005,
+          "status": "TECHNICAL_INVALID_HISTORY"
+        },
+        {
+          "attempt": 4,
+          "dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_B/H3/history/attempt_04",
+          "reason": "ValueError: TARGET_REFERENCE_MATCH_INVALID",
+          "seed": 72005,
+          "status": "TECHNICAL_INVALID_HISTORY"
+        }
+      ],
+      "history_status": "TECHNICAL_INVALID_HISTORY",
+      "planned_seed": 72003,
+      "reserve_cursor": 1,
+      "reserve_seeds": [
+        72005,
+        72006
+      ],
+      "status": "PROTOCOL_NOT_ROBUST",
+      "target_label": "target_B"
+    },
+    {
+      "active_seed": 72004,
+      "arm_order": [
+        "A3_MIN_TRIGGER",
+        "A2_SWEEP90",
+        "A1_DWELL"
+      ],
+      "block_id": "target_B_H4",
+      "branches": {},
+      "history_attempts": [],
+      "planned_seed": 72004,
+      "reserve_cursor": 0,
+      "reserve_seeds": [
+        72005,
+        72006
+      ],
+      "status": "PENDING",
+      "target_label": "target_B"
+    }
+  ],
+  "created_utc": "2026-09-18T06:43:10Z",
+  "protocol_hash": "bb5b53655793e7800c492df63ad15abe1e3420d9738376f05b35652391b2791d",
+  "protocol_id": "p1_confirmatory_v12b_20260918",
+  "reason": "RuntimeError: reserve histories exhausted for target_B_H3",
+  "started_utc": "2026-09-18T06:43:10Z",
+  "status": "FAILED",
+  "updated_utc": "2026-09-18T08:04:27Z"
+}

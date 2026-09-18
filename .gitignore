@@ -31,6 +31,15 @@ catkin_ws/tools/concorde/linkern.gz
 baseline/Graph-Based_SLAM-Aware_Exploration/results/
 baseline/Graph-Based_SLAM-Aware_Exploration/supp.pdf
 
+# High-volume, reproducible experiment streams and machine logs. Compact
+# manifests, ledgers, graph snapshots, CSV summaries, and preregistrations stay
+# publishable under results/; these raw artifacts remain in the local archive.
+results/**/*.jsonl
+results/**/*.log
+results/**/*.pgm
+results/**/*.pickle
+results/**/ros_logs/
+
 # Generated upstream API documentation; p2os source and license remain tracked.
 dependencies/p2os/p2os_doc/**/html/
 

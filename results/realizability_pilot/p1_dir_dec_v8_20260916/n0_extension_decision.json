@@ -1,0 +1,395 @@
+{
+  "comparator_arm": "n0r_provenance_off",
+  "outcome": "ONLINE_BLOCK_UNINFORMATIVE_REPLAY_DECIDES",
+  "per_outcome": {
+    "final_edge_count": {
+      "arm": "n0r_buffered_provenance_on",
+      "mean_difference": -1.75,
+      "n_pairs": 4,
+      "paired_differences_by_position": [
+        -14,
+        -6,
+        22,
+        -9
+      ],
+      "same_sign_nonzero": false,
+      "threshold": 1.5308641975308634
+    },
+    "final_node_count": {
+      "arm": "n0r_buffered_provenance_on",
+      "mean_difference": -0.25,
+      "n_pairs": 4,
+      "paired_differences_by_position": [
+        -6,
+        -2,
+        11,
+        -4
+      ],
+      "same_sign_nonzero": false,
+      "threshold": 0.7160493827160492
+    },
+    "new_keyscans": {
+      "arm": "n0r_buffered_provenance_on",
+      "mean_difference": -1.25,
+      "n_pairs": 4,
+      "paired_differences_by_position": [
+        -4,
+        0,
+        1,
+        -2
+      ],
+      "same_sign_nonzero": false,
+      "threshold": 0.6666666666666669
+    },
+    "target_geodesic_mean_m": {
+      "arm": "n0r_buffered_provenance_on",
+      "mean_difference": 0.9081992754042945,
+      "n_pairs": 4,
+      "paired_differences_by_position": [
+        1.3589624158261566,
+        2.8976970672277247,
+        -2.3629213541846132,
+        1.7390589727479098
+      ],
+      "same_sign_nonzero": false,
+      "threshold": 0.710461228766389
+    }
+  },
+  "rule": {
+    "otherwise": "the online block reflects run-to-run variability and the same-input replay decides",
+    "pause_if": "all seed pairs show a same-sign, non-zero difference on the same watched outcome and the mean difference exceeds the measured reference repeatability"
+  },
+  "same_condition_spread": {
+    "final_edge_count": {
+      "n0r_buffered_provenance_on": {
+        "range": 27.0,
+        "values": [
+          69.0,
+          69.0,
+          95.0,
+          96.0
+        ]
+      },
+      "n0r_provenance_off": {
+        "range": 32.0,
+        "values": [
+          73.0,
+          75.0,
+          83.0,
+          105.0
+        ]
+      }
+    },
+    "final_node_count": {
+      "n0r_buffered_provenance_on": {
+        "range": 12.0,
+        "values": [
+          48.0,
+          49.0,
+          58.0,
+          60.0
+        ]
+      },
+      "n0r_provenance_off": {
+        "range": 13.0,
+        "values": [
+          49.0,
+          51.0,
+          54.0,
+          62.0
+        ]
+      }
+    },
+    "history_touching_edges": {
+      "n0r_buffered_provenance_on": {
+        "range": 6.0,
+        "values": [
+          6.0,
+          8.0,
+          10.0,
+          12.0
+        ]
+      },
+      "n0r_provenance_off": {
+        "range": 6.0,
+        "values": [
+          6.0,
+          7.0,
+          12.0,
+          12.0
+        ]
+      }
+    },
+    "local_edges": {
+      "n0r_buffered_provenance_on": {
+        "range": 1.0,
+        "values": [
+          20.0,
+          20.0,
+          21.0,
+          21.0
+        ]
+      },
+      "n0r_provenance_off": {
+        "range": 4.0,
+        "values": [
+          21.0,
+          22.0,
+          24.0,
+          25.0
+        ]
+      }
+    },
+    "loop_events_during_probe": {
+      "n0r_buffered_provenance_on": {
+        "range": 0.0,
+        "values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "n0r_provenance_off": {
+        "range": 0.0,
+        "values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "new_keyscans": {
+      "n0r_buffered_provenance_on": {
+        "range": 2.0,
+        "values": [
+          14.0,
+          15.0,
+          15.0,
+          16.0
+        ]
+      },
+      "n0r_provenance_off": {
+        "range": 4.0,
+        "values": [
+          15.0,
+          15.0,
+          16.0,
+          19.0
+        ]
+      }
+    },
+    "preprobe_edge_count": {
+      "n0r_buffered_provenance_on": {
+        "range": 24.0,
+        "values": [
+          38.0,
+          40.0,
+          59.0,
+          62.0
+        ]
+      },
+      "n0r_provenance_off": {
+        "range": 25.0,
+        "values": [
+          41.0,
+          42.0,
+          43.0,
+          66.0
+        ]
+      }
+    },
+    "preprobe_node_count": {
+      "n0r_buffered_provenance_on": {
+        "range": 11.0,
+        "values": [
+          33.0,
+          34.0,
+          44.0,
+          44.0
+        ]
+      },
+      "n0r_provenance_off": {
+        "range": 12.0,
+        "values": [
+          34.0,
+          35.0,
+          36.0,
+          46.0
+        ]
+      }
+    },
+    "probe_distance_m": {
+      "n0r_buffered_provenance_on": {
+        "range": 0.6263471759299257,
+        "values": [
+          6.488178414165417,
+          6.6577212312825,
+          6.676227468718484,
+          7.114525590095343
+        ]
+      },
+      "n0r_provenance_off": {
+        "range": 0.8054051839944236,
+        "values": [
+          6.743634498121785,
+          6.831482301637725,
+          6.8504102522655055,
+          7.5490396821162085
+        ]
+      }
+    },
+    "probe_duration_s": {
+      "n0r_buffered_provenance_on": {
+        "range": 1.0,
+        "values": [
+          23.0,
+          23.0,
+          23.0,
+          24.0
+        ]
+      },
+      "n0r_provenance_off": {
+        "range": 7.900000000000006,
+        "values": [
+          22.099999999999994,
+          22.10000000000001,
+          23.0,
+          30.0
+        ]
+      }
+    },
+    "target_attributable_edges": {
+      "n0r_buffered_provenance_on": {
+        "range": 0.0,
+        "values": [
+          3.0,
+          3.0,
+          3.0,
+          3.0
+        ]
+      },
+      "n0r_provenance_off": {
+        "range": 1.0,
+        "values": [
+          3.0,
+          4.0,
+          4.0,
+          4.0
+        ]
+      }
+    },
+    "target_geodesic_above_4m_count": {
+      "n0r_buffered_provenance_on": {
+        "range": 1.0,
+        "values": [
+          2.0,
+          3.0,
+          3.0,
+          3.0
+        ]
+      },
+      "n0r_provenance_off": {
+        "range": 2.0,
+        "values": [
+          2.0,
+          3.0,
+          3.0,
+          4.0
+        ]
+      }
+    },
+    "target_geodesic_max_m": {
+      "n0r_buffered_provenance_on": {
+        "range": 5.040156526147646,
+        "values": [
+          7.220877197637355,
+          11.198340534146354,
+          11.986870260414223,
+          12.261033723785001
+        ]
+      },
+      "n0r_provenance_off": {
+        "range": 3.097009609448941,
+        "values": [
+          8.72274588080363,
+          10.788220464559583,
+          10.869751657918924,
+          11.819755490252572
+        ]
+      }
+    },
+    "target_geodesic_mean_m": {
+      "n0r_buffered_provenance_on": {
+        "range": 5.182683629427227,
+        "values": [
+          5.74137845464372,
+          7.380335469543065,
+          8.99965945047893,
+          10.924062084070947
+        ]
+      },
+      "n0r_provenance_off": {
+        "range": 2.0829267551114246,
+        "values": [
+          6.021373053716909,
+          7.26060047773102,
+          8.026365016843222,
+          8.104299808828333
+        ]
+      }
+    },
+    "target_hops_mean": {
+      "n0r_buffered_provenance_on": {
+        "range": 0.9999999999999996,
+        "values": [
+          3.3333333333333335,
+          3.6666666666666665,
+          3.6666666666666665,
+          4.333333333333333
+        ]
+      },
+      "n0r_provenance_off": {
+        "range": 0.5,
+        "values": [
+          3.5,
+          3.6666666666666665,
+          3.75,
+          4.0
+        ]
+      }
+    },
+    "total_new_edges": {
+      "n0r_buffered_provenance_on": {
+        "range": 7.0,
+        "values": [
+          29.0,
+          31.0,
+          34.0,
+          36.0
+        ]
+      },
+      "n0r_provenance_off": {
+        "range": 9.0,
+        "values": [
+          32.0,
+          32.0,
+          39.0,
+          41.0
+        ]
+      }
+    }
+  },
+  "seeds": [
+    "41001",
+    "41002",
+    "41003",
+    "41004"
+  ],
+  "suites": [
+    "results/realizability_pilot/p1_dir_dec_v8_20260916/n0r2_sanity",
+    "results/realizability_pilot/p1_dir_dec_v8_20260916/n0r3_sanity"
+  ],
+  "triggered": []
+}

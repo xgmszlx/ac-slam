@@ -41,7 +41,15 @@ namespace karto
   static kt_bool s_FileLoggingEnabled = false;
   static LogLevel s_LogLevel = LOG_NONE;
 
-  BasicEvent<LogMessageArguments> LogMessage;
+  BasicEvent<LogMessageArguments>& GetLogMessageEvent()
+  {
+    // A process-lifetime singleton avoids an ELF copy relocation of the
+    // exported global event.  That relocation registered two destructors for
+    // the same delegate storage and caused a double free during process exit.
+    static BasicEvent<LogMessageArguments>* pLogMessage =
+      new BasicEvent<LogMessageArguments>();
+    return *pLogMessage;
+  }
 
   void InitializeLogger(const String& rApplicationName, const String& rLogLevel)
   {
@@ -221,7 +229,7 @@ namespace karto
 #endif // USE_POCO
 
       LogMessageArguments eventArguments(level, rMessage);
-      LogMessage.Notify(NULL, eventArguments);
+      GetLogMessageEvent().Notify(NULL, eventArguments);
     }
   }
 

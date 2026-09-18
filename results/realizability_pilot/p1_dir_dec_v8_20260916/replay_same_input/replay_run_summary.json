@@ -1,0 +1,46 @@
+{
+  "input_message_count": 60,
+  "input_stream": "/home/wcqw/ac-slam/results/realizability_pilot/p1_dir_dec_v8_20260916/replay_source/episodes/0001_replay_source/attempt_01/replay_stream.jsonl",
+  "mapper_params_source": "/home/wcqw/ac-slam/results/realizability_pilot/p1_dir_dec_v8_20260916/replay_source/episodes/0001_replay_source/attempt_01/mapper_params.yaml",
+  "mapper_params_used": {
+    "LoopMatchMaximumVarianceCoarse": 0.16,
+    "LoopMatchMinimumChainSize": 4.0,
+    "LoopMatchMinimumResponseCoarse": 0.6,
+    "LoopMatchMinimumResponseFine": 0.7,
+    "LoopSearchMaximumDistance": 4.0,
+    "MinimumTravelDistance": 1.0,
+    "MinimumTravelHeading": 0.52,
+    "grid_resolution": 0.1,
+    "max_covariance": 0.01,
+    "min_map_size": 20.0,
+    "range_threshold": 25.0
+  },
+  "replay_rate_hz": 20.0,
+  "results": [
+    {
+      "arm": "off",
+      "dump_path": "/home/wcqw/ac-slam/results/realizability_pilot/p1_dir_dec_v8_20260916/replay_same_input/runs/graph_off_0.json",
+      "provenance_path": "/home/wcqw/ac-slam/results/realizability_pilot/p1_dir_dec_v8_20260916/replay_same_input/runs/provenance_off_0.jsonl",
+      "run_index": 0
+    },
+    {
+      "arm": "on",
+      "dump_path": "/home/wcqw/ac-slam/results/realizability_pilot/p1_dir_dec_v8_20260916/replay_same_input/runs/graph_on_0.json",
+      "provenance_path": "/home/wcqw/ac-slam/results/realizability_pilot/p1_dir_dec_v8_20260916/replay_same_input/runs/provenance_on_0.jsonl",
+      "run_index": 0
+    },
+    {
+      "arm": "off",
+      "dump_path": "/home/wcqw/ac-slam/results/realizability_pilot/p1_dir_dec_v8_20260916/replay_same_input/runs/graph_off_1.json",
+      "provenance_path": "/home/wcqw/ac-slam/results/realizability_pilot/p1_dir_dec_v8_20260916/replay_same_input/runs/provenance_off_1.jsonl",
+      "run_index": 1
+    },
+    {
+      "arm": "on",
+      "dump_path": "/home/wcqw/ac-slam/results/realizability_pilot/p1_dir_dec_v8_20260916/replay_same_input/runs/graph_on_1.json",
+      "provenance_path": "/home/wcqw/ac-slam/results/realizability_pilot/p1_dir_dec_v8_20260916/replay_same_input/runs/provenance_on_1.jsonl",
+      "run_index": 1
+    }
+  ],
+  "runs_per_arm": 2
+}

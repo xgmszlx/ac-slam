@@ -1,0 +1,332 @@
+{
+  "before_probe": true,
+  "block_id": "n0_seed41003",
+  "block_position": 1,
+  "condition_id": "n0_prov_diag_on",
+  "corrected_path_length_m": 20.923690250812278,
+  "diagnostics_enabled": true,
+  "edge_count": 41,
+  "edge_covariance_count": 41,
+  "edge_covariance_logdet_median": -26.431088922460276,
+  "edge_covariance_trace_max": 0.037464684500000005,
+  "edge_covariance_trace_median": 0.0016733417800000002,
+  "edge_endpoint_set_hash": "2421691f23277f8ffe1947e15a309920d145384e4542cc3039c1c18ac4f1d4e3",
+  "edge_endpoints": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      10
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      11
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      7,
+      30
+    ],
+    [
+      7,
+      31
+    ],
+    [
+      7,
+      33
+    ],
+    [
+      8,
+      9
+    ],
+    [
+      9,
+      10
+    ],
+    [
+      10,
+      11
+    ],
+    [
+      10,
+      12
+    ],
+    [
+      11,
+      12
+    ],
+    [
+      12,
+      13
+    ],
+    [
+      13,
+      14
+    ],
+    [
+      14,
+      15
+    ],
+    [
+      15,
+      16
+    ],
+    [
+      16,
+      17
+    ],
+    [
+      16,
+      21
+    ],
+    [
+      17,
+      18
+    ],
+    [
+      18,
+      19
+    ],
+    [
+      19,
+      20
+    ],
+    [
+      20,
+      21
+    ],
+    [
+      21,
+      22
+    ],
+    [
+      22,
+      23
+    ],
+    [
+      23,
+      24
+    ],
+    [
+      24,
+      25
+    ],
+    [
+      25,
+      26
+    ],
+    [
+      25,
+      29
+    ],
+    [
+      26,
+      27
+    ],
+    [
+      27,
+      28
+    ],
+    [
+      28,
+      29
+    ],
+    [
+      29,
+      30
+    ],
+    [
+      30,
+      31
+    ],
+    [
+      31,
+      32
+    ],
+    [
+      32,
+      33
+    ]
+  ],
+  "episode_id": "0008_n0_prov_diag_on_s41003",
+  "first_corrected_pose": [
+    0.2,
+    0.0,
+    0.0
+  ],
+  "keyscan_count": 34,
+  "last_corrected_pose": [
+    6.962948639490303,
+    5.967710963083719,
+    -3.0904366321737458
+  ],
+  "maneuver_type": "pass",
+  "node_count": 34,
+  "node_id_set_hash": "7f26aa7daee9f1596867b3a65671dccc04587362cf0b11564f08ba4b4c9fbaa1",
+  "node_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33
+  ],
+  "node_unique_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33
+  ],
+  "protocol_version": "p1_preflight_v7",
+  "provenance_enabled": true,
+  "robot_gt_pose_before_probe": [
+    83.2,
+    -21.685932023201463,
+    -22.017105502389928,
+    3.0402510727876155
+  ],
+  "robot_gt_pose_before_probe_format": "stamp,x,y,theta",
+  "route_start_node_count": 11,
+  "run_id": "0008_n0_prov_diag_on_s41003",
+  "signature_version": 1,
+  "sim_time": 83.2,
+  "snapshot_phase": "before_probe",
+  "target_anchor": {
+    "id": 16,
+    "observed_time": 83.2,
+    "theta": -0.05792782678111735,
+    "x": 5.825138987704134,
+    "y": 0.14344636881895917
+  },
+  "target_historical_scan_ids": [
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "target_historical_unique_ids": [
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "target_id": "map3_grid_anchor_01",
+  "target_identity_gate": {
+    "checks": {
+      "anchor_acquired_after_route_start": true,
+      "anchor_within_reference_radius": true,
+      "minimum_history_node_count": true,
+      "minimum_target_segment_scans": true
+    },
+    "observed": {
+      "anchor_distance_m": 0.4013697039723179,
+      "anchor_id": 16,
+      "node_count": 34,
+      "route_start_node_count": 11,
+      "segment_count": 5
+    },
+    "passed": true,
+    "thresholds": {
+      "minimum_history_node_count": 20,
+      "minimum_target_segment_scans": 3,
+      "target_anchor_max_distance_m": 1.0
+    }
+  },
+  "target_reference": [
+    6.2,
+    0.0,
+    0.0
+  ],
+  "target_segment_size": 5,
+  "tsp_seed": 41003,
+  "wall_time": 1789546599.4971561
+}

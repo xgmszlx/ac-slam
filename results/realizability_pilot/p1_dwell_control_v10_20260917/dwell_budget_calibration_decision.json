@@ -1,0 +1,74 @@
+{
+  "accepted_keyscan_excluded_from_gate": true,
+  "budget_gate_pass": true,
+  "calibration_medians": {
+    "distance_m": 13.953025531705759,
+    "duration_s": 66.0,
+    "raw_scan_count": 661.0
+  },
+  "differences": {
+    "distance_difference_m": 0.0012955000342529388,
+    "raw_scan_relative_difference": 0.00911854103343465,
+    "time_difference_s": 0.6999999999999886
+  },
+  "protocol": "v10_dwell_budget_calibration_v1",
+  "reference_metrics": {
+    "distance_m": 13.954321031740012,
+    "duration_s": 65.30000000000001,
+    "raw_scan_count": 655
+  },
+  "repeatability": {
+    "distance_range_m": 0.013362520312421466,
+    "duration_range_s": 0.29999999999999716,
+    "raw_scan_relative_range": 0.0045385779122541605
+  },
+  "repeatability_gate_pass": true,
+  "runs": [
+    {
+      "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_dwell_control_v10_20260917/calibration/run_01",
+      "distance_difference_vs_reference_m": 0.00894201026687469,
+      "distance_m": 13.963263042006886,
+      "duration_s": 66.2,
+      "dwell_distance_m": 0.0,
+      "dwell_raw_scan_count": 77,
+      "dwell_yaw_excursion_rad": 0.0,
+      "raw_relative_difference_vs_reference": 0.013646702047005308,
+      "raw_scan_count": 664,
+      "requested_dwell_s": 7.6000000000000085,
+      "run": 1,
+      "time_difference_vs_reference_s": 0.8999999999999915
+    },
+    {
+      "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_dwell_control_v10_20260917/calibration/run_02",
+      "distance_difference_vs_reference_m": 0.004420510045546777,
+      "distance_m": 13.949900521694465,
+      "duration_s": 66.0,
+      "dwell_distance_m": 0.0,
+      "dwell_raw_scan_count": 77,
+      "dwell_yaw_excursion_rad": 0.0,
+      "raw_relative_difference_vs_reference": 0.00911854103343465,
+      "raw_scan_count": 661,
+      "requested_dwell_s": 7.6000000000000085,
+      "run": 2,
+      "time_difference_vs_reference_s": 0.6999999999999886
+    },
+    {
+      "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_dwell_control_v10_20260917/calibration/run_03",
+      "distance_difference_vs_reference_m": 0.0012955000342529388,
+      "distance_m": 13.953025531705759,
+      "duration_s": 65.9,
+      "dwell_distance_m": 0.0,
+      "dwell_raw_scan_count": 76,
+      "dwell_yaw_excursion_rad": 0.0,
+      "raw_relative_difference_vs_reference": 0.00911854103343465,
+      "raw_scan_count": 661,
+      "requested_dwell_s": 7.6000000000000085,
+      "run": 3,
+      "time_difference_vs_reference_s": 0.5999999999999943
+    }
+  ],
+  "science_outcomes_inspected": false,
+  "selected_dwell_duration_s": 7.6000000000000085,
+  "static_dwell_execution_pass": true,
+  "status": "CALIBRATION_PASS"
+}

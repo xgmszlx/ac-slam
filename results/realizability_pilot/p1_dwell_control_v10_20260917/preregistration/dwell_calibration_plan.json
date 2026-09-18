@@ -1,0 +1,59 @@
+{
+  "backend_launched": false,
+  "baseline": {
+    "arm": "v9 A0_baseline engineering estimate only",
+    "metrics": {
+      "distance_m": 13.944646907001818,
+      "duration_s": 57.7,
+      "raw_scan_count": 579
+    },
+    "path": "/home/wcqw/ac-slam/results/realizability_pilot/p1_common_prefix_v9_20260917/branches/A0_baseline/raw_attempt_02/capture_result.json",
+    "sha256": "e142fdff464c9b715ca2d95ce126bf45bddebf0cfcd6d1471eb1a9ecb165e691"
+  },
+  "budget_definition": {
+    "excludes": [
+      "accepted Karto keyscans"
+    ],
+    "includes": [
+      "GT distance",
+      "elapsed sensing time",
+      "raw LaserScan exposure"
+    ]
+  },
+  "calibration_observables": [
+    "GT distance",
+    "elapsed sensing time",
+    "raw LaserScan count",
+    "start-pose repeatability",
+    "static-dwell execution"
+  ],
+  "created_before_calibration_capture": true,
+  "frozen_geometry_source_sha256": "f5fb11b33196ab35a8506513b7ac71b45889cc92877f7c3c6b4b06ed497b22ca",
+  "gates": {
+    "distance_difference_m_max": 0.15,
+    "raw_scan_relative_difference_max": 0.05,
+    "time_difference_s_max": 2.0
+  },
+  "initial_dwell_duration_s": 7.6000000000000085,
+  "outcome_blind": true,
+  "output_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_dwell_control_v10_20260917",
+  "protocol": "v10_dwell_budget_calibration_v1",
+  "reference": {
+    "arm": "v9 A2_sweep90 engineering estimate only",
+    "metrics": {
+      "distance_m": 13.954321031740012,
+      "duration_s": 65.30000000000001,
+      "raw_scan_count": 655
+    },
+    "path": "/home/wcqw/ac-slam/results/realizability_pilot/p1_common_prefix_v9_20260917/branches/A2_sweep90/raw/capture_result.json",
+    "sha256": "3d40471bb5cc1fc7d47fe8780e98eb9255dabe2b81e0565272cd9ae178cbb3f8"
+  },
+  "repeat_count": 3,
+  "science_fields_forbidden": [
+    "constraints",
+    "utility",
+    "posterior",
+    "accepted_keyscan_count"
+  ],
+  "selection_rule": "run three fixed-duration dwell captures; freeze the initial duration only if median A1 dwell versus frozen v9 A2 meets all preregistered budget gates and repeatability ranges do not exceed the same absolute/relative tolerances"
+}

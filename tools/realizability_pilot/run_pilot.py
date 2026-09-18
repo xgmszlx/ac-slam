@@ -131,6 +131,11 @@ def run_episode(spec, run_dir, env, episode_timeout):
     if run_dir.exists():
         raise RuntimeError('refusing to overwrite attempt: {}'.format(run_dir))
     run_dir.mkdir(parents=True)
+    spec = dict(spec)
+    # Only the dedicated replay-source recording asks for the mapper input
+    # stream; measured episodes must not carry the extra recorder load.
+    if spec.pop('record_replay_stream', False):
+        spec['record_replay_stream_path'] = str(run_dir / 'replay_stream.jsonl')
     spec_path = run_dir / 'episode_spec.json'
     atomic_json(spec_path, spec)
     state_path = run_dir / 'run_state.json'
@@ -167,17 +172,23 @@ def run_episode(spec, run_dir, env, episode_timeout):
             'suffix:={}'.format(suffix),
             'strategy:=NearestFrontierPlanner',
             'only_use_tsp:=true',
-            'tsp_seed:={}'.format(31000 + int(spec['sequence'])),
+            'tsp_seed:={}'.format(int(spec.get('tsp_seed', 31000 + int(spec['sequence'])))),
             'map_name:={}'.format(spec['map_name']),
             'robot_position:={}'.format(spec['robot_position']),
             'map_width:={}'.format(spec['map_width']),
             'need_noise:=false', 'variance:=0', 'oracle_mode:=0',
             'enable_loop_diagnostics:={}'.format(
                 'true' if spec['diagnostics_enabled'] else 'false'),
-            'enable_edge_provenance:=true',
+            'enable_edge_provenance:={}'.format(
+                'true' if spec.get('provenance_enabled', True) else 'false'),
             'edge_provenance_path:={}'.format(edge_provenance_path),
             'edge_provenance_run_id:={}'.format(run_id),
-            'enable_full_pose_graph_observer:=true',
+            'enable_full_pose_graph_observer:={}'.format(
+                'true' if spec.get('observer_enabled', True) else 'false'),
+            'instrumentation_flush_period_s:={}'.format(
+                float(spec.get('instrumentation_flush_period_s', 0.0))),
+            'pose_graph_dump_path:={}'.format(
+                spec.get('pose_graph_dump_path', '')),
         ]
         if spec['diagnostics_enabled']:
             launch_args.extend([
@@ -262,25 +273,29 @@ def run_episode(spec, run_dir, env, episode_timeout):
                 ['git', '-C', str(ROOT / 'dependencies' / 'navigation_2d'),
                  'rev-parse', 'HEAD'], text=True).strip(),
             'diagnostics_enabled': spec['diagnostics_enabled'],
-            'edge_provenance_enabled': True,
+            'edge_provenance_enabled': bool(spec.get('provenance_enabled', True)),
             'max_process_tree_rss_kb': max_rss,
-            'analysis_eligible': result['analysis_eligible'],
-            'target_constraint': result['target_constraint'],
+            'analysis_eligible': result.get('analysis_eligible', False),
+            'target_constraint': result.get('target_constraint'),
             'target_backend_measurement': result.get('target_backend_measurement'),
             'target_nonexplicit_marker_constraint': result.get(
                 'target_nonexplicit_marker_constraint'),
             'target_nonexplicit_full_graph_constraint': result.get(
                 'target_nonexplicit_full_graph_constraint'),
-            'wrong_target_constraint': result['wrong_target_constraint'],
+            'wrong_target_constraint': result.get('wrong_target_constraint'),
+            'canonical_history_complete': result.get(
+                'canonical_history_complete', False),
         }
         atomic_json(run_dir / 'manifest.json', manifest)
         state.update({
             'status': 'SUCCEEDED', 'finished_utc': now_utc(),
-            'analysis_eligible': result['analysis_eligible'],
-            'target_constraint': result['target_constraint'],
+            'analysis_eligible': result.get('analysis_eligible', False),
+            'target_constraint': result.get('target_constraint'),
             'target_backend_measurement': result.get('target_backend_measurement'),
             'target_nonexplicit_full_graph_constraint': result.get(
                 'target_nonexplicit_full_graph_constraint'),
+            'canonical_history_complete': result.get(
+                'canonical_history_complete', False),
         })
         atomic_json(state_path, state)
         return state
@@ -410,7 +425,9 @@ def main():
     sub = parser.add_subparsers(dest='command', required=True)
 
     plan = sub.add_parser('plan')
-    plan.add_argument('--profile', choices=('preflight', 'screening'), default='preflight')
+    plan.add_argument('--profile', default='preflight', choices=(
+        'preflight', 'screening', 'n0_matched', 'n0r_sanity', 'n0r_extension', 'n1_blocks',
+        'replay_source', 'common_prefix_v9'))
     plan.add_argument('--repeats', type=int, default=1)
     plan.add_argument('--target', action='append', dest='targets')
     plan.add_argument('--suite-dir', type=Path)

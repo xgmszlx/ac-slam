@@ -3,7 +3,8 @@
 Reproducible research workspace for the public Graph-Based SLAM-Aware
 Exploration baseline. The repository preserves the code baseline, pinned
 third-party source snapshots, Phase 1--4 experiment tooling, research logs, and
-raw experiment archives used for the reported observations.
+compact evidence artifacts used for the reported observations. High-volume
+per-frame replay streams and machine-generated ROS logs remain local.
 
 The code baseline is intentionally defined as:
 
@@ -21,7 +22,7 @@ dependencies/   pinned navigation_2d, pyconcorde, and p2os source
 catkin_ws/      portable catkin workspace metadata and helper scripts
 docs/           Phase 0–4 research, protocol, and mechanism audit logs
 tools/          reproducible experiment, collection, and analysis scripts
-results/        raw runs, trajectories, maps, pose graphs, and summaries
+results/        compact run manifests, ledgers, audits, and result summaries
 evaluation/     evo environment reconstruction notes
 ```
 
@@ -75,6 +76,15 @@ under `baseline/` and `dependencies/`.
   non-explicit graph constraints with covariance while explicit callbacks stayed
   at zero. The earlier `0/21 explicit closures` observation remains valid; the
   stronger `0/21 backend constraints` interpretation does not.
+- Controlled v8--v11 experiments isolated history, action geometry, sensing
+  budget, keyscan triggering, and realized factor generation. v12 produced a
+  Target-A descriptive signal but was technically incomplete because Target B
+  yielded no usable blocks; those Target-A effects are not confirmatory.
+- v12b repaired target-specific timing and replay instrumentation, then ran a
+  fresh preregistered collection. It closed as
+  `CONFIRMATORY_EXPERIMENT_TECHNICALLY_INCOMPLETE`: Target A delivered 4/4
+  usable blocks, Target B only 1/4, with recurrent target matching and prefix
+  identity failures. No v12b scientific endpoint analysis was executed.
 
 Primary reports:
 
@@ -83,7 +93,9 @@ Primary reports:
 - `docs/research_log/08_karto_loop_closure_mechanism.md`
 - `docs/research_log/53_phase4c_final_decision.md`
 - `docs/research_log/54_constraint_realizability_pilot_protocol.md`
+- `docs/research_log/56_constraint_realizability_direction_audit.md`
+- `docs/research_log/61_confirmatory_action_constraint_experiment.md`
+- `docs/research_log/62_v12b_technical_repair_and_confirmatory_rerun.md`
 
-The Pilot v7 evidence is currently `ANALYZED_NOT_INDEPENDENTLY_VERIFIED`: one
-fresh observer-validation episode is complete and three sentinel conditions are
-still pending. No final method-generalization claim is made.
+The latest controlled confirmatory attempt is technically incomplete. No final
+method-generalization or action-effect claim is made.

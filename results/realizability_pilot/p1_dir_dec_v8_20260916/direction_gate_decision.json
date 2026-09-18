@@ -1,0 +1,77 @@
+{
+  "inputs": {
+    "blocks": null,
+    "n0_decision": "results/realizability_pilot/p1_dir_dec_v8_20260916/n0_instrument/n0_nonperturbation_decision.json",
+    "thresholds": "results/realizability_pilot/p1_dir_dec_v8_20260916/preregistration/effect_threshold_preregistration.json"
+  },
+  "interpretation": "the measurement gate is a property of the instrument, not of the research hypothesis: N1 has not been executed, so nothing is known yet about whether the sweep action beats the budget-matched neutral action",
+  "intervention_executed": false,
+  "measurement_gate": {
+    "certified": false,
+    "detectable_shifts": [
+      {
+        "arm": "n0_prov_diag_on",
+        "mean_difference": -2.6666666666666665,
+        "outcome": "final_edge_count",
+        "threshold": 1.3333333333333333
+      },
+      {
+        "arm": "n0_prov_on",
+        "mean_difference": -2.6666666666666665,
+        "outcome": "final_edge_count",
+        "threshold": 1.3333333333333333
+      },
+      {
+        "arm": "n0_prov_diag_on",
+        "mean_difference": -1.3333333333333333,
+        "outcome": "final_node_count",
+        "threshold": 0.8888888888888905
+      },
+      {
+        "arm": "n0_prov_diag_on",
+        "mean_difference": -2.0,
+        "outcome": "local_edges",
+        "threshold": 0.8888888888888881
+      },
+      {
+        "arm": "n0_prov_diag_on",
+        "mean_difference": 1.1212292616866035,
+        "outcome": "target_geodesic_mean_m",
+        "threshold": 0.5146294394337385
+      }
+    ],
+    "interpretation": "the measurement gate is a property of the instrument, not of the research hypothesis: N1 has not been executed, so nothing is known yet about whether the sweep action beats the budget-matched neutral action",
+    "n0_nonperturbation_outcome": "POSSIBLE_INSTRUMENTATION_PERTURBATION",
+    "n0_outcome": "POSSIBLE_INSTRUMENTATION_PERTURBATION",
+    "n0_preprobe_gate": {
+      "all_pairs_passed": false,
+      "observed_max_route_deviation_m": 0.24028653740715025,
+      "pair_count": 9,
+      "tolerances": {
+        "edge_count_relative_tolerance": 0.15,
+        "edge_covariance_trace_ratio_bounds": [
+          0.5,
+          2.0
+        ],
+        "node_count_abs_tolerance": 2,
+        "route_node_heading_abs_tolerance_rad": 0.05,
+        "route_node_position_abs_tolerance_m": 0.05,
+        "target_anchor_distance_abs_tolerance_m": 0.25,
+        "target_segment_size_abs_tolerance": 0
+      }
+    },
+    "next_required_action": [
+      "repair the instrumentation so that no serialization or file I/O happens on the constraint-creation path, then re-run the matched-pair online sanity check and the same-input replay",
+      "certify neutrality with the same-input replay (identical input, instrumentation off vs on) before executing N1; the N1 design is frozen and must not be redesigned"
+    ],
+    "reason": "the matched online experiment failed to certify instrumentation neutrality (it did not prove a causal perturbation either)",
+    "state": "PAUSED_INSTRUMENTATION_NOT_CERTIFIED"
+  },
+  "next_required_action": [
+    "repair the instrumentation so that no serialization or file I/O happens on the constraint-creation path, then re-run the matched-pair online sanity check and the same-input replay",
+    "certify neutrality with the same-input replay (identical input, instrumentation off vs on) before executing N1; the N1 design is frozen and must not be redesigned"
+  ],
+  "reason": "the matched online experiment failed to certify instrumentation neutrality (it did not prove a causal perturbation either)",
+  "scientific_gate": null,
+  "state": "PAUSED_INSTRUMENTATION_NOT_CERTIFIED"
+}

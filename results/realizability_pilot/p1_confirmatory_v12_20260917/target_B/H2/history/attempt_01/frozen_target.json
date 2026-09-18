@@ -1,0 +1,106 @@
+{
+  "anchor_scan": {
+    "id": 21,
+    "observed_time": 85.6,
+    "theta": 0.6185713946137027,
+    "x": 10.4293813585372,
+    "y": 0.19168307147753183
+  },
+  "anchor_to_reference_distance_m": 0.2989284321295518,
+  "frozen_before_probe": true,
+  "historical_scan_ids": [
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "historical_unique_ids": [
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "route_start_node_count": 12,
+  "segment_nodes": [
+    {
+      "id": 19,
+      "observed_time": 85.6,
+      "theta": -0.0011417448789136642,
+      "unique_id": 19,
+      "x": 8.682929727809235,
+      "y": 0.03994459639244633
+    },
+    {
+      "id": 20,
+      "observed_time": 85.6,
+      "theta": -0.00036896512704842627,
+      "unique_id": 20,
+      "x": 9.669679593959014,
+      "y": 0.03941927825905965
+    },
+    {
+      "id": 21,
+      "observed_time": 85.6,
+      "theta": 0.6185713946137027,
+      "unique_id": 21,
+      "x": 10.4293813585372,
+      "y": 0.19168307147753183
+    },
+    {
+      "id": 22,
+      "observed_time": 85.6,
+      "theta": 1.1538059451303595,
+      "unique_id": 22,
+      "x": 10.510202361145186,
+      "y": 0.45522040858002966
+    },
+    {
+      "id": 23,
+      "observed_time": 85.6,
+      "theta": 1.6531794481805162,
+      "unique_id": 23,
+      "x": 10.50762615928769,
+      "y": 1.1670465452249874
+    },
+    {
+      "id": 24,
+      "observed_time": 85.6,
+      "theta": 1.7880531577537335,
+      "unique_id": 24,
+      "x": 10.31796452464222,
+      "y": 2.101053325527281
+    }
+  ],
+  "target_id": "map3_grid_anchor_03",
+  "target_identity_gate": {
+    "checks": {
+      "anchor_acquired_after_route_start": true,
+      "anchor_within_reference_radius": true,
+      "minimum_history_node_count": true,
+      "minimum_target_segment_scans": true
+    },
+    "observed": {
+      "anchor_distance_m": 0.2989284321295518,
+      "anchor_id": 21,
+      "node_count": 35,
+      "route_start_node_count": 12,
+      "segment_count": 6
+    },
+    "passed": true,
+    "thresholds": {
+      "minimum_history_node_count": 20,
+      "minimum_target_segment_scans": 3,
+      "target_anchor_max_distance_m": 1.0
+    }
+  },
+  "target_reference": [
+    10.2,
+    0.0,
+    0.0
+  ],
+  "target_segment_radius_m": 2.5
+}

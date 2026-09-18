@@ -1,0 +1,67 @@
+{
+  "delta_U_T_observed_sweep_minus_dwell": 35.53446550114677,
+  "interpretation": "Target covariance explains only a minority of the observed delta_U_T gap; holding either covariance set fixed leaves most of the difference associated with the surrounding graph. This is a diagnostic decomposition, not a randomized causal estimate.",
+  "measurement_swap_needed": false,
+  "reason": "The author-style graph utility and linearised information use edge covariance/information and identical endpoints; the relative measurement does not enter these diagnostics.",
+  "rows": [
+    {
+      "U_all": 11448.000286457793,
+      "U_without_target": 10940.318609959471,
+      "base_topology": "A1_dwell",
+      "delta_U_T": 507.6816764983214,
+      "posterior_current_target_removal_delta_trace": 0.00010502313984537019,
+      "posterior_current_trace_all": 0.0014304959706390539,
+      "posterior_target_target_removal_delta_trace": 0.0014948358640729542,
+      "posterior_target_trace_all": 0.0020812889651843276,
+      "target_covariance_donor": "A1_dwell"
+    },
+    {
+      "U_all": 11454.657296290115,
+      "U_without_target": 10940.318609959471,
+      "base_topology": "A1_dwell",
+      "delta_U_T": 514.3386863306441,
+      "posterior_current_target_removal_delta_trace": 9.721593648892145e-05,
+      "posterior_current_trace_all": 0.0014383031739955026,
+      "posterior_target_target_removal_delta_trace": 0.0014714713235721767,
+      "posterior_target_trace_all": 0.002104653505685105,
+      "target_covariance_donor": "A2_sweep90"
+    },
+    {
+      "U_all": 12783.740783518386,
+      "U_without_target": 12244.005355817873,
+      "base_topology": "A2_sweep90",
+      "delta_U_T": 539.7354277005124,
+      "posterior_current_target_removal_delta_trace": 0.00018809466888903984,
+      "posterior_current_trace_all": 0.0012557368145651743,
+      "posterior_target_target_removal_delta_trace": 0.0014339218430798077,
+      "posterior_target_trace_all": 0.0019185290840192382,
+      "target_covariance_donor": "A1_dwell"
+    },
+    {
+      "U_all": 12787.221497817342,
+      "U_without_target": 12244.005355817873,
+      "base_topology": "A2_sweep90",
+      "delta_U_T": 543.2161419994682,
+      "posterior_current_target_removal_delta_trace": 0.00018797148605380083,
+      "posterior_current_trace_all": 0.0012558599974004134,
+      "posterior_target_target_removal_delta_trace": 0.0014451661043072095,
+      "posterior_target_trace_all": 0.0019072848227918364,
+      "target_covariance_donor": "A2_sweep90"
+    }
+  ],
+  "semantic_mapping": [
+    [
+      14,
+      36
+    ],
+    [
+      17,
+      37
+    ]
+  ],
+  "status": "IDENTIFIABLE_SAME_ENDPOINT_TARGET_COVARIANCE_SWAP",
+  "surrounding_topology_effect_holding_dwell_covariance": 32.05375120219105,
+  "surrounding_topology_effect_holding_sweep_covariance": 28.87745566882404,
+  "target_covariance_effect_on_dwell_topology": 6.6570098323227285,
+  "target_covariance_effect_on_sweep_topology": 3.480714298955718
+}

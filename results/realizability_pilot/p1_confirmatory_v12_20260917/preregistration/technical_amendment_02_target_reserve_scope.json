@@ -1,0 +1,21 @@
+{
+  "amendment_id": "v12_technical_amendment_02",
+  "applied_after": "target_A H1-H4 collection and target_B_H1 physical capture, before scientific outcome inspection",
+  "changes_scientific_protocol": false,
+  "reason": "The preregistration defines two ordered reserve seeds per target, but the worker stored a copy of that list in every block. The recovery path could therefore have reused one reserve across sibling blocks, violating canonical-history independence.",
+  "observed_trigger": {
+    "target": "target_B",
+    "block": "target_B_H1",
+    "consumed_reserve_seed": 52005,
+    "remaining_target_B_reserve_seed": 52006,
+    "post_action_scientific_outcomes_inspected": false
+  },
+  "uniform_rule": "At reserve allocation time, subtract every reserve currently consumed by any sibling block of the same target, then take the first remaining seed in preregistered order. If none remains, mark PROTOCOL_NOT_ROBUST and stop.",
+  "outcome_blind": true,
+  "thresholds_changed": false,
+  "actions_changed": false,
+  "target_definition_changed": false,
+  "seed_values_or_order_changed": false,
+  "old_collection_code_sha256": "31e58d9d158e2184c2acd156223438caf7029fb91be0f40515429374e380d307",
+  "amended_collection_code_sha256": "29b9bd1e6da601827b396be969865933da880090bd41036c689adee8eec36803"
+}

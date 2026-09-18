@@ -21,6 +21,13 @@ from provenance_analysis import (  # noqa: E402
 
 
 class PilotProtocolTest(unittest.TestCase):
+    def test_common_prefix_profile_is_one_frozen_history_only_capture(self):
+        specs = episode_specs('common_prefix_v9', 1)
+        self.assertEqual(len(specs), 1)
+        self.assertEqual(specs[0]['target_id'], 'map3_grid_anchor_01')
+        self.assertTrue(specs[0]['stop_after_history'])
+        self.assertTrue(specs[0]['record_replay_stream'])
+
     def test_preflight_has_diagnostics_sentinel_pair(self):
         specs = episode_specs('preflight', 1)
         self.assertEqual(len(specs), 4)

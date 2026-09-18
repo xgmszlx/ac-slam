@@ -1,0 +1,178 @@
+{
+  "audit_version": 1,
+  "code_facts": [
+    {
+      "evidence": [
+        {
+          "detail": "subscribes nav2d_msgs/LocalizedScan on karto_in",
+          "path": "dependencies/navigation_2d/nav2d_karto/src/MultiMapper.cpp"
+        },
+        {
+          "detail": "uses tf::TransformListener for laser/robot/odom/offset frames",
+          "path": "dependencies/navigation_2d/nav2d_karto/src/MultiMapper.cpp"
+        }
+      ],
+      "evidence_paths_present": [
+        {
+          "detail": "subscribes nav2d_msgs/LocalizedScan on karto_in",
+          "path": "dependencies/navigation_2d/nav2d_karto/src/MultiMapper.cpp",
+          "path_exists": true
+        },
+        {
+          "detail": "uses tf::TransformListener for laser/robot/odom/offset frames",
+          "path": "dependencies/navigation_2d/nav2d_karto/src/MultiMapper.cpp",
+          "path_exists": true
+        }
+      ],
+      "id": "F1",
+      "statement": "the mapper consumes localized scans and resolves live TF frames"
+    },
+    {
+      "evidence": [
+        {
+          "detail": "getMap() -> sendMap() publishes /slam_path and the full pose graph observer beside it",
+          "path": "dependencies/navigation_2d/nav2d_karto/src/MultiMapper.cpp"
+        },
+        {
+          "detail": "map_update_rate drives the periodic publication",
+          "path": "catkin_ws/src/cpp_solver/param/mapper.yaml"
+        }
+      ],
+      "evidence_paths_present": [
+        {
+          "detail": "getMap() -> sendMap() publishes /slam_path and the full pose graph observer beside it",
+          "path": "dependencies/navigation_2d/nav2d_karto/src/MultiMapper.cpp",
+          "path_exists": true
+        },
+        {
+          "detail": "map_update_rate drives the periodic publication",
+          "path": "catkin_ws/src/cpp_solver/param/mapper.yaml",
+          "path_exists": true
+        }
+      ],
+      "id": "F2",
+      "statement": "graph snapshots and both observers are produced by a service call, which also resets the periodic publication timer"
+    },
+    {
+      "evidence": [
+        {
+          "detail": "single exploration entry point for this project",
+          "path": "catkin_ws/src/cpp_solver/launch/exploration.launch"
+        },
+        {
+          "detail": "the remaining launch files are joystick/real-robot/bag variants, not mapper-only launches",
+          "path": "catkin_ws/src/cpp_solver/launch/play_bag.launch"
+        }
+      ],
+      "evidence_paths_present": [
+        {
+          "detail": "single exploration entry point for this project",
+          "path": "catkin_ws/src/cpp_solver/launch/exploration.launch",
+          "path_exists": true
+        },
+        {
+          "detail": "the remaining launch files are joystick/real-robot/bag variants, not mapper-only launches",
+          "path": "catkin_ws/src/cpp_solver/launch/play_bag.launch",
+          "path_exists": true
+        }
+      ],
+      "id": "F3",
+      "statement": "no mapper-only launch exists; every launch file starts the full stack"
+    },
+    {
+      "evidence": [
+        {
+          "detail": "includes tbb/tbb_thread.h and tbb/concurrent_queue.h and defines a tbb::blocked_range3d operator()",
+          "path": "dependencies/navigation_2d/nav2d_karto/OpenKarto/source/OpenMapper.cpp"
+        },
+        {
+          "detail": "pkg_check_modules(TBB tbb)",
+          "path": "dependencies/navigation_2d/nav2d_karto/CMakeLists.txt"
+        }
+      ],
+      "evidence_paths_present": [
+        {
+          "detail": "includes tbb/tbb_thread.h and tbb/concurrent_queue.h and defines a tbb::blocked_range3d operator()",
+          "path": "dependencies/navigation_2d/nav2d_karto/OpenKarto/source/OpenMapper.cpp",
+          "path_exists": true
+        },
+        {
+          "detail": "pkg_check_modules(TBB tbb)",
+          "path": "dependencies/navigation_2d/nav2d_karto/CMakeLists.txt",
+          "path_exists": true
+        }
+      ],
+      "id": "F4",
+      "statement": "the mapper uses TBB parallel range processing and concurrent queues, so identical input does not imply identical internal work order"
+    },
+    {
+      "evidence": [
+        {
+          "detail": "AppendEdgeProvenanceLine opens/appends/closes a std::ofstream per created constraint; called from RecordNewConstraint",
+          "path": "dependencies/navigation_2d/nav2d_karto/OpenKarto/source/OpenMapper.cpp"
+        },
+        {
+          "detail": "AppendLoopDiagnosticsLine is called from the loop-closure search path",
+          "path": "dependencies/navigation_2d/nav2d_karto/OpenKarto/source/OpenMapper.cpp"
+        }
+      ],
+      "evidence_paths_present": [
+        {
+          "detail": "AppendEdgeProvenanceLine opens/appends/closes a std::ofstream per created constraint; called from RecordNewConstraint",
+          "path": "dependencies/navigation_2d/nav2d_karto/OpenKarto/source/OpenMapper.cpp",
+          "path_exists": true
+        },
+        {
+          "detail": "AppendLoopDiagnosticsLine is called from the loop-closure search path",
+          "path": "dependencies/navigation_2d/nav2d_karto/OpenKarto/source/OpenMapper.cpp",
+          "path_exists": true
+        }
+      ],
+      "id": "F5",
+      "statement": "the instrument under test is blocking file I/O on the constraint-creation path, which a message replay cannot reproduce"
+    }
+  ],
+  "decision": {
+    "decision": "USE_MATCHED_ONLINE",
+    "escalation_path": {
+      "action": "build the replay harness (mapper-only launch, TF re-publisher, service scheduler, recorded karto_in stream) and repeat N0",
+      "estimated_cost": "multi-day engineering change to the ROS/Stage pipeline",
+      "trigger": "the matched-pair repeatability proves too coarse to resolve the effect the direction gate needs (MDE larger than the effect)"
+    },
+    "inputs_already_recorded_by_this_repository": [
+      "per-episode karto_edge_provenance.jsonl",
+      "pose_graph_before.json / pose_graph_after.json full snapshots",
+      "episode_result.json MoveTo goals and probe ground-truth trajectory",
+      "resolved_history_route.json resolved waypoints"
+    ],
+    "inputs_not_recorded": [
+      "the raw karto_in stream",
+      "the TF tree history"
+    ],
+    "limitations": [
+      "matched pairs control the seed, the route, the map and the probe, but the initial mapping phase remains an exploring action whose length varies by a few scans; the pre-probe gate measures and reports that residual variation instead of assuming it away",
+      "the verdict is therefore non-perturbation of the measured outcome distribution, not bit-level determinism"
+    ],
+    "primary_method": "N0-B matched same-seed episodes with alternating arm order",
+    "reasons": [
+      "a faithful replay harness requires a new mapper-only launch path, a TF re-publisher, a service-call scheduler and a determinism argument for the threaded matcher (facts F1-F4); that is a multi-day change to the ROS/Stage pipeline",
+      "the instrument being tested is blocking file I/O inside the mapper answer path (fact F5), so replaying recorded messages cannot reproduce the very mechanism whose effect is in question",
+      "matched same-seed pairs remove the actual defect of the earlier comparison (the TSP seed differed between the OFF and ON episodes), which is the confound the decision needs to remove"
+    ],
+    "required_inputs_recorded": [
+      "karto_in localized scans (topic stream with timestamps)",
+      "TF tree for laser/robot/odom/offset frames",
+      "get_map service call timing",
+      "planner MoveTo action goals"
+    ]
+  },
+  "facts_with_missing_evidence_paths": [],
+  "facts_with_present_evidence_paths": [
+    "F1",
+    "F2",
+    "F3",
+    "F4",
+    "F5"
+  ],
+  "repo_root": "/home/wcqw/ac-slam"
+}

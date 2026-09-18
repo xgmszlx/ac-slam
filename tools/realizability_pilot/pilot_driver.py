@@ -2,6 +2,7 @@
 """Build one fixed history and execute one controlled revisit action."""
 
 import argparse
+import hashlib
 import json
 import math
 import os
@@ -18,9 +19,11 @@ from nav2d_navigator.msg import MoveToPosition2DAction, MoveToPosition2DGoal
 from visualization_msgs.msg import Marker
 
 from cpp_solver.msg import LoopClosureEvent, PoseGraph
+from nav2d_msgs.msg import LocalizedScan
 
 from protocol import (goal_errors, resolve_local_waypoints, resolve_marker_edges,
                       target_freeze_checks)
+from preprobe_signature import build_signature
 
 
 def wrap_angle(value):
@@ -64,6 +67,22 @@ class PilotDriver:
         self.closure_marker_edges = []
         self.moves = []
         self.tf_listener = tf.TransformListener()
+
+        # Optional same-input replay recording.  This subscribes to the mapper's
+        # own input topic and appends the messages verbatim; the file is written
+        # by the driver process, never by the mapper, so the mapper's
+        # constraint-generation path is untouched.
+        self.karto_input_stream = None
+        self.karto_input_count = 0
+        record_path = spec.get('record_replay_stream_path')
+        if record_path:
+            self.karto_input_stream = open(record_path, 'w')
+            # /karto_out carries exactly what the Karto constraint-generation
+            # subsystem accepted: the laser scan plus the odometric pose it was
+            # processed with.  Replaying that pair is the only input Karto needs,
+            # which is why the replay does not have to reproduce TF or Stage.
+            rospy.Subscriber('/karto_out', LocalizedScan,
+                             self.on_karto_input, queue_size=500)
 
         rospy.Subscriber('/slam_pose_graph', PoseGraph, self.on_pose_graph, queue_size=100)
         rospy.Subscriber('/slam_pose_graph_full', PoseGraph,
@@ -133,6 +152,39 @@ class PilotDriver:
             self.slam_path = path
             self.slam_path_received_time = float(rospy.get_time())
             self.slam_path_message_count += 1
+
+    def on_karto_input(self, msg):
+        """Record one mapper input message for the same-input replay.
+
+        Written from the driver process; the mapper never sees this file.
+        """
+        if self.karto_input_stream is None:
+            return
+        scan = msg.scan
+        record = {
+            'stamp': float(scan.header.stamp.to_sec()),
+            'frame_id': scan.header.frame_id,
+            'robot_id': int(msg.robot_id),
+            'laser_type': int(msg.laser_type),
+            'x': float(msg.x),
+            'y': float(msg.y),
+            'yaw': float(msg.yaw),
+            'angle_min': float(scan.angle_min),
+            'angle_max': float(scan.angle_max),
+            'angle_increment': float(scan.angle_increment),
+            'range_min': float(scan.range_min),
+            'range_max': float(scan.range_max),
+            'ranges': [float(value) for value in scan.ranges],
+        }
+        self.karto_input_stream.write(json.dumps(record, separators=(',', ':')))
+        self.karto_input_stream.write('\n')
+        self.karto_input_count += 1
+
+    def close_karto_input(self):
+        if self.karto_input_stream is not None:
+            self.karto_input_stream.flush()
+            self.karto_input_stream.close()
+            self.karto_input_stream = None
 
     def on_mapper_keyscan_pose(self, msg):
         sample = {
@@ -437,7 +489,21 @@ class PilotDriver:
         segment = ordered[left:right + 1]
         return anchor, segment
 
-    def probe_goals(self, anchor, historical_gt_pose):
+    def preprobe_signature(self, before, frozen_target):
+        """Deterministic, outcome-blind description of the pre-probe graph.
+
+        Written after the target freeze gate passes and before the probe phase
+        opens, so it can never contain probe outcomes.  It is an observation
+        record only: it is produced from data the driver already received and is
+        never fed back into navigation or the mapper.
+        """
+        with self.lock:
+            gt_pose = list(self.gt_pose) if self.gt_pose else None
+        run_id = getattr(self, 'run_id', None) or self.spec.get('episode_id')
+        return build_signature(before, frozen_target, self.spec, run_id,
+                               wall_time=time.time(), gt_pose=gt_pose)
+
+    def probe_goals(self, anchor, historical_gt_pose, segment=None):
         heading = float(anchor['theta'])
         offset = float(self.spec['lateral_offset_m'])
         x = float(anchor['x']) - math.sin(heading) * offset
@@ -459,6 +525,31 @@ class PilotDriver:
                               'sweep_{:+.0f}deg'.format(degrees),
                               [gt_x, gt_y, wrap_angle(
                                   gt_heading + math.radians(degrees))]))
+        elif maneuver == 'neutral':
+            # Budget-matched neutral motion.  The robot translates along the
+            # arrival heading and returns to the arrival pose, so the number of
+            # scan-addition opportunities is comparable to the sweep's three
+            # 30 deg heading-threshold crossings (MinimumTravelHeading = 0.52
+            # rad, MinimumTravelDistance = 1.0 m) while no new yaw viewpoint of
+            # the historical region is ever created.  The sign is chosen to
+            # increase the distance to the frozen target segment centroid.
+            offset_m = float(self.spec.get('neutral_offset_m', 0.0))
+            if offset_m <= 0.0:
+                raise RuntimeError('neutral maneuver needs neutral_offset_m > 0')
+            if not segment:
+                raise RuntimeError('neutral maneuver needs the frozen segment')
+            centroid_x = sum(float(node['x']) for node in segment) / len(segment)
+            centroid_y = sum(float(node['y']) for node in segment) / len(segment)
+            radial = ((x - centroid_x) * math.cos(arrival)
+                      + (y - centroid_y) * math.sin(arrival))
+            sign = 1.0 if radial >= 0.0 else -1.0
+            goals.append((
+                x + sign * offset_m * math.cos(arrival),
+                y + sign * offset_m * math.sin(arrival),
+                arrival, 'neutral_out',
+                [gt_x + sign * offset_m * math.cos(gt_arrival),
+                 gt_y + sign * offset_m * math.sin(gt_arrival), gt_arrival]))
+            goals.append((x, y, arrival, 'neutral_back', [gt_x, gt_y, gt_arrival]))
         elif maneuver != 'pass':
             raise RuntimeError('unknown maneuver {}'.format(maneuver))
         return goals
@@ -554,6 +645,38 @@ class PilotDriver:
             raise RuntimeError(
                 'target identity gate failed before probe: {}'.format(', '.join(failed)))
 
+        # Observation-only pre-probe signature, written while the probe phase is
+        # still closed.  It cannot contain any probe outcome by construction.
+        signature = self.preprobe_signature(before, frozen_target)
+        if not signature.get('before_probe'):
+            raise RuntimeError('pre-probe signature was not written before the probe')
+        self.write_json('preprobe_graph_signature.json', signature)
+
+        if self.spec.get('stop_after_history', False):
+            result = {
+                'status': 'SUCCEEDED',
+                'episode_id': self.spec['episode_id'],
+                'spec': self.spec,
+                'canonical_history_complete': True,
+                'analysis_eligible': False,
+                'exclusion_reason': 'history-only common-prefix capture; no probe',
+                'frozen_target': frozen_target,
+                'history_loop_events': list(self.loop_events),
+                'probe_start_time': float(rospy.get_time()),
+                'probe_end_time': None,
+                'action_completed': False,
+                'actual_probe_trajectory_gt': [],
+                'actual_probe_distance_m': 0.0,
+                'moves': self.moves,
+                'karto_input_record_count': int(self.karto_input_count),
+                'terminal_tf_pose': self.current_tf_pose(),
+                'terminal_gt_pose': self.current_gt_pose(),
+                'terminal_slam_pose': self.current_slam_pose(),
+            }
+            self.close_karto_input()
+            self.write_json('episode_result.json', result)
+            return result
+
         with self.lock:
             self.probe_gt = []
             self.probe_active = True
@@ -565,7 +688,7 @@ class PilotDriver:
             int(self.spec['target_history_waypoint_index'])]['gt_pose_after']
         try:
             for x, y, theta, label, expected_gt in self.probe_goals(
-                    anchor, historical_gt_pose):
+                    anchor, historical_gt_pose, segment):
                 self.move_to(client, x, y, theta, label, expected_gt)
             action_completed = True
             rospy.sleep(float(self.spec['probe_hold_s']))
@@ -711,6 +834,8 @@ class PilotDriver:
         else:
             result['analysis_eligible'] = True
             result['exclusion_reason'] = None
+        result['karto_input_record_count'] = int(self.karto_input_count)
+        self.close_karto_input()
         self.write_json('episode_result.json', result)
         return result
 
@@ -732,9 +857,11 @@ def main():
         result = driver.run()
         print(json.dumps({
             'status': result['status'],
-            'analysis_eligible': result['analysis_eligible'],
-            'target_constraint': result['target_constraint'],
-            'wrong_target_constraint': result['wrong_target_constraint'],
+            'analysis_eligible': result.get('analysis_eligible'),
+            'target_constraint': result.get('target_constraint'),
+            'wrong_target_constraint': result.get('wrong_target_constraint'),
+            'canonical_history_complete': result.get(
+                'canonical_history_complete', False),
         }, sort_keys=True))
     except Exception as exc:
         payload = {
@@ -746,6 +873,9 @@ def main():
         driver.write_json('episode_result.json', payload)
         raise
     finally:
+        # Always close the replay recording, including on the failure path, so a
+        # partial input file is still complete up to the last written message.
+        driver.close_karto_input()
         rospy.signal_shutdown('controlled pilot episode finished')
 
 

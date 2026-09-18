@@ -1,0 +1,46 @@
+{
+  "blocks": [
+    {
+      "A2_added_duration_s_vs_A1_A3_mean": 3.700000000000003,
+      "A2_added_raw_scans_vs_A1_A3_mean": 37.5,
+      "added_scans_per_added_second_hz": 10.135135135135128,
+      "block_id": "target_B_H1",
+      "duration_mediated_within_two_scans": true,
+      "duration_predicted_added_scans": 37.00000000000213,
+      "measured_base_scan_rate_hz": 10.000000000000568,
+      "scan_residual_after_duration_prediction": 0.49999999999786837
+    },
+    {
+      "A2_added_duration_s_vs_A1_A3_mean": 3.6000000000000014,
+      "A2_added_raw_scans_vs_A1_A3_mean": 36.5,
+      "added_scans_per_added_second_hz": 10.138888888888886,
+      "block_id": "target_B_H2",
+      "duration_mediated_within_two_scans": true,
+      "duration_predicted_added_scans": 36.00000000000206,
+      "measured_base_scan_rate_hz": 10.000000000000568,
+      "scan_residual_after_duration_prediction": 0.4999999999979394
+    },
+    {
+      "A2_added_duration_s_vs_A1_A3_mean": 3.6000000000000014,
+      "A2_added_raw_scans_vs_A1_A3_mean": 36.0,
+      "added_scans_per_added_second_hz": 9.999999999999996,
+      "block_id": "target_B_H3",
+      "duration_mediated_within_two_scans": true,
+      "duration_predicted_added_scans": 36.00000000000206,
+      "measured_base_scan_rate_hz": 10.000000000000568,
+      "scan_residual_after_duration_prediction": -2.0605739337042905e-12
+    },
+    {
+      "A2_added_duration_s_vs_A1_A3_mean": 3.700000000000003,
+      "A2_added_raw_scans_vs_A1_A3_mean": 36.0,
+      "added_scans_per_added_second_hz": 9.729729729729723,
+      "block_id": "target_B_H4",
+      "duration_mediated_within_two_scans": true,
+      "duration_predicted_added_scans": 37.00000000000213,
+      "measured_base_scan_rate_hz": 10.000000000000568,
+      "scan_residual_after_duration_prediction": -1.0000000000021316
+    }
+  ],
+  "classification": "RAW_SCAN_MISMATCH_IS_DURATION_MEDIATED",
+  "rule": "Compare A2 with the within-block A1/A3 engineering mean; the duration explanation passes when the scan residual is at most two scans, allowing the two interval boundaries."
+}

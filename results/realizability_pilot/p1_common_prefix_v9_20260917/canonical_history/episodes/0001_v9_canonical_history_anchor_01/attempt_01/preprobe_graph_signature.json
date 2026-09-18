@@ -1,0 +1,318 @@
+{
+  "before_probe": true,
+  "block_id": "v9_common_prefix_map3_grid_anchor_01",
+  "block_position": 0,
+  "condition_id": "v9_canonical_history",
+  "corrected_path_length_m": 20.666502515085313,
+  "diagnostics_enabled": false,
+  "edge_count": 38,
+  "edge_covariance_count": 38,
+  "edge_covariance_logdet_median": -26.29014057118352,
+  "edge_covariance_trace_max": 0.06075558310000001,
+  "edge_covariance_trace_median": 0.00147948658,
+  "edge_endpoint_set_hash": "2c4aa6c0abaef64cf1c4edad893ea1b86d53cbe15452463f5fbcbf33f073c610",
+  "edge_endpoints": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      9
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      10
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      7,
+      30
+    ],
+    [
+      8,
+      9
+    ],
+    [
+      9,
+      10
+    ],
+    [
+      10,
+      11
+    ],
+    [
+      11,
+      12
+    ],
+    [
+      12,
+      13
+    ],
+    [
+      13,
+      14
+    ],
+    [
+      14,
+      15
+    ],
+    [
+      15,
+      16
+    ],
+    [
+      15,
+      20
+    ],
+    [
+      16,
+      17
+    ],
+    [
+      17,
+      18
+    ],
+    [
+      18,
+      19
+    ],
+    [
+      19,
+      20
+    ],
+    [
+      20,
+      21
+    ],
+    [
+      21,
+      22
+    ],
+    [
+      22,
+      23
+    ],
+    [
+      23,
+      24
+    ],
+    [
+      24,
+      25
+    ],
+    [
+      24,
+      28
+    ],
+    [
+      25,
+      26
+    ],
+    [
+      26,
+      27
+    ],
+    [
+      27,
+      28
+    ],
+    [
+      28,
+      29
+    ],
+    [
+      29,
+      30
+    ],
+    [
+      30,
+      31
+    ],
+    [
+      30,
+      32
+    ],
+    [
+      31,
+      32
+    ]
+  ],
+  "episode_id": "0001_v9_canonical_history_anchor_01",
+  "first_corrected_pose": [
+    0.2,
+    0.0,
+    0.0
+  ],
+  "keyscan_count": 33,
+  "last_corrected_pose": [
+    6.770647746749031,
+    6.020093895860119,
+    -3.0180931689851724
+  ],
+  "maneuver_type": "pass",
+  "node_count": 33,
+  "node_id_set_hash": "1ab3f04811f439b038a5c4501475e3e4b90e0bec44248bc00ef5432eede4ca97",
+  "node_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+  ],
+  "node_unique_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+  ],
+  "protocol_version": "p1_common_prefix_v9",
+  "provenance_enabled": true,
+  "robot_gt_pose_before_probe": [
+    81.8,
+    -21.858795159531578,
+    -22.020924617133353,
+    -3.109149582834705
+  ],
+  "robot_gt_pose_before_probe_format": "stamp,x,y,theta",
+  "route_start_node_count": 11,
+  "run_id": "0001_v9_canonical_history_anchor_01",
+  "signature_version": 1,
+  "sim_time": 81.8,
+  "snapshot_phase": "before_probe",
+  "target_anchor": {
+    "id": 15,
+    "observed_time": 81.8,
+    "theta": -0.0483956818398224,
+    "x": 5.814939836333819,
+    "y": 0.11911437675380455
+  },
+  "target_historical_scan_ids": [
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "target_historical_unique_ids": [
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "target_id": "map3_grid_anchor_01",
+  "target_identity_gate": {
+    "checks": {
+      "anchor_acquired_after_route_start": true,
+      "anchor_within_reference_radius": true,
+      "minimum_history_node_count": true,
+      "minimum_target_segment_scans": true
+    },
+    "observed": {
+      "anchor_distance_m": 0.4030627300955443,
+      "anchor_id": 15,
+      "node_count": 33,
+      "route_start_node_count": 11,
+      "segment_count": 5
+    },
+    "passed": true,
+    "thresholds": {
+      "minimum_history_node_count": 20,
+      "minimum_target_segment_scans": 3,
+      "target_anchor_max_distance_m": 1.0
+    }
+  },
+  "target_reference": [
+    6.2,
+    0.0,
+    0.0
+  ],
+  "target_segment_size": 5,
+  "tsp_seed": 43001,
+  "wall_time": 1789610011.7787597
+}

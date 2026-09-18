@@ -1,0 +1,20 @@
+{
+  "budget_match_verdict": "MATCH_NOT_ACCEPTABLE",
+  "decision": "BUDGET_MATCH_INVALID",
+  "gates": {
+    "action_execution_pass": true,
+    "branch_start_pass": true,
+    "common_prefix_replay_pass": true,
+    "constraint_analytics_pass": true,
+    "frame_audit_complete": true,
+    "graph_utility_pass": true,
+    "posterior_uncertainty_pass": true,
+    "preprobe_hash_identical": true,
+    "stream_stitching_pass": true
+  },
+  "intervention_hypothesis": "UNTESTED",
+  "no_confirmatory_expansion_started": true,
+  "no_retrospective_relabel": true,
+  "protocol": "v9 common-prefix proof-of-design",
+  "scope": "EXPLORATORY PROOF-OF-DESIGN ONLY; n=1 branch per action"
+}

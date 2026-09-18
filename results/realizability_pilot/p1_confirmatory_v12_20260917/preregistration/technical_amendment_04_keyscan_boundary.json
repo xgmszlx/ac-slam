@@ -1,0 +1,13 @@
+{
+  "amendment_id": "v12_technical_amendment_04",
+  "applied_after": "COLLECTION_COMPLETE and analysis-gate amendment, during manipulation-check validation before any contrast summary completed",
+  "changes_primary_endpoint": false,
+  "changes_graph_or_artifacts": false,
+  "outcome_blind": false,
+  "reason": "Target A/H4/A1 recorded 29 accepted probe keyscans while literal replay-JSON threshold reconstruction produced 28. Several serialized heading differences were 0.5199999999999996 rad at the frozen 0.52-rad C++ boundary.",
+  "resolution_rule": "First apply the literal 0.52-rad threshold. Only when its count disagrees with the graph-recorded accepted count, retry reconstruction with a 1e-12-rad machine-scale equality tolerance. Accept the fallback only if it exactly reproduces the graph count; otherwise fail closed.",
+  "validation": "The strict rule reproduced 11/12 valid branches. The fallback was used only for Target A/H4/A1 and reproduced 29/29. All 12 valid branch counts then matched their recorded graphs exactly.",
+  "heading_reconstruction_tolerance_rad": 1e-12,
+  "old_analysis_code_sha256": "a68b8add87e6410de37d365c60f2729bb5bff5a391353b50d23c5db39951263b",
+  "amended_analysis_code_sha256": "26c4561f0111e75c63ad9e44488e1af93b06e686cc330c0ea29a5be0e6de29cd"
+}

@@ -1,0 +1,22 @@
+{
+  "classification": "SURROUNDING_GRAPH_EFFECT_DOMINANT",
+  "current": {
+    "dwell_target_removal_delta_trace": 0.00010502313984537019,
+    "observed_full_trace_relative_change": -0.1220807166346819,
+    "surrounding_effect_holding_dwell_target_covariance_relative": -0.12216682861106443,
+    "sweep_target_removal_delta_trace": 0.00018797148605380083,
+    "target_covariance_effect_on_dwell_topology_relative": 0.005457689861902315,
+    "target_covariance_effect_on_sweep_topology_relative": 9.809606106170321e-05,
+    "target_removal_delta_relative_change": 0.7898101916449922
+  },
+  "interpretation": "Holding Dwell target covariances fixed preserves nearly all of the Sweep reduction in full target/current trace. Target-edge removal impact on the target segment is slightly smaller, not larger, in Sweep. Full-graph posterior gains therefore must not be attributed wholly to E_T.",
+  "target": {
+    "dwell_target_removal_delta_trace": 0.0014948358640729542,
+    "observed_full_trace_relative_change": -0.08360402870683581,
+    "surrounding_effect_holding_dwell_target_covariance_relative": -0.07820148181618536,
+    "sweep_target_removal_delta_trace": 0.0014451661043072095,
+    "target_covariance_effect_on_dwell_topology_relative": 0.01122599547281422,
+    "target_covariance_effect_on_sweep_topology_relative": -0.005860876085258759,
+    "target_removal_delta_relative_change": -0.0332275676276661
+  }
+}

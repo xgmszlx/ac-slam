@@ -1,0 +1,50 @@
+{
+  "classification": "T3",
+  "conclusion": "All arms create the same two target endpoint pairs (14-36 and 17-37), at the same insertion indices and with RUNNING_SCAN_CHAIN provenance, before Sweep-only keyscans. Measurement/covariance values vary across fresh captures, but the dominant A1/A2 difference lies in non-target/local context.",
+  "endpoint_identities_equal": true,
+  "endpoint_pairs_by_branch": {
+    "A0_baseline": [
+      [
+        14,
+        36
+      ],
+      [
+        17,
+        37
+      ]
+    ],
+    "A1_dwell": [
+      [
+        14,
+        36
+      ],
+      [
+        17,
+        37
+      ]
+    ],
+    "A2_sweep90": [
+      [
+        14,
+        36
+      ],
+      [
+        17,
+        37
+      ]
+    ]
+  },
+  "physical_creation_pose_dispersion": [
+    {
+      "max_pairwise_creation_gt_distance_m": 0.008610044729347729,
+      "max_pairwise_creation_gt_heading_rad": 0.06687143899999992,
+      "target_factor_rank": 1
+    },
+    {
+      "max_pairwise_creation_gt_distance_m": 0.008610044729347729,
+      "max_pairwise_creation_gt_heading_rad": 0.03717640700000002,
+      "target_factor_rank": 2
+    }
+  ],
+  "provenance_equal": true
+}

@@ -1,0 +1,224 @@
+{
+  "A3_keyscan_control_manipulation_weak": false,
+  "analysis_scope": "DESCRIPTIVE_ONLY_VALID_TARGET_A_BLOCKS",
+  "analyzed_branches": 12,
+  "classification": "CONFIRMATORY_EXPERIMENT_TECHNICALLY_INCOMPLETE",
+  "confirmatory_complete": false,
+  "contrasts": {
+    "D_total": {
+      "confirmatory_evaluable": false,
+      "confirmatory_verdict": "NOT_EVALUABLE_TECHNICAL_INCOMPLETENESS",
+      "contrast": "D_total",
+      "left_arm": "A2_SWEEP90",
+      "mean": 0.12853767349654177,
+      "median": 0.12934540660953608,
+      "one_sided_exact_sign_test_p": 0.0625,
+      "positive_blocks": 4,
+      "right_arm": "A1_DWELL",
+      "stratified_block_bootstrap_mean_95pct_CI": null,
+      "supported_by_preregistered_rule": false,
+      "target_descriptive_bootstrap_mean_95pct_CI": {
+        "target_A": [
+          0.09868064185921899,
+          0.15839470513386456
+        ],
+        "target_B": null
+      },
+      "target_means": {
+        "target_A": 0.12853767349654177,
+        "target_B": null
+      },
+      "target_medians": {
+        "target_A": 0.12934540660953608,
+        "target_B": null
+      },
+      "target_positive": {
+        "target_A": 4,
+        "target_B": 0
+      },
+      "usable_blocks": 4,
+      "values": [
+        0.15576029331380425,
+        0.16102911695392486,
+        0.10293051990526791,
+        0.09443076381317006
+      ]
+    },
+    "D_trigger": {
+      "confirmatory_evaluable": false,
+      "confirmatory_verdict": "NOT_EVALUABLE_TECHNICAL_INCOMPLETENESS",
+      "contrast": "D_trigger",
+      "left_arm": "A3_MIN_TRIGGER",
+      "mean": 0.05766937777245884,
+      "median": 0.06111013068970195,
+      "one_sided_exact_sign_test_p": 0.3125,
+      "positive_blocks": 3,
+      "right_arm": "A1_DWELL",
+      "stratified_block_bootstrap_mean_95pct_CI": null,
+      "supported_by_preregistered_rule": false,
+      "target_descriptive_bootstrap_mean_95pct_CI": {
+        "target_A": [
+          0.017016731388169504,
+          0.09832202415674818
+        ],
+        "target_B": null
+      },
+      "target_means": {
+        "target_A": 0.05766937777245884,
+        "target_B": null
+      },
+      "target_medians": {
+        "target_A": 0.06111013068970195,
+        "target_B": null
+      },
+      "target_positive": {
+        "target_A": 3,
+        "target_B": 0
+      },
+      "usable_blocks": 4,
+      "values": [
+        0.08569654732593612,
+        0.11094750098756023,
+        -0.0024902512771287633,
+        0.03652371405346777
+      ]
+    },
+    "D_view": {
+      "confirmatory_evaluable": false,
+      "confirmatory_verdict": "NOT_EVALUABLE_TECHNICAL_INCOMPLETENESS",
+      "contrast": "D_view",
+      "left_arm": "A2_SWEEP90",
+      "mean": 0.07086829572408293,
+      "median": 0.06398539787378521,
+      "one_sided_exact_sign_test_p": 0.0625,
+      "positive_blocks": 4,
+      "right_arm": "A3_MIN_TRIGGER",
+      "stratified_block_bootstrap_mean_95pct_CI": null,
+      "supported_by_preregistered_rule": false,
+      "target_descriptive_bootstrap_mean_95pct_CI": {
+        "target_A": [
+          0.053994332863033456,
+          0.09354234082672308
+        ],
+        "target_B": null
+      },
+      "target_means": {
+        "target_A": 0.07086829572408293,
+        "target_B": null
+      },
+      "target_medians": {
+        "target_A": 0.06398539787378521,
+        "target_B": null
+      },
+      "target_positive": {
+        "target_A": 4,
+        "target_B": 0
+      },
+      "usable_blocks": 4,
+      "values": [
+        0.07006374598786813,
+        0.05008161596636462,
+        0.10542077118239668,
+        0.05790704975970229
+      ]
+    }
+  },
+  "final_gate": "CONFIRMATORY_EXPERIMENT_TECHNICALLY_INCOMPLETE",
+  "language_boundary": "executed action -> actual factor generation -> realized factor set -> local Gaussian posterior",
+  "manipulation_checks": {
+    "A1_DWELL": {
+      "accepted_keyscans": [
+        28,
+        27,
+        26,
+        29
+      ],
+      "fov_union_deg": [
+        360.0,
+        360.0,
+        360.0,
+        360.0
+      ],
+      "heading_triggered_keyscans": [
+        14,
+        14,
+        14,
+        15
+      ],
+      "yaw_excursion_rad": [
+        9.255452553322828,
+        9.344176974991948,
+        9.265920255987128,
+        9.362506475416483
+      ]
+    },
+    "A2_SWEEP90": {
+      "accepted_keyscans": [
+        30,
+        29,
+        28,
+        30
+      ],
+      "fov_union_deg": [
+        360.0,
+        360.0,
+        360.0,
+        360.0
+      ],
+      "heading_triggered_keyscans": [
+        16,
+        16,
+        16,
+        16
+      ],
+      "yaw_excursion_rad": [
+        10.89532301479507,
+        11.003786896177514,
+        10.925239186308568,
+        11.005650579200605
+      ]
+    },
+    "A3_MIN_TRIGGER": {
+      "accepted_keyscans": [
+        29,
+        28,
+        27,
+        29
+      ],
+      "fov_union_deg": [
+        360.0,
+        360.0,
+        360.0,
+        360.0
+      ],
+      "heading_triggered_keyscans": [
+        15,
+        15,
+        15,
+        15
+      ],
+      "yaw_excursion_rad": [
+        10.310156012376694,
+        10.40024030755822,
+        10.321726633329755,
+        10.40994529940466
+      ]
+    }
+  },
+  "planned_blocks": 8,
+  "planned_branches": 24,
+  "protocol_id": "p1_confirmatory_v12_20260917",
+  "pseudo_replication_used": false,
+  "statistical_unit": "canonical-history block",
+  "status": "ANALYZED",
+  "technical_exclusion_counts": {
+    "COLLECTED": 4,
+    "COLLECTED_BUDGET_INVALID": 3,
+    "TECHNICAL_INVALID_PREFIX": 1
+  },
+  "usable_blocks": 4,
+  "usable_blocks_by_target": {
+    "target_A": 4,
+    "target_B": 0
+  }
+}

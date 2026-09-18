@@ -12,6 +12,7 @@ import math
 
 
 PROTOCOL_VERSION = 'p1_preflight_v7'
+COMMON_PREFIX_PROTOCOL_VERSION = 'p1_common_prefix_v9'
 
 
 def wrap_angle(value):
@@ -153,6 +154,27 @@ TARGETS = {
     },
 }
 
+# Additional historical regions on the same frozen route.  They exist so the
+# N1-A offline screen has a candidate set with more than one local geometry; the
+# route itself, the map and every tolerance stay frozen.  The index selects the
+# history waypoint whose neighbourhood becomes the historical region.
+_TARGET_EXTRA_WAYPOINTS = {
+    'map3_grid_anchor_02': 2,
+    'map3_grid_anchor_03': 1,
+    'map3_grid_anchor_04': 3,
+}
+for _extra_id, _waypoint_index in _TARGET_EXTRA_WAYPOINTS.items():
+    _extra = copy.deepcopy(TARGETS['map3_grid_anchor_01'])
+    _extra['target_history_waypoint_index'] = _waypoint_index
+    _extra['candidate_region_waypoint_index'] = _waypoint_index
+    TARGETS[_extra_id] = _extra
+TARGETS['map3_grid_anchor_01']['candidate_region_waypoint_index'] = 0
+
+# The frozen preflight/screening profiles must keep their original size: the
+# additional historical regions exist only for the explicit direction-decision
+# profiles, which pass their target ids in from the frozen preregistration.
+DEFAULT_TARGET_IDS = ['map3_grid_anchor_01']
+
 
 def _condition(condition_id, delta_yaw_deg, offset_m, maneuver, diagnostics):
     return {
@@ -161,6 +183,8 @@ def _condition(condition_id, delta_yaw_deg, offset_m, maneuver, diagnostics):
         'lateral_offset_m': float(offset_m),
         'maneuver_type': maneuver,
         'diagnostics_enabled': bool(diagnostics),
+        'provenance_enabled': True,
+        'neutral_offset_m': 0.0,
     }
 
 
@@ -170,6 +194,297 @@ PREFLIGHT_CONDITIONS = [
     _condition('align60_diag_on', 60, 0.0, 'align', True),
     _condition('sweep90_diag_on', 90, 0.0, 'sweep', True),
 ]
+
+# ---------------------------------------------------------------------------
+# 2026-09-16 direction-decision experiment (N0 instrumentation validity and
+# N1-B budget-matched action intervention).  The frozen preflight above is
+# untouched; these are additive profiles with explicit per-episode seeds so a
+# matched block shares one TSP seed (the defect of the earlier OFF/ON pair was
+# seed confounding: 31000 + sequence).
+# ---------------------------------------------------------------------------
+
+N0_INSTRUMENT_ARMS = [
+    # (condition_id, diagnostics, provenance, neutral_offset_m)
+    ('n0_instr_off', False, False, 0.0),
+    ('n0_prov_on', False, True, 0.0),
+    ('n0_prov_diag_on', True, True, 0.0),
+]
+
+N0_SEEDS = [41001, 41002, 41003]
+# Latin-square arm order per seed: every arm occupies every position once.
+N0_ARM_ORDERS = [
+    ['n0_instr_off', 'n0_prov_on', 'n0_prov_diag_on'],
+    ['n0_prov_diag_on', 'n0_instr_off', 'n0_prov_on'],
+    ['n0_prov_on', 'n0_prov_diag_on', 'n0_instr_off'],
+]
+
+# N1-B action conditions at a fixed sensing/motion budget target.
+#   A0 baseline  : the frozen Graph-Based active revisit execution
+#   A1 neutral   : budget-matched neutral translation (away-and-back along the
+#                  arrival heading) - same scan-addition opportunity as A2's
+#                  three 30 deg rotations, but no deliberate yaw sweep
+#   A2 sweep90   : the frozen 90 deg sensing sweep (±30 deg at the anchor)
+N1_ACTIONS = [
+    ('n1_a0_baseline', 0.0, 'pass', False, True, 0.0),
+    ('n1_a1_neutral', 0.0, 'neutral', False, True, 1.5),
+    ('n1_a2_sweep90', 90.0, 'sweep', False, True, 0.0),
+]
+
+N1_TARGET_SEEDS = {
+    # two matched blocks per target, each with its own shared seed
+    0: [42001, 42002],
+    1: [42003, 42004],
+}
+
+# Balanced action order per block position (4 blocks x 3 actions).
+N1_BLOCK_ORDERS = [
+    ['n1_a0_baseline', 'n1_a1_neutral', 'n1_a2_sweep90'],
+    ['n1_a2_sweep90', 'n1_a0_baseline', 'n1_a1_neutral'],
+    ['n1_a1_neutral', 'n1_a2_sweep90', 'n1_a0_baseline'],
+    ['n1_a0_baseline', 'n1_a2_sweep90', 'n1_a1_neutral'],
+]
+
+
+def _n0_specs(target_id):
+    episodes = []
+    arm_by_id = {arm[0]: arm for arm in N0_INSTRUMENT_ARMS}
+    for block_index, seed in enumerate(N0_SEEDS):
+        order = N0_ARM_ORDERS[block_index]
+        for position, arm_id in enumerate(order):
+            condition_id, diagnostics, provenance, neutral = arm_by_id[arm_id]
+            spec = copy.deepcopy(TARGETS[target_id])
+            spec.update({
+                'protocol_version': PROTOCOL_VERSION,
+                'target_id': target_id,
+                'condition_id': condition_id,
+                'delta_yaw_deg': 0.0,
+                'lateral_offset_m': 0.0,
+                'maneuver_type': 'pass',
+                'neutral_offset_m': neutral,
+                'diagnostics_enabled': diagnostics,
+                'provenance_enabled': provenance,
+                'tsp_seed': seed,
+                'block_id': 'n0_seed{}'.format(seed),
+                'block_position': position,
+                'repeat': path_position_repeat(position),
+                'sequence': len(episodes) + 1,
+                'episode_id': '{:04d}_{}_s{}'.format(
+                    len(episodes) + 1, condition_id, seed),
+            })
+            episodes.append(spec)
+    return episodes
+
+
+def _n1_specs(target_ids):
+    episodes = []
+    action_by_id = {action[0]: action for action in N1_ACTIONS}
+    target_by_id = {target_id: TARGETS[target_id] for target_id in target_ids}
+    for target_index, target_id in enumerate(target_ids):
+        for block_offset, seed in enumerate(N1_TARGET_SEEDS.get(target_index, [])):
+            block_order_index = target_index * 2 + block_offset
+            order = N1_BLOCK_ORDERS[block_order_index % len(N1_BLOCK_ORDERS)]
+            for position, action_id in enumerate(order):
+                condition_id, yaw, maneuver, diagnostics, provenance, neutral = \
+                    action_by_id[action_id]
+                spec = copy.deepcopy(target_by_id[target_id])
+                spec.update({
+                    'protocol_version': PROTOCOL_VERSION,
+                    'target_id': target_id,
+                    'condition_id': condition_id,
+                    'action_id': action_id,
+                    'delta_yaw_deg': yaw,
+                    'lateral_offset_m': 0.0,
+                    'maneuver_type': maneuver,
+                    'neutral_offset_m': neutral,
+                    'diagnostics_enabled': diagnostics,
+                    'provenance_enabled': provenance,
+                    'tsp_seed': seed,
+                    'block_id': 'n1_{}_seed{}'.format(target_id, seed),
+                    'block_position': position,
+                    'repeat': path_position_repeat(position),
+                    'sequence': len(episodes) + 1,
+                    'episode_id': '{:04d}_{}_{}'.format(
+                        len(episodes) + 1, condition_id, target_id[-2:]),
+                })
+                episodes.append(spec)
+    return episodes
+
+
+def _common_prefix_v9_specs(target_id):
+    """One canonical history capture; no probe is executed in this profile."""
+    spec = copy.deepcopy(TARGETS[target_id])
+    spec.update({
+        'protocol_version': COMMON_PREFIX_PROTOCOL_VERSION,
+        'target_id': target_id,
+        'condition_id': 'v9_canonical_history',
+        'action_id': 'history_only',
+        'delta_yaw_deg': 0.0,
+        'lateral_offset_m': 0.0,
+        'maneuver_type': 'pass',
+        'neutral_offset_m': 0.0,
+        'diagnostics_enabled': False,
+        'provenance_enabled': True,
+        'observer_enabled': True,
+        'instrumentation_flush_period_s': 0.0,
+        'tsp_seed': 43001,
+        'block_id': 'v9_common_prefix_map3_grid_anchor_01',
+        'block_position': 0,
+        'repeat': 1,
+        'sequence': 1,
+        'episode_id': '0001_v9_canonical_history_anchor_01',
+        'record_replay_stream': True,
+        'stop_after_history': True,
+    })
+    return [spec]
+
+
+def path_position_repeat(position):
+    """Bookkeeping only: block position is the balanced-order slot, not a repeat."""
+    return int(position) + 1
+
+
+# ---------------------------------------------------------------------------
+# 2026-09-17 instrumentation repair (N0-R).
+#
+# The first N0 round could not certify the instrument: the instrumented arms
+# produced a small but sign-consistent offset in graph-size and local-constraint
+# counts.  The repair removes every serialization and file-write operation from
+# the constraint-creation path; this profile is the small online sanity check
+# that must pass before the same-input replay certification.
+#
+# Two conditions, alternating order per seed, same seed inside a block:
+#   n0r_observer_off_provenance_off  - graph observer ON, provenance OFF
+#   n0r_buffered_provenance_on       - graph observer ON, buffered provenance ON
+# The graph observer stays enabled in both arms because the measurement of the
+# pre-probe graph (and therefore the target freeze gate) depends on it; the
+# observer's own effect is therefore outside this profile and is documented as
+# such.
+# ---------------------------------------------------------------------------
+
+N0R_INSTRUMENT_ARMS = [
+    # (condition_id, diagnostics, provenance, observer)
+    ('n0r_provenance_off', False, False, True),
+    ('n0r_buffered_provenance_on', False, True, True),
+]
+
+N0R_SEEDS = [41001, 41002]
+
+N0R_ARM_ORDERS = [
+    ['n0r_provenance_off', 'n0r_buffered_provenance_on'],
+    ['n0r_buffered_provenance_on', 'n0r_provenance_off'],
+]
+
+# A third configuration the mapper supports but this profile does not run: with
+# the graph observer disabled there is no pose graph to freeze a target against,
+# so no scientific episode can be executed.  It is recorded here so the
+# limitation is explicit rather than implicit.
+N0R_UNRUNNABLE_CONFIGURATION = {
+    'observer': False,
+    'provenance': False,
+    'reason': 'without the graph observer the driver cannot freeze a target or '
+              'measure the pre-probe graph, so no episode outcome exists',
+}
+
+
+def _replay_source_specs(target_id):
+    """One recording episode whose only product is the mapper input stream.
+
+    Its outcomes are not used in any comparison: the same-input replay compares
+    two replays of this stream against each other.  The graph observer and the
+    provenance instrument are irrelevant here, so the instrument is disabled to
+    keep the recording run as plain as possible.
+    """
+    spec = copy.deepcopy(TARGETS[target_id])
+    spec.update({
+        'protocol_version': PROTOCOL_VERSION,
+        'target_id': target_id,
+        'condition_id': 'replay_source',
+        'delta_yaw_deg': 0.0,
+        'lateral_offset_m': 0.0,
+        'maneuver_type': 'pass',
+        'neutral_offset_m': 0.0,
+        'diagnostics_enabled': False,
+        'provenance_enabled': False,
+        'observer_enabled': True,
+        'record_replay_stream': True,
+        'tsp_seed': 43001,
+        'block_id': 'replay_source',
+        'block_position': 0,
+        'repeat': 1,
+        'sequence': 1,
+        'episode_id': '0001_replay_source',
+    })
+    return [spec]
+
+
+#: Seeds added by the pre-registered extension of the N0-R block.  No target,
+#: maneuver, instrument configuration, outcome or threshold changes; only the
+#: number of seed pairs grows, so a same-direction shift either persists or it
+#: does not.
+N0R_EXTENSION_SEEDS = [41003, 41004]
+
+
+def _n0r_specs(target_id, seeds=None):
+    episodes = []
+    seeds = list(seeds) if seeds else list(N0R_SEEDS)
+    arm_by_id = {arm[0]: arm for arm in N0R_INSTRUMENT_ARMS}
+    for block_index, seed in enumerate(seeds):
+        for position, arm_id in enumerate(
+                N0R_ARM_ORDERS[block_index % len(N0R_ARM_ORDERS)]):
+            condition_id, diagnostics, provenance, observer = arm_by_id[arm_id]
+            spec = copy.deepcopy(TARGETS[target_id])
+            spec.update({
+                'protocol_version': PROTOCOL_VERSION,
+                'target_id': target_id,
+                'condition_id': condition_id,
+                'delta_yaw_deg': 0.0,
+                'lateral_offset_m': 0.0,
+                'maneuver_type': 'pass',
+                'neutral_offset_m': 0.0,
+                'diagnostics_enabled': diagnostics,
+                'provenance_enabled': provenance,
+                'observer_enabled': observer,
+                # Zero I/O during the run: records are buffered on the
+                # constraint-creation path and serialized only at shutdown.
+                'instrumentation_flush_period_s': 0.0,
+                'tsp_seed': seed,
+                'block_id': 'n0r_seed{}'.format(seed),
+                'block_position': position,
+                'repeat': path_position_repeat(position),
+                'sequence': len(episodes) + 1,
+                'episode_id': '{:04d}_{}_s{}'.format(
+                    len(episodes) + 1, condition_id, seed),
+            })
+            episodes.append(spec)
+    return episodes
+
+
+def episode_specs(profile='preflight', repeats=1, target_ids=None):
+    if profile in ('preflight', 'screening'):
+        return episode_specs_legacy(profile, repeats, target_ids)
+    if profile == 'n0_matched':
+        selected = list(target_ids) if target_ids else list(DEFAULT_TARGET_IDS)
+        return _n0_specs(selected[0])
+    if profile == 'n0r_sanity':
+        selected = list(target_ids) if target_ids else list(DEFAULT_TARGET_IDS)
+        return _n0r_specs(selected[0])
+    if profile == 'n0r_extension':
+        selected = list(target_ids) if target_ids else list(DEFAULT_TARGET_IDS)
+        return _n0r_specs(selected[0], seeds=N0R_EXTENSION_SEEDS)
+    if profile == 'replay_source':
+        selected = list(target_ids) if target_ids else list(DEFAULT_TARGET_IDS)
+        return _replay_source_specs(selected[0])
+    if profile == 'n1_blocks':
+        selected = list(target_ids) if target_ids else sorted(TARGETS)[:2]
+        if len(selected) != 2:
+            raise ValueError('n1_blocks needs exactly two target ids')
+        return _n1_specs(list(selected))
+    if profile == 'common_prefix_v9':
+        selected = target_ids or DEFAULT_TARGET_IDS
+        if list(selected) != ['map3_grid_anchor_01']:
+            raise ValueError('common_prefix_v9 is frozen to map3_grid_anchor_01')
+        return _common_prefix_v9_specs('map3_grid_anchor_01')
+    raise ValueError('unknown profile: {}'.format(profile))
 
 
 def screening_conditions():
@@ -184,14 +499,10 @@ def screening_conditions():
     return conditions
 
 
-def episode_specs(profile='preflight', repeats=1, target_ids=None):
-    if profile == 'preflight':
-        conditions = PREFLIGHT_CONDITIONS
-    elif profile == 'screening':
-        conditions = screening_conditions()
-    else:
-        raise ValueError('unknown profile: {}'.format(profile))
-    selected = target_ids or sorted(TARGETS)
+def episode_specs_legacy(profile='preflight', repeats=1, target_ids=None):
+    """Legacy generator retained for the frozen preflight profiles."""
+    conditions = PREFLIGHT_CONDITIONS if profile == 'preflight' else screening_conditions()
+    selected = list(target_ids) if target_ids else list(DEFAULT_TARGET_IDS)
     unknown = sorted(set(selected) - set(TARGETS))
     if unknown:
         raise ValueError('unknown target ids: {}'.format(', '.join(unknown)))
@@ -208,6 +519,7 @@ def episode_specs(profile='preflight', repeats=1, target_ids=None):
                     'target_id': target_id,
                     'repeat': repeat,
                     'sequence': sequence,
+                    'tsp_seed': 31000 + sequence,
                     'episode_id': '{:04d}_{}_r{:02d}'.format(
                         sequence, condition['condition_id'], repeat),
                 })

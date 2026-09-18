@@ -1,0 +1,1070 @@
+{
+  "created_utc": "2026-09-16T07:45:31.013891+00:00",
+  "episodes": [
+    {
+      "attempts": [
+        {
+          "analysis_eligible": true,
+          "attempt": 1,
+          "episode_id": "0001_n1_a0_baseline_01",
+          "finished_utc": "2026-09-16T09:54:50.603389+00:00",
+          "run_dir": "episodes/0001_n1_a0_baseline_01/attempt_01",
+          "started_utc": "2026-09-16T09:52:47.565153+00:00",
+          "status": "SUCCEEDED",
+          "target_backend_measurement": true,
+          "target_constraint": false,
+          "target_nonexplicit_full_graph_constraint": true
+        }
+      ],
+      "episode_id": "0001_n1_a0_baseline_01",
+      "spec": {
+        "action_id": "n1_a0_baseline",
+        "block_id": "n1_map3_grid_anchor_01_seed42001",
+        "block_position": 0,
+        "candidate_region_waypoint_index": 0,
+        "condition_id": "n1_a0_baseline",
+        "delta_yaw_deg": 0.0,
+        "diagnostics_enabled": false,
+        "episode_id": "0001_n1_a0_baseline_01",
+        "goal_heading_tolerance_rad": 0.35,
+        "goal_position_tolerance_m": 0.75,
+        "goal_settle_s": 1.0,
+        "gt_heading_tolerance_rad": 0.35,
+        "gt_position_tolerance_m": 0.75,
+        "history_frame": "episode_mapper_start",
+        "history_hold_s": 2.0,
+        "history_offsets": [
+          [
+            6.0,
+            0.0,
+            0.0
+          ],
+          [
+            10.0,
+            0.0,
+            0.0
+          ],
+          [
+            10.0,
+            6.0,
+            1.5707963267948966
+          ],
+          [
+            6.0,
+            6.0,
+            3.141592653589793
+          ]
+        ],
+        "history_origin_source": "first_karto_path_pose_xy_with_fixed_map_axis",
+        "lateral_offset_m": 0.0,
+        "maneuver_type": "pass",
+        "map_id": "map3",
+        "map_name": "map3/map3",
+        "map_width": 74.0,
+        "marker_endpoint_max_error_m": 0.05,
+        "minimum_history_node_count": 20,
+        "minimum_target_segment_scans": 3,
+        "move_timeout_s": 360.0,
+        "neutral_offset_m": 0.0,
+        "probe_hold_s": 6.0,
+        "protocol_version": "p1_preflight_v7",
+        "provenance_enabled": true,
+        "repeat": 1,
+        "robot_position": "-28.0 -28.0 0",
+        "route_axis_heading_rad": 0.0,
+        "sequence": 1,
+        "start_pose": [
+          -28.0,
+          -28.0,
+          0.0
+        ],
+        "target_anchor_max_distance_m": 1.0,
+        "target_history_waypoint_index": 0,
+        "target_id": "map3_grid_anchor_01",
+        "target_reached_radius_m": 1.0,
+        "target_segment_radius_m": 2.5,
+        "tsp_seed": 42001
+      },
+      "status": "SUCCEEDED"
+    },
+    {
+      "attempts": [
+        {
+          "analysis_eligible": true,
+          "attempt": 1,
+          "episode_id": "0002_n1_a1_neutral_01",
+          "finished_utc": "2026-09-16T09:56:57.883464+00:00",
+          "run_dir": "episodes/0002_n1_a1_neutral_01/attempt_01",
+          "started_utc": "2026-09-16T09:54:50.609498+00:00",
+          "status": "SUCCEEDED",
+          "target_backend_measurement": true,
+          "target_constraint": false,
+          "target_nonexplicit_full_graph_constraint": true
+        }
+      ],
+      "episode_id": "0002_n1_a1_neutral_01",
+      "spec": {
+        "action_id": "n1_a1_neutral",
+        "block_id": "n1_map3_grid_anchor_01_seed42001",
+        "block_position": 1,
+        "candidate_region_waypoint_index": 0,
+        "condition_id": "n1_a1_neutral",
+        "delta_yaw_deg": 0.0,
+        "diagnostics_enabled": false,
+        "episode_id": "0002_n1_a1_neutral_01",
+        "goal_heading_tolerance_rad": 0.35,
+        "goal_position_tolerance_m": 0.75,
+        "goal_settle_s": 1.0,
+        "gt_heading_tolerance_rad": 0.35,
+        "gt_position_tolerance_m": 0.75,
+        "history_frame": "episode_mapper_start",
+        "history_hold_s": 2.0,
+        "history_offsets": [
+          [
+            6.0,
+            0.0,
+            0.0
+          ],
+          [
+            10.0,
+            0.0,
+            0.0
+          ],
+          [
+            10.0,
+            6.0,
+            1.5707963267948966
+          ],
+          [
+            6.0,
+            6.0,
+            3.141592653589793
+          ]
+        ],
+        "history_origin_source": "first_karto_path_pose_xy_with_fixed_map_axis",
+        "lateral_offset_m": 0.0,
+        "maneuver_type": "neutral",
+        "map_id": "map3",
+        "map_name": "map3/map3",
+        "map_width": 74.0,
+        "marker_endpoint_max_error_m": 0.05,
+        "minimum_history_node_count": 20,
+        "minimum_target_segment_scans": 3,
+        "move_timeout_s": 360.0,
+        "neutral_offset_m": 1.5,
+        "probe_hold_s": 6.0,
+        "protocol_version": "p1_preflight_v7",
+        "provenance_enabled": true,
+        "repeat": 2,
+        "robot_position": "-28.0 -28.0 0",
+        "route_axis_heading_rad": 0.0,
+        "sequence": 2,
+        "start_pose": [
+          -28.0,
+          -28.0,
+          0.0
+        ],
+        "target_anchor_max_distance_m": 1.0,
+        "target_history_waypoint_index": 0,
+        "target_id": "map3_grid_anchor_01",
+        "target_reached_radius_m": 1.0,
+        "target_segment_radius_m": 2.5,
+        "tsp_seed": 42001
+      },
+      "status": "SUCCEEDED"
+    },
+    {
+      "attempts": [
+        {
+          "analysis_eligible": true,
+          "attempt": 1,
+          "episode_id": "0003_n1_a2_sweep90_01",
+          "finished_utc": "2026-09-16T09:59:06.025762+00:00",
+          "run_dir": "episodes/0003_n1_a2_sweep90_01/attempt_01",
+          "started_utc": "2026-09-16T09:56:57.889777+00:00",
+          "status": "SUCCEEDED",
+          "target_backend_measurement": true,
+          "target_constraint": false,
+          "target_nonexplicit_full_graph_constraint": true
+        }
+      ],
+      "episode_id": "0003_n1_a2_sweep90_01",
+      "spec": {
+        "action_id": "n1_a2_sweep90",
+        "block_id": "n1_map3_grid_anchor_01_seed42001",
+        "block_position": 2,
+        "candidate_region_waypoint_index": 0,
+        "condition_id": "n1_a2_sweep90",
+        "delta_yaw_deg": 90.0,
+        "diagnostics_enabled": false,
+        "episode_id": "0003_n1_a2_sweep90_01",
+        "goal_heading_tolerance_rad": 0.35,
+        "goal_position_tolerance_m": 0.75,
+        "goal_settle_s": 1.0,
+        "gt_heading_tolerance_rad": 0.35,
+        "gt_position_tolerance_m": 0.75,
+        "history_frame": "episode_mapper_start",
+        "history_hold_s": 2.0,
+        "history_offsets": [
+          [
+            6.0,
+            0.0,
+            0.0
+          ],
+          [
+            10.0,
+            0.0,
+            0.0
+          ],
+          [
+            10.0,
+            6.0,
+            1.5707963267948966
+          ],
+          [
+            6.0,
+            6.0,
+            3.141592653589793
+          ]
+        ],
+        "history_origin_source": "first_karto_path_pose_xy_with_fixed_map_axis",
+        "lateral_offset_m": 0.0,
+        "maneuver_type": "sweep",
+        "map_id": "map3",
+        "map_name": "map3/map3",
+        "map_width": 74.0,
+        "marker_endpoint_max_error_m": 0.05,
+        "minimum_history_node_count": 20,
+        "minimum_target_segment_scans": 3,
+        "move_timeout_s": 360.0,
+        "neutral_offset_m": 0.0,
+        "probe_hold_s": 6.0,
+        "protocol_version": "p1_preflight_v7",
+        "provenance_enabled": true,
+        "repeat": 3,
+        "robot_position": "-28.0 -28.0 0",
+        "route_axis_heading_rad": 0.0,
+        "sequence": 3,
+        "start_pose": [
+          -28.0,
+          -28.0,
+          0.0
+        ],
+        "target_anchor_max_distance_m": 1.0,
+        "target_history_waypoint_index": 0,
+        "target_id": "map3_grid_anchor_01",
+        "target_reached_radius_m": 1.0,
+        "target_segment_radius_m": 2.5,
+        "tsp_seed": 42001
+      },
+      "status": "SUCCEEDED"
+    },
+    {
+      "attempts": [
+        {
+          "analysis_eligible": true,
+          "attempt": 1,
+          "episode_id": "0004_n1_a2_sweep90_01",
+          "finished_utc": "2026-09-16T10:01:22.633136+00:00",
+          "run_dir": "episodes/0004_n1_a2_sweep90_01/attempt_01",
+          "started_utc": "2026-09-16T09:59:06.028380+00:00",
+          "status": "SUCCEEDED",
+          "target_backend_measurement": true,
+          "target_constraint": false,
+          "target_nonexplicit_full_graph_constraint": true
+        }
+      ],
+      "episode_id": "0004_n1_a2_sweep90_01",
+      "spec": {
+        "action_id": "n1_a2_sweep90",
+        "block_id": "n1_map3_grid_anchor_01_seed42002",
+        "block_position": 0,
+        "candidate_region_waypoint_index": 0,
+        "condition_id": "n1_a2_sweep90",
+        "delta_yaw_deg": 90.0,
+        "diagnostics_enabled": false,
+        "episode_id": "0004_n1_a2_sweep90_01",
+        "goal_heading_tolerance_rad": 0.35,
+        "goal_position_tolerance_m": 0.75,
+        "goal_settle_s": 1.0,
+        "gt_heading_tolerance_rad": 0.35,
+        "gt_position_tolerance_m": 0.75,
+        "history_frame": "episode_mapper_start",
+        "history_hold_s": 2.0,
+        "history_offsets": [
+          [
+            6.0,
+            0.0,
+            0.0
+          ],
+          [
+            10.0,
+            0.0,
+            0.0
+          ],
+          [
+            10.0,
+            6.0,
+            1.5707963267948966
+          ],
+          [
+            6.0,
+            6.0,
+            3.141592653589793
+          ]
+        ],
+        "history_origin_source": "first_karto_path_pose_xy_with_fixed_map_axis",
+        "lateral_offset_m": 0.0,
+        "maneuver_type": "sweep",
+        "map_id": "map3",
+        "map_name": "map3/map3",
+        "map_width": 74.0,
+        "marker_endpoint_max_error_m": 0.05,
+        "minimum_history_node_count": 20,
+        "minimum_target_segment_scans": 3,
+        "move_timeout_s": 360.0,
+        "neutral_offset_m": 0.0,
+        "probe_hold_s": 6.0,
+        "protocol_version": "p1_preflight_v7",
+        "provenance_enabled": true,
+        "repeat": 1,
+        "robot_position": "-28.0 -28.0 0",
+        "route_axis_heading_rad": 0.0,
+        "sequence": 4,
+        "start_pose": [
+          -28.0,
+          -28.0,
+          0.0
+        ],
+        "target_anchor_max_distance_m": 1.0,
+        "target_history_waypoint_index": 0,
+        "target_id": "map3_grid_anchor_01",
+        "target_reached_radius_m": 1.0,
+        "target_segment_radius_m": 2.5,
+        "tsp_seed": 42002
+      },
+      "status": "SUCCEEDED"
+    },
+    {
+      "attempts": [
+        {
+          "analysis_eligible": true,
+          "attempt": 1,
+          "episode_id": "0005_n1_a0_baseline_01",
+          "finished_utc": "2026-09-16T10:03:33.116315+00:00",
+          "run_dir": "episodes/0005_n1_a0_baseline_01/attempt_01",
+          "started_utc": "2026-09-16T10:01:22.639574+00:00",
+          "status": "SUCCEEDED",
+          "target_backend_measurement": true,
+          "target_constraint": false,
+          "target_nonexplicit_full_graph_constraint": true
+        }
+      ],
+      "episode_id": "0005_n1_a0_baseline_01",
+      "spec": {
+        "action_id": "n1_a0_baseline",
+        "block_id": "n1_map3_grid_anchor_01_seed42002",
+        "block_position": 1,
+        "candidate_region_waypoint_index": 0,
+        "condition_id": "n1_a0_baseline",
+        "delta_yaw_deg": 0.0,
+        "diagnostics_enabled": false,
+        "episode_id": "0005_n1_a0_baseline_01",
+        "goal_heading_tolerance_rad": 0.35,
+        "goal_position_tolerance_m": 0.75,
+        "goal_settle_s": 1.0,
+        "gt_heading_tolerance_rad": 0.35,
+        "gt_position_tolerance_m": 0.75,
+        "history_frame": "episode_mapper_start",
+        "history_hold_s": 2.0,
+        "history_offsets": [
+          [
+            6.0,
+            0.0,
+            0.0
+          ],
+          [
+            10.0,
+            0.0,
+            0.0
+          ],
+          [
+            10.0,
+            6.0,
+            1.5707963267948966
+          ],
+          [
+            6.0,
+            6.0,
+            3.141592653589793
+          ]
+        ],
+        "history_origin_source": "first_karto_path_pose_xy_with_fixed_map_axis",
+        "lateral_offset_m": 0.0,
+        "maneuver_type": "pass",
+        "map_id": "map3",
+        "map_name": "map3/map3",
+        "map_width": 74.0,
+        "marker_endpoint_max_error_m": 0.05,
+        "minimum_history_node_count": 20,
+        "minimum_target_segment_scans": 3,
+        "move_timeout_s": 360.0,
+        "neutral_offset_m": 0.0,
+        "probe_hold_s": 6.0,
+        "protocol_version": "p1_preflight_v7",
+        "provenance_enabled": true,
+        "repeat": 2,
+        "robot_position": "-28.0 -28.0 0",
+        "route_axis_heading_rad": 0.0,
+        "sequence": 5,
+        "start_pose": [
+          -28.0,
+          -28.0,
+          0.0
+        ],
+        "target_anchor_max_distance_m": 1.0,
+        "target_history_waypoint_index": 0,
+        "target_id": "map3_grid_anchor_01",
+        "target_reached_radius_m": 1.0,
+        "target_segment_radius_m": 2.5,
+        "tsp_seed": 42002
+      },
+      "status": "SUCCEEDED"
+    },
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "finished_utc": "2026-09-16T10:05:19.596149+00:00",
+          "reason": "RuntimeError: pilot driver exited with code 1",
+          "run_dir": "episodes/0006_n1_a1_neutral_01/attempt_01",
+          "started_utc": "2026-09-16T10:03:33.118001+00:00",
+          "status": "FAILED"
+        },
+        {
+          "attempt": 2,
+          "finished_utc": "2026-09-16T16:58:25.062162+00:00",
+          "reason": "RuntimeError: pilot driver exited with code 1",
+          "run_dir": "episodes/0006_n1_a1_neutral_01/attempt_02",
+          "started_utc": "2026-09-16T16:50:12.370788+00:00",
+          "status": "FAILED"
+        },
+        {
+          "attempt": 3,
+          "finished_utc": "2026-09-16T17:07:52.909865+00:00",
+          "reason": "RuntimeError: pilot driver exited with code 1",
+          "run_dir": "episodes/0006_n1_a1_neutral_01/attempt_03",
+          "started_utc": "2026-09-16T16:59:18.872186+00:00",
+          "status": "FAILED"
+        }
+      ],
+      "episode_id": "0006_n1_a1_neutral_01",
+      "spec": {
+        "action_id": "n1_a1_neutral",
+        "block_id": "n1_map3_grid_anchor_01_seed42002",
+        "block_position": 2,
+        "candidate_region_waypoint_index": 0,
+        "condition_id": "n1_a1_neutral",
+        "delta_yaw_deg": 0.0,
+        "diagnostics_enabled": false,
+        "episode_id": "0006_n1_a1_neutral_01",
+        "goal_heading_tolerance_rad": 0.35,
+        "goal_position_tolerance_m": 0.75,
+        "goal_settle_s": 1.0,
+        "gt_heading_tolerance_rad": 0.35,
+        "gt_position_tolerance_m": 0.75,
+        "history_frame": "episode_mapper_start",
+        "history_hold_s": 2.0,
+        "history_offsets": [
+          [
+            6.0,
+            0.0,
+            0.0
+          ],
+          [
+            10.0,
+            0.0,
+            0.0
+          ],
+          [
+            10.0,
+            6.0,
+            1.5707963267948966
+          ],
+          [
+            6.0,
+            6.0,
+            3.141592653589793
+          ]
+        ],
+        "history_origin_source": "first_karto_path_pose_xy_with_fixed_map_axis",
+        "lateral_offset_m": 0.0,
+        "maneuver_type": "neutral",
+        "map_id": "map3",
+        "map_name": "map3/map3",
+        "map_width": 74.0,
+        "marker_endpoint_max_error_m": 0.05,
+        "minimum_history_node_count": 20,
+        "minimum_target_segment_scans": 3,
+        "move_timeout_s": 360.0,
+        "neutral_offset_m": 1.5,
+        "probe_hold_s": 6.0,
+        "protocol_version": "p1_preflight_v7",
+        "provenance_enabled": true,
+        "repeat": 3,
+        "robot_position": "-28.0 -28.0 0",
+        "route_axis_heading_rad": 0.0,
+        "sequence": 6,
+        "start_pose": [
+          -28.0,
+          -28.0,
+          0.0
+        ],
+        "target_anchor_max_distance_m": 1.0,
+        "target_history_waypoint_index": 0,
+        "target_id": "map3_grid_anchor_01",
+        "target_reached_radius_m": 1.0,
+        "target_segment_radius_m": 2.5,
+        "tsp_seed": 42002
+      },
+      "status": "TECHNICAL_INVALID_FINAL",
+      "technical_invalid_reason": "three attempts all failed the pre-registered independent ground-truth validity criterion at the probe of the neutral manoeuvre, with a reproducible map-versus-world offset: GT position error 0.841 m (attempt 1, probe_arrival), 0.812 m (attempt 2, neutral_out) and 0.751 m (attempt 3, probe_arrival) while the TF error stayed at 0.144-0.220 m and the SLAM path error was 0.011-0.267 m, i.e. the mapper regarded itself as being at the target while the simulated robot was 0.75-0.85 m away from it. The offset is systematic for this route (the same route also failed the pre-probe comparability gate by 19 nodes / 50.6 percent of edges), so the episode is recorded as technically invalid instead of retrying until the world happens to agree. No tolerance was changed."
+    },
+    {
+      "attempts": [
+        {
+          "analysis_eligible": true,
+          "attempt": 1,
+          "episode_id": "0007_n1_a1_neutral_03",
+          "finished_utc": "2026-09-16T17:19:03.148856+00:00",
+          "run_dir": "episodes/0007_n1_a1_neutral_03/attempt_01",
+          "started_utc": "2026-09-16T17:08:22.635658+00:00",
+          "status": "SUCCEEDED",
+          "target_backend_measurement": true,
+          "target_constraint": false,
+          "target_nonexplicit_full_graph_constraint": true
+        }
+      ],
+      "episode_id": "0007_n1_a1_neutral_03",
+      "spec": {
+        "action_id": "n1_a1_neutral",
+        "block_id": "n1_map3_grid_anchor_03_seed42003",
+        "block_position": 0,
+        "candidate_region_waypoint_index": 1,
+        "condition_id": "n1_a1_neutral",
+        "delta_yaw_deg": 0.0,
+        "diagnostics_enabled": false,
+        "episode_id": "0007_n1_a1_neutral_03",
+        "goal_heading_tolerance_rad": 0.35,
+        "goal_position_tolerance_m": 0.75,
+        "goal_settle_s": 1.0,
+        "gt_heading_tolerance_rad": 0.35,
+        "gt_position_tolerance_m": 0.75,
+        "history_frame": "episode_mapper_start",
+        "history_hold_s": 2.0,
+        "history_offsets": [
+          [
+            6.0,
+            0.0,
+            0.0
+          ],
+          [
+            10.0,
+            0.0,
+            0.0
+          ],
+          [
+            10.0,
+            6.0,
+            1.5707963267948966
+          ],
+          [
+            6.0,
+            6.0,
+            3.141592653589793
+          ]
+        ],
+        "history_origin_source": "first_karto_path_pose_xy_with_fixed_map_axis",
+        "lateral_offset_m": 0.0,
+        "maneuver_type": "neutral",
+        "map_id": "map3",
+        "map_name": "map3/map3",
+        "map_width": 74.0,
+        "marker_endpoint_max_error_m": 0.05,
+        "minimum_history_node_count": 20,
+        "minimum_target_segment_scans": 3,
+        "move_timeout_s": 360.0,
+        "neutral_offset_m": 1.5,
+        "probe_hold_s": 6.0,
+        "protocol_version": "p1_preflight_v7",
+        "provenance_enabled": true,
+        "repeat": 1,
+        "robot_position": "-28.0 -28.0 0",
+        "route_axis_heading_rad": 0.0,
+        "sequence": 7,
+        "start_pose": [
+          -28.0,
+          -28.0,
+          0.0
+        ],
+        "target_anchor_max_distance_m": 1.0,
+        "target_history_waypoint_index": 1,
+        "target_id": "map3_grid_anchor_03",
+        "target_reached_radius_m": 1.0,
+        "target_segment_radius_m": 2.5,
+        "tsp_seed": 42003
+      },
+      "status": "SUCCEEDED"
+    },
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "finished_utc": "2026-09-16T17:27:00.736784+00:00",
+          "reason": "RuntimeError: pilot driver exited with code 1",
+          "run_dir": "episodes/0008_n1_a2_sweep90_03/attempt_01",
+          "started_utc": "2026-09-16T17:19:03.152342+00:00",
+          "status": "FAILED"
+        },
+        {
+          "attempt": 2,
+          "finished_utc": "2026-09-16T17:36:53.571799+00:00",
+          "reason": "RuntimeError: pilot driver exited with code 1",
+          "run_dir": "episodes/0008_n1_a2_sweep90_03/attempt_02",
+          "started_utc": "2026-09-16T17:27:29.774644+00:00",
+          "status": "FAILED"
+        }
+      ],
+      "episode_id": "0008_n1_a2_sweep90_03",
+      "spec": {
+        "action_id": "n1_a2_sweep90",
+        "block_id": "n1_map3_grid_anchor_03_seed42003",
+        "block_position": 1,
+        "candidate_region_waypoint_index": 1,
+        "condition_id": "n1_a2_sweep90",
+        "delta_yaw_deg": 90.0,
+        "diagnostics_enabled": false,
+        "episode_id": "0008_n1_a2_sweep90_03",
+        "goal_heading_tolerance_rad": 0.35,
+        "goal_position_tolerance_m": 0.75,
+        "goal_settle_s": 1.0,
+        "gt_heading_tolerance_rad": 0.35,
+        "gt_position_tolerance_m": 0.75,
+        "history_frame": "episode_mapper_start",
+        "history_hold_s": 2.0,
+        "history_offsets": [
+          [
+            6.0,
+            0.0,
+            0.0
+          ],
+          [
+            10.0,
+            0.0,
+            0.0
+          ],
+          [
+            10.0,
+            6.0,
+            1.5707963267948966
+          ],
+          [
+            6.0,
+            6.0,
+            3.141592653589793
+          ]
+        ],
+        "history_origin_source": "first_karto_path_pose_xy_with_fixed_map_axis",
+        "lateral_offset_m": 0.0,
+        "maneuver_type": "sweep",
+        "map_id": "map3",
+        "map_name": "map3/map3",
+        "map_width": 74.0,
+        "marker_endpoint_max_error_m": 0.05,
+        "minimum_history_node_count": 20,
+        "minimum_target_segment_scans": 3,
+        "move_timeout_s": 360.0,
+        "neutral_offset_m": 0.0,
+        "probe_hold_s": 6.0,
+        "protocol_version": "p1_preflight_v7",
+        "provenance_enabled": true,
+        "repeat": 2,
+        "robot_position": "-28.0 -28.0 0",
+        "route_axis_heading_rad": 0.0,
+        "sequence": 8,
+        "start_pose": [
+          -28.0,
+          -28.0,
+          0.0
+        ],
+        "target_anchor_max_distance_m": 1.0,
+        "target_history_waypoint_index": 1,
+        "target_id": "map3_grid_anchor_03",
+        "target_reached_radius_m": 1.0,
+        "target_segment_radius_m": 2.5,
+        "tsp_seed": 42003
+      },
+      "status": "TECHNICAL_INVALID_FINAL",
+      "technical_invalid_reason": "two attempts failed the pre-registered independent ground-truth validity criterion at probe_arrival with a reproducible map-frame rotation: GT heading error 0.583 rad (attempt 1) and 0.798 rad (attempt 2) against a 0.35 rad tolerance, while the TF heading error stayed at 0.079 / 0.212 rad and the GT position error was only 0.316 / 0.255 m. The measured map-to-world rotation at that pose is +0.208 rad in the successful neutral episode of the same route, +0.345 rad and -0.319 rad in the two failed sweep attempts, i.e. the mapper frame itself is rotated by up to about 20 degrees relative to the world and moves between runs of the same route. No tolerance was changed."
+    },
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "finished_utc": "2026-09-16T17:46:03.853089+00:00",
+          "reason": "RuntimeError: pilot driver exited with code 1",
+          "run_dir": "episodes/0009_n1_a0_baseline_03/attempt_01",
+          "started_utc": "2026-09-16T17:37:20.545964+00:00",
+          "status": "FAILED"
+        }
+      ],
+      "episode_id": "0009_n1_a0_baseline_03",
+      "spec": {
+        "action_id": "n1_a0_baseline",
+        "block_id": "n1_map3_grid_anchor_03_seed42003",
+        "block_position": 2,
+        "candidate_region_waypoint_index": 1,
+        "condition_id": "n1_a0_baseline",
+        "delta_yaw_deg": 0.0,
+        "diagnostics_enabled": false,
+        "episode_id": "0009_n1_a0_baseline_03",
+        "goal_heading_tolerance_rad": 0.35,
+        "goal_position_tolerance_m": 0.75,
+        "goal_settle_s": 1.0,
+        "gt_heading_tolerance_rad": 0.35,
+        "gt_position_tolerance_m": 0.75,
+        "history_frame": "episode_mapper_start",
+        "history_hold_s": 2.0,
+        "history_offsets": [
+          [
+            6.0,
+            0.0,
+            0.0
+          ],
+          [
+            10.0,
+            0.0,
+            0.0
+          ],
+          [
+            10.0,
+            6.0,
+            1.5707963267948966
+          ],
+          [
+            6.0,
+            6.0,
+            3.141592653589793
+          ]
+        ],
+        "history_origin_source": "first_karto_path_pose_xy_with_fixed_map_axis",
+        "lateral_offset_m": 0.0,
+        "maneuver_type": "pass",
+        "map_id": "map3",
+        "map_name": "map3/map3",
+        "map_width": 74.0,
+        "marker_endpoint_max_error_m": 0.05,
+        "minimum_history_node_count": 20,
+        "minimum_target_segment_scans": 3,
+        "move_timeout_s": 360.0,
+        "neutral_offset_m": 0.0,
+        "probe_hold_s": 6.0,
+        "protocol_version": "p1_preflight_v7",
+        "provenance_enabled": true,
+        "repeat": 3,
+        "robot_position": "-28.0 -28.0 0",
+        "route_axis_heading_rad": 0.0,
+        "sequence": 9,
+        "start_pose": [
+          -28.0,
+          -28.0,
+          0.0
+        ],
+        "target_anchor_max_distance_m": 1.0,
+        "target_history_waypoint_index": 1,
+        "target_id": "map3_grid_anchor_03",
+        "target_reached_radius_m": 1.0,
+        "target_segment_radius_m": 2.5,
+        "tsp_seed": 42003
+      },
+      "status": "TECHNICAL_INVALID_FINAL",
+      "technical_invalid_reason": "one attempt; the probe_arrival pose check failed with a ground-truth position error of 0.613 m and a heading error of 0.643 rad while TF reported 0.289 m / 0.036 rad. The map-to-world offset at that pose was small (dx 28.11, dy 28.18, dtheta 0.089 rad), so this is a route-execution discrepancy rather than a map-frame offset. The block was already unusable because its sweep arm had been recorded as technically invalid, so a retry cannot change the analysable data and the remaining planned episodes were executed instead."
+    },
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "finished_utc": "2026-09-16T17:54:27.016402+00:00",
+          "reason": "RuntimeError: pilot driver exited with code 1",
+          "run_dir": "episodes/0010_n1_a0_baseline_03/attempt_01",
+          "started_utc": "2026-09-16T17:46:38.083711+00:00",
+          "status": "FAILED"
+        },
+        {
+          "attempt": 2,
+          "finished_utc": "2026-09-16T18:03:13.782167+00:00",
+          "reason": "RuntimeError: pilot driver exited with code 1",
+          "run_dir": "episodes/0010_n1_a0_baseline_03/attempt_02",
+          "started_utc": "2026-09-16T17:54:55.635673+00:00",
+          "status": "FAILED"
+        }
+      ],
+      "episode_id": "0010_n1_a0_baseline_03",
+      "spec": {
+        "action_id": "n1_a0_baseline",
+        "block_id": "n1_map3_grid_anchor_03_seed42004",
+        "block_position": 0,
+        "candidate_region_waypoint_index": 1,
+        "condition_id": "n1_a0_baseline",
+        "delta_yaw_deg": 0.0,
+        "diagnostics_enabled": false,
+        "episode_id": "0010_n1_a0_baseline_03",
+        "goal_heading_tolerance_rad": 0.35,
+        "goal_position_tolerance_m": 0.75,
+        "goal_settle_s": 1.0,
+        "gt_heading_tolerance_rad": 0.35,
+        "gt_position_tolerance_m": 0.75,
+        "history_frame": "episode_mapper_start",
+        "history_hold_s": 2.0,
+        "history_offsets": [
+          [
+            6.0,
+            0.0,
+            0.0
+          ],
+          [
+            10.0,
+            0.0,
+            0.0
+          ],
+          [
+            10.0,
+            6.0,
+            1.5707963267948966
+          ],
+          [
+            6.0,
+            6.0,
+            3.141592653589793
+          ]
+        ],
+        "history_origin_source": "first_karto_path_pose_xy_with_fixed_map_axis",
+        "lateral_offset_m": 0.0,
+        "maneuver_type": "pass",
+        "map_id": "map3",
+        "map_name": "map3/map3",
+        "map_width": 74.0,
+        "marker_endpoint_max_error_m": 0.05,
+        "minimum_history_node_count": 20,
+        "minimum_target_segment_scans": 3,
+        "move_timeout_s": 360.0,
+        "neutral_offset_m": 0.0,
+        "probe_hold_s": 6.0,
+        "protocol_version": "p1_preflight_v7",
+        "provenance_enabled": true,
+        "repeat": 1,
+        "robot_position": "-28.0 -28.0 0",
+        "route_axis_heading_rad": 0.0,
+        "sequence": 10,
+        "start_pose": [
+          -28.0,
+          -28.0,
+          0.0
+        ],
+        "target_anchor_max_distance_m": 1.0,
+        "target_history_waypoint_index": 1,
+        "target_id": "map3_grid_anchor_03",
+        "target_reached_radius_m": 1.0,
+        "target_segment_radius_m": 2.5,
+        "tsp_seed": 42004
+      },
+      "status": "TECHNICAL_INVALID_FINAL",
+      "technical_invalid_reason": "two attempts failed the independent ground-truth pose check at probe_arrival: attempt 1 with GT 0.480 m / 0.431 rad and attempt 2 with GT 0.678 m / 0.467 rad (position tolerance 0.75 m, heading tolerance 0.35 rad), while TF reported 0.370 / 0.301 m. The block was already unusable because its episodes could no longer form a complete baseline/neutral/sweep triple, so the remaining planned episodes were executed instead of retrying further. No tolerance was changed."
+    },
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "finished_utc": "2026-09-16T18:12:48.063268+00:00",
+          "reason": "RuntimeError: pilot driver exited with code 1",
+          "run_dir": "episodes/0011_n1_a2_sweep90_03/attempt_01",
+          "started_utc": "2026-09-16T18:04:48.064041+00:00",
+          "status": "FAILED"
+        },
+        {
+          "analysis_eligible": true,
+          "attempt": 2,
+          "episode_id": "0011_n1_a2_sweep90_03",
+          "finished_utc": "2026-09-16T18:22:49.297504+00:00",
+          "run_dir": "episodes/0011_n1_a2_sweep90_03/attempt_02",
+          "started_utc": "2026-09-16T18:13:05.510890+00:00",
+          "status": "SUCCEEDED",
+          "target_backend_measurement": true,
+          "target_constraint": false,
+          "target_nonexplicit_full_graph_constraint": true
+        }
+      ],
+      "episode_id": "0011_n1_a2_sweep90_03",
+      "spec": {
+        "action_id": "n1_a2_sweep90",
+        "block_id": "n1_map3_grid_anchor_03_seed42004",
+        "block_position": 1,
+        "candidate_region_waypoint_index": 1,
+        "condition_id": "n1_a2_sweep90",
+        "delta_yaw_deg": 90.0,
+        "diagnostics_enabled": false,
+        "episode_id": "0011_n1_a2_sweep90_03",
+        "goal_heading_tolerance_rad": 0.35,
+        "goal_position_tolerance_m": 0.75,
+        "goal_settle_s": 1.0,
+        "gt_heading_tolerance_rad": 0.35,
+        "gt_position_tolerance_m": 0.75,
+        "history_frame": "episode_mapper_start",
+        "history_hold_s": 2.0,
+        "history_offsets": [
+          [
+            6.0,
+            0.0,
+            0.0
+          ],
+          [
+            10.0,
+            0.0,
+            0.0
+          ],
+          [
+            10.0,
+            6.0,
+            1.5707963267948966
+          ],
+          [
+            6.0,
+            6.0,
+            3.141592653589793
+          ]
+        ],
+        "history_origin_source": "first_karto_path_pose_xy_with_fixed_map_axis",
+        "lateral_offset_m": 0.0,
+        "maneuver_type": "sweep",
+        "map_id": "map3",
+        "map_name": "map3/map3",
+        "map_width": 74.0,
+        "marker_endpoint_max_error_m": 0.05,
+        "minimum_history_node_count": 20,
+        "minimum_target_segment_scans": 3,
+        "move_timeout_s": 360.0,
+        "neutral_offset_m": 0.0,
+        "probe_hold_s": 6.0,
+        "protocol_version": "p1_preflight_v7",
+        "provenance_enabled": true,
+        "repeat": 2,
+        "robot_position": "-28.0 -28.0 0",
+        "route_axis_heading_rad": 0.0,
+        "sequence": 11,
+        "start_pose": [
+          -28.0,
+          -28.0,
+          0.0
+        ],
+        "target_anchor_max_distance_m": 1.0,
+        "target_history_waypoint_index": 1,
+        "target_id": "map3_grid_anchor_03",
+        "target_reached_radius_m": 1.0,
+        "target_segment_radius_m": 2.5,
+        "tsp_seed": 42004
+      },
+      "status": "SUCCEEDED"
+    },
+    {
+      "attempts": [
+        {
+          "attempt": 1,
+          "finished_utc": "2026-09-16T18:31:15.428116+00:00",
+          "reason": "RuntimeError: pilot driver exited with code 1",
+          "run_dir": "episodes/0012_n1_a1_neutral_03/attempt_01",
+          "started_utc": "2026-09-16T18:22:49.299827+00:00",
+          "status": "FAILED"
+        }
+      ],
+      "episode_id": "0012_n1_a1_neutral_03",
+      "spec": {
+        "action_id": "n1_a1_neutral",
+        "block_id": "n1_map3_grid_anchor_03_seed42004",
+        "block_position": 2,
+        "candidate_region_waypoint_index": 1,
+        "condition_id": "n1_a1_neutral",
+        "delta_yaw_deg": 0.0,
+        "diagnostics_enabled": false,
+        "episode_id": "0012_n1_a1_neutral_03",
+        "goal_heading_tolerance_rad": 0.35,
+        "goal_position_tolerance_m": 0.75,
+        "goal_settle_s": 1.0,
+        "gt_heading_tolerance_rad": 0.35,
+        "gt_position_tolerance_m": 0.75,
+        "history_frame": "episode_mapper_start",
+        "history_hold_s": 2.0,
+        "history_offsets": [
+          [
+            6.0,
+            0.0,
+            0.0
+          ],
+          [
+            10.0,
+            0.0,
+            0.0
+          ],
+          [
+            10.0,
+            6.0,
+            1.5707963267948966
+          ],
+          [
+            6.0,
+            6.0,
+            3.141592653589793
+          ]
+        ],
+        "history_origin_source": "first_karto_path_pose_xy_with_fixed_map_axis",
+        "lateral_offset_m": 0.0,
+        "maneuver_type": "neutral",
+        "map_id": "map3",
+        "map_name": "map3/map3",
+        "map_width": 74.0,
+        "marker_endpoint_max_error_m": 0.05,
+        "minimum_history_node_count": 20,
+        "minimum_target_segment_scans": 3,
+        "move_timeout_s": 360.0,
+        "neutral_offset_m": 1.5,
+        "probe_hold_s": 6.0,
+        "protocol_version": "p1_preflight_v7",
+        "provenance_enabled": true,
+        "repeat": 3,
+        "robot_position": "-28.0 -28.0 0",
+        "route_axis_heading_rad": 0.0,
+        "sequence": 12,
+        "start_pose": [
+          -28.0,
+          -28.0,
+          0.0
+        ],
+        "target_anchor_max_distance_m": 1.0,
+        "target_history_waypoint_index": 1,
+        "target_id": "map3_grid_anchor_03",
+        "target_reached_radius_m": 1.0,
+        "target_segment_radius_m": 2.5,
+        "tsp_seed": 42004
+      },
+      "status": "TECHNICAL_INVALID_FINAL",
+      "technical_invalid_reason": "one attempt; probe_arrival failed the ground-truth heading criterion with 0.611 rad against a 0.35 rad tolerance (position was fine: GT 0.292 m, TF 0.202 m / 0.032 rad). The block was already unusable because its baseline arm had been recorded as technically invalid. No tolerance was changed."
+    }
+  ],
+  "finished_utc": null,
+  "last_started_utc": "2026-09-16T18:13:05.388708+00:00",
+  "profile": "n1_blocks",
+  "protocol_version": "p1_preflight_v7",
+  "reason": "RuntimeError: pilot driver exited with code 1",
+  "repeats": 1,
+  "schema_version": 1,
+  "status": "PAUSED"
+}

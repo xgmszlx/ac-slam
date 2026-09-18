@@ -1,4 +1,5 @@
 #include <sstream>
+#include <boost/thread.hpp>
 
 #include <visualization_msgs/Marker.h>
 #include <visualization_msgs/MarkerArray.h>
@@ -29,6 +30,13 @@ MultiMapper::MultiMapper()
 	mapperNode.param("enable_full_pose_graph_observer", mPublishFullPoseGraphObserver, false);
 	mapperNode.param("max_covariance", mMaxCovariance, 0.05);
 	mapperNode.param("min_map_size", mMinMapSize, 50);
+	mapperNode.param("instrumentation_flush_period_s",
+	                 mInstrumentationFlushPeriod, 5.0);
+	mapperNode.param("pose_graph_dump_path", mPoseGraphDumpPath,
+	                 std::string(""));
+	mapperNode.param("pose_graph_dump_request", mPoseGraphDumpRequest, 0);
+	mPoseGraphDumpDone = mPoseGraphDumpRequest;
+	mInstrumentationThreadStarted = false;
 
 	// Apply tf_prefix to all used frame-id's
 	mLaserFrame = mTransformListener.resolve(mLaserFrame);
@@ -62,6 +70,9 @@ MultiMapper::MultiMapper()
 
 	// Initialize KARTO-Mapper
 	mMapper = new karto::OpenMapper(true);
+	// Observation-only configuration: the dump path must reach the mapper
+	// after the mapper exists, or the graceful-shutdown dump cannot happen.
+	mMapper->SetPoseGraphDumpPath(karto::String(mPoseGraphDumpPath.c_str()));
 	
 	double param_d;
 	bool param_b;
@@ -194,6 +205,16 @@ MultiMapper::MultiMapper()
 	// Phase 4A observation-only: expose each Karto-accepted loop closure as a
 	// small structured topic (default ON; publishing one int/scan-id message per
 	// closure cannot change SLAM behavior). No matcher internals are published.
+	if(mInstrumentationFlushPeriod > 0.0 || !mPoseGraphDumpPath.empty())
+	{
+		// Pose-graph dump polling must remain live even when periodic
+		// provenance flushing is disabled.  Branch replay deliberately uses
+		// flush_period=0, then requests an exact graph cut after the final
+		// prefix scan, so no later scan exists to service the request.
+		mInstrumentationThreadStarted = true;
+		mInstrumentationThread = boost::thread(
+			&MultiMapper::instrumentationMaintenanceLoop, this);
+	}
 	mLoopClosurePublisher = mapperNode.advertise<cpp_solver::LoopClosureEvent>(
 		"loop_closed", 10);
 	mLoopClosureSeq = 0;
@@ -238,7 +259,14 @@ MultiMapper::MultiMapper()
 
 MultiMapper::~MultiMapper()
 {
-
+	// The maintenance thread reads mMapper.  At ROS shutdown ros::ok() is
+	// already false, so wait for that thread to finish before C++ destroys the
+	// remaining members (including mMapper).  Without this join, teardown races
+	// with the thread's final FlushEdgeProvenance call and can corrupt the heap.
+	if(mInstrumentationThreadStarted && mInstrumentationThread.joinable())
+	{
+		mInstrumentationThread.join();
+	}
 }
 
 /**
@@ -855,6 +883,48 @@ bool MultiMapper::updateMap()
 	mGridMap.header.frame_id = mMapFrame.c_str();
 	mMapChanged = false;
 	return true;
+}
+
+
+void MultiMapper::instrumentationMaintenanceLoop()
+{
+	// Observation-only maintenance:
+	//   1. periodically flush buffered edge-provenance records (no-op when
+	//      the instrument is disabled),
+	//   2. write a complete graph dump when the harness asks for one.
+	// This thread never touches the matcher, the solver or the graph.
+	const double period = mInstrumentationFlushPeriod > 0.0
+		? mInstrumentationFlushPeriod : 1.0;
+	while(ros::ok())
+	{
+		boost::this_thread::sleep(
+			boost::posix_time::milliseconds(
+				static_cast<long>(period * 1000.0)));
+		if(!ros::ok()) break;
+		if(mInstrumentationFlushPeriod > 0.0)
+		{
+			mMapper->FlushEdgeProvenance();
+		}
+
+		if(mPoseGraphDumpPath.empty()) continue;
+		int request = mPoseGraphDumpRequest;
+		// Namespace-correct lookup so the replay harness can run the mapper
+		// under a different node name.
+		ros::param::getCached(ros::this_node::getName() + "/pose_graph_dump_request",
+		                      request);
+		if(request != mPoseGraphDumpDone)
+		{
+			mMapper->WritePoseGraphJson(
+				karto::String(mPoseGraphDumpPath.c_str()));
+			mPoseGraphDumpDone = request;
+		}
+	}
+	// Periodic-flush runs keep their existing final maintenance flush.  At
+	// zero, OpenMapper's destructor remains the sole final flush path.
+	if(mInstrumentationFlushPeriod > 0.0)
+	{
+		mMapper->FlushEdgeProvenance();
+	}
 }
 
 void MultiMapper::receiveLocalizedScan(const nav2d_msgs::LocalizedScan::ConstPtr& scan)

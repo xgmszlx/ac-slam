@@ -1,0 +1,13 @@
+{
+  "amendment_id": "v12_technical_amendment_03",
+  "applied_after": "COLLECTION_COMPLETE and technical-validity review, before opening any post-action scientific outcome",
+  "changes_primary_endpoint": false,
+  "changes_contrasts": false,
+  "changes_support_rule": false,
+  "outcome_blind": true,
+  "reason": "The preregistered analysis implementation would have mapped fewer than eight usable blocks to NO_STABLE_ACTION_EFFECT. The protocol instead requires CONFIRMATORY_EXPERIMENT_TECHNICALLY_INCOMPLETE when the planned two-target data are technically insufficient.",
+  "uniform_rule": "Run the frozen endpoints only on blocks already marked COLLECTED. If the usable set is not exactly four Target A plus four Target B blocks, report all available outputs as descriptive-only, mark every confirmatory contrast NOT_EVALUABLE_TECHNICAL_INCOMPLETENESS, and force the final gate to CONFIRMATORY_EXPERIMENT_TECHNICALLY_INCOMPLETE.",
+  "invalid_target_B_scientific_outcomes_opened_before_amendment": false,
+  "old_analysis_code_sha256": "4c6f7258a6a68b1f512ebd61140a6a8673942e631b7bacc29837496db26db95e",
+  "amended_analysis_code_sha256": "a68b8add87e6410de37d365c60f2729bb5bff5a391353b50d23c5db39951263b"
+}

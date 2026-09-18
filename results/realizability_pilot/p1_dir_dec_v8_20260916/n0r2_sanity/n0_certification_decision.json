@@ -1,0 +1,337 @@
+{
+  "online_sanity": {
+    "comparability": {
+      "classes": [
+        "preprobe_node_count",
+        "preprobe_edge_count"
+      ],
+      "comparable_pair_count": 0,
+      "comparable_seeds": [],
+      "incomparable_seeds": [
+        "41001",
+        "41002"
+      ],
+      "minimum_comparable_pairs": 2,
+      "pairs": [
+        {
+          "arms": {
+            "n0r_buffered_provenance_on": {
+              "preprobe_edge_count": 38,
+              "preprobe_node_count": 33
+            },
+            "n0r_provenance_off": {
+              "preprobe_edge_count": 42,
+              "preprobe_node_count": 35
+            }
+          },
+          "comparable": false,
+          "differences": {
+            "n0r_buffered_provenance_on": {
+              "preprobe_edge_count": -4,
+              "preprobe_node_count": -2
+            }
+          },
+          "seed": "41001"
+        },
+        {
+          "arms": {
+            "n0r_buffered_provenance_on": {
+              "preprobe_edge_count": 40,
+              "preprobe_node_count": 34
+            },
+            "n0r_provenance_off": {
+              "preprobe_edge_count": 43,
+              "preprobe_node_count": 36
+            }
+          },
+          "comparable": false,
+          "differences": {
+            "n0r_buffered_provenance_on": {
+              "preprobe_edge_count": -3,
+              "preprobe_node_count": -2
+            }
+          },
+          "seed": "41002"
+        }
+      ],
+      "source": "recomputed_exact_equality",
+      "sufficient": false
+    },
+    "comparator_arm": "n0r_provenance_off",
+    "entries": [
+      {
+        "arm": "n0r_buffered_provenance_on",
+        "exceeds_repeatability": true,
+        "excluded_incomparable_seeds": [],
+        "mean_difference": -10.0,
+        "n_comparable_pairs": 2,
+        "numerical_tolerance": 0.0,
+        "outcome": "final_edge_count",
+        "paired_differences": [
+          -14,
+          -6
+        ],
+        "raw_mean_difference": -10.0,
+        "raw_paired_differences_all_seeds": [
+          -14.0,
+          -6.0
+        ],
+        "reference_repeatability_mad": 1.5308641975308634,
+        "same_sign_nonzero": true,
+        "threshold": 1.5308641975308634,
+        "triggers_stop_rule": false
+      },
+      {
+        "arm": "n0r_buffered_provenance_on",
+        "exceeds_repeatability": true,
+        "excluded_incomparable_seeds": [],
+        "mean_difference": -4.0,
+        "n_comparable_pairs": 2,
+        "numerical_tolerance": 0.0,
+        "outcome": "final_node_count",
+        "paired_differences": [
+          -6,
+          -2
+        ],
+        "raw_mean_difference": -4.0,
+        "raw_paired_differences_all_seeds": [
+          -6.0,
+          -2.0
+        ],
+        "reference_repeatability_mad": 0.7160493827160492,
+        "same_sign_nonzero": true,
+        "threshold": 0.7160493827160492,
+        "triggers_stop_rule": false
+      },
+      {
+        "arm": "n0r_buffered_provenance_on",
+        "exceeds_repeatability": true,
+        "excluded_incomparable_seeds": [],
+        "mean_difference": -2.0,
+        "n_comparable_pairs": 2,
+        "numerical_tolerance": 0.0,
+        "outcome": "new_keyscans",
+        "paired_differences": [
+          -4,
+          0
+        ],
+        "raw_mean_difference": -2.0,
+        "raw_paired_differences_all_seeds": [
+          -4.0,
+          0.0
+        ],
+        "reference_repeatability_mad": 0.6666666666666669,
+        "same_sign_nonzero": false,
+        "threshold": 0.6666666666666669,
+        "triggers_stop_rule": false
+      },
+      {
+        "arm": "n0r_buffered_provenance_on",
+        "exceeds_repeatability": true,
+        "excluded_incomparable_seeds": [],
+        "mean_difference": 2.1283297415269407,
+        "n_comparable_pairs": 2,
+        "numerical_tolerance": 1e-09,
+        "outcome": "target_geodesic_mean_m",
+        "paired_differences": [
+          1.3589624158261566,
+          2.8976970672277247
+        ],
+        "raw_mean_difference": 2.1283297415269407,
+        "raw_paired_differences_all_seeds": [
+          1.3589624158261566,
+          2.8976970672277247
+        ],
+        "reference_repeatability_mad": 0.710461228766389,
+        "same_sign_nonzero": true,
+        "threshold": 0.710461228766389,
+        "triggers_stop_rule": false
+      }
+    ],
+    "state": "ONLINE_SANITY_PASSED",
+    "triggered": []
+  },
+  "online_sanity_role": "screen for an obvious post-repair shift; it is decisive only when at least 2 matched pairs exist, otherwise the replay decides",
+  "online_sanity_source": "results/realizability_pilot/p1_dir_dec_v8_20260916/n0r2_sanity",
+  "online_sanity_unfiltered": {
+    "comparability": {
+      "classes": [
+        "preprobe_node_count",
+        "preprobe_edge_count"
+      ],
+      "comparable_pair_count": null,
+      "comparable_seeds": [],
+      "incomparable_seeds": [],
+      "minimum_comparable_pairs": 2,
+      "pairs": [],
+      "source": "filter_disabled",
+      "sufficient": true
+    },
+    "comparator_arm": "n0r_provenance_off",
+    "entries": [
+      {
+        "arm": "n0r_buffered_provenance_on",
+        "exceeds_repeatability": true,
+        "excluded_incomparable_seeds": [],
+        "mean_difference": -10.0,
+        "n_comparable_pairs": 2,
+        "numerical_tolerance": 0.0,
+        "outcome": "final_edge_count",
+        "paired_differences": [
+          -14,
+          -6
+        ],
+        "raw_mean_difference": -10.0,
+        "raw_paired_differences_all_seeds": [
+          -14.0,
+          -6.0
+        ],
+        "reference_repeatability_mad": 1.5308641975308634,
+        "same_sign_nonzero": true,
+        "threshold": 1.5308641975308634,
+        "triggers_stop_rule": true
+      },
+      {
+        "arm": "n0r_buffered_provenance_on",
+        "exceeds_repeatability": true,
+        "excluded_incomparable_seeds": [],
+        "mean_difference": -4.0,
+        "n_comparable_pairs": 2,
+        "numerical_tolerance": 0.0,
+        "outcome": "final_node_count",
+        "paired_differences": [
+          -6,
+          -2
+        ],
+        "raw_mean_difference": -4.0,
+        "raw_paired_differences_all_seeds": [
+          -6.0,
+          -2.0
+        ],
+        "reference_repeatability_mad": 0.7160493827160492,
+        "same_sign_nonzero": true,
+        "threshold": 0.7160493827160492,
+        "triggers_stop_rule": true
+      },
+      {
+        "arm": "n0r_buffered_provenance_on",
+        "exceeds_repeatability": true,
+        "excluded_incomparable_seeds": [],
+        "mean_difference": -2.0,
+        "n_comparable_pairs": 2,
+        "numerical_tolerance": 0.0,
+        "outcome": "new_keyscans",
+        "paired_differences": [
+          -4,
+          0
+        ],
+        "raw_mean_difference": -2.0,
+        "raw_paired_differences_all_seeds": [
+          -4.0,
+          0.0
+        ],
+        "reference_repeatability_mad": 0.6666666666666669,
+        "same_sign_nonzero": false,
+        "threshold": 0.6666666666666669,
+        "triggers_stop_rule": false
+      },
+      {
+        "arm": "n0r_buffered_provenance_on",
+        "exceeds_repeatability": true,
+        "excluded_incomparable_seeds": [],
+        "mean_difference": 2.1283297415269407,
+        "n_comparable_pairs": 2,
+        "numerical_tolerance": 1e-09,
+        "outcome": "target_geodesic_mean_m",
+        "paired_differences": [
+          1.3589624158261566,
+          2.8976970672277247
+        ],
+        "raw_mean_difference": 2.1283297415269407,
+        "raw_paired_differences_all_seeds": [
+          1.3589624158261566,
+          2.8976970672277247
+        ],
+        "reference_repeatability_mad": 0.710461228766389,
+        "same_sign_nonzero": true,
+        "threshold": 0.710461228766389,
+        "triggers_stop_rule": true
+      }
+    ],
+    "state": "PAUSED_INSTRUMENTATION_REPAIR_FAILED",
+    "triggered": [
+      {
+        "arm": "n0r_buffered_provenance_on",
+        "exceeds_repeatability": true,
+        "excluded_incomparable_seeds": [],
+        "mean_difference": -10.0,
+        "n_comparable_pairs": 2,
+        "numerical_tolerance": 0.0,
+        "outcome": "final_edge_count",
+        "paired_differences": [
+          -14,
+          -6
+        ],
+        "raw_mean_difference": -10.0,
+        "raw_paired_differences_all_seeds": [
+          -14.0,
+          -6.0
+        ],
+        "reference_repeatability_mad": 1.5308641975308634,
+        "same_sign_nonzero": true,
+        "threshold": 1.5308641975308634,
+        "triggers_stop_rule": true
+      },
+      {
+        "arm": "n0r_buffered_provenance_on",
+        "exceeds_repeatability": true,
+        "excluded_incomparable_seeds": [],
+        "mean_difference": -4.0,
+        "n_comparable_pairs": 2,
+        "numerical_tolerance": 0.0,
+        "outcome": "final_node_count",
+        "paired_differences": [
+          -6,
+          -2
+        ],
+        "raw_mean_difference": -4.0,
+        "raw_paired_differences_all_seeds": [
+          -6.0,
+          -2.0
+        ],
+        "reference_repeatability_mad": 0.7160493827160492,
+        "same_sign_nonzero": true,
+        "threshold": 0.7160493827160492,
+        "triggers_stop_rule": true
+      },
+      {
+        "arm": "n0r_buffered_provenance_on",
+        "exceeds_repeatability": true,
+        "excluded_incomparable_seeds": [],
+        "mean_difference": 2.1283297415269407,
+        "n_comparable_pairs": 2,
+        "numerical_tolerance": 1e-09,
+        "outcome": "target_geodesic_mean_m",
+        "paired_differences": [
+          1.3589624158261566,
+          2.8976970672277247
+        ],
+        "raw_mean_difference": 2.1283297415269407,
+        "raw_paired_differences_all_seeds": [
+          1.3589624158261566,
+          2.8976970672277247
+        ],
+        "reference_repeatability_mad": 0.710461228766389,
+        "same_sign_nonzero": true,
+        "threshold": 0.710461228766389,
+        "triggers_stop_rule": true
+      }
+    ]
+  },
+  "online_sanity_unusable_reason": "only 0 seed pair(s) entered the probe from the same pre-probe graph (minimum 2), so a paired difference cannot be attributed to the instrument",
+  "online_sanity_usable": false,
+  "outcome": "OUTCOME_MEASUREMENT_STABLE",
+  "reason": "identical input produces an identical graph with the instrument off and on, within the pre-registered numerical floor and the measured replay repeatability",
+  "replay_failures": [],
+  "replay_verdict": "REPLAY_NEUTRALITY_CERTIFIED"
+}

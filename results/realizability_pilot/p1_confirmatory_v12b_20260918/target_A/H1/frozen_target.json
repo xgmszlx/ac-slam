@@ -1,0 +1,206 @@
+{
+  "anchor_reference_index": 2,
+  "anchor_scan": {
+    "id": 16,
+    "observed_time": 83.9,
+    "theta": -0.06221563782700834,
+    "unique_id": 16,
+    "x": 5.88234381789452,
+    "y": 0.10550327202376729
+  },
+  "canonical_history_complete": true,
+  "exact_state_count": 5,
+  "frozen_before_probe": true,
+  "heading_tolerance_rad": 0.25,
+  "historical_scan_ids": [
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "historical_unique_ids": [
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "matches": [
+    {
+      "heading_error_rad": 0.04333474329707848,
+      "position_error_m": 0.050494965875421585,
+      "q": [
+        3.95631,
+        0.0392656,
+        0.18456545688813514
+      ],
+      "reference_index": 0,
+      "stage_gt_pose": [
+        3.96988,
+        0.087903,
+        0.14123071359105666
+      ],
+      "stamp": 20.6,
+      "state_id": 14
+    },
+    {
+      "heading_error_rad": 0.04462181641088198,
+      "position_error_m": 0.02278805715720448,
+      "q": [
+        4.87728,
+        0.136958,
+        0.060427417344146396
+      ],
+      "reference_index": 1,
+      "stage_gt_pose": [
+        4.90005,
+        0.136051,
+        0.015805600933264413
+      ],
+      "stamp": 22.5,
+      "state_id": 15
+    },
+    {
+      "heading_error_rad": 0.012426440559240678,
+      "position_error_m": 0.08301499923170542,
+      "q": [
+        5.80695,
+        0.116092,
+        -0.048395710879992185
+      ],
+      "reference_index": 2,
+      "stage_gt_pose": [
+        5.88753,
+        0.0961332,
+        -0.06082215143923286
+      ],
+      "stamp": 26.1,
+      "state_id": 16
+    },
+    {
+      "heading_error_rad": 0.019167256627074577,
+      "position_error_m": 0.08749876082779942,
+      "q": [
+        6.76544,
+        0.0601547,
+        -0.035691102471246454
+      ],
+      "reference_index": 3,
+      "stage_gt_pose": [
+        6.83687,
+        0.00961968,
+        -0.016523845844171877
+      ],
+      "stamp": 30.7,
+      "state_id": 17
+    },
+    {
+      "heading_error_rad": 0.012612179750543937,
+      "position_error_m": 0.054130505347917045,
+      "q": [
+        7.75011,
+        0.0360571,
+        -0.015722440353488507
+      ],
+      "reference_index": 4,
+      "stage_gt_pose": [
+        7.79352,
+        0.00372007,
+        -0.003110260602944571
+      ],
+      "stamp": 35.5,
+      "state_id": 18
+    }
+  ],
+  "outcome_blind": true,
+  "position_tolerance_m": 0.6,
+  "reference_definition": {
+    "q": [
+      [
+        3.95631,
+        0.0392656,
+        0.18456545688813514
+      ],
+      [
+        4.87728,
+        0.136958,
+        0.060427417344146396
+      ],
+      [
+        5.80695,
+        0.116092,
+        -0.048395710879992185
+      ],
+      [
+        6.76544,
+        0.0601547,
+        -0.035691102471246454
+      ],
+      [
+        7.75011,
+        0.0360571,
+        -0.015722440353488507
+      ]
+    ],
+    "selection_rule": "all five already verified v10 physical scans",
+    "source": "/home/wcqw/ac-slam/results/realizability_pilot/p1_dwell_control_v10_20260917/target_physical_region.json",
+    "source_sha256": "4b7d7eaebf78b045cf8285516fd68920bb0bc086f12889c824738888732eb434",
+    "source_state_ids": [
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "target_id": "map3_grid_anchor_01"
+  },
+  "route_start_node_count": 12,
+  "segment_nodes": [
+    {
+      "id": 14,
+      "observed_time": 83.9,
+      "theta": 0.14593320929081446,
+      "unique_id": 14,
+      "x": 3.927727085990659,
+      "y": 0.04528221447431336
+    },
+    {
+      "id": 15,
+      "observed_time": 83.9,
+      "theta": 0.012314944340701068,
+      "unique_id": 15,
+      "x": 4.886611737703729,
+      "y": 0.1507665080141498
+    },
+    {
+      "id": 16,
+      "observed_time": 83.9,
+      "theta": -0.06221563782700834,
+      "unique_id": 16,
+      "x": 5.88234381789452,
+      "y": 0.10550327202376729
+    },
+    {
+      "id": 17,
+      "observed_time": 83.9,
+      "theta": -0.020431255612004706,
+      "unique_id": 17,
+      "x": 6.827785419083985,
+      "y": 0.022141731939633473
+    },
+    {
+      "id": 18,
+      "observed_time": 83.9,
+      "theta": -0.006600914441930783,
+      "unique_id": 18,
+      "x": 7.783236533240077,
+      "y": 0.012252063156288453
+    }
+  ],
+  "source_history_result": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_A/H1/history/attempt_02/episode_result.json",
+  "status": "TARGET_REFERENCE_MATCH_VALID",
+  "target_id": "map3_grid_anchor_01",
+  "target_label": "target_A",
+  "total_cost": 0.021684140407339045
+}

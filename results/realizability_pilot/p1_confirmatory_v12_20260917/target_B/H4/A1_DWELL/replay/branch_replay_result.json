@@ -1,0 +1,332 @@
+{
+  "accepted_probe_keyscan_count": 19,
+  "combined_record_count": 546,
+  "combined_stream": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12_20260917/target_B/H4/A1_DWELL/combined_stream.jsonl",
+  "edge_provenance_path": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12_20260917/target_B/H4/A1_DWELL/replay/edge_provenance.jsonl",
+  "final_edge_count": 91,
+  "final_node_count": 62,
+  "mapper_params": {
+    "LoopMatchMaximumVarianceCoarse": 0.16,
+    "LoopMatchMinimumChainSize": 4.0,
+    "LoopMatchMinimumResponseCoarse": 0.6,
+    "LoopMatchMinimumResponseFine": 0.7,
+    "LoopSearchMaximumDistance": 4.0,
+    "MinimumTravelDistance": 1.0,
+    "MinimumTravelHeading": 0.52,
+    "grid_resolution": 0.1,
+    "max_covariance": 0.01,
+    "min_map_size": 20.0,
+    "range_threshold": 25.0
+  },
+  "new_edge_count": 33,
+  "prefix_record_count": 43,
+  "prefix_stream_identical": true,
+  "preprobe_edge_count": 58,
+  "preprobe_node_count": 43,
+  "preprobe_signature": {
+    "edge_count": 58,
+    "edge_endpoints_in_insertion_order": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        0,
+        10
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        1,
+        11
+      ],
+      [
+        11,
+        12
+      ],
+      [
+        10,
+        12
+      ],
+      [
+        12,
+        13
+      ],
+      [
+        13,
+        14
+      ],
+      [
+        14,
+        15
+      ],
+      [
+        15,
+        16
+      ],
+      [
+        16,
+        17
+      ],
+      [
+        17,
+        18
+      ],
+      [
+        18,
+        19
+      ],
+      [
+        19,
+        20
+      ],
+      [
+        20,
+        21
+      ],
+      [
+        18,
+        21
+      ],
+      [
+        21,
+        22
+      ],
+      [
+        22,
+        23
+      ],
+      [
+        23,
+        24
+      ],
+      [
+        24,
+        25
+      ],
+      [
+        25,
+        26
+      ],
+      [
+        26,
+        27
+      ],
+      [
+        27,
+        28
+      ],
+      [
+        28,
+        29
+      ],
+      [
+        24,
+        29
+      ],
+      [
+        29,
+        30
+      ],
+      [
+        30,
+        31
+      ],
+      [
+        7,
+        31
+      ],
+      [
+        31,
+        32
+      ],
+      [
+        32,
+        33
+      ],
+      [
+        31,
+        33
+      ],
+      [
+        33,
+        34
+      ],
+      [
+        30,
+        34
+      ],
+      [
+        34,
+        35
+      ],
+      [
+        30,
+        35
+      ],
+      [
+        35,
+        36
+      ],
+      [
+        29,
+        36
+      ],
+      [
+        36,
+        37
+      ],
+      [
+        26,
+        37
+      ],
+      [
+        37,
+        38
+      ],
+      [
+        27,
+        38
+      ],
+      [
+        38,
+        39
+      ],
+      [
+        37,
+        39
+      ],
+      [
+        39,
+        40
+      ],
+      [
+        36,
+        40
+      ],
+      [
+        40,
+        41
+      ],
+      [
+        35,
+        41
+      ],
+      [
+        41,
+        42
+      ],
+      [
+        34,
+        42
+      ]
+    ],
+    "excluded_fields": [
+      "run_id",
+      "path",
+      "wall_clock",
+      "logging_timestamp"
+    ],
+    "hash_fields": "sorted state/unique IDs and corrected poses; ordered edge IDs/endpoints/relative measurements/covariances; target IDs",
+    "input_record_count": 43,
+    "input_stream_hash": "523bbc776c6f6ee5ebf4174ea9d3ee414dfb1ce7b451c8252414cd3984838366",
+    "node_count": 43,
+    "node_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42
+    ],
+    "preprobe_graph_hash": "43c45f65d2feb0d6a5ec85d777b36e8da5ac2451bb7b68ce960ce7ef7ee4619d",
+    "signature_version": "common-prefix-graph-v1",
+    "target_historical_ids": [
+      19,
+      20,
+      21,
+      22,
+      23
+    ]
+  },
+  "probe_record_count": 503,
+  "protocol": "v9 common-prefix branched replay",
+  "replayed_prefix_hash": "523bbc776c6f6ee5ebf4174ea9d3ee414dfb1ce7b451c8252414cd3984838366",
+  "source_prefix_hash": "523bbc776c6f6ee5ebf4174ea9d3ee414dfb1ce7b451c8252414cd3984838366",
+  "source_prefix_record_count": 43
+}

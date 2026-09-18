@@ -1,0 +1,228 @@
+{
+  "backend_was_not_launched": true,
+  "budget_gates": {
+    "pairwise_distance_range_m_max": 0.1,
+    "pairwise_time_range_s_max": 1.5,
+    "raw_scan_relative_range_max": 0.03
+  },
+  "calibration_repeats_per_target_arm": 3,
+  "calibration_state_sha256": "9585faae8062bbff2b4a52f5719c235ee81457697a648c18eba79f952b494ea7",
+  "calibration_summary": {
+    "target_A": {
+      "arm_medians": [
+        {
+          "actual_distance_m": 13.936545315664421,
+          "actual_duration_s": 65.1,
+          "arm": "A1_DWELL",
+          "distance_repeatability_range_m": 0.0038828096761491793,
+          "duration_repeatability_range_s": 0.4999999999999858,
+          "raw_scan_count": 653,
+          "raw_scan_repeatability_range": 5
+        },
+        {
+          "actual_distance_m": 13.93819829292417,
+          "actual_duration_s": 65.30000000000001,
+          "arm": "A3_MIN_TRIGGER",
+          "distance_repeatability_range_m": 0.02054665212116369,
+          "duration_repeatability_range_s": 0.5999999999999943,
+          "raw_scan_count": 655,
+          "raw_scan_repeatability_range": 5
+        },
+        {
+          "actual_distance_m": 13.94735466939913,
+          "actual_duration_s": 64.7,
+          "arm": "A2_SWEEP90",
+          "distance_repeatability_range_m": 0.0032367111335673826,
+          "duration_repeatability_range_s": 0.4000000000000057,
+          "raw_scan_count": 650,
+          "raw_scan_repeatability_range": 3
+        }
+      ],
+      "median_gate": {
+        "observed": {
+          "distance_range_m": 0.010809353734709148,
+          "duration_range_s": 0.6000000000000085,
+          "raw_scan_relative_spread": 0.007660878447395302
+        },
+        "passed": true,
+        "thresholds": {
+          "pairwise_distance_range_m_max": 0.1,
+          "pairwise_time_range_s_max": 1.5,
+          "raw_scan_relative_range_max": 0.03
+        }
+      },
+      "passed": true,
+      "repeat_gates": [
+        {
+          "gate": {
+            "observed": {
+              "distance_range_m": 0.020137666126098352,
+              "duration_range_s": 0.7999999999999972,
+              "raw_scan_relative_spread": 0.01074718526100307
+            },
+            "passed": true,
+            "thresholds": {
+              "pairwise_distance_range_m_max": 0.1,
+              "pairwise_time_range_s_max": 1.5,
+              "raw_scan_relative_range_max": 0.03
+            }
+          },
+          "repeat": 1
+        },
+        {
+          "gate": {
+            "observed": {
+              "distance_range_m": 0.009156376474960481,
+              "duration_range_s": 0.4000000000000057,
+              "raw_scan_relative_spread": 0.006125574272588055
+            },
+            "passed": true,
+            "thresholds": {
+              "pairwise_distance_range_m_max": 0.1,
+              "pairwise_time_range_s_max": 1.5,
+              "raw_scan_relative_range_max": 0.03
+            }
+          },
+          "repeat": 2
+        },
+        {
+          "gate": {
+            "observed": {
+              "distance_range_m": 0.012393689423799259,
+              "duration_range_s": 0.7999999999999972,
+              "raw_scan_relative_spread": 0.009202453987730062
+            },
+            "passed": true,
+            "thresholds": {
+              "pairwise_distance_range_m_max": 0.1,
+              "pairwise_time_range_s_max": 1.5,
+              "raw_scan_relative_range_max": 0.03
+            }
+          },
+          "repeat": 3
+        }
+      ]
+    },
+    "target_B": {
+      "arm_medians": [
+        {
+          "actual_distance_m": 9.728883135821482,
+          "actual_duration_s": 53.300000000000004,
+          "arm": "A1_DWELL",
+          "distance_repeatability_range_m": 0.010278869545100378,
+          "duration_repeatability_range_s": 0.10000000000000142,
+          "raw_scan_count": 534,
+          "raw_scan_repeatability_range": 1
+        },
+        {
+          "actual_distance_m": 9.71220449604774,
+          "actual_duration_s": 53.39999999999999,
+          "arm": "A3_MIN_TRIGGER",
+          "distance_repeatability_range_m": 0.0033228948267716163,
+          "duration_repeatability_range_s": 0.20000000000000995,
+          "raw_scan_count": 537,
+          "raw_scan_repeatability_range": 1
+        },
+        {
+          "actual_distance_m": 9.71361919691323,
+          "actual_duration_s": 53.1,
+          "arm": "A2_SWEEP90",
+          "distance_repeatability_range_m": 0.005094833199308368,
+          "duration_repeatability_range_s": 0.29999999999999716,
+          "raw_scan_count": 534,
+          "raw_scan_repeatability_range": 5
+        }
+      ],
+      "median_gate": {
+        "observed": {
+          "distance_range_m": 0.016678639773742177,
+          "duration_range_s": 0.29999999999999005,
+          "raw_scan_relative_spread": 0.005607476635514018
+        },
+        "passed": true,
+        "thresholds": {
+          "pairwise_distance_range_m_max": 0.1,
+          "pairwise_time_range_s_max": 1.5,
+          "raw_scan_relative_range_max": 0.03
+        }
+      },
+      "passed": true,
+      "repeat_gates": [
+        {
+          "gate": {
+            "observed": {
+              "distance_range_m": 0.016678639773742177,
+              "duration_range_s": 0.29999999999999005,
+              "raw_scan_relative_spread": 0.0037406483790523694
+            },
+            "passed": true,
+            "thresholds": {
+              "pairwise_distance_range_m_max": 0.1,
+              "pairwise_time_range_s_max": 1.5,
+              "raw_scan_relative_range_max": 0.03
+            }
+          },
+          "repeat": 1
+        },
+        {
+          "gate": {
+            "observed": {
+              "distance_range_m": 0.012676296291994404,
+              "duration_range_s": 0.09999999999999432,
+              "raw_scan_relative_spread": 0.0037313432835820895
+            },
+            "passed": true,
+            "thresholds": {
+              "pairwise_distance_range_m_max": 0.1,
+              "pairwise_time_range_s_max": 1.5,
+              "raw_scan_relative_range_max": 0.03
+            }
+          },
+          "repeat": 2
+        },
+        {
+          "gate": {
+            "observed": {
+              "distance_range_m": 0.019632271010323166,
+              "duration_range_s": 0.6000000000000014,
+              "raw_scan_relative_spread": 0.011235955056179775
+            },
+            "passed": true,
+            "thresholds": {
+              "pairwise_distance_range_m_max": 0.1,
+              "pairwise_time_range_s_max": 1.5,
+              "raw_scan_relative_range_max": 0.03
+            }
+          },
+          "repeat": 3
+        }
+      ]
+    }
+  },
+  "created_before_scientific_collection": true,
+  "dwell_durations_s": {
+    "target_A": {
+      "A1_DWELL": 7.1,
+      "A2_SWEEP90": 0.0,
+      "A3_MIN_TRIGGER": 2.6,
+      "technical_selection_rule": "v12 frozen dwell plus median within-target A2-minus-arm physical duration; uses no backend endpoint",
+      "v12_duration_correction_s": {
+        "A1_DWELL": -0.5,
+        "A3_MIN_TRIGGER": -0.9499999999999957
+      }
+    },
+    "target_B": {
+      "A1_DWELL": 11.4,
+      "A2_SWEEP90": 0.0,
+      "A3_MIN_TRIGGER": 7.0,
+      "technical_selection_rule": "v12 frozen dwell plus median within-target A2-minus-arm physical duration; uses no backend endpoint",
+      "v12_duration_correction_s": {
+        "A1_DWELL": 3.8000000000000007,
+        "A3_MIN_TRIGGER": 3.5
+      }
+    }
+  },
+  "protocol_id": "p1_confirmatory_v12b_20260918",
+  "scientific_endpoint_peeked": false,
+  "status": "TARGET_SPECIFIC_BUDGET_FROZEN"
+}

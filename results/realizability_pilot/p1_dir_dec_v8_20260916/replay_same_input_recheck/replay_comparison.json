@@ -1,0 +1,159 @@
+{
+  "cross_arm_comparisons": [
+    [
+      "off0_vs_on",
+      {
+        "edge_count": [
+          98,
+          98
+        ],
+        "edge_covariance_max_difference": 0.0,
+        "edge_measurement_max_difference": 0.0,
+        "edge_pair_sequence_equal": true,
+        "edge_pair_set_equal": true,
+        "node_count": [
+          60,
+          60
+        ],
+        "node_ids_equal": true,
+        "node_pose_max_difference": 0.0,
+        "node_unique_ids_equal": true
+      }
+    ],
+    [
+      "off0_vs_on",
+      {
+        "edge_count": [
+          98,
+          98
+        ],
+        "edge_covariance_max_difference": 0.0,
+        "edge_measurement_max_difference": 0.0,
+        "edge_pair_sequence_equal": true,
+        "edge_pair_set_equal": true,
+        "node_count": [
+          60,
+          60
+        ],
+        "node_ids_equal": true,
+        "node_pose_max_difference": 0.0,
+        "node_unique_ids_equal": true
+      }
+    ],
+    [
+      "off1_vs_on",
+      {
+        "edge_count": [
+          98,
+          98
+        ],
+        "edge_covariance_max_difference": 0.0,
+        "edge_measurement_max_difference": 0.0,
+        "edge_pair_sequence_equal": true,
+        "edge_pair_set_equal": true,
+        "node_count": [
+          60,
+          60
+        ],
+        "node_ids_equal": true,
+        "node_pose_max_difference": 0.0,
+        "node_unique_ids_equal": true
+      }
+    ],
+    [
+      "off1_vs_on",
+      {
+        "edge_count": [
+          98,
+          98
+        ],
+        "edge_covariance_max_difference": 0.0,
+        "edge_measurement_max_difference": 0.0,
+        "edge_pair_sequence_equal": true,
+        "edge_pair_set_equal": true,
+        "node_count": [
+          60,
+          60
+        ],
+        "node_ids_equal": true,
+        "node_pose_max_difference": 0.0,
+        "node_unique_ids_equal": true
+      }
+    ]
+  ],
+  "measured_replay_repeatability": {
+    "edge_count": [
+      98,
+      98
+    ],
+    "edge_covariance_max_difference": 0.0,
+    "edge_measurement_max_difference": 0.0,
+    "edge_pair_sequence_equal": true,
+    "edge_pair_set_equal": true,
+    "node_count": [
+      60,
+      60
+    ],
+    "node_ids_equal": true,
+    "node_pose_max_difference": 0.0,
+    "node_unique_ids_equal": true
+  },
+  "numerical_floors": {
+    "angle_rad": 1e-06,
+    "covariance": 1e-09,
+    "measurement": 1e-06,
+    "pose_m": 1e-06
+  },
+  "repeatability_multiplier": 2.0,
+  "same_arm_repeatability_comparisons": [
+    [
+      "off",
+      {
+        "edge_count": [
+          98,
+          98
+        ],
+        "edge_covariance_max_difference": 0.0,
+        "edge_measurement_max_difference": 0.0,
+        "edge_pair_sequence_equal": true,
+        "edge_pair_set_equal": true,
+        "node_count": [
+          60,
+          60
+        ],
+        "node_ids_equal": true,
+        "node_pose_max_difference": 0.0,
+        "node_unique_ids_equal": true
+      }
+    ],
+    [
+      "on",
+      {
+        "edge_count": [
+          98,
+          98
+        ],
+        "edge_covariance_max_difference": 0.0,
+        "edge_measurement_max_difference": 0.0,
+        "edge_pair_sequence_equal": true,
+        "edge_pair_set_equal": true,
+        "node_count": [
+          60,
+          60
+        ],
+        "node_ids_equal": true,
+        "node_pose_max_difference": 0.0,
+        "node_unique_ids_equal": true
+      }
+    ]
+  ],
+  "verdict": {
+    "failures": [],
+    "tolerance": {
+      "edge_covariance_max_difference": 1e-09,
+      "edge_measurement_max_difference": 1e-06,
+      "node_pose_max_difference": 1e-06
+    },
+    "verdict": "REPLAY_NEUTRALITY_CERTIFIED"
+  }
+}

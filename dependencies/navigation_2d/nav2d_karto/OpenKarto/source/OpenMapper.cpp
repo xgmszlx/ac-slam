@@ -2568,7 +2568,13 @@ namespace karto
     , m_EdgeProvenancePath("")
     , m_EdgeProvenanceRunId("")
     , m_EdgeCreationSequence(0)
+    , m_PoseGraphDumpPath("")
+    , m_PoseGraphDumpDone(-1)
+    , m_pEdgeProvenanceMutex(new karto::Mutex())
   {
+    // Pre-reserving the buffer keeps the constraint-creation path free of
+    // reallocation. The buffer is empty and unused when provenance is off.
+    m_EdgeProvenanceBuffer.reserve(4096);
     InitializeParameters();
   }
 
@@ -2594,7 +2600,13 @@ namespace karto
     , m_EdgeProvenancePath("")
     , m_EdgeProvenanceRunId("")
     , m_EdgeCreationSequence(0)
+    , m_PoseGraphDumpPath("")
+    , m_PoseGraphDumpDone(-1)
+    , m_pEdgeProvenanceMutex(new karto::Mutex())
   {
+    // Pre-reserving the buffer keeps the constraint-creation path free of
+    // reallocation. The buffer is empty and unused when provenance is off.
+    m_EdgeProvenanceBuffer.reserve(4096);
     InitializeParameters();
   }
 
@@ -2603,9 +2615,20 @@ namespace karto
    */
   OpenMapper::~OpenMapper()
   {
+    // Graceful-shutdown outputs: the buffered provenance tail and, when
+    // configured, a final graph dump so a replay never depends on a request
+    // racing with the last scan.
+    FlushEdgeProvenance();
+    if (m_PoseGraphDumpPath.Size() > 0)
+    {
+      WritePoseGraphJson(m_PoseGraphDumpPath);
+    }
+
     Reset();
 
     delete m_pMapperSensorManager;
+    delete m_pEdgeProvenanceMutex;
+    m_pEdgeProvenanceMutex = NULL;
   }
 
   void OpenMapper::SetLoopDiagnostics(kt_bool enable, const karto::String& path, const karto::String& runId)
@@ -2626,6 +2649,271 @@ namespace karto
     m_EdgeProvenancePath = path;
     m_EdgeProvenanceRunId = runId;
     m_EdgeCreationSequence = 0;
+    {
+      karto::Mutex::ScopedLock lock(*m_pEdgeProvenanceMutex);
+      m_EdgeProvenanceBuffer.clear();
+    }
+    m_ProbePhaseCache = "UNAVAILABLE";
+  }
+
+  void OpenMapper::RefreshProbePhaseCache()
+  {
+    // One ROS parameter lookup per processed scan instead of one per created
+    // constraint: the phase cannot change while a single scan is processed.
+    if (!m_EdgeProvenanceEnabled)
+    {
+      return;
+    }
+    std::string phase("UNAVAILABLE");
+    ros::param::getCached("/constraint_realizability_pilot/probe_phase", phase);
+    m_ProbePhaseCache = phase;
+  }
+
+  kt_bool OpenMapper::HasPendingEdgeProvenance()
+  {
+    karto::Mutex::ScopedLock lock(*m_pEdgeProvenanceMutex);
+    return m_EdgeProvenanceBuffer.empty() ? false : true;
+  }
+
+  namespace
+  {
+    void CopyProvenanceText(char* pTarget, kt_int32u length, const std::string& rValue)
+    {
+      if (length == 0)
+      {
+        return;
+      }
+      std::snprintf(pTarget, length, "%s", rValue.c_str());
+      pTarget[length - 1] = '\0';
+    }
+  }
+
+  void OpenMapper::MaybeWritePoseGraphDump()
+  {
+    // Called from the mapper's own processing thread, at the end of a scan.
+    // Reading the graph from a foreign thread can block against the mapper's
+    // own graph work, which is why the dump is never written from the
+    // maintenance thread.
+    if (m_PoseGraphDumpPath.Size() == 0)
+    {
+      return;
+    }
+    int request = 0;
+    ros::param::getCached(ros::this_node::getName() + "/pose_graph_dump_request",
+                          request);
+    if (request == m_PoseGraphDumpDone)
+    {
+      return;
+    }
+    if (WritePoseGraphJson(m_PoseGraphDumpPath))
+    {
+      m_PoseGraphDumpDone = request;
+    }
+  }
+
+  void OpenMapper::SetPoseGraphDumpPath(const karto::String& rPath)
+  {
+    m_PoseGraphDumpPath = rPath;
+    m_PoseGraphDumpDone = -1;   // force a dump on the first request
+  }
+
+  kt_bool OpenMapper::WritePoseGraphJson(const karto::String& rPath)
+  {
+    // Observation-only, arm-independent graph dump used by the same-input
+    // replay comparison.  It reads the graph and writes a file; it never
+    // changes the graph, the solver or any matcher decision.
+    if (rPath.Size() == 0 || m_pGraph == NULL || m_pGraph->GetVertices().Size() == 0)
+    {
+      return false;
+    }
+    std::ofstream out(rPath.ToCString(), std::ios::trunc);
+    if (!out.is_open())
+    {
+      return false;
+    }
+
+    const MapperGraph::VertexList& vertices = m_pGraph->GetVertices();
+    out << "{\"dump_version\":1,\"run_id\":\""
+        << m_EdgeProvenanceRunId.ToCString() << "\"";
+    out << ",\"nodes\":[";
+    for (kt_int32s i = 0; i < vertices.Size(); i++)
+    {
+      Vertex<LocalizedObjectPtr>* pVertex = vertices[i];
+      LocalizedObject* pObject = pVertex->GetVertexObject();
+      Pose2 pose = pObject->GetCorrectedPose();
+      if (i > 0) out << ",";
+      out << "{\"index\":" << i
+          << ",\"state_id\":" << pObject->GetStateId()
+          << ",\"unique_id\":" << pObject->GetUniqueId()
+          << ",\"x\":" << LoopDiagDouble(pose.GetX())
+          << ",\"y\":" << LoopDiagDouble(pose.GetY())
+          << ",\"theta\":" << LoopDiagDouble(pose.GetHeading()) << "}";
+    }
+    out << "]";
+
+    const MapperGraph::EdgeList& edges = m_pGraph->GetEdges();
+    out << ",\"edges\":[";
+    for (kt_int32s i = 0; i < edges.Size(); i++)
+    {
+      Edge<LocalizedObjectPtr>* pEdge = edges[i];
+      LocalizedObject* pSource = pEdge->GetSource()->GetVertexObject();
+      LocalizedObject* pTarget = pEdge->GetTarget()->GetVertexObject();
+      LinkInfo* pLinkInfo = static_cast<LinkInfo*>(pEdge->GetLabel());
+      if (i > 0) out << ",";
+      out << "{\"index\":" << i
+          << ",\"source_state_id\":" << pSource->GetStateId()
+          << ",\"target_state_id\":" << pTarget->GetStateId()
+          << ",\"source_unique_id\":" << pSource->GetUniqueId()
+          << ",\"target_unique_id\":" << pTarget->GetUniqueId();
+      if (pLinkInfo != NULL)
+      {
+        Pose2 mean = pLinkInfo->GetPoseDifference();
+        Matrix3 covariance = pLinkInfo->GetCovariance();
+        out << ",\"measurement\":{\"dx\":" << LoopDiagDouble(mean.GetX())
+            << ",\"dy\":" << LoopDiagDouble(mean.GetY())
+            << ",\"dtheta\":" << LoopDiagDouble(mean.GetHeading()) << "}"
+            << ",\"covariance_3x3\":[["
+            << LoopDiagDouble(covariance(0, 0)) << "," << LoopDiagDouble(covariance(0, 1))
+            << "," << LoopDiagDouble(covariance(0, 2)) << "],["
+            << LoopDiagDouble(covariance(1, 0)) << "," << LoopDiagDouble(covariance(1, 1))
+            << "," << LoopDiagDouble(covariance(1, 2)) << "],["
+            << LoopDiagDouble(covariance(2, 0)) << "," << LoopDiagDouble(covariance(2, 1))
+            << "," << LoopDiagDouble(covariance(2, 2)) << "]]";
+      }
+      out << "}";
+    }
+    out << "]}";
+    out.close();
+    return true;
+  }
+
+  void OpenMapper::FlushEdgeProvenance(const karto::String& rPath)
+  {
+    std::vector<EdgeProvenanceEntry> pending;
+    {
+      karto::Mutex::ScopedLock lock(*m_pEdgeProvenanceMutex);
+      if (m_EdgeProvenanceBuffer.empty())
+      {
+        return;
+      }
+      pending.swap(m_EdgeProvenanceBuffer);
+    }
+
+    std::string path = rPath.Size() > 0 ? std::string(rPath.ToCString())
+                                        : std::string(m_EdgeProvenancePath.ToCString());
+    if (m_EdgeProvenancePath.Size() == 0 && rPath.Size() == 0)
+    {
+      // Nothing was configured: the records are dropped deliberately rather
+      // than written into an unknown location.
+      return;
+    }
+
+    std::ofstream out(path.c_str(), std::ios::app);
+    if (!out.is_open())
+    {
+      // Put the records back so a later flush can still write them.
+      karto::Mutex::ScopedLock lock(*m_pEdgeProvenanceMutex);
+      pending.insert(pending.end(), m_EdgeProvenanceBuffer.begin(),
+                     m_EdgeProvenanceBuffer.end());
+      m_EdgeProvenanceBuffer.swap(pending);
+      return;
+    }
+
+    for (size_t index = 0; index < pending.size(); index++)
+    {
+      const EdgeProvenanceEntry& entry = pending[index];
+      std::ostringstream oss;
+      if (entry.recordType == 0)
+      {
+        const EdgeProvenanceRecord& r = entry.constraint;
+        oss << "{\"record_type\":\"constraint_created\""
+            << ",\"schema_version\":1"
+            << ",\"run_id\":\"" << m_EdgeProvenanceRunId.ToCString() << "\""
+            << ",\"creation_sequence\":" << r.creationSequence
+            << ",\"canonical_edge_identity\":[" << r.sourceStateId
+            << "," << r.targetStateId << "]"
+            << ",\"source_state_id\":" << r.sourceStateId
+            << ",\"target_state_id\":" << r.targetStateId
+            << ",\"source_unique_id\":" << r.sourceUniqueId
+            << ",\"target_unique_id\":" << r.targetUniqueId
+            << ",\"source_pose\":{\"x\":" << LoopDiagDouble(r.sourcePose[0])
+            << ",\"y\":" << LoopDiagDouble(r.sourcePose[1])
+            << ",\"yaw\":" << LoopDiagDouble(r.sourcePose[2]) << "}"
+            << ",\"target_pose\":{\"x\":" << LoopDiagDouble(r.targetPose[0])
+            << ",\"y\":" << LoopDiagDouble(r.targetPose[1])
+            << ",\"yaw\":" << LoopDiagDouble(r.targetPose[2]) << "}"
+            << ",\"creation_provenance\":\""
+            << ConstraintProvenanceName(static_cast<ConstraintCreationProvenance>(
+                 r.provenance)) << "\""
+            << ",\"creation_function\":\"" << r.creationFunction << "\""
+            << ",\"creation_stage\":\"" << r.creationStage << "\""
+            << ",\"current_keyscan_state_id\":" << r.currentKeyscanStateId
+            << ",\"current_keyscan_unique_id\":" << r.currentKeyscanUniqueId
+            << ",\"relative_mean\":{\"x\":" << LoopDiagDouble(r.relativeMean[0])
+            << ",\"y\":" << LoopDiagDouble(r.relativeMean[1])
+            << ",\"yaw\":" << LoopDiagDouble(r.relativeMean[2]) << "}"
+            << ",\"covariance_3x3\":[["
+            << LoopDiagDouble(r.covariance[0][0]) << "," << LoopDiagDouble(r.covariance[0][1])
+            << "," << LoopDiagDouble(r.covariance[0][2]) << "],["
+            << LoopDiagDouble(r.covariance[1][0]) << "," << LoopDiagDouble(r.covariance[1][1])
+            << "," << LoopDiagDouble(r.covariance[1][2]) << "],["
+            << LoopDiagDouble(r.covariance[2][0]) << "," << LoopDiagDouble(r.covariance[2][1])
+            << "," << LoopDiagDouble(r.covariance[2][2]) << "]]"
+            << ",\"matcher_type\":\"" << r.matcherType << "\""
+            << ",\"match_response\":"
+            << OptionalDiagDouble(r.hasMatchResponse, r.matchResponse)
+            << ",\"match_threshold\":"
+            << OptionalDiagDouble(r.hasMatchThreshold, r.matchThreshold)
+            << ",\"coarse_response\":"
+            << OptionalDiagDouble(r.hasCoarseResponse, r.coarseResponse)
+            << ",\"coarse_threshold\":"
+            << OptionalDiagDouble(r.hasCoarseThreshold, r.coarseThreshold)
+            << ",\"solver_add_constraint_called\":"
+            << LoopDiagBool(r.solverAddConstraintCalled)
+            << ",\"graph_edge_count_after_creation\":"
+            << r.graphEdgeCountAfterCreation
+            << ",\"wall_time\":" << LoopDiagDouble(r.wallTime)
+            << ",\"sim_time\":" << LoopDiagDouble(r.simTime)
+            << ",\"before_or_during_probe\":\"" << r.probePhase << "\"}"
+            ;
+      }
+      else
+      {
+        const TryCloseLoopContextRecord& r = entry.context;
+        oss << "{\"record_type\":\"try_close_loop_context\""
+            << ",\"schema_version\":1"
+            << ",\"run_id\":\"" << m_EdgeProvenanceRunId.ToCString() << "\""
+            << ",\"stage\":\"" << r.stage << "\""
+            << ",\"current_keyscan_state_id\":" << r.currentKeyscanStateId
+            << ",\"current_keyscan_unique_id\":" << r.currentKeyscanUniqueId
+            << ",\"graph_edges\":[";
+        for (size_t e = 0; e < r.graphEdges.size(); e++)
+        {
+          if (e > 0) oss << ",";
+          oss << "[" << r.graphEdges[e].first << "," << r.graphEdges[e].second << "]";
+        }
+        oss << "]";
+        if (r.hasNearLinkedScans)
+        {
+          oss << ",\"near_linked_scan_ids\":[";
+          for (size_t s = 0; s < r.nearLinkedScanIds.size(); s++)
+          {
+            if (s > 0) oss << ",";
+            oss << r.nearLinkedScanIds[s];
+          }
+          oss << "]";
+        }
+        else
+        {
+          oss << ",\"near_linked_scan_ids\":null";
+        }
+        oss << ",\"wall_time\":" << LoopDiagDouble(r.wallTime)
+            << ",\"sim_time\":" << LoopDiagDouble(r.simTime)
+            << "}";
+      }
+      out << oss.str() << "\n";
+    }
+    out.close();
   }
 
   void OpenMapper::ResetLoopDiagnostics()
@@ -2647,20 +2935,6 @@ namespace karto
       return;
     }
     std::ofstream out(m_LoopDiagnosticsPath.ToCString(), std::ios::app);
-    if (out.is_open())
-    {
-      out << rLine << "\n";
-      out.close();
-    }
-  }
-
-  void OpenMapper::AppendEdgeProvenanceLine(const std::string& rLine)
-  {
-    if (!m_EdgeProvenanceEnabled || m_EdgeProvenancePath.Size() == 0)
-    {
-      return;
-    }
-    std::ofstream out(m_EdgeProvenancePath.ToCString(), std::ios::app);
     if (out.is_open())
     {
       out << rLine << "\n";
@@ -2690,63 +2964,59 @@ namespace karto
     const Pose2 sourcePose = pFromObject->GetCorrectedPose();
     const Pose2 targetPose = pToObject->GetCorrectedPose();
     LocalizedLaserScan* pCurrentScan = dynamic_cast<LocalizedLaserScan*>(pToObject);
-    std::string probePhase("UNAVAILABLE");
-    ros::param::getCached("/constraint_realizability_pilot/probe_phase", probePhase);
 
+    // Critical path: copy plain values into one pre-sized struct and append it.
+    // No formatting, no allocation, no parameter lookup, no file I/O.
+    EdgeProvenanceEntry entry;
+    entry.recordType = 0;
+    EdgeProvenanceRecord& r = entry.constraint;
     m_EdgeCreationSequence++;
-    std::ostringstream oss;
-    oss << "{\"record_type\":\"constraint_created\""
-        << ",\"schema_version\":1"
-        << ",\"run_id\":\"" << m_EdgeProvenanceRunId.ToCString() << "\""
-        << ",\"creation_sequence\":" << m_EdgeCreationSequence
-        << ",\"canonical_edge_identity\":[" << pFromObject->GetStateId()
-        << "," << pToObject->GetStateId() << "]"
-        << ",\"source_state_id\":" << pFromObject->GetStateId()
-        << ",\"target_state_id\":" << pToObject->GetStateId()
-        << ",\"source_unique_id\":" << pFromObject->GetUniqueId()
-        << ",\"target_unique_id\":" << pToObject->GetUniqueId()
-        << ",\"source_pose\":{" << "\"x\":" << LoopDiagDouble(sourcePose.GetX())
-        << ",\"y\":" << LoopDiagDouble(sourcePose.GetY())
-        << ",\"yaw\":" << LoopDiagDouble(sourcePose.GetHeading()) << "}"
-        << ",\"target_pose\":{" << "\"x\":" << LoopDiagDouble(targetPose.GetX())
-        << ",\"y\":" << LoopDiagDouble(targetPose.GetY())
-        << ",\"yaw\":" << LoopDiagDouble(targetPose.GetHeading()) << "}"
-        << ",\"creation_provenance\":\""
-        << ConstraintProvenanceName(rContext.provenance) << "\""
-        << ",\"creation_function\":\"" << rContext.creationFunction << "\""
-        << ",\"creation_stage\":\"" << rContext.creationStage << "\""
-        << ",\"current_keyscan_state_id\":"
-        << (pCurrentScan != NULL ? static_cast<kt_int64s>(pCurrentScan->GetStateId()) : -1)
-        << ",\"current_keyscan_unique_id\":"
-        << (pCurrentScan != NULL ? static_cast<kt_int64s>(pCurrentScan->GetUniqueId()) : -1)
-        << ",\"relative_mean\":{" << "\"x\":" << LoopDiagDouble(relativeMean.GetX())
-        << ",\"y\":" << LoopDiagDouble(relativeMean.GetY())
-        << ",\"yaw\":" << LoopDiagDouble(relativeMean.GetHeading()) << "}"
-        << ",\"covariance_3x3\":[["
-        << LoopDiagDouble(covariance(0, 0)) << "," << LoopDiagDouble(covariance(0, 1))
-        << "," << LoopDiagDouble(covariance(0, 2)) << "],["
-        << LoopDiagDouble(covariance(1, 0)) << "," << LoopDiagDouble(covariance(1, 1))
-        << "," << LoopDiagDouble(covariance(1, 2)) << "],["
-        << LoopDiagDouble(covariance(2, 0)) << "," << LoopDiagDouble(covariance(2, 1))
-        << "," << LoopDiagDouble(covariance(2, 2)) << "]]"
-        << ",\"matcher_type\":\"" << rContext.matcherType << "\""
-        << ",\"match_response\":"
-        << OptionalDiagDouble(rContext.hasMatchResponse, rContext.matchResponse)
-        << ",\"match_threshold\":"
-        << OptionalDiagDouble(rContext.hasMatchThreshold, rContext.matchThreshold)
-        << ",\"coarse_response\":"
-        << OptionalDiagDouble(rContext.hasCoarseResponse, rContext.coarseResponse)
-        << ",\"coarse_threshold\":"
-        << OptionalDiagDouble(rContext.hasCoarseThreshold, rContext.coarseThreshold)
-        << ",\"solver_add_constraint_called\":"
-        << LoopDiagBool(solverAddConstraintCalled)
-        << ",\"graph_edge_count_after_creation\":"
-        << (m_pGraph != NULL ? m_pGraph->GetEdges().Size() : 0)
-        << ",\"wall_time\":" << LoopDiagDouble(ros::WallTime::now().toSec())
-        << ",\"sim_time\":" << LoopDiagDouble(ros::Time::now().toSec())
-        << ",\"before_or_during_probe\":\"" << probePhase << "\"}"
-        ;
-    AppendEdgeProvenanceLine(oss.str());
+    r.creationSequence = static_cast<kt_int64s>(m_EdgeCreationSequence);
+    r.sourceStateId = pFromObject->GetStateId();
+    r.targetStateId = pToObject->GetStateId();
+    r.sourceUniqueId = pFromObject->GetUniqueId();
+    r.targetUniqueId = pToObject->GetUniqueId();
+    r.currentKeyscanStateId = (pCurrentScan != NULL)
+        ? static_cast<kt_int64s>(pCurrentScan->GetStateId()) : -1;
+    r.currentKeyscanUniqueId = (pCurrentScan != NULL)
+        ? static_cast<kt_int64s>(pCurrentScan->GetUniqueId()) : -1;
+    r.provenance = static_cast<kt_int32u>(rContext.provenance);
+    r.solverAddConstraintCalled = solverAddConstraintCalled;
+    r.hasMatchResponse = rContext.hasMatchResponse;
+    r.hasMatchThreshold = rContext.hasMatchThreshold;
+    r.hasCoarseResponse = rContext.hasCoarseResponse;
+    r.hasCoarseThreshold = rContext.hasCoarseThreshold;
+    r.matchResponse = rContext.matchResponse;
+    r.matchThreshold = rContext.matchThreshold;
+    r.coarseResponse = rContext.coarseResponse;
+    r.coarseThreshold = rContext.coarseThreshold;
+    r.sourcePose[0] = sourcePose.GetX();
+    r.sourcePose[1] = sourcePose.GetY();
+    r.sourcePose[2] = sourcePose.GetHeading();
+    r.targetPose[0] = targetPose.GetX();
+    r.targetPose[1] = targetPose.GetY();
+    r.targetPose[2] = targetPose.GetHeading();
+    r.relativeMean[0] = relativeMean.GetX();
+    r.relativeMean[1] = relativeMean.GetY();
+    r.relativeMean[2] = relativeMean.GetHeading();
+    for (kt_int32u row = 0; row < 3; row++)
+    {
+      for (kt_int32u col = 0; col < 3; col++)
+      {
+        r.covariance[row][col] = covariance(row, col);
+      }
+    }
+    r.graphEdgeCountAfterCreation =
+        (m_pGraph != NULL ? static_cast<kt_int64s>(m_pGraph->GetEdges().Size()) : 0);
+    r.wallTime = ros::WallTime::now().toSec();
+    r.simTime = ros::Time::now().toSec();
+    CopyProvenanceText(r.creationFunction, kProvenanceTextLen, rContext.creationFunction);
+    CopyProvenanceText(r.creationStage, kProvenanceTextLen, rContext.creationStage);
+    CopyProvenanceText(r.matcherType, kProvenanceTextLen, rContext.matcherType);
+    CopyProvenanceText(r.probePhase, kProvenanceTextLen, m_ProbePhaseCache);
+
+    karto::Mutex::ScopedLock lock(*m_pEdgeProvenanceMutex);
+    m_EdgeProvenanceBuffer.push_back(entry);
   }
 
   void OpenMapper::RecordTryCloseLoopContext(
@@ -2758,47 +3028,42 @@ namespace karto
     {
       return;
     }
-    std::ostringstream oss;
-    oss << "{\"record_type\":\"try_close_loop_context\""
-        << ",\"schema_version\":1"
-        << ",\"run_id\":\"" << m_EdgeProvenanceRunId.ToCString() << "\""
-        << ",\"stage\":\"" << stage << "\""
-        << ",\"current_keyscan_state_id\":" << pScan->GetStateId()
-        << ",\"current_keyscan_unique_id\":" << pScan->GetUniqueId()
-        << ",\"graph_edges\":[";
-    bool firstEdge = true;
+
+    EdgeProvenanceEntry entry;
+    entry.recordType = 1;
+    TryCloseLoopContextRecord& r = entry.context;
+    r.currentKeyscanStateId = pScan->GetStateId();
+    r.currentKeyscanUniqueId = pScan->GetUniqueId();
+    r.hasNearLinkedScans = (pNearLinkedScans != NULL) ? true : false;
+    r.wallTime = ros::WallTime::now().toSec();
+    r.simTime = ros::Time::now().toSec();
+    CopyProvenanceText(r.stage, kProvenanceTextLen,
+                       std::string(stage != NULL ? stage : "UNKNOWN"));
+
+    // Copy the graph edge endpoints and the near-linked scan ids as plain
+    // integers; the JSON text is produced later by the flush path.
     if (m_pGraph != NULL)
     {
       const MapperGraph::EdgeList& edges = m_pGraph->GetEdges();
+      r.graphEdges.reserve(edges.Size());
       karto_const_forEach(MapperGraph::EdgeList, &edges)
       {
-        if (!firstEdge) oss << ",";
-        firstEdge = false;
-        oss << "[" << (*iter)->GetSource()->GetVertexObject()->GetStateId()
-            << "," << (*iter)->GetTarget()->GetVertexObject()->GetStateId() << "]";
+        r.graphEdges.push_back(std::make_pair(
+            static_cast<kt_int64s>((*iter)->GetSource()->GetVertexObject()->GetStateId()),
+            static_cast<kt_int64s>((*iter)->GetTarget()->GetVertexObject()->GetStateId())));
       }
     }
-    oss << "]";
     if (pNearLinkedScans != NULL)
     {
-      oss << ",\"near_linked_scan_ids\":[";
-      bool firstScan = true;
+      r.nearLinkedScanIds.reserve(pNearLinkedScans->Size());
       karto_const_forEach(LocalizedLaserScanList, pNearLinkedScans)
       {
-        if (!firstScan) oss << ",";
-        firstScan = false;
-        oss << (*iter)->GetStateId();
+        r.nearLinkedScanIds.push_back(static_cast<kt_int64s>((*iter)->GetStateId()));
       }
-      oss << "]";
     }
-    else
-    {
-      oss << ",\"near_linked_scan_ids\":null";
-    }
-    oss << ",\"wall_time\":" << LoopDiagDouble(ros::WallTime::now().toSec())
-        << ",\"sim_time\":" << LoopDiagDouble(ros::Time::now().toSec())
-        << "}";
-    AppendEdgeProvenanceLine(oss.str());
+
+    karto::Mutex::ScopedLock lock(*m_pEdgeProvenanceMutex);
+    m_EdgeProvenanceBuffer.push_back(entry);
   }
 
   std::string OpenMapper::BuildLoopDiagBaseFragment(LocalizedLaserScan* pScan)
@@ -2949,6 +3214,10 @@ namespace karto
       // ensures sensor has been registered with mapper--does nothing if the sensor has already been registered
       m_pMapperSensorManager->RegisterSensor(pLocalizedObject->GetSensorIdentifier());
 
+      // Observation-only: refresh the cached probe phase once per scan so the
+      // per-constraint path performs no ROS parameter lookup at all.
+      RefreshProbePhaseCache();
+
       // get last scan
       LocalizedLaserScan* pLastScan = m_pMapperSensorManager->GetLastScan(pLocalizedObject->GetSensorIdentifier());
       
@@ -3032,6 +3301,7 @@ namespace karto
       isObjectProcessed = true;
     } // if object is LocalizedObject
     
+    MaybeWritePoseGraphDump();
     return isObjectProcessed;
   }
 

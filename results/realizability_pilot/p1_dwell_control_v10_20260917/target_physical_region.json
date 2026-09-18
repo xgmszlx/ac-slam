@@ -1,0 +1,104 @@
+{
+  "derivation": "state_id indexes canonical trajectory_slam rows; its original capture timestamp is joined exactly to the canonical Stage trajectory_gt timestamp",
+  "identity_checks_passed": true,
+  "mappings": [
+    {
+      "capture_stamp_s": 20.4,
+      "karto_map_pose": [
+        3.9526091415601696,
+        0.009346743062943618,
+        0.18550415433597342
+      ],
+      "karto_vs_trajectory_slam_position_error_m": 8.584452946593816e-07,
+      "stage_gt_base_pose": [
+        3.95631,
+        0.0392656,
+        0.18456545688813514
+      ],
+      "state_id": 13,
+      "unique_id": 13
+    },
+    {
+      "capture_stamp_s": 21.9,
+      "karto_map_pose": [
+        4.8699358060281375,
+        0.10961735677440439,
+        0.06075349173671769
+      ],
+      "karto_vs_trajectory_slam_position_error_m": 4.209119617795091e-06,
+      "stage_gt_base_pose": [
+        4.87728,
+        0.136958,
+        0.060427417344146396
+      ],
+      "state_id": 14,
+      "unique_id": 14
+    },
+    {
+      "capture_stamp_s": 24.7,
+      "karto_map_pose": [
+        5.814939836333819,
+        0.11911437675380455,
+        -0.0483956818398224
+      ],
+      "karto_vs_trajectory_slam_position_error_m": 4.1076763269305893e-07,
+      "stage_gt_base_pose": [
+        5.80695,
+        0.116092,
+        -0.048395710879992185
+      ],
+      "state_id": 15,
+      "unique_id": 15
+    },
+    {
+      "capture_stamp_s": 29.2,
+      "karto_map_pose": [
+        6.760934023982536,
+        0.055232078479404915,
+        -0.03569100977618519
+      ],
+      "karto_vs_trajectory_slam_position_error_m": 4.024040082187619e-06,
+      "stage_gt_base_pose": [
+        6.76544,
+        0.0601547,
+        -0.035691102471246454
+      ],
+      "state_id": 16,
+      "unique_id": 16
+    },
+    {
+      "capture_stamp_s": 34.1,
+      "karto_map_pose": [
+        7.753844790307241,
+        0.0303927196772696,
+        -0.01607563143785173
+      ],
+      "karto_vs_trajectory_slam_position_error_m": 4.790347654899585e-06,
+      "stage_gt_base_pose": [
+        7.75011,
+        0.0360571,
+        -0.015722440353488507
+      ],
+      "state_id": 17,
+      "unique_id": 17
+    }
+  ],
+  "not_derived_from_nominal_waypoint": true,
+  "schema_version": "v10_target_physical_region_v1",
+  "sources": {
+    "frozen_target": "/home/wcqw/ac-slam/results/realizability_pilot/p1_common_prefix_v9_20260917/canonical_history/episodes/0001_v9_canonical_history_anchor_01/attempt_01/frozen_target.json",
+    "frozen_target_sha256": "809ebd6f4e02a44312460a8766085fbdd1513b5094fe56722dfb856da8d57964",
+    "trajectory_gt": "/home/wcqw/ac-slam/results/realizability_pilot/p1_common_prefix_v9_20260917/canonical_history/episodes/0001_v9_canonical_history_anchor_01/attempt_01/trajectory_gt.txt",
+    "trajectory_gt_sha256": "1a3ab7608b58f69ed69f181371632f009214bf4660de545468e8ed87d9b86488",
+    "trajectory_slam": "/home/wcqw/ac-slam/results/realizability_pilot/p1_common_prefix_v9_20260917/canonical_history/episodes/0001_v9_canonical_history_anchor_01/attempt_01/trajectory_slam.txt",
+    "trajectory_slam_sha256": "c5f29234a7f8170ac6df818869a54a0cd866c5ebde0d086b8abdb6a8ccfc47e9"
+  },
+  "target_id": "map3_grid_anchor_01",
+  "target_scan_ids": [
+    13,
+    14,
+    15,
+    16,
+    17
+  ]
+}

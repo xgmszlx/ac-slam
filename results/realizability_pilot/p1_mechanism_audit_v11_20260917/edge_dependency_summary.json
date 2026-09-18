@@ -1,0 +1,17 @@
+{
+  "E_N_interpretation": "The net +1 E_N is created at nonexclusive node 58 (edge 20-58) and is not incident to nodes 60/61. Across independent captures it co-occurs with an A1 local edge 46-58, so it is a category shift plus the earlier extra 51-55 local edge, not a canonical single-edge subtraction.",
+  "aggregate_category_differences": {
+    "E_N": 1,
+    "E_T": 0,
+    "local": 4
+  },
+  "direct_incident_to_count_exclusive_keyscans": 4,
+  "dwell_new_edges": 42,
+  "edgewise_subtraction_limit": "A1 and A2 are separate physical captures; only count-exclusive nodes and identical endpoint pairs support exact dependency claims.",
+  "local_interpretation": "The aggregate +4 local count equals the four edges incident to nodes 60/61; pre-exclusive local differences cancel in count.",
+  "net_surplus": 5,
+  "pre_exclusive_sweep_affected_surplus": 1,
+  "subsequent_cascade_after_count_exclusive_keyscans": 0,
+  "sweep_new_edges": 47,
+  "target_interpretation": "Both E_T edges are 14-36 and 17-37, created before and not incident to Sweep-only nodes."
+}

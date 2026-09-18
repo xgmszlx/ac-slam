@@ -1,0 +1,332 @@
+{
+  "before_probe": true,
+  "block_id": "v12_target_A_H3_s51003",
+  "block_position": 0,
+  "condition_id": "v12_canonical_history",
+  "corrected_path_length_m": 21.517000775382762,
+  "diagnostics_enabled": false,
+  "edge_count": 41,
+  "edge_covariance_count": 41,
+  "edge_covariance_logdet_median": -26.682444146913344,
+  "edge_covariance_trace_max": 0.0243485919,
+  "edge_covariance_trace_median": 0.0012508539200000001,
+  "edge_endpoint_set_hash": "0d8f68dee09c0dd09baa0291860d25737f0b68677f810c96d809abb7d558f539",
+  "edge_endpoints": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      9
+    ],
+    [
+      0,
+      10
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      7,
+      29
+    ],
+    [
+      7,
+      30
+    ],
+    [
+      8,
+      9
+    ],
+    [
+      9,
+      10
+    ],
+    [
+      10,
+      11
+    ],
+    [
+      11,
+      12
+    ],
+    [
+      12,
+      13
+    ],
+    [
+      13,
+      14
+    ],
+    [
+      14,
+      15
+    ],
+    [
+      15,
+      16
+    ],
+    [
+      16,
+      17
+    ],
+    [
+      16,
+      20
+    ],
+    [
+      17,
+      18
+    ],
+    [
+      18,
+      19
+    ],
+    [
+      19,
+      20
+    ],
+    [
+      20,
+      21
+    ],
+    [
+      21,
+      22
+    ],
+    [
+      22,
+      23
+    ],
+    [
+      23,
+      24
+    ],
+    [
+      23,
+      28
+    ],
+    [
+      24,
+      25
+    ],
+    [
+      25,
+      26
+    ],
+    [
+      26,
+      27
+    ],
+    [
+      27,
+      28
+    ],
+    [
+      28,
+      29
+    ],
+    [
+      29,
+      30
+    ],
+    [
+      29,
+      33
+    ],
+    [
+      30,
+      31
+    ],
+    [
+      30,
+      32
+    ],
+    [
+      31,
+      32
+    ],
+    [
+      32,
+      33
+    ]
+  ],
+  "episode_id": "v12_target_A_H3_s51003",
+  "first_corrected_pose": [
+    0.2,
+    0.0,
+    0.0
+  ],
+  "keyscan_count": 34,
+  "last_corrected_pose": [
+    6.22042745095866,
+    6.001234416444886,
+    3.0471040565966745
+  ],
+  "maneuver_type": "pass",
+  "node_count": 34,
+  "node_id_set_hash": "7f26aa7daee9f1596867b3a65671dccc04587362cf0b11564f08ba4b4c9fbaa1",
+  "node_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33
+  ],
+  "node_unique_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33
+  ],
+  "protocol_version": "p1_confirmatory_v12_20260917",
+  "provenance_enabled": true,
+  "robot_gt_pose_before_probe": [
+    82.8,
+    -21.66925976076617,
+    -22.01447902147351,
+    3.0335985114271504
+  ],
+  "robot_gt_pose_before_probe_format": "stamp,x,y,theta",
+  "route_start_node_count": 11,
+  "run_id": "v12_target_A_H3_s51003",
+  "signature_version": 1,
+  "sim_time": 82.8,
+  "snapshot_phase": "before_probe",
+  "target_anchor": {
+    "id": 15,
+    "observed_time": 82.8,
+    "theta": -0.05996481993683216,
+    "x": 5.855765773228987,
+    "y": 0.08786336706260292
+  },
+  "target_historical_scan_ids": [
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "target_historical_unique_ids": [
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "target_id": "map3_grid_anchor_01",
+  "target_identity_gate": {
+    "checks": {
+      "anchor_acquired_after_route_start": true,
+      "anchor_within_reference_radius": true,
+      "minimum_history_node_count": true,
+      "minimum_target_segment_scans": true
+    },
+    "observed": {
+      "anchor_distance_m": 0.3552705647140145,
+      "anchor_id": 15,
+      "node_count": 34,
+      "route_start_node_count": 11,
+      "segment_count": 5
+    },
+    "passed": true,
+    "thresholds": {
+      "minimum_history_node_count": 20,
+      "minimum_target_segment_scans": 3,
+      "target_anchor_max_distance_m": 1.0
+    }
+  },
+  "target_reference": [
+    6.2,
+    0.0,
+    0.0
+  ],
+  "target_segment_size": 5,
+  "tsp_seed": 51003,
+  "wall_time": 1789638346.3755822
+}

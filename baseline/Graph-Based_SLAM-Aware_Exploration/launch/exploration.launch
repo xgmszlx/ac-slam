@@ -36,6 +36,8 @@
 	<arg name="enable_edge_provenance" default="false" />
 	<arg name="edge_provenance_path" default="" />
 	<arg name="edge_provenance_run_id" default="" />
+	<arg name="instrumentation_flush_period_s" default="5.0" />
+	<arg name="pose_graph_dump_path" default="" />
 	<arg name="enable_full_pose_graph_observer" default="false" />
 	<!-- Phase 3A revisit-realization oracle (default off; mode 0 == V0 baseline). -->
 	<arg name="oracle_mode" default="0" />
@@ -93,6 +95,8 @@
 		<param name="enable_edge_provenance" value="$(arg enable_edge_provenance)" />
 		<param name="edge_provenance_path" type="str" value="$(arg edge_provenance_path)" />
 		<param name="edge_provenance_run_id" type="str" value="$(arg edge_provenance_run_id)" />
+		<param name="instrumentation_flush_period_s" type="double" value="$(arg instrumentation_flush_period_s)" />
+		<param name="pose_graph_dump_path" type="str" value="$(arg pose_graph_dump_path)" />
 		<param name="enable_full_pose_graph_observer" value="$(arg enable_full_pose_graph_observer)" />
 	</node>
 

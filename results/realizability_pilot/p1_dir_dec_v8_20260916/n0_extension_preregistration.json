@@ -1,0 +1,32 @@
+{
+  "block": {
+    "changes_relative_to_r2": "none except the seed list",
+    "conditions_per_seed": [
+      "n0r_provenance_off",
+      "n0r_buffered_provenance_on"
+    ],
+    "extension_suite": "results/realizability_pilot/p1_dir_dec_v8_20260916/n0r3_sanity",
+    "r2_suite": "results/realizability_pilot/p1_dir_dec_v8_20260916/n0r2_sanity",
+    "seeds": [
+      41001,
+      41002,
+      41003,
+      41004
+    ]
+  },
+  "question": "does the same-direction ON minus OFF difference seen in the two R2 pairs persist when four seed pairs are available?",
+  "rule": {
+    "applies_to": "the unfiltered online stop rule over all four seed pairs, so the verdict does not depend on the pair-comparability filter",
+    "otherwise": "the online block is treated as reflecting run-to-run variability rather than a stable instrument effect and the same-input replay decides",
+    "pause_if": "all four pairs show a same-sign, non-zero difference on the same outcome AND the mean difference exceeds the measured reference repeatability of the earlier N0 block",
+    "unknowns_not_tested_by_this_block": "a closed-loop timing effect that is smaller than the run-to-run spread of these outcomes",
+    "watched_outcomes": [
+      "final_edge_count",
+      "final_node_count",
+      "new_keyscans",
+      "target_geodesic_mean_m"
+    ]
+  },
+  "written_before_collection": true,
+  "written_utc": "2026-09-16T09:30:54.031528+00:00"
+}

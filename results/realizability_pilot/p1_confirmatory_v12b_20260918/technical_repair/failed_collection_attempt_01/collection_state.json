@@ -1,0 +1,215 @@
+{
+  "blocks": [
+    {
+      "active_seed": 71001,
+      "arm_order": [
+        "A1_DWELL",
+        "A3_MIN_TRIGGER",
+        "A2_SWEEP90"
+      ],
+      "block_id": "target_A_H1",
+      "branches": {
+        "A1_DWELL": {
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_A/H1/A1_DWELL/raw_attempt_01",
+          "distance_m": 14.03337556337059,
+          "duration_s": 65.30000000000001,
+          "raw_scan_count": 655,
+          "start_heading_error_rad": 0.012653179886404686,
+          "start_position_error_m": 0.03818618623520648,
+          "status": "CAPTURED",
+          "technical_replay_attempts": []
+        },
+        "A2_SWEEP90": {
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_A/H1/A2_SWEEP90/raw_attempt_01",
+          "distance_m": 14.040303533869807,
+          "duration_s": 64.9,
+          "raw_scan_count": 651,
+          "start_heading_error_rad": 0.01622307784817156,
+          "start_position_error_m": 0.039907950487992776,
+          "status": "CAPTURED"
+        },
+        "A3_MIN_TRIGGER": {
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_A/H1/A3_MIN_TRIGGER/raw_attempt_01",
+          "distance_m": 14.033462804281331,
+          "duration_s": 64.9,
+          "raw_scan_count": 652,
+          "start_heading_error_rad": 0.01698905686226526,
+          "start_position_error_m": 0.039908498639854115,
+          "status": "CAPTURED"
+        }
+      },
+      "budget_gate": {
+        "observed": {
+          "distance_range_m": 0.006927970499216229,
+          "raw_scan_relative_range": 0.006128702757916242,
+          "time_range_s": 0.4000000000000057
+        },
+        "passed": true,
+        "thresholds": {
+          "pairwise_distance_range_m_max": 0.1,
+          "pairwise_time_range_s_max": 1.5,
+          "raw_scan_relative_range_max": 0.03
+        }
+      },
+      "canonical_prefix_hash": "6fd43d98287a426f01a9696887aa16e1fc3356a8f2f6822d0a90bf3de67ba6df",
+      "history_attempts": [
+        {
+          "attempt": 1,
+          "dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/target_A/H1/history/attempt_01",
+          "prefix_hash": "6fd43d98287a426f01a9696887aa16e1fc3356a8f2f6822d0a90bf3de67ba6df",
+          "seed": 71001,
+          "status": "SUCCEEDED"
+        }
+      ],
+      "history_status": "VALID",
+      "planned_seed": 71001,
+      "reserve_cursor": 0,
+      "reserve_seeds": [
+        71005,
+        71006
+      ],
+      "status": "HISTORY",
+      "target_label": "target_A"
+    },
+    {
+      "active_seed": 71002,
+      "arm_order": [
+        "A3_MIN_TRIGGER",
+        "A2_SWEEP90",
+        "A1_DWELL"
+      ],
+      "block_id": "target_A_H2",
+      "branches": {},
+      "history_attempts": [],
+      "planned_seed": 71002,
+      "reserve_cursor": 0,
+      "reserve_seeds": [
+        71005,
+        71006
+      ],
+      "status": "PENDING",
+      "target_label": "target_A"
+    },
+    {
+      "active_seed": 71003,
+      "arm_order": [
+        "A2_SWEEP90",
+        "A1_DWELL",
+        "A3_MIN_TRIGGER"
+      ],
+      "block_id": "target_A_H3",
+      "branches": {},
+      "history_attempts": [],
+      "planned_seed": 71003,
+      "reserve_cursor": 0,
+      "reserve_seeds": [
+        71005,
+        71006
+      ],
+      "status": "PENDING",
+      "target_label": "target_A"
+    },
+    {
+      "active_seed": 71004,
+      "arm_order": [
+        "A1_DWELL",
+        "A2_SWEEP90",
+        "A3_MIN_TRIGGER"
+      ],
+      "block_id": "target_A_H4",
+      "branches": {},
+      "history_attempts": [],
+      "planned_seed": 71004,
+      "reserve_cursor": 0,
+      "reserve_seeds": [
+        71005,
+        71006
+      ],
+      "status": "PENDING",
+      "target_label": "target_A"
+    },
+    {
+      "active_seed": 72001,
+      "arm_order": [
+        "A3_MIN_TRIGGER",
+        "A1_DWELL",
+        "A2_SWEEP90"
+      ],
+      "block_id": "target_B_H1",
+      "branches": {},
+      "history_attempts": [],
+      "planned_seed": 72001,
+      "reserve_cursor": 0,
+      "reserve_seeds": [
+        72005,
+        72006
+      ],
+      "status": "PENDING",
+      "target_label": "target_B"
+    },
+    {
+      "active_seed": 72002,
+      "arm_order": [
+        "A2_SWEEP90",
+        "A3_MIN_TRIGGER",
+        "A1_DWELL"
+      ],
+      "block_id": "target_B_H2",
+      "branches": {},
+      "history_attempts": [],
+      "planned_seed": 72002,
+      "reserve_cursor": 0,
+      "reserve_seeds": [
+        72005,
+        72006
+      ],
+      "status": "PENDING",
+      "target_label": "target_B"
+    },
+    {
+      "active_seed": 72003,
+      "arm_order": [
+        "A1_DWELL",
+        "A3_MIN_TRIGGER",
+        "A2_SWEEP90"
+      ],
+      "block_id": "target_B_H3",
+      "branches": {},
+      "history_attempts": [],
+      "planned_seed": 72003,
+      "reserve_cursor": 0,
+      "reserve_seeds": [
+        72005,
+        72006
+      ],
+      "status": "PENDING",
+      "target_label": "target_B"
+    },
+    {
+      "active_seed": 72004,
+      "arm_order": [
+        "A3_MIN_TRIGGER",
+        "A2_SWEEP90",
+        "A1_DWELL"
+      ],
+      "block_id": "target_B_H4",
+      "branches": {},
+      "history_attempts": [],
+      "planned_seed": 72004,
+      "reserve_cursor": 0,
+      "reserve_seeds": [
+        72005,
+        72006
+      ],
+      "status": "PENDING",
+      "target_label": "target_B"
+    }
+  ],
+  "created_utc": "2026-09-18T06:21:36Z",
+  "protocol_hash": "31f081df3856a40aaac717a59d90c1b2ddbc2c6f1db4057f5109215da539692b",
+  "protocol_id": "p1_confirmatory_v12b_20260918",
+  "reason": "RuntimeError: timed out waiting for pose-graph dump request 1 (None)",
+  "started_utc": "2026-09-18T06:21:36Z",
+  "status": "FAILED",
+  "updated_utc": "2026-09-18T06:30:38Z"
+}

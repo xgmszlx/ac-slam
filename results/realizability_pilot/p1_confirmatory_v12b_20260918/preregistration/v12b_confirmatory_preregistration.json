@@ -1,0 +1,341 @@
+{
+  "analysis_plan": {
+    "J_T_nontrivial_numerical_floor": 0.0001,
+    "bootstrap_repetitions": 10000,
+    "bootstrap_seed": 120918,
+    "no_branch_level_pseudoreplication": true,
+    "planned_blocks": 8,
+    "planned_branches": 24,
+    "report": [
+      "all eight effects",
+      "mean",
+      "median",
+      "target means/medians",
+      "target-stratified bootstrap CI",
+      "one-sided exact sign test"
+    ],
+    "statistical_unit": "canonical-history block",
+    "strong_support": {
+      "mean_effect_min": 0.0001,
+      "overall_positive_min": 6,
+      "target_A_positive_min": 3,
+      "target_B_positive_min": 3,
+      "target_stratified_block_bootstrap_mean_95pct_CI_lower_gt": 0.0
+    },
+    "target_heterogeneity": "one target >=3/4 positive and the other <=2/4, or target means have opposite signs"
+  },
+  "arm_orders": {
+    "target_A": [
+      [
+        "A1_DWELL",
+        "A3_MIN_TRIGGER",
+        "A2_SWEEP90"
+      ],
+      [
+        "A3_MIN_TRIGGER",
+        "A2_SWEEP90",
+        "A1_DWELL"
+      ],
+      [
+        "A2_SWEEP90",
+        "A1_DWELL",
+        "A3_MIN_TRIGGER"
+      ],
+      [
+        "A1_DWELL",
+        "A2_SWEEP90",
+        "A3_MIN_TRIGGER"
+      ]
+    ],
+    "target_B": [
+      [
+        "A3_MIN_TRIGGER",
+        "A1_DWELL",
+        "A2_SWEEP90"
+      ],
+      [
+        "A2_SWEEP90",
+        "A3_MIN_TRIGGER",
+        "A1_DWELL"
+      ],
+      [
+        "A1_DWELL",
+        "A3_MIN_TRIGGER",
+        "A2_SWEEP90"
+      ],
+      [
+        "A3_MIN_TRIGGER",
+        "A2_SWEEP90",
+        "A1_DWELL"
+      ]
+    ]
+  },
+  "arms": {
+    "A1_DWELL": {
+      "geometry": "static at anchor theta0",
+      "target_specific_dwell_s": {
+        "target_A": 7.1,
+        "target_B": 11.4
+      }
+    },
+    "A2_SWEEP90": {
+      "geometry": "same relative +90 -> -30 -> 0 -> +30 degree definition as v12",
+      "target_specific_residual_dwell_s": {
+        "target_A": 0.0,
+        "target_B": 0.0
+      }
+    },
+    "A3_MIN_TRIGGER": {
+      "angle_rad": 0.5439732814124923,
+      "geometry": "theta0 -> theta0+0.5439732814 -> theta0 then dwell",
+      "keyscan_count_is_mediator_not_validity_gate": true,
+      "target_specific_residual_dwell_s": {
+        "target_A": 2.6,
+        "target_B": 7.0
+      }
+    }
+  },
+  "branch_start_gates": {
+    "heading_rad_max": 0.04,
+    "position_m_max": 0.08
+  },
+  "budget_gates": {
+    "pairwise_distance_range_m_max": 0.1,
+    "pairwise_time_range_s_max": 1.5,
+    "raw_scan_relative_range_max": 0.03
+  },
+  "code_hashes": {
+    "dependencies/navigation_2d/nav2d_karto/include/nav2d_karto/MultiMapper.h": "3362e01a5ece83316a7f12a973462cd27477a4a7940a852ca2ca084db632be1e",
+    "dependencies/navigation_2d/nav2d_karto/src/MultiMapper.cpp": "241d2f90fb5bf155796712d6b1ec7277ecace7012e852096e1a0d27a8e0c541e",
+    "tools/realizability_pilot/branch_replay.py": "a00911fccd2ad73c8422afa6f3889eb0a0ece7adeb6942d93cad30c5fc327a11",
+    "tools/realizability_pilot/common_prefix_replay.py": "888068fd427ae5f70f5eae81563d0a0f4d5edcacac8b574aace91db2e8619c9d",
+    "tools/realizability_pilot/confirmatory_v12_analysis.py": "26c4561f0111e75c63ad9e44488e1af93b06e686cc330c0ea29a5be0e6de29cd",
+    "tools/realizability_pilot/confirmatory_v12b_analysis.py": "bbdcc6ae4957ef08efa1ebc2ea16e38858e552bf65b5a1bc3b24de5ad490eebf",
+    "tools/realizability_pilot/confirmatory_v12b_collection.py": "6646e61eb9a92b478c6c5aa101540e667234a97c7992ff552957ad626559c549",
+    "tools/realizability_pilot/confirmatory_v12b_protocol.py": "224e65f491141c30f0117851a791fc5ecd6d96dc1669aa998eabbb743ff49ec1",
+    "tools/realizability_pilot/controlled_probe_capture.py": "ef15e74e3d627db39c327c32cd321124208c61021b1197db8af5ff67209244a8"
+  },
+  "code_worktree_content_hash": "a8603e4013af0bb3382460f16761529173140cdf8711541c01da8b9c87a12c21",
+  "common_prefix": {
+    "instrumentation_flush_period_s": 0.0,
+    "minimum_fresh_replays": 2,
+    "requires_exact_nodes_poses_edge_order_measurements_covariances_target_mapping": true
+  },
+  "created_before_fresh_scientific_collection": true,
+  "fresh_history_rule": "No v12 canonical history is eligible for the v12b primary sample.",
+  "git_head": "2a17da6bffb1cb1cb87a4cc48f96c607b6450f20",
+  "no_peeking": {
+    "collection_allowed": [
+      "technical validity",
+      "hashes",
+      "branch start",
+      "action execution",
+      "GT distance",
+      "duration",
+      "raw scan count"
+    ],
+    "forbidden_until_COLLECTION_LOCKED": [
+      "J_T",
+      "posterior contrasts",
+      "E_T",
+      "E_N",
+      "Delta U",
+      "factor provenance outcomes",
+      "A2-A3",
+      "A3-A1"
+    ]
+  },
+  "phase_r_gate": {
+    "checks": {
+      "NO_SCIENTIFIC_ENDPOINT_PEEK": true,
+      "TARGET_A_BUDGET_CALIBRATED": true,
+      "TARGET_B_A2_TIMING_ROOT_CAUSE_RESOLVED": true,
+      "TARGET_B_BUDGET_CALIBRATED": true,
+      "TARGET_B_PREFIX_DETERMINISTIC": true
+    },
+    "completed_utc": "2026-09-18T03:30:55Z",
+    "phase_c_authorized": true,
+    "protocol_id": "p1_confirmatory_v12b_20260918",
+    "scientific_endpoint_peeked": false,
+    "status": "TARGET_B_TECHNICAL_READY",
+    "v12_final_gate_unchanged": "CONFIRMATORY_EXPERIMENT_TECHNICALLY_INCOMPLETE"
+  },
+  "phase_r_gate_sha256": "5eddc2742412c375e161addaada720514c300d7ccccc871b57bdf2c9d588991c",
+  "predecessor_v12_final_gate": "CONFIRMATORY_EXPERIMENT_TECHNICALLY_INCOMPLETE",
+  "primary_history_seeds": {
+    "target_A": [
+      71001,
+      71002,
+      71003,
+      71004
+    ],
+    "target_B": [
+      72001,
+      72002,
+      72003,
+      72004
+    ]
+  },
+  "primary_outcome": {
+    "J_T": "-logdet(Sigma_T)/15",
+    "dimension": 15,
+    "fixed_state_subset": "five matched prefix SE(2) states",
+    "key_mechanism_contrast": "J_T(A3_MIN_TRIGGER)-J_T(A1_DWELL)",
+    "local_linear_Gaussian_not_exact_nonlinear": true,
+    "primary_contrast": "J_T(A2_SWEEP90)-J_T(A3_MIN_TRIGGER)",
+    "secondary_total_contrast": "J_T(A2_SWEEP90)-J_T(A1_DWELL)"
+  },
+  "protocol_id": "p1_confirmatory_v12b_20260918",
+  "reserve_history_seeds": {
+    "target_A": [
+      71005,
+      71006
+    ],
+    "target_B": [
+      72005,
+      72006
+    ]
+  },
+  "reserve_rule": "consume in listed target-level order only after history, target-match, or prefix technical failure; never replace budget or scientific outcome",
+  "secondary_outcomes": [
+    "target trace/logdet",
+    "prefix-terminal trace/logdet",
+    "keyscan count and trigger",
+    "E_T/E_N/local factors",
+    "creation provenance",
+    "factor identity/covariance",
+    "insertion geodesic/cycle",
+    "Delta U_T",
+    "history connectivity",
+    "v12 Target-A replication direction"
+  ],
+  "targets": {
+    "target_A": {
+      "q": [
+        [
+          3.95631,
+          0.0392656,
+          0.18456545688813514
+        ],
+        [
+          4.87728,
+          0.136958,
+          0.060427417344146396
+        ],
+        [
+          5.80695,
+          0.116092,
+          -0.048395710879992185
+        ],
+        [
+          6.76544,
+          0.0601547,
+          -0.035691102471246454
+        ],
+        [
+          7.75011,
+          0.0360571,
+          -0.015722440353488507
+        ]
+      ],
+      "selection_rule": "all five already verified v10 physical scans",
+      "source": "/home/wcqw/ac-slam/results/realizability_pilot/p1_dwell_control_v10_20260917/target_physical_region.json",
+      "source_sha256": "4b7d7eaebf78b045cf8285516fd68920bb0bc086f12889c824738888732eb434",
+      "source_state_ids": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "target_id": "map3_grid_anchor_01"
+    },
+    "target_B": {
+      "q": [
+        [
+          9.31915,
+          0.0176349,
+          0.021179194368468185
+        ],
+        [
+          10.2791,
+          0.0243443,
+          0.003204780461857447
+        ],
+        [
+          10.4783,
+          0.190426,
+          0.6534243728394888
+        ],
+        [
+          10.5369,
+          0.377023,
+          1.0722019641386225
+        ],
+        [
+          10.513,
+          1.15764,
+          1.6966311424880078
+        ]
+      ],
+      "selection_rule": "five consecutive historical states 29--33: the five nearest old pre-probe states to the physical anchor, then restored to route order",
+      "source": "/home/wcqw/ac-slam/results/realizability_pilot/p1_dir_dec_v8_20260916/n1_blocks/episodes/0007_n1_a1_neutral_03/attempt_01",
+      "source_episode_result_sha256": "66902b45b5277991eb954041dad400df5f3d2cd0a2fa78a5c4a1940020c254df",
+      "source_state_ids": [
+        29,
+        30,
+        31,
+        32,
+        33
+      ],
+      "target_id": "map3_grid_anchor_03"
+    }
+  },
+  "technical_amendments": [
+    {
+      "path": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/preregistration/technical_amendment_01_pose_graph_dump_polling.json",
+      "requires_fresh_restart": true,
+      "scope": "COLLECTION_INSTRUMENTATION_ONLY",
+      "sha256": "de2be4c75764031b36f15f4213b47d517ce6ed0ca533d0d43f90ca725905d51a"
+    }
+  ],
+  "technical_calibration_files": {
+    "budget_preregistration": {
+      "path": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/preregistration/target_specific_budget_preregistration.json",
+      "sha256": "1735ff7752cf54377de4bf9ce337537720c34328879c8fa05ff35eaed5d4b58c"
+    },
+    "prefix_audit": {
+      "path": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/technical_repair/prefix_determinism_summary.json",
+      "sha256": "57fad9322220e3712e5422e1381158db0840abff508e4227bc274a02ddd63fd0"
+    },
+    "timing_audit": {
+      "path": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/technical_repair/a2_phase_timing_summary.json",
+      "sha256": "cd31de8e27a13394f3eee591e5c2201835e5b072392f7bf9047c5f847abad872"
+    }
+  },
+  "technical_exclusions": {
+    "branch_replay_attempts": 2,
+    "budget_mismatch": "invalidate block; no outcome-driven retry or reserve substitution",
+    "history_attempts_per_seed": 2,
+    "scientific_outcome_never_authorizes_retry": true
+  },
+  "v12_descriptive_reference": {
+    "D_total_target_A": {
+      "mean": 0.12853767349654177,
+      "positive": 4,
+      "total": 4
+    },
+    "D_trigger_target_A": {
+      "mean": 0.05766937777245884,
+      "positive": 3,
+      "total": 4
+    },
+    "D_view_target_A": {
+      "mean": 0.07086829572408293,
+      "positive": 4,
+      "total": 4
+    },
+    "pool_with_v12b": false
+  },
+  "v12_target_A_role": "DESCRIPTIVE_PRIOR_EVIDENCE_NOT_POOLED"
+}

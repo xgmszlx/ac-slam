@@ -1,0 +1,190 @@
+{
+  "angle_semantics_verdict": "RELATIVE_YAW_AND_WRAP_SEMANTICS_PASS",
+  "arrival_duration_target_difference_s": 5.175000000000001,
+  "code_fact": "A2 has no initial hold, no return-to-theta0 waypoint, and no residual dwell. Its common 6 s final hold is shared by all arms. The frozen geometry arrives at theta0+90 deg, then commands -30, 0, +30 deg relative to theta0.",
+  "root_cause": "The three post-arrival sweep rotations are target-invariant in duration, while the A2 arrival-and-stabilization phase is about 5.2 s longer on Target B. Combined with the fixed dwell controls, this reverses the within-target timing balance. Raw-scan surplus is the expected approximately 10 Hz consequence of that duration.",
+  "scan_duration_audit": {
+    "blocks": [
+      {
+        "A2_added_duration_s_vs_A1_A3_mean": 3.700000000000003,
+        "A2_added_raw_scans_vs_A1_A3_mean": 37.5,
+        "added_scans_per_added_second_hz": 10.135135135135128,
+        "block_id": "target_B_H1",
+        "duration_mediated_within_two_scans": true,
+        "duration_predicted_added_scans": 37.00000000000213,
+        "measured_base_scan_rate_hz": 10.000000000000568,
+        "scan_residual_after_duration_prediction": 0.49999999999786837
+      },
+      {
+        "A2_added_duration_s_vs_A1_A3_mean": 3.6000000000000014,
+        "A2_added_raw_scans_vs_A1_A3_mean": 36.5,
+        "added_scans_per_added_second_hz": 10.138888888888886,
+        "block_id": "target_B_H2",
+        "duration_mediated_within_two_scans": true,
+        "duration_predicted_added_scans": 36.00000000000206,
+        "measured_base_scan_rate_hz": 10.000000000000568,
+        "scan_residual_after_duration_prediction": 0.4999999999979394
+      },
+      {
+        "A2_added_duration_s_vs_A1_A3_mean": 3.6000000000000014,
+        "A2_added_raw_scans_vs_A1_A3_mean": 36.0,
+        "added_scans_per_added_second_hz": 9.999999999999996,
+        "block_id": "target_B_H3",
+        "duration_mediated_within_two_scans": true,
+        "duration_predicted_added_scans": 36.00000000000206,
+        "measured_base_scan_rate_hz": 10.000000000000568,
+        "scan_residual_after_duration_prediction": -2.0605739337042905e-12
+      },
+      {
+        "A2_added_duration_s_vs_A1_A3_mean": 3.700000000000003,
+        "A2_added_raw_scans_vs_A1_A3_mean": 36.0,
+        "added_scans_per_added_second_hz": 9.729729729729723,
+        "block_id": "target_B_H4",
+        "duration_mediated_within_two_scans": true,
+        "duration_predicted_added_scans": 37.00000000000213,
+        "measured_base_scan_rate_hz": 10.000000000000568,
+        "scan_residual_after_duration_prediction": -1.0000000000021316
+      }
+    ],
+    "classification": "RAW_SCAN_MISMATCH_IS_DURATION_MEDIATED",
+    "rule": "Compare A2 with the within-block A1/A3 engineering mean; the duration explanation passes when the scan residual is at most two scans, allowing the two interval boundaries."
+  },
+  "sweep_rotation_duration_target_difference_s": 0.02499999999999858,
+  "target_summaries": {
+    "target_A": {
+      "arrival_and_stabilization": {
+        "actual_yaw_excursion_rad_mean": 1.6183771692948965,
+        "duration_s_mean": 13.925,
+        "duration_s_range": [
+          13.700000000000003,
+          14.099999999999994
+        ],
+        "max_angular_velocity_abs_rad_s": 0.6500000000000409
+      },
+      "center_to_opposite_endpoint": {
+        "actual_yaw_excursion_rad_mean": 0.5238433284999999,
+        "duration_s_mean": 2.2750000000000057,
+        "duration_s_range": [
+          2.200000000000003,
+          2.3000000000000114
+        ],
+        "max_angular_velocity_abs_rad_s": 0.650000000000037
+      },
+      "first_endpoint_to_center": {
+        "actual_yaw_excursion_rad_mean": 0.49194546675,
+        "duration_s_mean": 2.2749999999999986,
+        "duration_s_range": [
+          2.200000000000003,
+          2.299999999999997
+        ],
+        "max_angular_velocity_abs_rad_s": 0.650000000000037
+      },
+      "initial_sensing_hold": {
+        "actual_yaw_excursion_rad_mean": 0.0,
+        "duration_s_mean": 0.0,
+        "duration_s_range": [
+          0.0,
+          0.0
+        ],
+        "max_angular_velocity_abs_rad_s": 0.0
+      },
+      "remaining_dwell": {
+        "actual_yaw_excursion_rad_mean": 0.0,
+        "duration_s_mean": 0.0,
+        "duration_s_range": [
+          0.0,
+          0.0
+        ],
+        "max_angular_velocity_abs_rad_s": 0.0
+      },
+      "return_or_final_settle": {
+        "actual_yaw_excursion_rad_mean": 0.0,
+        "duration_s_mean": 6.0,
+        "duration_s_range": [
+          6.0,
+          6.0
+        ],
+        "max_angular_velocity_abs_rad_s": 0.0
+      },
+      "theta0_plus_90_to_first_sweep_endpoint_minus_30": {
+        "actual_yaw_excursion_rad_mean": 2.094524602,
+        "duration_s_mean": 4.75,
+        "duration_s_range": [
+          4.700000000000003,
+          4.799999999999997
+        ],
+        "max_angular_velocity_abs_rad_s": 0.6500000000000387
+      }
+    },
+    "target_B": {
+      "arrival_and_stabilization": {
+        "actual_yaw_excursion_rad_mean": 3.0735607499295865,
+        "duration_s_mean": 19.1,
+        "duration_s_range": [
+          18.799999999999997,
+          19.299999999999997
+        ],
+        "max_angular_velocity_abs_rad_s": 0.6500000017959044
+      },
+      "center_to_opposite_endpoint": {
+        "actual_yaw_excursion_rad_mean": 0.52376939175,
+        "duration_s_mean": 2.3500000000000014,
+        "duration_s_range": [
+          2.299999999999997,
+          2.4000000000000057
+        ],
+        "max_angular_velocity_abs_rad_s": 0.6500000000000371
+      },
+      "first_endpoint_to_center": {
+        "actual_yaw_excursion_rad_mean": 0.49328915825,
+        "duration_s_mean": 2.275000000000002,
+        "duration_s_range": [
+          2.200000000000003,
+          2.3000000000000114
+        ],
+        "max_angular_velocity_abs_rad_s": 0.6500000000000375
+      },
+      "initial_sensing_hold": {
+        "actual_yaw_excursion_rad_mean": 0.0,
+        "duration_s_mean": 0.0,
+        "duration_s_range": [
+          0.0,
+          0.0
+        ],
+        "max_angular_velocity_abs_rad_s": 0.0
+      },
+      "remaining_dwell": {
+        "actual_yaw_excursion_rad_mean": 0.0,
+        "duration_s_mean": 0.0,
+        "duration_s_range": [
+          0.0,
+          0.0
+        ],
+        "max_angular_velocity_abs_rad_s": 0.0
+      },
+      "return_or_final_settle": {
+        "actual_yaw_excursion_rad_mean": 0.0,
+        "duration_s_mean": 6.0,
+        "duration_s_range": [
+          6.0,
+          6.0
+        ],
+        "max_angular_velocity_abs_rad_s": 0.0
+      },
+      "theta0_plus_90_to_first_sweep_endpoint_minus_30": {
+        "actual_yaw_excursion_rad_mean": 2.09409816375,
+        "duration_s_mean": 4.699999999999999,
+        "duration_s_range": [
+          4.699999999999989,
+          4.700000000000003
+        ],
+        "max_angular_velocity_abs_rad_s": 0.6500000000000387
+      }
+    }
+  },
+  "three_sweep_rotation_phase_duration_s": {
+    "target_A": 9.300000000000004,
+    "target_B": 9.325000000000003
+  },
+  "verdict": "TARGET_B_A2_TIMING_ROOT_CAUSE_RESOLVED"
+}

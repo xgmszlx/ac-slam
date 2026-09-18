@@ -1,0 +1,180 @@
+{
+  "actions": {
+    "A0_baseline": {
+      "action_id": "n1_a0_baseline",
+      "action_labels": [
+        "probe_approach_history_03",
+        "probe_approach_history_02",
+        "probe_arrival"
+      ],
+      "action_waypoints": [
+        [
+          -17.845949699725896,
+          -22.153452063678635,
+          -1.5707963267948966
+        ],
+        [
+          -17.933248370256226,
+          -27.973289707185103,
+          3.141592653589793
+        ],
+        [
+          -22.207180194871654,
+          -27.85835003466554,
+          -0.056098058355317
+        ]
+      ],
+      "core_action_start_index": 2
+    },
+    "A1_dwell": {
+      "action_id": "n1_a1_time_matched_dwell",
+      "action_labels": [
+        "probe_approach_history_03",
+        "probe_approach_history_02",
+        "probe_arrival"
+      ],
+      "action_waypoints": [
+        [
+          -17.845949699725896,
+          -22.153452063678635,
+          -1.5707963267948966
+        ],
+        [
+          -17.933248370256226,
+          -27.973289707185103,
+          3.141592653589793
+        ],
+        [
+          -22.207180194871654,
+          -27.85835003466554,
+          -0.056098058355317
+        ]
+      ],
+      "core_action_start_index": 2,
+      "semantic_note": "A0 waypoint geometry followed by zero-Twist static dwell at the baseline arrival pose and heading; no deliberate yaw command"
+    },
+    "A2_sweep90": {
+      "action_id": "n1_a2_sweep90",
+      "action_labels": [
+        "probe_approach_history_03",
+        "probe_approach_history_02",
+        "probe_arrival",
+        "sweep_-30deg",
+        "sweep_+0deg",
+        "sweep_+30deg"
+      ],
+      "action_waypoints": [
+        [
+          -17.845949699725896,
+          -22.153452063678635,
+          -1.5707963267948966
+        ],
+        [
+          -17.933248370256226,
+          -27.973289707185103,
+          3.141592653589793
+        ],
+        [
+          -22.207180194871654,
+          -27.85835003466554,
+          1.5146982684395796
+        ],
+        [
+          -22.207180194871654,
+          -27.85835003466554,
+          -0.5796968339536158
+        ],
+        [
+          -22.207180194871654,
+          -27.85835003466554,
+          -0.056098058355317
+        ],
+        [
+          -22.207180194871654,
+          -27.85835003466554,
+          0.4675007172429818
+        ]
+      ],
+      "core_action_start_index": 2,
+      "semantic_note": "preserves old suite: +90 degree arrival followed by -30/0/+30 degrees relative to anchor"
+    }
+  },
+  "branch_start_tolerance": {
+    "frozen_before_branch_outcomes": true,
+    "heading_rad": 0.04,
+    "position_m": 0.08,
+    "rule": "max(fixed controller floor, 1.25 x maximum deviation in three pre-branch calibration runs)"
+  },
+  "budget_definition": {
+    "excludes": [
+      "accepted Karto keyscans"
+    ],
+    "includes": [
+      "GT distance",
+      "elapsed sensing time",
+      "raw LaserScan exposure"
+    ]
+  },
+  "canonical_graph_hash": "d697659a6ca52d529a14171c3b383fb2b83696d108874edfbf579f570b29fe88",
+  "common": {
+    "T_W_M": {
+      "tx": -28.022864996448334,
+      "ty": -27.932672464937166,
+      "yaw": -0.007702376515494597
+    },
+    "canonical_terminal_gt_pose": [
+      -21.858795159531578,
+      -22.020924617133353,
+      -3.109149582834705
+    ],
+    "hold_s": 6.0,
+    "setup_waypoints": [
+      [
+        -21.782630895292,
+        -27.923212449935633,
+        -0.01973913527793738
+      ],
+      [
+        -17.933248370256226,
+        -27.973289707185103,
+        -0.0007223160131638696
+      ],
+      [
+        -17.845949699725896,
+        -22.153452063678635,
+        1.578789052098118
+      ],
+      [
+        -21.858795159531578,
+        -22.020924617133353,
+        -3.109149582834705
+      ]
+    ],
+    "target_anchor_map": [
+      5.814939836333819,
+      0.11911437675380455,
+      -0.0483956818398224
+    ],
+    "target_anchor_world_by_history_only_se2": [
+      -22.207180194871654,
+      -27.85835003466554,
+      -0.056098058355317
+    ]
+  },
+  "frozen_after_budget_only_calibration": true,
+  "gates": {
+    "distance_difference_m_max": 0.15,
+    "raw_scan_relative_difference_max": 0.05,
+    "time_difference_s_max": 2.0
+  },
+  "protocol": "v10_time_matched_dwell_control_v1",
+  "science_outcome_gate": "unavailable until fresh-batch budget pass",
+  "selected_dwell_duration_s": 7.6000000000000085,
+  "target_scan_ids": [
+    13,
+    14,
+    15,
+    16,
+    17
+  ]
+}

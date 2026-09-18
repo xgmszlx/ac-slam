@@ -168,7 +168,7 @@ namespace karto
   /**
    * Log message event
    */
-  extern KARTO_EXPORT BasicEvent<LogMessageArguments> LogMessage;
+  KARTO_EXPORT BasicEvent<LogMessageArguments>& GetLogMessageEvent();
 
   //@}
 

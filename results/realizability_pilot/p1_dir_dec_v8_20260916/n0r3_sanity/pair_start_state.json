@@ -1,0 +1,136 @@
+{
+  "pair_count": 2,
+  "pairs": [
+    {
+      "arms": [
+        "0001_n0r_provenance_off_s41003",
+        "0002_n0r_buffered_provenance_on_s41003"
+      ],
+      "block_id": "n0r_seed41003",
+      "complete": true,
+      "deviations": {
+        "corrected_path_length_m": 2.190406450816294,
+        "edge_count": 18,
+        "node_count": 10,
+        "robot_gt_pose_before_probe_distance_m": 0.18897365820112175,
+        "route_start_node_count": 0,
+        "sim_time": 7.1000000000000085,
+        "target_segment_size": 0
+      },
+      "diagnostics_enabled": {
+        "0001_n0r_provenance_off_s41003": false,
+        "0002_n0r_buffered_provenance_on_s41003": false
+      },
+      "provenance_enabled": {
+        "0001_n0r_provenance_off_s41003": false,
+        "0002_n0r_buffered_provenance_on_s41003": true
+      },
+      "values": {
+        "corrected_path_length_m": {
+          "a": 20.908004716526246,
+          "b": 23.09841116734254
+        },
+        "edge_count": {
+          "a": 41,
+          "b": 59
+        },
+        "node_count": {
+          "a": 34,
+          "b": 44
+        },
+        "robot_gt_pose_before_probe": {
+          "a": [
+            85.1,
+            -21.632450793831065,
+            -22.05969735782205,
+            3.1312338290312742
+          ],
+          "b": [
+            92.2,
+            -21.80910943623491,
+            -22.126800022135363,
+            3.0899279741523387
+          ]
+        },
+        "route_start_node_count": {
+          "a": 12,
+          "b": 12
+        },
+        "sim_time": {
+          "a": 85.1,
+          "b": 92.2
+        },
+        "target_segment_size": {
+          "a": 5,
+          "b": 5
+        }
+      }
+    },
+    {
+      "arms": [
+        "0003_n0r_buffered_provenance_on_s41004",
+        "0004_n0r_provenance_off_s41004"
+      ],
+      "block_id": "n0r_seed41004",
+      "complete": true,
+      "deviations": {
+        "corrected_path_length_m": 0.5438797634055952,
+        "edge_count": 4,
+        "node_count": 2,
+        "robot_gt_pose_before_probe_distance_m": 0.3386606301908511,
+        "route_start_node_count": 1,
+        "sim_time": 0.9000000000000057,
+        "target_segment_size": 0
+      },
+      "diagnostics_enabled": {
+        "0003_n0r_buffered_provenance_on_s41004": false,
+        "0004_n0r_provenance_off_s41004": false
+      },
+      "provenance_enabled": {
+        "0003_n0r_buffered_provenance_on_s41004": true,
+        "0004_n0r_provenance_off_s41004": false
+      },
+      "values": {
+        "corrected_path_length_m": {
+          "a": 23.22570787240832,
+          "b": 23.769587635813917
+        },
+        "edge_count": {
+          "a": 62,
+          "b": 66
+        },
+        "node_count": {
+          "a": 44,
+          "b": 46
+        },
+        "robot_gt_pose_before_probe": {
+          "a": [
+            93.9,
+            -21.875934693018447,
+            -21.790711037739015,
+            -3.0706162554648677
+          ],
+          "b": [
+            93.0,
+            -21.60449721650238,
+            -21.993227009414966,
+            2.9415885812883205
+          ]
+        },
+        "route_start_node_count": {
+          "a": 11,
+          "b": 12
+        },
+        "sim_time": {
+          "a": 93.9,
+          "b": 93.0
+        },
+        "target_segment_size": {
+          "a": 5,
+          "b": 5
+        }
+      }
+    }
+  ],
+  "suite_dir": "results/realizability_pilot/p1_dir_dec_v8_20260916/n0r3_sanity"
+}

@@ -30,9 +30,12 @@
 #include <ros/ros.h>
 
 #include <string>
+#include <vector>
+#include <utility>
 
 #include <OpenKarto/Event.h>
 #include <OpenKarto/Pair.h>
+#include <OpenKarto/Mutex.h>
 #include <OpenKarto/Geometry.h>
 #include <OpenKarto/StringHelper.h>
 #include <OpenKarto/SensorData.h>
@@ -1789,9 +1792,41 @@ namespace karto
      * Enables append-only, observation-only graph-edge provenance records.
      * Disabled by default. The path receives JSONL constraint-created and
      * TryCloseLoop-context records.
+     *
+     * The records are buffered in memory on the constraint-creation path (plain
+     * struct copies only: no serialization, no file I/O, no allocation) and are
+     * written by FlushEdgeProvenance(), which is called from a maintenance
+     * thread, from the destructor or on explicit request.
      */
     void SetEdgeProvenanceDiagnostics(kt_bool enable, const karto::String& path,
                                       const karto::String& runId);
+
+    /**
+     * Serializes and appends the buffered provenance records in creation order.
+     * Safe to call from any thread; the critical section only swaps the buffer.
+     * No-op when the instrument is disabled or nothing is buffered.
+     * @param rPath optional path override (defaults to the configured path)
+     */
+    void FlushEdgeProvenance(const karto::String& rPath = karto::String(""));
+
+    /**
+     * True when buffered provenance records are waiting to be written.
+     */
+    kt_bool HasPendingEdgeProvenance();
+
+    /**
+     * Observation-only dump of the complete graph (nodes, edges in creation
+     * order, relative measurements and covariances) as JSON. Used by the
+     * same-input replay comparison; independent of the provenance instrument.
+     * @param rPath output file path
+     * @return true when the file was written
+     */
+    kt_bool WritePoseGraphJson(const karto::String& rPath);
+
+    /**
+     * Configures the graph dump path and arms the request check.
+     */
+    void SetPoseGraphDumpPath(const karto::String& rPath);
 
   protected:
     /**
@@ -1923,6 +1958,88 @@ namespace karto
     karto::String m_EdgeProvenanceRunId;
     kt_int64u m_EdgeCreationSequence;
 
+    // ---------------------------------------------------------------------
+    // Buffered provenance payload.
+    //
+    // The constraint-creation path only fills one plain struct and appends it
+    // to the buffer: no string formatting, no JSON serialization, no file I/O
+    // and no memory allocation for the textual fields (fixed-size arrays).  The
+    // JSON lines are produced later by FlushEdgeProvenance(), which is called
+    // from a background thread, from the destructor and on explicit request.
+    // ---------------------------------------------------------------------
+
+    static const kt_int32u kProvenanceTextLen = 48;
+
+    struct EdgeProvenanceRecord
+    {
+      kt_int64s creationSequence;
+      kt_int64s sourceStateId;
+      kt_int64s targetStateId;
+      kt_int64s sourceUniqueId;
+      kt_int64s targetUniqueId;
+      kt_int64s currentKeyscanStateId;
+      kt_int64s currentKeyscanUniqueId;
+      kt_int64s graphEdgeCountAfterCreation;
+      kt_int32u provenance;               // ConstraintCreationProvenance value
+      kt_bool solverAddConstraintCalled;
+      kt_bool hasMatchResponse;
+      kt_bool hasMatchThreshold;
+      kt_bool hasCoarseResponse;
+      kt_bool hasCoarseThreshold;
+      kt_double matchResponse;
+      kt_double matchThreshold;
+      kt_double coarseResponse;
+      kt_double coarseThreshold;
+      kt_double sourcePose[3];            // x, y, yaw
+      kt_double targetPose[3];
+      kt_double relativeMean[3];
+      kt_double covariance[3][3];
+      kt_double wallTime;
+      kt_double simTime;
+      char creationFunction[kProvenanceTextLen];
+      char creationStage[kProvenanceTextLen];
+      char matcherType[kProvenanceTextLen];
+      char probePhase[kProvenanceTextLen];
+    };
+
+    struct TryCloseLoopContextRecord
+    {
+      kt_int64s currentKeyscanStateId;
+      kt_int64s currentKeyscanUniqueId;
+      kt_bool hasNearLinkedScans;
+      kt_double wallTime;
+      kt_double simTime;
+      char stage[kProvenanceTextLen];
+      std::vector<std::pair<kt_int64s, kt_int64s> > graphEdges;
+      std::vector<kt_int64s> nearLinkedScanIds;
+    };
+
+    struct EdgeProvenanceEntry
+    {
+      kt_int32u recordType;               // 0 = constraint_created, 1 = context
+      EdgeProvenanceRecord constraint;
+      TryCloseLoopContextRecord context;
+    };
+
+    std::vector<EdgeProvenanceEntry> m_EdgeProvenanceBuffer;
+    karto::Mutex* m_pEdgeProvenanceMutex;
+    std::string m_ProbePhaseCache;
+
+    karto::String m_PoseGraphDumpPath;
+    int m_PoseGraphDumpDone;
+
+    /**
+     * Writes the graph dump when the harness has requested one.  Must be called
+     * from the mapper's processing thread (never from a foreign thread).
+     */
+    void MaybeWritePoseGraphDump();
+
+    /**
+     * Refreshes the cached probe phase. Called once per processed scan so the
+     * per-constraint path performs no ROS parameter lookup at all.
+     */
+    void RefreshProbePhaseCache();
+
     /**
      * Resets the per loop-search diagnostic accumulators.
      */
@@ -1944,7 +2061,6 @@ namespace karto
      */
     std::string BuildLoopDiagBaseFragment(LocalizedLaserScan* pScan);
 
-    void AppendEdgeProvenanceLine(const std::string& rLine);
     void RecordNewConstraint(Edge<LocalizedObjectPtr>* pEdge,
                              LocalizedObject* pFromObject,
                              LocalizedObject* pToObject,

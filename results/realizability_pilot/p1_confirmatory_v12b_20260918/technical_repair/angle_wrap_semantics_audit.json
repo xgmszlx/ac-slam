@@ -1,0 +1,165 @@
+{
+  "code_facts": [
+    "Sweep targets are theta0 plus relative offsets before SE(2) transform.",
+    "SE(2) transform adds frame yaw and normalizes with atan2(sin,cos).",
+    "Controller error is wrap_angle(target_yaw-current_yaw), so it uses the shortest angular error.",
+    "The frozen A2 geometry is +90, -30, 0, +30 degrees relative to theta0; it is not a symmetric center-start sweep."
+  ],
+  "observed_v12_specs": [
+    {
+      "block_id": "target_A_H2",
+      "commanded_yaws_rad": [
+        1.49693167662968,
+        -0.5974634257635151,
+        -0.07386465016521634,
+        0.4497341254330825
+      ],
+      "labels": [
+        "probe_arrival",
+        "sweep_-30deg",
+        "sweep_+0deg",
+        "sweep_+30deg"
+      ],
+      "max_offset_error_rad": 2.220446049250313e-16,
+      "recovered_relative_offsets_rad": [
+        1.5707963267948963,
+        -0.5235987755982987,
+        0.0,
+        0.5235987755982988
+      ],
+      "world_theta0_rad": -0.07386465016521634
+    },
+    {
+      "block_id": "target_B_H2",
+      "commanded_yaws_rad": [
+        1.5634539484586418,
+        -0.5309411539345534,
+        -0.007342378336254651,
+        0.5162563972620442
+      ],
+      "labels": [
+        "probe_arrival",
+        "sweep_-30deg",
+        "sweep_+0deg",
+        "sweep_+30deg"
+      ],
+      "max_offset_error_rad": 0.0,
+      "recovered_relative_offsets_rad": [
+        1.5707963267948966,
+        -0.5235987755982988,
+        0.0,
+        0.5235987755982988
+      ],
+      "world_theta0_rad": -0.007342378336254651
+    }
+  ],
+  "shortest_path_wrap_cases": [
+    {
+      "absolute_error": 1.8388068845354155e-16,
+      "current": 3.1315926535897933,
+      "expected_error": 0.02,
+      "observed_error": 0.019999999999999817,
+      "target": -3.1315926535897933
+    },
+    {
+      "absolute_error": 1.8388068845354155e-16,
+      "current": -3.1315926535897933,
+      "expected_error": -0.02,
+      "observed_error": -0.019999999999999817,
+      "target": 3.1315926535897933
+    }
+  ],
+  "source_sha256": {
+    "tools/realizability_pilot/confirmatory_v12_protocol.py": "d0433731ae444341c4de0e725798e99625182297561198427f3da7ebf99dcbe3",
+    "tools/realizability_pilot/controlled_probe_capture.py": "ef15e74e3d627db39c327c32cd321124208c61021b1197db8af5ff67209244a8",
+    "tools/realizability_pilot/frame_gauge_audit.py": "12ab30e54ac1e17ccea737aa0daa71e31b3f2420320ebb4acb129bb1687aeee6"
+  },
+  "synthetic_cases": [
+    {
+      "case": "near_zero",
+      "max_offset_error_rad": 0.0,
+      "recovered_relative_offsets_rad": [
+        1.5707963267948966,
+        -0.5235987755982988,
+        0.0,
+        0.5235987755982988
+      ],
+      "targets_rad": [
+        1.5717963267948964,
+        -0.5225987755982988,
+        0.001,
+        0.5245987755982988
+      ],
+      "theta0_rad": 0.001
+    },
+    {
+      "case": "near_positive_pi",
+      "max_offset_error_rad": 3.3306690738754696e-16,
+      "recovered_relative_offsets_rad": [
+        1.5707963267948968,
+        -0.5235987755982987,
+        0.0,
+        0.5235987755982985
+      ],
+      "targets_rad": [
+        -1.5717963267948962,
+        2.6169938779914945,
+        3.1405926535897932,
+        -2.6189938779914943
+      ],
+      "theta0_rad": 3.1405926535897932
+    },
+    {
+      "case": "near_negative_pi",
+      "max_offset_error_rad": 3.3306690738754696e-16,
+      "recovered_relative_offsets_rad": [
+        1.5707963267948966,
+        -0.5235987755982985,
+        0.0,
+        0.5235987755982987
+      ],
+      "targets_rad": [
+        -1.5697963267948967,
+        2.6189938779914943,
+        -3.1405926535897932,
+        -2.6169938779914945
+      ],
+      "theta0_rad": -3.1405926535897932
+    },
+    {
+      "case": "target_A_H2_observed_anchor",
+      "max_offset_error_rad": 1.1102230246251565e-16,
+      "recovered_relative_offsets_rad": [
+        1.5707963267948966,
+        -0.5235987755982987,
+        0.0,
+        0.5235987755982988
+      ],
+      "targets_rad": [
+        1.5005076076342723,
+        -0.593887494758923,
+        -0.07028871916062424,
+        0.4533100564376746
+      ],
+      "theta0_rad": -0.07028871916062424
+    },
+    {
+      "case": "target_B_H2_observed_anchor",
+      "max_offset_error_rad": 1.1102230246251565e-16,
+      "recovered_relative_offsets_rad": [
+        1.5707963267948966,
+        -0.5235987755982987,
+        0.0,
+        0.5235987755982989
+      ],
+      "targets_rad": [
+        1.5703701347911916,
+        -0.5240249676020037,
+        -0.00042619200370491717,
+        0.523172583594594
+      ],
+      "theta0_rad": -0.00042619200370491717
+    }
+  ],
+  "verdict": "RELATIVE_YAW_AND_WRAP_SEMANTICS_PASS"
+}

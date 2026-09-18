@@ -1,6 +1,7 @@
 #ifndef MULTI_MAPPER_H
 #define MULTI_MAPPER_H
 
+#include <boost/thread.hpp>
 #include <ros/ros.h>
 #include <std_msgs/Float64MultiArray.h>
 #include <std_msgs/Int32MultiArray.h>
@@ -125,6 +126,17 @@ private:
 	// Newly published vertex start from vertex_receive_idx
 	int mVertexReceiveIdx;
 	int mEdgeReceiveIdx;
+
+	// Instrumentation maintenance.  This thread is started in every
+	// configuration (it only sleeps when nothing is enabled), so the
+	// off/on comparison differs in the buffered records and in nothing else.
+	void instrumentationMaintenanceLoop();
+	boost::thread mInstrumentationThread;
+	double mInstrumentationFlushPeriod;
+	std::string mPoseGraphDumpPath;
+	int mPoseGraphDumpRequest;
+	int mPoseGraphDumpDone;
+	bool mInstrumentationThreadStarted;
 };
 
 #endif

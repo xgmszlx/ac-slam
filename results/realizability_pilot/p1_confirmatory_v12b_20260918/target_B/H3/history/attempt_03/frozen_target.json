@@ -1,0 +1,116 @@
+{
+  "anchor_scan": {
+    "id": 29,
+    "observed_time": 93.3,
+    "theta": 0.0440281744676171,
+    "x": 10.382807139433108,
+    "y": 0.06005070627938315
+  },
+  "anchor_to_reference_distance_m": 0.19241761237570978,
+  "frozen_before_probe": true,
+  "historical_scan_ids": [
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33
+  ],
+  "historical_unique_ids": [
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33
+  ],
+  "route_start_node_count": 12,
+  "segment_nodes": [
+    {
+      "id": 27,
+      "observed_time": 93.3,
+      "theta": 0.05921963718612995,
+      "unique_id": 27,
+      "x": 8.486575829947713,
+      "y": 0.05095194740648077
+    },
+    {
+      "id": 28,
+      "observed_time": 93.3,
+      "theta": 0.009935969885924378,
+      "unique_id": 28,
+      "x": 9.433522504973872,
+      "y": 0.07244319318819889
+    },
+    {
+      "id": 29,
+      "observed_time": 93.3,
+      "theta": 0.0440281744676171,
+      "unique_id": 29,
+      "x": 10.382807139433108,
+      "y": 0.06005070627938315
+    },
+    {
+      "id": 30,
+      "observed_time": 93.3,
+      "theta": 0.7246933509855596,
+      "unique_id": 30,
+      "x": 10.437409649701973,
+      "y": 0.21312996995618666
+    },
+    {
+      "id": 31,
+      "observed_time": 93.3,
+      "theta": 1.3279754433129165,
+      "unique_id": 31,
+      "x": 10.509809893951006,
+      "y": 0.5143330541067029
+    },
+    {
+      "id": 32,
+      "observed_time": 93.3,
+      "theta": 1.7743417904834842,
+      "unique_id": 32,
+      "x": 10.373156982008004,
+      "y": 1.5606605251814085
+    },
+    {
+      "id": 33,
+      "observed_time": 93.3,
+      "theta": 1.7472302090138394,
+      "unique_id": 33,
+      "x": 10.195177298667364,
+      "y": 2.4157192566136434
+    }
+  ],
+  "target_id": "map3_grid_anchor_03",
+  "target_identity_gate": {
+    "checks": {
+      "anchor_acquired_after_route_start": true,
+      "anchor_within_reference_radius": true,
+      "minimum_history_node_count": true,
+      "minimum_target_segment_scans": true
+    },
+    "observed": {
+      "anchor_distance_m": 0.19241761237570978,
+      "anchor_id": 29,
+      "node_count": 52,
+      "route_start_node_count": 12,
+      "segment_count": 7
+    },
+    "passed": true,
+    "thresholds": {
+      "minimum_history_node_count": 20,
+      "minimum_target_segment_scans": 3,
+      "target_anchor_max_distance_m": 1.0
+    }
+  },
+  "target_reference": [
+    10.2,
+    0.0,
+    0.0
+  ],
+  "target_segment_radius_m": 2.5
+}

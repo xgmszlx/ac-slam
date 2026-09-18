@@ -1,0 +1,3190 @@
+{
+  "episodes": {
+    "0001_baseline_diag_off_r01": {
+      "after_edges": 70,
+      "after_nodes": 48,
+      "before_edges": 36,
+      "before_nodes": 32,
+      "by_attribution": {
+        "ORDINARY_RECENT_OR_SEQUENTIAL": {
+          "bridging": 16,
+          "count": 19,
+          "cycle_length_m": {
+            "max": 11.456140674544544,
+            "min": 7.654427770173109,
+            "values": [
+              7.654427770173109,
+              9.679633716700422,
+              11.456140674544544
+            ]
+          },
+          "geodesic_length_pre_m": {
+            "max": 5.865583165229106,
+            "min": 3.879318724509481,
+            "values": [
+              3.879318724509481,
+              4.931184933375608,
+              5.865583165229106
+            ]
+          },
+          "hops_pre": {
+            "max": 4,
+            "min": 3,
+            "values": [
+              4,
+              3,
+              3
+            ]
+          }
+        },
+        "TARGET_ATTRIBUTABLE": {
+          "bridging": 0,
+          "count": 3,
+          "cycle_length_m": {
+            "max": 16.438346822858122,
+            "min": 8.090840368753668,
+            "values": [
+              16.438346822858122,
+              14.919062702646919,
+              8.090840368753668
+            ]
+          },
+          "geodesic_length_pre_m": {
+            "max": 10.702978898892725,
+            "min": 7.010479791741471,
+            "values": [
+              10.702978898892725,
+              8.852157980868318,
+              7.010479791741471
+            ]
+          },
+          "hops_pre": {
+            "max": 5,
+            "min": 3,
+            "values": [
+              3,
+              5,
+              3
+            ]
+          }
+        },
+        "WRONG_TARGET_HISTORICAL": {
+          "bridging": 0,
+          "count": 12,
+          "cycle_length_m": {
+            "max": 16.210759040452686,
+            "min": 3.9086771403660348,
+            "values": [
+              3.9086771403660348,
+              7.505190421812283,
+              8.109425465396948,
+              9.427630871837678,
+              8.303121821829668,
+              16.030594196298267,
+              16.095178842827828,
+              16.210759040452686,
+              14.582083772187055,
+              13.098846096049705,
+              11.793468103138407,
+              11.306271100967276
+            ]
+          },
+          "geodesic_length_pre_m": {
+            "max": 9.172121800676116,
+            "min": 1.9544290274713951,
+            "values": [
+              1.9544290274713951,
+              3.7729517036601448,
+              4.170320065800926,
+              5.29613735220921,
+              4.293222325954998,
+              8.985693024010553,
+              9.161944733542454,
+              9.172121800676116,
+              8.114753384628106,
+              7.41947714752152,
+              6.75125929442619,
+              7.339426975395299
+            ]
+          },
+          "hops_pre": {
+            "max": 8,
+            "min": 2,
+            "values": [
+              2,
+              3,
+              3,
+              4,
+              2,
+              8,
+              4,
+              4,
+              3,
+              2,
+              2,
+              2
+            ]
+          }
+        }
+      },
+      "new_edge_rows": [
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 36,
+          "edge_length_m": 0.9009704165447333,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            31,
+            32
+          ],
+          "source": 31,
+          "target": 32
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 3.9086771403660348,
+          "edge_index": 37,
+          "edge_length_m": 1.9542481128946396,
+          "geodesic_hops_pre": 2,
+          "geodesic_length_pre_m": 1.9544290274713951,
+          "match_response": "",
+          "pair": [
+            30,
+            32
+          ],
+          "source": 30,
+          "target": 32
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 38,
+          "edge_length_m": 0.8722123593215679,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            32,
+            33
+          ],
+          "source": 32,
+          "target": 33
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 7.505190421812283,
+          "edge_index": 39,
+          "edge_length_m": 3.732238718152138,
+          "geodesic_hops_pre": 3,
+          "geodesic_length_pre_m": 3.7729517036601448,
+          "match_response": "",
+          "pair": [
+            29,
+            33
+          ],
+          "source": 29,
+          "target": 33
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 40,
+          "edge_length_m": 0.11732214514285602,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            33,
+            34
+          ],
+          "source": 33,
+          "target": 34
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 8.109425465396948,
+          "edge_index": 41,
+          "edge_length_m": 3.9391053995960212,
+          "geodesic_hops_pre": 3,
+          "geodesic_length_pre_m": 4.170320065800926,
+          "match_response": "",
+          "pair": [
+            28,
+            34
+          ],
+          "source": 28,
+          "target": 34
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 42,
+          "edge_length_m": 0.10753317238775735,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            34,
+            35
+          ],
+          "source": 34,
+          "target": 35
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 9.427630871837678,
+          "edge_index": 43,
+          "edge_length_m": 4.131493519628469,
+          "geodesic_hops_pre": 4,
+          "geodesic_length_pre_m": 5.29613735220921,
+          "match_response": "",
+          "pair": [
+            26,
+            35
+          ],
+          "source": 26,
+          "target": 35
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 44,
+          "edge_length_m": 0.16172880632652886,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            35,
+            36
+          ],
+          "source": 35,
+          "target": 36
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 8.303121821829668,
+          "edge_index": 45,
+          "edge_length_m": 4.00989949587467,
+          "geodesic_hops_pre": 2,
+          "geodesic_length_pre_m": 4.293222325954998,
+          "match_response": "",
+          "pair": [
+            26,
+            36
+          ],
+          "source": 26,
+          "target": 36
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 46,
+          "edge_length_m": 0.13615942504903455,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            36,
+            37
+          ],
+          "source": 36,
+          "target": 37
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 16.030594196298267,
+          "edge_index": 47,
+          "edge_length_m": 7.044901172287713,
+          "geodesic_hops_pre": 8,
+          "geodesic_length_pre_m": 8.985693024010553,
+          "match_response": "",
+          "pair": [
+            20,
+            37
+          ],
+          "source": 20,
+          "target": 37
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 48,
+          "edge_length_m": 0.13070991296369588,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            37,
+            38
+          ],
+          "source": 37,
+          "target": 38
+        },
+        {
+          "attribution": "TARGET_ATTRIBUTABLE",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 16.438346822858122,
+          "edge_index": 49,
+          "edge_length_m": 5.735367923965398,
+          "geodesic_hops_pre": 3,
+          "geodesic_length_pre_m": 10.702978898892725,
+          "match_response": "",
+          "pair": [
+            16,
+            38
+          ],
+          "source": 16,
+          "target": 38
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 50,
+          "edge_length_m": 0.2827338383337669,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            38,
+            39
+          ],
+          "source": 38,
+          "target": 39
+        },
+        {
+          "attribution": "TARGET_ATTRIBUTABLE",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 14.919062702646919,
+          "edge_index": 51,
+          "edge_length_m": 6.0669047217786,
+          "geodesic_hops_pre": 5,
+          "geodesic_length_pre_m": 8.852157980868318,
+          "match_response": "",
+          "pair": [
+            13,
+            39
+          ],
+          "source": 13,
+          "target": 39
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 52,
+          "edge_length_m": 1.043172931646748,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            39,
+            40
+          ],
+          "source": 39,
+          "target": 40
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 16.095178842827828,
+          "edge_index": 53,
+          "edge_length_m": 6.933234109285375,
+          "geodesic_hops_pre": 4,
+          "geodesic_length_pre_m": 9.161944733542454,
+          "match_response": "",
+          "pair": [
+            11,
+            40
+          ],
+          "source": 11,
+          "target": 40
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 54,
+          "edge_length_m": 1.0564992625178453,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            40,
+            41
+          ],
+          "source": 40,
+          "target": 41
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 16.210759040452686,
+          "edge_index": 55,
+          "edge_length_m": 7.038637239776568,
+          "geodesic_hops_pre": 4,
+          "geodesic_length_pre_m": 9.172121800676116,
+          "match_response": "",
+          "pair": [
+            1,
+            41
+          ],
+          "source": 1,
+          "target": 41
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 56,
+          "edge_length_m": 0.9580723254421964,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            41,
+            42
+          ],
+          "source": 41,
+          "target": 42
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 14.582083772187055,
+          "edge_index": 57,
+          "edge_length_m": 6.46733038755895,
+          "geodesic_hops_pre": 3,
+          "geodesic_length_pre_m": 8.114753384628106,
+          "match_response": "",
+          "pair": [
+            2,
+            42
+          ],
+          "source": 2,
+          "target": 42
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 58,
+          "edge_length_m": 0.9521467599625704,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            42,
+            43
+          ],
+          "source": 42,
+          "target": 43
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 13.098846096049705,
+          "edge_index": 59,
+          "edge_length_m": 5.679368948528186,
+          "geodesic_hops_pre": 2,
+          "geodesic_length_pre_m": 7.41947714752152,
+          "match_response": "",
+          "pair": [
+            2,
+            43
+          ],
+          "source": 2,
+          "target": 43
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 60,
+          "edge_length_m": 1.0718903458980045,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            43,
+            44
+          ],
+          "source": 43,
+          "target": 44
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 11.793468103138407,
+          "edge_index": 61,
+          "edge_length_m": 5.042208808712217,
+          "geodesic_hops_pre": 2,
+          "geodesic_length_pre_m": 6.75125929442619,
+          "match_response": "",
+          "pair": [
+            2,
+            44
+          ],
+          "source": 2,
+          "target": 44
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 62,
+          "edge_length_m": 0.8972092932067092,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            44,
+            45
+          ],
+          "source": 44,
+          "target": 45
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 7.654427770173109,
+          "edge_index": 63,
+          "edge_length_m": 3.775109045663628,
+          "geodesic_hops_pre": 4,
+          "geodesic_length_pre_m": 3.879318724509481,
+          "match_response": "",
+          "pair": [
+            41,
+            45
+          ],
+          "source": 41,
+          "target": 45
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 64,
+          "edge_length_m": 0.0995766251941349,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            45,
+            46
+          ],
+          "source": 45,
+          "target": 46
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 9.679633716700422,
+          "edge_index": 65,
+          "edge_length_m": 4.7484487833248155,
+          "geodesic_hops_pre": 3,
+          "geodesic_length_pre_m": 4.931184933375608,
+          "match_response": "",
+          "pair": [
+            40,
+            46
+          ],
+          "source": 40,
+          "target": 46
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 11.306271100967276,
+          "edge_index": 66,
+          "edge_length_m": 3.9668441255719764,
+          "geodesic_hops_pre": 2,
+          "geodesic_length_pre_m": 7.339426975395299,
+          "match_response": "",
+          "pair": [
+            11,
+            46
+          ],
+          "source": 11,
+          "target": 46
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 67,
+          "edge_length_m": 0.07396145025754196,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            46,
+            47
+          ],
+          "source": 46,
+          "target": 47
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 11.456140674544544,
+          "edge_index": 68,
+          "edge_length_m": 5.590557509315438,
+          "geodesic_hops_pre": 3,
+          "geodesic_length_pre_m": 5.865583165229106,
+          "match_response": "",
+          "pair": [
+            39,
+            47
+          ],
+          "source": 39,
+          "target": 47
+        },
+        {
+          "attribution": "TARGET_ATTRIBUTABLE",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 8.090840368753668,
+          "edge_index": 69,
+          "edge_length_m": 1.0803605770121973,
+          "geodesic_hops_pre": 3,
+          "geodesic_length_pre_m": 7.010479791741471,
+          "match_response": "",
+          "pair": [
+            14,
+            47
+          ],
+          "source": 14,
+          "target": 47
+        }
+      ],
+      "new_edges": 34,
+      "utility_ablation": {
+        "U_graph_all": 11598.339568891673,
+        "U_graph_without_all_history_edges": 7648.359434081201,
+        "U_graph_without_target_edges": 10746.90407053186,
+        "dU_history_all": 3949.980134810473,
+        "dU_history_rel": 0.3405642774423382,
+        "dU_target": 851.4354983598132,
+        "dU_target_rel": 0.07341011989711693,
+        "n_edges_all": 70,
+        "n_history_edges": 15,
+        "n_target_edges": 3,
+        "utility_definition": "exp(mean(log(eigenvalues>1e-6))) of reduced cov-weighted Laplacian (utils.py)"
+      }
+    },
+    "0002_baseline_diag_on_r01": {
+      "after_edges": 73,
+      "after_nodes": 49,
+      "before_edges": 39,
+      "before_nodes": 33,
+      "by_attribution": {
+        "ORDINARY_RECENT_OR_SEQUENTIAL": {
+          "bridging": 16,
+          "count": 18,
+          "cycle_length_m": {
+            "max": 10.957310259203144,
+            "min": 9.205150628896916,
+            "values": [
+              9.205150628896916,
+              10.957310259203144
+            ]
+          },
+          "geodesic_length_pre_m": {
+            "max": 5.663937673583213,
+            "min": 4.693664708447022,
+            "values": [
+              4.693664708447022,
+              5.663937673583213
+            ]
+          },
+          "hops_pre": {
+            "max": 5,
+            "min": 2,
+            "values": [
+              5,
+              2
+            ]
+          }
+        },
+        "TARGET_ATTRIBUTABLE": {
+          "bridging": 0,
+          "count": 3,
+          "cycle_length_m": {
+            "max": 19.15766733134901,
+            "min": 9.95991579827496,
+            "values": [
+              19.15766733134901,
+              13.39014158680777,
+              9.95991579827496
+            ]
+          },
+          "geodesic_length_pre_m": {
+            "max": 13.331930221977965,
+            "min": 7.650457464144619,
+            "values": [
+              13.331930221977965,
+              7.650457464144619,
+              7.97255949192855
+            ]
+          },
+          "hops_pre": {
+            "max": 5,
+            "min": 3,
+            "values": [
+              5,
+              3,
+              4
+            ]
+          }
+        },
+        "WRONG_TARGET_HISTORICAL": {
+          "bridging": 0,
+          "count": 13,
+          "cycle_length_m": {
+            "max": 17.07812803419342,
+            "min": 5.985148576203393,
+            "values": [
+              5.985148576203393,
+              8.007747797048859,
+              8.859619210040822,
+              8.884920066177141,
+              9.960265518179115,
+              16.773003569907974,
+              15.0561121146587,
+              17.07812803419342,
+              15.069206759524047,
+              13.772258407504673,
+              12.238516364583013,
+              10.987103979385012,
+              10.315471921285944
+            ]
+          },
+          "geodesic_length_pre_m": {
+            "max": 9.738559139345684,
+            "min": 2.9946749597382816,
+            "values": [
+              2.9946749597382816,
+              4.016544167714976,
+              4.436567009599211,
+              4.581011269300645,
+              5.533906292739155,
+              9.472180868472964,
+              7.685932725332592,
+              9.738559139345684,
+              8.389645666809892,
+              7.761033447379569,
+              7.066770705866942,
+              6.2235223829251565,
+              5.480734652292998
+            ]
+          },
+          "hops_pre": {
+            "max": 7,
+            "min": 2,
+            "values": [
+              3,
+              2,
+              3,
+              2,
+              4,
+              7,
+              3,
+              5,
+              3,
+              3,
+              2,
+              2,
+              2
+            ]
+          }
+        }
+      },
+      "new_edge_rows": [
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 39,
+          "edge_length_m": 0.974587913001405,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.889447",
+          "pair": [
+            32,
+            33
+          ],
+          "source": 32,
+          "target": 33
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 5.985148576203393,
+          "edge_index": 40,
+          "edge_length_m": 2.990473616465112,
+          "geodesic_hops_pre": 3,
+          "geodesic_length_pre_m": 2.9946749597382816,
+          "match_response": "0.889447",
+          "pair": [
+            30,
+            33
+          ],
+          "source": 30,
+          "target": 33
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 41,
+          "edge_length_m": 1.0260705512498633,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.836286",
+          "pair": [
+            33,
+            34
+          ],
+          "source": 33,
+          "target": 34
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 8.007747797048859,
+          "edge_index": 42,
+          "edge_length_m": 3.9912036293338837,
+          "geodesic_hops_pre": 2,
+          "geodesic_length_pre_m": 4.016544167714976,
+          "match_response": "0.836286",
+          "pair": [
+            30,
+            34
+          ],
+          "source": 30,
+          "target": 34
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 43,
+          "edge_length_m": 0.2073774044897134,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.655374",
+          "pair": [
+            34,
+            35
+          ],
+          "source": 34,
+          "target": 35
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 8.859619210040822,
+          "edge_index": 44,
+          "edge_length_m": 4.423052200441611,
+          "geodesic_hops_pre": 3,
+          "geodesic_length_pre_m": 4.436567009599211,
+          "match_response": "0.655374",
+          "pair": [
+            29,
+            35
+          ],
+          "source": 29,
+          "target": 35
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 45,
+          "edge_length_m": 0.1579590688590339,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.675568",
+          "pair": [
+            35,
+            36
+          ],
+          "source": 35,
+          "target": 36
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 8.884920066177141,
+          "edge_index": 46,
+          "edge_length_m": 4.303908796876497,
+          "geodesic_hops_pre": 2,
+          "geodesic_length_pre_m": 4.581011269300645,
+          "match_response": "0.675568",
+          "pair": [
+            29,
+            36
+          ],
+          "source": 29,
+          "target": 36
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 47,
+          "edge_length_m": 0.07918087241850609,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.649953",
+          "pair": [
+            36,
+            37
+          ],
+          "source": 36,
+          "target": 37
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 9.960265518179115,
+          "edge_index": 48,
+          "edge_length_m": 4.426359225439961,
+          "geodesic_hops_pre": 4,
+          "geodesic_length_pre_m": 5.533906292739155,
+          "match_response": "0.649953",
+          "pair": [
+            27,
+            37
+          ],
+          "source": 27,
+          "target": 37
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 49,
+          "edge_length_m": 0.12935029368969844,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.613614",
+          "pair": [
+            37,
+            38
+          ],
+          "source": 37,
+          "target": 38
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 16.773003569907974,
+          "edge_index": 50,
+          "edge_length_m": 7.300822701435009,
+          "geodesic_hops_pre": 7,
+          "geodesic_length_pre_m": 9.472180868472964,
+          "match_response": "0.613614",
+          "pair": [
+            22,
+            38
+          ],
+          "source": 22,
+          "target": 38
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 51,
+          "edge_length_m": 0.11319033702140896,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.719274",
+          "pair": [
+            38,
+            39
+          ],
+          "source": 38,
+          "target": 39
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 15.0561121146587,
+          "edge_index": 52,
+          "edge_length_m": 7.370179389326106,
+          "geodesic_hops_pre": 3,
+          "geodesic_length_pre_m": 7.685932725332592,
+          "match_response": "0.719274",
+          "pair": [
+            21,
+            39
+          ],
+          "source": 21,
+          "target": 39
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 53,
+          "edge_length_m": 0.3879292222697746,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.782124",
+          "pair": [
+            39,
+            40
+          ],
+          "source": 39,
+          "target": 40
+        },
+        {
+          "attribution": "TARGET_ATTRIBUTABLE",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 19.15766733134901,
+          "edge_index": 54,
+          "edge_length_m": 5.8257371093710475,
+          "geodesic_hops_pre": 5,
+          "geodesic_length_pre_m": 13.331930221977965,
+          "match_response": "0.782124",
+          "pair": [
+            15,
+            40
+          ],
+          "source": 15,
+          "target": 40
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 55,
+          "edge_length_m": 0.8945646572112321,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.838402",
+          "pair": [
+            40,
+            41
+          ],
+          "source": 40,
+          "target": 41
+        },
+        {
+          "attribution": "TARGET_ATTRIBUTABLE",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 13.39014158680777,
+          "edge_index": 56,
+          "edge_length_m": 5.739684122663151,
+          "geodesic_hops_pre": 3,
+          "geodesic_length_pre_m": 7.650457464144619,
+          "match_response": "0.838402",
+          "pair": [
+            14,
+            41
+          ],
+          "source": 14,
+          "target": 41
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 57,
+          "edge_length_m": 1.0067522734401244,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.932667",
+          "pair": [
+            41,
+            42
+          ],
+          "source": 41,
+          "target": 42
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 17.07812803419342,
+          "edge_index": 58,
+          "edge_length_m": 7.339568894847734,
+          "geodesic_hops_pre": 5,
+          "geodesic_length_pre_m": 9.738559139345684,
+          "match_response": "0.932667",
+          "pair": [
+            11,
+            42
+          ],
+          "source": 11,
+          "target": 42
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 59,
+          "edge_length_m": 1.0372365805404533,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.949578",
+          "pair": [
+            42,
+            43
+          ],
+          "source": 42,
+          "target": 43
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 15.069206759524047,
+          "edge_index": 60,
+          "edge_length_m": 6.679561092714155,
+          "geodesic_hops_pre": 3,
+          "geodesic_length_pre_m": 8.389645666809892,
+          "match_response": "0.949578",
+          "pair": [
+            1,
+            43
+          ],
+          "source": 1,
+          "target": 43
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 61,
+          "edge_length_m": 0.963132574104811,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.974861",
+          "pair": [
+            43,
+            44
+          ],
+          "source": 43,
+          "target": 44
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 13.772258407504673,
+          "edge_index": 62,
+          "edge_length_m": 6.011224960125103,
+          "geodesic_hops_pre": 3,
+          "geodesic_length_pre_m": 7.761033447379569,
+          "match_response": "0.974861",
+          "pair": [
+            2,
+            44
+          ],
+          "source": 2,
+          "target": 44
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 63,
+          "edge_length_m": 1.055545745741839,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.976753",
+          "pair": [
+            44,
+            45
+          ],
+          "source": 44,
+          "target": 45
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "NEAR_CHAIN",
+          "cycle_length_m": 12.238516364583013,
+          "edge_index": 64,
+          "edge_length_m": 5.171745658716071,
+          "geodesic_hops_pre": 2,
+          "geodesic_length_pre_m": 7.066770705866942,
+          "match_response": "0.732542",
+          "pair": [
+            2,
+            45
+          ],
+          "source": 2,
+          "target": 45
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 65,
+          "edge_length_m": 1.0517767242090856,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.932138",
+          "pair": [
+            45,
+            46
+          ],
+          "source": 45,
+          "target": 46
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 10.987103979385012,
+          "edge_index": 66,
+          "edge_length_m": 4.763581596459856,
+          "geodesic_hops_pre": 2,
+          "geodesic_length_pre_m": 6.2235223829251565,
+          "match_response": "0.932138",
+          "pair": [
+            2,
+            46
+          ],
+          "source": 2,
+          "target": 46
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 67,
+          "edge_length_m": 0.5859730838508326,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.940073",
+          "pair": [
+            46,
+            47
+          ],
+          "source": 46,
+          "target": 47
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 9.205150628896916,
+          "edge_index": 68,
+          "edge_length_m": 4.5114859204498945,
+          "geodesic_hops_pre": 5,
+          "geodesic_length_pre_m": 4.693664708447022,
+          "match_response": "0.940073",
+          "pair": [
+            42,
+            47
+          ],
+          "source": 42,
+          "target": 47
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "NEAR_CHAIN",
+          "cycle_length_m": 10.315471921285944,
+          "edge_index": 69,
+          "edge_length_m": 4.834737268992947,
+          "geodesic_hops_pre": 2,
+          "geodesic_length_pre_m": 5.480734652292998,
+          "match_response": "0.759856",
+          "pair": [
+            11,
+            47
+          ],
+          "source": 11,
+          "target": 47
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 70,
+          "edge_length_m": 0.14569947969319427,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.753367",
+          "pair": [
+            47,
+            48
+          ],
+          "source": 47,
+          "target": 48
+        },
+        {
+          "attribution": "TARGET_ATTRIBUTABLE",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 9.95991579827496,
+          "edge_index": 71,
+          "edge_length_m": 1.987356306346409,
+          "geodesic_hops_pre": 4,
+          "geodesic_length_pre_m": 7.97255949192855,
+          "match_response": "0.753367",
+          "pair": [
+            14,
+            48
+          ],
+          "source": 14,
+          "target": 48
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "NEAR_CHAIN",
+          "cycle_length_m": 10.957310259203144,
+          "edge_index": 72,
+          "edge_length_m": 5.293372585619931,
+          "geodesic_hops_pre": 2,
+          "geodesic_length_pre_m": 5.663937673583213,
+          "match_response": "0.652752",
+          "pair": [
+            41,
+            48
+          ],
+          "source": 41,
+          "target": 48
+        }
+      ],
+      "new_edges": 34,
+      "utility_ablation": {
+        "U_graph_all": 12779.662191331397,
+        "U_graph_without_all_history_edges": 8300.671681269774,
+        "U_graph_without_target_edges": 11884.20846521811,
+        "dU_history_all": 4478.990510061623,
+        "dU_history_rel": 0.3504780050524166,
+        "dU_target": 895.4537261132882,
+        "dU_target_rel": 0.070068653827226,
+        "n_edges_all": 73,
+        "n_history_edges": 16,
+        "n_target_edges": 3,
+        "utility_definition": "exp(mean(log(eigenvalues>1e-6))) of reduced cov-weighted Laplacian (utils.py)"
+      }
+    },
+    "0003_align60_diag_on_r01": {
+      "after_edges": 75,
+      "after_nodes": 50,
+      "before_edges": 39,
+      "before_nodes": 33,
+      "by_attribution": {
+        "ORDINARY_RECENT_OR_SEQUENTIAL": {
+          "bridging": 0,
+          "count": 0,
+          "cycle_length_m": {
+            "max": null,
+            "min": null,
+            "values": []
+          },
+          "geodesic_length_pre_m": {
+            "max": null,
+            "min": null,
+            "values": []
+          },
+          "hops_pre": {
+            "max": null,
+            "min": null,
+            "values": []
+          }
+        },
+        "TARGET_ATTRIBUTABLE": {
+          "bridging": 0,
+          "count": 0,
+          "cycle_length_m": {
+            "max": null,
+            "min": null,
+            "values": []
+          },
+          "geodesic_length_pre_m": {
+            "max": null,
+            "min": null,
+            "values": []
+          },
+          "hops_pre": {
+            "max": null,
+            "min": null,
+            "values": []
+          }
+        },
+        "WRONG_TARGET_HISTORICAL": {
+          "bridging": 0,
+          "count": 0,
+          "cycle_length_m": {
+            "max": null,
+            "min": null,
+            "values": []
+          },
+          "geodesic_length_pre_m": {
+            "max": null,
+            "min": null,
+            "values": []
+          },
+          "hops_pre": {
+            "max": null,
+            "min": null,
+            "values": []
+          }
+        }
+      },
+      "new_edge_rows": [
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 39,
+          "edge_length_m": 0.9052994281433884,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            32,
+            33
+          ],
+          "source": 32,
+          "target": 33
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 3.886991833426378,
+          "edge_index": 40,
+          "edge_length_m": 1.9425312517796534,
+          "geodesic_hops_pre": 2,
+          "geodesic_length_pre_m": 1.9444605816467249,
+          "match_response": "",
+          "pair": [
+            31,
+            33
+          ],
+          "source": 31,
+          "target": 33
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 41,
+          "edge_length_m": 0.8519127234809165,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            33,
+            34
+          ],
+          "source": 33,
+          "target": 34
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 7.5366426540001035,
+          "edge_index": 42,
+          "edge_length_m": 3.747222846323204,
+          "geodesic_hops_pre": 3,
+          "geodesic_length_pre_m": 3.7894198076768997,
+          "match_response": "",
+          "pair": [
+            30,
+            34
+          ],
+          "source": 30,
+          "target": 34
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 43,
+          "edge_length_m": 0.12479976231110809,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            34,
+            35
+          ],
+          "source": 34,
+          "target": 35
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 8.131277274618231,
+          "edge_index": 44,
+          "edge_length_m": 3.946986550213303,
+          "geodesic_hops_pre": 3,
+          "geodesic_length_pre_m": 4.184290724404929,
+          "match_response": "",
+          "pair": [
+            29,
+            35
+          ],
+          "source": 29,
+          "target": 35
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 45,
+          "edge_length_m": 0.07759121773732117,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            35,
+            36
+          ],
+          "source": 35,
+          "target": 36
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 9.787643153257715,
+          "edge_index": 46,
+          "edge_length_m": 4.255327850381921,
+          "geodesic_hops_pre": 4,
+          "geodesic_length_pre_m": 5.532315302875793,
+          "match_response": "",
+          "pair": [
+            27,
+            36
+          ],
+          "source": 27,
+          "target": 36
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 47,
+          "edge_length_m": 0.1433592705204144,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            36,
+            37
+          ],
+          "source": 36,
+          "target": 37
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 15.984492170760314,
+          "edge_index": 48,
+          "edge_length_m": 7.161371333510115,
+          "geodesic_hops_pre": 6,
+          "geodesic_length_pre_m": 8.8231208372502,
+          "match_response": "",
+          "pair": [
+            22,
+            37
+          ],
+          "source": 22,
+          "target": 37
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 49,
+          "edge_length_m": 0.1375542165002571,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            37,
+            38
+          ],
+          "source": 37,
+          "target": 38
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 14.702998098782377,
+          "edge_index": 50,
+          "edge_length_m": 7.190355338985138,
+          "geodesic_hops_pre": 3,
+          "geodesic_length_pre_m": 7.512642759797239,
+          "match_response": "",
+          "pair": [
+            21,
+            38
+          ],
+          "source": 21,
+          "target": 38
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 51,
+          "edge_length_m": 0.09792880528493655,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            38,
+            39
+          ],
+          "source": 38,
+          "target": 39
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 17.657606384880214,
+          "edge_index": 52,
+          "edge_length_m": 5.840551892626107,
+          "geodesic_hops_pre": 5,
+          "geodesic_length_pre_m": 11.817054492254108,
+          "match_response": "",
+          "pair": [
+            16,
+            39
+          ],
+          "source": 16,
+          "target": 39
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 53,
+          "edge_length_m": 0.8549482697587499,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            39,
+            40
+          ],
+          "source": 39,
+          "target": 40
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 16.199374413807533,
+          "edge_index": 54,
+          "edge_length_m": 6.497969108538477,
+          "geodesic_hops_pre": 5,
+          "geodesic_length_pre_m": 9.701405305269056,
+          "match_response": "",
+          "pair": [
+            13,
+            40
+          ],
+          "source": 13,
+          "target": 40
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 55,
+          "edge_length_m": 0.9885036902333959,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            40,
+            41
+          ],
+          "source": 40,
+          "target": 41
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 16.876727239159848,
+          "edge_index": 56,
+          "edge_length_m": 7.344308144405108,
+          "geodesic_hops_pre": 4,
+          "geodesic_length_pre_m": 9.532419094754738,
+          "match_response": "",
+          "pair": [
+            11,
+            41
+          ],
+          "source": 11,
+          "target": 41
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 57,
+          "edge_length_m": 0.950000491363587,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            41,
+            42
+          ],
+          "source": 41,
+          "target": 42
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 15.137547959752348,
+          "edge_index": 58,
+          "edge_length_m": 6.795926051930351,
+          "geodesic_hops_pre": 3,
+          "geodesic_length_pre_m": 8.341621907821997,
+          "match_response": "",
+          "pair": [
+            1,
+            42
+          ],
+          "source": 1,
+          "target": 42
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 59,
+          "edge_length_m": 0.9795347167078887,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            42,
+            43
+          ],
+          "source": 42,
+          "target": 43
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 14.031927804710524,
+          "edge_index": 60,
+          "edge_length_m": 6.133743535183835,
+          "geodesic_hops_pre": 3,
+          "geodesic_length_pre_m": 7.898184269526688,
+          "match_response": "",
+          "pair": [
+            2,
+            43
+          ],
+          "source": 2,
+          "target": 43
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 61,
+          "edge_length_m": 0.9255259828402591,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            43,
+            44
+          ],
+          "source": 43,
+          "target": 44
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 12.463736185325246,
+          "edge_index": 62,
+          "edge_length_m": 5.4044666673011506,
+          "geodesic_hops_pre": 2,
+          "geodesic_length_pre_m": 7.059269518024094,
+          "match_response": "",
+          "pair": [
+            2,
+            44
+          ],
+          "source": 2,
+          "target": 44
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 63,
+          "edge_length_m": 0.9705495928042134,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            44,
+            45
+          ],
+          "source": 44,
+          "target": 45
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 11.340015893561564,
+          "edge_index": 64,
+          "edge_length_m": 4.964999633456201,
+          "geodesic_hops_pre": 2,
+          "geodesic_length_pre_m": 6.3750162601053635,
+          "match_response": "",
+          "pair": [
+            2,
+            45
+          ],
+          "source": 2,
+          "target": 45
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 65,
+          "edge_length_m": 0.6765675183791936,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            45,
+            46
+          ],
+          "source": 45,
+          "target": 46
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 8.875339229823267,
+          "edge_index": 66,
+          "edge_length_m": 4.373160927728125,
+          "geodesic_hops_pre": 5,
+          "geodesic_length_pre_m": 4.502178302095142,
+          "match_response": "",
+          "pair": [
+            41,
+            46
+          ],
+          "source": 41,
+          "target": 46
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 10.721699707488545,
+          "edge_index": 67,
+          "edge_length_m": 4.910095782711402,
+          "geodesic_hops_pre": 2,
+          "geodesic_length_pre_m": 5.811603924777144,
+          "match_response": "",
+          "pair": [
+            11,
+            46
+          ],
+          "source": 11,
+          "target": 46
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 68,
+          "edge_length_m": 0.11002155848068736,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            46,
+            47
+          ],
+          "source": 46,
+          "target": 47
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 10.648477429178811,
+          "edge_index": 69,
+          "edge_length_m": 5.176791252736603,
+          "geodesic_hops_pre": 3,
+          "geodesic_length_pre_m": 5.4716861764422084,
+          "match_response": "",
+          "pair": [
+            40,
+            47
+          ],
+          "source": 40,
+          "target": 47
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 10.07545122628569,
+          "edge_index": 70,
+          "edge_length_m": 1.970769805974497,
+          "geodesic_hops_pre": 3,
+          "geodesic_length_pre_m": 8.104681420311193,
+          "match_response": "",
+          "pair": [
+            14,
+            47
+          ],
+          "source": 14,
+          "target": 47
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 71,
+          "edge_length_m": 0.13247456956388748,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            47,
+            48
+          ],
+          "source": 47,
+          "target": 48
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 4.158127654347534,
+          "edge_index": 72,
+          "edge_length_m": 0.0875959190611894,
+          "geodesic_hops_pre": 4,
+          "geodesic_length_pre_m": 4.070531735286345,
+          "match_response": "",
+          "pair": [
+            16,
+            48
+          ],
+          "source": 16,
+          "target": 48
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": true,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": null,
+          "edge_index": 73,
+          "edge_length_m": 0.09119988526063706,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "",
+          "pair": [
+            48,
+            49
+          ],
+          "source": 48,
+          "target": 49
+        },
+        {
+          "attribution": "UNKNOWN_NOT_RECORDED",
+          "bridges_components_pre": false,
+          "creation_provenance": "UNKNOWN_NOT_RECORDED",
+          "cycle_length_m": 9.26679766140543,
+          "edge_index": 74,
+          "edge_length_m": 4.559231509099569,
+          "geodesic_hops_pre": 5,
+          "geodesic_length_pre_m": 4.70756615230586,
+          "match_response": "",
+          "pair": [
+            21,
+            49
+          ],
+          "source": 21,
+          "target": 49
+        }
+      ],
+      "new_edges": 36,
+      "utility_ablation": {
+        "U_graph_all": 13233.96591008269,
+        "U_graph_without_all_history_edges": 13233.96591008269,
+        "U_graph_without_target_edges": 13233.96591008269,
+        "dU_history_all": 0.0,
+        "dU_history_rel": 0.0,
+        "dU_target": 0.0,
+        "dU_target_rel": 0.0,
+        "n_edges_all": 75,
+        "n_history_edges": 0,
+        "n_target_edges": 0,
+        "utility_definition": "exp(mean(log(eigenvalues>1e-6))) of reduced cov-weighted Laplacian (utils.py)"
+      }
+    },
+    "0004_sweep90_diag_on_r01": {
+      "after_edges": 91,
+      "after_nodes": 56,
+      "before_edges": 40,
+      "before_nodes": 34,
+      "by_attribution": {
+        "ORDINARY_RECENT_OR_SEQUENTIAL": {
+          "bridging": 22,
+          "count": 29,
+          "cycle_length_m": {
+            "max": 11.73403513555012,
+            "min": 0.22620815465787025,
+            "values": [
+              10.171074183346235,
+              11.73403513555012,
+              11.708933304183574,
+              0.22620815465787025,
+              10.375554316854892,
+              0.26056515303382166,
+              0.23373663876824935
+            ]
+          },
+          "geodesic_length_pre_m": {
+            "max": 6.08333441183493,
+            "min": 0.21944492041559432,
+            "values": [
+              5.186456209418278,
+              6.08333441183493,
+              5.999651198447942,
+              0.2217732238448219,
+              5.43688041291554,
+              0.23175174905122686,
+              0.21944492041559432
+            ]
+          },
+          "hops_pre": {
+            "max": 5,
+            "min": 2,
+            "values": [
+              5,
+              3,
+              3,
+              2,
+              5,
+              2,
+              4
+            ]
+          }
+        },
+        "TARGET_ATTRIBUTABLE": {
+          "bridging": 0,
+          "count": 9,
+          "cycle_length_m": {
+            "max": 16.264631371773966,
+            "min": 0.18528676537419947,
+            "values": [
+              16.264631371773966,
+              14.972351484905937,
+              7.838065679395583,
+              3.930147293748295,
+              1.91269122274429,
+              2.0750081703025205,
+              3.9379770882866776,
+              0.18528676537419947,
+              1.9324785799322695
+            ]
+          },
+          "geodesic_length_pre_m": {
+            "max": 10.178605622495787,
+            "min": 0.09603377189546941,
+            "values": [
+              10.178605622495787,
+              9.15315319658859,
+              6.8888502214733185,
+              2.978112092365326,
+              0.9564701321960173,
+              2.007787802389646,
+              2.0461068899220556,
+              0.09603377189546941,
+              0.966326919735624
+            ]
+          },
+          "hops_pre": {
+            "max": 5,
+            "min": 2,
+            "values": [
+              5,
+              5,
+              2,
+              3,
+              2,
+              3,
+              4,
+              2,
+              2
+            ]
+          }
+        },
+        "WRONG_TARGET_HISTORICAL": {
+          "bridging": 0,
+          "count": 13,
+          "cycle_length_m": {
+            "max": 16.953918565906744,
+            "min": 7.687706514491813,
+            "values": [
+              7.687706514491813,
+              8.185549842383082,
+              9.4673159251853,
+              8.429838124845988,
+              16.07373234401877,
+              16.953918565906744,
+              16.518013425501074,
+              14.807551975432325,
+              13.1370131174757,
+              11.831378112295432,
+              10.843168352751391,
+              10.00296075586013,
+              9.76233507351709
+            ]
+          },
+          "geodesic_length_pre_m": {
+            "max": 9.760572160305388,
+            "min": 3.862474764491887,
+            "values": [
+              3.862474764491887,
+              4.173713557225998,
+              5.30655793984497,
+              4.515498977093366,
+              9.014927042006269,
+              9.760572160305388,
+              9.3440102351931,
+              8.304934372107047,
+              7.395065742387118,
+              6.813686551720213,
+              5.998755497305437,
+              6.1566965485250815,
+              5.0108549846247215
+            ]
+          },
+          "hops_pre": {
+            "max": 6,
+            "min": 2,
+            "values": [
+              3,
+              3,
+              4,
+              3,
+              6,
+              5,
+              4,
+              3,
+              2,
+              2,
+              2,
+              2,
+              4
+            ]
+          }
+        }
+      },
+      "new_edge_rows": [
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 40,
+          "edge_length_m": 0.92778664431929,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.813696",
+          "pair": [
+            33,
+            34
+          ],
+          "source": 33,
+          "target": 34
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 7.687706514491813,
+          "edge_index": 41,
+          "edge_length_m": 3.825231749999926,
+          "geodesic_hops_pre": 3,
+          "geodesic_length_pre_m": 3.862474764491887,
+          "match_response": "0.813696",
+          "pair": [
+            30,
+            34
+          ],
+          "source": 30,
+          "target": 34
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 42,
+          "edge_length_m": 0.10315975093857456,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.75434",
+          "pair": [
+            34,
+            35
+          ],
+          "source": 34,
+          "target": 35
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 8.185549842383082,
+          "edge_index": 43,
+          "edge_length_m": 4.011836285157085,
+          "geodesic_hops_pre": 3,
+          "geodesic_length_pre_m": 4.173713557225998,
+          "match_response": "0.75434",
+          "pair": [
+            29,
+            35
+          ],
+          "source": 29,
+          "target": 35
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 44,
+          "edge_length_m": 0.08154996653164437,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.609221",
+          "pair": [
+            35,
+            36
+          ],
+          "source": 35,
+          "target": 36
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 9.4673159251853,
+          "edge_index": 45,
+          "edge_length_m": 4.1607579853403305,
+          "geodesic_hops_pre": 4,
+          "geodesic_length_pre_m": 5.30655793984497,
+          "match_response": "0.609221",
+          "pair": [
+            27,
+            36
+          ],
+          "source": 27,
+          "target": 36
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 46,
+          "edge_length_m": 0.1456677961146569,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.636693",
+          "pair": [
+            36,
+            37
+          ],
+          "source": 36,
+          "target": 37
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 8.429838124845988,
+          "edge_index": 47,
+          "edge_length_m": 3.914339147752622,
+          "geodesic_hops_pre": 3,
+          "geodesic_length_pre_m": 4.515498977093366,
+          "match_response": "0.636693",
+          "pair": [
+            28,
+            37
+          ],
+          "source": 28,
+          "target": 37
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 48,
+          "edge_length_m": 0.09642035140936686,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.702097",
+          "pair": [
+            37,
+            38
+          ],
+          "source": 37,
+          "target": 38
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 16.07373234401877,
+          "edge_index": 49,
+          "edge_length_m": 7.058805302012501,
+          "geodesic_hops_pre": 6,
+          "geodesic_length_pre_m": 9.014927042006269,
+          "match_response": "0.702097",
+          "pair": [
+            22,
+            38
+          ],
+          "source": 22,
+          "target": 38
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 50,
+          "edge_length_m": 0.1380143376669741,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.840567",
+          "pair": [
+            38,
+            39
+          ],
+          "source": 38,
+          "target": 39
+        },
+        {
+          "attribution": "TARGET_ATTRIBUTABLE",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 16.264631371773966,
+          "edge_index": 51,
+          "edge_length_m": 6.0860257492781775,
+          "geodesic_hops_pre": 5,
+          "geodesic_length_pre_m": 10.178605622495787,
+          "match_response": "0.840567",
+          "pair": [
+            18,
+            39
+          ],
+          "source": 18,
+          "target": 39
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 52,
+          "edge_length_m": 0.207710977909197,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.827779",
+          "pair": [
+            39,
+            40
+          ],
+          "source": 39,
+          "target": 40
+        },
+        {
+          "attribution": "TARGET_ATTRIBUTABLE",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 14.972351484905937,
+          "edge_index": 53,
+          "edge_length_m": 5.819198288317347,
+          "geodesic_hops_pre": 5,
+          "geodesic_length_pre_m": 9.15315319658859,
+          "match_response": "0.827779",
+          "pair": [
+            15,
+            40
+          ],
+          "source": 15,
+          "target": 40
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 54,
+          "edge_length_m": 0.9987521478783729,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.870328",
+          "pair": [
+            40,
+            41
+          ],
+          "source": 40,
+          "target": 41
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 16.953918565906744,
+          "edge_index": 55,
+          "edge_length_m": 7.193346405601354,
+          "geodesic_hops_pre": 5,
+          "geodesic_length_pre_m": 9.760572160305388,
+          "match_response": "0.870328",
+          "pair": [
+            12,
+            41
+          ],
+          "source": 12,
+          "target": 41
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 56,
+          "edge_length_m": 1.0930289957007218,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.928235",
+          "pair": [
+            41,
+            42
+          ],
+          "source": 41,
+          "target": 42
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 16.518013425501074,
+          "edge_index": 57,
+          "edge_length_m": 7.174003190307973,
+          "geodesic_hops_pre": 4,
+          "geodesic_length_pre_m": 9.3440102351931,
+          "match_response": "0.928235",
+          "pair": [
+            1,
+            42
+          ],
+          "source": 1,
+          "target": 42
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 58,
+          "edge_length_m": 1.01222914195242,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.970406",
+          "pair": [
+            42,
+            43
+          ],
+          "source": 42,
+          "target": 43
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 14.807551975432325,
+          "edge_index": 59,
+          "edge_length_m": 6.5026176033252785,
+          "geodesic_hops_pre": 3,
+          "geodesic_length_pre_m": 8.304934372107047,
+          "match_response": "0.970406",
+          "pair": [
+            2,
+            43
+          ],
+          "source": 2,
+          "target": 43
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 60,
+          "edge_length_m": 0.8924481390618391,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.970856",
+          "pair": [
+            43,
+            44
+          ],
+          "source": 43,
+          "target": 44
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 13.1370131174757,
+          "edge_index": 61,
+          "edge_length_m": 5.741947375088582,
+          "geodesic_hops_pre": 2,
+          "geodesic_length_pre_m": 7.395065742387118,
+          "match_response": "0.970856",
+          "pair": [
+            2,
+            44
+          ],
+          "source": 2,
+          "target": 44
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 62,
+          "edge_length_m": 1.0717391766316313,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.698047",
+          "pair": [
+            44,
+            45
+          ],
+          "source": 44,
+          "target": 45
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "NEAR_CHAIN",
+          "cycle_length_m": 11.831378112295432,
+          "edge_index": 63,
+          "edge_length_m": 5.017691560575219,
+          "geodesic_hops_pre": 2,
+          "geodesic_length_pre_m": 6.813686551720213,
+          "match_response": "0.61576",
+          "pair": [
+            2,
+            45
+          ],
+          "source": 2,
+          "target": 45
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 64,
+          "edge_length_m": 0.9810639367302177,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.826887",
+          "pair": [
+            45,
+            46
+          ],
+          "source": 45,
+          "target": 46
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 10.843168352751391,
+          "edge_index": 65,
+          "edge_length_m": 4.844412855445955,
+          "geodesic_hops_pre": 2,
+          "geodesic_length_pre_m": 5.998755497305437,
+          "match_response": "0.826887",
+          "pair": [
+            2,
+            46
+          ],
+          "source": 2,
+          "target": 46
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 66,
+          "edge_length_m": 0.1359468193414487,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.894068",
+          "pair": [
+            46,
+            47
+          ],
+          "source": 46,
+          "target": 47
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 10.171074183346235,
+          "edge_index": 67,
+          "edge_length_m": 4.984617973927956,
+          "geodesic_hops_pre": 5,
+          "geodesic_length_pre_m": 5.186456209418278,
+          "match_response": "0.894068",
+          "pair": [
+            41,
+            47
+          ],
+          "source": 41,
+          "target": 47
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "NEAR_CHAIN",
+          "cycle_length_m": 10.00296075586013,
+          "edge_index": 68,
+          "edge_length_m": 3.846264207335048,
+          "geodesic_hops_pre": 2,
+          "geodesic_length_pre_m": 6.1566965485250815,
+          "match_response": "0.767558",
+          "pair": [
+            12,
+            47
+          ],
+          "source": 12,
+          "target": 47
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 69,
+          "edge_length_m": 0.09996429002860076,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.91829",
+          "pair": [
+            47,
+            48
+          ],
+          "source": 47,
+          "target": 48
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 11.73403513555012,
+          "edge_index": 70,
+          "edge_length_m": 5.650700723715188,
+          "geodesic_hops_pre": 3,
+          "geodesic_length_pre_m": 6.08333441183493,
+          "match_response": "0.91829",
+          "pair": [
+            40,
+            48
+          ],
+          "source": 40,
+          "target": 48
+        },
+        {
+          "attribution": "TARGET_ATTRIBUTABLE",
+          "bridges_components_pre": false,
+          "creation_provenance": "NEAR_CHAIN",
+          "cycle_length_m": 7.838065679395583,
+          "edge_index": 71,
+          "edge_length_m": 0.9492154579222642,
+          "geodesic_hops_pre": 2,
+          "geodesic_length_pre_m": 6.8888502214733185,
+          "match_response": "0.846249",
+          "pair": [
+            15,
+            48
+          ],
+          "source": 15,
+          "target": 48
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 72,
+          "edge_length_m": 0.14123949682355738,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.741866",
+          "pair": [
+            48,
+            49
+          ],
+          "source": 48,
+          "target": 49
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 11.708933304183574,
+          "edge_index": 73,
+          "edge_length_m": 5.709282105735632,
+          "geodesic_hops_pre": 3,
+          "geodesic_length_pre_m": 5.999651198447942,
+          "match_response": "0.741866",
+          "pair": [
+            39,
+            49
+          ],
+          "source": 39,
+          "target": 49
+        },
+        {
+          "attribution": "TARGET_ATTRIBUTABLE",
+          "bridges_components_pre": false,
+          "creation_provenance": "NEAR_CHAIN",
+          "cycle_length_m": 3.930147293748295,
+          "edge_index": 74,
+          "edge_length_m": 0.9520352013829689,
+          "geodesic_hops_pre": 3,
+          "geodesic_length_pre_m": 2.978112092365326,
+          "match_response": "0.717137",
+          "pair": [
+            17,
+            49
+          ],
+          "source": 17,
+          "target": 49
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 75,
+          "edge_length_m": 0.11308813516751227,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.801171",
+          "pair": [
+            49,
+            50
+          ],
+          "source": 49,
+          "target": 50
+        },
+        {
+          "attribution": "WRONG_TARGET_HISTORICAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 9.76233507351709,
+          "edge_index": 76,
+          "edge_length_m": 4.751480088892369,
+          "geodesic_hops_pre": 4,
+          "geodesic_length_pre_m": 5.0108549846247215,
+          "match_response": "0.801171",
+          "pair": [
+            22,
+            50
+          ],
+          "source": 22,
+          "target": 50
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 77,
+          "edge_length_m": 0.10868508867730964,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.993533",
+          "pair": [
+            50,
+            51
+          ],
+          "source": 50,
+          "target": 51
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 0.22620815465787025,
+          "edge_index": 78,
+          "edge_length_m": 0.004434930813048343,
+          "geodesic_hops_pre": 2,
+          "geodesic_length_pre_m": 0.2217732238448219,
+          "match_response": "0.993533",
+          "pair": [
+            49,
+            51
+          ],
+          "source": 49,
+          "target": 51
+        },
+        {
+          "attribution": "TARGET_ATTRIBUTABLE",
+          "bridges_components_pre": false,
+          "creation_provenance": "NEAR_CHAIN",
+          "cycle_length_m": 1.91269122274429,
+          "edge_index": 79,
+          "edge_length_m": 0.9562210905482728,
+          "geodesic_hops_pre": 2,
+          "geodesic_length_pre_m": 0.9564701321960173,
+          "match_response": "0.723918",
+          "pair": [
+            17,
+            51
+          ],
+          "source": 17,
+          "target": 51
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 80,
+          "edge_length_m": 0.10437623430820417,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.831894",
+          "pair": [
+            51,
+            52
+          ],
+          "source": 51,
+          "target": 52
+        },
+        {
+          "attribution": "TARGET_ATTRIBUTABLE",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 2.0750081703025205,
+          "edge_index": 81,
+          "edge_length_m": 0.0672203679128746,
+          "geodesic_hops_pre": 3,
+          "geodesic_length_pre_m": 2.007787802389646,
+          "match_response": "0.831894",
+          "pair": [
+            16,
+            52
+          ],
+          "source": 16,
+          "target": 52
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 82,
+          "edge_length_m": 0.10224748701417305,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.931225",
+          "pair": [
+            52,
+            53
+          ],
+          "source": 52,
+          "target": 53
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 10.375554316854892,
+          "edge_index": 83,
+          "edge_length_m": 4.9386739039393515,
+          "geodesic_hops_pre": 5,
+          "geodesic_length_pre_m": 5.43688041291554,
+          "match_response": "0.931225",
+          "pair": [
+            41,
+            53
+          ],
+          "source": 41,
+          "target": 53
+        },
+        {
+          "attribution": "TARGET_ATTRIBUTABLE",
+          "bridges_components_pre": false,
+          "creation_provenance": "NEAR_CHAIN",
+          "cycle_length_m": 3.9379770882866776,
+          "edge_index": 84,
+          "edge_length_m": 1.8918701983646218,
+          "geodesic_hops_pre": 4,
+          "geodesic_length_pre_m": 2.0461068899220556,
+          "match_response": "0.804939",
+          "pair": [
+            14,
+            53
+          ],
+          "source": 14,
+          "target": 53
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 85,
+          "edge_length_m": 0.1295042620370538,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.701441",
+          "pair": [
+            53,
+            54
+          ],
+          "source": 53,
+          "target": 54
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 0.26056515303382166,
+          "edge_index": 86,
+          "edge_length_m": 0.028813403982594812,
+          "geodesic_hops_pre": 2,
+          "geodesic_length_pre_m": 0.23175174905122686,
+          "match_response": "0.701441",
+          "pair": [
+            52,
+            54
+          ],
+          "source": 52,
+          "target": 54
+        },
+        {
+          "attribution": "TARGET_ATTRIBUTABLE",
+          "bridges_components_pre": false,
+          "creation_provenance": "NEAR_CHAIN",
+          "cycle_length_m": 0.18528676537419947,
+          "edge_index": 87,
+          "edge_length_m": 0.08925299347873004,
+          "geodesic_hops_pre": 2,
+          "geodesic_length_pre_m": 0.09603377189546941,
+          "match_response": "0.64061",
+          "pair": [
+            16,
+            54
+          ],
+          "source": 16,
+          "target": 54
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": true,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "cycle_length_m": null,
+          "edge_index": 88,
+          "edge_length_m": 0.08182035131174702,
+          "geodesic_hops_pre": null,
+          "geodesic_length_pre_m": null,
+          "match_response": "0.912695",
+          "pair": [
+            54,
+            55
+          ],
+          "source": 54,
+          "target": 55
+        },
+        {
+          "attribution": "ORDINARY_RECENT_OR_SEQUENTIAL",
+          "bridges_components_pre": false,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "cycle_length_m": 0.23373663876824935,
+          "edge_index": 89,
+          "edge_length_m": 0.014291718352655039,
+          "geodesic_hops_pre": 4,
+          "geodesic_length_pre_m": 0.21944492041559432,
+          "match_response": "0.912695",
+          "pair": [
+            49,
+            55
+          ],
+          "source": 49,
+          "target": 55
+        },
+        {
+          "attribution": "TARGET_ATTRIBUTABLE",
+          "bridges_components_pre": false,
+          "creation_provenance": "NEAR_CHAIN",
+          "cycle_length_m": 1.9324785799322695,
+          "edge_index": 90,
+          "edge_length_m": 0.9661516601966454,
+          "geodesic_hops_pre": 2,
+          "geodesic_length_pre_m": 0.966326919735624,
+          "match_response": "0.709212",
+          "pair": [
+            17,
+            55
+          ],
+          "source": 17,
+          "target": 55
+        }
+      ],
+      "new_edges": 51,
+      "utility_ablation": {
+        "U_graph_all": 14536.44099558267,
+        "U_graph_without_all_history_edges": 9085.500621449717,
+        "U_graph_without_target_edges": 12341.554500987486,
+        "dU_history_all": 5450.940374132953,
+        "dU_history_rel": 0.37498452171266566,
+        "dU_target": 2194.8864945951846,
+        "dU_target_rel": 0.15099201346892036,
+        "n_edges_all": 91,
+        "n_history_edges": 22,
+        "n_target_edges": 9,
+        "utility_definition": "exp(mean(log(eigenvalues>1e-6))) of reduced cov-weighted Laplacian (utils.py)"
+      }
+    }
+  },
+  "evidence_language": {
+    "LIMIT": "conditional marginal contribution, not Shapley / not causal effect",
+    "MEASURED": "computed from saved exact graphs and the paper's own utility"
+  },
+  "suite": "results/realizability_pilot/p1_preflight_v7_20260916"
+}

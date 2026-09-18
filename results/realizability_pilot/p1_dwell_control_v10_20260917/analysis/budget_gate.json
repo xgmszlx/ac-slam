@@ -1,0 +1,42 @@
+{
+  "arm_metrics": {
+    "A0_baseline": {
+      "distance_m": 13.951430653229759,
+      "duration_s": 58.199999999999996,
+      "raw_scan_count": 583
+    },
+    "A1_dwell": {
+      "distance_m": 13.948350504925944,
+      "duration_s": 66.30000000000001,
+      "raw_scan_count": 666
+    },
+    "A2_sweep90": {
+      "distance_m": 13.958440810479201,
+      "duration_s": 65.69999999999999,
+      "raw_scan_count": 658
+    }
+  },
+  "budget_definition": {
+    "excluded": [
+      "accepted Karto keyscan count"
+    ],
+    "included": [
+      "GT distance",
+      "elapsed sensing time",
+      "raw LaserScan count"
+    ]
+  },
+  "comparison": "A1_dwell vs A2_sweep90",
+  "differences": {
+    "distance_difference_m": 0.010090305553257295,
+    "raw_scan_relative_difference": 0.012084592145015106,
+    "time_difference_s": 0.6000000000000227
+  },
+  "science_outcomes_available": true,
+  "thresholds": {
+    "distance_difference_m_max": 0.15,
+    "raw_scan_relative_difference_max": 0.05,
+    "time_difference_s_max": 2.0
+  },
+  "verdict": "BUDGET_MATCH_PASS"
+}

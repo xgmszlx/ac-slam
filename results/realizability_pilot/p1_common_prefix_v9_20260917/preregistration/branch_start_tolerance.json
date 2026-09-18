@@ -1,0 +1,51 @@
+{
+  "branch_start_tolerance": {
+    "frozen_before_branch_outcomes": true,
+    "heading_rad": 0.04,
+    "position_m": 0.08,
+    "rule": "max(fixed controller floor, 1.25 x maximum deviation in three pre-branch calibration runs)"
+  },
+  "calibration_runs": [
+    {
+      "branch_start_gt_pose": [
+        -21.820084880861025,
+        -22.022516693755033,
+        -3.1241838133315905
+      ],
+      "deviation_from_canonical": [
+        0.038743004306857724,
+        0.01503423049688557
+      ],
+      "run": 1
+    },
+    {
+      "branch_start_gt_pose": [
+        -21.82150012760388,
+        -22.022449777386747,
+        -3.1257070136685803
+      ],
+      "deviation_from_canonical": [
+        0.03732620420410511,
+        0.016557430833875397
+      ],
+      "run": 2
+    },
+    {
+      "branch_start_gt_pose": [
+        -21.817732534040783,
+        -22.022678768092916,
+        -3.1245084471505695
+      ],
+      "deviation_from_canonical": [
+        0.04110007612871598,
+        0.01535886431586464
+      ],
+      "run": 3
+    }
+  ],
+  "canonical_terminal_gt_pose": [
+    -21.858795159531578,
+    -22.020924617133353,
+    -3.109149582834705
+  ]
+}

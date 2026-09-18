@@ -1,0 +1,948 @@
+{
+  "blocks": {
+    "n0r_seed41001": {
+      "arms": [
+        "n0r_buffered_provenance_on",
+        "n0r_provenance_off"
+      ],
+      "seed": 41001
+    },
+    "n0r_seed41002": {
+      "arms": [
+        "n0r_buffered_provenance_on",
+        "n0r_provenance_off"
+      ],
+      "seed": 41002
+    }
+  },
+  "comparator_arm": "n0r_provenance_off",
+  "measured_pair_deviation": [
+    {
+      "arm_a": "n0r_buffered_provenance_on",
+      "arm_b": "n0r_provenance_off",
+      "block_id": "n0r_seed41001",
+      "preprobe_edge_count_a": 42,
+      "preprobe_edge_count_b": 42,
+      "preprobe_node_count_a": 35,
+      "preprobe_node_count_b": 35,
+      "route_node_heading_deviation_max_rad": 0.007025927305221558,
+      "route_node_position_deviation_max_m": 0.04104407554269737,
+      "seed": 41001,
+      "target_segment_size_a": 5,
+      "target_segment_size_b": 5
+    },
+    {
+      "arm_a": "n0r_buffered_provenance_on",
+      "arm_b": "n0r_provenance_off",
+      "block_id": "n0r_seed41002",
+      "preprobe_edge_count_a": 40,
+      "preprobe_edge_count_b": 58,
+      "preprobe_node_count_a": 34,
+      "preprobe_node_count_b": 42,
+      "route_node_heading_deviation_max_rad": 0.006938878446817398,
+      "route_node_position_deviation_max_m": 0.06335395083219378,
+      "seed": 41002,
+      "target_segment_size_a": 5,
+      "target_segment_size_b": 5
+    }
+  ],
+  "nonperturbation": {
+    "comparator_arms": [
+      "n0r_provenance_off"
+    ],
+    "decision_rule": "a shift is detectable only if |mean paired difference| exceeds 2x the measured same-configuration repeatability scale AND every paired seed difference is non-zero with the same sign; the rule is deliberately conservative because a false \"stable\" verdict would let an instrument artefact be read as an intervention effect",
+    "detectable_shifts": [
+      {
+        "arm": "n0r_buffered_provenance_on",
+        "mean_difference": 8.5,
+        "outcome": "local_edges",
+        "threshold": 3.0
+      },
+      {
+        "arm": "n0r_buffered_provenance_on",
+        "mean_difference": 5.0,
+        "outcome": "new_keyscans",
+        "threshold": 1.0
+      },
+      {
+        "arm": "n0r_buffered_provenance_on",
+        "mean_difference": 0.8694997815027015,
+        "outcome": "probe_distance_m",
+        "threshold": 0.31565529181452945
+      },
+      {
+        "arm": "n0r_buffered_provenance_on",
+        "mean_difference": 7.399999999999999,
+        "outcome": "probe_duration_s",
+        "threshold": 1.4210854715202004e-14
+      },
+      {
+        "arm": "n0r_buffered_provenance_on",
+        "mean_difference": 1.5,
+        "outcome": "target_attributable_edges",
+        "threshold": 1.0
+      },
+      {
+        "arm": "n0r_buffered_provenance_on",
+        "mean_difference": -2.475793450199985,
+        "outcome": "target_geodesic_mean_m",
+        "threshold": 0.3854356160811516
+      },
+      {
+        "arm": "n0r_buffered_provenance_on",
+        "mean_difference": -0.7666666666666664,
+        "outcome": "target_hops_mean",
+        "threshold": 0.33333333333333304
+      },
+      {
+        "arm": "n0r_buffered_provenance_on",
+        "mean_difference": 10.5,
+        "outcome": "total_new_edges",
+        "threshold": 4.0
+      }
+    ],
+    "outcome": "POSSIBLE_INSTRUMENTATION_PERTURBATION",
+    "per_outcome": {
+      "final_edge_count": {
+        "n0r_buffered_provenance_on": {
+          "detectable": false,
+          "exceeds_threshold": false,
+          "repeatability_scale": {
+            "count": 2,
+            "mad": 10.0,
+            "mean": 84.0,
+            "range": 20.0,
+            "std": 14.142135623730951,
+            "values": [
+              74.0,
+              94.0
+            ]
+          },
+          "statistics": {
+            "all_same_sign_nonzero": false,
+            "differences": [
+              4.0,
+              -1.0
+            ],
+            "max_difference": 4.0,
+            "mean_difference": 1.5,
+            "min_difference": -1.0,
+            "negative_count": 1,
+            "pair_count": 2,
+            "positive_count": 1,
+            "zero_count": 0
+          },
+          "threshold": 20.0
+        }
+      },
+      "final_node_count": {
+        "n0r_buffered_provenance_on": {
+          "detectable": false,
+          "exceeds_threshold": false,
+          "repeatability_scale": {
+            "count": 2,
+            "mad": 4.0,
+            "mean": 54.0,
+            "range": 8.0,
+            "std": 5.656854249492381,
+            "values": [
+              50.0,
+              58.0
+            ]
+          },
+          "statistics": {
+            "all_same_sign_nonzero": false,
+            "differences": [
+              2.0,
+              0.0
+            ],
+            "max_difference": 2.0,
+            "mean_difference": 1.0,
+            "min_difference": 0.0,
+            "negative_count": 0,
+            "pair_count": 2,
+            "positive_count": 1,
+            "zero_count": 1
+          },
+          "threshold": 8.0
+        }
+      },
+      "history_touching_edges": {
+        "n0r_buffered_provenance_on": {
+          "detectable": false,
+          "exceeds_threshold": false,
+          "repeatability_scale": {
+            "count": 2,
+            "mad": 1.0,
+            "mean": 9.0,
+            "range": 2.0,
+            "std": 1.4142135623730951,
+            "values": [
+              8.0,
+              10.0
+            ]
+          },
+          "statistics": {
+            "all_same_sign_nonzero": false,
+            "differences": [
+              -1.0,
+              2.0
+            ],
+            "max_difference": 2.0,
+            "mean_difference": 0.5,
+            "min_difference": -1.0,
+            "negative_count": 1,
+            "pair_count": 2,
+            "positive_count": 1,
+            "zero_count": 0
+          },
+          "threshold": 2.0
+        }
+      },
+      "local_edges": {
+        "n0r_buffered_provenance_on": {
+          "detectable": true,
+          "exceeds_threshold": true,
+          "repeatability_scale": {
+            "count": 2,
+            "mad": 1.5,
+            "mean": 21.5,
+            "range": 3.0,
+            "std": 2.1213203435596424,
+            "values": [
+              20.0,
+              23.0
+            ]
+          },
+          "statistics": {
+            "all_same_sign_nonzero": true,
+            "differences": [
+              4.0,
+              13.0
+            ],
+            "max_difference": 13.0,
+            "mean_difference": 8.5,
+            "min_difference": 4.0,
+            "negative_count": 0,
+            "pair_count": 2,
+            "positive_count": 2,
+            "zero_count": 0
+          },
+          "threshold": 3.0
+        }
+      },
+      "loop_events_during_probe": {
+        "n0r_buffered_provenance_on": {
+          "detectable": false,
+          "exceeds_threshold": false,
+          "repeatability_scale": {
+            "count": 2,
+            "mad": 0.0,
+            "mean": 0.0,
+            "range": 0.0,
+            "std": 0.0,
+            "values": [
+              0.0,
+              0.0
+            ]
+          },
+          "statistics": {
+            "all_same_sign_nonzero": false,
+            "differences": [
+              0.0,
+              0.0
+            ],
+            "max_difference": 0.0,
+            "mean_difference": 0.0,
+            "min_difference": 0.0,
+            "negative_count": 0,
+            "pair_count": 2,
+            "positive_count": 0,
+            "zero_count": 2
+          },
+          "threshold": 0.0
+        }
+      },
+      "new_keyscans": {
+        "n0r_buffered_provenance_on": {
+          "detectable": true,
+          "exceeds_threshold": true,
+          "repeatability_scale": {
+            "count": 2,
+            "mad": 0.5,
+            "mean": 15.5,
+            "range": 1.0,
+            "std": 0.7071067811865476,
+            "values": [
+              15.0,
+              16.0
+            ]
+          },
+          "statistics": {
+            "all_same_sign_nonzero": true,
+            "differences": [
+              2.0,
+              8.0
+            ],
+            "max_difference": 8.0,
+            "mean_difference": 5.0,
+            "min_difference": 2.0,
+            "negative_count": 0,
+            "pair_count": 2,
+            "positive_count": 2,
+            "zero_count": 0
+          },
+          "threshold": 1.0
+        }
+      },
+      "probe_distance_m": {
+        "n0r_buffered_provenance_on": {
+          "detectable": true,
+          "exceeds_threshold": true,
+          "repeatability_scale": {
+            "count": 2,
+            "mad": 0.15782764590726472,
+            "mean": 6.658609560700552,
+            "range": 0.31565529181452945,
+            "std": 0.22320199735947227,
+            "values": [
+              6.500781914793287,
+              6.816437206607817
+            ]
+          },
+          "statistics": {
+            "all_same_sign_nonzero": true,
+            "differences": [
+              0.9249543785497947,
+              0.8140451844556083
+            ],
+            "max_difference": 0.9249543785497947,
+            "mean_difference": 0.8694997815027015,
+            "min_difference": 0.8140451844556083,
+            "negative_count": 0,
+            "pair_count": 2,
+            "positive_count": 2,
+            "zero_count": 0
+          },
+          "threshold": 0.31565529181452945
+        }
+      },
+      "probe_duration_s": {
+        "n0r_buffered_provenance_on": {
+          "detectable": true,
+          "exceeds_threshold": true,
+          "repeatability_scale": {
+            "count": 2,
+            "mad": 7.105427357601002e-15,
+            "mean": 22.1,
+            "range": 1.4210854715202004e-14,
+            "std": 1.0048591735576161e-14,
+            "values": [
+              22.099999999999994,
+              22.10000000000001
+            ]
+          },
+          "statistics": {
+            "all_same_sign_nonzero": true,
+            "differences": [
+              5.900000000000006,
+              8.899999999999991
+            ],
+            "max_difference": 8.899999999999991,
+            "mean_difference": 7.399999999999999,
+            "min_difference": 5.900000000000006,
+            "negative_count": 0,
+            "pair_count": 2,
+            "positive_count": 2,
+            "zero_count": 0
+          },
+          "threshold": 1.4210854715202004e-14
+        }
+      },
+      "target_attributable_edges": {
+        "n0r_buffered_provenance_on": {
+          "detectable": true,
+          "exceeds_threshold": true,
+          "repeatability_scale": {
+            "count": 2,
+            "mad": 0.5,
+            "mean": 3.5,
+            "range": 1.0,
+            "std": 0.7071067811865476,
+            "values": [
+              4.0,
+              3.0
+            ]
+          },
+          "statistics": {
+            "all_same_sign_nonzero": true,
+            "differences": [
+              1.0,
+              2.0
+            ],
+            "max_difference": 2.0,
+            "mean_difference": 1.5,
+            "min_difference": 1.0,
+            "negative_count": 0,
+            "pair_count": 2,
+            "positive_count": 2,
+            "zero_count": 0
+          },
+          "threshold": 1.0
+        }
+      },
+      "target_geodesic_above_4m_count": {
+        "n0r_buffered_provenance_on": {
+          "detectable": false,
+          "exceeds_threshold": false,
+          "repeatability_scale": {
+            "count": 2,
+            "mad": 0.0,
+            "mean": 3.0,
+            "range": 0.0,
+            "std": 0.0,
+            "values": [
+              3.0,
+              3.0
+            ]
+          },
+          "statistics": {
+            "all_same_sign_nonzero": false,
+            "differences": [
+              0.0,
+              0.0
+            ],
+            "max_difference": 0.0,
+            "mean_difference": 0.0,
+            "min_difference": 0.0,
+            "negative_count": 0,
+            "pair_count": 2,
+            "positive_count": 0,
+            "zero_count": 2
+          },
+          "threshold": 0.0
+        }
+      },
+      "target_geodesic_max_m": {
+        "n0r_buffered_provenance_on": {
+          "detectable": false,
+          "exceeds_threshold": false,
+          "repeatability_scale": {
+            "count": 2,
+            "mad": 1.4534536994040614,
+            "mean": 11.885220168268456,
+            "range": 2.906907398808123,
+            "std": 2.0554939339785716,
+            "values": [
+              10.431766468864394,
+              13.338673867672517
+            ]
+          },
+          "statistics": {
+            "all_same_sign_nonzero": false,
+            "differences": [
+              2.5053642596581867,
+              -2.437370751533374
+            ],
+            "max_difference": 2.5053642596581867,
+            "mean_difference": 0.03399675406240643,
+            "min_difference": -2.437370751533374,
+            "negative_count": 1,
+            "pair_count": 2,
+            "positive_count": 1,
+            "zero_count": 0
+          },
+          "threshold": 2.906907398808123
+        }
+      },
+      "target_geodesic_mean_m": {
+        "n0r_buffered_provenance_on": {
+          "detectable": true,
+          "exceeds_threshold": true,
+          "repeatability_scale": {
+            "count": 2,
+            "mad": 0.1927178080405758,
+            "mean": 8.218072365668764,
+            "range": 0.3854356160811516,
+            "std": 0.27254413784179704,
+            "values": [
+              8.025354557628187,
+              8.410790173709339
+            ]
+          },
+          "statistics": {
+            "all_same_sign_nonzero": true,
+            "differences": [
+              -2.802521309613259,
+              -2.1490655907867113
+            ],
+            "max_difference": -2.1490655907867113,
+            "mean_difference": -2.475793450199985,
+            "min_difference": -2.802521309613259,
+            "negative_count": 2,
+            "pair_count": 2,
+            "positive_count": 0,
+            "zero_count": 0
+          },
+          "threshold": 0.3854356160811516
+        }
+      },
+      "target_hops_mean": {
+        "n0r_buffered_provenance_on": {
+          "detectable": true,
+          "exceeds_threshold": true,
+          "repeatability_scale": {
+            "count": 2,
+            "mad": 0.16666666666666652,
+            "mean": 4.166666666666666,
+            "range": 0.33333333333333304,
+            "std": 0.23570226039551562,
+            "values": [
+              4.0,
+              4.333333333333333
+            ]
+          },
+          "statistics": {
+            "all_same_sign_nonzero": true,
+            "differences": [
+              -0.7999999999999998,
+              -0.733333333333333
+            ],
+            "max_difference": -0.733333333333333,
+            "mean_difference": -0.7666666666666664,
+            "min_difference": -0.7999999999999998,
+            "negative_count": 2,
+            "pair_count": 2,
+            "positive_count": 0,
+            "zero_count": 0
+          },
+          "threshold": 0.33333333333333304
+        }
+      },
+      "total_new_edges": {
+        "n0r_buffered_provenance_on": {
+          "detectable": true,
+          "exceeds_threshold": true,
+          "repeatability_scale": {
+            "count": 2,
+            "mad": 2.0,
+            "mean": 34.0,
+            "range": 4.0,
+            "std": 2.8284271247461903,
+            "values": [
+              32.0,
+              36.0
+            ]
+          },
+          "statistics": {
+            "all_same_sign_nonzero": true,
+            "differences": [
+              4.0,
+              17.0
+            ],
+            "max_difference": 17.0,
+            "mean_difference": 10.5,
+            "min_difference": 4.0,
+            "negative_count": 0,
+            "pair_count": 2,
+            "positive_count": 2,
+            "zero_count": 0
+          },
+          "threshold": 4.0
+        }
+      }
+    }
+  },
+  "nonperturbation_outcome": "POSSIBLE_INSTRUMENTATION_PERTURBATION",
+  "outcome": "POSSIBLE_INSTRUMENTATION_PERTURBATION",
+  "outcomes": {
+    "final_edge_count": {
+      "n0r_buffered_provenance_on": {
+        "41001": 78,
+        "41002": 93
+      },
+      "n0r_provenance_off": {
+        "41001": 74,
+        "41002": 94
+      }
+    },
+    "final_node_count": {
+      "n0r_buffered_provenance_on": {
+        "41001": 52,
+        "41002": 58
+      },
+      "n0r_provenance_off": {
+        "41001": 50,
+        "41002": 58
+      }
+    },
+    "history_touching_edges": {
+      "n0r_buffered_provenance_on": {
+        "41001": 7,
+        "41002": 12
+      },
+      "n0r_provenance_off": {
+        "41001": 8,
+        "41002": 10
+      }
+    },
+    "local_edges": {
+      "n0r_buffered_provenance_on": {
+        "41001": 24,
+        "41002": 36
+      },
+      "n0r_provenance_off": {
+        "41001": 20,
+        "41002": 23
+      }
+    },
+    "loop_events_during_probe": {
+      "n0r_buffered_provenance_on": {
+        "41001": 0,
+        "41002": 0
+      },
+      "n0r_provenance_off": {
+        "41001": 0,
+        "41002": 0
+      }
+    },
+    "new_keyscans": {
+      "n0r_buffered_provenance_on": {
+        "41001": 17,
+        "41002": 24
+      },
+      "n0r_provenance_off": {
+        "41001": 15,
+        "41002": 16
+      }
+    },
+    "preprobe_edge_count": {
+      "n0r_buffered_provenance_on": {
+        "41001": 42,
+        "41002": 40
+      },
+      "n0r_provenance_off": {
+        "41001": 42,
+        "41002": 58
+      }
+    },
+    "preprobe_node_count": {
+      "n0r_buffered_provenance_on": {
+        "41001": 35,
+        "41002": 34
+      },
+      "n0r_provenance_off": {
+        "41001": 35,
+        "41002": 42
+      }
+    },
+    "probe_distance_m": {
+      "n0r_buffered_provenance_on": {
+        "41001": 7.425736293343082,
+        "41002": 7.630482391063425
+      },
+      "n0r_provenance_off": {
+        "41001": 6.500781914793287,
+        "41002": 6.816437206607817
+      }
+    },
+    "probe_duration_s": {
+      "n0r_buffered_provenance_on": {
+        "41001": 28.0,
+        "41002": 31.0
+      },
+      "n0r_provenance_off": {
+        "41001": 22.099999999999994,
+        "41002": 22.10000000000001
+      }
+    },
+    "target_attributable_edges": {
+      "n0r_buffered_provenance_on": {
+        "41001": 5,
+        "41002": 5
+      },
+      "n0r_provenance_off": {
+        "41001": 4,
+        "41002": 3
+      }
+    },
+    "target_geodesic_above_4m_count": {
+      "n0r_buffered_provenance_on": {
+        "41001": 3,
+        "41002": 3
+      },
+      "n0r_provenance_off": {
+        "41001": 3,
+        "41002": 3
+      }
+    },
+    "target_geodesic_max_m": {
+      "n0r_buffered_provenance_on": {
+        "41001": 12.93713072852258,
+        "41002": 10.901303116139143
+      },
+      "n0r_provenance_off": {
+        "41001": 10.431766468864394,
+        "41002": 13.338673867672517
+      }
+    },
+    "target_geodesic_mean_m": {
+      "n0r_buffered_provenance_on": {
+        "41001": 5.222833248014928,
+        "41002": 6.261724582922628
+      },
+      "n0r_provenance_off": {
+        "41001": 8.025354557628187,
+        "41002": 8.410790173709339
+      }
+    },
+    "target_hops_mean": {
+      "n0r_buffered_provenance_on": {
+        "41001": 3.2,
+        "41002": 3.6
+      },
+      "n0r_provenance_off": {
+        "41001": 4.0,
+        "41002": 4.333333333333333
+      }
+    },
+    "total_new_edges": {
+      "n0r_buffered_provenance_on": {
+        "41001": 36,
+        "41002": 53
+      },
+      "n0r_provenance_off": {
+        "41001": 32,
+        "41002": 36
+      }
+    }
+  },
+  "preprobe_gate": {
+    "all_pairs_passed": false,
+    "observed_max_route_deviation_m": 0.06335395083219378,
+    "pair_count": 2,
+    "tolerances": {
+      "edge_count_relative_tolerance": 0.15,
+      "edge_covariance_trace_ratio_bounds": [
+        0.5,
+        2.0
+      ],
+      "node_count_abs_tolerance": 2,
+      "route_node_heading_abs_tolerance_rad": 0.05,
+      "route_node_position_abs_tolerance_m": 0.05,
+      "target_anchor_distance_abs_tolerance_m": 0.25,
+      "target_segment_size_abs_tolerance": 0
+    }
+  },
+  "repeatability": {
+    "final_edge_count": {
+      "count": 4,
+      "mad": 8.75,
+      "mean": 84.75,
+      "range": 20.0,
+      "std": 10.242883708539635,
+      "values": [
+        78.0,
+        93.0,
+        74.0,
+        94.0
+      ]
+    },
+    "final_node_count": {
+      "count": 4,
+      "mad": 3.5,
+      "mean": 54.5,
+      "range": 8.0,
+      "std": 4.123105625617661,
+      "values": [
+        52.0,
+        58.0,
+        50.0,
+        58.0
+      ]
+    },
+    "history_touching_edges": {
+      "count": 4,
+      "mad": 1.75,
+      "mean": 9.25,
+      "range": 5.0,
+      "std": 2.217355782608345,
+      "values": [
+        7.0,
+        12.0,
+        8.0,
+        10.0
+      ]
+    },
+    "local_edges": {
+      "count": 4,
+      "mad": 5.125,
+      "mean": 25.75,
+      "range": 16.0,
+      "std": 7.041543391425869,
+      "values": [
+        24.0,
+        36.0,
+        20.0,
+        23.0
+      ]
+    },
+    "loop_events_during_probe": {
+      "count": 4,
+      "mad": 0.0,
+      "mean": 0.0,
+      "range": 0.0,
+      "std": 0.0,
+      "values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "new_keyscans": {
+      "count": 4,
+      "mad": 3.0,
+      "mean": 18.0,
+      "range": 9.0,
+      "std": 4.08248290463863,
+      "values": [
+        17.0,
+        24.0,
+        15.0,
+        16.0
+      ]
+    },
+    "preprobe_edge_count": {
+      "count": 4,
+      "mad": 6.25,
+      "mean": 45.5,
+      "range": 18.0,
+      "std": 8.386497083606082,
+      "values": [
+        42.0,
+        40.0,
+        42.0,
+        58.0
+      ]
+    },
+    "preprobe_node_count": {
+      "count": 4,
+      "mad": 2.75,
+      "mean": 36.5,
+      "range": 8.0,
+      "std": 3.696845502136472,
+      "values": [
+        35.0,
+        34.0,
+        35.0,
+        42.0
+      ]
+    },
+    "probe_distance_m": {
+      "count": 4,
+      "mad": 0.43474989075135073,
+      "mean": 7.093359451451902,
+      "range": 1.1297004762701377,
+      "std": 0.5249792008338228,
+      "values": [
+        7.425736293343082,
+        7.630482391063425,
+        6.500781914793287,
+        6.816437206607817
+      ]
+    },
+    "probe_duration_s": {
+      "count": 4,
+      "mad": 3.6999999999999993,
+      "mean": 25.8,
+      "range": 8.900000000000006,
+      "std": 4.444472222135416,
+      "values": [
+        28.0,
+        31.0,
+        22.099999999999994,
+        22.10000000000001
+      ]
+    },
+    "target_attributable_edges": {
+      "count": 4,
+      "mad": 0.75,
+      "mean": 4.25,
+      "range": 2.0,
+      "std": 0.9574271077563381,
+      "values": [
+        5.0,
+        5.0,
+        4.0,
+        3.0
+      ]
+    },
+    "target_geodesic_above_4m_count": {
+      "count": 4,
+      "mad": 0.0,
+      "mean": 3.0,
+      "range": 0.0,
+      "std": 0.0,
+      "values": [
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ]
+    },
+    "target_geodesic_max_m": {
+      "count": 4,
+      "mad": 1.2356837527978901,
+      "mean": 11.90221854529966,
+      "range": 2.906907398808123,
+      "std": 1.4489660826006139,
+      "values": [
+        12.93713072852258,
+        10.901303116139143,
+        10.431766468864394,
+        13.338673867672517
+      ]
+    },
+    "target_geodesic_mean_m": {
+      "count": 4,
+      "mad": 1.2378967250999926,
+      "mean": 6.9801756405687705,
+      "range": 3.1879569256944107,
+      "std": 1.4992755048131554,
+      "values": [
+        5.222833248014928,
+        6.261724582922628,
+        8.025354557628187,
+        8.410790173709339
+      ]
+    },
+    "target_hops_mean": {
+      "count": 4,
+      "mad": 0.3833333333333332,
+      "mean": 3.783333333333333,
+      "range": 1.1333333333333329,
+      "std": 0.491030662088541,
+      "values": [
+        3.2,
+        3.6,
+        4.0,
+        4.333333333333333
+      ]
+    },
+    "total_new_edges": {
+      "count": 4,
+      "mad": 6.875,
+      "mean": 39.25,
+      "range": 21.0,
+      "std": 9.358596760910972,
+      "values": [
+        36.0,
+        53.0,
+        32.0,
+        36.0
+      ]
+    }
+  },
+  "suite_dir": "results/realizability_pilot/p1_dir_dec_v8_20260916/n0r_sanity"
+}

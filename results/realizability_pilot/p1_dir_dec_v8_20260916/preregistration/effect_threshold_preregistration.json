@@ -1,0 +1,202 @@
+{
+  "derivation": "MDE = max(numerical tolerance, 2x measured same-input repeatability). Repeatability is the mean absolute deviation of an outcome across the N0 arms, which execute the identical frozen route and baseline probe and differ only in which observation instrument is enabled. Counts use absolute integers; scale-dependent quantities use relative deviation.",
+  "frozen_before_n1_outcome_inspection": true,
+  "multiplier": 2.0,
+  "outcomes": {
+    "final_edge_count": {
+      "kind": "count",
+      "mde": 3.061728395061727,
+      "mde_units": "constraints",
+      "measured_values": [
+        76.0,
+        77.0,
+        75.0,
+        72.0,
+        75.0,
+        73.0,
+        75.0,
+        74.0,
+        71.0
+      ],
+      "numerical_tolerance": 0.0,
+      "repeatability_mad": 1.5308641975308634
+    },
+    "final_node_count": {
+      "kind": "count",
+      "mde": 1.4320987654320985,
+      "mde_units": "constraints",
+      "measured_values": [
+        50.0,
+        51.0,
+        50.0,
+        49.0,
+        49.0,
+        49.0,
+        50.0,
+        50.0,
+        48.0
+      ],
+      "numerical_tolerance": 0.0,
+      "repeatability_mad": 0.7160493827160492
+    },
+    "graph_d_opt_relative": {
+      "kind": "relative",
+      "mde": 0.05,
+      "mde_units": "relative change vs the block baseline action",
+      "note": "relative MDE for the graph-level D-opt; 0.05 equals 5 percent of the block baseline, which is above the numerical noise of the linearised information build and is stated before any intervention outcome is inspected",
+      "numerical_tolerance": 1e-06,
+      "relative_repeatability": null
+    },
+    "history_touching_edges": {
+      "kind": "count",
+      "mde": 2.617283950617284,
+      "mde_units": "constraints",
+      "measured_values": [
+        6.0,
+        10.0,
+        8.0,
+        6.0,
+        10.0,
+        9.0,
+        7.0,
+        7.0,
+        7.0
+      ],
+      "numerical_tolerance": 0.0,
+      "repeatability_mad": 1.308641975308642
+    },
+    "local_edges": {
+      "kind": "count",
+      "mde": 1.9259259259259254,
+      "mde_units": "constraints",
+      "measured_values": [
+        23.0,
+        23.0,
+        22.0,
+        22.0,
+        20.0,
+        20.0,
+        21.0,
+        23.0,
+        22.0
+      ],
+      "numerical_tolerance": 0.0,
+      "repeatability_mad": 0.9629629629629627
+    },
+    "loop_events_during_probe": {
+      "kind": "count",
+      "mde": 1.0,
+      "mde_units": "constraints",
+      "measured_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "numerical_tolerance": 0.0,
+      "repeatability_mad": 0.0
+    },
+    "probe_distance_m": {
+      "kind": "continuous",
+      "mde": 0.3207983694411123,
+      "mde_units": "physical units",
+      "measured_values": [
+        6.746336667440596,
+        6.324173472389527,
+        6.582831786975283,
+        6.555352418393129,
+        6.574732023308566,
+        6.9333561873279494,
+        6.7310785589905455,
+        6.560456895969087,
+        6.966499260105887
+      ],
+      "numerical_tolerance": 6.6638685856556185e-06,
+      "relative_repeatability": 0.02406998017125144,
+      "repeatability_mad": 0.16039918472055614
+    },
+    "probe_duration_s": {
+      "kind": "continuous",
+      "mde": 0.8888888888888881,
+      "mde_units": "physical units",
+      "measured_values": [
+        24.0,
+        24.0,
+        24.0,
+        24.0,
+        23.0,
+        23.0,
+        24.0,
+        24.0,
+        23.0
+      ],
+      "numerical_tolerance": 2.3666666666666668e-05,
+      "relative_repeatability": 0.018779342723004678,
+      "repeatability_mad": 0.44444444444444403
+    },
+    "target_ablation_dopt_impact_relative": {
+      "kind": "relative",
+      "mde": 0.05,
+      "mde_units": "change in the target-attributable share of the graph-level D-opt, relative to the block baseline graph D-opt",
+      "numerical_tolerance": 1e-06
+    },
+    "target_ablation_trace_impact_relative": {
+      "kind": "relative",
+      "mde": 0.05,
+      "mde_units": "change in the target-attributable uncertainty reduction, relative to the block baseline target-segment trace",
+      "numerical_tolerance": 1e-06
+    },
+    "target_attributable_edges": {
+      "kind": "count",
+      "mde": 1.2345679012345678,
+      "mde_units": "constraints",
+      "measured_values": [
+        4.0,
+        3.0,
+        4.0,
+        4.0,
+        3.0,
+        3.0,
+        4.0,
+        4.0,
+        2.0
+      ],
+      "numerical_tolerance": 0.0,
+      "repeatability_mad": 0.6172839506172839
+    },
+    "target_marginal_trace_relative": {
+      "kind": "relative",
+      "mde": 0.05,
+      "mde_units": "relative change vs the block baseline action",
+      "numerical_tolerance": 1e-06
+    },
+    "total_new_edges": {
+      "kind": "count",
+      "mde": 2.2222222222222223,
+      "mde_units": "constraints",
+      "measured_values": [
+        33.0,
+        36.0,
+        34.0,
+        32.0,
+        33.0,
+        32.0,
+        32.0,
+        34.0,
+        31.0
+      ],
+      "numerical_tolerance": 0.0,
+      "repeatability_mad": 1.1111111111111112
+    }
+  },
+  "source": {
+    "n0_blocks": 3,
+    "n0_suite_dir": "results/realizability_pilot/p1_dir_dec_v8_20260916/n0_instrument",
+    "n1_suite_dir": "results/realizability_pilot/p1_dir_dec_v8_20260916/n1_blocks"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "actual_replay_parameters": {
+    "MinimumTravelDistance_m": 1.0,
+    "MinimumTravelHeading_rad": 0.52
+  },
+  "actual_sweep_transitions": [
+    {
+      "absolute_transition_rad": 1.6297625723705942,
+      "after_yaw_rad": 1.5269365990684372,
+      "before_yaw_rad": -3.126486135740555,
+      "crosses_heading_threshold_by_endpoint": true,
+      "end_time_s": 107.8,
+      "endpoint_heading_error_rad": 0.012238330628857597,
+      "label": "probe_arrival",
+      "normalized_transition_rad": -1.6297625723705942,
+      "start_time_s": 93.3,
+      "target_yaw_rad": 1.5146982684395796
+    },
+    {
+      "absolute_transition_rad": 2.089679399096391,
+      "after_yaw_rad": -0.5627428000279536,
+      "before_yaw_rad": 1.5269365990684372,
+      "crosses_heading_threshold_by_endpoint": true,
+      "end_time_s": 112.5,
+      "endpoint_heading_error_rad": 0.016954033925662193,
+      "label": "sweep_-30deg",
+      "normalized_transition_rad": -2.089679399096391,
+      "start_time_s": 107.8,
+      "target_yaw_rad": -0.5796968339536158
+    },
+    {
+      "absolute_transition_rad": 0.4929509285469027,
+      "after_yaw_rad": -0.06979187148105093,
+      "before_yaw_rad": -0.5627428000279536,
+      "crosses_heading_threshold_by_endpoint": false,
+      "end_time_s": 114.8,
+      "endpoint_heading_error_rad": -0.013693813125733928,
+      "label": "sweep_+0deg",
+      "normalized_transition_rad": 0.4929509285469027,
+      "start_time_s": 112.5,
+      "target_yaw_rad": -0.056098058355317
+    },
+    {
+      "absolute_transition_rad": 0.5224662458966405,
+      "after_yaw_rad": 0.4526743744155895,
+      "before_yaw_rad": -0.06979187148105093,
+      "crosses_heading_threshold_by_endpoint": true,
+      "end_time_s": 117.1,
+      "endpoint_heading_error_rad": -0.014826342827392314,
+      "label": "sweep_+30deg",
+      "normalized_transition_rad": 0.5224662458966405,
+      "start_time_s": 114.8,
+      "target_yaw_rad": 0.4675007172429818
+    }
+  ],
+  "distance_tolerance": 1e-06,
+  "heading_tolerance": "none beyond floating-point comparison",
+  "logical_operator": "OR_WITH_HEADING_CHECKED_FIRST",
+  "minimum_travel_heading_approximately_equals_sweep_step": true,
+  "nominal_sweep_step_minus_threshold_rad": 0.003598775598298798,
+  "nominal_sweep_step_rad": 0.5235987755982988,
+  "reconstructed_counts": {
+    "A0_baseline": 27,
+    "A1_dwell": 27,
+    "A2_sweep90": 29
+  },
+  "replay_remote_laser_offset": "default zero: receiveLocalizedScan creates a custom remote laser without SetOffsetPose; recorded x/y/yaw are already laser odometry",
+  "sensor_pose_used": "GetSensorAt(odometric pose)",
+  "source_rule": "OpenMapper::HasMovedEnough: accept the first scan; otherwise accept if abs(NormalizeAngle(current sensor heading - last accepted sensor heading)) >= MinimumTravelHeading; otherwise accept if squared sensor-position distance >= MinimumTravelDistance^2 - KT_TOLERANCE.",
+  "sweep_count_exclusive_keyscans": [
+    {
+      "action_stage": "sweep_-30deg",
+      "gt_yaw": -0.228063401,
+      "heading_change_since_previous_keyscan_rad": -0.52,
+      "karto_yaw": -0.229618,
+      "keyscan_criterion": "HEADING",
+      "node_id": 60,
+      "odom_laser_yaw": -0.22806340093156205,
+      "raw_scan_index_zero_based": 532,
+      "raw_stamp_s": 110.5,
+      "resulting_edge_indices": "81;82",
+      "travel_distance_since_previous_keyscan_m": 0.102832220756862
+    },
+    {
+      "action_stage": "sweep_+30deg",
+      "gt_yaw": 0.298955847,
+      "heading_change_since_previous_keyscan_rad": 0.5270192474868302,
+      "karto_yaw": 0.297395,
+      "keyscan_criterion": "HEADING",
+      "node_id": 61,
+      "odom_laser_yaw": 0.2989558465552681,
+      "raw_scan_index_zero_based": 581,
+      "raw_stamp_s": 115.4,
+      "resulting_edge_indices": "83;84",
+      "travel_distance_since_previous_keyscan_m": 0.10418825074164241
+    }
+  ],
+  "validation": "The offline predicate exactly reproduces recorded accepted post-prefix keyscan counts 27/27/29."
+}

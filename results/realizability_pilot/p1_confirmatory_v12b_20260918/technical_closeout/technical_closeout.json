@@ -1,0 +1,99 @@
+{
+  "block_status_counts": {
+    "COLLECTED": 5,
+    "PENDING": 1,
+    "PROTOCOL_NOT_ROBUST": 1,
+    "TECHNICAL_INVALID_PREFIX": 1
+  },
+  "collection_complete_marker_present": false,
+  "collection_failure_reason": "RuntimeError: reserve histories exhausted for target_B_H3",
+  "collection_locked_marker_present": false,
+  "collection_state": "FAILED",
+  "final_gate": "CONFIRMATORY_EXPERIMENT_TECHNICALLY_INCOMPLETE",
+  "history_failure_counts": {
+    "RuntimeError: canonical history replay not exact": 4,
+    "ValueError: TARGET_REFERENCE_MATCH_INVALID": 6
+  },
+  "interpretation": "The repaired protocol was not technically robust enough to deliver four usable blocks per target. No confirmatory action effect is estimable under the preregistered gate.",
+  "no_peeking": {
+    "fresh_formal_J_T_or_contrasts_read": false,
+    "fresh_formal_graph_outcomes_read": false,
+    "pre_amendment_excluded_incident": {
+      "accessed_after_failure": "aggregate shutdown-dump node_count=34 and edge_count=41 for failed target_A_H1/A1_DWELL",
+      "can_influence_new_protocol": false,
+      "containment": "The entire pre-amendment attempt is permanently excluded and all eight confirmatory blocks restart fresh.",
+      "not_accessed": [
+        "J_T",
+        "posterior covariance",
+        "target/non-target edge attribution",
+        "factor provenance outcome",
+        "arm contrast"
+      ],
+      "occurred": true
+    }
+  },
+  "phase_r_gate": "TARGET_B_TECHNICAL_READY",
+  "phase_r_problem_recurred": true,
+  "phase_r_recurrence": [
+    "Target-B canonical-prefix identity failure",
+    "Target-B physical target-reference matching failure"
+  ],
+  "planned_blocks": 8,
+  "prefix_failures": [
+    {
+      "arm": "A2_SWEEP90",
+      "attempts": [
+        {
+          "attempt": 1,
+          "failed_prefix_hash": "3726919be366aae5f14ff3dfdc5d25d45079796d2b33bcdce8c4ca93304d6046",
+          "preserved_dir": "target_B/H2/A2_SWEEP90/replay_attempt_01_prefix_mismatch",
+          "status": "TECHNICAL_INVALID_PREFIX"
+        },
+        {
+          "attempt": 2,
+          "failed_prefix_hash": "3726919be366aae5f14ff3dfdc5d25d45079796d2b33bcdce8c4ca93304d6046",
+          "preserved_dir": "target_B/H2/A2_SWEEP90/replay_attempt_02_prefix_mismatch",
+          "status": "TECHNICAL_INVALID_PREFIX"
+        }
+      ],
+      "block_id": "target_B_H2",
+      "canonical_prefix_hash": "f6161cffe49777779799183557ff4bae0d0cb25e5168923e20bd4a05fc69c63a"
+    }
+  ],
+  "preregistration_sha256": "bb5b53655793e7800c492df63ad15abe1e3420d9738376f05b35652391b2791d",
+  "protocol_id": "p1_confirmatory_v12b_20260918",
+  "reserve_reuse_anomaly": {
+    "accepted_duplicate_history_entered_sample": false,
+    "code_fact": "The allocator tracks only each sibling current active_seed; a reserve attempted and then superseded can be selected again.",
+    "detected": true,
+    "seeds": {
+      "72005": [
+        "target_B_H2",
+        "target_B_H2",
+        "target_B_H3",
+        "target_B_H3"
+      ]
+    }
+  },
+  "reserve_seed_attempt_blocks": {
+    "72005": [
+      "target_B_H2",
+      "target_B_H2",
+      "target_B_H3",
+      "target_B_H3"
+    ],
+    "72006": [
+      "target_B_H2"
+    ]
+  },
+  "scientific_analysis_executed": false,
+  "scientific_conclusion": null,
+  "status": "CLOSED",
+  "usable_blocks": 5,
+  "usable_blocks_by_target": {
+    "target_A": 4,
+    "target_B": 1
+  },
+  "v12_or_pre_amendment_blocks_pooled": false,
+  "v12_target_A_reference_role": "DESCRIPTIVE_PRIOR_EVIDENCE_NOT_POOLED"
+}

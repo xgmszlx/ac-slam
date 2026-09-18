@@ -1,0 +1,232 @@
+{
+  "arm_orders": {
+    "target_A": [
+      [
+        "A1_DWELL",
+        "A3_MIN_TRIGGER",
+        "A2_SWEEP90"
+      ],
+      [
+        "A3_MIN_TRIGGER",
+        "A2_SWEEP90",
+        "A1_DWELL"
+      ],
+      [
+        "A2_SWEEP90",
+        "A1_DWELL",
+        "A3_MIN_TRIGGER"
+      ],
+      [
+        "A1_DWELL",
+        "A2_SWEEP90",
+        "A3_MIN_TRIGGER"
+      ]
+    ],
+    "target_B": [
+      [
+        "A3_MIN_TRIGGER",
+        "A1_DWELL",
+        "A2_SWEEP90"
+      ],
+      [
+        "A2_SWEEP90",
+        "A3_MIN_TRIGGER",
+        "A1_DWELL"
+      ],
+      [
+        "A1_DWELL",
+        "A3_MIN_TRIGGER",
+        "A2_SWEEP90"
+      ],
+      [
+        "A3_MIN_TRIGGER",
+        "A2_SWEEP90",
+        "A1_DWELL"
+      ]
+    ]
+  },
+  "arms": {
+    "A1_DWELL": {
+      "dwell_s": 7.6,
+      "geometry": "static"
+    },
+    "A2_SWEEP90": {
+      "geometry": "frozen v9/v10 Sweep90"
+    },
+    "A3_MIN_TRIGGER": {
+      "angle_rad": 0.5439732814124923,
+      "dwell_s": null,
+      "geometry": "theta0 -> theta0+angle -> theta0 then dwell",
+      "keyscan_count_is_mediator_not_validity_gate": true
+    }
+  },
+  "budget_gates": {
+    "pairwise_distance_range_m_max": 0.1,
+    "pairwise_time_range_s_max": 1.5,
+    "raw_scan_relative_range_max": 0.03
+  },
+  "calibration": null,
+  "code_hashes": {
+    "tools/realizability_pilot/confirmatory_v12_analysis.py": "4c6f7258a6a68b1f512ebd61140a6a8673942e631b7bacc29837496db26db95e",
+    "tools/realizability_pilot/confirmatory_v12_collection.py": "6a45db4f257969b5bc832ad6fd3a5c2529378cf2208d5913838c90a48c9aa3ab",
+    "tools/realizability_pilot/confirmatory_v12_protocol.py": "d0433731ae444341c4de0e725798e99625182297561198427f3da7ebf99dcbe3"
+  },
+  "created_before_formal_branch_collection": true,
+  "no_peeking": {
+    "collection_allowed": [
+      "technical status",
+      "start pose",
+      "action execution",
+      "GT distance",
+      "time",
+      "raw scan count",
+      "prefix hash"
+    ],
+    "forbidden_until_collection_complete": [
+      "accepted keyscans",
+      "constraints",
+      "utility",
+      "posterior",
+      "arm contrasts"
+    ]
+  },
+  "primary_estimand": {
+    "J_T": "-logdet(Sigma_T)/15",
+    "dimension": 15,
+    "primary_contrast": "J_T(A2_SWEEP90)-J_T(A3_MIN_TRIGGER)",
+    "secondary_contrasts": [
+      "J_T(A3_MIN_TRIGGER)-J_T(A1_DWELL)",
+      "J_T(A2_SWEEP90)-J_T(A1_DWELL)"
+    ],
+    "subset": "five fixed prefix SE(2) states"
+  },
+  "primary_history_seeds": {
+    "target_A": [
+      51001,
+      51002,
+      51003,
+      51004
+    ],
+    "target_B": [
+      52001,
+      52002,
+      52003,
+      52004
+    ]
+  },
+  "protocol_id": "p1_confirmatory_v12_20260917",
+  "reserve_history_seeds": {
+    "target_A": [
+      51005,
+      51006
+    ],
+    "target_B": [
+      52005,
+      52006
+    ]
+  },
+  "reserve_rule": "consume in listed order only after TECHNICAL_INVALID_HISTORY; never replace an outcome",
+  "start_gate": {
+    "heading_rad_max": 0.04,
+    "position_m_max": 0.08
+  },
+  "support_rule": "at least 7/8 positive, target_A at least 3/4, target_B at least 3/4",
+  "target_match": {
+    "algorithm": "global minimum-cost strictly monotonic assignment",
+    "allowed_inputs": [
+      "Stage GT physical position",
+      "heading",
+      "Karto state order"
+    ],
+    "cost": "sum(position_m^2 + (0.5*heading_rad)^2)",
+    "exact_state_count": 5,
+    "heading_tolerance_rad": 0.25,
+    "position_tolerance_m": 0.6
+  },
+  "targets": {
+    "target_A": {
+      "q": [
+        [
+          3.95631,
+          0.0392656,
+          0.18456545688813514
+        ],
+        [
+          4.87728,
+          0.136958,
+          0.060427417344146396
+        ],
+        [
+          5.80695,
+          0.116092,
+          -0.048395710879992185
+        ],
+        [
+          6.76544,
+          0.0601547,
+          -0.035691102471246454
+        ],
+        [
+          7.75011,
+          0.0360571,
+          -0.015722440353488507
+        ]
+      ],
+      "selection_rule": "all five already verified v10 physical scans",
+      "source": "/home/wcqw/ac-slam/results/realizability_pilot/p1_dwell_control_v10_20260917/target_physical_region.json",
+      "source_sha256": "4b7d7eaebf78b045cf8285516fd68920bb0bc086f12889c824738888732eb434",
+      "source_state_ids": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "target_id": "map3_grid_anchor_01"
+    },
+    "target_B": {
+      "q": [
+        [
+          9.31915,
+          0.0176349,
+          0.021179194368468185
+        ],
+        [
+          10.2791,
+          0.0243443,
+          0.003204780461857447
+        ],
+        [
+          10.4783,
+          0.190426,
+          0.6534243728394888
+        ],
+        [
+          10.5369,
+          0.377023,
+          1.0722019641386225
+        ],
+        [
+          10.513,
+          1.15764,
+          1.6966311424880078
+        ]
+      ],
+      "selection_rule": "five consecutive historical states 29--33: the five nearest old pre-probe states to the physical anchor, then restored to route order",
+      "source": "/home/wcqw/ac-slam/results/realizability_pilot/p1_dir_dec_v8_20260916/n1_blocks/episodes/0007_n1_a1_neutral_03/attempt_01",
+      "source_episode_result_sha256": "66902b45b5277991eb954041dad400df5f3d2cd0a2fa78a5c4a1940020c254df",
+      "source_state_ids": [
+        29,
+        30,
+        31,
+        32,
+        33
+      ],
+      "target_id": "map3_grid_anchor_03"
+    }
+  },
+  "technical_attempt_caps": {
+    "branch_per_assignment": 2,
+    "history_per_seed": 2
+  }
+}

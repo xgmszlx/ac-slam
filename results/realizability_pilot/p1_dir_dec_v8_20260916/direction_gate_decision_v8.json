@@ -1,0 +1,85 @@
+{
+  "inputs": {
+    "blocks": "results/realizability_pilot/p1_dir_dec_v8_20260916/n1_analysis/n1_matched_action_blocks.csv",
+    "n0_decision": "results/realizability_pilot/p1_dir_dec_v8_20260916/n0_certification_decision_final.json",
+    "thresholds": "results/realizability_pilot/p1_dir_dec_v8_20260916/preregistration/effect_threshold_preregistration.json"
+  },
+  "intervention_executed": true,
+  "measurement_gate": {
+    "certified": true,
+    "n0_outcome": "OUTCOME_MEASUREMENT_STABLE",
+    "reason": "the instrumentation is neutral for the measured outcomes",
+    "state": "RUN_N1"
+  },
+  "next_required_action": [
+    "do not read any N1 outcome as evidence about the intervention",
+    "the blocking limitation is reproducibility of the mapping phase (map-frame translation and rotation between runs of the same route) and navigation accuracy at the probe pose; a future round needs either a route whose mapping phase is reproducible within the pre-registered tolerances or a design that does not require matched pre-probe graphs"
+  ],
+  "reason": "the frozen N1 suite was executed but no block yielded a usable sweep-minus-neutral contrast: of 2 block(s) seen, ['n1_map3_grid_anchor_01_seed42001'] failed the pre-registered pre-probe comparability gate and 1 lacked at least one required arm after the independent ground-truth validity check rejected episodes",
+  "scientific_gate": {
+    "block_accounting": {
+      "blocks_incomplete": [
+        "n1_map3_grid_anchor_01_seed42002"
+      ],
+      "blocks_rejected_by_comparability_gate": [
+        "n1_map3_grid_anchor_01_seed42001"
+      ],
+      "blocks_seen": 2,
+      "blocks_with_three_arms": 1,
+      "evaluable_blocks": 0,
+      "rows": 5,
+      "rows_used": 2,
+      "targets": [
+        "map3_grid_anchor_01"
+      ]
+    },
+    "case": null,
+    "criteria": {
+      "both_outcome_families_positive_on_both_targets": {
+        "passed": false,
+        "per_target": {
+          "map3_grid_anchor_01": {
+            "blocks": 0,
+            "edge_contrast": [],
+            "edge_contrast_mean": null,
+            "uncertainty_contrast": [],
+            "uncertainty_contrast_mean": null,
+            "uncertainty_family_positive": false,
+            "uncertainty_per_m_contrast": [],
+            "uncertainty_per_m_contrast_mean": null,
+            "utility_contrast": [],
+            "utility_contrast_mean": null,
+            "utility_family_positive": false,
+            "utility_per_m_contrast": [],
+            "utility_per_m_contrast_mean": null
+          }
+        }
+      },
+      "sweep_beats_budget_matched_neutral_on_constraints": {
+        "observed_mean_contrast": null,
+        "passed": false,
+        "per_block": [],
+        "threshold": 1.2345679012345678
+      },
+      "sweep_beats_neutral_on_uncertainty_per_cost": {
+        "note": "outcome family 1: posterior-uncertainty reduction per metre",
+        "observed_mean_contrast_per_m": null,
+        "passed": false,
+        "per_block": []
+      },
+      "sweep_beats_neutral_on_utility_per_cost": {
+        "note": "outcome family 2: realised graph utility per metre",
+        "observed_mean_contrast_per_m": null,
+        "passed": false,
+        "per_block": []
+      },
+      "sweep_gains_target_constraints_over_baseline": {
+        "observed_mean_delta": 5.0,
+        "passed": true,
+        "threshold": 1.2345679012345678
+      }
+    },
+    "single_remaining_blocker": null
+  },
+  "state": "INCONCLUSIVE_NEEDS_ONE_MORE_CONTROL"
+}

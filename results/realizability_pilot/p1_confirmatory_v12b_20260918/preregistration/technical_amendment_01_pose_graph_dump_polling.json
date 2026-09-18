@@ -1,0 +1,62 @@
+{
+  "amendment_id": "v12b_technical_amendment_01_pose_graph_dump_polling",
+  "recorded_utc": "2026-09-18T07:05:00Z",
+  "status": "OUTCOME_BLIND_COLLECTION_INSTRUMENTATION_REPAIR",
+  "trigger": {
+    "collection_state": "FAILED",
+    "error": "RuntimeError: timed out waiting for pose-graph dump request 1 (None)",
+    "failed_block": "target_A_H1",
+    "failed_arm": "A1_DWELL",
+    "failed_stage": "branch replay preprobe graph dump"
+  },
+  "root_cause": {
+    "code_fact": "MultiMapper started the instrumentation maintenance thread only when instrumentation_flush_period_s was greater than zero.",
+    "protocol_interaction": "v12b froze instrumentation_flush_period_s at zero, so the post-prefix dump request had no maintenance poller after the last prefix scan.",
+    "shutdown_evidence": "graph_current.json appeared only during mapper shutdown after the 30 second request timeout.",
+    "classification": "POSE_GRAPH_DUMP_POLLING_LIFECYCLE_BUG"
+  },
+  "repair": {
+    "file": "dependencies/navigation_2d/nav2d_karto/src/MultiMapper.cpp",
+    "old_sha256": "c027278e56aacb0eb3274ee98d1933fd81ae42b2791ee018d82e76e3802749a4",
+    "new_sha256": "241d2f90fb5bf155796712d6b1ec7277ecace7012e852096e1a0d27a8e0c541e",
+    "description": "Keep dump-request polling live when a dump path is configured, while preserving zero periodic provenance flushes when flush_period_s is zero.",
+    "changes_matcher_or_solver": false,
+    "changes_action_geometry": false,
+    "changes_budget_gate": false,
+    "changes_primary_endpoint": false,
+    "changes_analysis_code": false
+  },
+  "frozen_analysis": {
+    "path": "tools/realizability_pilot/confirmatory_v12b_analysis.py",
+    "sha256": "bbdcc6ae4957ef08efa1ebc2ea16e38858e552bf65b5a1bc3b24de5ad490eebf"
+  },
+  "superseded_preregistration": {
+    "path": "preregistration/archive_pre_amendment_01/v12b_confirmatory_preregistration.json",
+    "sha256": "31f081df3856a40aaac717a59d90c1b2ddbc2c6f1db4057f5109215da539692b"
+  },
+  "failed_attempt_policy": {
+    "reuse_in_confirmatory_sample": false,
+    "archive_path": "technical_repair/failed_collection_attempt_01",
+    "fresh_restart_all_eight_blocks": true,
+    "reason": "The repair occurred after collection began; all pre-amendment captures are excluded even though scientific analysis was never run."
+  },
+  "endpoint_access_incident": {
+    "occurred": true,
+    "accessed_after_failure": "aggregate shutdown-dump node_count=34 and edge_count=41 for failed target_A_H1/A1_DWELL",
+    "not_accessed": [
+      "J_T",
+      "posterior covariance",
+      "target/non-target edge attribution",
+      "factor provenance outcome",
+      "arm contrast"
+    ],
+    "containment": "The entire pre-amendment attempt is permanently excluded and all eight confirmatory blocks restart fresh.",
+    "can_influence_new_protocol": false
+  },
+  "old_protocol_code_sha256": "22501ee7eee2abf0440900f844d27a4260658dd43b2036bb861b679636808ed7",
+  "new_protocol_code_sha256": "224e65f491141c30f0117851a791fc5ecd6d96dc1669aa998eabbb743ff49ec1",
+  "outcome_blind": true,
+  "requires_rebuild": true,
+  "requires_fresh_preregistration": true,
+  "requires_fresh_collection": true
+}

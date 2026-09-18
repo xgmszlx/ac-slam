@@ -1,0 +1,57 @@
+{
+  "checks": {
+    "keyscan_gate_uses_pose_not_delta_t": true,
+    "loop_candidate_uses_scan_order_and_pose_distance": true,
+    "openmapper_never_reads_GetTime": true,
+    "running_buffer_uses_size_and_pose_distance": true,
+    "time_field_exists_but_is_not_consumed": true,
+    "wrapper_constructs_scan_without_SetTime": true
+  },
+  "interpretation": "Retiming changes transport/TF query stamps but preserves ordered recorded poses and scans. No Karto decision path computes delta-t or reads SensorData::m_Time in this checkout.",
+  "pipeline": [
+    {
+      "affects_offline_measurement_content": false,
+      "numeric_timestamp_use": true,
+      "role": "TF lookup plus diagnostic/republished message stamps",
+      "stage": "ROS wrapper ingestion"
+    },
+    {
+      "numeric_timestamp_use": false,
+      "role": "LocalizedRangeScan is constructed without SetTime",
+      "stage": "SensorData construction"
+    },
+    {
+      "numeric_timestamp_use": false,
+      "role": "translation and heading thresholds only",
+      "stage": "keyscan decision"
+    },
+    {
+      "numeric_timestamp_use": false,
+      "role": "insertion order, maximum count, pose distance",
+      "stage": "running scans"
+    },
+    {
+      "numeric_timestamp_use": false,
+      "role": "scan geometry, search poses and correlation scores",
+      "stage": "sequential scan matcher"
+    },
+    {
+      "numeric_timestamp_use": false,
+      "role": "state-id order, graph adjacency, pose distance and scores",
+      "stage": "near-chain and TryCloseLoop"
+    },
+    {
+      "numeric_timestamp_use": false,
+      "role": "constraint measurements and covariance",
+      "stage": "graph optimization"
+    }
+  ],
+  "schema_version": "v10_timestamp_source_audit_v1",
+  "scope": "offline canonical-prefix replay and branch stitching",
+  "sources": {
+    "dependencies/navigation_2d/nav2d_karto/OpenKarto/source/OpenKarto/SensorData.h": "236aeace96e2666605636208520a8f69b9c0d2b16cb43dc5d2486702fe02c7b3",
+    "dependencies/navigation_2d/nav2d_karto/OpenKarto/source/OpenMapper.cpp": "170726d4a60e5aafdbeab80f9b310c413491572f6d6ff13448d6dfd3e59ce62c",
+    "dependencies/navigation_2d/nav2d_karto/src/MultiMapper.cpp": "c027278e56aacb0eb3274ee98d1933fd81ae42b2791ee018d82e76e3802749a4"
+  },
+  "verdict": "DETERMINISTIC_RETIMING_ACCEPTABLE"
+}

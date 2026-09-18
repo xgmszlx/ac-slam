@@ -1,0 +1,24 @@
+{
+  "amendment_id": "v12_technical_amendment_01",
+  "applied_after": "target_A_H1 collection, before any scientific outcome inspection",
+  "changes_scientific_protocol": false,
+  "reason": "The frozen protocol already allowed finite technical reruns for prefix mismatch, but the collection worker exited after the first mismatch instead of executing that rule uniformly.",
+  "observed_trigger": {
+    "arm": "target_A_H1/A2_SWEEP90",
+    "comparison_scope": "pre-probe graph only",
+    "node_ids_equal": true,
+    "edge_sequence_equal": true,
+    "edge_measurements_equal": true,
+    "edge_covariances_equal": true,
+    "maximum_corrected_pose_difference": 0.016863,
+    "post_action_outcomes_inspected": false
+  },
+  "uniform_rule": "For every current and future arm, replay the same sealed combined stream at most twice. Preserve every failed replay. Never recapture the physical action for this failure. If the second replay still fails exact prefix identity, mark the whole block TECHNICAL_INVALID_PREFIX and continue the remaining preregistered blocks.",
+  "outcome_blind": true,
+  "thresholds_changed": false,
+  "actions_changed": false,
+  "target_definition_changed": false,
+  "seed_order_changed": false,
+  "old_collection_code_sha256": "6a45db4f257969b5bc832ad6fd3a5c2529378cf2208d5913838c90a48c9aa3ab",
+  "amended_collection_code_sha256": "31e58d9d158e2184c2acd156223438caf7029fb91be0f40515429374e380d307"
+}

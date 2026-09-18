@@ -1,0 +1,75 @@
+{
+  "angle_max_rad": 1.5707963705062866,
+  "angle_min_rad": -1.5707963705062866,
+  "angular_resolution_deg": 0.19999999845072666,
+  "angular_resolution_rad": 0.003490658476948738,
+  "beam_count": 901,
+  "captured_scan_topic": "/base_scan",
+  "classification": "LASER_FOV_LIMITED",
+  "configuration_sources": [
+    "baseline/Graph-Based_SLAM-Aware_Exploration/world/map3/map3.world",
+    "baseline/Graph-Based_SLAM-Aware_Exploration/world/map3/p3at.inc",
+    "baseline/Graph-Based_SLAM-Aware_Exploration/world/map3/hokuyo.inc",
+    "/home/wcqw/ac-slam/results/realizability_pilot/p1_dwell_control_v10_20260917/branches/A2_sweep90/raw/probe_stream_raw.jsonl",
+    "tools/realizability_pilot/controlled_probe_capture.py"
+  ],
+  "horizontal_fov_deg": 180.00000500895632,
+  "horizontal_fov_rad": 3.1415927410125732,
+  "including_arrival_heading_span_deg": 119.72981010365717,
+  "including_arrival_heading_span_rad": 2.089679399096391,
+  "including_arrival_union_sector_deg": 299.7298151126135,
+  "interpretation": "The three named sweep endpoints expand the union of a forward 180-degree sector by their 58.18-degree heading span; including the +90-degree arrival expands the action-wide potential union to about 299.7 degrees. Rotation therefore changes physical view coverage, not only frame representation.",
+  "laser_mount_robot_frame": {
+    "x_m": 0.2,
+    "y_m": 0.0,
+    "yaw_rad": 0.0,
+    "z_m": -0.2
+  },
+  "range_max_m": 25.0,
+  "range_min_m": 0.0,
+  "recorded_frame_id": "base_laser_link",
+  "sweep_endpoint_sectors": [
+    {
+      "actual_heading_deg": -32.242787392976204,
+      "actual_heading_rad": -0.5627428000279536,
+      "heading_label": "sweep_-30deg",
+      "observable_sector_unwrapped_deg": [
+        -122.24278989745439,
+        57.75721511150195
+      ],
+      "observable_sector_unwrapped_rad": [
+        -2.1335391705342404,
+        1.0080535704783329
+      ]
+    },
+    {
+      "actual_heading_deg": -3.998779680183672,
+      "actual_heading_rad": -0.06979187148105093,
+      "heading_label": "sweep_+0deg",
+      "observable_sector_unwrapped_deg": [
+        -93.99878218466183,
+        86.0012228242945
+      ],
+      "observable_sector_unwrapped_rad": [
+        -1.6405882419873374,
+        1.5010044990252358
+      ]
+    },
+    {
+      "actual_heading_deg": 25.93633114773809,
+      "actual_heading_rad": 0.4526743744155895,
+      "heading_label": "sweep_+30deg",
+      "observable_sector_unwrapped_deg": [
+        -64.06367135674009,
+        115.93633365221626
+      ],
+      "observable_sector_unwrapped_rad": [
+        -1.1181219960906972,
+        2.0234707449218763
+      ]
+    }
+  ],
+  "three_sweep_heading_span_deg": 58.1791185407143,
+  "three_sweep_heading_span_rad": 1.0154171744435432,
+  "three_sweep_union_sector_deg": 238.17912354967063
+}
