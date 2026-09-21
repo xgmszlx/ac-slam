@@ -1,0 +1,719 @@
+{
+  "blocks": [
+    {
+      "arm_order": [
+        "A1_DWELL",
+        "A3_MIN_TRIGGER",
+        "A2_SWEEP90"
+      ],
+      "block_id": "target_A_H1",
+      "branches": {
+        "A1_DWELL": {
+          "capture_attempt_count": 1,
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/1/A1_DWELL/raw_attempt_01",
+          "combined_prefix_byte_identical": true,
+          "combined_prefix_sha256": "4eddfa84d601f04bf4b86f52dca819c4ccd83c5476fdb48cf1e48f0c76255bde",
+          "distance_m": 13.758148803604202,
+          "duration_s": 64.6,
+          "prefix_reference_exact": true,
+          "prefix_replay_attempts": [
+            {
+              "attempt": 1,
+              "prefix_reference_exact": true,
+              "replay_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/1/A1_DWELL/replay_attempt_01",
+              "status": "REPLAYED",
+              "suffix_started": true
+            }
+          ],
+          "raw_scan_count": 649,
+          "replay_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/1/A1_DWELL/replay_attempt_01",
+          "start_heading_error_rad": 0.01617849765727808,
+          "start_position_error_m": 0.038655989820645734,
+          "status": "REPLAYED"
+        },
+        "A2_SWEEP90": {
+          "capture_attempt_count": 1,
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/1/A2_SWEEP90/raw_attempt_01",
+          "combined_prefix_byte_identical": true,
+          "combined_prefix_sha256": "4eddfa84d601f04bf4b86f52dca819c4ccd83c5476fdb48cf1e48f0c76255bde",
+          "distance_m": 13.765217151573008,
+          "duration_s": 64.6,
+          "prefix_reference_exact": true,
+          "prefix_replay_attempts": [
+            {
+              "attempt": 1,
+              "prefix_reference_exact": true,
+              "replay_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/1/A2_SWEEP90/replay_attempt_01",
+              "status": "REPLAYED",
+              "suffix_started": true
+            }
+          ],
+          "raw_scan_count": 649,
+          "replay_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/1/A2_SWEEP90/replay_attempt_01",
+          "start_heading_error_rad": 0.01340317574852179,
+          "start_position_error_m": 0.03770564942188844,
+          "status": "REPLAYED"
+        },
+        "A3_MIN_TRIGGER": {
+          "capture_attempt_count": 1,
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/1/A3_MIN_TRIGGER/raw_attempt_01",
+          "combined_prefix_byte_identical": true,
+          "combined_prefix_sha256": "4eddfa84d601f04bf4b86f52dca819c4ccd83c5476fdb48cf1e48f0c76255bde",
+          "distance_m": 13.769026253207992,
+          "duration_s": 65.0,
+          "prefix_reference_exact": true,
+          "prefix_replay_attempts": [
+            {
+              "attempt": 1,
+              "prefix_reference_exact": true,
+              "replay_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/1/A3_MIN_TRIGGER/replay_attempt_01",
+              "status": "REPLAYED",
+              "suffix_started": true
+            }
+          ],
+          "raw_scan_count": 652,
+          "replay_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/1/A3_MIN_TRIGGER/replay_attempt_01",
+          "start_heading_error_rad": 0.01741409649697756,
+          "start_position_error_m": 0.038647566177594364,
+          "status": "REPLAYED"
+        }
+      },
+      "budget_gate": {
+        "observed": {
+          "distance_range_m": 0.010877449603789557,
+          "raw_scan_relative_range": 0.004615384615384616,
+          "time_range_s": 0.4000000000000057
+        },
+        "passed": true,
+        "scientific_variables_used": [],
+        "thresholds": {
+          "pairwise_distance_range_m_max": 0.1,
+          "pairwise_time_range_s_max": 1.5,
+          "raw_scan_relative_range_max": 0.03
+        },
+        "variables_used": [
+          "distance",
+          "duration",
+          "raw scan count"
+        ]
+      },
+      "history_rerun": false,
+      "history_source": "/home/wcqw/ac-slam/results/realizability_pilot/p1_v13_technical_20260920/histories/target_A/seed_81001/attempt_01",
+      "seed": 81001,
+      "status": "COLLECTED",
+      "target_label": "target_A"
+    },
+    {
+      "arm_order": [
+        "A3_MIN_TRIGGER",
+        "A2_SWEEP90",
+        "A1_DWELL"
+      ],
+      "block_id": "target_A_H2",
+      "branches": {
+        "A1_DWELL": {
+          "capture_attempt_count": 1,
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/2/A1_DWELL/raw_attempt_01",
+          "combined_prefix_byte_identical": true,
+          "combined_prefix_sha256": "1117b7f01d7c4ffcb78bd04304cba7949acb9fbca475ee75ea245f5b96e44381",
+          "distance_m": 13.61271684881353,
+          "duration_s": 64.7,
+          "prefix_reference_exact": true,
+          "prefix_replay_attempts": [
+            {
+              "attempt": 1,
+              "prefix_reference_exact": true,
+              "replay_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/2/A1_DWELL/replay_attempt_01",
+              "status": "REPLAYED",
+              "suffix_started": true
+            }
+          ],
+          "raw_scan_count": 649,
+          "replay_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/2/A1_DWELL/replay_attempt_01",
+          "start_heading_error_rad": 0.017676897497860965,
+          "start_position_error_m": 0.04432500406487546,
+          "status": "REPLAYED"
+        },
+        "A2_SWEEP90": {
+          "capture_attempt_count": 1,
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/2/A2_SWEEP90/raw_attempt_01",
+          "combined_prefix_byte_identical": true,
+          "combined_prefix_sha256": "1117b7f01d7c4ffcb78bd04304cba7949acb9fbca475ee75ea245f5b96e44381",
+          "distance_m": 13.595254026209764,
+          "duration_s": 64.2,
+          "prefix_reference_exact": true,
+          "prefix_replay_attempts": [
+            {
+              "attempt": 1,
+              "prefix_reference_exact": true,
+              "replay_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/2/A2_SWEEP90/replay_attempt_01",
+              "status": "REPLAYED",
+              "suffix_started": true
+            }
+          ],
+          "raw_scan_count": 644,
+          "replay_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/2/A2_SWEEP90/replay_attempt_01",
+          "start_heading_error_rad": 0.015454128410767433,
+          "start_position_error_m": 0.04428342256826312,
+          "status": "REPLAYED"
+        },
+        "A3_MIN_TRIGGER": {
+          "capture_attempt_count": 1,
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/2/A3_MIN_TRIGGER/raw_attempt_01",
+          "combined_prefix_byte_identical": true,
+          "combined_prefix_sha256": "1117b7f01d7c4ffcb78bd04304cba7949acb9fbca475ee75ea245f5b96e44381",
+          "distance_m": 13.613042047471989,
+          "duration_s": 64.30000000000001,
+          "prefix_reference_exact": true,
+          "prefix_replay_attempts": [
+            {
+              "attempt": 1,
+              "prefix_reference_exact": true,
+              "replay_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/2/A3_MIN_TRIGGER/replay_attempt_01",
+              "status": "REPLAYED",
+              "suffix_started": true
+            }
+          ],
+          "raw_scan_count": 645,
+          "replay_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/2/A3_MIN_TRIGGER/replay_attempt_01",
+          "start_heading_error_rad": 0.015475470105069446,
+          "start_position_error_m": 0.0370145871348738,
+          "status": "REPLAYED"
+        }
+      },
+      "budget_gate": {
+        "observed": {
+          "distance_range_m": 0.01778802126222523,
+          "raw_scan_relative_range": 0.007739938080495356,
+          "time_range_s": 0.5
+        },
+        "passed": true,
+        "scientific_variables_used": [],
+        "thresholds": {
+          "pairwise_distance_range_m_max": 0.1,
+          "pairwise_time_range_s_max": 1.5,
+          "raw_scan_relative_range_max": 0.03
+        },
+        "variables_used": [
+          "distance",
+          "duration",
+          "raw scan count"
+        ]
+      },
+      "history_rerun": false,
+      "history_source": "/home/wcqw/ac-slam/results/realizability_pilot/p1_v13_technical_20260920/histories/target_A/seed_81002/attempt_01",
+      "seed": 81002,
+      "status": "COLLECTED",
+      "target_label": "target_A"
+    },
+    {
+      "arm_order": [
+        "A2_SWEEP90",
+        "A1_DWELL",
+        "A3_MIN_TRIGGER"
+      ],
+      "block_id": "target_A_H3",
+      "branches": {
+        "A1_DWELL": {
+          "capture_attempt_count": 1,
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/3/A1_DWELL/raw_attempt_01",
+          "combined_prefix_byte_identical": true,
+          "combined_prefix_sha256": "ed2d85310077d7c93fc097a58dee9d01ec0968611cff4d48a0cb1e231ffd0f47",
+          "distance_m": 13.917468999279341,
+          "duration_s": 64.80000000000001,
+          "prefix_reference_exact": true,
+          "prefix_replay_attempts": [
+            {
+              "attempt": 1,
+              "prefix_reference_exact": true,
+              "replay_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/3/A1_DWELL/replay_attempt_01",
+              "status": "REPLAYED",
+              "suffix_started": true
+            }
+          ],
+          "raw_scan_count": 651,
+          "replay_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/3/A1_DWELL/replay_attempt_01",
+          "start_heading_error_rad": 0.016001383864815887,
+          "start_position_error_m": 0.03743270100526732,
+          "status": "REPLAYED"
+        },
+        "A2_SWEEP90": {
+          "capture_attempt_count": 1,
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/3/A2_SWEEP90/raw_attempt_01",
+          "combined_prefix_byte_identical": true,
+          "combined_prefix_sha256": "ed2d85310077d7c93fc097a58dee9d01ec0968611cff4d48a0cb1e231ffd0f47",
+          "distance_m": 13.915908183963618,
+          "duration_s": 64.4,
+          "prefix_reference_exact": true,
+          "prefix_replay_attempts": [
+            {
+              "attempt": 1,
+              "prefix_reference_exact": true,
+              "replay_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/3/A2_SWEEP90/replay_attempt_01",
+              "status": "REPLAYED",
+              "suffix_started": true
+            }
+          ],
+          "raw_scan_count": 645,
+          "replay_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/3/A2_SWEEP90/replay_attempt_01",
+          "start_heading_error_rad": 0.014458709798742109,
+          "start_position_error_m": 0.03887976277489634,
+          "status": "REPLAYED"
+        },
+        "A3_MIN_TRIGGER": {
+          "capture_attempt_count": 1,
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/3/A3_MIN_TRIGGER/raw_attempt_01",
+          "combined_prefix_byte_identical": true,
+          "combined_prefix_sha256": "ed2d85310077d7c93fc097a58dee9d01ec0968611cff4d48a0cb1e231ffd0f47",
+          "distance_m": 13.91394019957328,
+          "duration_s": 65.0,
+          "prefix_reference_exact": true,
+          "prefix_replay_attempts": [
+            {
+              "attempt": 1,
+              "prefix_reference_exact": true,
+              "replay_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/3/A3_MIN_TRIGGER/replay_attempt_01",
+              "status": "REPLAYED",
+              "suffix_started": true
+            }
+          ],
+          "raw_scan_count": 652,
+          "replay_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/3/A3_MIN_TRIGGER/replay_attempt_01",
+          "start_heading_error_rad": 0.015670054469137964,
+          "start_position_error_m": 0.03916681709568707,
+          "status": "REPLAYED"
+        }
+      },
+      "budget_gate": {
+        "observed": {
+          "distance_range_m": 0.0035287997060606813,
+          "raw_scan_relative_range": 0.010780287474332649,
+          "time_range_s": 0.5999999999999943
+        },
+        "passed": true,
+        "scientific_variables_used": [],
+        "thresholds": {
+          "pairwise_distance_range_m_max": 0.1,
+          "pairwise_time_range_s_max": 1.5,
+          "raw_scan_relative_range_max": 0.03
+        },
+        "variables_used": [
+          "distance",
+          "duration",
+          "raw scan count"
+        ]
+      },
+      "history_rerun": false,
+      "history_source": "/home/wcqw/ac-slam/results/realizability_pilot/p1_v13_technical_20260920/histories/target_A/seed_81003/attempt_01",
+      "seed": 81003,
+      "status": "COLLECTED",
+      "target_label": "target_A"
+    },
+    {
+      "arm_order": [
+        "A1_DWELL",
+        "A2_SWEEP90",
+        "A3_MIN_TRIGGER"
+      ],
+      "block_id": "target_A_H4",
+      "branches": {
+        "A1_DWELL": {
+          "capture_attempt_count": 1,
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/4/A1_DWELL/raw_attempt_01",
+          "combined_prefix_byte_identical": true,
+          "combined_prefix_sha256": "0046a63fe4aa75fe04c55f92cf890626106d18341504252acc7b44407d481c8d",
+          "distance_m": 13.623741910148924,
+          "duration_s": 64.5,
+          "prefix_reference_exact": true,
+          "prefix_replay_attempts": [
+            {
+              "attempt": 1,
+              "prefix_reference_exact": true,
+              "replay_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/4/A1_DWELL/replay_attempt_01",
+              "status": "REPLAYED",
+              "suffix_started": true
+            }
+          ],
+          "raw_scan_count": 647,
+          "replay_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/4/A1_DWELL/replay_attempt_01",
+          "start_heading_error_rad": 0.006737740296094863,
+          "start_position_error_m": 0.03785692150476975,
+          "status": "REPLAYED"
+        },
+        "A2_SWEEP90": {
+          "capture_attempt_count": 1,
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/4/A2_SWEEP90/raw_attempt_01",
+          "combined_prefix_byte_identical": true,
+          "combined_prefix_sha256": "0046a63fe4aa75fe04c55f92cf890626106d18341504252acc7b44407d481c8d",
+          "distance_m": 13.624015098947858,
+          "duration_s": 64.4,
+          "prefix_reference_exact": true,
+          "prefix_replay_attempts": [
+            {
+              "attempt": 1,
+              "prefix_reference_exact": true,
+              "replay_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/4/A2_SWEEP90/replay_attempt_01",
+              "status": "REPLAYED",
+              "suffix_started": true
+            }
+          ],
+          "raw_scan_count": 647,
+          "replay_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/4/A2_SWEEP90/replay_attempt_01",
+          "start_heading_error_rad": 0.008033366181368518,
+          "start_position_error_m": 0.0434059728252253,
+          "status": "REPLAYED"
+        },
+        "A3_MIN_TRIGGER": {
+          "capture_attempt_count": 1,
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/4/A3_MIN_TRIGGER/raw_attempt_01",
+          "combined_prefix_byte_identical": true,
+          "combined_prefix_sha256": "0046a63fe4aa75fe04c55f92cf890626106d18341504252acc7b44407d481c8d",
+          "distance_m": 13.630380363306925,
+          "duration_s": 64.5,
+          "prefix_reference_exact": true,
+          "prefix_replay_attempts": [
+            {
+              "attempt": 1,
+              "prefix_reference_exact": true,
+              "replay_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/4/A3_MIN_TRIGGER/replay_attempt_01",
+              "status": "REPLAYED",
+              "suffix_started": true
+            }
+          ],
+          "raw_scan_count": 647,
+          "replay_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/4/A3_MIN_TRIGGER/replay_attempt_01",
+          "start_heading_error_rad": 0.00766115542275836,
+          "start_position_error_m": 0.03693736221216645,
+          "status": "REPLAYED"
+        }
+      },
+      "budget_gate": {
+        "observed": {
+          "distance_range_m": 0.006638453158000601,
+          "raw_scan_relative_range": 0.0,
+          "time_range_s": 0.09999999999999432
+        },
+        "passed": true,
+        "scientific_variables_used": [],
+        "thresholds": {
+          "pairwise_distance_range_m_max": 0.1,
+          "pairwise_time_range_s_max": 1.5,
+          "raw_scan_relative_range_max": 0.03
+        },
+        "variables_used": [
+          "distance",
+          "duration",
+          "raw scan count"
+        ]
+      },
+      "history_rerun": false,
+      "history_source": "/home/wcqw/ac-slam/results/realizability_pilot/p1_v13_technical_20260920/histories/target_A/seed_81005/attempt_01",
+      "seed": 81005,
+      "status": "COLLECTED",
+      "target_label": "target_A"
+    },
+    {
+      "arm_order": [
+        "A3_MIN_TRIGGER",
+        "A1_DWELL",
+        "A2_SWEEP90"
+      ],
+      "block_id": "target_B_H1",
+      "branches": {
+        "A1_DWELL": {
+          "capture_attempt_count": 1,
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_B/1/A1_DWELL/raw_attempt_01",
+          "distance_m": 9.847526778070026,
+          "duration_s": 54.1,
+          "raw_scan_count": 544,
+          "start_heading_error_rad": 0.017922982571429547,
+          "start_position_error_m": 0.04006916585863991,
+          "status": "CAPTURED"
+        },
+        "A2_SWEEP90": {
+          "capture_attempt_count": 1,
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_B/1/A2_SWEEP90/raw_attempt_01",
+          "distance_m": 9.852619183051784,
+          "duration_s": 52.5,
+          "raw_scan_count": 527,
+          "start_heading_error_rad": 0.015065068671569646,
+          "start_position_error_m": 0.04174404282254025,
+          "status": "CAPTURED"
+        },
+        "A3_MIN_TRIGGER": {
+          "capture_attempt_count": 1,
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_B/1/A3_MIN_TRIGGER/raw_attempt_01",
+          "distance_m": 9.846482468329558,
+          "duration_s": 54.400000000000006,
+          "raw_scan_count": 547,
+          "start_heading_error_rad": 0.017834036973982666,
+          "start_position_error_m": 0.0412687239950228,
+          "status": "CAPTURED"
+        }
+      },
+      "budget_gate": {
+        "observed": {
+          "distance_range_m": 0.006136714722225989,
+          "raw_scan_relative_range": 0.037082818294190356,
+          "time_range_s": 1.9000000000000057
+        },
+        "passed": false,
+        "scientific_variables_used": [],
+        "thresholds": {
+          "pairwise_distance_range_m_max": 0.1,
+          "pairwise_time_range_s_max": 1.5,
+          "raw_scan_relative_range_max": 0.03
+        },
+        "variables_used": [
+          "distance",
+          "duration",
+          "raw scan count"
+        ]
+      },
+      "history_rerun": false,
+      "history_source": "/home/wcqw/ac-slam/results/realizability_pilot/p1_v13_technical_20260920/histories/target_B/seed_82001/attempt_01",
+      "seed": 82001,
+      "status": "BUDGET_INVALID_FINAL",
+      "target_label": "target_B"
+    },
+    {
+      "arm_order": [
+        "A2_SWEEP90",
+        "A3_MIN_TRIGGER",
+        "A1_DWELL"
+      ],
+      "block_id": "target_B_H2",
+      "branches": {
+        "A1_DWELL": {
+          "capture_attempt_count": 1,
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_B/2/A1_DWELL/raw_attempt_01",
+          "distance_m": 9.946095421008575,
+          "duration_s": 54.3,
+          "raw_scan_count": 545,
+          "start_heading_error_rad": 0.0030922611332977468,
+          "start_position_error_m": 0.041228028253538274,
+          "status": "CAPTURED"
+        },
+        "A2_SWEEP90": {
+          "capture_attempt_count": 1,
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_B/2/A2_SWEEP90/raw_attempt_01",
+          "distance_m": 9.944987431136182,
+          "duration_s": 52.9,
+          "raw_scan_count": 531,
+          "start_heading_error_rad": 0.0032054167626105468,
+          "start_position_error_m": 0.042713376670256945,
+          "status": "CAPTURED"
+        },
+        "A3_MIN_TRIGGER": {
+          "capture_attempt_count": 1,
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_B/2/A3_MIN_TRIGGER/raw_attempt_01",
+          "distance_m": 9.945807664145935,
+          "duration_s": 54.49999999999999,
+          "raw_scan_count": 548,
+          "start_heading_error_rad": 0.003371811736290198,
+          "start_position_error_m": 0.04284407894531082,
+          "status": "CAPTURED"
+        }
+      },
+      "budget_gate": {
+        "observed": {
+          "distance_range_m": 0.0011079898723931336,
+          "raw_scan_relative_range": 0.031403940886699504,
+          "time_range_s": 1.5999999999999943
+        },
+        "passed": false,
+        "scientific_variables_used": [],
+        "thresholds": {
+          "pairwise_distance_range_m_max": 0.1,
+          "pairwise_time_range_s_max": 1.5,
+          "raw_scan_relative_range_max": 0.03
+        },
+        "variables_used": [
+          "distance",
+          "duration",
+          "raw scan count"
+        ]
+      },
+      "history_rerun": false,
+      "history_source": "/home/wcqw/ac-slam/results/realizability_pilot/p1_v13_technical_20260920/histories/target_B/seed_82002/attempt_01",
+      "seed": 82002,
+      "status": "BUDGET_INVALID_FINAL",
+      "target_label": "target_B"
+    },
+    {
+      "arm_order": [
+        "A1_DWELL",
+        "A3_MIN_TRIGGER",
+        "A2_SWEEP90"
+      ],
+      "block_id": "target_B_H3",
+      "branches": {
+        "A1_DWELL": {
+          "capture_attempt_count": 1,
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_B/3/A1_DWELL/raw_attempt_01",
+          "distance_m": 9.48690599089852,
+          "duration_s": 53.6,
+          "raw_scan_count": 538,
+          "start_heading_error_rad": 0.014893923755280092,
+          "start_position_error_m": 0.04295772796693268,
+          "status": "CAPTURED"
+        },
+        "A2_SWEEP90": {
+          "capture_attempt_count": 1,
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_B/3/A2_SWEEP90/raw_attempt_01",
+          "distance_m": 9.487719928143642,
+          "duration_s": 52.10000000000001,
+          "raw_scan_count": 524,
+          "start_heading_error_rad": 0.01726421976787076,
+          "start_position_error_m": 0.0431359670138814,
+          "status": "CAPTURED"
+        },
+        "A3_MIN_TRIGGER": {
+          "capture_attempt_count": 1,
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_B/3/A3_MIN_TRIGGER/raw_attempt_01",
+          "distance_m": 9.494560372288571,
+          "duration_s": 53.7,
+          "raw_scan_count": 539,
+          "start_heading_error_rad": 0.01641929865925487,
+          "start_position_error_m": 0.04305879612102417,
+          "status": "CAPTURED"
+        }
+      },
+      "budget_gate": {
+        "observed": {
+          "distance_range_m": 0.007654381390050702,
+          "raw_scan_relative_range": 0.02810743285446596,
+          "time_range_s": 1.5999999999999943
+        },
+        "passed": false,
+        "scientific_variables_used": [],
+        "thresholds": {
+          "pairwise_distance_range_m_max": 0.1,
+          "pairwise_time_range_s_max": 1.5,
+          "raw_scan_relative_range_max": 0.03
+        },
+        "variables_used": [
+          "distance",
+          "duration",
+          "raw scan count"
+        ]
+      },
+      "history_rerun": false,
+      "history_source": "/home/wcqw/ac-slam/results/realizability_pilot/p1_v13_technical_20260920/histories/target_B/seed_82003/attempt_01",
+      "seed": 82003,
+      "status": "BUDGET_INVALID_FINAL",
+      "target_label": "target_B"
+    },
+    {
+      "arm_order": [
+        "A3_MIN_TRIGGER",
+        "A2_SWEEP90",
+        "A1_DWELL"
+      ],
+      "block_id": "target_B_H4",
+      "branches": {
+        "A1_DWELL": {
+          "capture_attempt_count": 1,
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_B/4/A1_DWELL/raw_attempt_01",
+          "combined_prefix_byte_identical": true,
+          "combined_prefix_sha256": "97c7dd35904b96a7a26841917280cbe9420225a0f84e250ea900d4854438433e",
+          "distance_m": 9.709892249686064,
+          "duration_s": 52.6,
+          "prefix_reference_exact": true,
+          "prefix_replay_attempts": [
+            {
+              "attempt": 1,
+              "prefix_reference_exact": true,
+              "replay_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_B/4/A1_DWELL/replay_attempt_01",
+              "status": "REPLAYED",
+              "suffix_started": true
+            }
+          ],
+          "raw_scan_count": 528,
+          "replay_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_B/4/A1_DWELL/replay_attempt_01",
+          "start_heading_error_rad": 0.015916131978865877,
+          "start_position_error_m": 0.04058151517819303,
+          "status": "REPLAYED"
+        },
+        "A2_SWEEP90": {
+          "capture_attempt_count": 1,
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_B/4/A2_SWEEP90/raw_attempt_01",
+          "combined_prefix_byte_identical": true,
+          "combined_prefix_sha256": "97c7dd35904b96a7a26841917280cbe9420225a0f84e250ea900d4854438433e",
+          "distance_m": 9.704534595706676,
+          "duration_s": 52.599999999999994,
+          "prefix_reference_exact": true,
+          "prefix_replay_attempts": [
+            {
+              "attempt": 1,
+              "prefix_reference_exact": true,
+              "replay_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_B/4/A2_SWEEP90/replay_attempt_01",
+              "status": "REPLAYED",
+              "suffix_started": true
+            }
+          ],
+          "raw_scan_count": 528,
+          "replay_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_B/4/A2_SWEEP90/replay_attempt_01",
+          "start_heading_error_rad": 0.016805600637854304,
+          "start_position_error_m": 0.042071239844705205,
+          "status": "REPLAYED"
+        },
+        "A3_MIN_TRIGGER": {
+          "capture_attempt_count": 1,
+          "capture_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_B/4/A3_MIN_TRIGGER/raw_attempt_01",
+          "combined_prefix_byte_identical": true,
+          "combined_prefix_sha256": "97c7dd35904b96a7a26841917280cbe9420225a0f84e250ea900d4854438433e",
+          "distance_m": 9.710293934526934,
+          "duration_s": 52.5,
+          "prefix_reference_exact": true,
+          "prefix_replay_attempts": [
+            {
+              "attempt": 1,
+              "prefix_reference_exact": true,
+              "replay_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_B/4/A3_MIN_TRIGGER/replay_attempt_01",
+              "status": "REPLAYED",
+              "suffix_started": true
+            }
+          ],
+          "raw_scan_count": 527,
+          "replay_dir": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v13c_20260921/target_B/4/A3_MIN_TRIGGER/replay_attempt_01",
+          "start_heading_error_rad": 0.014632996835286072,
+          "start_position_error_m": 0.03987317347092147,
+          "status": "REPLAYED"
+        }
+      },
+      "budget_gate": {
+        "observed": {
+          "distance_range_m": 0.005759338820258364,
+          "raw_scan_relative_range": 0.0018951358180669617,
+          "time_range_s": 0.10000000000000142
+        },
+        "passed": true,
+        "scientific_variables_used": [],
+        "thresholds": {
+          "pairwise_distance_range_m_max": 0.1,
+          "pairwise_time_range_s_max": 1.5,
+          "raw_scan_relative_range_max": 0.03
+        },
+        "variables_used": [
+          "distance",
+          "duration",
+          "raw scan count"
+        ]
+      },
+      "history_rerun": false,
+      "history_source": "/home/wcqw/ac-slam/results/realizability_pilot/p1_v13_technical_20260920/histories/target_B/seed_82005/attempt_01",
+      "seed": 82005,
+      "status": "COLLECTED",
+      "target_label": "target_B"
+    }
+  ],
+  "completed_utc": "2026-09-21T03:44:03Z",
+  "created_utc": "2026-09-21T02:45:26Z",
+  "protocol_hash": "62f3521fbe8b9c3a5976f5ca518e064b4367bd2a0f894698fa30eed7b97873ec",
+  "protocol_id": "p1_confirmatory_v13c_20260921",
+  "scientific_endpoints_read": [],
+  "started_utc": "2026-09-21T02:45:26Z",
+  "status": "COLLECTION_LOCKED_TECHNICALLY_INCOMPLETE",
+  "updated_utc": "2026-09-21T03:44:03Z"
+}

@@ -1,0 +1,73 @@
+{
+  "T_W_M": {
+    "tx": -28.0352629668865,
+    "ty": -27.956252995765137,
+    "yaw": -0.0043845926639507204
+  },
+  "action_id": "A1_DWELL",
+  "action_labels": [
+    "probe_approach_history_03",
+    "probe_arrival"
+  ],
+  "action_waypoints": [
+    [
+      -17.80403806525161,
+      -22.09661813005152,
+      -1.514096724953849
+    ],
+    [
+      -17.48007276652384,
+      -27.804207737986825,
+      0.6657246585826211
+    ]
+  ],
+  "calibration_only": false,
+  "canonical_terminal_gt_pose": [
+    -22.04522987754849,
+    -21.850836936110156,
+    3.1089079827365658
+  ],
+  "core_action_start_index": 1,
+  "dwell_s": 11.4,
+  "hold_s": 6.0,
+  "protocol_id": "p1_confirmatory_v13c_20260921",
+  "protocol_role": "v13C_locked_confirmatory_capture",
+  "setup_waypoints": [
+    [
+      -21.76689733784506,
+      -27.91984973346279,
+      -0.02015653282160576
+    ],
+    [
+      -17.833654697710998,
+      -27.93704981835526,
+      -0.0001536112016122887
+    ],
+    [
+      -17.80403806525161,
+      -22.09661813005152,
+      1.5549873383252666
+    ],
+    [
+      -22.04522987754849,
+      -21.850836936110156,
+      3.1089079827365658
+    ]
+  ],
+  "source_v13T_history": "results/realizability_pilot/p1_v13_technical_20260920/histories/target_B/seed_82001/attempt_01",
+  "target_anchor_map": [
+    10.55442208620582,
+    0.19832385750443546,
+    0.6701092512465718
+  ],
+  "target_anchor_world_by_history_only_se2": [
+    -17.48007276652384,
+    -27.804207737986825,
+    0.6657246585826211
+  ],
+  "target_specific_budget_s": {
+    "A1_DWELL": 11.4,
+    "A2_SWEEP90": 0.0,
+    "A3_MIN_TRIGGER": 7.0
+  }
+}

@@ -25,6 +25,7 @@ from common_prefix_signature import stream_hash  # noqa: E402
 from run_pilot import activated_environment  # noqa: E402
 from same_input_replay import load_input_stream, load_mapper_params  # noqa: E402
 from v13_prefix_equivalence import (check_final_prefix_preservation,
+                                    compare_graphs,
                                     structural_signature)  # noqa: E402
 
 
@@ -173,8 +174,20 @@ def _dump(env, path):
     raise RuntimeError('dump service succeeded without output file')
 
 
+def evaluate_prefix_reference(reference_graph, observed_graph, target_ids=None):
+    """Apply the frozen v13 zero-tolerance prefix gate."""
+    comparison = compare_graphs(reference_graph, observed_graph,
+                                target_ids=target_ids)
+    comparison['zero_tolerance_required'] = True
+    comparison['passed'] = bool(
+        comparison['structural']['exact'] and
+        comparison['numerical']['exact'])
+    return comparison
+
+
 def unified_replay(prefix_path, mapper_params_path, out_dir, rate_hz=20.0,
-                   combined_path=None, target_ids=None):
+                   combined_path=None, target_ids=None,
+                   prefix_reference_path=None):
     prefix_path = Path(prefix_path).resolve()
     out_dir = Path(out_dir).resolve()
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -243,11 +256,21 @@ def unified_replay(prefix_path, mapper_params_path, out_dir, rate_hz=20.0,
         pre_graph, dump_response = _dump(env, pre_graph_path)
         timeline.append('synchronous_G_pre_saved')
 
+        prefix_reference_comparison = None
+        prefix_gate_passed = True
+        if prefix_reference_path is not None:
+            reference_graph = json.loads(Path(prefix_reference_path).read_text())
+            prefix_reference_comparison = evaluate_prefix_reference(
+                reference_graph, pre_graph, target_ids=target_ids)
+            prefix_gate_passed = prefix_reference_comparison['passed']
+            timeline.append('frozen_prefix_reference_' +
+                            ('passed' if prefix_gate_passed else 'failed'))
+
         final_graph = None
         final_preservation = None
         suffix_publish = None
         observed_final_count = None
-        if suffix_path is not None:
+        if suffix_path is not None and prefix_gate_passed:
             suffix_publish = _publish(env, suffix_path, rate_hz, out_dir, 'suffix')
             observed_final_count = _wait_count(
                 env, len(prefix_records) + len(suffix_records))
@@ -277,8 +300,12 @@ def unified_replay(prefix_path, mapper_params_path, out_dir, rate_hz=20.0,
         input_count=input_count, mapper_config_sha=params_sha,
         code_provenance=code_provenance)
     result = {
-        'protocol': 'v13-T unified callback-barrier replay v1',
+        'protocol': 'v13 unified callback-barrier replay v2',
         'mode': 'branch' if suffix_records else 'prefix_only',
+        'status': (
+            'TECHNICAL_INVALID_PREFIX_PRETREATMENT'
+            if suffix_records and not prefix_gate_passed else
+            'REPLAY_COMPLETE'),
         'timeline': timeline,
         'fixed_sleep_used_as_drain_barrier': False,
         'background_graph_dump_used': False,
@@ -288,6 +315,15 @@ def unified_replay(prefix_path, mapper_params_path, out_dir, rate_hz=20.0,
         'prefix_input_sha256': input_sha,
         'prefix_structural_signature': signature,
         'prefix_graph_file_sha256': _sha(pre_graph_path),
+        'prefix_reference_path': (str(Path(prefix_reference_path).resolve())
+                                  if prefix_reference_path is not None else None),
+        'prefix_reference_sha256': (_sha(prefix_reference_path)
+                                    if prefix_reference_path is not None else None),
+        'prefix_reference_comparison': prefix_reference_comparison,
+        'prefix_gate_passed': prefix_gate_passed,
+        'suffix_publication_authorized': bool(
+            suffix_path is not None and prefix_gate_passed),
+        'suffix_published': suffix_publish is not None,
         'mapper_params_sha256': params_sha,
         'code_provenance': code_provenance,
         'dump_service_response': dump_response,
@@ -307,11 +343,13 @@ def main():
     parser.add_argument('--out-dir', required=True)
     parser.add_argument('--rate-hz', type=float, default=20.0)
     parser.add_argument('--combined')
+    parser.add_argument('--prefix-reference')
     parser.add_argument('--target-ids', nargs='*', type=int, default=[])
     args = parser.parse_args()
     result = unified_replay(
         args.prefix, args.mapper_params, args.out_dir, args.rate_hz,
-        combined_path=args.combined, target_ids=args.target_ids)
+        combined_path=args.combined, target_ids=args.target_ids,
+        prefix_reference_path=args.prefix_reference)
     print(json.dumps(result, indent=2, sort_keys=True))
 
 
