@@ -1,0 +1,90 @@
+{
+  "evidence_labels": {
+    "code_fact": [
+      "canonical dump came from standalone replay teardown",
+      "branch preprobe dumps came from a live mapper before suffix"
+    ],
+    "inference": [
+      "The repeated live-cut graphs agree exactly with each other; the old mismatch is consistent with a lifecycle-dependent numerical dump difference, not an input-prefix mismatch."
+    ],
+    "measured_observation": {
+      "attempt_01_file_sha256": "e372e768d26c99d0240f1abf001e6656d6a50224b0072c111c682573fa667d61",
+      "attempt_01_vs_attempt_02": {
+        "numerical": {
+          "edge_covariance_max_abs": 0.0,
+          "edge_heading_measurement_max_rad": 0.0,
+          "edge_translation_measurement_max_m": 0.0,
+          "exact": true,
+          "node_heading_max_rad": 0.0,
+          "node_translation_max_m": 0.0
+        },
+        "structural": {
+          "edge_count_equal": true,
+          "edge_state_endpoints_in_insertion_order_equal": true,
+          "edge_unique_endpoints_in_insertion_order_equal": true,
+          "exact": true,
+          "node_count_equal": true,
+          "node_state_ids_in_insertion_order_equal": true,
+          "node_unique_ids_in_insertion_order_equal": true,
+          "target_historical_state_ids_equal": true
+        }
+      },
+      "attempt_02_file_sha256": "e372e768d26c99d0240f1abf001e6656d6a50224b0072c111c682573fa667d61",
+      "canonical_file_sha256": "8def12b24ca5218311a4a238e249370d0a75d40a9b7af778753d67003d83a06a",
+      "canonical_vs_attempt_01": {
+        "numerical": {
+          "edge_covariance_max_abs": 0.0005039999999999975,
+          "edge_heading_measurement_max_rad": 1.2000000000012001e-05,
+          "edge_translation_measurement_max_m": 0.003870999999999958,
+          "exact": false,
+          "node_heading_max_rad": 1.5000000000001124e-05,
+          "node_translation_max_m": 0.004406999999999606
+        },
+        "structural": {
+          "edge_count_equal": true,
+          "edge_state_endpoints_in_insertion_order_equal": true,
+          "edge_unique_endpoints_in_insertion_order_equal": true,
+          "exact": true,
+          "node_count_equal": true,
+          "node_state_ids_in_insertion_order_equal": true,
+          "node_unique_ids_in_insertion_order_equal": true,
+          "target_historical_state_ids_equal": true
+        }
+      },
+      "canonical_vs_attempt_02": {
+        "numerical": {
+          "edge_covariance_max_abs": 0.0005039999999999975,
+          "edge_heading_measurement_max_rad": 1.2000000000012001e-05,
+          "edge_translation_measurement_max_m": 0.003870999999999958,
+          "exact": false,
+          "node_heading_max_rad": 1.5000000000001124e-05,
+          "node_translation_max_m": 0.004406999999999606
+        },
+        "structural": {
+          "edge_count_equal": true,
+          "edge_state_endpoints_in_insertion_order_equal": true,
+          "edge_unique_endpoints_in_insertion_order_equal": true,
+          "exact": true,
+          "node_count_equal": true,
+          "node_state_ids_in_insertion_order_equal": true,
+          "node_unique_ids_in_insertion_order_equal": true,
+          "target_historical_state_ids_equal": true
+        }
+      },
+      "recorded_signature_hashes": {
+        "attempt_01": "3726f7237c6616ec80cfcf18608942706db7f23760023071c70e3c8a34242f3b",
+        "attempt_02": "3726f7237c6616ec80cfcf18608942706db7f23760023071c70e3c8a34242f3b",
+        "canonical": "f6161cffe49777779799183557ff4bae0d0cb25e5168923e20bd4a05fc69c63a"
+      },
+      "stitch_combined_prefix_hash": "ae762245e2d3fa4fd03c1a35fea8cdb3980fc4763a3fb30cc7373609e05ebd74",
+      "stitch_prefix_byte_identical": true,
+      "stitch_prefix_hash": "ae762245e2d3fa4fd03c1a35fea8cdb3980fc4763a3fb30cc7373609e05ebd74"
+    },
+    "unknown": [
+      "Frozen v12b evidence alone cannot identify the exact internal operation during teardown that caused the numerical delta."
+    ]
+  },
+  "old_differences_forensic_only_not_tolerance_input": true,
+  "old_gate_unchanged": "TECHNICAL_INVALID_BLOCK",
+  "protocol": "v13-T forensic-only regression of frozen v12b B/H2"
+}

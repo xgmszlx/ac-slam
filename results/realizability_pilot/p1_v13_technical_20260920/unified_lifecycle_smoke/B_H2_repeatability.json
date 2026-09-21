@@ -1,0 +1,95 @@
+{
+  "envelope_multiplier_if_needed": 2.0,
+  "frozen_numerical_tolerance": {
+    "edge_covariance_max_abs": 0.0,
+    "edge_heading_measurement_max_rad": 0.0,
+    "edge_translation_measurement_max_m": 0.0,
+    "node_heading_max_rad": 0.0,
+    "node_translation_max_m": 0.0
+  },
+  "numerical_exact_all_pairs": true,
+  "numerical_floors_if_needed": {
+    "edge_covariance_max_abs": 1e-09,
+    "edge_heading_measurement_max_rad": 1e-06,
+    "edge_translation_measurement_max_m": 1e-06,
+    "node_heading_max_rad": 1e-06,
+    "node_translation_max_m": 1e-06
+  },
+  "pair_count": 3,
+  "pairs": [
+    {
+      "comparison": {
+        "numerical": {
+          "edge_covariance_max_abs": 0.0,
+          "edge_heading_measurement_max_rad": 0.0,
+          "edge_translation_measurement_max_m": 0.0,
+          "exact": true,
+          "node_heading_max_rad": 0.0,
+          "node_translation_max_m": 0.0
+        },
+        "structural": {
+          "edge_count_equal": true,
+          "edge_state_endpoints_in_insertion_order_equal": true,
+          "edge_unique_endpoints_in_insertion_order_equal": true,
+          "exact": true,
+          "node_count_equal": true,
+          "node_state_ids_in_insertion_order_equal": true,
+          "node_unique_ids_in_insertion_order_equal": true,
+          "target_historical_state_ids_equal": true
+        }
+      },
+      "left": "results/realizability_pilot/p1_v13_technical_20260920/unified_lifecycle_smoke/B_H2_repeat_01/graph_pre.json",
+      "right": "results/realizability_pilot/p1_v13_technical_20260920/unified_lifecycle_smoke/B_H2_repeat_02/graph_pre.json"
+    },
+    {
+      "comparison": {
+        "numerical": {
+          "edge_covariance_max_abs": 0.0,
+          "edge_heading_measurement_max_rad": 0.0,
+          "edge_translation_measurement_max_m": 0.0,
+          "exact": true,
+          "node_heading_max_rad": 0.0,
+          "node_translation_max_m": 0.0
+        },
+        "structural": {
+          "edge_count_equal": true,
+          "edge_state_endpoints_in_insertion_order_equal": true,
+          "edge_unique_endpoints_in_insertion_order_equal": true,
+          "exact": true,
+          "node_count_equal": true,
+          "node_state_ids_in_insertion_order_equal": true,
+          "node_unique_ids_in_insertion_order_equal": true,
+          "target_historical_state_ids_equal": true
+        }
+      },
+      "left": "results/realizability_pilot/p1_v13_technical_20260920/unified_lifecycle_smoke/B_H2_repeat_01/graph_pre.json",
+      "right": "results/realizability_pilot/p1_v13_technical_20260920/unified_lifecycle_smoke/B_H2_repeat_03/graph_pre.json"
+    },
+    {
+      "comparison": {
+        "numerical": {
+          "edge_covariance_max_abs": 0.0,
+          "edge_heading_measurement_max_rad": 0.0,
+          "edge_translation_measurement_max_m": 0.0,
+          "exact": true,
+          "node_heading_max_rad": 0.0,
+          "node_translation_max_m": 0.0
+        },
+        "structural": {
+          "edge_count_equal": true,
+          "edge_state_endpoints_in_insertion_order_equal": true,
+          "edge_unique_endpoints_in_insertion_order_equal": true,
+          "exact": true,
+          "node_count_equal": true,
+          "node_state_ids_in_insertion_order_equal": true,
+          "node_unique_ids_in_insertion_order_equal": true,
+          "target_historical_state_ids_equal": true
+        }
+      },
+      "left": "results/realizability_pilot/p1_v13_technical_20260920/unified_lifecycle_smoke/B_H2_repeat_02/graph_pre.json",
+      "right": "results/realizability_pilot/p1_v13_technical_20260920/unified_lifecycle_smoke/B_H2_repeat_03/graph_pre.json"
+    }
+  ],
+  "structural_exact_all_pairs": true,
+  "tolerance_source": "exact equality across every repeated pair"
+}

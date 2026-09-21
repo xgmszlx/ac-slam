@@ -52,13 +52,14 @@ class ConfirmatoryV12bTechnicalTest(unittest.TestCase):
             self.assertIn('instrumentation_flush_period_s" value="0.0"',
                           path.read_text())
 
-    def test_zero_flush_keeps_pose_graph_dump_polling_live(self):
+    def test_v13_replaces_dump_polling_with_synchronous_service(self):
         source = (Path(__file__).resolve().parents[2] /
                   'dependencies/navigation_2d/nav2d_karto/src/MultiMapper.cpp')
         text = source.read_text()
-        self.assertIn(
-            'mInstrumentationFlushPeriod > 0.0 || !mPoseGraphDumpPath.empty()',
-            text)
+        self.assertNotIn('pose_graph_dump_request', text)
+        self.assertIn('"dump_pose_graph_now"', text)
+        self.assertIn('"get_processed_localized_scan_count"', text)
+        self.assertIn('MultiMapper::dumpPoseGraphNow', text)
         self.assertIn('if(mInstrumentationFlushPeriod > 0.0)\n\t\t{\n'
                       '\t\t\tmMapper->FlushEdgeProvenance();', text)
 

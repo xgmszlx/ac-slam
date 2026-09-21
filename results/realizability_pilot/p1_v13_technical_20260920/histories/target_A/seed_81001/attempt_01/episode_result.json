@@ -1,0 +1,495 @@
+{
+  "action_completed": false,
+  "actual_probe_distance_m": 0.0,
+  "actual_probe_trajectory_gt": [],
+  "analysis_eligible": false,
+  "canonical_history_complete": true,
+  "episode_id": "v13T_target_A_s81001",
+  "exclusion_reason": "history-only common-prefix capture; no probe",
+  "frozen_target": {
+    "anchor_scan": {
+      "id": 15,
+      "observed_time": 88.1,
+      "theta": -0.039110451385606766,
+      "x": 5.857358995892291,
+      "y": 0.0882738320221161
+    },
+    "anchor_to_reference_distance_m": 0.3538292343996013,
+    "frozen_before_probe": true,
+    "historical_scan_ids": [
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "historical_unique_ids": [
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "route_start_node_count": 11,
+    "segment_nodes": [
+      {
+        "id": 13,
+        "observed_time": 88.1,
+        "theta": 0.14515893223670728,
+        "unique_id": 13,
+        "x": 3.8914891390447597,
+        "y": 0.021495382848609607
+      },
+      {
+        "id": 14,
+        "observed_time": 88.1,
+        "theta": 0.04226147899670146,
+        "unique_id": 14,
+        "x": 4.866112925910061,
+        "y": 0.09234488623479521
+      },
+      {
+        "id": 15,
+        "observed_time": 88.1,
+        "theta": -0.039110451385606766,
+        "unique_id": 15,
+        "x": 5.857358995892291,
+        "y": 0.0882738320221161
+      },
+      {
+        "id": 16,
+        "observed_time": 88.1,
+        "theta": -0.02923965225768682,
+        "unique_id": 16,
+        "x": 6.805838497088971,
+        "y": 0.05877141305929993
+      },
+      {
+        "id": 17,
+        "observed_time": 88.1,
+        "theta": -0.009749819949680272,
+        "unique_id": 17,
+        "x": 7.74674705770725,
+        "y": 0.03520553910719614
+      }
+    ],
+    "target_id": "map3_grid_anchor_01",
+    "target_identity_gate": {
+      "checks": {
+        "anchor_acquired_after_route_start": true,
+        "anchor_within_reference_radius": true,
+        "minimum_history_node_count": true,
+        "minimum_target_segment_scans": true
+      },
+      "observed": {
+        "anchor_distance_m": 0.3538292343996013,
+        "anchor_id": 15,
+        "node_count": 33,
+        "route_start_node_count": 11,
+        "segment_count": 5
+      },
+      "passed": true,
+      "thresholds": {
+        "minimum_history_node_count": 20,
+        "minimum_target_segment_scans": 3,
+        "target_anchor_max_distance_m": 1.0
+      }
+    },
+    "target_reference": [
+      6.2,
+      0.0,
+      0.0
+    ],
+    "target_segment_radius_m": 2.5
+  },
+  "history_loop_events": [],
+  "karto_input_record_count": 33,
+  "moves": [
+    {
+      "action_finished": true,
+      "action_state": 3,
+      "end_time": 31.9,
+      "expected_gt_pose": [
+        -22.0,
+        -28.0,
+        0.0
+      ],
+      "final_distance": 0.10000000149011612,
+      "final_theta": -0.05070231357462126,
+      "final_x": 6.092580523412113,
+      "final_y": 0.07151731797692185,
+      "gt_heading_error_rad": 0.05357391002781235,
+      "gt_heading_tolerance_rad": 0.35,
+      "gt_pose_after": [
+        -21.89740827110834,
+        -27.926241442067838,
+        -0.05357391002781235
+      ],
+      "gt_pose_before": [
+        -27.166666666666654,
+        -28.0,
+        -0.4168146928204183
+      ],
+      "gt_position_error_m": 0.12635421522534213,
+      "gt_position_tolerance_m": 0.75,
+      "gt_reached": true,
+      "heading_tolerance_rad": 0.35,
+      "independently_reached": true,
+      "keyscan_age_s": 2.5,
+      "keyscan_heading_error_rad": 0.039110451385606766,
+      "keyscan_position_error_m": 0.3538292343996013,
+      "label": "history_01",
+      "mapper_keyscan_pose_after": {
+        "received_ros_time": 29.4,
+        "robot_id": 1,
+        "stamp": 29.4,
+        "theta": -0.03911045138560676,
+        "x": 5.857358995892291,
+        "y": 0.0882738320221161
+      },
+      "position_tolerance_m": 0.75,
+      "slam_path_heading_error_rad": 0.04226147899670146,
+      "slam_path_node_count_after": 15,
+      "slam_path_pose_after": [
+        4.866112925910061,
+        0.0923448862347952,
+        0.04226147899670146
+      ],
+      "slam_path_pose_before": [
+        1.017480284114673,
+        0.018320237050532488,
+        -0.016814692820418184
+      ],
+      "slam_path_position_error_m": 1.337079767417762,
+      "start_time": 17.9,
+      "target_theta": 0.0,
+      "target_x": 6.2,
+      "target_y": 0.0,
+      "tf_heading_error_rad": 0.04946940889231015,
+      "tf_pose_after": [
+        6.113554832816601,
+        0.07047888405760185,
+        -0.04946940889231015
+      ],
+      "tf_pose_before": [
+        0.8175085568379902,
+        0.021683017147403397,
+        -0.4168146928204183
+      ],
+      "tf_position_error_m": 0.11153492738766045,
+      "tf_reached": true
+    },
+    {
+      "action_finished": true,
+      "action_state": 3,
+      "end_time": 53.0,
+      "expected_gt_pose": [
+        -18.0,
+        -28.0,
+        0.0
+      ],
+      "final_distance": 0.10000000149011612,
+      "final_theta": -0.0005072916644952955,
+      "final_x": 10.125985786159882,
+      "final_y": 0.028898225640514155,
+      "gt_heading_error_rad": 0.0039856030951058025,
+      "gt_heading_tolerance_rad": 0.35,
+      "gt_pose_after": [
+        -17.876506469950325,
+        -27.985002828149263,
+        -0.0039856030951058025
+      ],
+      "gt_pose_before": [
+        -21.89740827110834,
+        -27.926241442067838,
+        -0.05357391002781235
+      ],
+      "gt_position_error_m": 0.12440083250384847,
+      "gt_position_tolerance_m": 0.75,
+      "gt_reached": true,
+      "heading_tolerance_rad": 0.35,
+      "independently_reached": true,
+      "keyscan_age_s": 4.100000000000001,
+      "keyscan_heading_error_rad": 0.0010392502126516656,
+      "keyscan_position_error_m": 0.5188344855822087,
+      "label": "history_02",
+      "mapper_keyscan_pose_after": {
+        "received_ros_time": 48.9,
+        "robot_id": 1,
+        "stamp": 48.9,
+        "theta": -0.0010392502126516656,
+        "x": 9.68198586006036,
+        "y": 0.02916460615113512
+      },
+      "position_tolerance_m": 0.75,
+      "slam_path_heading_error_rad": 0.0010392502126516656,
+      "slam_path_node_count_after": 20,
+      "slam_path_pose_after": [
+        9.68198586006036,
+        0.02916460615113512,
+        -0.0010392502126516656
+      ],
+      "slam_path_pose_before": [
+        4.866112925910061,
+        0.0923448862347952,
+        0.04226147899670146
+      ],
+      "slam_path_position_error_m": 0.5188344855822087,
+      "start_time": 31.9,
+      "target_theta": 0.0,
+      "target_x": 10.2,
+      "target_y": 0.0,
+      "tf_heading_error_rad": 0.0004949445911171862,
+      "tf_pose_after": [
+        10.145235783802043,
+        0.028888697957524148,
+        -0.0004949445911171862
+      ],
+      "tf_pose_before": [
+        6.113554832816601,
+        0.07047888405760185,
+        -0.04946940889231015
+      ],
+      "tf_position_error_m": 0.06191668793998536,
+      "tf_reached": true
+    },
+    {
+      "action_finished": true,
+      "action_state": 3,
+      "end_time": 78.0,
+      "expected_gt_pose": [
+        -18.0,
+        -22.0,
+        1.5707963267948966
+      ],
+      "final_distance": 0.20000000298023224,
+      "final_theta": 1.5663218648583717,
+      "final_x": 10.127196763838056,
+      "final_y": 5.8819293259478105,
+      "gt_heading_error_rad": 0.004364813173300064,
+      "gt_heading_tolerance_rad": 0.35,
+      "gt_pose_after": [
+        -17.85097049931602,
+        -22.13157547888457,
+        1.5664315136215965
+      ],
+      "gt_pose_before": [
+        -17.876506469950325,
+        -27.985002828149263,
+        -0.0039856030951058025
+      ],
+      "gt_position_error_m": 0.19880115371350487,
+      "gt_position_tolerance_m": 0.75,
+      "gt_reached": true,
+      "heading_tolerance_rad": 0.35,
+      "independently_reached": true,
+      "keyscan_age_s": 2.299999999999997,
+      "keyscan_heading_error_rad": 0.005895015191968999,
+      "keyscan_position_error_m": 0.18342836262222448,
+      "label": "history_03",
+      "mapper_keyscan_pose_after": {
+        "received_ros_time": 75.7,
+        "robot_id": 1,
+        "stamp": 75.7,
+        "theta": 1.5649013116029276,
+        "x": 10.127102523836857,
+        "y": 5.831679109486331
+      },
+      "position_tolerance_m": 0.75,
+      "slam_path_heading_error_rad": 0.012425110680805762,
+      "slam_path_node_count_after": 27,
+      "slam_path_pose_after": [
+        10.117311155919984,
+        4.842231889582963,
+        1.5583712161140908
+      ],
+      "slam_path_pose_before": [
+        9.68198586006036,
+        0.02916460615113512,
+        -0.0010392502126516656
+      ],
+      "slam_path_position_error_m": 1.160717210363457,
+      "start_time": 53.0,
+      "target_theta": 1.5707963267948966,
+      "target_x": 10.2,
+      "target_y": 6.0,
+      "tf_heading_error_rad": 0.004364813173299841,
+      "tf_pose_after": [
+        10.127288424623647,
+        5.9029291259063905,
+        1.5664315136215967
+      ],
+      "tf_pose_before": [
+        10.145235783802043,
+        0.028888697957524148,
+        -0.0004949445911171862
+      ],
+      "tf_position_error_m": 0.12128366662914017,
+      "tf_reached": true
+    },
+    {
+      "action_finished": true,
+      "action_state": 3,
+      "end_time": 86.0,
+      "expected_gt_pose": [
+        -22.0,
+        -22.0,
+        3.141592653589793
+      ],
+      "final_distance": 0.24142135679721832,
+      "final_theta": 3.1017989651707794,
+      "final_x": 6.388130640820768,
+      "final_y": 5.932597203503102,
+      "gt_heading_error_rad": 0.05878994720435582,
+      "gt_heading_tolerance_rad": 0.35,
+      "gt_pose_after": [
+        -21.639532021996295,
+        -22.09175487247105,
+        3.0828027063854373
+      ],
+      "gt_pose_before": [
+        -17.85097049931602,
+        -22.13157547888457,
+        1.5664315136215965
+      ],
+      "gt_position_error_m": 0.37196252470948993,
+      "gt_position_tolerance_m": 0.75,
+      "gt_reached": true,
+      "heading_tolerance_rad": 0.35,
+      "independently_reached": true,
+      "keyscan_age_s": 1.9000000000000057,
+      "keyscan_heading_error_rad": 0.11217638186372648,
+      "keyscan_position_error_m": 0.6228585866505798,
+      "label": "history_04",
+      "mapper_keyscan_pose_after": {
+        "received_ros_time": 84.1,
+        "robot_id": 1,
+        "stamp": 84.1,
+        "theta": -3.029416271726067,
+        "x": 6.818566852792578,
+        "y": 5.927007756640561
+      },
+      "position_tolerance_m": 0.75,
+      "slam_path_heading_error_rad": 0.2650916631240004,
+      "slam_path_node_count_after": 32,
+      "slam_path_pose_after": [
+        7.766097103892241,
+        6.101213917890532,
+        -2.8765009904657926
+      ],
+      "slam_path_pose_before": [
+        10.117311155919984,
+        4.842231889582963,
+        1.5583712161140908
+      ],
+      "slam_path_position_error_m": 1.5693643286357746,
+      "start_time": 78.0,
+      "target_theta": 3.141592653589793,
+      "target_x": 6.2,
+      "target_y": 6.0,
+      "tf_heading_error_rad": 0.05878994720435626,
+      "tf_pose_after": [
+        6.309516691782903,
+        5.937224245395284,
+        3.082802706385437
+      ],
+      "tf_pose_before": [
+        10.127288424623647,
+        5.9029291259063905,
+        1.5664315136215967
+      ],
+      "tf_position_error_m": 0.12623272612624234,
+      "tf_reached": true
+    }
+  ],
+  "probe_end_time": null,
+  "probe_start_time": 88.1,
+  "spec": {
+    "action_id": "history_only",
+    "block_id": "v13T_target_A_s81001",
+    "block_position": 0,
+    "candidate_region_waypoint_index": 0,
+    "condition_id": "v13T_history_qualification_only",
+    "delta_yaw_deg": 0.0,
+    "diagnostics_enabled": false,
+    "episode_id": "v13T_target_A_s81001",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_frame": "episode_mapper_start",
+    "history_hold_s": 2.0,
+    "history_offsets": [
+      [
+        6.0,
+        0.0,
+        0.0
+      ],
+      [
+        10.0,
+        0.0,
+        0.0
+      ],
+      [
+        10.0,
+        6.0,
+        1.5707963267948966
+      ],
+      [
+        6.0,
+        6.0,
+        3.141592653589793
+      ]
+    ],
+    "history_origin_source": "first_karto_path_pose_xy_with_fixed_map_axis",
+    "instrumentation_flush_period_s": 0.0,
+    "lateral_offset_m": 0.0,
+    "maneuver_type": "pass",
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "marker_endpoint_max_error_m": 0.05,
+    "minimum_history_node_count": 20,
+    "minimum_target_segment_scans": 3,
+    "move_timeout_s": 360.0,
+    "neutral_offset_m": 0.0,
+    "observer_enabled": true,
+    "probe_hold_s": 6.0,
+    "protocol_version": "p1_v13_technical_20260920",
+    "provenance_enabled": true,
+    "record_replay_stream_path": "/home/wcqw/ac-slam/results/realizability_pilot/p1_v13_technical_20260920/histories/target_A/seed_81001/attempt_01/replay_stream.jsonl",
+    "repeat": 1,
+    "robot_position": "-28.0 -28.0 0",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 1,
+    "start_pose": [
+      -28.0,
+      -28.0,
+      0.0
+    ],
+    "stop_after_history": true,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 0,
+    "target_id": "map3_grid_anchor_01",
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "tsp_seed": 81001
+  },
+  "status": "SUCCEEDED",
+  "terminal_gt_pose": [
+    -21.639532021996295,
+    -22.09175487247105,
+    3.0828027063854373
+  ],
+  "terminal_slam_pose": [
+    6.818566852792578,
+    5.927007756640561,
+    -3.029416271726067
+  ],
+  "terminal_tf_pose": [
+    6.309516691782903,
+    5.937224245395284,
+    3.082802706385437
+  ]
+}

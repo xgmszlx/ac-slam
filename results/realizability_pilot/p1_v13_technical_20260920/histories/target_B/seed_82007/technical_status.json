@@ -1,0 +1,45 @@
+{
+  "action_branch_launched": false,
+  "allowed_artifacts_read": [
+    "episode_result.json status/canonical_history_complete only",
+    "replay_stream.jsonl",
+    "pose_graph_before.json",
+    "resolved_history_route.json",
+    "mapper_params.yaml",
+    "prefix replay graph_pre.json"
+  ],
+  "anchor_state_id": 21,
+  "attempt_count": 1,
+  "canonical_input_record_count": 46,
+  "canonical_input_sha256": "3fe80a9ac764df698cfb66251797452c1f5cc2629c4312f2473d2604b75a159d",
+  "failure_reasons": [],
+  "finished_utc": "2026-09-20T09:30:07Z",
+  "history_route_complete": true,
+  "mapper_binary_sha256": "7ab54496b4572e831d7f10d615ad3d700bec3a0b89c5abdb9c562616a67d92f6",
+  "mapper_params_sha256": "511dcacb4ff58a99d0f434cbfd604198c95f453e2bd18e35c0b5e0533437825c",
+  "prefix_replay_numerical_exact": true,
+  "prefix_replay_structural_exact": true,
+  "prefix_replay_tolerance": {
+    "edge_covariance_max_abs": 0.0,
+    "edge_heading_measurement_max_rad": 0.0,
+    "edge_translation_measurement_max_m": 0.0,
+    "node_heading_max_rad": 0.0,
+    "node_translation_max_m": 0.0
+  },
+  "science_endpoints_read": [],
+  "seed": 82007,
+  "started_utc": "2026-09-20T09:27:46Z",
+  "status": "TECHNICALLY_ELIGIBLE",
+  "target_id": "map3_grid_anchor_03",
+  "target_label": "target_B",
+  "target_state_count": 5,
+  "target_state_ids": [
+    14,
+    17,
+    20,
+    24,
+    27
+  ],
+  "target_states_distinct": true,
+  "target_states_strictly_ordered": true
+}

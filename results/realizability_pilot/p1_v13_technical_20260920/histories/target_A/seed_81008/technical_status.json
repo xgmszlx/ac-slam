@@ -1,0 +1,15 @@
+{
+  "action_branch_launched": false,
+  "attempt_count": 1,
+  "failure_reasons": [
+    "prefix numerical repeatability exceeded zero envelope"
+  ],
+  "finished_utc": "2026-09-20T09:14:33Z",
+  "science_endpoints_read": [],
+  "seed": 81008,
+  "started_utc": "2026-09-20T09:12:27Z",
+  "status": "TECHNICALLY_INELIGIBLE",
+  "target_id": "map3_grid_anchor_01",
+  "target_label": "target_A",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/wcqw/ac-slam/tools/realizability_pilot/v13_history_qualification.py\", line 226, in _candidate_record\n    raise RuntimeError('prefix numerical repeatability exceeded zero envelope')\nRuntimeError: prefix numerical repeatability exceeded zero envelope\n"
+}

@@ -4,17 +4,18 @@
 Formulation (standard first-order pose-graph linearisation):
 
 * every graph constraint (odometry-like or loop-closing) contributes
-  ``J^T Omega J`` to the information matrix ``Lambda`` of the full state
-  ``[x_0..x_{n-1}, y_0..y_{n-1}, theta_0..theta_{n-1}]``;
+  ``J^T Omega J`` to the information matrix ``Lambda`` of the interleaved full
+  state ``[x_0, y_0, theta_0, ..., x_n, y_n, theta_n]``;
 * ``Omega`` is the 3x3 inverse of the constraint covariance published per edge by
   the mapper's full pose-graph observer;
 * ``J`` is the Jacobian of the relative-pose error with respect to the source and
   target poses, evaluated at the current corrected estimate (no measurement value
   enters ``J``, which is why the ablation needs no raw measurements);
-* the 3-dimensional gauge freedom is removed with the Moore-Penrose
-  pseudoinverse, so every reported block is a covariance relative to the
-  removed gauge (a common unknown rigid transform).  Ablation *differences*
-  between two builds of the same graph are independent of that choice.
+* legacy analyses in this repository expose a Moore-Penrose utility.  The v13
+  primary estimator does **not** use it: v13 fixes the first pose, inverts the
+  reduced information matrix, and extracts the joint marginal covariance of
+  the five frozen target poses at the same local linearisation point.  This is
+  a local linear-Gaussian covariance, not an exact nonlinear posterior.
 
 Nothing in this module feeds back into the running system: it is a read-only
 analysis of recorded snapshots.
@@ -149,6 +150,86 @@ def pseudoinverse_information(information):
         inverse = (eigenvectors[:, positive] / eigenvalues[positive]) \
             @ eigenvectors[:, positive].T
     return 0.5 * (inverse + inverse.T), int((~positive).sum()), eigenvalues
+
+
+def fixed_root_reduced_information(information, root_position=0,
+                                   eigenvalue_tolerance=1e-10):
+    """Return an invertible reduced Hessian after fixing one SE(2) pose.
+
+    Raises ``numpy.linalg.LinAlgError`` for a disconnected/singular graph.  The
+    strict failure is intentional: v13 must not conceal missing connectivity
+    with a pseudoinverse.
+    """
+    information = 0.5 * (information + information.T)
+    node_count = information.shape[0] // 3
+    if information.shape != (3 * node_count, 3 * node_count):
+        raise ValueError('information shape is not an SE(2) pose graph')
+    if root_position < 0 or root_position >= node_count:
+        raise IndexError('root position is outside the pose graph')
+    removed = set(range(3 * root_position, 3 * root_position + 3))
+    kept = [index for index in range(information.shape[0])
+            if index not in removed]
+    reduced = information[np.ix_(kept, kept)]
+    eigenvalues = np.linalg.eigvalsh(reduced)
+    scale = max(float(np.max(np.abs(eigenvalues))), 1.0)
+    if eigenvalues.size and float(np.min(eigenvalues)) <= (
+            eigenvalue_tolerance * scale):
+        raise np.linalg.LinAlgError(
+            'fixed-root information is not positive definite')
+    return reduced, kept, eigenvalues
+
+
+def fixed_root_covariance(information, root_position=0):
+    """Invert the fixed-root reduced Hessian and report retained indices."""
+    reduced, kept, eigenvalues = fixed_root_reduced_information(
+        information, root_position=root_position)
+    covariance = np.linalg.inv(reduced)
+    covariance = 0.5 * (covariance + covariance.T)
+    return covariance, kept, eigenvalues
+
+
+def anchored_information(information, root_position=0):
+    """Construct a full, directly invertible hard-anchor representation.
+
+    Root cross terms are zeroed and the root block is set to identity.  The
+    non-root inverse block is exactly the inverse of the reduced fixed-root
+    information matrix; the artificial root block is never an uncertainty
+    estimate and must not be included in a v13 target subset.
+    """
+    anchored = 0.5 * (information + information.T)
+    anchored = anchored.copy()
+    indices = list(range(3 * root_position, 3 * root_position + 3))
+    anchored[indices, :] = 0.0
+    anchored[:, indices] = 0.0
+    anchored[np.ix_(indices, indices)] = np.eye(3)
+    return anchored
+
+
+def fixed_root_joint_marginal(information, target_positions,
+                              root_position=0):
+    """Joint covariance for ordered target poses under a fixed-root gauge."""
+    targets = [int(value) for value in target_positions]
+    if root_position in targets:
+        raise ValueError('the fixed root cannot be a stochastic target pose')
+    covariance, kept, _ = fixed_root_covariance(
+        information, root_position=root_position)
+    reduced_index = {full: reduced for reduced, full in enumerate(kept)}
+    selected = []
+    for position in targets:
+        selected.extend(reduced_index[index]
+                        for index in range(3 * position, 3 * position + 3))
+    return covariance[np.ix_(selected, selected)]
+
+
+def v13_target_information_score(information, target_positions,
+                                 root_position=0):
+    """Compute v13 primary ``J_T = -logdet(Sigma_T) / (3*|T|)``."""
+    marginal = fixed_root_joint_marginal(
+        information, target_positions, root_position=root_position)
+    sign, logdet = np.linalg.slogdet(marginal)
+    if sign <= 0 or not np.isfinite(logdet):
+        raise np.linalg.LinAlgError('target marginal is not positive definite')
+    return -float(logdet) / marginal.shape[0], marginal
 
 
 def block_metrics(marginal, node_position):

@@ -8,6 +8,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   tf
   nav_msgs
+  std_srvs
   geometry_msgs
   visualization_msgs
   nav2d_msgs
@@ -37,7 +38,7 @@ endif(CHOLMOD_FOUND)
 catkin_package(
  INCLUDE_DIRS include
  LIBRARIES OpenKarto MultiMapper
- CATKIN_DEPENDS roscpp tf nav_msgs geometry_msgs visualization_msgs nav2d_msgs nav2d_localizer 
+ CATKIN_DEPENDS roscpp tf nav_msgs std_srvs geometry_msgs visualization_msgs nav2d_msgs nav2d_localizer 
  DEPENDS Eigen3
 )
 

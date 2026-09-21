@@ -1,0 +1,687 @@
+{
+  "fresh_scientific_action_endpoint_accessed": false,
+  "immutable_candidate_seeds": {
+    "target_A": [
+      81001,
+      81002,
+      81003,
+      81004,
+      81005,
+      81006,
+      81007,
+      81008
+    ],
+    "target_B": [
+      82001,
+      82002,
+      82003,
+      82004,
+      82005,
+      82006,
+      82007,
+      82008
+    ]
+  },
+  "pool_complete": true,
+  "protocol_id": "p1_v13_technical_20260920",
+  "records": [
+    {
+      "action_branch_launched": false,
+      "allowed_artifacts_read": [
+        "episode_result.json status/canonical_history_complete only",
+        "replay_stream.jsonl",
+        "pose_graph_before.json",
+        "resolved_history_route.json",
+        "mapper_params.yaml",
+        "prefix replay graph_pre.json"
+      ],
+      "anchor_state_id": 15,
+      "attempt_count": 1,
+      "canonical_input_record_count": 33,
+      "canonical_input_sha256": "4eddfa84d601f04bf4b86f52dca819c4ccd83c5476fdb48cf1e48f0c76255bde",
+      "failure_reasons": [],
+      "finished_utc": "2026-09-20T08:59:59Z",
+      "history_route_complete": true,
+      "mapper_binary_sha256": "7ab54496b4572e831d7f10d615ad3d700bec3a0b89c5abdb9c562616a67d92f6",
+      "mapper_params_sha256": "511dcacb4ff58a99d0f434cbfd604198c95f453e2bd18e35c0b5e0533437825c",
+      "prefix_replay_numerical_exact": true,
+      "prefix_replay_structural_exact": true,
+      "prefix_replay_tolerance": {
+        "edge_covariance_max_abs": 0.0,
+        "edge_heading_measurement_max_rad": 0.0,
+        "edge_translation_measurement_max_m": 0.0,
+        "node_heading_max_rad": 0.0,
+        "node_translation_max_m": 0.0
+      },
+      "science_endpoints_read": [],
+      "seed": 81001,
+      "started_utc": "2026-09-20T08:57:44Z",
+      "status": "TECHNICALLY_ELIGIBLE",
+      "target_id": "map3_grid_anchor_01",
+      "target_label": "target_A",
+      "target_state_count": 5,
+      "target_state_ids": [
+        12,
+        15,
+        17,
+        20,
+        24
+      ],
+      "target_states_distinct": true,
+      "target_states_strictly_ordered": true
+    },
+    {
+      "action_branch_launched": false,
+      "allowed_artifacts_read": [
+        "episode_result.json status/canonical_history_complete only",
+        "replay_stream.jsonl",
+        "pose_graph_before.json",
+        "resolved_history_route.json",
+        "mapper_params.yaml",
+        "prefix replay graph_pre.json"
+      ],
+      "anchor_state_id": 15,
+      "attempt_count": 1,
+      "canonical_input_record_count": 34,
+      "canonical_input_sha256": "1117b7f01d7c4ffcb78bd04304cba7949acb9fbca475ee75ea245f5b96e44381",
+      "failure_reasons": [],
+      "finished_utc": "2026-09-20T09:01:51Z",
+      "history_route_complete": true,
+      "mapper_binary_sha256": "7ab54496b4572e831d7f10d615ad3d700bec3a0b89c5abdb9c562616a67d92f6",
+      "mapper_params_sha256": "511dcacb4ff58a99d0f434cbfd604198c95f453e2bd18e35c0b5e0533437825c",
+      "prefix_replay_numerical_exact": true,
+      "prefix_replay_structural_exact": true,
+      "prefix_replay_tolerance": {
+        "edge_covariance_max_abs": 0.0,
+        "edge_heading_measurement_max_rad": 0.0,
+        "edge_translation_measurement_max_m": 0.0,
+        "node_heading_max_rad": 0.0,
+        "node_translation_max_m": 0.0
+      },
+      "science_endpoints_read": [],
+      "seed": 81002,
+      "started_utc": "2026-09-20T08:59:59Z",
+      "status": "TECHNICALLY_ELIGIBLE",
+      "target_id": "map3_grid_anchor_01",
+      "target_label": "target_A",
+      "target_state_count": 5,
+      "target_state_ids": [
+        12,
+        15,
+        17,
+        20,
+        24
+      ],
+      "target_states_distinct": true,
+      "target_states_strictly_ordered": true
+    },
+    {
+      "action_branch_launched": false,
+      "allowed_artifacts_read": [
+        "episode_result.json status/canonical_history_complete only",
+        "replay_stream.jsonl",
+        "pose_graph_before.json",
+        "resolved_history_route.json",
+        "mapper_params.yaml",
+        "prefix replay graph_pre.json"
+      ],
+      "anchor_state_id": 16,
+      "attempt_count": 1,
+      "canonical_input_record_count": 35,
+      "canonical_input_sha256": "ed2d85310077d7c93fc097a58dee9d01ec0968611cff4d48a0cb1e231ffd0f47",
+      "failure_reasons": [],
+      "finished_utc": "2026-09-20T09:04:03Z",
+      "history_route_complete": true,
+      "mapper_binary_sha256": "7ab54496b4572e831d7f10d615ad3d700bec3a0b89c5abdb9c562616a67d92f6",
+      "mapper_params_sha256": "511dcacb4ff58a99d0f434cbfd604198c95f453e2bd18e35c0b5e0533437825c",
+      "prefix_replay_numerical_exact": true,
+      "prefix_replay_structural_exact": true,
+      "prefix_replay_tolerance": {
+        "edge_covariance_max_abs": 0.0,
+        "edge_heading_measurement_max_rad": 0.0,
+        "edge_translation_measurement_max_m": 0.0,
+        "node_heading_max_rad": 0.0,
+        "node_translation_max_m": 0.0
+      },
+      "science_endpoints_read": [],
+      "seed": 81003,
+      "started_utc": "2026-09-20T09:01:51Z",
+      "status": "TECHNICALLY_ELIGIBLE",
+      "target_id": "map3_grid_anchor_01",
+      "target_label": "target_A",
+      "target_state_count": 5,
+      "target_state_ids": [
+        13,
+        16,
+        18,
+        21,
+        25
+      ],
+      "target_states_distinct": true,
+      "target_states_strictly_ordered": true
+    },
+    {
+      "action_branch_launched": false,
+      "attempt_count": 1,
+      "failure_reasons": [
+        "prefix numerical repeatability exceeded zero envelope"
+      ],
+      "finished_utc": "2026-09-20T09:05:56Z",
+      "science_endpoints_read": [],
+      "seed": 81004,
+      "started_utc": "2026-09-20T09:04:03Z",
+      "status": "TECHNICALLY_INELIGIBLE",
+      "target_id": "map3_grid_anchor_01",
+      "target_label": "target_A",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/wcqw/ac-slam/tools/realizability_pilot/v13_history_qualification.py\", line 226, in _candidate_record\n    raise RuntimeError('prefix numerical repeatability exceeded zero envelope')\nRuntimeError: prefix numerical repeatability exceeded zero envelope\n"
+    },
+    {
+      "action_branch_launched": false,
+      "allowed_artifacts_read": [
+        "episode_result.json status/canonical_history_complete only",
+        "replay_stream.jsonl",
+        "pose_graph_before.json",
+        "resolved_history_route.json",
+        "mapper_params.yaml",
+        "prefix replay graph_pre.json"
+      ],
+      "anchor_state_id": 16,
+      "attempt_count": 1,
+      "canonical_input_record_count": 34,
+      "canonical_input_sha256": "0046a63fe4aa75fe04c55f92cf890626106d18341504252acc7b44407d481c8d",
+      "failure_reasons": [],
+      "finished_utc": "2026-09-20T09:08:03Z",
+      "history_route_complete": true,
+      "mapper_binary_sha256": "7ab54496b4572e831d7f10d615ad3d700bec3a0b89c5abdb9c562616a67d92f6",
+      "mapper_params_sha256": "511dcacb4ff58a99d0f434cbfd604198c95f453e2bd18e35c0b5e0533437825c",
+      "prefix_replay_numerical_exact": true,
+      "prefix_replay_structural_exact": true,
+      "prefix_replay_tolerance": {
+        "edge_covariance_max_abs": 0.0,
+        "edge_heading_measurement_max_rad": 0.0,
+        "edge_translation_measurement_max_m": 0.0,
+        "node_heading_max_rad": 0.0,
+        "node_translation_max_m": 0.0
+      },
+      "science_endpoints_read": [],
+      "seed": 81005,
+      "started_utc": "2026-09-20T09:05:56Z",
+      "status": "TECHNICALLY_ELIGIBLE",
+      "target_id": "map3_grid_anchor_01",
+      "target_label": "target_A",
+      "target_state_count": 5,
+      "target_state_ids": [
+        13,
+        16,
+        18,
+        22,
+        25
+      ],
+      "target_states_distinct": true,
+      "target_states_strictly_ordered": true
+    },
+    {
+      "action_branch_launched": false,
+      "allowed_artifacts_read": [
+        "episode_result.json status/canonical_history_complete only",
+        "replay_stream.jsonl",
+        "pose_graph_before.json",
+        "resolved_history_route.json",
+        "mapper_params.yaml",
+        "prefix replay graph_pre.json"
+      ],
+      "anchor_state_id": 15,
+      "attempt_count": 1,
+      "canonical_input_record_count": 34,
+      "canonical_input_sha256": "0f1dc736f117a0b167b51d718c3669fcbf4540c725fc889b8c0da5d8f8bd4402",
+      "failure_reasons": [],
+      "finished_utc": "2026-09-20T09:10:10Z",
+      "history_route_complete": true,
+      "mapper_binary_sha256": "7ab54496b4572e831d7f10d615ad3d700bec3a0b89c5abdb9c562616a67d92f6",
+      "mapper_params_sha256": "511dcacb4ff58a99d0f434cbfd604198c95f453e2bd18e35c0b5e0533437825c",
+      "prefix_replay_numerical_exact": true,
+      "prefix_replay_structural_exact": true,
+      "prefix_replay_tolerance": {
+        "edge_covariance_max_abs": 0.0,
+        "edge_heading_measurement_max_rad": 0.0,
+        "edge_translation_measurement_max_m": 0.0,
+        "node_heading_max_rad": 0.0,
+        "node_translation_max_m": 0.0
+      },
+      "science_endpoints_read": [],
+      "seed": 81006,
+      "started_utc": "2026-09-20T09:08:03Z",
+      "status": "TECHNICALLY_ELIGIBLE",
+      "target_id": "map3_grid_anchor_01",
+      "target_label": "target_A",
+      "target_state_count": 5,
+      "target_state_ids": [
+        12,
+        15,
+        17,
+        21,
+        24
+      ],
+      "target_states_distinct": true,
+      "target_states_strictly_ordered": true
+    },
+    {
+      "action_branch_launched": false,
+      "attempt_count": 1,
+      "failure_reasons": [
+        "prefix numerical repeatability exceeded zero envelope"
+      ],
+      "finished_utc": "2026-09-20T09:12:27Z",
+      "science_endpoints_read": [],
+      "seed": 81007,
+      "started_utc": "2026-09-20T09:10:10Z",
+      "status": "TECHNICALLY_INELIGIBLE",
+      "target_id": "map3_grid_anchor_01",
+      "target_label": "target_A",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/wcqw/ac-slam/tools/realizability_pilot/v13_history_qualification.py\", line 226, in _candidate_record\n    raise RuntimeError('prefix numerical repeatability exceeded zero envelope')\nRuntimeError: prefix numerical repeatability exceeded zero envelope\n"
+    },
+    {
+      "action_branch_launched": false,
+      "attempt_count": 1,
+      "failure_reasons": [
+        "prefix numerical repeatability exceeded zero envelope"
+      ],
+      "finished_utc": "2026-09-20T09:14:33Z",
+      "science_endpoints_read": [],
+      "seed": 81008,
+      "started_utc": "2026-09-20T09:12:27Z",
+      "status": "TECHNICALLY_INELIGIBLE",
+      "target_id": "map3_grid_anchor_01",
+      "target_label": "target_A",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/wcqw/ac-slam/tools/realizability_pilot/v13_history_qualification.py\", line 226, in _candidate_record\n    raise RuntimeError('prefix numerical repeatability exceeded zero envelope')\nRuntimeError: prefix numerical repeatability exceeded zero envelope\n"
+    },
+    {
+      "action_branch_launched": false,
+      "allowed_artifacts_read": [
+        "episode_result.json status/canonical_history_complete only",
+        "replay_stream.jsonl",
+        "pose_graph_before.json",
+        "resolved_history_route.json",
+        "mapper_params.yaml",
+        "prefix replay graph_pre.json"
+      ],
+      "anchor_state_id": 21,
+      "attempt_count": 1,
+      "canonical_input_record_count": 43,
+      "canonical_input_sha256": "38d79ae529eb8661dd04036641ce938a58e226725efe32ab93f8dc3cf06ad2c6",
+      "failure_reasons": [],
+      "finished_utc": "2026-09-20T09:16:49Z",
+      "history_route_complete": true,
+      "mapper_binary_sha256": "7ab54496b4572e831d7f10d615ad3d700bec3a0b89c5abdb9c562616a67d92f6",
+      "mapper_params_sha256": "511dcacb4ff58a99d0f434cbfd604198c95f453e2bd18e35c0b5e0533437825c",
+      "prefix_replay_numerical_exact": true,
+      "prefix_replay_structural_exact": true,
+      "prefix_replay_tolerance": {
+        "edge_covariance_max_abs": 0.0,
+        "edge_heading_measurement_max_rad": 0.0,
+        "edge_translation_measurement_max_m": 0.0,
+        "node_heading_max_rad": 0.0,
+        "node_translation_max_m": 0.0
+      },
+      "science_endpoints_read": [],
+      "seed": 82001,
+      "started_utc": "2026-09-20T09:14:33Z",
+      "status": "TECHNICALLY_ELIGIBLE",
+      "target_id": "map3_grid_anchor_03",
+      "target_label": "target_B",
+      "target_state_count": 5,
+      "target_state_ids": [
+        14,
+        17,
+        20,
+        24,
+        28
+      ],
+      "target_states_distinct": true,
+      "target_states_strictly_ordered": true
+    },
+    {
+      "action_branch_launched": false,
+      "allowed_artifacts_read": [
+        "episode_result.json status/canonical_history_complete only",
+        "replay_stream.jsonl",
+        "pose_graph_before.json",
+        "resolved_history_route.json",
+        "mapper_params.yaml",
+        "prefix replay graph_pre.json"
+      ],
+      "anchor_state_id": 21,
+      "attempt_count": 1,
+      "canonical_input_record_count": 35,
+      "canonical_input_sha256": "8183561c6fdaedba218cfcf9741ff708c62f60f615557153c38a6c6875199480",
+      "failure_reasons": [],
+      "finished_utc": "2026-09-20T09:18:59Z",
+      "history_route_complete": true,
+      "mapper_binary_sha256": "7ab54496b4572e831d7f10d615ad3d700bec3a0b89c5abdb9c562616a67d92f6",
+      "mapper_params_sha256": "511dcacb4ff58a99d0f434cbfd604198c95f453e2bd18e35c0b5e0533437825c",
+      "prefix_replay_numerical_exact": true,
+      "prefix_replay_structural_exact": true,
+      "prefix_replay_tolerance": {
+        "edge_covariance_max_abs": 0.0,
+        "edge_heading_measurement_max_rad": 0.0,
+        "edge_translation_measurement_max_m": 0.0,
+        "node_heading_max_rad": 0.0,
+        "node_translation_max_m": 0.0
+      },
+      "science_endpoints_read": [],
+      "seed": 82002,
+      "started_utc": "2026-09-20T09:16:49Z",
+      "status": "TECHNICALLY_ELIGIBLE",
+      "target_id": "map3_grid_anchor_03",
+      "target_label": "target_B",
+      "target_state_count": 5,
+      "target_state_ids": [
+        13,
+        16,
+        20,
+        24,
+        28
+      ],
+      "target_states_distinct": true,
+      "target_states_strictly_ordered": true
+    },
+    {
+      "action_branch_launched": false,
+      "allowed_artifacts_read": [
+        "episode_result.json status/canonical_history_complete only",
+        "replay_stream.jsonl",
+        "pose_graph_before.json",
+        "resolved_history_route.json",
+        "mapper_params.yaml",
+        "prefix replay graph_pre.json"
+      ],
+      "anchor_state_id": 21,
+      "attempt_count": 1,
+      "canonical_input_record_count": 34,
+      "canonical_input_sha256": "e9574712d909226de897b088d01f4c388b6ad796b8f5b616a73437925a1a1a53",
+      "failure_reasons": [],
+      "finished_utc": "2026-09-20T09:21:05Z",
+      "history_route_complete": true,
+      "mapper_binary_sha256": "7ab54496b4572e831d7f10d615ad3d700bec3a0b89c5abdb9c562616a67d92f6",
+      "mapper_params_sha256": "511dcacb4ff58a99d0f434cbfd604198c95f453e2bd18e35c0b5e0533437825c",
+      "prefix_replay_numerical_exact": true,
+      "prefix_replay_structural_exact": true,
+      "prefix_replay_tolerance": {
+        "edge_covariance_max_abs": 0.0,
+        "edge_heading_measurement_max_rad": 0.0,
+        "edge_translation_measurement_max_m": 0.0,
+        "node_heading_max_rad": 0.0,
+        "node_translation_max_m": 0.0
+      },
+      "science_endpoints_read": [],
+      "seed": 82003,
+      "started_utc": "2026-09-20T09:18:59Z",
+      "status": "TECHNICALLY_ELIGIBLE",
+      "target_id": "map3_grid_anchor_03",
+      "target_label": "target_B",
+      "target_state_count": 5,
+      "target_state_ids": [
+        13,
+        16,
+        20,
+        25,
+        28
+      ],
+      "target_states_distinct": true,
+      "target_states_strictly_ordered": true
+    },
+    {
+      "action_branch_launched": false,
+      "attempt_count": 1,
+      "failure_reasons": [
+        "prefix numerical repeatability exceeded zero envelope"
+      ],
+      "finished_utc": "2026-09-20T09:23:15Z",
+      "science_endpoints_read": [],
+      "seed": 82004,
+      "started_utc": "2026-09-20T09:21:05Z",
+      "status": "TECHNICALLY_INELIGIBLE",
+      "target_id": "map3_grid_anchor_03",
+      "target_label": "target_B",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/wcqw/ac-slam/tools/realizability_pilot/v13_history_qualification.py\", line 226, in _candidate_record\n    raise RuntimeError('prefix numerical repeatability exceeded zero envelope')\nRuntimeError: prefix numerical repeatability exceeded zero envelope\n"
+    },
+    {
+      "action_branch_launched": false,
+      "allowed_artifacts_read": [
+        "episode_result.json status/canonical_history_complete only",
+        "replay_stream.jsonl",
+        "pose_graph_before.json",
+        "resolved_history_route.json",
+        "mapper_params.yaml",
+        "prefix replay graph_pre.json"
+      ],
+      "anchor_state_id": 21,
+      "attempt_count": 1,
+      "canonical_input_record_count": 44,
+      "canonical_input_sha256": "97c7dd35904b96a7a26841917280cbe9420225a0f84e250ea900d4854438433e",
+      "failure_reasons": [],
+      "finished_utc": "2026-09-20T09:25:35Z",
+      "history_route_complete": true,
+      "mapper_binary_sha256": "7ab54496b4572e831d7f10d615ad3d700bec3a0b89c5abdb9c562616a67d92f6",
+      "mapper_params_sha256": "511dcacb4ff58a99d0f434cbfd604198c95f453e2bd18e35c0b5e0533437825c",
+      "prefix_replay_numerical_exact": true,
+      "prefix_replay_structural_exact": true,
+      "prefix_replay_tolerance": {
+        "edge_covariance_max_abs": 0.0,
+        "edge_heading_measurement_max_rad": 0.0,
+        "edge_translation_measurement_max_m": 0.0,
+        "node_heading_max_rad": 0.0,
+        "node_translation_max_m": 0.0
+      },
+      "science_endpoints_read": [],
+      "seed": 82005,
+      "started_utc": "2026-09-20T09:23:15Z",
+      "status": "TECHNICALLY_ELIGIBLE",
+      "target_id": "map3_grid_anchor_03",
+      "target_label": "target_B",
+      "target_state_count": 5,
+      "target_state_ids": [
+        13,
+        16,
+        20,
+        25,
+        28
+      ],
+      "target_states_distinct": true,
+      "target_states_strictly_ordered": true
+    },
+    {
+      "action_branch_launched": false,
+      "allowed_artifacts_read": [
+        "episode_result.json status/canonical_history_complete only",
+        "replay_stream.jsonl",
+        "pose_graph_before.json",
+        "resolved_history_route.json",
+        "mapper_params.yaml",
+        "prefix replay graph_pre.json"
+      ],
+      "anchor_state_id": 20,
+      "attempt_count": 1,
+      "canonical_input_record_count": 34,
+      "canonical_input_sha256": "2f99ed4728f0340cf40322344282759db73e2965b1c0e3638e758a94c2bfa620",
+      "failure_reasons": [],
+      "finished_utc": "2026-09-20T09:27:46Z",
+      "history_route_complete": true,
+      "mapper_binary_sha256": "7ab54496b4572e831d7f10d615ad3d700bec3a0b89c5abdb9c562616a67d92f6",
+      "mapper_params_sha256": "511dcacb4ff58a99d0f434cbfd604198c95f453e2bd18e35c0b5e0533437825c",
+      "prefix_replay_numerical_exact": true,
+      "prefix_replay_structural_exact": true,
+      "prefix_replay_tolerance": {
+        "edge_covariance_max_abs": 0.0,
+        "edge_heading_measurement_max_rad": 0.0,
+        "edge_translation_measurement_max_m": 0.0,
+        "node_heading_max_rad": 0.0,
+        "node_translation_max_m": 0.0
+      },
+      "science_endpoints_read": [],
+      "seed": 82006,
+      "started_utc": "2026-09-20T09:25:35Z",
+      "status": "TECHNICALLY_ELIGIBLE",
+      "target_id": "map3_grid_anchor_03",
+      "target_label": "target_B",
+      "target_state_count": 5,
+      "target_state_ids": [
+        13,
+        16,
+        19,
+        24,
+        27
+      ],
+      "target_states_distinct": true,
+      "target_states_strictly_ordered": true
+    },
+    {
+      "action_branch_launched": false,
+      "allowed_artifacts_read": [
+        "episode_result.json status/canonical_history_complete only",
+        "replay_stream.jsonl",
+        "pose_graph_before.json",
+        "resolved_history_route.json",
+        "mapper_params.yaml",
+        "prefix replay graph_pre.json"
+      ],
+      "anchor_state_id": 21,
+      "attempt_count": 1,
+      "canonical_input_record_count": 46,
+      "canonical_input_sha256": "3fe80a9ac764df698cfb66251797452c1f5cc2629c4312f2473d2604b75a159d",
+      "failure_reasons": [],
+      "finished_utc": "2026-09-20T09:30:07Z",
+      "history_route_complete": true,
+      "mapper_binary_sha256": "7ab54496b4572e831d7f10d615ad3d700bec3a0b89c5abdb9c562616a67d92f6",
+      "mapper_params_sha256": "511dcacb4ff58a99d0f434cbfd604198c95f453e2bd18e35c0b5e0533437825c",
+      "prefix_replay_numerical_exact": true,
+      "prefix_replay_structural_exact": true,
+      "prefix_replay_tolerance": {
+        "edge_covariance_max_abs": 0.0,
+        "edge_heading_measurement_max_rad": 0.0,
+        "edge_translation_measurement_max_m": 0.0,
+        "node_heading_max_rad": 0.0,
+        "node_translation_max_m": 0.0
+      },
+      "science_endpoints_read": [],
+      "seed": 82007,
+      "started_utc": "2026-09-20T09:27:46Z",
+      "status": "TECHNICALLY_ELIGIBLE",
+      "target_id": "map3_grid_anchor_03",
+      "target_label": "target_B",
+      "target_state_count": 5,
+      "target_state_ids": [
+        14,
+        17,
+        20,
+        24,
+        27
+      ],
+      "target_states_distinct": true,
+      "target_states_strictly_ordered": true
+    },
+    {
+      "action_branch_launched": false,
+      "allowed_artifacts_read": [
+        "episode_result.json status/canonical_history_complete only",
+        "replay_stream.jsonl",
+        "pose_graph_before.json",
+        "resolved_history_route.json",
+        "mapper_params.yaml",
+        "prefix replay graph_pre.json"
+      ],
+      "anchor_state_id": 20,
+      "attempt_count": 1,
+      "canonical_input_record_count": 34,
+      "canonical_input_sha256": "69bc4a13d4a6da0ffb755762b54ca387e5e37bd1de3607d7d5044534e58a83d4",
+      "failure_reasons": [],
+      "finished_utc": "2026-09-20T09:32:13Z",
+      "history_route_complete": true,
+      "mapper_binary_sha256": "7ab54496b4572e831d7f10d615ad3d700bec3a0b89c5abdb9c562616a67d92f6",
+      "mapper_params_sha256": "511dcacb4ff58a99d0f434cbfd604198c95f453e2bd18e35c0b5e0533437825c",
+      "prefix_replay_numerical_exact": true,
+      "prefix_replay_structural_exact": true,
+      "prefix_replay_tolerance": {
+        "edge_covariance_max_abs": 0.0,
+        "edge_heading_measurement_max_rad": 0.0,
+        "edge_translation_measurement_max_m": 0.0,
+        "node_heading_max_rad": 0.0,
+        "node_translation_max_m": 0.0
+      },
+      "science_endpoints_read": [],
+      "seed": 82008,
+      "started_utc": "2026-09-20T09:30:07Z",
+      "status": "TECHNICALLY_ELIGIBLE",
+      "target_id": "map3_grid_anchor_03",
+      "target_label": "target_B",
+      "target_state_count": 5,
+      "target_state_ids": [
+        13,
+        16,
+        19,
+        23,
+        27
+      ],
+      "target_states_distinct": true,
+      "target_states_strictly_ordered": true
+    }
+  ],
+  "runtime_reserve_substitution_used": false,
+  "seed_reuse_detected": false,
+  "targets": {
+    "target_A": {
+      "candidate_count": 8,
+      "eligible_count": 5,
+      "evaluated_count": 8,
+      "failure_reasons": [
+        {
+          "reasons": [
+            "prefix numerical repeatability exceeded zero envelope"
+          ],
+          "seed": 81004
+        },
+        {
+          "reasons": [
+            "prefix numerical repeatability exceeded zero envelope"
+          ],
+          "seed": 81007
+        },
+        {
+          "reasons": [
+            "prefix numerical repeatability exceeded zero envelope"
+          ],
+          "seed": 81008
+        }
+      ],
+      "first_four_eligible_seeds": [
+        81001,
+        81002,
+        81003,
+        81005
+      ],
+      "technical_yield": 0.625
+    },
+    "target_B": {
+      "candidate_count": 8,
+      "eligible_count": 7,
+      "evaluated_count": 8,
+      "failure_reasons": [
+        {
+          "reasons": [
+            "prefix numerical repeatability exceeded zero envelope"
+          ],
+          "seed": 82004
+        }
+      ],
+      "first_four_eligible_seeds": [
+        82001,
+        82002,
+        82003,
+        82005
+      ],
+      "technical_yield": 0.875
+    }
+  },
+  "technical_gate": "V13_TECHNICAL_READY_FOR_CONFIRMATORY",
+  "updated_utc": "2026-09-20T09:32:13Z"
+}

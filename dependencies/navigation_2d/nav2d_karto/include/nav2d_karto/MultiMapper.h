@@ -9,6 +9,7 @@
 #include <tf/transform_broadcaster.h>
 #include <nav_msgs/OccupancyGrid.h>
 #include <nav_msgs/GetMap.h>
+#include <std_srvs/Trigger.h>
 #include <geometry_msgs/PoseArray.h>
 #include <geometry_msgs/PoseWithCovarianceStamped.h>
 #include <nav2d_msgs/LocalizedScan.h>
@@ -45,6 +46,10 @@ public:
 	void onMessage(const void* sender, karto::MapperEventArguments& args);
 	void onLoopClosureObserved(const void* sender, karto::MapperEventArguments& args);
 	bool getMap(nav_msgs::GetMap::Request  &req, nav_msgs::GetMap::Response &res);
+	bool dumpPoseGraphNow(std_srvs::Trigger::Request &req,
+	                      std_srvs::Trigger::Response &res);
+	bool getProcessedLocalizedScanCount(std_srvs::Trigger::Request &req,
+	                                    std_srvs::Trigger::Response &res);
 	void publishLoop();
 	void publishTransform();
 	void setScanSolver(karto::ScanSolver* scanSolver);
@@ -71,6 +76,8 @@ private:
 	nav_msgs::OccupancyGrid mGridMap;
 
 	ros::ServiceServer mMapServer;
+	ros::ServiceServer mDumpPoseGraphServer;
+	ros::ServiceServer mProcessedLocalizedScanCountServer;
 	ros::Publisher mMapPublisher;
 	ros::Publisher mScanPublisher;
 	ros::Publisher mVerticesPublisher;
@@ -134,8 +141,7 @@ private:
 	boost::thread mInstrumentationThread;
 	double mInstrumentationFlushPeriod;
 	std::string mPoseGraphDumpPath;
-	int mPoseGraphDumpRequest;
-	int mPoseGraphDumpDone;
+	unsigned long long mProcessedLocalizedScanCount;
 	bool mInstrumentationThreadStarted;
 };
 

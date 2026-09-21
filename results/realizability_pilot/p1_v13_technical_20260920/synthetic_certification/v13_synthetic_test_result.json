@@ -1,0 +1,18 @@
+{
+  "command": "PYTHONPATH=tools/realizability_pilot /usr/bin/python3 -m unittest -v tools.realizability_pilot.test_v13_technical",
+  "evidence_label": "MEASURED OBSERVATION",
+  "fresh_experimental_endpoint_read": false,
+  "primary_estimator": "fixed-root local linear-Gaussian joint marginal covariance",
+  "primary_score": "J_T = -logdet(Sigma_T) / 15 for five target SE(2) states",
+  "status": "PASS",
+  "tests": [
+    "edge_jacobian_matches_finite_difference_for_three_fixed_pose_pairs",
+    "fixed_root_reduced_inverse_equals_direct_anchored_hessian_inverse",
+    "additional_SPD_constraint_respects_covariance_information_monotonicity",
+    "connected_graph_fixed_root_is_invertible",
+    "disconnected_counterfactual_fails_closed",
+    "exact_repeatability_freezes_zero_tolerance_and_separates_structure_from_numerics"
+  ],
+  "tests_passed": 6,
+  "tests_run": 6
+}

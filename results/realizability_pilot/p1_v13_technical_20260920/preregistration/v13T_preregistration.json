@@ -1,0 +1,122 @@
+{
+  "block_local_target_selector": {
+    "anchor": "nearest legal post-route-start historical scan to the unchanged fixed target waypoint",
+    "continuous_segment_half_width_states": 10,
+    "normalized_arc_length_quantiles": [
+      0.1,
+      0.3,
+      0.5,
+      0.7,
+      0.9
+    ],
+    "outcome_blind": true,
+    "required_count": 5,
+    "required_distinct": true,
+    "required_strict_state_order": true
+  },
+  "budget_record_only": {
+    "reuse_rule": "reuse v12b target-specific dwell durations because target identities and physical waypoint regions are unchanged; no v13 outcome-based recalibration",
+    "source": "/home/wcqw/ac-slam/results/realizability_pilot/p1_confirmatory_v12b_20260918/preregistration/target_specific_budget_preregistration.json"
+  },
+  "candidate_count_per_target": 8,
+  "candidate_seeds_in_frozen_order": {
+    "target_A": [
+      81001,
+      81002,
+      81003,
+      81004,
+      81005,
+      81006,
+      81007,
+      81008
+    ],
+    "target_B": [
+      82001,
+      82002,
+      82003,
+      82004,
+      82005,
+      82006,
+      82007,
+      82008
+    ]
+  },
+  "code_bundle_sha256": "a6b690d83c12a596a84c0960174409ef240cc3341160a557a605581961f176b6",
+  "code_hashes": {
+    "dependencies/navigation_2d/nav2d_karto/CMakeLists.txt": "90f29bfaddf4b1e0679b2571f1c5c144f09dce6a521710f7fb9f615a3f6bcf39",
+    "dependencies/navigation_2d/nav2d_karto/include/nav2d_karto/MultiMapper.h": "a6c6739db188dac9587e29c7fc2d4640e48844be4c3253d6526aa7403a56d619",
+    "dependencies/navigation_2d/nav2d_karto/package.xml": "9af24e8c3376e6990fb5c17f6ea41a2c87180e9af0cc910730b6953c695132b6",
+    "dependencies/navigation_2d/nav2d_karto/src/MultiMapper.cpp": "921d2649a3e507a3deee9f2baf9790bfefee98e6633e370b54ead0dc4f530b35",
+    "tools/realizability_pilot/se2_information.py": "bdc44e4fbee7ad74c212b543a693d132f2eb704667bd5945c97fc859188454ad",
+    "tools/realizability_pilot/test_v13_technical.py": "d38185901061edcb729efe85f9829de96c28b3398a308cebfdde57f426c2be3d",
+    "tools/realizability_pilot/v13_history_qualification.py": "97e7cd3f2278e478ce1ae4e2df854df5ba06c561d12fc58a12527e3e78a9cca8",
+    "tools/realizability_pilot/v13_prefix_equivalence.py": "6a4581de7ba5e3e8e731e9abafabac8df00d223cde1b13ed7e9b35242fd18f53",
+    "tools/realizability_pilot/v13_replay_publisher.py": "3aefa28cc391da98ee4c3367ac6292348cd8977a749cf492d09a01e8289977ab",
+    "tools/realizability_pilot/v13_target_selector.py": "00c31ab4ba8b4daacd6c9e8da046953c8355157e099bb62b119a3c1051a563ee",
+    "tools/realizability_pilot/v13_technical_protocol.py": "1349382abd96b75ca247d296ab95f27212c0f114d20d0d127d7c134831b27e6b",
+    "tools/realizability_pilot/v13_unified_replay.py": "c49b00cf831cb416f6684dcc050a67eb1401a1bf8a35637e7136dffece3d4c52"
+  },
+  "created_before_any_fresh_candidate_history_result": true,
+  "failure_gate": "if either target yields fewer than four eligible histories, PAUSED_V13_TECHNICAL_NOT_ROBUST",
+  "forbidden_reads": [
+    "J_T",
+    "target/non-target realized action constraints",
+    "Delta U",
+    "action-specific provenance outcomes",
+    "A2-A3",
+    "A3-A1",
+    "A2-A1"
+  ],
+  "git_head_before_uncommitted_v13_changes": "87185ca6dcf3e4f9219c6ea08ae193b61d9b68cf",
+  "no_action_branch_launched": true,
+  "one_history_attempt_per_candidate": true,
+  "protocol_id": "p1_v13_technical_20260920",
+  "reserve_seeds": [],
+  "runtime_seed_substitution_allowed": false,
+  "scope": "TECHNICAL_CERTIFICATION_ONLY_NO_SCIENCE_ENDPOINTS",
+  "seed_reuse_audit": {
+    "all_candidate_seeds_unique": true,
+    "forbidden_old_pool_prefixes": [
+      51,
+      52,
+      71,
+      72
+    ],
+    "intersection_with_explicit_old_pools": []
+  },
+  "selection_rule": "after the entire immutable pool is evaluated, select the first four TECHNICALLY_ELIGIBLE seeds in frozen order",
+  "target_identities_unchanged": {
+    "target_A": "map3_grid_anchor_01",
+    "target_B": "map3_grid_anchor_03"
+  },
+  "technical_eligibility_checks": [
+    "history route complete",
+    "canonical input stream nonempty",
+    "exactly five distinct strictly ordered block-local states",
+    "three same-input unified-lifecycle prefix replays",
+    "all repeated structural signatures exact",
+    "all repeated numerical differences within frozen zero envelope",
+    "mapper config and binary/code provenance complete"
+  ],
+  "unified_prefix_replay": {
+    "background_graph_dump_forbidden": true,
+    "fixed_drain_sleep_forbidden": true,
+    "fresh_multimapper_each_replay": true,
+    "fresh_ros_master_each_replay": true,
+    "numerical_tolerance": {
+      "edge_covariance_max_abs": 0.0,
+      "edge_heading_measurement_max_rad": 0.0,
+      "edge_translation_measurement_max_m": 0.0,
+      "node_heading_max_rad": 0.0,
+      "node_translation_max_m": 0.0
+    },
+    "old_v12b_4p4mm_value_used_for_tolerance": false,
+    "processed_callback_count_barrier_required": true,
+    "publisher_subscriber_connection_required": true,
+    "rate_hz": 20.0,
+    "repeat_count": 3,
+    "structural_identity_required": true,
+    "synchronous_dump_service_required": true,
+    "tolerance_source": "three all-pairs exact unified-lifecycle repeats on the frozen old B/H2 prefix before fresh candidate collection"
+  }
+}

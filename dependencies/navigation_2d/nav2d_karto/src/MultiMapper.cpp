@@ -34,8 +34,7 @@ MultiMapper::MultiMapper()
 	                 mInstrumentationFlushPeriod, 5.0);
 	mapperNode.param("pose_graph_dump_path", mPoseGraphDumpPath,
 	                 std::string(""));
-	mapperNode.param("pose_graph_dump_request", mPoseGraphDumpRequest, 0);
-	mPoseGraphDumpDone = mPoseGraphDumpRequest;
+	mProcessedLocalizedScanCount = 0;
 	mInstrumentationThreadStarted = false;
 
 	// Apply tf_prefix to all used frame-id's
@@ -73,6 +72,17 @@ MultiMapper::MultiMapper()
 	// Observation-only configuration: the dump path must reach the mapper
 	// after the mapper exists, or the graceful-shutdown dump cannot happen.
 	mMapper->SetPoseGraphDumpPath(karto::String(mPoseGraphDumpPath.c_str()));
+
+	// v13-T observation-only prefix-cut controls. MapperNode uses one callback
+	// queue and ros::spinOnce(), therefore these service callbacks serialize
+	// with receiveLocalizedScan(). A successful dump is an exact callback-queue
+	// barrier: every previously counted localized-scan callback has returned and
+	// no scan callback can mutate the graph while it is being serialized.
+	mDumpPoseGraphServer = mapperNode.advertiseService(
+		"dump_pose_graph_now", &MultiMapper::dumpPoseGraphNow, this);
+	mProcessedLocalizedScanCountServer = mapperNode.advertiseService(
+		"get_processed_localized_scan_count",
+		&MultiMapper::getProcessedLocalizedScanCount, this);
 	
 	double param_d;
 	bool param_b;
@@ -205,12 +215,8 @@ MultiMapper::MultiMapper()
 	// Phase 4A observation-only: expose each Karto-accepted loop closure as a
 	// small structured topic (default ON; publishing one int/scan-id message per
 	// closure cannot change SLAM behavior). No matcher internals are published.
-	if(mInstrumentationFlushPeriod > 0.0 || !mPoseGraphDumpPath.empty())
+	if(mInstrumentationFlushPeriod > 0.0)
 	{
-		// Pose-graph dump polling must remain live even when periodic
-		// provenance flushing is disabled.  Branch replay deliberately uses
-		// flush_period=0, then requests an exact graph cut after the final
-		// prefix scan, so no later scan exists to service the request.
 		mInstrumentationThreadStarted = true;
 		mInstrumentationThread = boost::thread(
 			&MultiMapper::instrumentationMaintenanceLoop, this);
@@ -889,10 +895,9 @@ bool MultiMapper::updateMap()
 void MultiMapper::instrumentationMaintenanceLoop()
 {
 	// Observation-only maintenance:
-	//   1. periodically flush buffered edge-provenance records (no-op when
-	//      the instrument is disabled),
-	//   2. write a complete graph dump when the harness asks for one.
-	// This thread never touches the matcher, the solver or the graph.
+	// periodically flush buffered edge-provenance records. Pose-graph snapshots
+	// are deliberately excluded: v13-T obtains them only from the synchronous
+	// ROS callback above, never from this background thread.
 	const double period = mInstrumentationFlushPeriod > 0.0
 		? mInstrumentationFlushPeriod : 1.0;
 	while(ros::ok())
@@ -905,19 +910,6 @@ void MultiMapper::instrumentationMaintenanceLoop()
 		{
 			mMapper->FlushEdgeProvenance();
 		}
-
-		if(mPoseGraphDumpPath.empty()) continue;
-		int request = mPoseGraphDumpRequest;
-		// Namespace-correct lookup so the replay harness can run the mapper
-		// under a different node name.
-		ros::param::getCached(ros::this_node::getName() + "/pose_graph_dump_request",
-		                      request);
-		if(request != mPoseGraphDumpDone)
-		{
-			mMapper->WritePoseGraphJson(
-				karto::String(mPoseGraphDumpPath.c_str()));
-			mPoseGraphDumpDone = request;
-		}
 	}
 	// Periodic-flush runs keep their existing final maintenance flush.  At
 	// zero, OpenMapper's destructor remains the sole final flush path.
@@ -927,10 +919,60 @@ void MultiMapper::instrumentationMaintenanceLoop()
 	}
 }
 
+bool MultiMapper::dumpPoseGraphNow(std_srvs::Trigger::Request &req,
+	                                std_srvs::Trigger::Response &res)
+{
+	(void)req;
+	std::string requestedPath = mPoseGraphDumpPath;
+	ros::param::get(ros::this_node::getName() + "/pose_graph_dump_path",
+	               requestedPath);
+	if(requestedPath.empty())
+	{
+		res.success = false;
+		res.message = "pose_graph_dump_path is empty";
+		return true;
+	}
+
+	const bool written = mMapper->WritePoseGraphJson(
+		karto::String(requestedPath.c_str()));
+	res.success = written;
+	std::stringstream message;
+	message << "path=" << requestedPath
+	        << " processed_localized_scan_count="
+	        << mProcessedLocalizedScanCount;
+	res.message = message.str();
+	if(written)
+	{
+		mPoseGraphDumpPath = requestedPath;
+		ROS_INFO("SYNCHRONOUS_POSE_GRAPH_SNAPSHOT %s", res.message.c_str());
+	}
+	else
+	{
+		ROS_ERROR("SYNCHRONOUS_POSE_GRAPH_SNAPSHOT_FAILED %s",
+		          res.message.c_str());
+	}
+	return true;
+}
+
+bool MultiMapper::getProcessedLocalizedScanCount(
+	std_srvs::Trigger::Request &req, std_srvs::Trigger::Response &res)
+{
+	(void)req;
+	res.success = true;
+	std::stringstream message;
+	message << mProcessedLocalizedScanCount;
+	res.message = message.str();
+	return true;
+}
+
 void MultiMapper::receiveLocalizedScan(const nav2d_msgs::LocalizedScan::ConstPtr& scan)
 {
 	// Ignore my own scans
-	if(scan->robot_id == mRobotID) return;
+	if(scan->robot_id == mRobotID)
+	{
+		++mProcessedLocalizedScanCount;
+		return;
+	}
 	
 	// Get the robot id
 	char robot[10];
@@ -1017,6 +1059,10 @@ void MultiMapper::receiveLocalizedScan(const nav2d_msgs::LocalizedScan::ConstPtr
 		ROS_INFO("Received a map, now starting to localize.");
 		mSelfLocalizer->publishParticleCloud();
 	}
+
+	// Count completed callbacks, not only Karto-accepted keyscans. The replay
+	// barrier compares this value with the exact number of published messages.
+	++mProcessedLocalizedScanCount;
 }
 
 void MultiMapper::sendLocalizedScan(const sensor_msgs::LaserScan::ConstPtr& scan, const karto::Pose2& pose)

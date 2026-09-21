@@ -1,0 +1,95 @@
+{
+  "envelope_multiplier_if_needed": 2.0,
+  "frozen_numerical_tolerance": {
+    "edge_covariance_max_abs": 3.999999999999999e-06,
+    "edge_heading_measurement_max_rad": 1e-06,
+    "edge_translation_measurement_max_m": 2.0000000020559128e-06,
+    "node_heading_max_rad": 1e-06,
+    "node_translation_max_m": 2.0000000020559128e-06
+  },
+  "numerical_exact_all_pairs": false,
+  "numerical_floors_if_needed": {
+    "edge_covariance_max_abs": 1e-09,
+    "edge_heading_measurement_max_rad": 1e-06,
+    "edge_translation_measurement_max_m": 1e-06,
+    "node_heading_max_rad": 1e-06,
+    "node_translation_max_m": 1e-06
+  },
+  "pair_count": 3,
+  "pairs": [
+    {
+      "comparison": {
+        "numerical": {
+          "edge_covariance_max_abs": 0.0,
+          "edge_heading_measurement_max_rad": 0.0,
+          "edge_translation_measurement_max_m": 0.0,
+          "exact": true,
+          "node_heading_max_rad": 0.0,
+          "node_translation_max_m": 0.0
+        },
+        "structural": {
+          "edge_count_equal": true,
+          "edge_state_endpoints_in_insertion_order_equal": true,
+          "edge_unique_endpoints_in_insertion_order_equal": true,
+          "exact": true,
+          "node_count_equal": true,
+          "node_state_ids_in_insertion_order_equal": true,
+          "node_unique_ids_in_insertion_order_equal": true,
+          "target_historical_state_ids_equal": true
+        }
+      },
+      "left": "repeat_01",
+      "right": "repeat_02"
+    },
+    {
+      "comparison": {
+        "numerical": {
+          "edge_covariance_max_abs": 1.9999999999999995e-06,
+          "edge_heading_measurement_max_rad": 0.0,
+          "edge_translation_measurement_max_m": 1.0000000010279564e-06,
+          "exact": false,
+          "node_heading_max_rad": 0.0,
+          "node_translation_max_m": 1.0000000010279564e-06
+        },
+        "structural": {
+          "edge_count_equal": true,
+          "edge_state_endpoints_in_insertion_order_equal": true,
+          "edge_unique_endpoints_in_insertion_order_equal": true,
+          "exact": true,
+          "node_count_equal": true,
+          "node_state_ids_in_insertion_order_equal": true,
+          "node_unique_ids_in_insertion_order_equal": true,
+          "target_historical_state_ids_equal": true
+        }
+      },
+      "left": "repeat_01",
+      "right": "repeat_03"
+    },
+    {
+      "comparison": {
+        "numerical": {
+          "edge_covariance_max_abs": 1.9999999999999995e-06,
+          "edge_heading_measurement_max_rad": 0.0,
+          "edge_translation_measurement_max_m": 1.0000000010279564e-06,
+          "exact": false,
+          "node_heading_max_rad": 0.0,
+          "node_translation_max_m": 1.0000000010279564e-06
+        },
+        "structural": {
+          "edge_count_equal": true,
+          "edge_state_endpoints_in_insertion_order_equal": true,
+          "edge_unique_endpoints_in_insertion_order_equal": true,
+          "exact": true,
+          "node_count_equal": true,
+          "node_state_ids_in_insertion_order_equal": true,
+          "node_unique_ids_in_insertion_order_equal": true,
+          "target_historical_state_ids_equal": true
+        }
+      },
+      "left": "repeat_02",
+      "right": "repeat_03"
+    }
+  ],
+  "structural_exact_all_pairs": true,
+  "tolerance_source": "all-pairs same-input same-config same-lifecycle repeatability envelope"
+}

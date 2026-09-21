@@ -1,0 +1,95 @@
+{
+  "action_branch_count": 0,
+  "candidate_attempt_directory_count": 16,
+  "candidate_record_count": 16,
+  "candidate_seed_unique_count": 16,
+  "evidence_label": "MEASURED OBSERVATION",
+  "fresh_scientific_action_endpoint_accessed": false,
+  "gate_checks": {
+    "all_16_candidate_histories_evaluated": true,
+    "all_candidates_have_exactly_five_distinct_strictly_ordered_target_states": true,
+    "all_candidates_have_three_prefix_replays": true,
+    "all_required_structural_fields_exact_for_all_repeated_pairs": true,
+    "all_selected_histories_numerically_exact_under_frozen_zero_tolerance": true,
+    "no_action_branch_or_pose_graph_after_artifact": true,
+    "no_runtime_reserve_substitution": true,
+    "no_seed_reuse": true,
+    "no_unexplained_replay_lifecycle_mismatch": true,
+    "synthetic_estimator_and_jacobian_certification_passed": true,
+    "target_A_has_at_least_four_eligible_histories": true,
+    "target_B_has_at_least_four_eligible_histories": true
+  },
+  "ineligible_numerical_repeatability_maxima": {
+    "81004": {
+      "edge_covariance_max_abs": 0.00019500000000000002,
+      "edge_heading_measurement_max_rad": 0.0,
+      "edge_translation_measurement_max_m": 1.000000000139778e-06,
+      "node_heading_max_rad": 0.0,
+      "node_translation_max_m": 1.0000000010279564e-06
+    },
+    "81007": {
+      "edge_covariance_max_abs": 0.00039899999999999994,
+      "edge_heading_measurement_max_rad": 0.0,
+      "edge_translation_measurement_max_m": 0.010000000000000009,
+      "node_heading_max_rad": 0.0,
+      "node_translation_max_m": 0.009999999999999787
+    },
+    "81008": {
+      "edge_covariance_max_abs": 1.9999999999999995e-06,
+      "edge_heading_measurement_max_rad": 0.0,
+      "edge_translation_measurement_max_m": 1.0000000010279564e-06,
+      "node_heading_max_rad": 0.0,
+      "node_translation_max_m": 1.0000000010279564e-06
+    },
+    "82004": {
+      "edge_covariance_max_abs": 0.00017999999999999993,
+      "edge_heading_measurement_max_rad": 0.0,
+      "edge_translation_measurement_max_m": 1.8000000000004124e-05,
+      "node_heading_max_rad": 0.0,
+      "node_translation_max_m": 1.8000000000295557e-05
+    }
+  },
+  "manifest_gate_reproduced": true,
+  "numerical_tolerance": {
+    "edge_covariance_max_abs": 0.0,
+    "edge_heading_measurement_max_rad": 0.0,
+    "edge_translation_measurement_max_m": 0.0,
+    "node_heading_max_rad": 0.0,
+    "node_translation_max_m": 0.0
+  },
+  "path_sensitive_launch_sha_audit": {
+    "classification": "EXPLAINED_ARTIFACT_PATH_VARIANCE_NOT_BEHAVIOR_CONFIG_VARIANCE",
+    "differing_fields": [
+      "pose_graph_dump_path repeat directory",
+      "edge_provenance_path repeat directory"
+    ],
+    "git_head_exact": true,
+    "mapper_binary_sha256_exact": true,
+    "mapper_parameter_hash_exact": true,
+    "raw_mapper_launch_sha_expected_to_differ": true,
+    "required_structural_signature_projection_exact_for_all_16_candidates": true
+  },
+  "pose_graph_after_artifact_count": 0,
+  "prefix_replay_graph_count": 48,
+  "selected_first_four": {
+    "target_A": [81001, 81002, 81003, 81005],
+    "target_B": [82001, 82002, 82003, 82005]
+  },
+  "status_counts": {
+    "TECHNICALLY_ELIGIBLE": 12,
+    "TECHNICALLY_INELIGIBLE": 4
+  },
+  "target_summary": {
+    "target_A": {
+      "candidate_count": 8,
+      "eligible_count": 5,
+      "technical_yield": 0.625
+    },
+    "target_B": {
+      "candidate_count": 8,
+      "eligible_count": 7,
+      "technical_yield": 0.875
+    }
+  },
+  "technical_gate": "V13_TECHNICAL_READY_FOR_CONFIRMATORY"
+}
