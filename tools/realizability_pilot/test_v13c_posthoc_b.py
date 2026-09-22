@@ -5,8 +5,11 @@ import json
 import math
 import sys
 from pathlib import Path
+from unittest import mock
 
 import pytest
+
+import v13c_posthoc_b_protocol
 
 THIS_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(THIS_DIR))
@@ -162,7 +165,12 @@ def test_decision_gate_edges(full, matched, crop, expected):
 
 
 def test_preregistration_schema_and_nonconfirmatory_label():
-    payload = preregistration_payload()
+    # The builder is intentionally locked to its historical source commit.
+    # Exercise its frozen schema without making every later research commit
+    # fail this regression test solely because HEAD advanced.
+    with mock.patch('v13c_posthoc_b_protocol.git_head', return_value=(
+            v13c_posthoc_b_protocol.BASE_COMMIT)):
+        payload = preregistration_payload()
     required = {
         'protocol_id', 'label', 'source_commit',
         'original_v13C_protocol_sha256', 'source_capture_hashes',

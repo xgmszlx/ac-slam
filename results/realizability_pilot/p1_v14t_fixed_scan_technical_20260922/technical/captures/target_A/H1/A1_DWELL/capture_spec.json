@@ -1,0 +1,83 @@
+{
+  "T_W_M": {
+    "tx": -28.01128570727814,
+    "ty": -27.959585514971064,
+    "yaw": -0.007201152769218847
+  },
+  "action_id": "A1_DWELL",
+  "action_labels": [
+    "probe_approach_history_03",
+    "probe_approach_history_02",
+    "probe_arrival"
+  ],
+  "action_waypoints": [
+    [
+      -17.85097049931602,
+      -22.13157547888457,
+      -1.5751588663998721
+    ],
+    [
+      -17.876506469950325,
+      -27.985002828149263,
+      3.1248744202145953
+    ],
+    [
+      -22.153442914238386,
+      -27.913493344134398,
+      -0.04631160415482562
+    ]
+  ],
+  "backend_started": false,
+  "canonical_terminal_gt_pose": [
+    -21.639532021996295,
+    -22.09175487247105,
+    3.0828027063854373
+  ],
+  "core_action_start_index": 2,
+  "dwell_s": 0.0,
+  "hold_s": 0.0,
+  "protocol_id": "p1_confirmatory_v13c_20260921",
+  "protocol_role": "v14T_fixed_scan_technical_only",
+  "scientific_endpoint_read": false,
+  "scientific_treatment_scan_budget": 347,
+  "setup_waypoints": [
+    [
+      -21.89740827110834,
+      -27.926241442067838,
+      -0.05357391002781235
+    ],
+    [
+      -17.876506469950325,
+      -27.985002828149263,
+      -0.0039856030951058025
+    ],
+    [
+      -17.85097049931602,
+      -22.13157547888457,
+      1.5664315136215965
+    ],
+    [
+      -21.639532021996295,
+      -22.09175487247105,
+      3.0828027063854373
+    ]
+  ],
+  "source_action_specs_path": "results/realizability_pilot/p1_confirmatory_v13c_20260921/target_A/1/action_specs.json",
+  "source_action_specs_sha256": "044f4496cccfbfae52db43c5c18ee4768db6448486c026fe8dc57cad23f5b719",
+  "source_v13T_history": "results/realizability_pilot/p1_v13_technical_20260920/histories/target_A/seed_81001/attempt_01",
+  "target_anchor_map": [
+    5.857358995892291,
+    0.0882738320221161,
+    -0.039110451385606766
+  ],
+  "target_anchor_world_by_history_only_se2": [
+    -22.153442914238386,
+    -27.913493344134398,
+    -0.04631160415482562
+  ],
+  "target_specific_budget_s": {
+    "A1_DWELL": 7.1,
+    "A2_SWEEP90": 0.0,
+    "A3_MIN_TRIGGER": 2.6
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "action_id": "A1_DWELL",
+  "action_labels": [
+    "probe_approach_history_03",
+    "probe_approach_history_02",
+    "probe_arrival"
+  ],
+  "action_waypoints": [
+    [
+      -17.85097049931602,
+      -22.13157547888457,
+      -1.5751588663998721
+    ],
+    [
+      -17.876506469950325,
+      -27.985002828149263,
+      3.1248744202145953
+    ],
+    [
+      -22.153442914238386,
+      -27.913493344134398,
+      -0.04631160415482562
+    ]
+  ],
+  "backend_started": false,
+  "branch_end_gt_pose": [
+    -22.11562059128522,
+    -27.91374503776088,
+    -0.058518947094771595
+  ],
+  "branch_start_gt_pose": [
+    -21.598273834868042,
+    -22.092600376279712,
+    3.100118883791658
+  ],
+  "completion_margin": 183,
+  "completion_scan_index": 164,
+  "duplicate_timestamp_count": 0,
+  "initial_gt_pose": [
+    -28.0,
+    -28.0,
+    0.0
+  ],
+  "maneuver_completion_time": 108.8,
+  "moves": [
+    {
+      "after": [
+        -21.935917680408203,
+        -27.926729969519215,
+        -0.03785236870530624
+      ],
+      "before": [
+        -28.0,
+        -28.0,
+        0.0
+      ],
+      "end_time": 16.5,
+      "heading_error_rad": 0.015721541322506107,
+      "label": "setup_01",
+      "position_error_m": 0.03851250788633621,
+      "start_time": 2.0,
+      "target": [
+        -21.89740827110834,
+        -27.926241442067838,
+        -0.05357391002781235
+      ]
+    },
+    {
+      "after": [
+        -17.918908745680586,
+        -27.984443646691005,
+        -0.01318677197722879
+      ],
+      "before": [
+        -21.935917680408203,
+        -27.926729969519215,
+        -0.03785236870530624
+      ],
+      "end_time": 26.7,
+      "heading_error_rad": 0.00920116888212299,
+      "label": "setup_02",
+      "position_error_m": 0.04240596268224943,
+      "start_time": 16.5,
+      "target": [
+        -17.876506469950325,
+        -27.985002828149263,
+        -0.0039856030951058025
+      ]
+    },
+    {
+      "after": [
+        -17.85143495848458,
+        -22.17445713376773,
+        1.5599655645805743
+      ],
+      "before": [
+        -17.918908745680586,
+        -27.984443646691005,
+        -0.01318677197722879
+      ],
+      "end_time": 43.4,
+      "heading_error_rad": 0.006465949041022156,
+      "label": "setup_03",
+      "position_error_m": 0.04288417013115384,
+      "start_time": 26.7,
+      "target": [
+        -17.85097049931602,
+        -22.13157547888457,
+        1.5664315136215965
+      ]
+    },
+    {
+      "after": [
+        -21.598273834868042,
+        -22.092600376279712,
+        3.100118883791658
+      ],
+      "before": [
+        -17.85143495848458,
+        -22.17445713376773,
+        1.5599655645805743
+      ],
+      "end_time": 56.7,
+      "heading_error_rad": 0.01731617740622049,
+      "label": "setup_04",
+      "position_error_m": 0.04126684967138191,
+      "start_time": 43.4,
+      "target": [
+        -21.639532021996295,
+        -22.09175487247105,
+        3.0828027063854373
+      ]
+    },
+    {
+      "after": [
+        -17.890841232375998,
+        -22.131109247633947,
+        -1.5592276012534105
+      ],
+      "before": [
+        -21.598273834868042,
+        -22.092600376279712,
+        3.100118883791658
+      ],
+      "end_time": 75.6,
+      "heading_error_rad": 0.015931265146461593,
+      "label": "probe_approach_history_03",
+      "position_error_m": 0.039873458920929535,
+      "start_time": 56.9,
+      "target": [
+        -17.85097049931602,
+        -22.13157547888457,
+        -1.5751588663998721
+      ]
+    },
+    {
+      "after": [
+        -17.876594838565417,
+        -27.940551898388676,
+        3.1396873517473205
+      ],
+      "before": [
+        -17.890841232375998,
+        -22.131109247633947,
+        -1.5592276012534105
+      ],
+      "end_time": 92.4,
+      "heading_error_rad": 0.014812931532725226,
+      "label": "probe_approach_history_02",
+      "position_error_m": 0.04445101759906851,
+      "start_time": 75.6,
+      "target": [
+        -17.876506469950325,
+        -27.985002828149263,
+        3.1248744202145953
+      ]
+    },
+    {
+      "after": [
+        -22.11562059128522,
+        -27.91374503776088,
+        -0.058518947094771595
+      ],
+      "before": [
+        -17.876594838565417,
+        -27.940551898388676,
+        3.1396873517473205
+      ],
+      "end_time": 108.8,
+      "heading_error_rad": 0.012207342939945976,
+      "label": "probe_arrival",
+      "position_error_m": 0.03782316040807689,
+      "start_time": 92.4,
+      "target": [
+        -22.153442914238386,
+        -27.913493344134398,
+        -0.04631160415482562
+      ]
+    }
+  ],
+  "no_scientific_stream_contamination_after_N": true,
+  "nonmonotonic_timestamp_count": 0,
+  "raw_capture_start_time": 56.9,
+  "raw_exceeds_scientific_by": 359,
+  "raw_scan_count": 706,
+  "scientific_endpoint_read": false,
+  "scientific_stream_exact_first_N": true,
+  "scientific_treatment_scan_budget": 347,
+  "scientific_treatment_scan_count": 347,
+  "static_tail_scan_count": 183,
+  "status": "SUCCEEDED",
+  "technical_only": true,
+  "timestamp_inclusion": "treatment_start <= scan.stamp <= maneuver_completion",
+  "treatment_end_timestamp": 127.1,
+  "treatment_path_length_m": 4.239112119321299,
+  "treatment_raw_scan_count": 347,
+  "treatment_start_time": 92.4,
+  "treatment_yaw_excursion_rad": 3.094477470283966,
+  "wall_clock_duration_s": 34.69999999999999
+}

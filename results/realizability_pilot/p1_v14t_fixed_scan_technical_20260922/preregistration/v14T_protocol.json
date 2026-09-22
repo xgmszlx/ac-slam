@@ -1,0 +1,209 @@
+{
+  "arms": [
+    "A1_DWELL",
+    "A3_MIN_TRIGGER",
+    "A2_SWEEP90"
+  ],
+  "automatic_v14_collection_allowed": false,
+  "backend_started": false,
+  "base_commit": "49cfff904954219f5be9425c714d6571c4cdd783",
+  "code_bundle_sha256": "00ff9d8089a879dd3734d93d5d5405713f932bec83af6e62425132afc50cab55",
+  "code_hashes": {
+    "tools/realizability_pilot/confirmatory_v13c_protocol.py": "7b0bda62ac3d6774ba5376653c747d45e2bae6607405d4507e6ecf96c5ec762d",
+    "tools/realizability_pilot/controlled_branch_suite.py": "914c5785a70b5d2760c0c8c0823ffbba2c0fd031566506d2498f7e9bd93dd7d1",
+    "tools/realizability_pilot/controlled_probe_capture.py": "ef15e74e3d627db39c327c32cd321124208c61021b1197db8af5ff67209244a8",
+    "tools/realizability_pilot/fixed_scan_capture.py": "d22224e9aeba74848157b2a0b166f14f780b315a9ca73d2bdb8ee3d27f57c0be",
+    "tools/realizability_pilot/mechanism_classifier.py": "7d348f233d7b5238c88dae5f795f42055f0f144f846c76cf64a7926ad8ef2384",
+    "tools/realizability_pilot/test_v14t_fixed_scan.py": "a1fe893611beadefc4246f4431b3efff990c3eb2dc9f9b0a351d1458550eb0b2",
+    "tools/realizability_pilot/v14_estimator_sanity.py": "96ffd210d8cc34c59961e803c6f0509b755120323f9980593a917fc7de2046ca",
+    "tools/realizability_pilot/v14t_fixed_scan_protocol.py": "635823272578328e93250035178aef11f59199eca85fca8647dfe70d80e01765",
+    "tools/realizability_pilot/v14t_fixed_scan_technical.py": "1c9f96a28bf13e8beb57c64ab2adca7e2226990bb324017f6b7b01476297c916"
+  },
+  "controller": {
+    "A2_final_heading": "theta0+30deg",
+    "A2_geometry_unchanged": true,
+    "completion_after_N": "TECHNICAL_INVALID_MANEUVER_EXCEEDS_SCAN_BUDGET",
+    "effect_name": "BROAD_SWEEP_ACTION_PACKAGE_EFFECT",
+    "maneuver_completion_labels": {
+      "A1_DWELL": "probe_arrival",
+      "A2_SWEEP90": "sweep_+30deg",
+      "A3_MIN_TRIGGER": "min_trigger_return"
+    },
+    "raw_debug_stream_may_exceed_N": true,
+    "scientific_stream": "exact first N treatment scans",
+    "target_specific_dwell_used": false,
+    "treatment_counter_reset": "probe_arrival.start_time"
+  },
+  "estimator_effect_sanity_check": {
+    "NEES": "NOT_PREREGISTERED_GAUGE_AND_COVARIANCE_INTERPRETATION_UNRESOLVED",
+    "does_not_replace_primary": true,
+    "gauge": "one transformation fitted from pre-treatment canonical history",
+    "metrics": [
+      "translation RMSE before/after",
+      "heading MAE/RMSE before/after",
+      "delta translation RMSE",
+      "delta heading error",
+      "max historical target-state correction",
+      "mean historical target-state correction"
+    ],
+    "per_arm_realignment_forbidden": true
+  },
+  "fresh_history_plan_if_authorized": {
+    "candidate_seeds_in_frozen_order": {
+      "target_A": [
+        91001,
+        91002,
+        91003,
+        91004,
+        91005,
+        91006,
+        91007,
+        91008,
+        91009,
+        91010,
+        91011,
+        91012,
+        91013,
+        91014,
+        91015,
+        91016
+      ],
+      "target_B": [
+        92001,
+        92002,
+        92003,
+        92004,
+        92005,
+        92006,
+        92007,
+        92008,
+        92009,
+        92010,
+        92011,
+        92012,
+        92013,
+        92014,
+        92015,
+        92016
+      ]
+    },
+    "freeze": [
+      "seed order",
+      "target selector",
+      "five-state local estimand",
+      "prefix repeatability",
+      "eligibility",
+      "first-four rule"
+    ],
+    "overlaps_v13_pool": false,
+    "replacement_after_endpoint": false,
+    "selection": "large frozen pool -> outcome-blind qualification -> first four eligible per target"
+  },
+  "future_modeling_hypothesis": "planned revisit value != realized backend information",
+  "future_prediction_targets": [
+    "E[Delta J_realized | G_pre, action]",
+    "P(E_realized | G_pre, action)"
+  ],
+  "future_research_question": "How does an active revisit action translate into the set and information utility of historical pose-graph constraints actually realized by a SLAM backend?",
+  "future_scientific_estimands": {
+    "J_T": "-logdet(Sigma_T)/15",
+    "primary": "D_sweep = J_T(A2_SWEEP90)-J_T(A3_MIN_TRIGGER)",
+    "primary_effect_name": "BROAD_SWEEP_ACTION_PACKAGE_EFFECT",
+    "secondary": [
+      "D_trigger = J_T(A3_MIN_TRIGGER)-J_T(A1_DWELL)",
+      "D_total = J_T(A2_SWEEP90)-J_T(A1_DWELL)"
+    ],
+    "support_structure": {
+      "mean_D_sweep_gt": 0.0001,
+      "overall_positive_min": 6,
+      "statistical_unit": "canonical-history block",
+      "target_A_positive_min": 3,
+      "target_B_positive_min": 3,
+      "target_stratified_bootstrap_95pct_CI_lower_gt": 0.0
+    }
+  },
+  "label": "V14_T_FIXED_SCAN_TECHNICAL_CERTIFICATION",
+  "mechanism_language": {
+    "360_degree_lidar_warning": true,
+    "exact_families": [
+      "PREVIOUS_SCAN",
+      "RUNNING_SCAN_CHAIN",
+      "NEAR_CHAIN",
+      "TRY_CLOSE_LOOP"
+    ],
+    "preferred_terms": [
+      "historical revisit association",
+      "historical pose-graph constraint",
+      "action-conditioned historical measurement realization"
+    ],
+    "zero_explicit_label": "NO_EXPLICIT_TRY_CLOSE_LOOP_OBSERVED"
+  },
+  "no_peeking": {
+    "allowed_before_collection_lock": [
+      "controller status",
+      "branch start",
+      "exact N scan count",
+      "action execution",
+      "GT motion",
+      "timestamp integrity",
+      "input hashes",
+      "prefix equivalence"
+    ],
+    "forbidden_before_collection_lock": [
+      "J_T",
+      "E_T/E_N arm comparison",
+      "keyscan arm comparison",
+      "factor-count arm comparison",
+      "posterior comparison",
+      "D_sweep",
+      "D_trigger",
+      "D_total"
+    ]
+  },
+  "original_artifact_manifest": {
+    "bundle_sha256": "bb4bdae0cdf2f01b561e79c4ba6fbb7aabdde59c9616ed2d12e827309de5d4e7",
+    "files": {
+      "results/realizability_pilot/p1_confirmatory_v13c_20260921/COLLECTION_LOCKED.json": "8abdc6005ba71c8a2a3c3a93b2a4b779b7a9ab6e93c8428f15d50afab555071b",
+      "results/realizability_pilot/p1_confirmatory_v13c_20260921/decision/final_gate.json": "1839b3f10c40f2ffe130d31d95067b91cf8d71195cc6cb788937439a76e9bd9e",
+      "results/realizability_pilot/p1_confirmatory_v13c_20260921/preregistration/v13C_preregistration.json": "62f3521fbe8b9c3a5976f5ca518e064b4367bd2a0f894698fa30eed7b97873ec",
+      "results/realizability_pilot/p1_v13c_posthoc_targetB_20260921/REPLAY_COLLECTION_LOCKED.json": "4d561e08797e08a1477aca62ba245196321f1b4136411b28e8b5ccacb0ddf686",
+      "results/realizability_pilot/p1_v13c_posthoc_targetB_20260921/decision/posthoc_diagnostic_gate.json": "ce273bd8563bd025f3fa1b17400ce9e3b18debfb351d4d9da5ae670f5c2883f5",
+      "results/realizability_pilot/p1_v13c_posthoc_targetB_20260921/preregistration/posthoc_diagnostic_preregistration.json": "c3a45391e2bb073e919b9f94ea22ed4a1b497ac18e62872e68bd203e5c4566a6"
+    }
+  },
+  "original_v13C_gate": "CONFIRMATORY_EXPERIMENT_TECHNICALLY_INCOMPLETE",
+  "planned_old_geometry_blocks": [
+    "A-H1",
+    "A-H2",
+    "A-H3",
+    "A-H4",
+    "B-H1",
+    "B-H2",
+    "B-H3",
+    "B-H4"
+  ],
+  "planned_technical_captures": 24,
+  "posthoc_decision": "DIAGNOSTIC_SUPPORTS_ONE_PROSPECTIVE_RETRY",
+  "protocol_id": "p1_v14t_fixed_scan_technical_20260922",
+  "scan_budget": {
+    "M": 287,
+    "N": 347,
+    "S": 60,
+    "minimum_acceptable_completion_margin": 60,
+    "rule": "N = M + S"
+  },
+  "scan_budget_derivation_sha256": "532e703dea59deb1a0d3a416649422c05c45f7516b74c3cc9965d85e19e008bb",
+  "scientific_confirmatory_experiment": false,
+  "scientific_endpoint_access_during_collection": false,
+  "technical_gate": {
+    "duplicates_allowed": 0,
+    "exact_scientific_treatment_scans": 347,
+    "failure": "SCAN_BUDGET_ENVELOPE_INSUFFICIENT",
+    "final_ready": "V14_FIXED_SCAN_TECHNICALLY_READY",
+    "final_redesign": "V14_FIXED_SCAN_TECHNICAL_REDESIGN_REQUIRED",
+    "minimum_completion_margin": 60,
+    "nonmonotonic_allowed": 0,
+    "required_valid_captures": 24,
+    "success": "SCAN_BUDGET_TECHNICALLY_CERTIFIED"
+  }
+}

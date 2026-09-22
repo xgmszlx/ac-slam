@@ -1,0 +1,638 @@
+{
+  "B_H1_vs_B_H3": {
+    "B-H1": {
+      "A2_SWEEP90": {
+        "covariance_eigenvalue_median": 0.0002598392545809261,
+        "factor_count": 44,
+        "family_counts": {
+          "NEAR_CHAIN": 1,
+          "PREVIOUS_SCAN": 25,
+          "RUNNING_SCAN_CHAIN": 18
+        },
+        "geodesic_median_m": 10.2575331632784,
+        "historical_endpoint_pairs": [
+          "0-43",
+          "11-53",
+          "12-44",
+          "14-52",
+          "15-45",
+          "17-46",
+          "2-58",
+          "2-59",
+          "20-51",
+          "20-65",
+          "21-47",
+          "21-64",
+          "21-66",
+          "22-63",
+          "23-62",
+          "32-42",
+          "41-42",
+          "8-61"
+        ],
+        "hops_median": 4.0,
+        "information_eigenvalue_median": 3848.533362744554,
+        "match_response_mean": 0.8615418333333333,
+        "nontarget_historical_count": 15,
+        "phase_counts": {
+          "UNIDENTIFIABLE": 44
+        },
+        "target_historical_count": 3
+      },
+      "A3_MIN_TRIGGER": {
+        "covariance_eigenvalue_median": 0.0002829882464309092,
+        "factor_count": 35,
+        "family_counts": {
+          "NEAR_CHAIN": 2,
+          "PREVIOUS_SCAN": 20,
+          "RUNNING_SCAN_CHAIN": 13
+        },
+        "geodesic_median_m": 10.832142057391195,
+        "historical_endpoint_pairs": [
+          "0-43",
+          "11-53",
+          "12-44",
+          "12-52",
+          "14-58",
+          "15-45",
+          "17-46",
+          "19-60",
+          "20-51",
+          "20-59",
+          "21-47",
+          "21-61",
+          "32-42",
+          "41-42"
+        ],
+        "hops_median": 4.0,
+        "information_eigenvalue_median": 3533.7156731320347,
+        "match_response_mean": 0.8634584285714286,
+        "nontarget_historical_count": 11,
+        "phase_counts": {
+          "UNIDENTIFIABLE": 35
+        },
+        "target_historical_count": 3
+      },
+      "pre_existing_target_connectivity": {
+        "pre_graph_connected_components": 1,
+        "pre_graph_cycle_rank": 16,
+        "pre_graph_edges": 57,
+        "pre_graph_nodes": 42,
+        "pre_target_degree_by_state": {
+          "18": 2,
+          "19": 2,
+          "20": 2,
+          "22": 2,
+          "24": 3
+        },
+        "pre_target_incident_edges": 9,
+        "pre_target_internal_edges": 2,
+        "target_state_ids": [
+          18,
+          19,
+          20,
+          22,
+          24
+        ]
+      }
+    },
+    "B-H3": {
+      "A2_SWEEP90": {
+        "covariance_eigenvalue_median": 0.0002598284271247462,
+        "factor_count": 42,
+        "family_counts": {
+          "PREVIOUS_SCAN": 24,
+          "RUNNING_SCAN_CHAIN": 18
+        },
+        "geodesic_median_m": 10.36636254548863,
+        "historical_endpoint_pairs": [
+          "0-35",
+          "11-44",
+          "12-36",
+          "15-37",
+          "18-38",
+          "2-49",
+          "2-50",
+          "20-42",
+          "21-39",
+          "21-55",
+          "22-54",
+          "23-53",
+          "32-34",
+          "33-34",
+          "8-52"
+        ],
+        "hops_median": 4.5,
+        "information_eigenvalue_median": 3848.6935823996278,
+        "match_response_mean": 0.7064726666666666,
+        "nontarget_historical_count": 12,
+        "phase_counts": {
+          "UNIDENTIFIABLE": 42
+        },
+        "target_historical_count": 3
+      },
+      "A3_MIN_TRIGGER": {
+        "covariance_eigenvalue_median": 0.00034297034394148234,
+        "factor_count": 33,
+        "family_counts": {
+          "NEAR_CHAIN": 1,
+          "PREVIOUS_SCAN": 19,
+          "RUNNING_SCAN_CHAIN": 13
+        },
+        "geodesic_median_m": 10.739715702050592,
+        "historical_endpoint_pairs": [
+          "0-35",
+          "11-44",
+          "12-36",
+          "15-37",
+          "18-38",
+          "20-42",
+          "21-39",
+          "21-52",
+          "32-34",
+          "33-34"
+        ],
+        "hops_median": 4.0,
+        "information_eigenvalue_median": 2915.718993362342,
+        "match_response_mean": 0.6529269999999999,
+        "nontarget_historical_count": 8,
+        "phase_counts": {
+          "UNIDENTIFIABLE": 33
+        },
+        "target_historical_count": 2
+      },
+      "pre_existing_target_connectivity": {
+        "pre_graph_connected_components": 1,
+        "pre_graph_cycle_rank": 7,
+        "pre_graph_edges": 40,
+        "pre_graph_nodes": 34,
+        "pre_target_degree_by_state": {
+          "18": 2,
+          "19": 2,
+          "20": 2,
+          "22": 2,
+          "24": 3
+        },
+        "pre_target_incident_edges": 9,
+        "pre_target_internal_edges": 2,
+        "target_state_ids": [
+          18,
+          19,
+          20,
+          22,
+          24
+        ]
+      }
+    }
+  },
+  "boundary_convention": "left-closed/right-open; final phase closed at end",
+  "branch_summaries": [
+    {
+      "arm": "A1_DWELL",
+      "block": "target_A_H1",
+      "factor_phase_status": "PHASE_FACTOR_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "keyscan_phase_status": "PHASE_KEYSCAN_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "mapped_factors": 42,
+      "mapped_keyscans": 26,
+      "new_factors": 42,
+      "new_keyscans": 26,
+      "phase_factor_counts": {
+        "UNIDENTIFIABLE": 42
+      },
+      "phase_keyscan_counts": {
+        "UNIDENTIFIABLE": 26
+      },
+      "target": "target_A",
+      "timestamp_domains_compatible": false
+    },
+    {
+      "arm": "A3_MIN_TRIGGER",
+      "block": "target_A_H1",
+      "factor_phase_status": "PHASE_FACTOR_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "keyscan_phase_status": "PHASE_KEYSCAN_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "mapped_factors": 44,
+      "mapped_keyscans": 27,
+      "new_factors": 44,
+      "new_keyscans": 27,
+      "phase_factor_counts": {
+        "UNIDENTIFIABLE": 44
+      },
+      "phase_keyscan_counts": {
+        "UNIDENTIFIABLE": 27
+      },
+      "target": "target_A",
+      "timestamp_domains_compatible": false
+    },
+    {
+      "arm": "A2_SWEEP90",
+      "block": "target_A_H1",
+      "factor_phase_status": "PHASE_FACTOR_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "keyscan_phase_status": "PHASE_KEYSCAN_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "mapped_factors": 46,
+      "mapped_keyscans": 28,
+      "new_factors": 46,
+      "new_keyscans": 28,
+      "phase_factor_counts": {
+        "UNIDENTIFIABLE": 46
+      },
+      "phase_keyscan_counts": {
+        "UNIDENTIFIABLE": 28
+      },
+      "target": "target_A",
+      "timestamp_domains_compatible": false
+    },
+    {
+      "arm": "A1_DWELL",
+      "block": "target_A_H2",
+      "factor_phase_status": "PHASE_FACTOR_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "keyscan_phase_status": "PHASE_KEYSCAN_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "mapped_factors": 44,
+      "mapped_keyscans": 26,
+      "new_factors": 44,
+      "new_keyscans": 26,
+      "phase_factor_counts": {
+        "UNIDENTIFIABLE": 44
+      },
+      "phase_keyscan_counts": {
+        "UNIDENTIFIABLE": 26
+      },
+      "target": "target_A",
+      "timestamp_domains_compatible": false
+    },
+    {
+      "arm": "A3_MIN_TRIGGER",
+      "block": "target_A_H2",
+      "factor_phase_status": "PHASE_FACTOR_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "keyscan_phase_status": "PHASE_KEYSCAN_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "mapped_factors": 45,
+      "mapped_keyscans": 27,
+      "new_factors": 45,
+      "new_keyscans": 27,
+      "phase_factor_counts": {
+        "UNIDENTIFIABLE": 45
+      },
+      "phase_keyscan_counts": {
+        "UNIDENTIFIABLE": 27
+      },
+      "target": "target_A",
+      "timestamp_domains_compatible": false
+    },
+    {
+      "arm": "A2_SWEEP90",
+      "block": "target_A_H2",
+      "factor_phase_status": "PHASE_FACTOR_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "keyscan_phase_status": "PHASE_KEYSCAN_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "mapped_factors": 48,
+      "mapped_keyscans": 28,
+      "new_factors": 48,
+      "new_keyscans": 28,
+      "phase_factor_counts": {
+        "UNIDENTIFIABLE": 48
+      },
+      "phase_keyscan_counts": {
+        "UNIDENTIFIABLE": 28
+      },
+      "target": "target_A",
+      "timestamp_domains_compatible": false
+    },
+    {
+      "arm": "A1_DWELL",
+      "block": "target_A_H3",
+      "factor_phase_status": "PHASE_FACTOR_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "keyscan_phase_status": "PHASE_KEYSCAN_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "mapped_factors": 43,
+      "mapped_keyscans": 26,
+      "new_factors": 43,
+      "new_keyscans": 26,
+      "phase_factor_counts": {
+        "UNIDENTIFIABLE": 43
+      },
+      "phase_keyscan_counts": {
+        "UNIDENTIFIABLE": 26
+      },
+      "target": "target_A",
+      "timestamp_domains_compatible": false
+    },
+    {
+      "arm": "A3_MIN_TRIGGER",
+      "block": "target_A_H3",
+      "factor_phase_status": "PHASE_FACTOR_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "keyscan_phase_status": "PHASE_KEYSCAN_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "mapped_factors": 45,
+      "mapped_keyscans": 27,
+      "new_factors": 45,
+      "new_keyscans": 27,
+      "phase_factor_counts": {
+        "UNIDENTIFIABLE": 45
+      },
+      "phase_keyscan_counts": {
+        "UNIDENTIFIABLE": 27
+      },
+      "target": "target_A",
+      "timestamp_domains_compatible": false
+    },
+    {
+      "arm": "A2_SWEEP90",
+      "block": "target_A_H3",
+      "factor_phase_status": "PHASE_FACTOR_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "keyscan_phase_status": "PHASE_KEYSCAN_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "mapped_factors": 46,
+      "mapped_keyscans": 28,
+      "new_factors": 46,
+      "new_keyscans": 28,
+      "phase_factor_counts": {
+        "UNIDENTIFIABLE": 46
+      },
+      "phase_keyscan_counts": {
+        "UNIDENTIFIABLE": 28
+      },
+      "target": "target_A",
+      "timestamp_domains_compatible": false
+    },
+    {
+      "arm": "A1_DWELL",
+      "block": "target_A_H4",
+      "factor_phase_status": "PHASE_FACTOR_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "keyscan_phase_status": "PHASE_KEYSCAN_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "mapped_factors": 42,
+      "mapped_keyscans": 26,
+      "new_factors": 42,
+      "new_keyscans": 26,
+      "phase_factor_counts": {
+        "UNIDENTIFIABLE": 42
+      },
+      "phase_keyscan_counts": {
+        "UNIDENTIFIABLE": 26
+      },
+      "target": "target_A",
+      "timestamp_domains_compatible": false
+    },
+    {
+      "arm": "A3_MIN_TRIGGER",
+      "block": "target_A_H4",
+      "factor_phase_status": "PHASE_FACTOR_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "keyscan_phase_status": "PHASE_KEYSCAN_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "mapped_factors": 44,
+      "mapped_keyscans": 28,
+      "new_factors": 44,
+      "new_keyscans": 28,
+      "phase_factor_counts": {
+        "UNIDENTIFIABLE": 44
+      },
+      "phase_keyscan_counts": {
+        "UNIDENTIFIABLE": 28
+      },
+      "target": "target_A",
+      "timestamp_domains_compatible": false
+    },
+    {
+      "arm": "A2_SWEEP90",
+      "block": "target_A_H4",
+      "factor_phase_status": "PHASE_FACTOR_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "keyscan_phase_status": "PHASE_KEYSCAN_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "mapped_factors": 47,
+      "mapped_keyscans": 29,
+      "new_factors": 47,
+      "new_keyscans": 29,
+      "phase_factor_counts": {
+        "UNIDENTIFIABLE": 47
+      },
+      "phase_keyscan_counts": {
+        "UNIDENTIFIABLE": 29
+      },
+      "target": "target_A",
+      "timestamp_domains_compatible": false
+    },
+    {
+      "arm": "A1_DWELL",
+      "block": "B-H1",
+      "factor_phase_status": "PHASE_FACTOR_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "keyscan_phase_status": "PHASE_KEYSCAN_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "mapped_factors": 34,
+      "mapped_keyscans": 19,
+      "new_factors": 34,
+      "new_keyscans": 19,
+      "phase_factor_counts": {
+        "UNIDENTIFIABLE": 34
+      },
+      "phase_keyscan_counts": {
+        "UNIDENTIFIABLE": 19
+      },
+      "target": "target_B",
+      "timestamp_domains_compatible": false
+    },
+    {
+      "arm": "A3_MIN_TRIGGER",
+      "block": "B-H1",
+      "factor_phase_status": "PHASE_FACTOR_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "keyscan_phase_status": "PHASE_KEYSCAN_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "mapped_factors": 35,
+      "mapped_keyscans": 20,
+      "new_factors": 35,
+      "new_keyscans": 20,
+      "phase_factor_counts": {
+        "UNIDENTIFIABLE": 35
+      },
+      "phase_keyscan_counts": {
+        "UNIDENTIFIABLE": 20
+      },
+      "target": "target_B",
+      "timestamp_domains_compatible": false
+    },
+    {
+      "arm": "A2_SWEEP90",
+      "block": "B-H1",
+      "factor_phase_status": "PHASE_FACTOR_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "keyscan_phase_status": "PHASE_KEYSCAN_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "mapped_factors": 44,
+      "mapped_keyscans": 25,
+      "new_factors": 44,
+      "new_keyscans": 25,
+      "phase_factor_counts": {
+        "UNIDENTIFIABLE": 44
+      },
+      "phase_keyscan_counts": {
+        "UNIDENTIFIABLE": 25
+      },
+      "target": "target_B",
+      "timestamp_domains_compatible": false
+    },
+    {
+      "arm": "A1_DWELL",
+      "block": "B-H2",
+      "factor_phase_status": "PHASE_FACTOR_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "keyscan_phase_status": "PHASE_KEYSCAN_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "mapped_factors": 33,
+      "mapped_keyscans": 19,
+      "new_factors": 33,
+      "new_keyscans": 19,
+      "phase_factor_counts": {
+        "UNIDENTIFIABLE": 33
+      },
+      "phase_keyscan_counts": {
+        "UNIDENTIFIABLE": 19
+      },
+      "target": "target_B",
+      "timestamp_domains_compatible": false
+    },
+    {
+      "arm": "A3_MIN_TRIGGER",
+      "block": "B-H2",
+      "factor_phase_status": "PHASE_FACTOR_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "keyscan_phase_status": "PHASE_KEYSCAN_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "mapped_factors": 35,
+      "mapped_keyscans": 20,
+      "new_factors": 35,
+      "new_keyscans": 20,
+      "phase_factor_counts": {
+        "UNIDENTIFIABLE": 35
+      },
+      "phase_keyscan_counts": {
+        "UNIDENTIFIABLE": 20
+      },
+      "target": "target_B",
+      "timestamp_domains_compatible": false
+    },
+    {
+      "arm": "A2_SWEEP90",
+      "block": "B-H2",
+      "factor_phase_status": "PHASE_FACTOR_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "keyscan_phase_status": "PHASE_KEYSCAN_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "mapped_factors": 43,
+      "mapped_keyscans": 25,
+      "new_factors": 43,
+      "new_keyscans": 25,
+      "phase_factor_counts": {
+        "UNIDENTIFIABLE": 43
+      },
+      "phase_keyscan_counts": {
+        "UNIDENTIFIABLE": 25
+      },
+      "target": "target_B",
+      "timestamp_domains_compatible": false
+    },
+    {
+      "arm": "A1_DWELL",
+      "block": "B-H3",
+      "factor_phase_status": "PHASE_FACTOR_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "keyscan_phase_status": "PHASE_KEYSCAN_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "mapped_factors": 31,
+      "mapped_keyscans": 18,
+      "new_factors": 31,
+      "new_keyscans": 18,
+      "phase_factor_counts": {
+        "UNIDENTIFIABLE": 31
+      },
+      "phase_keyscan_counts": {
+        "UNIDENTIFIABLE": 18
+      },
+      "target": "target_B",
+      "timestamp_domains_compatible": false
+    },
+    {
+      "arm": "A3_MIN_TRIGGER",
+      "block": "B-H3",
+      "factor_phase_status": "PHASE_FACTOR_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "keyscan_phase_status": "PHASE_KEYSCAN_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "mapped_factors": 33,
+      "mapped_keyscans": 19,
+      "new_factors": 33,
+      "new_keyscans": 19,
+      "phase_factor_counts": {
+        "UNIDENTIFIABLE": 33
+      },
+      "phase_keyscan_counts": {
+        "UNIDENTIFIABLE": 19
+      },
+      "target": "target_B",
+      "timestamp_domains_compatible": false
+    },
+    {
+      "arm": "A2_SWEEP90",
+      "block": "B-H3",
+      "factor_phase_status": "PHASE_FACTOR_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "keyscan_phase_status": "PHASE_KEYSCAN_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "mapped_factors": 42,
+      "mapped_keyscans": 24,
+      "new_factors": 42,
+      "new_keyscans": 24,
+      "phase_factor_counts": {
+        "UNIDENTIFIABLE": 42
+      },
+      "phase_keyscan_counts": {
+        "UNIDENTIFIABLE": 24
+      },
+      "target": "target_B",
+      "timestamp_domains_compatible": false
+    },
+    {
+      "arm": "A1_DWELL",
+      "block": "B-H4",
+      "factor_phase_status": "PHASE_FACTOR_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "keyscan_phase_status": "PHASE_KEYSCAN_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "mapped_factors": 28,
+      "mapped_keyscans": 18,
+      "new_factors": 28,
+      "new_keyscans": 18,
+      "phase_factor_counts": {
+        "UNIDENTIFIABLE": 28
+      },
+      "phase_keyscan_counts": {
+        "UNIDENTIFIABLE": 18
+      },
+      "target": "target_B",
+      "timestamp_domains_compatible": false
+    },
+    {
+      "arm": "A3_MIN_TRIGGER",
+      "block": "B-H4",
+      "factor_phase_status": "PHASE_FACTOR_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "keyscan_phase_status": "PHASE_KEYSCAN_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "mapped_factors": 30,
+      "mapped_keyscans": 19,
+      "new_factors": 30,
+      "new_keyscans": 19,
+      "phase_factor_counts": {
+        "UNIDENTIFIABLE": 30
+      },
+      "phase_keyscan_counts": {
+        "UNIDENTIFIABLE": 19
+      },
+      "target": "target_B",
+      "timestamp_domains_compatible": false
+    },
+    {
+      "arm": "A2_SWEEP90",
+      "block": "B-H4",
+      "factor_phase_status": "PHASE_FACTOR_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "keyscan_phase_status": "PHASE_KEYSCAN_ATTRIBUTION_NOT_IDENTIFIABLE",
+      "mapped_factors": 43,
+      "mapped_keyscans": 26,
+      "new_factors": 43,
+      "new_keyscans": 26,
+      "phase_factor_counts": {
+        "UNIDENTIFIABLE": 43
+      },
+      "phase_keyscan_counts": {
+        "UNIDENTIFIABLE": 26
+      },
+      "target": "target_B",
+      "timestamp_domains_compatible": false
+    }
+  ],
+  "graph_dump_contains_node_timestamps": false,
+  "interpretation_scope": "MECHANISM_HYPOTHESES_ONLY",
+  "mechanism_hypotheses_not_causal_conclusions": [
+    "factor-count increase alone does not explain the posterior contrast because A2 adds nine factors over A3 in both blocks",
+    "B-H3 has lower pre-existing global cycle rank than B-H1 and its A2 historical constraints differ in endpoints and information; either could affect marginal information utility",
+    "action-phase mediation remains untestable from these frozen artifacts because exact accepted-scan timestamps were not logged"
+  ],
+  "previously_observed_D_sweep_context": {
+    "B-H1": 0.008068837161202325,
+    "B-H3": 0.3982040704695704,
+    "source": "frozen post-hoc FULL summary; context only, not a new v14-T scientific endpoint"
+  },
+  "scientific_endpoint_created": false,
+  "status": "PHASE_ATTRIBUTION_PARTIALLY_UNIDENTIFIABLE",
+  "timestamp_basis": "graph nodes lack observed scan timestamps; provenance sim_time is replay wall-clock time and cannot be exactly mapped to scan time"
+}

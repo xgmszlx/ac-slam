@@ -1,0 +1,77 @@
+{
+  "T_W_M": {
+    "tx": -28.079336045418636,
+    "ty": -28.017228573919816,
+    "yaw": -6.161956936014969e-05
+  },
+  "action_id": "A1_DWELL",
+  "action_labels": [
+    "probe_approach_history_03",
+    "probe_arrival"
+  ],
+  "action_waypoints": [
+    [
+      -17.833567060137273,
+      -22.084975929827337,
+      -1.5374374293185096
+    ],
+    [
+      -17.641791073746376,
+      -27.83171393629869,
+      0.6359900126576363
+    ]
+  ],
+  "backend_started": false,
+  "canonical_terminal_gt_pose": [
+    -22.146331929501994,
+    -22.0028507536381,
+    3.117887699603338
+  ],
+  "core_action_start_index": 1,
+  "dwell_s": 0.0,
+  "hold_s": 0.0,
+  "protocol_id": "p1_confirmatory_v13c_20260921",
+  "protocol_role": "v14T_fixed_scan_technical_only",
+  "scientific_endpoint_read": false,
+  "scientific_treatment_scan_budget": 347,
+  "setup_waypoints": [
+    [
+      -21.84633838792469,
+      -27.927431780959218,
+      -0.04257767794792087
+    ],
+    [
+      -18.02173854638804,
+      -27.96345065749718,
+      -0.0004397409417521358
+    ],
+    [
+      -17.833567060137273,
+      -22.084975929827337,
+      1.566030290750246
+    ],
+    [
+      -22.146331929501994,
+      -22.0028507536381,
+      3.117887699603338
+    ]
+  ],
+  "source_action_specs_path": "results/realizability_pilot/p1_confirmatory_v13c_20260921/target_B/2/action_specs.json",
+  "source_action_specs_sha256": "1a336ff1013d0378b6d240a54c6dcdea2285125bae24131667990d1cd88909cf",
+  "source_v13T_history": "results/realizability_pilot/p1_v13_technical_20260920/histories/target_B/seed_82002/attempt_01",
+  "target_anchor_map": [
+    10.43753352052466,
+    0.18615779429485388,
+    0.6360516322269965
+  ],
+  "target_anchor_world_by_history_only_se2": [
+    -17.641791073746376,
+    -27.83171393629869,
+    0.6359900126576363
+  ],
+  "target_specific_budget_s": {
+    "A1_DWELL": 11.4,
+    "A2_SWEEP90": 0.0,
+    "A3_MIN_TRIGGER": 7.0
+  }
+}

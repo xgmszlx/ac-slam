@@ -1,0 +1,248 @@
+{
+  "action_id": "A3_MIN_TRIGGER",
+  "action_labels": [
+    "probe_approach_history_03",
+    "probe_arrival",
+    "min_trigger_peak",
+    "min_trigger_return"
+  ],
+  "action_waypoints": [
+    [
+      -17.80403806525161,
+      -22.09661813005152,
+      -1.514096724953849
+    ],
+    [
+      -17.48007276652384,
+      -27.804207737986825,
+      0.6657246585826211
+    ],
+    [
+      -17.48007276652384,
+      -27.804207737986825,
+      1.2096979399951135
+    ],
+    [
+      -17.48007276652384,
+      -27.804207737986825,
+      0.6657246585826211
+    ]
+  ],
+  "backend_started": false,
+  "branch_end_gt_pose": [
+    -17.482503150301103,
+    -27.766037985602978,
+    0.6773219064056855
+  ],
+  "branch_start_gt_pose": [
+    -22.00429089300796,
+    -21.853572580414873,
+    3.0910445188058304
+  ],
+  "completion_margin": 127,
+  "completion_scan_index": 220,
+  "duplicate_timestamp_count": 0,
+  "initial_gt_pose": [
+    -28.0,
+    -28.0,
+    0.0
+  ],
+  "maneuver_completion_time": 98.6,
+  "moves": [
+    {
+      "after": [
+        -21.810606739094332,
+        -27.92043715318269,
+        -0.005699424392846464
+      ],
+      "before": [
+        -28.0,
+        -28.0,
+        0.0
+      ],
+      "end_time": 16.6,
+      "heading_error_rad": 0.014457108428759295,
+      "label": "setup_01",
+      "position_error_m": 0.043713348298858624,
+      "start_time": 2.2,
+      "target": [
+        -21.76689733784506,
+        -27.91984973346279,
+        -0.02015653282160576
+      ]
+    },
+    {
+      "after": [
+        -17.867627681018178,
+        -27.936911964907345,
+        -0.0040577156695667084
+      ],
+      "before": [
+        -21.810606739094332,
+        -27.92043715318269,
+        -0.005699424392846464
+      ],
+      "end_time": 26.6,
+      "heading_error_rad": 0.00390410446795442,
+      "label": "setup_02",
+      "position_error_m": 0.03397326299258041,
+      "start_time": 16.6,
+      "target": [
+        -17.833654697710998,
+        -27.93704981835526,
+        -0.0001536112016122887
+      ]
+    },
+    {
+      "after": [
+        -17.804462232059546,
+        -22.139158998161555,
+        1.5608258496670464
+      ],
+      "before": [
+        -17.867627681018178,
+        -27.936911964907345,
+        -0.0040577156695667084
+      ],
+      "end_time": 43.2,
+      "heading_error_rad": 0.005838511341779817,
+      "label": "setup_03",
+      "position_error_m": 0.0425429827002796,
+      "start_time": 26.6,
+      "target": [
+        -17.80403806525161,
+        -22.09661813005152,
+        1.5549873383252666
+      ]
+    },
+    {
+      "after": [
+        -22.00429089300796,
+        -21.853572580414873,
+        3.0910445188058304
+      ],
+      "before": [
+        -17.804462232059546,
+        -22.139158998161555,
+        1.5608258496670464
+      ],
+      "end_time": 57.2,
+      "heading_error_rad": 0.017863463930735346,
+      "label": "setup_04",
+      "position_error_m": 0.04103028399818612,
+      "start_time": 43.2,
+      "target": [
+        -22.04522987754849,
+        -21.850836936110156,
+        3.1089079827365658
+      ]
+    },
+    {
+      "after": [
+        -17.84593778131821,
+        -22.09424134070748,
+        -1.4989137289067915
+      ],
+      "before": [
+        -22.00429089300796,
+        -21.853572580414873,
+        3.0910445188058304
+      ],
+      "end_time": 76.7,
+      "heading_error_rad": 0.015182996047057529,
+      "label": "probe_approach_history_03",
+      "position_error_m": 0.04196707440419864,
+      "start_time": 57.4,
+      "target": [
+        -17.80403806525161,
+        -22.09661813005152,
+        -1.514096724953849
+      ]
+    },
+    {
+      "after": [
+        -17.482503150301103,
+        -27.766037985602978,
+        0.6477400482381538
+      ],
+      "before": [
+        -17.84593778131821,
+        -22.09424134070748,
+        -1.4989137289067915
+      ],
+      "end_time": 94.1,
+      "heading_error_rad": 0.0179846103444673,
+      "label": "probe_arrival",
+      "position_error_m": 0.038247049067202804,
+      "start_time": 76.7,
+      "target": [
+        -17.48007276652384,
+        -27.804207737986825,
+        0.6657246585826211
+      ]
+    },
+    {
+      "after": [
+        -17.482503150301103,
+        -27.766037985602978,
+        1.1918374821727526
+      ],
+      "before": [
+        -17.482503150301103,
+        -27.766037985602978,
+        0.6477400482381538
+      ],
+      "end_time": 96.4,
+      "heading_error_rad": 0.017860457822360898,
+      "label": "min_trigger_peak",
+      "position_error_m": 0.038247049067202804,
+      "start_time": 94.1,
+      "target": [
+        -17.48007276652384,
+        -27.804207737986825,
+        1.2096979399951135
+      ]
+    },
+    {
+      "after": [
+        -17.482503150301103,
+        -27.766037985602978,
+        0.6773219064056855
+      ],
+      "before": [
+        -17.482503150301103,
+        -27.766037985602978,
+        1.1918374821727526
+      ],
+      "end_time": 98.6,
+      "heading_error_rad": 0.011597247823064372,
+      "label": "min_trigger_return",
+      "position_error_m": 0.038247049067202804,
+      "start_time": 96.4,
+      "target": [
+        -17.48007276652384,
+        -27.804207737986825,
+        0.6657246585826211
+      ]
+    }
+  ],
+  "no_scientific_stream_contamination_after_N": true,
+  "nonmonotonic_timestamp_count": 0,
+  "raw_capture_start_time": 57.4,
+  "raw_exceeds_scientific_by": 198,
+  "raw_scan_count": 545,
+  "scientific_endpoint_read": false,
+  "scientific_stream_exact_first_N": true,
+  "scientific_treatment_scan_budget": 347,
+  "scientific_treatment_scan_count": 347,
+  "static_tail_scan_count": 127,
+  "status": "SUCCEEDED",
+  "technical_only": true,
+  "timestamp_inclusion": "treatment_start <= scan.stamp <= maneuver_completion",
+  "treatment_end_timestamp": 111.3,
+  "treatment_path_length_m": 5.683433632769507,
+  "treatment_raw_scan_count": 347,
+  "treatment_start_time": 76.7,
+  "treatment_yaw_excursion_rad": 3.2218576035742954,
+  "wall_clock_duration_s": 34.599999999999994
+}
