@@ -5,7 +5,9 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
+import confirmatory_v13c_protocol
 from confirmatory_v13c_analysis import analysis_preflight
 from confirmatory_v13c_collection import budget_gate
 from confirmatory_v13c_protocol import (ARMS, ARM_ORDERS,
@@ -131,7 +133,12 @@ class V13CProtocolBoundaryTest(unittest.TestCase):
                 analysis_preflight(temporary)
 
     def test_preregistration_has_eight_blocks_and_twenty_four_branches(self):
-        payload = preregistration_payload()
+        # The v13-C builder deliberately refuses execution after its frozen
+        # source commit.  Mock that historical provenance here so this schema
+        # unit test remains valid after later, separately committed phases.
+        with mock.patch('confirmatory_v13c_protocol.git_head', return_value=(
+                confirmatory_v13c_protocol.BASE_COMMIT)):
+            payload = preregistration_payload()
         self.assertEqual(payload['planned_blocks'], 8)
         self.assertEqual(payload['planned_branches'], 24)
         self.assertEqual(len(payload['blocks']), 8)

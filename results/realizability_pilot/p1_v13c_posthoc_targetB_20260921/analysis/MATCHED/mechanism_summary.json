@@ -1,0 +1,149 @@
+{
+  "arm_means": {
+    "A1_DWELL": {
+      "E_N_count": 7.25,
+      "E_T_count": 3.0,
+      "accepted_keyscan_count": 18.5,
+      "local_edge_count": 21.25,
+      "new_edge_count": 31.5
+    },
+    "A2_SWEEP90": {
+      "E_N_count": 11.75,
+      "E_T_count": 4.0,
+      "accepted_keyscan_count": 25.0,
+      "local_edge_count": 27.25,
+      "new_edge_count": 43.0
+    },
+    "A3_MIN_TRIGGER": {
+      "E_N_count": 8.5,
+      "E_T_count": 3.25,
+      "accepted_keyscan_count": 19.5,
+      "local_edge_count": 21.5,
+      "new_edge_count": 33.25
+    }
+  },
+  "constraint_counts_by_arm": {
+    "A1_DWELL": {
+      "E_N": 29,
+      "E_T": 12,
+      "all_new": 126,
+      "local": 85
+    },
+    "A2_SWEEP90": {
+      "E_N": 47,
+      "E_T": 16,
+      "all_new": 172,
+      "local": 109
+    },
+    "A3_MIN_TRIGGER": {
+      "E_N": 34,
+      "E_T": 13,
+      "all_new": 133,
+      "local": 86
+    }
+  },
+  "covariance_swap": {
+    "identifiable": false,
+    "verdict": "COUNTERFACTUAL_SWAP_NOT_IDENTIFIABLE"
+  },
+  "creation_provenance_by_arm": {
+    "A1_DWELL": {
+      "NEAR_CHAIN": 6,
+      "PREVIOUS_SCAN": 74,
+      "RUNNING_SCAN_CHAIN": 46
+    },
+    "A2_SWEEP90": {
+      "NEAR_CHAIN": 2,
+      "PREVIOUS_SCAN": 100,
+      "RUNNING_SCAN_CHAIN": 70
+    },
+    "A3_MIN_TRIGGER": {
+      "NEAR_CHAIN": 5,
+      "PREVIOUS_SCAN": 78,
+      "RUNNING_SCAN_CHAIN": 50
+    }
+  },
+  "graph_locality": {
+    "creation_provenance": {
+      "NEAR_CHAIN": 13,
+      "PREVIOUS_SCAN": 252,
+      "RUNNING_SCAN_CHAIN": 166
+    },
+    "explicit_TRY_CLOSE_LOOP_count": 431,
+    "explicit_loop_verdict": "EXPLICIT_TRY_CLOSE_LOOP_OBSERVED",
+    "historical_factor_count": 151,
+    "historical_insertion_geodesic_m": {
+      "max": 17.016648806142783,
+      "median": 10.2575331632784,
+      "min": 0.2153361797664532
+    },
+    "historical_insertion_hops": {
+      "count_ge_3": 120,
+      "count_ge_5": 61,
+      "max": 10,
+      "median": 4.0,
+      "min": 2
+    },
+    "matcher_type": {
+      "SEQUENTIAL_NEAR_CHAIN": 13,
+      "SEQUENTIAL_RUNNING_BUFFER": 418
+    }
+  },
+  "history_ablation": {
+    "analyzed_branches": 12,
+    "branches_disconnected_after_history_edge_removal": 12,
+    "verdict": "HISTORY_CONNECTIVITY_CRITICAL"
+  },
+  "matcher_type_by_arm": {
+    "A1_DWELL": {
+      "SEQUENTIAL_NEAR_CHAIN": 6,
+      "SEQUENTIAL_RUNNING_BUFFER": 120
+    },
+    "A2_SWEEP90": {
+      "SEQUENTIAL_NEAR_CHAIN": 2,
+      "SEQUENTIAL_RUNNING_BUFFER": 170
+    },
+    "A3_MIN_TRIGGER": {
+      "SEQUENTIAL_NEAR_CHAIN": 5,
+      "SEQUENTIAL_RUNNING_BUFFER": 128
+    }
+  },
+  "target_edge_identity_by_block": {
+    "B-H1": {
+      "all_arms_present": true,
+      "exact_target_edge_sets_equal": false,
+      "target_edge_counts": {
+        "A1_DWELL": 4,
+        "A2_SWEEP90": 3,
+        "A3_MIN_TRIGGER": 3
+      }
+    },
+    "B-H2": {
+      "all_arms_present": true,
+      "exact_target_edge_sets_equal": false,
+      "target_edge_counts": {
+        "A1_DWELL": 6,
+        "A2_SWEEP90": 8,
+        "A3_MIN_TRIGGER": 7
+      }
+    },
+    "B-H3": {
+      "all_arms_present": true,
+      "exact_target_edge_sets_equal": false,
+      "target_edge_counts": {
+        "A1_DWELL": 2,
+        "A2_SWEEP90": 3,
+        "A3_MIN_TRIGGER": 2
+      }
+    },
+    "B-H4": {
+      "all_arms_present": true,
+      "exact_target_edge_sets_equal": false,
+      "target_edge_counts": {
+        "A1_DWELL": 0,
+        "A2_SWEEP90": 2,
+        "A3_MIN_TRIGGER": 1
+      }
+    }
+  }
+}

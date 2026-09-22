@@ -1,0 +1,8 @@
+{
+  "amendment_scope": "REPLAY_INPUT_PATH_ONLY",
+  "backend_endpoint_generated_before_amendment": false,
+  "original_preregistration_sha256": "91ea8508f137ba2fccbea9438c455956f57356e50ff43916c1be19c1b0ea606a",
+  "reason": "The stitched combined input and unified replay output used the same path, so shutil.copy2 raised SameFileError before ROS or MultiMapper started.",
+  "scientific_inputs_or_rules_changed": false,
+  "status": "PREBACKEND_TECHNICAL_AMENDMENT"
+}

@@ -1,0 +1,63 @@
+{
+  "cause": "Frozen analysis used substring matching and therefore treated ADD_EDGES_BEFORE_TRY_CLOSE_LOOP as TRY_CLOSE_LOOP.",
+  "contrasts_changed": false,
+  "diagnostic_decision_changed": false,
+  "exact_rule": "creation_provenance, creation_stage, or matcher_type must equal TRY_CLOSE_LOOP exactly",
+  "modes": {
+    "FULL": {
+      "constraint_rows": 431,
+      "corrected_exact_classifier_positive": 0,
+      "corrected_verdict": "NO_EXPLICIT_TRY_CLOSE_LOOP_OBSERVED",
+      "frozen_substring_classifier_positive": 431,
+      "observed_provenance_stage_matcher_combinations": [
+        {
+          "count": 13,
+          "creation_provenance": "NEAR_CHAIN",
+          "creation_stage": "ADD_EDGES_BEFORE_TRY_CLOSE_LOOP",
+          "matcher_type": "SEQUENTIAL_NEAR_CHAIN"
+        },
+        {
+          "count": 252,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "creation_stage": "ADD_EDGES_BEFORE_TRY_CLOSE_LOOP",
+          "matcher_type": "SEQUENTIAL_RUNNING_BUFFER"
+        },
+        {
+          "count": 166,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "creation_stage": "ADD_EDGES_BEFORE_TRY_CLOSE_LOOP",
+          "matcher_type": "SEQUENTIAL_RUNNING_BUFFER"
+        }
+      ]
+    },
+    "MATCHED": {
+      "constraint_rows": 431,
+      "corrected_exact_classifier_positive": 0,
+      "corrected_verdict": "NO_EXPLICIT_TRY_CLOSE_LOOP_OBSERVED",
+      "frozen_substring_classifier_positive": 431,
+      "observed_provenance_stage_matcher_combinations": [
+        {
+          "count": 13,
+          "creation_provenance": "NEAR_CHAIN",
+          "creation_stage": "ADD_EDGES_BEFORE_TRY_CLOSE_LOOP",
+          "matcher_type": "SEQUENTIAL_NEAR_CHAIN"
+        },
+        {
+          "count": 252,
+          "creation_provenance": "PREVIOUS_SCAN",
+          "creation_stage": "ADD_EDGES_BEFORE_TRY_CLOSE_LOOP",
+          "matcher_type": "SEQUENTIAL_RUNNING_BUFFER"
+        },
+        {
+          "count": 166,
+          "creation_provenance": "RUNNING_SCAN_CHAIN",
+          "creation_stage": "ADD_EDGES_BEFORE_TRY_CLOSE_LOOP",
+          "matcher_type": "SEQUENTIAL_RUNNING_BUFFER"
+        }
+      ]
+    }
+  },
+  "primary_estimand_changed": false,
+  "scope": "explicit TRY_CLOSE_LOOP semantic classification only",
+  "status": "POST_ANALYSIS_MECHANISM_CLASSIFIER_CORRECTED"
+}
