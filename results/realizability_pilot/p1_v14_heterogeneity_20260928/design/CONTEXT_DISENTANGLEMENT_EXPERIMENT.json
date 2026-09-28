@@ -1,0 +1,37 @@
+{
+  "controls": [
+    "identical dose levels at both targets",
+    "common initial orientation",
+    "same final orientation",
+    "fixed N=347 sensing budget",
+    "fresh preregistered histories",
+    "full seed pool before outcome-blind selection",
+    "no outcome-driven replacement"
+  ],
+  "dose_levels": [
+    {
+      "cumulative_yaw_rad": 0.0,
+      "derivation": "static reference under the same N-scan budget",
+      "name": "ZERO"
+    },
+    {
+      "cumulative_yaw_rad": 1.087946562824985,
+      "derivation": "median v14 A3 planned post-arrival cumulative yaw; tied to the certified near-threshold package",
+      "name": "THRESHOLD"
+    },
+    {
+      "cumulative_yaw_rad": 3.141592653589793,
+      "derivation": "median v14 A2 planned post-arrival cumulative yaw, re-expressed with common initial/final orientation",
+      "name": "HIGH"
+    }
+  ],
+  "execution_authorized": false,
+  "factorial_structure": "Target A/B x three identical dose packages",
+  "motion_template": "start at anchor yaw; execute a symmetric scaled rotation template; return to anchor yaw",
+  "name": "CONTEXT_DISENTANGLEMENT_EXPERIMENT",
+  "primary_analysis": "target x dose interaction on historical endpoint realization and J_T; no branch pseudoreplication",
+  "primary_unit": "canonical-history block",
+  "purpose": "identify action dose x context interaction, not re-prove that broad sweep is universally effective",
+  "research_question": "How do controlled cumulative angular dose and target context interact to change realized historical measurement utility?",
+  "status": "DESIGN_ONLY_NOT_EXECUTED"
+}

@@ -1,0 +1,47 @@
+{
+  "H1_ACTION_DOSE": {
+    "pearson_r_with_D_sweep": 0.9389967239388438,
+    "spearman_rho_with_D_sweep": 0.7857142857142858,
+    "status": "MEASURED_ASSOCIATION_TARGET_CONFOUNDED",
+    "target_confounding": true
+  },
+  "H2_MEASUREMENT_REALIZATION": {
+    "historical_factor_sign_alignment": {
+      "aligned": 8,
+      "evaluable": 8,
+      "exact_all_aligned_probability_one_sided": 0.00390625
+    },
+    "historical_realization_target_confounding": true,
+    "keyscan_sign_alignment": {
+      "aligned": 4,
+      "evaluable": 8,
+      "exact_all_aligned_probability_one_sided": null
+    },
+    "local_factor_sign_alignment": {
+      "aligned": 4,
+      "evaluable": 8,
+      "exact_all_aligned_probability_one_sided": null
+    },
+    "status": "STRONGEST_MEASURED_SIGN_ASSOCIATION_NOT_CAUSAL",
+    "total_factor_sign_alignment": {
+      "aligned": 4,
+      "evaluable": 8,
+      "exact_all_aligned_probability_one_sided": null
+    }
+  },
+  "H3_PREGRAPH_CONTEXT": {
+    "J_pre_spearman_rho": 0.2380952380952381,
+    "note": "weak simple associations at n=8 do not rule out effect modification",
+    "pre_cycle_rank_spearman_rho": 0.39319337430967677,
+    "status": "NOT_RESOLVED"
+  },
+  "H4_SCENE_ASSOCIATION_GEOMETRY": {
+    "local_occupancy_descriptor_available": false,
+    "local_scan_descriptor_available": false,
+    "note": "target geometry and realized dose are not experimentally separated",
+    "status": "UNIDENTIFIED"
+  },
+  "audit_label": "EXPLORATORY_HETEROGENEITY_ONLY",
+  "causal_identification": false,
+  "ranked_direction": "MULTIFACTOR_INTERACTION_CANDIDATE"
+}

@@ -1,0 +1,68 @@
+{
+  "edges": [
+    {
+      "causal_identified": false,
+      "interpretation": "protocol and realized geometry can couple context to dose",
+      "source": "pregraph_scene_context",
+      "status": "INFERRED",
+      "target": "effective_action_dose"
+    },
+    {
+      "causal_identified": false,
+      "interpretation": "association only",
+      "source": "effective_action_dose",
+      "status": "MEASURED",
+      "target": "accepted_keyscan_realization"
+    },
+    {
+      "causal_identified": false,
+      "interpretation": "association only",
+      "source": "accepted_keyscan_realization",
+      "status": "MEASURED",
+      "target": "historical_factor_realization"
+    },
+    {
+      "causal_identified": false,
+      "interpretation": "8/8 sign alignment; association only",
+      "source": "historical_factor_realization",
+      "status": "MEASURED",
+      "target": "posterior_information_effect"
+    },
+    {
+      "role": "candidate effect modification",
+      "source": "pregraph_scene_context",
+      "status": "UNIDENTIFIED",
+      "target": "accepted_keyscan_realization"
+    },
+    {
+      "role": "candidate factor-utility modification",
+      "source": "pregraph_scene_context",
+      "status": "UNIDENTIFIED",
+      "target": "posterior_information_effect"
+    }
+  ],
+  "label": "EXPLORATORY_NONIDENTIFIED_DAG",
+  "nodes": [
+    {
+      "id": "pregraph_scene_context",
+      "measurement": "MEASURED"
+    },
+    {
+      "id": "effective_action_dose",
+      "measurement": "MEASURED"
+    },
+    {
+      "id": "accepted_keyscan_realization",
+      "measurement": "MEASURED"
+    },
+    {
+      "id": "historical_factor_realization",
+      "measurement": "MEASURED"
+    },
+    {
+      "id": "posterior_information_effect",
+      "measurement": "MEASURED"
+    }
+  ],
+  "warning": "The DAG is a hypothesis map, not an identified causal graph."
+}

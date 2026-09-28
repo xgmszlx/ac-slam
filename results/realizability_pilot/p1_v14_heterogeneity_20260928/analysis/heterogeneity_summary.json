@@ -1,0 +1,59 @@
+{
+  "audit_id": "V14_H_CONTEXT_DEPENDENT_REALIZATION_AUDIT",
+  "audit_label": "EXPLORATORY_HETEROGENEITY_ONLY",
+  "block_count": 8,
+  "causal_claim": false,
+  "historical_alignment_label": "HISTORICAL_REALIZATION_SIGN_ALIGNMENT = 8/8",
+  "new_experiment_executed": false,
+  "ranked_direction": "MULTIFACTOR_INTERACTION_CANDIDATE",
+  "scientific_role": "POST_CONFIRMATORY_EXPLORATORY",
+  "sign_alignment": {
+    "Delta_accepted_keyscans": {
+      "aligned": 4,
+      "evaluable": 8,
+      "exact_all_aligned_probability_one_sided": null
+    },
+    "Delta_historical_factors": {
+      "aligned": 8,
+      "evaluable": 8,
+      "exact_all_aligned_probability_one_sided": 0.00390625
+    },
+    "Delta_local_factors": {
+      "aligned": 4,
+      "evaluable": 8,
+      "exact_all_aligned_probability_one_sided": null
+    },
+    "Delta_total_factors": {
+      "aligned": 4,
+      "evaluable": 8,
+      "exact_all_aligned_probability_one_sided": null
+    }
+  },
+  "target_A_positive_D_sweep": 0,
+  "target_B_positive_D_sweep": 4,
+  "target_confounded_features": [
+    "Delta_yaw_excursion_full_treatment_rad",
+    "Delta_completion_scan_index",
+    "Delta_historical_factors",
+    "historical_endpoint_novelty",
+    "nonlocal_historical_gain"
+  ],
+  "target_feature_confounding_label": "TARGET_FEATURE_CONFOUNDING_NOT_IDENTIFIABLE",
+  "trigger_summary": {
+    "target_A": {
+      "mean_D_trigger": 0.08476076170208602,
+      "median_D_trigger": 0.08714361085548372,
+      "n": 4,
+      "positive": 3
+    },
+    "target_B": {
+      "mean_D_trigger": 0.004397519692429297,
+      "median_D_trigger": 0.004024747326312195,
+      "n": 4,
+      "positive": 4
+    }
+  },
+  "universal_broad_sweep_hypothesis": "STOPPED",
+  "v14_data_modified": false,
+  "v14_prospective_gate_unchanged": "V14_PROSPECTIVE_NO_SUPPORT"
+}
