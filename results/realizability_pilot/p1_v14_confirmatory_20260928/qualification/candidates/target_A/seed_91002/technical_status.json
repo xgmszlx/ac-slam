@@ -1,0 +1,15 @@
+{
+  "action_branch_launched": false,
+  "attempt_count": 1,
+  "failure_reasons": [
+    "RuntimeError: prefix numerics are not exactly repeatable"
+  ],
+  "finished_utc": "2026-09-28T01:58:16Z",
+  "scientific_endpoints_read": [],
+  "seed": 91002,
+  "started_utc": "2026-09-28T01:56:10Z",
+  "status": "TECHNICALLY_INELIGIBLE",
+  "target_id": "map3_grid_anchor_01",
+  "target_label": "target_A",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/wcqw/ac-slam/tools/realizability_pilot/v14_history_qualification.py\", line 106, in candidate_record\n    raise RuntimeError('prefix numerics are not exactly repeatable')\nRuntimeError: prefix numerics are not exactly repeatable\n"
+}

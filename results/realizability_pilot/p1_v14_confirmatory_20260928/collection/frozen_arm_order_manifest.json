@@ -1,0 +1,105 @@
+{
+  "blocks": [
+    {
+      "arm_order": [
+        "A1_DWELL",
+        "A3_MIN_TRIGGER",
+        "A2_SWEEP90"
+      ],
+      "block_id": "target_A_H1",
+      "seed": 91001,
+      "target_label": "target_A"
+    },
+    {
+      "arm_order": [
+        "A3_MIN_TRIGGER",
+        "A2_SWEEP90",
+        "A1_DWELL"
+      ],
+      "block_id": "target_A_H2",
+      "seed": 91004,
+      "target_label": "target_A"
+    },
+    {
+      "arm_order": [
+        "A2_SWEEP90",
+        "A1_DWELL",
+        "A3_MIN_TRIGGER"
+      ],
+      "block_id": "target_A_H3",
+      "seed": 91005,
+      "target_label": "target_A"
+    },
+    {
+      "arm_order": [
+        "A1_DWELL",
+        "A2_SWEEP90",
+        "A3_MIN_TRIGGER"
+      ],
+      "block_id": "target_A_H4",
+      "seed": 91006,
+      "target_label": "target_A"
+    },
+    {
+      "arm_order": [
+        "A3_MIN_TRIGGER",
+        "A1_DWELL",
+        "A2_SWEEP90"
+      ],
+      "block_id": "target_B_H1",
+      "seed": 92001,
+      "target_label": "target_B"
+    },
+    {
+      "arm_order": [
+        "A2_SWEEP90",
+        "A3_MIN_TRIGGER",
+        "A1_DWELL"
+      ],
+      "block_id": "target_B_H2",
+      "seed": 92002,
+      "target_label": "target_B"
+    },
+    {
+      "arm_order": [
+        "A1_DWELL",
+        "A3_MIN_TRIGGER",
+        "A2_SWEEP90"
+      ],
+      "block_id": "target_B_H3",
+      "seed": 92003,
+      "target_label": "target_B"
+    },
+    {
+      "arm_order": [
+        "A3_MIN_TRIGGER",
+        "A2_SWEEP90",
+        "A1_DWELL"
+      ],
+      "block_id": "target_B_H4",
+      "seed": 92004,
+      "target_label": "target_B"
+    }
+  ],
+  "frozen_utc": "2026-09-28T03:02:32Z",
+  "history_property_used": false,
+  "max_position_count_difference": 1,
+  "position_counts": {
+    "A1_DWELL": {
+      "1": 3,
+      "2": 2,
+      "3": 3
+    },
+    "A2_SWEEP90": {
+      "1": 2,
+      "2": 3,
+      "3": 3
+    },
+    "A3_MIN_TRIGGER": {
+      "1": 3,
+      "2": 3,
+      "3": 2
+    }
+  },
+  "protocol_id": "p1_v14_confirmatory_20260928"
+}

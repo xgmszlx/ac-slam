@@ -1,0 +1,248 @@
+{
+  "action_id": "A3_MIN_TRIGGER",
+  "action_labels": [
+    "probe_approach_history_03",
+    "probe_arrival",
+    "min_trigger_peak",
+    "min_trigger_return"
+  ],
+  "action_waypoints": [
+    [
+      -17.731923807876647,
+      -22.076379711774397,
+      -1.5355983731788063
+    ],
+    [
+      -17.530856078123634,
+      -27.78650397321324,
+      0.6112175152735242
+    ],
+    [
+      -17.530856078123634,
+      -27.78650397321324,
+      1.1551907966860164
+    ],
+    [
+      -17.530856078123634,
+      -27.78650397321324,
+      0.6112175152735242
+    ]
+  ],
+  "backend_started": false,
+  "branch_end_gt_pose": [
+    -17.53214793150031,
+    -27.755496829368095,
+    0.6281105512912047
+  ],
+  "branch_start_gt_pose": [
+    -21.91245174451595,
+    -21.91783212192826,
+    3.094479588546382
+  ],
+  "completion_margin": 127,
+  "completion_scan_index": 220,
+  "duplicate_timestamp_count": 0,
+  "initial_gt_pose": [
+    -28.0,
+    -28.0,
+    0.0
+  ],
+  "maneuver_completion_time": 98.2,
+  "moves": [
+    {
+      "after": [
+        -21.621316828356463,
+        -27.95004097256784,
+        -0.010865928404855736
+      ],
+      "before": [
+        -28.0,
+        -28.0,
+        0.0
+      ],
+      "end_time": 17.0,
+      "heading_error_rad": 0.01439625714054606,
+      "label": "setup_01",
+      "position_error_m": 0.03836813294047049,
+      "start_time": 2.2,
+      "target": [
+        -21.58294998262283,
+        -27.94972668959163,
+        -0.025262185545401796
+      ]
+    },
+    {
+      "after": [
+        -18.03740615999503,
+        -27.980364246985317,
+        -0.008240366885221248
+      ],
+      "before": [
+        -21.621316828356463,
+        -27.95004097256784,
+        -0.010865928404855736
+      ],
+      "end_time": 26.3,
+      "heading_error_rad": 0.004451829814415793,
+      "label": "setup_02",
+      "position_error_m": 0.03926651319654545,
+      "start_time": 17.0,
+      "target": [
+        -17.99814097995948,
+        -27.980687813655983,
+        -0.0037885370708054546
+      ]
+    },
+    {
+      "after": [
+        -17.734128545541935,
+        -22.11973250364413,
+        1.519984376594049
+      ],
+      "before": [
+        -18.03740615999503,
+        -27.980364246985317,
+        -0.008240366885221248
+      ],
+      "end_time": 43.0,
+      "heading_error_rad": 0.01288073219820185,
+      "label": "setup_03",
+      "position_error_m": 0.04340881743463098,
+      "start_time": 26.3,
+      "target": [
+        -17.731923807876647,
+        -22.076379711774397,
+        1.532865108792251
+      ]
+    },
+    {
+      "after": [
+        -21.91245174451595,
+        -21.91783212192826,
+        3.094479588546382
+      ],
+      "before": [
+        -17.734128545541935,
+        -22.11973250364413,
+        1.519984376594049
+      ],
+      "end_time": 56.7,
+      "heading_error_rad": 0.014024322444920134,
+      "label": "setup_04",
+      "position_error_m": 0.043690919273308225,
+      "start_time": 43.0,
+      "target": [
+        -21.956094183685995,
+        -21.91577447029702,
+        3.108503910991302
+      ]
+    },
+    {
+      "after": [
+        -17.770637401229504,
+        -22.074860677615547,
+        -1.5227908363998643
+      ],
+      "before": [
+        -21.91245174451595,
+        -21.91783212192826,
+        3.094479588546382
+      ],
+      "end_time": 76.2,
+      "heading_error_rad": 0.012807536778941975,
+      "label": "probe_approach_history_03",
+      "position_error_m": 0.03874338362954459,
+      "start_time": 56.9,
+      "target": [
+        -17.731923807876647,
+        -22.076379711774397,
+        -1.5355983731788063
+      ]
+    },
+    {
+      "after": [
+        -17.53214793150031,
+        -27.755496829368095,
+        0.594892026926952
+      ],
+      "before": [
+        -17.770637401229504,
+        -22.074860677615547,
+        -1.5227908363998643
+      ],
+      "end_time": 93.7,
+      "heading_error_rad": 0.016325488346572214,
+      "label": "probe_arrival",
+      "position_error_m": 0.03103404347777316,
+      "start_time": 76.2,
+      "target": [
+        -17.530856078123634,
+        -27.78650397321324,
+        0.6112175152735242
+      ]
+    },
+    {
+      "after": [
+        -17.53214793150031,
+        -27.755496829368095,
+        1.1374284739986342
+      ],
+      "before": [
+        -17.53214793150031,
+        -27.755496829368095,
+        0.594892026926952
+      ],
+      "end_time": 96.0,
+      "heading_error_rad": 0.0177623226873822,
+      "label": "min_trigger_peak",
+      "position_error_m": 0.03103404347777316,
+      "start_time": 93.7,
+      "target": [
+        -17.530856078123634,
+        -27.78650397321324,
+        1.1551907966860164
+      ]
+    },
+    {
+      "after": [
+        -17.53214793150031,
+        -27.755496829368095,
+        0.6281105512912047
+      ],
+      "before": [
+        -17.53214793150031,
+        -27.755496829368095,
+        1.1374284739986342
+      ],
+      "end_time": 98.2,
+      "heading_error_rad": 0.01689303601768055,
+      "label": "min_trigger_return",
+      "position_error_m": 0.03103404347777316,
+      "start_time": 96.0,
+      "target": [
+        -17.530856078123634,
+        -27.78650397321324,
+        0.6112175152735242
+      ]
+    }
+  ],
+  "no_scientific_stream_contamination_after_N": true,
+  "nonmonotonic_timestamp_count": 0,
+  "raw_capture_start_time": 56.9,
+  "raw_exceeds_scientific_by": 199,
+  "raw_scan_count": 546,
+  "scientific_endpoint_read": false,
+  "scientific_stream_exact_first_N": true,
+  "scientific_treatment_scan_budget": 347,
+  "scientific_treatment_scan_count": 347,
+  "static_tail_scan_count": 127,
+  "status": "SUCCEEDED",
+  "technical_only": true,
+  "timestamp_inclusion": "treatment_start <= scan.stamp <= maneuver_completion",
+  "treatment_end_timestamp": 110.9,
+  "treatment_path_length_m": 5.685643123946014,
+  "treatment_raw_scan_count": 347,
+  "treatment_start_time": 76.2,
+  "treatment_yaw_excursion_rad": 3.1822701997219838,
+  "wall_clock_duration_s": 34.7
+}
