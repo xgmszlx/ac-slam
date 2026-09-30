@@ -1,0 +1,353 @@
+{
+  "arms": [
+    "D0_ZERO",
+    "D1_THRESHOLD",
+    "D2_HIGH"
+  ],
+  "base_commit": "ae8cbb1afd766ddaab03540a7cb7f6dd41aa110d",
+  "code_bundle_sha256": "d9197d84dc0a1c901e233534532f487129ba8783faaf7fd3b0dab9be8191f96c",
+  "code_hashes": {
+    "tools/realizability_pilot/context_disentangle_capture.py": "8098561b041134ab35b3c096ade6b2b7182ba99d12204b398d1227f278c5ace8",
+    "tools/realizability_pilot/context_disentangle_protocol.py": "32d96ccf6857bfdd7c68b6b3531ed12eae6092405b9b374e2e323d9ccd436b86",
+    "tools/realizability_pilot/context_disentangle_technical.py": "139bc628e632396066f0ff1fb5b6cb8399bdc841a77fb898c1578ef9aea51e71",
+    "tools/realizability_pilot/controlled_probe_capture.py": "ef15e74e3d627db39c327c32cd321124208c61021b1197db8af5ff67209244a8",
+    "tools/realizability_pilot/fixed_scan_capture.py": "d22224e9aeba74848157b2a0b166f14f780b315a9ca73d2bdb8ee3d27f57c0be",
+    "tools/realizability_pilot/test_context_disentangle.py": "5fc66a8132bfd6db2b718e689b1cb3a773d3f84217dbf28ddf310e2c2c4a8377"
+  },
+  "dose_definition": {
+    "arms": {
+      "D0_ZERO": {
+        "arm": "D0_ZERO",
+        "direction_semantics": "positive-outbound_then_negative-return",
+        "dose_rad": 0.0,
+        "final_heading_rad": 0.0,
+        "headings_rad": [
+          0.0
+        ],
+        "planned_cumulative_abs_yaw_rad": 0,
+        "post_start_labels": [],
+        "rotation_template": "theta0 -> theta0 + dose/2 -> theta0",
+        "theta0_rad": 0.0
+      },
+      "D1_THRESHOLD": {
+        "arm": "D1_THRESHOLD",
+        "direction_semantics": "positive-outbound_then_negative-return",
+        "dose_rad": 1.087946562824985,
+        "final_heading_rad": 0.0,
+        "headings_rad": [
+          0.0,
+          0.5439732814124925,
+          0.0
+        ],
+        "planned_cumulative_abs_yaw_rad": 1.087946562824985,
+        "post_start_labels": [
+          "dose_peak",
+          "dose_return"
+        ],
+        "rotation_template": "theta0 -> theta0 + dose/2 -> theta0",
+        "theta0_rad": 0.0
+      },
+      "D2_HIGH": {
+        "arm": "D2_HIGH",
+        "direction_semantics": "positive-outbound_then_negative-return",
+        "dose_rad": 3.141592653589793,
+        "final_heading_rad": 0.0,
+        "headings_rad": [
+          0.0,
+          1.5707963267948966,
+          0.0
+        ],
+        "planned_cumulative_abs_yaw_rad": 3.141592653589793,
+        "post_start_labels": [
+          "dose_peak",
+          "dose_return"
+        ],
+        "rotation_template": "theta0 -> theta0 + dose/2 -> theta0",
+        "theta0_rad": 0.0
+      }
+    },
+    "common_geometry": {
+      "finish": "same anchor x, y, theta0 within each block",
+      "fixed_direction": "positive outbound and negative return for every target/block/dose; no direction factor",
+      "start": "same anchor x, y, theta0 within each block",
+      "template": "theta0 -> theta0 + dose/2 -> theta0"
+    },
+    "controller_lock": {
+      "acceleration_semantics": "same unclipped proportional law for D1/D2",
+      "controller_period_s": 0.05,
+      "heading_tolerance_rad": 0.018,
+      "max_angular_velocity_rad_s": 0.65,
+      "only_planned_difference": "cumulative angular dose",
+      "proportional_gain": 1.8,
+      "stable_cycles": 3,
+      "zero_twist_hold": true
+    },
+    "dose_sources": {
+      "D1_THRESHOLD": "v14 A3 median planned post-arrival cumulative angular path",
+      "D2_HIGH": "v14 A2 median planned post-arrival cumulative angular path, standardized to pi"
+    },
+    "intervention_name": "STANDARDIZED_CONTROLLED_ANGULAR_DOSE",
+    "not_a1_a3_a2_replication": true,
+    "protocol_id": "CONTEXT_DISENTANGLEMENT_TECHNICAL_AND_STATISTICAL_CERTIFICATION"
+  },
+  "fixed_sensing_exposure": {
+    "automatic_N_change_allowed": false,
+    "candidate_N": 347,
+    "exact_first_N_required": true,
+    "minimum_completion_margin": 60
+  },
+  "formal_scientific_gate_unchanged": "V14_PROSPECTIVE_NO_SUPPORT",
+  "future_arm_orders": {
+    "target_A": [
+      [
+        "D0_ZERO",
+        "D1_THRESHOLD",
+        "D2_HIGH"
+      ],
+      [
+        "D1_THRESHOLD",
+        "D2_HIGH",
+        "D0_ZERO"
+      ],
+      [
+        "D2_HIGH",
+        "D0_ZERO",
+        "D1_THRESHOLD"
+      ],
+      [
+        "D0_ZERO",
+        "D2_HIGH",
+        "D1_THRESHOLD"
+      ],
+      [
+        "D1_THRESHOLD",
+        "D0_ZERO",
+        "D2_HIGH"
+      ],
+      [
+        "D2_HIGH",
+        "D1_THRESHOLD",
+        "D0_ZERO"
+      ],
+      [
+        "D0_ZERO",
+        "D1_THRESHOLD",
+        "D2_HIGH"
+      ],
+      [
+        "D1_THRESHOLD",
+        "D2_HIGH",
+        "D0_ZERO"
+      ]
+    ],
+    "target_B": [
+      [
+        "D1_THRESHOLD",
+        "D0_ZERO",
+        "D2_HIGH"
+      ],
+      [
+        "D2_HIGH",
+        "D1_THRESHOLD",
+        "D0_ZERO"
+      ],
+      [
+        "D0_ZERO",
+        "D2_HIGH",
+        "D1_THRESHOLD"
+      ],
+      [
+        "D1_THRESHOLD",
+        "D2_HIGH",
+        "D0_ZERO"
+      ],
+      [
+        "D2_HIGH",
+        "D0_ZERO",
+        "D1_THRESHOLD"
+      ],
+      [
+        "D0_ZERO",
+        "D1_THRESHOLD",
+        "D2_HIGH"
+      ],
+      [
+        "D1_THRESHOLD",
+        "D0_ZERO",
+        "D2_HIGH"
+      ],
+      [
+        "D2_HIGH",
+        "D1_THRESHOLD",
+        "D0_ZERO"
+      ]
+    ]
+  },
+  "future_repeated_measures": true,
+  "future_seed_pools": {
+    "target_A": [
+      101001,
+      101002,
+      101003,
+      101004,
+      101005,
+      101006,
+      101007,
+      101008,
+      101009,
+      101010,
+      101011,
+      101012,
+      101013,
+      101014,
+      101015,
+      101016
+    ],
+    "target_B": [
+      102001,
+      102002,
+      102003,
+      102004,
+      102005,
+      102006,
+      102007,
+      102008,
+      102009,
+      102010,
+      102011,
+      102012,
+      102013,
+      102014,
+      102015,
+      102016
+    ]
+  },
+  "heterogeneity_direction": "MULTIFACTOR_INTERACTION_CANDIDATE",
+  "manipulation_checks": {
+    "D0_max_yaw_rad": 0.03,
+    "completion_scan_raw_range_overlap_required": true,
+    "final_heading_tolerance_rad": 0.04,
+    "strict_dose_monotonicity": true,
+    "target_dose_overlap_min_fraction": 0.25,
+    "target_mean_dose_match_tolerance_rad": 0.06,
+    "yaw_tolerance_rad": 0.06
+  },
+  "pre_treatment_logging": {
+    "backend_input_changed": false,
+    "capture_side_only": true,
+    "laser_descriptors": [
+      "range_histogram",
+      "angular_range_profile",
+      "valid_return_ratio",
+      "range_entropy",
+      "bilateral_symmetry",
+      "range_quantiles",
+      "geometric_openness"
+    ],
+    "pregraph_descriptors_future_only": [
+      "local_degree",
+      "local_cycle_rank",
+      "local_connectivity"
+    ]
+  },
+  "primary_estimand": {
+    "C_HT_A": "mean Target-A block C_HT",
+    "C_HT_B": "mean Target-B block C_HT",
+    "C_HT_block": "J_T(D2_HIGH)-J_T(D1_THRESHOLD)",
+    "I_HT": "C_HT_B-C_HT_A",
+    "co_primary_contrasts": []
+  },
+  "protocol_id": "CONTEXT_DISENTANGLEMENT_TECHNICAL_AND_STATISTICAL_CERTIFICATION",
+  "provenance": {
+    "actual_branch_at_freeze": "research/phase4c-formal",
+    "expected_source_head": "ae8cbb1afd766ddaab03540a7cb7f6dd41aa110d",
+    "expected_v14_tree_oid": "82c934201e75dc42c9718455c860fa1cc4f2630e",
+    "heterogeneity_audit_commit": "ae8cbb1afd766ddaab03540a7cb7f6dd41aa110d",
+    "passed": true,
+    "source_branch": "research/phase4c-formal",
+    "source_head": "ae8cbb1afd766ddaab03540a7cb7f6dd41aa110d",
+    "source_remote_head": "ae8cbb1afd766ddaab03540a7cb7f6dd41aa110d",
+    "source_worktree_clean_at_task_start": true,
+    "v14_critical_failures": [],
+    "v14_critical_sha256_checked": 14,
+    "v14_tree_oid": "82c934201e75dc42c9718455c860fa1cc4f2630e",
+    "v14_worktree_clean": true,
+    "v14_worktree_status": "",
+    "v14h_tree_oid": "720779e2eb2efb1bf253df051207e675ae26e31b",
+    "v14h_worktree_clean": true,
+    "v14h_worktree_status": ""
+  },
+  "sample_size_recommendation": {
+    "candidate_seed_pools": {
+      "target_A": [
+        101001,
+        101002,
+        101003,
+        101004,
+        101005,
+        101006,
+        101007,
+        101008,
+        101009,
+        101010,
+        101011,
+        101012,
+        101013,
+        101014,
+        101015,
+        101016
+      ],
+      "target_B": [
+        102001,
+        102002,
+        102003,
+        102004,
+        102005,
+        102006,
+        102007,
+        102008,
+        102009,
+        102010,
+        102011,
+        102012,
+        102013,
+        102014,
+        102015,
+        102016
+      ]
+    },
+    "candidate_sizes": [
+      4,
+      6,
+      8,
+      10,
+      12
+    ],
+    "first_N_eligible_in_frozen_order": true,
+    "outcome_driven_replacement_allowed": false,
+    "qualification_pool_multiplier": 2.0,
+    "selected_blocks_per_target": 8,
+    "selection_checks": {
+      "half_scale_2x_power_at_least_0_80": true,
+      "observed_scale_2x_power_at_least_0_95": true,
+      "quarter_scale_2x_sign_stability_at_least_0_95": true
+    },
+    "selection_rule": "smallest candidate meeting all three conservative 2x-variance criteria",
+    "source": {
+      "observed_I_HT_scale": 0.40097152432150174,
+      "source_primary_table_sha256": "fc7ed001e28b6942945f20d1b514cfd8a08077699ae446a04d2b3de28f89b803",
+      "target_A_empirical_variance": 0.013082123882205527,
+      "target_B_empirical_variance": 0.000919390952213266,
+      "warning": "v14 scale is exploratory, target-confounded, and used only for design sensitivity"
+    },
+    "status": "FROZEN_DESIGN_RECOMMENDATION",
+    "total_selected_blocks": 16
+  },
+  "scientific_backend_endpoint_allowed": false,
+  "scientific_experiment_started": false,
+  "scientific_role": "TECHNICAL_AND_STATISTICAL_CERTIFICATION_ONLY",
+  "stop_rule": "no scientific collection until technical gate is CONTEXT_DISENTANGLEMENT_TECHNICALLY_READY",
+  "technical_branches": 24,
+  "technical_geometry_source": "frozen v14 Target A/B H1-H4 action specifications; no backend replay",
+  "universal_broad_sweep_hypothesis": "STOPPED"
+}

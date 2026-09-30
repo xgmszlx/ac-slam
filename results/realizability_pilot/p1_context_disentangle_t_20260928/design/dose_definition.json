@@ -1,0 +1,76 @@
+{
+  "arms": {
+    "D0_ZERO": {
+      "arm": "D0_ZERO",
+      "direction_semantics": "positive-outbound_then_negative-return",
+      "dose_rad": 0.0,
+      "final_heading_rad": 0.0,
+      "headings_rad": [
+        0.0
+      ],
+      "planned_cumulative_abs_yaw_rad": 0,
+      "post_start_labels": [],
+      "rotation_template": "theta0 -> theta0 + dose/2 -> theta0",
+      "theta0_rad": 0.0
+    },
+    "D1_THRESHOLD": {
+      "arm": "D1_THRESHOLD",
+      "direction_semantics": "positive-outbound_then_negative-return",
+      "dose_rad": 1.087946562824985,
+      "final_heading_rad": 0.0,
+      "headings_rad": [
+        0.0,
+        0.5439732814124925,
+        0.0
+      ],
+      "planned_cumulative_abs_yaw_rad": 1.087946562824985,
+      "post_start_labels": [
+        "dose_peak",
+        "dose_return"
+      ],
+      "rotation_template": "theta0 -> theta0 + dose/2 -> theta0",
+      "theta0_rad": 0.0
+    },
+    "D2_HIGH": {
+      "arm": "D2_HIGH",
+      "direction_semantics": "positive-outbound_then_negative-return",
+      "dose_rad": 3.141592653589793,
+      "final_heading_rad": 0.0,
+      "headings_rad": [
+        0.0,
+        1.5707963267948966,
+        0.0
+      ],
+      "planned_cumulative_abs_yaw_rad": 3.141592653589793,
+      "post_start_labels": [
+        "dose_peak",
+        "dose_return"
+      ],
+      "rotation_template": "theta0 -> theta0 + dose/2 -> theta0",
+      "theta0_rad": 0.0
+    }
+  },
+  "common_geometry": {
+    "finish": "same anchor x, y, theta0 within each block",
+    "fixed_direction": "positive outbound and negative return for every target/block/dose; no direction factor",
+    "start": "same anchor x, y, theta0 within each block",
+    "template": "theta0 -> theta0 + dose/2 -> theta0"
+  },
+  "controller_lock": {
+    "acceleration_semantics": "same unclipped proportional law for D1/D2",
+    "controller_period_s": 0.05,
+    "heading_tolerance_rad": 0.018,
+    "max_angular_velocity_rad_s": 0.65,
+    "only_planned_difference": "cumulative angular dose",
+    "proportional_gain": 1.8,
+    "stable_cycles": 3,
+    "zero_twist_hold": true
+  },
+  "dose_sources": {
+    "D1_THRESHOLD": "v14 A3 median planned post-arrival cumulative angular path",
+    "D2_HIGH": "v14 A2 median planned post-arrival cumulative angular path, standardized to pi"
+  },
+  "intervention_name": "STANDARDIZED_CONTROLLED_ANGULAR_DOSE",
+  "not_a1_a3_a2_replication": true,
+  "protocol_id": "CONTEXT_DISENTANGLEMENT_TECHNICAL_AND_STATISTICAL_CERTIFICATION"
+}

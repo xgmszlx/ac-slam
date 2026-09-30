@@ -1,0 +1,102 @@
+{
+  "T_W_M": {
+    "tx": -28.03017525504206,
+    "ty": -27.95136340615801,
+    "yaw": -0.007041688129847102
+  },
+  "action_id": "D1_THRESHOLD",
+  "action_labels": [
+    "probe_approach_history_03",
+    "probe_approach_history_02",
+    "probe_arrival",
+    "dose_peak",
+    "dose_return"
+  ],
+  "action_waypoints": [
+    [
+      -17.82365505383069,
+      -22.187701070350887,
+      -1.5923781972351332
+    ],
+    [
+      -17.948543553883503,
+      -27.973534588690132,
+      3.1249825501582964
+    ],
+    [
+      -22.22711865193462,
+      -27.902460477308498,
+      -0.04719778626724011
+    ],
+    [
+      -22.22711865193462,
+      -27.902460477308498,
+      0.4967754951452523
+    ],
+    [
+      -22.22711865193462,
+      -27.902460477308498,
+      -0.04719778626724011
+    ]
+  ],
+  "backend_started": false,
+  "canonical_terminal_gt_pose": [
+    -21.66563566810269,
+    -22.06050822555749,
+    -3.1220840756339543
+  ],
+  "controller_properties": {
+    "control_period_s": 0.05,
+    "heading_tolerance_rad": 0.018,
+    "max_angular_velocity_rad_s": 0.65,
+    "proportional_gain": 1.8,
+    "stable_cycles": 3,
+    "zero_twist_hold": true
+  },
+  "core_action_start_index": 2,
+  "hold_s": 0.0,
+  "not_old_A1_A3_A2_replication": true,
+  "planned_cumulative_yaw_rad": 1.087946562824985,
+  "protocol_id": "p1_v14_confirmatory_20260928",
+  "protocol_role": "CDT_TECHNICAL_CERTIFICATION_ONLY",
+  "scientific_endpoint_read": false,
+  "scientific_treatment_scan_budget": 347,
+  "setup_waypoints": [
+    [
+      -21.701793245626078,
+      -27.956793201282604,
+      -0.019225350301027344
+    ],
+    [
+      -17.948543553883503,
+      -27.973534588690132,
+      -0.0002468470351434711
+    ],
+    [
+      -17.82365505383069,
+      -22.187701070350887,
+      1.5737297438962266
+    ],
+    [
+      -21.66563566810269,
+      -22.06050822555749,
+      -3.1220840756339543
+    ]
+  ],
+  "source_old_geometry": "results/realizability_pilot/p1_v14_confirmatory_20260928/collection/captures/target_A/target_A_H4/action_specs.json",
+  "source_old_geometry_sha256": "fd6a1aa1675c64d50ad7eaf372f79fec84cb592e301689ca42ffb3c29e50fad6",
+  "source_v14_history": "results/realizability_pilot/p1_v14_confirmatory_20260928/qualification/candidates/target_A/seed_91006/attempt_01",
+  "standardized_new_intervention": true,
+  "target_anchor_map": [
+    5.802568374014819,
+    0.08976469351556335,
+    -0.04015609813739301
+  ],
+  "target_anchor_world_by_history_only_se2": [
+    -22.22711865193462,
+    -27.902460477308498,
+    -0.04719778626724011
+  ],
+  "technical_only": true,
+  "theta0_rad": -0.04719778626724011
+}

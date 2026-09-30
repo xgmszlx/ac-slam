@@ -1,0 +1,54 @@
+{
+  "design": {
+    "blocks_per_target": 8,
+    "branch_count_not_independent_n": 48,
+    "context_factor": "between-context stratum Target A/B",
+    "dose_factor": "within-block repeated measure",
+    "independent_sample_count": 16
+  },
+  "inference": {
+    "branch_pseudoreplication_forbidden": true,
+    "mixed_model": "auxiliary only",
+    "primary": "block bootstrap or randomization/permutation respecting within-block pairing and target strata",
+    "report": [
+      "I_HT point estimate",
+      "95% interval",
+      "target-stratified paired contrasts",
+      "raw block points"
+    ]
+  },
+  "mechanistic_secondary": {
+    "H_HT": "HistoricalFactors(D2_HIGH)-HistoricalFactors(D1_THRESHOLD)",
+    "I_HIST_HT": "mean_B(H_HT)-mean_A(H_HT)",
+    "causal_mediation_claim_allowed": false,
+    "per_branch": [
+      "accepted_keyscans",
+      "E_T",
+      "E_N",
+      "historical_factor_total",
+      "historical_endpoint_set",
+      "endpoint_novelty",
+      "endpoint_loss",
+      "insertion_geodesic",
+      "hops",
+      "cycle_length",
+      "information_eigenvalues",
+      "matcher_response",
+      "provenance_family"
+    ]
+  },
+  "primary_estimand": {
+    "C_HT_A": "mean Target-A block C_HT",
+    "C_HT_B": "mean Target-B block C_HT",
+    "C_HT_block": "J_T(D2_HIGH)-J_T(D1_THRESHOLD)",
+    "I_HT": "C_HT_B-C_HT_A",
+    "co_primary_contrasts": []
+  },
+  "secondary_scientific_contrasts": {
+    "C_H0": "J_T(D2_HIGH)-J_T(D0_ZERO)",
+    "C_T0": "J_T(D1_THRESHOLD)-J_T(D0_ZERO)",
+    "target_interactions": "B-minus-A for C_T0 and C_H0"
+  },
+  "statistical_unit": "canonical-history block",
+  "status": "FUTURE_ANALYSIS_PLAN_FROZEN_DESIGN_ONLY"
+}

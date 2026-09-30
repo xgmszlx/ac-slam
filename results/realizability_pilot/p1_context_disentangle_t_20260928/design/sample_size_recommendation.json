@@ -1,0 +1,66 @@
+{
+  "candidate_seed_pools": {
+    "target_A": [
+      101001,
+      101002,
+      101003,
+      101004,
+      101005,
+      101006,
+      101007,
+      101008,
+      101009,
+      101010,
+      101011,
+      101012,
+      101013,
+      101014,
+      101015,
+      101016
+    ],
+    "target_B": [
+      102001,
+      102002,
+      102003,
+      102004,
+      102005,
+      102006,
+      102007,
+      102008,
+      102009,
+      102010,
+      102011,
+      102012,
+      102013,
+      102014,
+      102015,
+      102016
+    ]
+  },
+  "candidate_sizes": [
+    4,
+    6,
+    8,
+    10,
+    12
+  ],
+  "first_N_eligible_in_frozen_order": true,
+  "outcome_driven_replacement_allowed": false,
+  "qualification_pool_multiplier": 2.0,
+  "selected_blocks_per_target": 8,
+  "selection_checks": {
+    "half_scale_2x_power_at_least_0_80": true,
+    "observed_scale_2x_power_at_least_0_95": true,
+    "quarter_scale_2x_sign_stability_at_least_0_95": true
+  },
+  "selection_rule": "smallest candidate meeting all three conservative 2x-variance criteria",
+  "source": {
+    "observed_I_HT_scale": 0.40097152432150174,
+    "source_primary_table_sha256": "fc7ed001e28b6942945f20d1b514cfd8a08077699ae446a04d2b3de28f89b803",
+    "target_A_empirical_variance": 0.013082123882205527,
+    "target_B_empirical_variance": 0.000919390952213266,
+    "warning": "v14 scale is exploratory, target-confounded, and used only for design sensitivity"
+  },
+  "status": "FROZEN_DESIGN_RECOMMENDATION",
+  "total_selected_blocks": 16
+}

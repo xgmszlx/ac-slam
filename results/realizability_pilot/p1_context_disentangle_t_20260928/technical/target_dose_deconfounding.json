@@ -1,0 +1,96 @@
+{
+  "arms": {
+    "D0_ZERO": {
+      "actual_dose": {
+        "overlap_fraction_of_smaller_range": 1.0,
+        "raw_ranges_overlap": true,
+        "target_A_range": [
+          0.0,
+          0.0
+        ],
+        "target_B_range": [
+          0.0,
+          0.0
+        ],
+        "target_mean_absolute_difference": 0.0
+      },
+      "completion_scan_overlap_gate": true,
+      "completion_scans": {
+        "overlap_fraction_of_smaller_range": 1.0,
+        "raw_ranges_overlap": true,
+        "target_A_range": [
+          3,
+          3
+        ],
+        "target_B_range": [
+          3,
+          3
+        ],
+        "target_mean_absolute_difference": 0
+      },
+      "dose_overlap_gate": true
+    },
+    "D1_THRESHOLD": {
+      "actual_dose": {
+        "overlap_fraction_of_smaller_range": 1.0,
+        "raw_ranges_overlap": true,
+        "target_A_range": [
+          1.0501624432077032,
+          1.0569856958172557
+        ],
+        "target_B_range": [
+          1.0493444022102079,
+          1.0582664529017112
+        ],
+        "target_mean_absolute_difference": 0.0007245038145176075
+      },
+      "completion_scan_overlap_gate": true,
+      "completion_scans": {
+        "overlap_fraction_of_smaller_range": 1.0,
+        "raw_ranges_overlap": true,
+        "target_A_range": [
+          48,
+          50
+        ],
+        "target_B_range": [
+          49,
+          50
+        ],
+        "target_mean_absolute_difference": 1.0
+      },
+      "dose_overlap_gate": true
+    },
+    "D2_HIGH": {
+      "actual_dose": {
+        "overlap_fraction_of_smaller_range": 1.0,
+        "raw_ranges_overlap": true,
+        "target_A_range": [
+          3.1023207078303745,
+          3.119682669849169
+        ],
+        "target_B_range": [
+          3.1071235520646683,
+          3.1111386716644813
+        ],
+        "target_mean_absolute_difference": 0.0012988787546461822
+      },
+      "completion_scan_overlap_gate": true,
+      "completion_scans": {
+        "overlap_fraction_of_smaller_range": 1.0,
+        "raw_ranges_overlap": true,
+        "target_A_range": [
+          80,
+          82
+        ],
+        "target_B_range": [
+          81,
+          81
+        ],
+        "target_mean_absolute_difference": 0
+      },
+      "dose_overlap_gate": true
+    }
+  },
+  "dose_target_deconfounding_certified": true,
+  "machine_label": "DOSE_TARGET_DECONFOUNDING_TECHNICALLY_CERTIFIED"
+}
