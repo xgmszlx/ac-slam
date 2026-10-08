@@ -1,0 +1,303 @@
+{
+  "action_anchor": {
+    "id": 21,
+    "observed_time": 86.3,
+    "theta": 0.6436601612440667,
+    "unique_id": 21,
+    "x": 10.387733532588996,
+    "y": 0.1511334113994103
+  },
+  "allowed_inputs": [
+    "pose_graph_before.json nodes/full_pose_nodes",
+    "resolved_history_route.json",
+    "episode_result.json canonical_history_complete"
+  ],
+  "anchor_rule": "nearest legal post-route-start scan to the fixed target waypoint; ties use lower state id",
+  "anchor_to_waypoint_distance_m": 0.24100868718692953,
+  "candidate_segment": [
+    {
+      "arc_length_m": 0.0,
+      "normalized_progress": 0.0,
+      "state_id": 12,
+      "theta": 0.030820486997074584,
+      "unique_id": 12,
+      "x": 2.0618011393284825,
+      "y": -0.2627877745746684
+    },
+    {
+      "arc_length_m": 1.0478706565015818,
+      "normalized_progress": 0.06297883998837091,
+      "state_id": 13,
+      "theta": 0.21587097186321516,
+      "unique_id": 13,
+      "x": 3.0923970375668297,
+      "y": -0.07330160808394524
+    },
+    {
+      "arc_length_m": 2.098668709910906,
+      "normalized_progress": 0.12613362159729516,
+      "state_id": 14,
+      "theta": 0.10430966623557766,
+      "unique_id": 14,
+      "x": 4.131453788781024,
+      "y": 0.08334326672857247
+    },
+    {
+      "arc_length_m": 3.079984879276959,
+      "normalized_progress": 0.1851124217240572,
+      "state_id": 15,
+      "theta": -0.004967219759207659,
+      "unique_id": 15,
+      "x": 5.1123512578611825,
+      "y": 0.11200647330779676
+    },
+    {
+      "arc_length_m": 4.015211145758449,
+      "normalized_progress": 0.24132113892041507,
+      "state_id": 16,
+      "theta": -0.07440497813493806,
+      "unique_id": 16,
+      "x": 6.046786784619966,
+      "y": 0.07355629973289103
+    },
+    {
+      "arc_length_m": 4.977160208158026,
+      "normalized_progress": 0.29913594240015634,
+      "state_id": 17,
+      "theta": -0.024883160688550728,
+      "unique_id": 17,
+      "x": 7.007654814866168,
+      "y": 0.027964336601102577
+    },
+    {
+      "arc_length_m": 5.9499124267267804,
+      "normalized_progress": 0.357600034262511,
+      "state_id": 18,
+      "theta": -0.008189885711680334,
+      "unique_id": 18,
+      "x": 7.980338793227596,
+      "y": 0.01644231553632211
+    },
+    {
+      "arc_length_m": 6.906162806224158,
+      "normalized_progress": 0.41507233703721264,
+      "state_id": 19,
+      "theta": -0.0025427741657568777,
+      "unique_id": 19,
+      "x": 8.936582113480018,
+      "y": 0.012767977296233789
+    },
+    {
+      "arc_length_m": 7.868162851561839,
+      "normalized_progress": 0.4728902046797693,
+      "state_id": 20,
+      "theta": -0.0007658007371376676,
+      "unique_id": 20,
+      "x": 9.89858148889409,
+      "y": 0.011632665604902457
+    },
+    {
+      "arc_length_m": 8.376818117855354,
+      "normalized_progress": 0.5034612665053689,
+      "state_id": 21,
+      "theta": 0.6436601612440667,
+      "unique_id": 21,
+      "x": 10.387733532588996,
+      "y": 0.1511334113994103
+    },
+    {
+      "arc_length_m": 8.727870061611386,
+      "normalized_progress": 0.5245600958849702,
+      "state_id": 22,
+      "theta": 1.21123622248528,
+      "unique_id": 22,
+      "x": 10.502980293244066,
+      "y": 0.4827290256246308
+    },
+    {
+      "arc_length_m": 9.74590602758791,
+      "normalized_progress": 0.5857458193383737,
+      "state_id": 23,
+      "theta": 1.7540502020122246,
+      "unique_id": 23,
+      "x": 10.42498313797056,
+      "y": 1.4977727053699896
+    },
+    {
+      "arc_length_m": 10.759299278401064,
+      "normalized_progress": 0.6466525075753874,
+      "state_id": 24,
+      "theta": 1.7462584663575333,
+      "unique_id": 24,
+      "x": 10.21508355222446,
+      "y": 2.489189895405178
+    },
+    {
+      "arc_length_m": 11.708243791753866,
+      "normalized_progress": 0.7036857151506568,
+      "state_id": 25,
+      "theta": 1.6113531903477945,
+      "unique_id": 25,
+      "x": 10.137071661308468,
+      "y": 3.4349223281249706
+    },
+    {
+      "arc_length_m": 12.7014928646736,
+      "normalized_progress": 0.7633817034330763,
+      "state_id": 26,
+      "theta": 1.5372216549575555,
+      "unique_id": 26,
+      "x": 10.156399729817654,
+      "y": 4.427983326565458
+    },
+    {
+      "arc_length_m": 13.648249433208981,
+      "normalized_progress": 0.8202834117381785,
+      "state_id": 27,
+      "theta": 1.5602946181980801,
+      "unique_id": 27,
+      "x": 10.172110277268976,
+      "y": 5.3746095351418255
+    },
+    {
+      "arc_length_m": 14.530166314416247,
+      "normalized_progress": 0.8732881426178734,
+      "state_id": 28,
+      "theta": 2.2467622510921954,
+      "unique_id": 28,
+      "x": 10.054134098001821,
+      "y": 6.248599813396609
+    },
+    {
+      "arc_length_m": 14.754293560341402,
+      "normalized_progress": 0.8867585779913381,
+      "state_id": 29,
+      "theta": 2.740702106715929,
+      "unique_id": 29,
+      "x": 9.831481689859595,
+      "y": 6.274269396845947
+    },
+    {
+      "arc_length_m": 15.683037172844994,
+      "normalized_progress": 0.9425776764642009,
+      "state_id": 30,
+      "theta": -3.0131504497824486,
+      "unique_id": 30,
+      "x": 8.906521849760823,
+      "y": 6.190519817917599
+    },
+    {
+      "arc_length_m": 16.638455974976228,
+      "normalized_progress": 1.0,
+      "state_id": 31,
+      "theta": -3.0060153950277955,
+      "unique_id": 31,
+      "x": 7.958019432123168,
+      "y": 6.075766817079268
+    }
+  ],
+  "candidate_segment_state_ids": [
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "canonical_history_complete": true,
+  "distinct_states": true,
+  "exact_state_count": 5,
+  "fixed_target_waypoint": [
+    10.2,
+    0.0,
+    0.0
+  ],
+  "fixed_target_waypoint_index": 1,
+  "forbidden_future_inputs_accessed": false,
+  "historical_scan_ids": [
+    14,
+    17,
+    21,
+    25,
+    29
+  ],
+  "historical_unique_ids": [
+    14,
+    17,
+    21,
+    25,
+    29
+  ],
+  "protocol": "v13 block-local target selector v1",
+  "quantile_selections": [
+    {
+      "normalized_progress": 0.12613362159729516,
+      "quantile": 0.1,
+      "quantile_abs_error": 0.026133621597295154,
+      "segment_index": 2,
+      "state_id": 14,
+      "unique_id": 14
+    },
+    {
+      "normalized_progress": 0.29913594240015634,
+      "quantile": 0.3,
+      "quantile_abs_error": 0.0008640575998436484,
+      "segment_index": 5,
+      "state_id": 17,
+      "unique_id": 17
+    },
+    {
+      "normalized_progress": 0.5034612665053689,
+      "quantile": 0.5,
+      "quantile_abs_error": 0.0034612665053689318,
+      "segment_index": 9,
+      "state_id": 21,
+      "unique_id": 21
+    },
+    {
+      "normalized_progress": 0.7036857151506568,
+      "quantile": 0.7,
+      "quantile_abs_error": 0.003685715150656854,
+      "segment_index": 13,
+      "state_id": 25,
+      "unique_id": 25
+    },
+    {
+      "normalized_progress": 0.8867585779913381,
+      "quantile": 0.9,
+      "quantile_abs_error": 0.013241422008661963,
+      "segment_index": 17,
+      "state_id": 29,
+      "unique_id": 29
+    }
+  ],
+  "quantiles": [
+    0.1,
+    0.3,
+    0.5,
+    0.7,
+    0.9
+  ],
+  "route_start_node_count": 12,
+  "segment_arc_length_m": 16.638455974976228,
+  "segment_half_width_states": 10,
+  "segment_rule": "contiguous ordered post-route-start scan slice with at most 10 predecessors and 10 successors around the action anchor",
+  "selection_valid": true,
+  "strictly_ordered_states": true,
+  "target_id": "map3_grid_anchor_03",
+  "target_label": "target_B"
+}

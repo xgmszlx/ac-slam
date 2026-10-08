@@ -1,0 +1,224 @@
+{
+  "amendment_of": "p1_context_disentangle_confirmatory_20260930",
+  "arm_orders_exact_original": true,
+  "balance_validation": {
+    "checks": {
+      "target_A": {
+        "D0_ZERO": true,
+        "D1_THRESHOLD": true,
+        "D2_HIGH": true
+      },
+      "target_B": {
+        "D0_ZERO": true,
+        "D1_THRESHOLD": true,
+        "D2_HIGH": true
+      }
+    },
+    "maximum_position_count_difference_within_target": 1,
+    "passed": true,
+    "pooled_A_plus_B_balance_is_not_a_gate": true,
+    "position_counts": {
+      "target_A": {
+        "D0_ZERO": {
+          "1": 3,
+          "2": 2,
+          "3": 3
+        },
+        "D1_THRESHOLD": {
+          "1": 3,
+          "2": 3,
+          "3": 2
+        },
+        "D2_HIGH": {
+          "1": 2,
+          "2": 3,
+          "3": 3
+        }
+      },
+      "target_B": {
+        "D0_ZERO": {
+          "1": 2,
+          "2": 3,
+          "3": 3
+        },
+        "D1_THRESHOLD": {
+          "1": 3,
+          "2": 3,
+          "3": 2
+        },
+        "D2_HIGH": {
+          "1": 3,
+          "2": 2,
+          "3": 3
+        }
+      }
+    },
+    "validation_unit": "Target stratum"
+  },
+  "blocks": [
+    {
+      "arm_order": [
+        "D0_ZERO",
+        "D1_THRESHOLD",
+        "D2_HIGH"
+      ],
+      "block_id": "target_A_H1",
+      "seed": 101002,
+      "target_label": "target_A"
+    },
+    {
+      "arm_order": [
+        "D1_THRESHOLD",
+        "D2_HIGH",
+        "D0_ZERO"
+      ],
+      "block_id": "target_A_H2",
+      "seed": 101003,
+      "target_label": "target_A"
+    },
+    {
+      "arm_order": [
+        "D2_HIGH",
+        "D0_ZERO",
+        "D1_THRESHOLD"
+      ],
+      "block_id": "target_A_H3",
+      "seed": 101004,
+      "target_label": "target_A"
+    },
+    {
+      "arm_order": [
+        "D0_ZERO",
+        "D2_HIGH",
+        "D1_THRESHOLD"
+      ],
+      "block_id": "target_A_H4",
+      "seed": 101006,
+      "target_label": "target_A"
+    },
+    {
+      "arm_order": [
+        "D1_THRESHOLD",
+        "D0_ZERO",
+        "D2_HIGH"
+      ],
+      "block_id": "target_A_H5",
+      "seed": 101007,
+      "target_label": "target_A"
+    },
+    {
+      "arm_order": [
+        "D2_HIGH",
+        "D1_THRESHOLD",
+        "D0_ZERO"
+      ],
+      "block_id": "target_A_H6",
+      "seed": 101008,
+      "target_label": "target_A"
+    },
+    {
+      "arm_order": [
+        "D0_ZERO",
+        "D1_THRESHOLD",
+        "D2_HIGH"
+      ],
+      "block_id": "target_A_H7",
+      "seed": 101009,
+      "target_label": "target_A"
+    },
+    {
+      "arm_order": [
+        "D1_THRESHOLD",
+        "D2_HIGH",
+        "D0_ZERO"
+      ],
+      "block_id": "target_A_H8",
+      "seed": 101010,
+      "target_label": "target_A"
+    },
+    {
+      "arm_order": [
+        "D1_THRESHOLD",
+        "D0_ZERO",
+        "D2_HIGH"
+      ],
+      "block_id": "target_B_H1",
+      "seed": 102001,
+      "target_label": "target_B"
+    },
+    {
+      "arm_order": [
+        "D2_HIGH",
+        "D1_THRESHOLD",
+        "D0_ZERO"
+      ],
+      "block_id": "target_B_H2",
+      "seed": 102002,
+      "target_label": "target_B"
+    },
+    {
+      "arm_order": [
+        "D0_ZERO",
+        "D2_HIGH",
+        "D1_THRESHOLD"
+      ],
+      "block_id": "target_B_H3",
+      "seed": 102003,
+      "target_label": "target_B"
+    },
+    {
+      "arm_order": [
+        "D1_THRESHOLD",
+        "D2_HIGH",
+        "D0_ZERO"
+      ],
+      "block_id": "target_B_H4",
+      "seed": 102004,
+      "target_label": "target_B"
+    },
+    {
+      "arm_order": [
+        "D2_HIGH",
+        "D0_ZERO",
+        "D1_THRESHOLD"
+      ],
+      "block_id": "target_B_H5",
+      "seed": 102005,
+      "target_label": "target_B"
+    },
+    {
+      "arm_order": [
+        "D0_ZERO",
+        "D1_THRESHOLD",
+        "D2_HIGH"
+      ],
+      "block_id": "target_B_H6",
+      "seed": 102006,
+      "target_label": "target_B"
+    },
+    {
+      "arm_order": [
+        "D1_THRESHOLD",
+        "D0_ZERO",
+        "D2_HIGH"
+      ],
+      "block_id": "target_B_H7",
+      "seed": 102007,
+      "target_label": "target_B"
+    },
+    {
+      "arm_order": [
+        "D2_HIGH",
+        "D1_THRESHOLD",
+        "D0_ZERO"
+      ],
+      "block_id": "target_B_H8",
+      "seed": 102008,
+      "target_label": "target_B"
+    }
+  ],
+  "exact_original_arm_orders_sha256": "557370ec5e89fe266c6ece2655fa7cd596fef8fc34627daf24bc285c7b721f3b",
+  "frozen_utc": "2026-09-30T11:42:56Z",
+  "history_property_used": false,
+  "protocol_id": "p1_context_disentangle_confirmatory_amendment1_20260930"
+}

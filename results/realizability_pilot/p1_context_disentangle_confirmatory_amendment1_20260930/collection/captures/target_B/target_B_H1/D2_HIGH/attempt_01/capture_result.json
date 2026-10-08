@@ -1,0 +1,272 @@
+{
+  "action_id": "D2_HIGH",
+  "action_labels": [
+    "probe_approach_history_03",
+    "probe_arrival",
+    "dose_peak",
+    "dose_return"
+  ],
+  "action_waypoints": [
+    [
+      -17.86476956027888,
+      -22.072428136842547,
+      -1.5184940673049405
+    ],
+    [
+      -17.557068489652842,
+      -27.95019417692053,
+      0.5716410042040986
+    ],
+    [
+      -17.557068489652842,
+      -27.95019417692053,
+      2.142437330998995
+    ],
+    [
+      -17.557068489652842,
+      -27.95019417692053,
+      0.5716410042040986
+    ]
+  ],
+  "actual_cumulative_yaw_rad": 3.108132229645001,
+  "actual_dose_error_rad": -0.033460423944791984,
+  "actual_dose_gate_passed": true,
+  "backend_started": false,
+  "branch_end_gt_pose": [
+    -17.559427133230212,
+    -27.910374348509034,
+    0.5871052642368345
+  ],
+  "branch_start_gt_pose": [
+    -21.672655813280482,
+    -22.091129436476535,
+    3.072820660232077
+  ],
+  "common_treatment_start_gt_pose": [
+    -17.559427133230212,
+    -27.910374348509034,
+    0.5557190646837303
+  ],
+  "completion_margin": 266,
+  "completion_scan_index": 81,
+  "controller_properties": {
+    "control_period_s": 0.05,
+    "heading_tolerance_rad": 0.018,
+    "max_angular_velocity_rad_s": 0.65,
+    "proportional_gain": 1.8,
+    "stable_cycles": 3,
+    "zero_twist_hold": true
+  },
+  "dose_intervention": "STANDARDIZED_ROTATIONAL_ACTION_DOSE",
+  "duplicate_timestamp_count": 0,
+  "final_heading_rad": 0.5871052642368345,
+  "final_heading_residual_rad": 0.01546426003273593,
+  "initial_gt_pose": [
+    -28.0,
+    -28.0,
+    0.0
+  ],
+  "maneuver_completion_time": 100.1,
+  "maneuver_duration_s": 8.099999999999994,
+  "max_abs_angular_velocity_rad_s": 0.6500000000000475,
+  "mean_abs_angular_velocity_rad_s": 0.3837200283512351,
+  "moves": [
+    {
+      "after": [
+        -21.557808635346326,
+        -27.996166184904688,
+        -0.0032156242988812386
+      ],
+      "before": [
+        -28.0,
+        -28.0,
+        0.0
+      ],
+      "end_time": 16.2,
+      "heading_error_rad": 0.01748103100418985,
+      "label": "setup_01",
+      "position_error_m": 0.0389457555717152,
+      "start_time": 1.7,
+      "target": [
+        -21.51886288730049,
+        -27.996141973296265,
+        -0.02069665530307109
+      ]
+    },
+    {
+      "after": [
+        -17.895460691693085,
+        -28.012978891638603,
+        -0.004706317235574656
+      ],
+      "before": [
+        -21.557808635346326,
+        -27.996166184904688,
+        -0.0032156242988812386
+      ],
+      "end_time": 25.6,
+      "heading_error_rad": 0.0044608514383944345,
+      "label": "setup_02",
+      "position_error_m": 0.04150618673251785,
+      "start_time": 16.2,
+      "target": [
+        -17.853954964628862,
+        -28.013174232225456,
+        -0.0002454657971802214
+      ]
+    },
+    {
+      "after": [
+        -17.86493048611519,
+        -22.106998419374463,
+        1.5661413265412576
+      ],
+      "before": [
+        -17.895460691693085,
+        -28.012978891638603,
+        -0.004706317235574656
+      ],
+      "end_time": 42.4,
+      "heading_error_rad": 0.010276767915244678,
+      "label": "setup_03",
+      "position_error_m": 0.03457065708749725,
+      "start_time": 25.6,
+      "target": [
+        -17.86476956027888,
+        -22.072428136842547,
+        1.5764180944565023
+      ]
+    },
+    {
+      "after": [
+        -21.672655813280482,
+        -22.091129436476535,
+        3.072820660232077
+      ],
+      "before": [
+        -17.86493048611519,
+        -22.106998419374463,
+        1.5661413265412576
+      ],
+      "end_time": 56.1,
+      "heading_error_rad": 0.015913313535724782,
+      "label": "setup_04",
+      "position_error_m": 0.04470159232493174,
+      "start_time": 42.4,
+      "target": [
+        -21.717357218178325,
+        -22.09099998940827,
+        3.0569073466963523
+      ]
+    },
+    {
+      "after": [
+        -17.908085726481033,
+        -22.072603351441444,
+        -1.5016993879456095
+      ],
+      "before": [
+        -21.672655813280482,
+        -22.091129436476535,
+        3.072820660232077
+      ],
+      "end_time": 74.4,
+      "heading_error_rad": 0.01679467935933099,
+      "label": "probe_approach_history_03",
+      "position_error_m": 0.04331652057365911,
+      "start_time": 56.1,
+      "target": [
+        -17.86476956027888,
+        -22.072428136842547,
+        -1.5184940673049405
+      ]
+    },
+    {
+      "after": [
+        -17.559427133230212,
+        -27.910374348509034,
+        0.5557190646837303
+      ],
+      "before": [
+        -17.908085726481033,
+        -22.072603351441444,
+        -1.5016993879456095
+      ],
+      "end_time": 92.0,
+      "heading_error_rad": 0.015921939520368248,
+      "label": "probe_arrival",
+      "position_error_m": 0.03988962188647581,
+      "start_time": 74.4,
+      "target": [
+        -17.557068489652842,
+        -27.95019417692053,
+        0.5716410042040986
+      ]
+    },
+    {
+      "after": [
+        -17.559427133230212,
+        -27.910374348509034,
+        2.1254782792827838
+      ],
+      "before": [
+        -17.559427133230212,
+        -27.910374348509034,
+        0.5557190646837303
+      ],
+      "end_time": 96.2,
+      "heading_error_rad": 0.01695905171621126,
+      "label": "dose_peak",
+      "position_error_m": 0.03988962188647581,
+      "start_time": 92.3,
+      "target": [
+        -17.557068489652842,
+        -27.95019417692053,
+        2.142437330998995
+      ]
+    },
+    {
+      "after": [
+        -17.559427133230212,
+        -27.910374348509034,
+        0.5871052642368345
+      ],
+      "before": [
+        -17.559427133230212,
+        -27.910374348509034,
+        2.1254782792827838
+      ],
+      "end_time": 100.1,
+      "heading_error_rad": 0.01546426003273593,
+      "label": "dose_return",
+      "position_error_m": 0.03988962188647581,
+      "start_time": 96.2,
+      "target": [
+        -17.557068489652842,
+        -27.95019417692053,
+        0.5716410042040986
+      ]
+    }
+  ],
+  "moving_gt_sample_count": 81,
+  "moving_scan_count": 81,
+  "no_scientific_stream_contamination_after_N": true,
+  "nonmonotonic_timestamp_count": 0,
+  "planned_cumulative_yaw_rad": 3.141592653589793,
+  "post_maneuver_static_scan_count": 266,
+  "pre_treatment_descriptor_strict": true,
+  "protocol_role": "CD_PROSPECTIVE_PHYSICAL_COLLECTION_ONLY",
+  "pure_cumulative_yaw_causal_effect_claimed": false,
+  "raw_scan_count": 350,
+  "scientific_endpoint_read": false,
+  "scientific_stream_exact_first_N": true,
+  "scientific_treatment_scan_budget": 347,
+  "scientific_treatment_scan_count": 347,
+  "status": "SUCCEEDED",
+  "treatment_end_timestamp": 126.7,
+  "treatment_path_length_m": 0.0,
+  "treatment_raw_scan_count": 347,
+  "treatment_start_time": 92.0,
+  "treatment_yaw_excursion_rad": 3.108132229645001,
+  "wall_clock_duration_s": 34.7
+}

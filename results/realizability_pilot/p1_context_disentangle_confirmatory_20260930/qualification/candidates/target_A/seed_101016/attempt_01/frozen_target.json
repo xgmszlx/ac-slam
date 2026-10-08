@@ -1,0 +1,96 @@
+{
+  "anchor_scan": {
+    "id": 15,
+    "observed_time": 95.0,
+    "theta": -0.07276492628361103,
+    "x": 5.901011144373048,
+    "y": 0.08651512908385303
+  },
+  "anchor_to_reference_distance_m": 0.31125424229961923,
+  "frozen_before_probe": true,
+  "historical_scan_ids": [
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "historical_unique_ids": [
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "route_start_node_count": 11,
+  "segment_nodes": [
+    {
+      "id": 13,
+      "observed_time": 95.0,
+      "theta": 0.1597857514847622,
+      "unique_id": 13,
+      "x": 3.9674294058030117,
+      "y": 0.08560422131416998
+    },
+    {
+      "id": 14,
+      "observed_time": 95.0,
+      "theta": -0.006469395102227123,
+      "unique_id": 14,
+      "x": 4.984072896063706,
+      "y": 0.12293741155397703
+    },
+    {
+      "id": 15,
+      "observed_time": 95.0,
+      "theta": -0.07276492628361103,
+      "unique_id": 15,
+      "x": 5.901011144373048,
+      "y": 0.08651512908385303
+    },
+    {
+      "id": 16,
+      "observed_time": 95.0,
+      "theta": -0.010724758179654436,
+      "unique_id": 16,
+      "x": 6.8860743137242615,
+      "y": 0.051421874464167246
+    },
+    {
+      "id": 17,
+      "observed_time": 95.0,
+      "theta": -0.0032455257655758167,
+      "unique_id": 17,
+      "x": 7.850371446355722,
+      "y": 0.04664492949191711
+    }
+  ],
+  "target_id": "map3_grid_anchor_01",
+  "target_identity_gate": {
+    "checks": {
+      "anchor_acquired_after_route_start": true,
+      "anchor_within_reference_radius": true,
+      "minimum_history_node_count": true,
+      "minimum_target_segment_scans": true
+    },
+    "observed": {
+      "anchor_distance_m": 0.31125424229961923,
+      "anchor_id": 15,
+      "node_count": 43,
+      "route_start_node_count": 11,
+      "segment_count": 5
+    },
+    "passed": true,
+    "thresholds": {
+      "minimum_history_node_count": 20,
+      "minimum_target_segment_scans": 3,
+      "target_anchor_max_distance_m": 1.0
+    }
+  },
+  "target_reference": [
+    6.2,
+    0.0,
+    0.0
+  ],
+  "target_segment_radius_m": 2.5
+}

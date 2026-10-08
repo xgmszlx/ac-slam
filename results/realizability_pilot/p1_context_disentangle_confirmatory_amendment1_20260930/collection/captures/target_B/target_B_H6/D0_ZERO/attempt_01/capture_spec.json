@@ -1,0 +1,85 @@
+{
+  "T_W_M": {
+    "tx": -28.029598670815965,
+    "ty": -27.953818501208502,
+    "yaw": -0.00771952143484766
+  },
+  "action_id": "D0_ZERO",
+  "action_labels": [
+    "probe_approach_history_03",
+    "probe_arrival"
+  ],
+  "action_waypoints": [
+    [
+      -17.863829445628454,
+      -22.123427910257977,
+      -1.5149106700737207
+    ],
+    [
+      -17.539272152391735,
+      -27.92490462877231,
+      0.671440573395431
+    ]
+  ],
+  "backend_started": false,
+  "canonical_terminal_gt_pose": [
+    -21.763584994679984,
+    -22.0193067507774,
+    3.038698379948027
+  ],
+  "controller_properties": {
+    "control_period_s": 0.05,
+    "heading_tolerance_rad": 0.018,
+    "max_angular_velocity_rad_s": 0.65,
+    "proportional_gain": 1.8,
+    "stable_cycles": 3,
+    "zero_twist_hold": true
+  },
+  "core_action_start_index": 1,
+  "dose_intervention": "STANDARDIZED_ROTATIONAL_ACTION_DOSE",
+  "hold_s": 0.0,
+  "planned_cumulative_yaw_rad": 0.0,
+  "protocol_id": "p1_context_disentangle_confirmatory_amendment1_20260930",
+  "protocol_role": "CD_PROSPECTIVE_PHYSICAL_COLLECTION_ONLY",
+  "pure_cumulative_yaw_causal_effect_claimed": false,
+  "scientific_endpoint_read": false,
+  "scientific_treatment_scan_budget": 347,
+  "setup_waypoints": [
+    [
+      -21.555764284315696,
+      -27.997229601511986,
+      -0.02721863408305665
+    ],
+    [
+      -17.820920192452498,
+      -28.01956916726178,
+      -0.0003092293304928986
+    ],
+    [
+      -17.863829445628454,
+      -22.123427910257977,
+      1.5713583991091826
+    ],
+    [
+      -21.763584994679984,
+      -22.0193067507774,
+      3.038698379948027
+    ]
+  ],
+  "source_cd_history": "results/realizability_pilot/p1_context_disentangle_confirmatory_20260930/qualification/candidates/target_B/seed_102006/attempt_01",
+  "target_anchor_map": [
+    10.489790756352715,
+    0.10989250707394617,
+    0.6791600948302786
+  ],
+  "target_anchor_world_by_history_only_se2": [
+    -17.539272152391735,
+    -27.92490462877231,
+    0.671440573395431
+  ],
+  "technical_amendment": {
+    "amendment_of": "p1_context_disentangle_confirmatory_20260930",
+    "only_change": "arm-order balance validation is evaluated within each Target stratum rather than pooled across A+B"
+  },
+  "theta0_rad": 0.671440573395431
+}

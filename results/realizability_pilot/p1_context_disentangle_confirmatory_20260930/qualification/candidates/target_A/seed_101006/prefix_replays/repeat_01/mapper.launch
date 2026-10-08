@@ -1,0 +1,22 @@
+<launch>
+  <node name="MultiMapper" pkg="nav2d_karto" type="mapper" output="log">
+    <param name="LoopMatchMaximumVarianceCoarse" value="0.16" />
+    <param name="LoopMatchMinimumChainSize" value="4.0" />
+    <param name="LoopMatchMinimumResponseCoarse" value="0.6" />
+    <param name="LoopMatchMinimumResponseFine" value="0.7" />
+    <param name="LoopSearchMaximumDistance" value="4.0" />
+    <param name="MinimumTravelDistance" value="1.0" />
+    <param name="MinimumTravelHeading" value="0.52" />
+    <param name="grid_resolution" value="0.1" />
+    <param name="max_covariance" value="0.01" />
+    <param name="min_map_size" value="20.0" />
+    <param name="range_threshold" value="25.0" />
+    <param name="publish_pose_graph" value="false" />
+    <param name="robot_id" value="1" />
+    <param name="instrumentation_flush_period_s" value="0" />
+    <param name="pose_graph_dump_path" value="/home/wcqw/ac-slam/results/realizability_pilot/p1_context_disentangle_confirmatory_20260930/qualification/candidates/target_A/seed_101006/prefix_replays/repeat_01/graph_work.json" />
+    <param name="enable_edge_provenance" value="true" />
+    <param name="edge_provenance_path" value="/home/wcqw/ac-slam/results/realizability_pilot/p1_context_disentangle_confirmatory_20260930/qualification/candidates/target_A/seed_101006/prefix_replays/repeat_01/edge_provenance.jsonl" />
+    <param name="edge_provenance_run_id" value="v13_unified" />
+  </node>
+</launch>

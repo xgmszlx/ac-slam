@@ -1,0 +1,200 @@
+{
+  "block_dose_monotonicity": [
+    {
+      "actual_doses": {
+        "D0_ZERO": 0.0,
+        "D1_THRESHOLD": 1.0507312110190061,
+        "D2_HIGH": 3.1132912075029044
+      },
+      "block_id": "target_A_H1",
+      "strict_D0_lt_D1_lt_D2": true
+    },
+    {
+      "actual_doses": {
+        "D0_ZERO": 0.0,
+        "D1_THRESHOLD": 1.052362920477839,
+        "D2_HIGH": 3.10643292365881
+      },
+      "block_id": "target_A_H2",
+      "strict_D0_lt_D1_lt_D2": true
+    },
+    {
+      "actual_doses": {
+        "D0_ZERO": 0.0,
+        "D1_THRESHOLD": 1.0577274534649157,
+        "D2_HIGH": 3.1074252603509467
+      },
+      "block_id": "target_A_H3",
+      "strict_D0_lt_D1_lt_D2": true
+    },
+    {
+      "actual_doses": {
+        "D0_ZERO": 0.0,
+        "D1_THRESHOLD": 1.0546982167030563,
+        "D2_HIGH": 3.109094733157323
+      },
+      "block_id": "target_A_H4",
+      "strict_D0_lt_D1_lt_D2": true
+    },
+    {
+      "actual_doses": {
+        "D0_ZERO": 0.0,
+        "D1_THRESHOLD": 1.0576298282312329,
+        "D2_HIGH": 3.1070053759120695
+      },
+      "block_id": "target_A_H5",
+      "strict_D0_lt_D1_lt_D2": true
+    },
+    {
+      "actual_doses": {
+        "D0_ZERO": 0.0,
+        "D1_THRESHOLD": 1.0362965589256627,
+        "D2_HIGH": 3.0922338074716222
+      },
+      "block_id": "target_A_H6",
+      "strict_D0_lt_D1_lt_D2": true
+    },
+    {
+      "actual_doses": {
+        "D0_ZERO": 0.0,
+        "D1_THRESHOLD": 1.050585401035405,
+        "D2_HIGH": 3.112905427876308
+      },
+      "block_id": "target_A_H7",
+      "strict_D0_lt_D1_lt_D2": true
+    },
+    {
+      "actual_doses": {
+        "D0_ZERO": 0.0,
+        "D1_THRESHOLD": 1.0524119707642043,
+        "D2_HIGH": 3.1143917923518996
+      },
+      "block_id": "target_A_H8",
+      "strict_D0_lt_D1_lt_D2": true
+    },
+    {
+      "actual_doses": {
+        "D0_ZERO": 0.0,
+        "D1_THRESHOLD": 1.0542425594773768,
+        "D2_HIGH": 3.108132229645001
+      },
+      "block_id": "target_B_H1",
+      "strict_D0_lt_D1_lt_D2": true
+    },
+    {
+      "actual_doses": {
+        "D0_ZERO": 0.0,
+        "D1_THRESHOLD": 1.0525902149400717,
+        "D2_HIGH": 3.1085658921411556
+      },
+      "block_id": "target_B_H2",
+      "strict_D0_lt_D1_lt_D2": true
+    },
+    {
+      "actual_doses": {
+        "D0_ZERO": 0.0,
+        "D1_THRESHOLD": 1.0518921535257173,
+        "D2_HIGH": 3.1126975762099733
+      },
+      "block_id": "target_B_H3",
+      "strict_D0_lt_D1_lt_D2": true
+    },
+    {
+      "actual_doses": {
+        "D0_ZERO": 0.0,
+        "D1_THRESHOLD": 1.0522174967255662,
+        "D2_HIGH": 3.1136809933657066
+      },
+      "block_id": "target_B_H4",
+      "strict_D0_lt_D1_lt_D2": true
+    },
+    {
+      "actual_doses": {
+        "D0_ZERO": 0.0,
+        "D1_THRESHOLD": 1.0529746703570133,
+        "D2_HIGH": 3.1088569170970337
+      },
+      "block_id": "target_B_H5",
+      "strict_D0_lt_D1_lt_D2": true
+    },
+    {
+      "actual_doses": {
+        "D0_ZERO": 0.0,
+        "D1_THRESHOLD": 1.0538930777744198,
+        "D2_HIGH": 3.1129063057807453
+      },
+      "block_id": "target_B_H6",
+      "strict_D0_lt_D1_lt_D2": true
+    },
+    {
+      "actual_doses": {
+        "D0_ZERO": 0.0,
+        "D1_THRESHOLD": 1.051652587267581,
+        "D2_HIGH": 3.106296807320916
+      },
+      "block_id": "target_B_H7",
+      "strict_D0_lt_D1_lt_D2": true
+    },
+    {
+      "actual_doses": {
+        "D0_ZERO": 0.0,
+        "D1_THRESHOLD": 1.0560839201075716,
+        "D2_HIGH": 3.1100229518291194
+      },
+      "block_id": "target_B_H8",
+      "strict_D0_lt_D1_lt_D2": true
+    }
+  ],
+  "machine_label": "DOSE_TARGET_DECONFOUNDING_TECHNICALLY_CERTIFIED",
+  "passed": true,
+  "target_overlap": {
+    "D1_THRESHOLD": {
+      "actual_dose_ranges": {
+        "target_A": [
+          1.0362965589256627,
+          1.0577274534649157
+        ],
+        "target_B": [
+          1.051652587267581,
+          1.0560839201075716
+        ]
+      },
+      "actual_dose_ranges_overlap": true,
+      "completion_scan_ranges": {
+        "target_A": [
+          47,
+          50
+        ],
+        "target_B": [
+          48,
+          50
+        ]
+      },
+      "completion_scan_ranges_overlap": true
+    },
+    "D2_HIGH": {
+      "actual_dose_ranges": {
+        "target_A": [
+          3.0922338074716222,
+          3.1143917923518996
+        ],
+        "target_B": [
+          3.106296807320916,
+          3.1136809933657066
+        ]
+      },
+      "actual_dose_ranges_overlap": true,
+      "completion_scan_ranges": {
+        "target_A": [
+          80,
+          82
+        ],
+        "target_B": [
+          81,
+          82
+        ]
+      },
+      "completion_scan_ranges_overlap": true
+    }
+  }
+}

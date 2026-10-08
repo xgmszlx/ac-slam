@@ -1,0 +1,451 @@
+{
+  "arm_order_rule": {
+    "deterministic_orders": {
+      "target_A": [
+        [
+          "D0_ZERO",
+          "D1_THRESHOLD",
+          "D2_HIGH"
+        ],
+        [
+          "D1_THRESHOLD",
+          "D2_HIGH",
+          "D0_ZERO"
+        ],
+        [
+          "D2_HIGH",
+          "D0_ZERO",
+          "D1_THRESHOLD"
+        ],
+        [
+          "D0_ZERO",
+          "D2_HIGH",
+          "D1_THRESHOLD"
+        ],
+        [
+          "D1_THRESHOLD",
+          "D0_ZERO",
+          "D2_HIGH"
+        ],
+        [
+          "D2_HIGH",
+          "D1_THRESHOLD",
+          "D0_ZERO"
+        ],
+        [
+          "D0_ZERO",
+          "D1_THRESHOLD",
+          "D2_HIGH"
+        ],
+        [
+          "D1_THRESHOLD",
+          "D2_HIGH",
+          "D0_ZERO"
+        ]
+      ],
+      "target_B": [
+        [
+          "D1_THRESHOLD",
+          "D0_ZERO",
+          "D2_HIGH"
+        ],
+        [
+          "D2_HIGH",
+          "D1_THRESHOLD",
+          "D0_ZERO"
+        ],
+        [
+          "D0_ZERO",
+          "D2_HIGH",
+          "D1_THRESHOLD"
+        ],
+        [
+          "D1_THRESHOLD",
+          "D2_HIGH",
+          "D0_ZERO"
+        ],
+        [
+          "D2_HIGH",
+          "D0_ZERO",
+          "D1_THRESHOLD"
+        ],
+        [
+          "D0_ZERO",
+          "D1_THRESHOLD",
+          "D2_HIGH"
+        ],
+        [
+          "D1_THRESHOLD",
+          "D0_ZERO",
+          "D2_HIGH"
+        ],
+        [
+          "D2_HIGH",
+          "D1_THRESHOLD",
+          "D0_ZERO"
+        ]
+      ]
+    },
+    "frozen_before_physical_collection": true,
+    "history_property_used": false
+  },
+  "arm_order_validation_amendment": {
+    "checks": {
+      "target_A": {
+        "D0_ZERO": true,
+        "D1_THRESHOLD": true,
+        "D2_HIGH": true
+      },
+      "target_B": {
+        "D0_ZERO": true,
+        "D1_THRESHOLD": true,
+        "D2_HIGH": true
+      }
+    },
+    "maximum_position_count_difference_within_target": 1,
+    "passed": true,
+    "pooled_A_plus_B_balance_is_not_a_gate": true,
+    "position_counts": {
+      "target_A": {
+        "D0_ZERO": {
+          "1": 3,
+          "2": 2,
+          "3": 3
+        },
+        "D1_THRESHOLD": {
+          "1": 3,
+          "2": 3,
+          "3": 2
+        },
+        "D2_HIGH": {
+          "1": 2,
+          "2": 3,
+          "3": 3
+        }
+      },
+      "target_B": {
+        "D0_ZERO": {
+          "1": 2,
+          "2": 3,
+          "3": 3
+        },
+        "D1_THRESHOLD": {
+          "1": 3,
+          "2": 3,
+          "3": 2
+        },
+        "D2_HIGH": {
+          "1": 3,
+          "2": 2,
+          "3": 3
+        }
+      }
+    },
+    "validation_unit": "Target stratum"
+  },
+  "backend_replay": {
+    "exact_canonical_prefix": true,
+    "fresh_ros_master_and_multimapper": true,
+    "processed_count_barrier": true,
+    "suffix": "exact first-347 scientific treatment scans",
+    "synchronous_graph_dump": true,
+    "zero_tolerance_prefix_gate": true
+  },
+  "base_git_commit": "40f1aee3b1e5bff6bb62594373d7124e19e22da8",
+  "code_bundle_sha256": "f34e858cbacc34da7736525f2d31ffd71428cc22b122f4a886c10cb671949da3",
+  "code_hashes": {
+    "dependencies/navigation_2d/nav2d_karto/CMakeLists.txt": "90f29bfaddf4b1e0679b2571f1c5c144f09dce6a521710f7fb9f615a3f6bcf39",
+    "dependencies/navigation_2d/nav2d_karto/include/nav2d_karto/MultiMapper.h": "a6c6739db188dac9587e29c7fc2d4640e48844be4c3253d6526aa7403a56d619",
+    "dependencies/navigation_2d/nav2d_karto/package.xml": "9af24e8c3376e6990fb5c17f6ea41a2c87180e9af0cc910730b6953c695132b6",
+    "dependencies/navigation_2d/nav2d_karto/src/MultiMapper.cpp": "921d2649a3e507a3deee9f2baf9790bfefee98e6633e370b54ead0dc4f530b35",
+    "tools/realizability_pilot/cd_confirmatory_amendment_analysis.py": "0626e0ee2f27b78887a86dbe1a9f1644e7feb64f85ede24a2f7b897fc6dacd91",
+    "tools/realizability_pilot/cd_confirmatory_amendment_collection.py": "933a1255b6b19ca499ba7a1e6f475a97e61aa3932e89898e69025b548aa183a2",
+    "tools/realizability_pilot/cd_confirmatory_amendment_pipeline.py": "b2a93a12ba89464ad7b2c8b8390c5884b61c1dfb6851e0865790d435deb588f5",
+    "tools/realizability_pilot/cd_confirmatory_amendment_protocol.py": "1e6c3579f55970618eae6ea4064c7e3eee9bc897623abaf72decc5f3dd4deead",
+    "tools/realizability_pilot/cd_confirmatory_amendment_replay.py": "d9affd414f75c1ad9bfba6b6d5467f0504c398dc51d92f7d86de148332ab8d74",
+    "tools/realizability_pilot/cd_confirmatory_analysis.py": "fffdc54834366fd68621b6092724d2ff6234d51d6cb7fa27efbe10b2bb472934",
+    "tools/realizability_pilot/cd_confirmatory_capture.py": "db839f6f7c910c8a72c4a128f477cd7d871132f5b8b497445a552cf7facaf46d",
+    "tools/realizability_pilot/cd_confirmatory_collection.py": "35a0fc6b4f755a6441a81a38fc57ecc071db54f655a53ab12e8ae3858e9aa31a",
+    "tools/realizability_pilot/cd_confirmatory_guard.py": "f6976478e61167ab0b7c134ccc34afb6d5258c325ae94c1dcf0cd695993008b5",
+    "tools/realizability_pilot/cd_confirmatory_pipeline.py": "8ac8ed9f9e116b8196796a04c8e18ea8f45916171f91f3acdc675029d4ad011a",
+    "tools/realizability_pilot/cd_confirmatory_protocol.py": "40b67c88f619fccf8092c222ed447fd2da87f52044fc1f2a935adbc027d8e78a",
+    "tools/realizability_pilot/cd_confirmatory_qualification.py": "2b90620653ddbe2fe0078489f4390f54b7c0fbaab887de7487b3f04b2ecb4e20",
+    "tools/realizability_pilot/cd_confirmatory_replay.py": "510e2637433cf35e752320cd57e0f0f49d03cfae41bb8c2a1c781658b2274e12",
+    "tools/realizability_pilot/common_prefix_analysis.py": "56db2785d344f98eb037f213db94d07800f4c758f0a0f6c77b72eac7b96c5658",
+    "tools/realizability_pilot/common_prefix_signature.py": "43b1b1d36fb9b40f1a5ca06ec7006c0257724793b0d267dae78ce5eadaa9796c",
+    "tools/realizability_pilot/confirmatory_v12_protocol.py": "d0433731ae444341c4de0e725798e99625182297561198427f3da7ebf99dcbe3",
+    "tools/realizability_pilot/context_disentangle_protocol.py": "32d96ccf6857bfdd7c68b6b3531ed12eae6092405b9b374e2e323d9ccd436b86",
+    "tools/realizability_pilot/controlled_branch_suite.py": "914c5785a70b5d2760c0c8c0823ffbba2c0fd031566506d2498f7e9bd93dd7d1",
+    "tools/realizability_pilot/controlled_probe_capture.py": "ef15e74e3d627db39c327c32cd321124208c61021b1197db8af5ff67209244a8",
+    "tools/realizability_pilot/edge_analytics.py": "ab796be6c2e99a8e765488f8abcc2a8658b36761ed34bcd582774059157d65cd",
+    "tools/realizability_pilot/fixed_scan_capture.py": "d22224e9aeba74848157b2a0b166f14f780b315a9ca73d2bdb8ee3d27f57c0be",
+    "tools/realizability_pilot/normalize_replay_timestamps.py": "ee82e561ae523cc17d82c49b42afffd5ea4211180d516d5be2e89a3bc684c964",
+    "tools/realizability_pilot/se2_information.py": "bdc44e4fbee7ad74c212b543a693d132f2eb704667bd5945c97fc859188454ad",
+    "tools/realizability_pilot/stitch_probe_stream.py": "3a2ad33dd062ebbaf90fa3962f984b180bddb203530797fa9afef34a553fb21b",
+    "tools/realizability_pilot/test_cd_confirmatory.py": "5ed3264e67075126459f2fdf3c9e288ceed6c2243f8af3edb90594169fc8f6e8",
+    "tools/realizability_pilot/test_cd_confirmatory_amendment.py": "f1e200e48d55665be5b3954e85fe14897201200169ea78208c4f2111c94faa68",
+    "tools/realizability_pilot/v13_prefix_equivalence.py": "6a4581de7ba5e3e8e731e9abafabac8df00d223cde1b13ed7e9b35242fd18f53",
+    "tools/realizability_pilot/v13_replay_publisher.py": "3aefa28cc391da98ee4c3367ac6292348cd8977a749cf492d09a01e8289977ab",
+    "tools/realizability_pilot/v13_target_selector.py": "00c31ab4ba8b4daacd6c9e8da046953c8355157e099bb62b119a3c1051a563ee",
+    "tools/realizability_pilot/v13_unified_replay.py": "c74f995be2009128ea569c6d89ec7b942a6a3f326a3cf3a9686b123c86d03ffd",
+    "tools/realizability_pilot/v14_confirmatory_analysis.py": "2dcfc3d9a0755ba31c06cbba6da443dfdc44f93a9e36460491c0341497dad989",
+    "tools/realizability_pilot/v14_confirmatory_collection.py": "e611acf0d04ac0ac0b0cd46346111ce2a3a430d08dc7b08e7cb122fb2f849090",
+    "tools/realizability_pilot/v14_confirmatory_replay.py": "91b9e68a1ddb0831ee131eb141793511c1608ede1cb8dea4347947d4a213811e",
+    "tools/realizability_pilot/v14_estimator_sanity.py": "96ffd210d8cc34c59961e803c6f0509b755120323f9980593a917fc7de2046ca",
+    "tools/realizability_pilot/v14t_fixed_scan_protocol.py": "635823272578328e93250035178aef11f59199eca85fca8647dfe70d80e01765"
+  },
+  "created_before_any_fresh_history_generation": false,
+  "created_before_any_scientific_physical_collection": true,
+  "estimands": {
+    "C_HT_A": "mean Target-A C_HT",
+    "C_HT_B": "mean Target-B C_HT",
+    "C_HT_block": "J_T(D2_HIGH)-J_T(D1_THRESHOLD)",
+    "J_T": "-logdet(Sigma_T)/15",
+    "branches_not_independent": 48,
+    "co_primary_contrasts": [],
+    "independent_units": 16,
+    "primary_I_HT": "C_HT_B-C_HT_A",
+    "secondary": {
+      "C_H0": "J_T(D2_HIGH)-J_T(D0_ZERO)",
+      "C_T0": "J_T(D1_THRESHOLD)-J_T(D0_ZERO)",
+      "I_H0": "mean_B(C_H0)-mean_A(C_H0)",
+      "I_T0": "mean_B(C_T0)-mean_A(C_T0)"
+    },
+    "statistical_unit": "canonical-history block"
+  },
+  "final_three_state_decision": {
+    "incomplete": "CD_PROSPECTIVE_TECHNICALLY_INCOMPLETE",
+    "no_support": "CD_PROSPECTIVE_NO_INTERACTION_SUPPORT",
+    "support": "CD_PROSPECTIVE_INTERACTION_SUPPORT"
+  },
+  "gt_sanity": {
+    "affects_primary_gate": false,
+    "per_arm_after_realignment_forbidden": true,
+    "shared_pre_treatment_gauge": true,
+    "strict_timestamp_pairing": true,
+    "unavailable_label": "GT_SANITY_UNAVAILABLE"
+  },
+  "hard_stop": {
+    "CD_PROSPECTIVE_INTERACTION_SUPPORT": "EXPAND_CONTEXT_SET_BEFORE_PREDICTOR",
+    "CD_PROSPECTIVE_NO_INTERACTION_SUPPORT": "REASSESS_PLAN_A_MECHANISM_AFTER_DOSE_DECONFOUNDING",
+    "CD_PROSPECTIVE_TECHNICALLY_INCOMPLETE": "STOP_AND_DIAGNOSE_CD_TECHNICAL_FAILURE",
+    "automatic_followup_experiment_allowed": false
+  },
+  "history_generation_reused_from_original_incomplete_run": true,
+  "history_qualification": {
+    "candidate_attempts_per_seed": 1,
+    "candidate_seeds_in_frozen_order": {
+      "target_A": [
+        101001,
+        101002,
+        101003,
+        101004,
+        101005,
+        101006,
+        101007,
+        101008,
+        101009,
+        101010,
+        101011,
+        101012,
+        101013,
+        101014,
+        101015,
+        101016
+      ],
+      "target_B": [
+        102001,
+        102002,
+        102003,
+        102004,
+        102005,
+        102006,
+        102007,
+        102008,
+        102009,
+        102010,
+        102011,
+        102012,
+        102013,
+        102014,
+        102015,
+        102016
+      ]
+    },
+    "entire_pool_before_selection": true,
+    "failure_gate": "CD_PROSPECTIVE_TECHNICALLY_INCOMPLETE",
+    "first_eight_eligible_rule": true,
+    "prefix_repeat_count": 3,
+    "reserve_or_substitution_allowed": false,
+    "selected_blocks_per_target": 8,
+    "selector": "nearest legal post-route-start historical scan to fixed target; five block-local states",
+    "target_ids": {
+      "target_A": "map3_grid_anchor_01",
+      "target_B": "map3_grid_anchor_03"
+    },
+    "zero_structural_and_numerical_tolerance": {
+      "edge_covariance_max_abs": 0.0,
+      "edge_heading_measurement_max_rad": 0.0,
+      "edge_translation_measurement_max_m": 0.0,
+      "node_heading_max_rad": 0.0,
+      "node_translation_max_m": 0.0
+    }
+  },
+  "intervention": {
+    "N": 347,
+    "arms": {
+      "D0_ZERO": {
+        "planned_cumulative_rotational_action_rad": 0.0
+      },
+      "D1_THRESHOLD": {
+        "planned_cumulative_rotational_action_rad": 1.087946562824985
+      },
+      "D2_HIGH": {
+        "planned_cumulative_rotational_action_rad": 3.141592653589793
+      }
+    },
+    "common_anchor_and_initial_final_heading": true,
+    "jointly_changes": [
+      "maneuver duration",
+      "moving-scan composition"
+    ],
+    "name": "STANDARDIZED_ROTATIONAL_ACTION_DOSE",
+    "pure_cumulative_yaw_causal_effect_claimed": false,
+    "template": "theta0 -> theta0 + dose/2 -> theta0"
+  },
+  "label": "CD_PROSPECTIVE_CONTEXT_DOSE_TECHNICAL_AMENDMENT_1",
+  "locks": {
+    "analysis_only_after_complete_backend_lock": true,
+    "backend": "collection/BACKEND_REPLAY_LOCK.json",
+    "no_recollection_after_physical_lock": true,
+    "physical": "collection/PHYSICAL_COLLECTION_LOCK.json"
+  },
+  "manipulation_gate": {
+    "D0_max_yaw_rad": 0.03,
+    "D1_D2_error_tolerance_rad": 0.06,
+    "N": 347,
+    "final_heading_tolerance_rad": 0.04,
+    "minimum_completion_margin": 60,
+    "strict_D0_D1_D2_monotonicity": true,
+    "target_actual_dose_ranges_must_overlap": true,
+    "target_completion_scan_ranges_must_overlap": true
+  },
+  "mapper_backend": {
+    "binary_path": "catkin_ws/devel/lib/nav2d_karto/mapper",
+    "binary_sha256": "7ab54496b4572e831d7f10d615ad3d700bec3a0b89c5abdb9c562616a67d92f6",
+    "instrumentation_change_allowed": false,
+    "normalized_config_sha256": "511dcacb4ff58a99d0f434cbfd604198c95f453e2bd18e35c0b5e0533437825c"
+  },
+  "mechanism": {
+    "H_HT": "HistoricalFactors(D2_HIGH)-HistoricalFactors(D1_THRESHOLD)",
+    "I_HIST_HT": "mean_B(H_HT)-mean_A(H_HT)",
+    "causal_mediation_claim_allowed": false,
+    "direction_label_only": true
+  },
+  "no_peeking": {
+    "analysis_requires_complete_backend_lock": true,
+    "forbidden_before_backend_lock": [
+      "J_T",
+      "historical factor arm comparison",
+      "accepted-keyscan arm comparison",
+      "C_HT",
+      "I_HT",
+      "secondary J contrasts",
+      "mechanism contrasts"
+    ],
+    "pre_treatment_descriptors_not_used_for_selection": true
+  },
+  "original_run_pre_amendment_audit": {
+    "audited_utc": "2026-09-30T11:42:56Z",
+    "checks": {
+      "no_backend_lock_before_amendment": true,
+      "no_backend_replay_before_amendment": true,
+      "no_backend_state_before_amendment": true,
+      "no_physical_branch_before_amendment": true,
+      "no_physical_lock_before_amendment": true,
+      "no_physical_state_before_amendment": true,
+      "no_scientific_analysis_before_amendment": true,
+      "original_aggregate_sha256_exact": true,
+      "original_file_count_exact": true,
+      "original_final_gate_exact": true,
+      "original_gate_is_technical_incomplete": true,
+      "original_gate_reason_is_arm_balance_validator": true,
+      "original_history_manifest_exact": true,
+      "original_preregistration_exact": true,
+      "original_report_exact": true,
+      "scientific_endpoint_not_read": true
+    },
+    "original_aggregate_manifest_sha256": "0725778cbcd223cea69384350bcedefc965c2bb8c75a32a484e1e7e4d747fd4b",
+    "original_file_count": 3881,
+    "original_final_gate_sha256": "3c239367543e78ce5f61f6dec57ac793655bb8bd16350d82e2a7d3c35318f8d3",
+    "original_history_manifest_sha256": "c10fef99341eb325a01e3d96320fba851f0c3769a93be01e78acf2049a29f403",
+    "original_preregistration_sha256": "38061e4964eb33bfcc0c718ba944adc2710ebd29ca30b6af2a8e2862f5e8f8bc",
+    "original_report_sha256": "20390d11ce080dca09ce35cc04f2968d361aad926ffdd69dba453f98fe47ec94",
+    "passed": true
+  },
+  "primary_inference": {
+    "bootstrap_repetitions": 20000,
+    "bootstrap_seed": 300930,
+    "procedure": "target-stratified block bootstrap",
+    "support": "complete 8A+8B and two-sided 95% CI(I_HT) excludes zero"
+  },
+  "prior_scientific_state_preserved": {
+    "universal_broad_sweep_hypothesis": "STOPPED",
+    "v14": "V14_PROSPECTIVE_NO_SUPPORT"
+  },
+  "protocol_id": "p1_context_disentangle_confirmatory_amendment1_20260930",
+  "reused_inputs": {
+    "arm_order_manifest_path": "results/realizability_pilot/p1_context_disentangle_confirmatory_amendment1_20260930/collection/frozen_arm_order_manifest.json",
+    "arm_orders_exact_original": true,
+    "arm_orders_sha256": "557370ec5e89fe266c6ece2655fa7cd596fef8fc34627daf24bc285c7b721f3b",
+    "arms_reordered": false,
+    "histories_regenerated": false,
+    "history_manifest_byte_identical_to_original": true,
+    "history_manifest_path": "results/realizability_pilot/p1_context_disentangle_confirmatory_amendment1_20260930/qualification/frozen_history_manifest.json",
+    "history_manifest_sha256": "c10fef99341eb325a01e3d96320fba851f0c3769a93be01e78acf2049a29f403"
+  },
+  "scientific_collection_authorized_after_this_freeze": true,
+  "source_provenance": {
+    "cdt_protocol_sha256": "416596725551d4e2eb7da61284850b665cbc2ad894d30e823a85dcc8c8fc6289",
+    "failures": [],
+    "frozen_tree_oids": {
+      "v14": "82c934201e75dc42c9718455c860fa1cc4f2630e",
+      "v14_heterogeneity": "720779e2eb2efb1bf253df051207e675ae26e31b"
+    },
+    "passed": true,
+    "source_branch": "research/phase4c-formal",
+    "source_head": "40f1aee3b1e5bff6bb62594373d7124e19e22da8"
+  },
+  "technical_amendment": {
+    "amendment_of_protocol_id": "p1_context_disentangle_confirmatory_20260930",
+    "only_change": {
+      "from": "pooled Target-A plus Target-B position balance gate",
+      "rationale": "Target is the between-context stratum and dose is repeated within canonical-history block",
+      "to": "within-Target-stratum position balance gate"
+    },
+    "original_final_gate": "CD_PROSPECTIVE_TECHNICALLY_INCOMPLETE",
+    "original_final_gate_preserved": true,
+    "original_preregistration_sha256": "38061e4964eb33bfcc0c718ba944adc2710ebd29ca30b6af2a8e2862f5e8f8bc",
+    "outcome_blind": true,
+    "scientific_endpoint_available_before_amendment": false,
+    "unchanged": [
+      "first-eight histories per target",
+      "arm orders",
+      "doses",
+      "N=347",
+      "controller",
+      "estimands",
+      "analysis",
+      "scientific gates",
+      "retry rules",
+      "backend"
+    ]
+  },
+  "technical_retry_rule": {
+    "MAX_CAPTURE_ATTEMPTS": 2,
+    "MAX_REPLAY_ATTEMPTS": 2,
+    "reserve_history_substitution_forbidden": true,
+    "scientific_outcome_retry_forbidden": true,
+    "technical_failures_only": true
+  }
+}

@@ -1,0 +1,511 @@
+{
+  "background_graph_dump_used": false,
+  "code_provenance": {
+    "git_head": "40f1aee3b1e5bff6bb62594373d7124e19e22da8",
+    "mapper_binary_path": "/home/wcqw/ac-slam/catkin_ws/devel/lib/nav2d_karto/mapper",
+    "mapper_binary_sha256": "7ab54496b4572e831d7f10d615ad3d700bec3a0b89c5abdb9c562616a67d92f6",
+    "mapper_launch_sha256": "d8596785650f715c8c75e3e5f8dbbc7676f0aa3e78bba6436801a813bb058eb8"
+  },
+  "dump_service_response": "success: True\nmessage: \"path=/home/wcqw/ac-slam/results/realizability_pilot/p1_context_disentangle_confirmatory_amendment1_20260930/collection/replays/target_B/target_B_H5/D1_THRESHOLD/attempt_01/graph_pre.json\\\n  \\ processed_localized_scan_count=35\"\n",
+  "final_prefix_structural_preservation": {
+    "all_prefix_node_id_pairs_present": true,
+    "corrected_pose_equality_intentionally_not_tested": true,
+    "final_edge_count": 43,
+    "final_node_count": 36,
+    "prefix_edge_count": 41,
+    "prefix_edge_endpoint_insertion_sequence_preserved": true,
+    "prefix_node_count": 35
+  },
+  "fixed_sleep_used_as_drain_barrier": false,
+  "mapper_params_sha256": "511dcacb4ff58a99d0f434cbfd604198c95f453e2bd18e35c0b5e0533437825c",
+  "mode": "branch",
+  "prefix_gate_passed": true,
+  "prefix_graph_file_sha256": "b63b3813e51744911e0eb1a1b452903e1a7c5b84ffd670dff9ecd06f86aaf6fd",
+  "prefix_input_sha256": "1168f8bdafcaefc2676b2f8d3e9750c88ff2cc4719fd99accda9917f8d8c9f36",
+  "prefix_publisher": {
+    "connection_confirmed": true,
+    "connections_at_start": 1,
+    "expected": 35,
+    "published": 35,
+    "topic": "/karto_in"
+  },
+  "prefix_record_count": 35,
+  "prefix_reference_comparison": {
+    "numerical": {
+      "edge_covariance_max_abs": 0.0,
+      "edge_heading_measurement_max_rad": 0.0,
+      "edge_translation_measurement_max_m": 0.0,
+      "exact": true,
+      "node_heading_max_rad": 0.0,
+      "node_translation_max_m": 0.0
+    },
+    "passed": true,
+    "structural": {
+      "edge_count_equal": true,
+      "edge_state_endpoints_in_insertion_order_equal": true,
+      "edge_unique_endpoints_in_insertion_order_equal": true,
+      "exact": true,
+      "node_count_equal": true,
+      "node_state_ids_in_insertion_order_equal": true,
+      "node_unique_ids_in_insertion_order_equal": true,
+      "target_historical_state_ids_equal": true
+    },
+    "zero_tolerance_required": true
+  },
+  "prefix_reference_path": "/home/wcqw/ac-slam/results/realizability_pilot/p1_context_disentangle_confirmatory_20260930/qualification/candidates/target_B/seed_102005/prefix_replays/repeat_01/graph_pre.json",
+  "prefix_reference_sha256": "b63b3813e51744911e0eb1a1b452903e1a7c5b84ffd670dff9ecd06f86aaf6fd",
+  "prefix_structural_signature": {
+    "canonical_input_record_count": 35,
+    "canonical_input_sha256": "1168f8bdafcaefc2676b2f8d3e9750c88ff2cc4719fd99accda9917f8d8c9f36",
+    "code_provenance": {
+      "git_head": "40f1aee3b1e5bff6bb62594373d7124e19e22da8",
+      "mapper_binary_path": "/home/wcqw/ac-slam/catkin_ws/devel/lib/nav2d_karto/mapper",
+      "mapper_binary_sha256": "7ab54496b4572e831d7f10d615ad3d700bec3a0b89c5abdb9c562616a67d92f6",
+      "mapper_launch_sha256": "d8596785650f715c8c75e3e5f8dbbc7676f0aa3e78bba6436801a813bb058eb8"
+    },
+    "edge_count": 41,
+    "edge_state_endpoints_in_insertion_order": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        0,
+        10
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        1,
+        11
+      ],
+      [
+        11,
+        12
+      ],
+      [
+        10,
+        12
+      ],
+      [
+        12,
+        13
+      ],
+      [
+        13,
+        14
+      ],
+      [
+        14,
+        15
+      ],
+      [
+        15,
+        16
+      ],
+      [
+        16,
+        17
+      ],
+      [
+        17,
+        18
+      ],
+      [
+        18,
+        19
+      ],
+      [
+        19,
+        20
+      ],
+      [
+        20,
+        21
+      ],
+      [
+        17,
+        21
+      ],
+      [
+        21,
+        22
+      ],
+      [
+        22,
+        23
+      ],
+      [
+        23,
+        24
+      ],
+      [
+        24,
+        25
+      ],
+      [
+        25,
+        26
+      ],
+      [
+        26,
+        27
+      ],
+      [
+        27,
+        28
+      ],
+      [
+        28,
+        29
+      ],
+      [
+        24,
+        29
+      ],
+      [
+        29,
+        30
+      ],
+      [
+        30,
+        31
+      ],
+      [
+        7,
+        31
+      ],
+      [
+        31,
+        32
+      ],
+      [
+        32,
+        33
+      ],
+      [
+        31,
+        33
+      ],
+      [
+        33,
+        34
+      ]
+    ],
+    "edge_unique_endpoints_in_insertion_order": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        0,
+        10
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        1,
+        11
+      ],
+      [
+        11,
+        12
+      ],
+      [
+        10,
+        12
+      ],
+      [
+        12,
+        13
+      ],
+      [
+        13,
+        14
+      ],
+      [
+        14,
+        15
+      ],
+      [
+        15,
+        16
+      ],
+      [
+        16,
+        17
+      ],
+      [
+        17,
+        18
+      ],
+      [
+        18,
+        19
+      ],
+      [
+        19,
+        20
+      ],
+      [
+        20,
+        21
+      ],
+      [
+        17,
+        21
+      ],
+      [
+        21,
+        22
+      ],
+      [
+        22,
+        23
+      ],
+      [
+        23,
+        24
+      ],
+      [
+        24,
+        25
+      ],
+      [
+        25,
+        26
+      ],
+      [
+        26,
+        27
+      ],
+      [
+        27,
+        28
+      ],
+      [
+        28,
+        29
+      ],
+      [
+        24,
+        29
+      ],
+      [
+        29,
+        30
+      ],
+      [
+        30,
+        31
+      ],
+      [
+        7,
+        31
+      ],
+      [
+        31,
+        32
+      ],
+      [
+        32,
+        33
+      ],
+      [
+        31,
+        33
+      ],
+      [
+        33,
+        34
+      ]
+    ],
+    "mapper_config_sha256": "511dcacb4ff58a99d0f434cbfd604198c95f453e2bd18e35c0b5e0533437825c",
+    "node_count": 35,
+    "node_state_ids_in_insertion_order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34
+    ],
+    "node_unique_ids_in_insertion_order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34
+    ],
+    "signature_version": "v13-prefix-structure-v1",
+    "structural_signature_sha256": "6a9278250fa9d018dc6f8a31b9d7065ee2c901b6087f39558452db5588cff20d",
+    "target_historical_state_ids": [
+      14,
+      17,
+      20,
+      25,
+      28
+    ]
+  },
+  "processed_final_count": 382,
+  "processed_prefix_count": 35,
+  "protocol": "v13 unified callback-barrier replay v2",
+  "status": "REPLAY_COMPLETE",
+  "suffix_publication_authorized": true,
+  "suffix_published": true,
+  "suffix_publisher": {
+    "connection_confirmed": true,
+    "connections_at_start": 1,
+    "expected": 347,
+    "published": 347,
+    "topic": "/karto_in"
+  },
+  "suffix_record_count": 347,
+  "timeline": [
+    "fresh_ros_master_ready",
+    "fresh_multimapper_and_services_ready",
+    "publisher_subscriber_connection_confirmed",
+    "exact_prefix_published",
+    "processed_count_equals_expected_prefix_count",
+    "synchronous_G_pre_saved",
+    "frozen_prefix_reference_passed",
+    "exact_suffix_published",
+    "processed_count_equals_expected_total_count",
+    "synchronous_final_graph_saved"
+  ]
+}

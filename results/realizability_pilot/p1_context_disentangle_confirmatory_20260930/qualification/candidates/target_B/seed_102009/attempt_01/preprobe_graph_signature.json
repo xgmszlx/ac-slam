@@ -1,0 +1,344 @@
+{
+  "before_probe": true,
+  "block_id": "cd_target_B_s102009",
+  "block_position": 0,
+  "condition_id": "cd_history_qualification_only",
+  "corrected_path_length_m": 21.502499273167007,
+  "diagnostics_enabled": false,
+  "edge_count": 43,
+  "edge_covariance_count": 43,
+  "edge_covariance_logdet_median": -26.89921189097798,
+  "edge_covariance_trace_max": 0.00393234112,
+  "edge_covariance_trace_median": 0.0011295572,
+  "edge_endpoint_set_hash": "91f1aca523e38807717c76ed8824670b3fa6e911bc6b07c126ed1e7573304e2e",
+  "edge_endpoints": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      10
+    ],
+    [
+      0,
+      12
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      11
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      9
+    ],
+    [
+      8,
+      30
+    ],
+    [
+      8,
+      31
+    ],
+    [
+      9,
+      10
+    ],
+    [
+      10,
+      11
+    ],
+    [
+      11,
+      12
+    ],
+    [
+      12,
+      13
+    ],
+    [
+      13,
+      14
+    ],
+    [
+      14,
+      15
+    ],
+    [
+      15,
+      16
+    ],
+    [
+      16,
+      17
+    ],
+    [
+      17,
+      18
+    ],
+    [
+      17,
+      21
+    ],
+    [
+      18,
+      19
+    ],
+    [
+      19,
+      20
+    ],
+    [
+      20,
+      21
+    ],
+    [
+      21,
+      22
+    ],
+    [
+      22,
+      23
+    ],
+    [
+      23,
+      24
+    ],
+    [
+      24,
+      25
+    ],
+    [
+      24,
+      29
+    ],
+    [
+      25,
+      26
+    ],
+    [
+      26,
+      27
+    ],
+    [
+      27,
+      28
+    ],
+    [
+      28,
+      29
+    ],
+    [
+      29,
+      30
+    ],
+    [
+      30,
+      31
+    ],
+    [
+      30,
+      34
+    ],
+    [
+      31,
+      32
+    ],
+    [
+      31,
+      33
+    ],
+    [
+      32,
+      33
+    ],
+    [
+      33,
+      34
+    ]
+  ],
+  "episode_id": "cd_target_B_s102009",
+  "first_corrected_pose": [
+    0.2,
+    0.0,
+    0.0
+  ],
+  "keyscan_count": 35,
+  "last_corrected_pose": [
+    6.327899638221652,
+    5.9228391129053914,
+    3.0675502813047038
+  ],
+  "maneuver_type": "pass",
+  "node_count": 35,
+  "node_id_set_hash": "f31ea24fdf86e0e4e9f45ea4470564a38acd1a2af87f57bc0a8c190e185ec1b4",
+  "node_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+  ],
+  "node_unique_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+  ],
+  "protocol_version": "p1_context_disentangle_confirmatory_20260930",
+  "provenance_enabled": true,
+  "robot_gt_pose_before_probe": [
+    84.6,
+    -22.150373407469736,
+    -21.995357765141186,
+    3.093376029287139
+  ],
+  "robot_gt_pose_before_probe_format": "stamp,x,y,theta",
+  "route_start_node_count": 12,
+  "run_id": "cd_target_B_s102009",
+  "signature_version": 1,
+  "sim_time": 84.6,
+  "snapshot_phase": "before_probe",
+  "target_anchor": {
+    "id": 21,
+    "observed_time": 84.6,
+    "theta": 0.5692045231885343,
+    "x": 10.492230933047102,
+    "y": 0.11673861323537232
+  },
+  "target_historical_scan_ids": [
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "target_historical_unique_ids": [
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "target_id": "map3_grid_anchor_03",
+  "target_identity_gate": {
+    "checks": {
+      "anchor_acquired_after_route_start": true,
+      "anchor_within_reference_radius": true,
+      "minimum_history_node_count": true,
+      "minimum_target_segment_scans": true
+    },
+    "observed": {
+      "anchor_distance_m": 0.31468527459939727,
+      "anchor_id": 21,
+      "node_count": 35,
+      "route_start_node_count": 12,
+      "segment_count": 6
+    },
+    "passed": true,
+    "thresholds": {
+      "minimum_history_node_count": 20,
+      "minimum_target_segment_scans": 3,
+      "target_anchor_max_distance_m": 1.0
+    }
+  },
+  "target_reference": [
+    10.2,
+    0.0,
+    0.0
+  ],
+  "target_segment_size": 6,
+  "tsp_seed": 102009,
+  "wall_time": 1790762814.2600229
+}

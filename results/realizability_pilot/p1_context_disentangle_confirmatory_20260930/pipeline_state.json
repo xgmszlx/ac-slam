@@ -1,0 +1,13 @@
+{
+  "created_utc": "2026-09-30T09:13:13Z",
+  "current_stage": "HARD_STOP",
+  "failure": "RuntimeError: frozen arm order is not position-balanced",
+  "final_gate": "CD_PROSPECTIVE_TECHNICALLY_INCOMPLETE",
+  "fresh_history_started": true,
+  "preregistration_sha256": "38061e4964eb33bfcc0c718ba944adc2710ebd29ca30b6af2a8e2862f5e8f8bc",
+  "protocol_id": "p1_context_disentangle_confirmatory_20260930",
+  "started_utc": "2026-09-30T09:13:39Z",
+  "status": "COMPLETE_TECHNICALLY_INCOMPLETE",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/wcqw/ac-slam/tools/realizability_pilot/cd_confirmatory_pipeline.py\", line 100, in run_pipeline\n    physical = collection.legacy.collect()\n  File \"/home/wcqw/ac-slam/tools/realizability_pilot/v14_confirmatory_collection.py\", line 350, in collect\n    order = freeze_arm_order()\n  File \"/home/wcqw/ac-slam/tools/realizability_pilot/v14_confirmatory_collection.py\", line 72, in freeze_arm_order\n    raise RuntimeError('frozen arm order is not position-balanced')\nRuntimeError: frozen arm order is not position-balanced\n",
+  "updated_utc": "2026-09-30T10:23:01Z"
+}
