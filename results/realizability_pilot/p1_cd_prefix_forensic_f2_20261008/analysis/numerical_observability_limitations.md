@@ -1,0 +1,3 @@
+# Numerical observability limitations
+
+OpenKarto `LoopDiagDouble` formats `kt_double` via `snprintf("%.6f")`. `WritePoseGraphJson` applies it to node corrected poses, edge relative measurements, and 3x3 covariance. JSON decode reads six-decimal values into Python float. The frozen exact comparator therefore tests equality of serialized graph values, not bitwise equality of internal C++ doubles. A difference of 1e-6 can arise at a rounding boundary; differences near 1e-2 m are far above this limit. The dump is a final prefix snapshot, not a full sequence of intermediate matcher/optimizer states. A preexisting sub-micrometre internal divergence could be hidden until it crosses a matching or rounding boundary.

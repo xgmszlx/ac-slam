@@ -1,0 +1,97 @@
+{
+  "forensic_binary_sha256": "3ea511fb6c5b94fefb2dd8aa9088dda52a3c0d957508e9fad0ec037263506e82",
+  "graph_sha256": "b5251781cef4b6427c6e223fc368634497d426965ea35dd8a49858d2bac98075",
+  "prefix_published": 35,
+  "processed_prefix_count": 35,
+  "production_binary_sha256": "7ab54496b4572e831d7f10d615ad3d700bec3a0b89c5abdb9c562616a67d92f6",
+  "provenance_warning": "unified_replay_result.json code_provenance resolves production path even though isolated environment resolves forensic mapper; this file records the actual forensic binary SHA.",
+  "reference_numerical_exact_6dp": true,
+  "reference_structure_exact": true,
+  "run_id": "I4",
+  "trace": [
+    {
+      "best_index": 2782,
+      "best_response": 0.6316815883586139,
+      "covariance": [
+        [
+          0.0015784051076780609,
+          -0.00013096500509454298,
+          0
+        ],
+        [
+          -0.00013096500509454298,
+          0.0003980335388687624,
+          0
+        ],
+        [
+          0,
+          0,
+          0.004873878716587337
+        ]
+      ],
+      "odom_x": 5.079041004180908,
+      "odom_y": 0.17697212100028992,
+      "search_center": [
+        4.919208314790557,
+        0.0968489490521114,
+        0.05847265343598637
+      ],
+      "search_resolution": [
+        0.02,
+        0.02
+      ],
+      "second_index": 2803,
+      "second_response": 0.609289392033543,
+      "selected_mean": [
+        4.849208314790557,
+        0.10684894905211141,
+        0.05847265343598634
+      ],
+      "stage": "coarse",
+      "tie_count": 1
+    },
+    {
+      "best_index": 16,
+      "best_response": 0.6387925317548403,
+      "covariance": [
+        [
+          0.0015784051076780609,
+          -0.00013096500509454298,
+          0
+        ],
+        [
+          -0.00013096500509454298,
+          0.0003980335388687624,
+          0
+        ],
+        [
+          0,
+          0,
+          7.901302648263362e-06
+        ]
+      ],
+      "odom_x": 5.079041004180908,
+      "odom_y": 0.17697212100028992,
+      "search_center": [
+        4.849208314790557,
+        0.09684894905211142,
+        0.05847265343598632
+      ],
+      "search_resolution": [
+        0.01,
+        0.01
+      ],
+      "second_index": 49,
+      "second_response": 0.6387791342952275,
+      "selected_mean": [
+        4.849208314790557,
+        0.09684894905211142,
+        0.05847265343598632
+      ],
+      "stage": "fine",
+      "tie_count": 1
+    }
+  ],
+  "trace_count": 2,
+  "trace_sha256": "847f28ce117c5bf12c21cd6d2ce65c1f4be63fde023d9ec7897d6c281c6a80b3"
+}

@@ -1,0 +1,8 @@
+{
+  "causal_parallel_sensitivity_identified": false,
+  "evidence": "OpenMapper.cpp uses tbb::parallel_for, but the four isolated runs used the same parallel configuration and still reached multiple prefix graphs.",
+  "isolated_forensic_build_tbb_enabled": true,
+  "limitation": "Multistability under TBB does not prove a parallel data race. No change to the production backend is justified.",
+  "production_backend_tbb_enabled": true,
+  "single_thread_counterfactual_run": false
+}
