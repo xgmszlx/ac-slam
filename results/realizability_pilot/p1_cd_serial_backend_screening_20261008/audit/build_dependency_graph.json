@@ -1,0 +1,26 @@
+{
+  "baseline_commit": "32b295d7599531bc913d7a19fb0c7de09a1ce495",
+  "build_system": "catkin/CMake",
+  "targets": {
+    "OpenKarto": {
+      "kind": "shared_library",
+      "sources": "KARTO_SOURCE_FILES, including OpenMapper.cpp",
+      "links": ["tbb when TBB_FOUND"]
+    },
+    "MultiMapper": {
+      "kind": "shared_library",
+      "sources": ["src/MultiMapper.cpp"],
+      "links": ["OpenKarto", "catkin_LIBRARIES"],
+      "build_dependencies": ["OpenKarto", "SelfLocalizer"]
+    },
+    "mapper": {
+      "kind": "executable",
+      "sources": ["src/MapperNode.cpp", "src/SpaSolver.cpp", "src/spa2d.cpp", "src/csparse.cpp", "KARTO_SOURCE_FILES including OpenMapper.cpp"],
+      "links": ["MultiMapper", "CSPARSE_LIBRARY", "catkin_LIBRARIES", "CHOLMOD_LIBRARIES when found"],
+      "build_dependencies": ["MultiMapper"]
+    }
+  },
+  "source_duplication": "KARTO_SOURCE_FILES are compiled into both mapper and libOpenKarto.so",
+  "runtime_interposition_observation": "LD_DEBUG=bindings observed libMultiMapper.so's OpenMapper(bool) constructor reference bound to the isolated mapper executable's definition; libOpenKarto.so self-references also bound to isolated mapper in this launch",
+  "odr_bug_claim": false
+}

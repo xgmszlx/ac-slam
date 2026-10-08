@@ -1,0 +1,82 @@
+{
+  "coverage_limitation": "No claim that ignored raw files in Amendment 1, v14, v14-H, CD-T, or CD-F2 have an independent full-tree hash; tracked files checked against HEAD and specific v14 critical hashes.",
+  "original_cd": {
+    "aggregate_sha256": "0725778cbcd223cea69384350bcedefc965c2bb8c75a32a484e1e7e4d747fd4b",
+    "coverage": "all currently present regular files under original CD root only",
+    "exact": true,
+    "expected_aggregate_sha256": "0725778cbcd223cea69384350bcedefc965c2bb8c75a32a484e1e7e4d747fd4b",
+    "expected_count": 3881,
+    "file_count": 3881
+  },
+  "protected_tracked_dirs": [
+    "p1_v14_confirmatory_20260928",
+    "p1_v14_heterogeneity_20260928",
+    "p1_context_disentangle_t_20260928",
+    "p1_context_disentangle_confirmatory_20260930",
+    "p1_context_disentangle_confirmatory_amendment1_20260930",
+    "p1_cd_prefix_forensic_f2_20261008"
+  ],
+  "tracked_diff_clean": true,
+  "tracked_diff_output": "",
+  "v14_critical": {
+    "all_exact": true,
+    "files": {
+      "V14_FINAL_REPORT.md": {
+        "actual": "d1b34a66265bffee87ab2cba7853da0d8c1eb1fdeaf1aac677b15fe7e087dd32",
+        "expected": "d1b34a66265bffee87ab2cba7853da0d8c1eb1fdeaf1aac677b15fe7e087dd32"
+      },
+      "analysis/branch_details.json": {
+        "actual": "00ea3bbf6434d976b2879e889aa73519e11be516e83ff5f917d428ef3fda6041",
+        "expected": "00ea3bbf6434d976b2879e889aa73519e11be516e83ff5f917d428ef3fda6041"
+      },
+      "analysis/branch_metrics.csv": {
+        "actual": "6c0f62f7a2dc6bd0fe5f5bab9097b4211a5e0a6a78e14d81255e9e497ccb8cf1",
+        "expected": "6c0f62f7a2dc6bd0fe5f5bab9097b4211a5e0a6a78e14d81255e9e497ccb8cf1"
+      },
+      "analysis/constraint_mechanism.csv": {
+        "actual": "23fce90c34e973e26f0d27c7b771787b4ab819559aab134b8e257d8a818d6920",
+        "expected": "23fce90c34e973e26f0d27c7b771787b4ab819559aab134b8e257d8a818d6920"
+      },
+      "analysis/gt_sanity.csv": {
+        "actual": "369fc05b539751fc93bef1ebc48c0b1a25e447dbc66ce1be3416c93afc0e92b2",
+        "expected": "369fc05b539751fc93bef1ebc48c0b1a25e447dbc66ce1be3416c93afc0e92b2"
+      },
+      "analysis/gt_sanity_details.json": {
+        "actual": "13b393dd4fc57b1be699cd5bdece0fdb4287d9c6b2c45a7d848bed1b26512956",
+        "expected": "13b393dd4fc57b1be699cd5bdece0fdb4287d9c6b2c45a7d848bed1b26512956"
+      },
+      "analysis/mechanism_summary.json": {
+        "actual": "3df0830f332c5b5ca0a9d41c9bc2a7a3b42be4de2d8bec9f6663a9c0ba95e2f1",
+        "expected": "3df0830f332c5b5ca0a9d41c9bc2a7a3b42be4de2d8bec9f6663a9c0ba95e2f1"
+      },
+      "analysis/primary_block_table.csv": {
+        "actual": "fc7ed001e28b6942945f20d1b514cfd8a08077699ae446a04d2b3de28f89b803",
+        "expected": "fc7ed001e28b6942945f20d1b514cfd8a08077699ae446a04d2b3de28f89b803"
+      },
+      "analysis/primary_summary.json": {
+        "actual": "6b81e441156ea77779e5531d0d46c677b5fb32de8853df040d24b0a564286099",
+        "expected": "6b81e441156ea77779e5531d0d46c677b5fb32de8853df040d24b0a564286099"
+      },
+      "analysis/v14_confirmatory_summary.json": {
+        "actual": "6ba077028a561dc40035065a73301e9eaa7a97d56287224e6f10825ff88b2627",
+        "expected": "6ba077028a561dc40035065a73301e9eaa7a97d56287224e6f10825ff88b2627"
+      },
+      "collection/BACKEND_REPLAY_LOCK.json": {
+        "actual": "b388243570f8d6c4dc3dd453bbfa79675772fb760d3c3e11dacc030ece267dee",
+        "expected": "b388243570f8d6c4dc3dd453bbfa79675772fb760d3c3e11dacc030ece267dee"
+      },
+      "collection/PHYSICAL_COLLECTION_LOCK.json": {
+        "actual": "7d94322b5bb7b240a6267ac9cba12c6314ef12ea9b237879366bcfdf673f6826",
+        "expected": "7d94322b5bb7b240a6267ac9cba12c6314ef12ea9b237879366bcfdf673f6826"
+      },
+      "decision/final_gate.json": {
+        "actual": "6ba077028a561dc40035065a73301e9eaa7a97d56287224e6f10825ff88b2627",
+        "expected": "6ba077028a561dc40035065a73301e9eaa7a97d56287224e6f10825ff88b2627"
+      },
+      "preregistration/v14_confirmatory_preregistration.json": {
+        "actual": "6761a35511a17f73b77806fd0fbec33af98acdbf5a1078ba271144409fe85709",
+        "expected": "6761a35511a17f73b77806fd0fbec33af98acdbf5a1078ba271144409fe85709"
+      }
+    }
+  }
+}

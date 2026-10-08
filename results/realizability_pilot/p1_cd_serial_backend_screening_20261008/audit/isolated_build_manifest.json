@@ -1,0 +1,86 @@
+{
+  "CMAKE_PREFIX_PATH": "/home/wcqw/ac-slam/results/realizability_pilot/p1_cd_serial_backend_screening_20261008/isolated_catkin_observed/devel:/opt/ros/noetic",
+  "PYTHONPATH": "/home/wcqw/ac-slam/results/realizability_pilot/p1_cd_serial_backend_screening_20261008/isolated_catkin_observed/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages",
+  "ROS_PACKAGE_PATH": "/home/wcqw/ac-slam/results/realizability_pilot/p1_cd_serial_backend_screening_20261008/isolated_catkin_observed/src:/opt/ros/noetic/share",
+  "TBB_LIBRARIES": [
+    "tbb",
+    "atomic"
+  ],
+  "USE_TBB": true,
+  "build_command": "source /opt/ros/noetic/setup.bash && catkin_make -C <isolated_ws> --only-pkg-with-deps nav2d_karto -j4 --cmake-args -DPYTHON_EXECUTABLE=/usr/bin/python3 -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS=-I/home/wcqw/ac-slam/catkin_ws/devel/include",
+  "build_header_dependency_limitation": "cpp_solver/PoseGraph.h from production devel/include; header only",
+  "build_type": "Release",
+  "cmake": "cmake version 3.16.3",
+  "compiler": "c++ (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0",
+  "cxx_flags": "-I/home/wcqw/ac-slam/catkin_ws/devel/include",
+  "observed_binaries": {
+    "libMultiMapper.so": {
+      "path": "/home/wcqw/ac-slam/results/realizability_pilot/p1_cd_serial_backend_screening_20261008/isolated_catkin_observed/devel/lib/libMultiMapper.so",
+      "sha256": "f79f3e5397b9dbc0ec2dd0da530fb8b27ef00f343ae2b52f91d8f9541332bcb3"
+    },
+    "libOpenKarto.so": {
+      "path": "/home/wcqw/ac-slam/results/realizability_pilot/p1_cd_serial_backend_screening_20261008/isolated_catkin_observed/devel/lib/libOpenKarto.so",
+      "sha256": "c8bbb0004c20535e6b6404b1d12d4bb04ef46cb4bada8b8a69e7256673491af5"
+    },
+    "libSelfLocalizer.so": {
+      "path": "/home/wcqw/ac-slam/results/realizability_pilot/p1_cd_serial_backend_screening_20261008/isolated_catkin_observed/devel/lib/libSelfLocalizer.so",
+      "sha256": "47f74972f6549ec6a2e73932453fe5acfaaaf5fb7fe2cfe66d85b6d85b5677fd"
+    },
+    "mapper": {
+      "path": "/home/wcqw/ac-slam/results/realizability_pilot/p1_cd_serial_backend_screening_20261008/isolated_catkin_observed/devel/lib/nav2d_karto/mapper",
+      "sha256": "d5fe41a093669d62608667895591912c282c1e4e89f32f53362340c5df207ee0"
+    }
+  },
+  "observed_extra_changes": [
+    "ROS_INFO of IsMultiThreaded",
+    "graph JSON max_digits10 only",
+    "ROS_INFO_ONCE after doSPA(40)"
+  ],
+  "observed_source_sha256": {
+    "CMakeLists.txt": "90f29bfaddf4b1e0679b2571f1c5c144f09dce6a521710f7fb9f615a3f6bcf39",
+    "OpenKarto/source/OpenKarto/OpenMapper.h": "ba70802b0b87d3b45d5a173de75cd9d1586ad38527a70e76f361976a9b927e33",
+    "OpenKarto/source/OpenMapper.cpp": "44142405de995be420b1c56928af7d6c9fd7f7fc076ef2c5aabcede788842ed2",
+    "src/MultiMapper.cpp": "035ac8df409671467ca11a00882dce0f936a8151fb84e2030c4b2921802a2fb2",
+    "src/SpaSolver.cpp": "33d960872dfd1561a2e4acf20f01bb09d1f1f4ee51a8567172f33772dfc527a0"
+  },
+  "pure_binaries": {
+    "libMultiMapper.so": {
+      "path": "/home/wcqw/ac-slam/results/realizability_pilot/p1_cd_serial_backend_screening_20261008/isolated_catkin/devel/lib/libMultiMapper.so",
+      "sha256": "b66c522c722328b35903e6210818684c6d3e2b5eab63d5d8ff23d04f8c7f9fc9"
+    },
+    "libOpenKarto.so": {
+      "path": "/home/wcqw/ac-slam/results/realizability_pilot/p1_cd_serial_backend_screening_20261008/isolated_catkin/devel/lib/libOpenKarto.so",
+      "sha256": "1fb85dd56440ff29892c7f704ef3a711bee6e20763e43cf2f13aff5da8ec5ba6"
+    },
+    "libSelfLocalizer.so": {
+      "path": "/home/wcqw/ac-slam/results/realizability_pilot/p1_cd_serial_backend_screening_20261008/isolated_catkin/devel/lib/libSelfLocalizer.so",
+      "sha256": "0e114f58d9ca87bf351ceb7bcd1f0fb24e66995d82f70d3c122a068265db5bbc"
+    },
+    "mapper": {
+      "path": "/home/wcqw/ac-slam/results/realizability_pilot/p1_cd_serial_backend_screening_20261008/isolated_catkin/devel/lib/nav2d_karto/mapper",
+      "sha256": "14ee1688c828ebc152aef2932697ba8ab0300d40b0cde48e9cd9e5b7cd955b70"
+    }
+  },
+  "pure_change": "OpenMapper(true) -> OpenMapper(false) only",
+  "pure_source_sha256": {
+    "CMakeLists.txt": "90f29bfaddf4b1e0679b2571f1c5c144f09dce6a521710f7fb9f615a3f6bcf39",
+    "OpenKarto/source/OpenKarto/OpenMapper.h": "ba70802b0b87d3b45d5a173de75cd9d1586ad38527a70e76f361976a9b927e33",
+    "OpenKarto/source/OpenMapper.cpp": "170726d4a60e5aafdbeab80f9b310c413491572f6d6ff13448d6dfd3e59ce62c",
+    "src/MultiMapper.cpp": "dac0f831ed950a7ae4c71de6c8ddc2301be146f650f1e04f2353c4159e40398b",
+    "src/SpaSolver.cpp": "63bbc2f953fd9bbe47d55c6dd3a41f5fe48f5b716d4d90fff8d63b19f8f5d013"
+  },
+  "python_executable": "/usr/bin/python3",
+  "python_version": "Python 3.8.10",
+  "release_flags": "-O3 -DNDEBUG",
+  "ros_distro": "noetic",
+  "ros_version": "<unversioned>",
+  "source_commit": "32b295d7599531bc913d7a19fb0c7de09a1ce495",
+  "source_sha256": {
+    "CMakeLists.txt": "90f29bfaddf4b1e0679b2571f1c5c144f09dce6a521710f7fb9f615a3f6bcf39",
+    "OpenKarto/source/OpenKarto/OpenMapper.h": "ba70802b0b87d3b45d5a173de75cd9d1586ad38527a70e76f361976a9b927e33",
+    "OpenKarto/source/OpenMapper.cpp": "170726d4a60e5aafdbeab80f9b310c413491572f6d6ff13448d6dfd3e59ce62c",
+    "src/MultiMapper.cpp": "921d2649a3e507a3deee9f2baf9790bfefee98e6633e370b54ead0dc4f530b35",
+    "src/SpaSolver.cpp": "63bbc2f953fd9bbe47d55c6dd3a41f5fe48f5b716d4d90fff8d63b19f8f5d013"
+  },
+  "task_id": "CD_A0_A1_SERIAL_KARTO_SCREENING"
+}

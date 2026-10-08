@@ -1,0 +1,56 @@
+--- a/isolated_catkin/src/navigation_2d/nav2d_karto/src/MultiMapper.cpp
++++ b/isolated_catkin_observed/src/navigation_2d/nav2d_karto/src/MultiMapper.cpp
+@@ -69,6 +69,7 @@
+ 	// Initialize KARTO-Mapper
+ 	mMapper = new karto::OpenMapper(false);
++	ROS_INFO("CD_A0_SERIAL_MODE_EVIDENCE IsMultiThreaded=%d", mMapper->IsMultiThreaded() ? 1 : 0);
+--- a/isolated_catkin/src/navigation_2d/nav2d_karto/src/SpaSolver.cpp
++++ b/isolated_catkin_observed/src/navigation_2d/nav2d_karto/src/SpaSolver.cpp
+@@ -49,7 +49,8 @@
+ 	// ROS_WARN("Calling doSPA for loop closure");
+ 	m_Spa.doSPA(40);
++	ROS_INFO_ONCE("CD_A0_OPTIMIZATION_EVIDENCE SpaSolver::Compute executed doSPA(40)");
+--- a/isolated_catkin/src/navigation_2d/nav2d_karto/OpenKarto/source/OpenMapper.cpp
++++ b/isolated_catkin_observed/src/navigation_2d/nav2d_karto/OpenKarto/source/OpenMapper.cpp
+@@ -30,6 +30,7 @@
+ #include <chrono>
+ #include <string>
++#include <limits>
+@@ -57,6 +58,13 @@
+   namespace
+   {
++    std::string GraphDumpDouble(kt_double value)
++    {
++      char buffer[64];
++      snprintf(buffer, sizeof(buffer), "%.*g", std::numeric_limits<kt_double>::max_digits10, value);
++      return std::string(buffer);
++    }
++
+     std::string LoopDiagDouble(kt_double value)
+@@ -2745,9 +2753,9 @@
+-          << ",\"x\":" << LoopDiagDouble(pose.GetX())
+-          << ",\"y\":" << LoopDiagDouble(pose.GetY())
+-          << ",\"theta\":" << LoopDiagDouble(pose.GetHeading()) << "}";
++          << ",\"x\":" << GraphDumpDouble(pose.GetX())
++          << ",\"y\":" << GraphDumpDouble(pose.GetY())
++          << ",\"theta\":" << GraphDumpDouble(pose.GetHeading()) << "}";
+@@ -2769,16 +2777,16 @@
+-        out << ",\"measurement\":{\"dx\":" << LoopDiagDouble(mean.GetX())
+-            << ",\"dy\":" << LoopDiagDouble(mean.GetY())
+-            << ",\"dtheta\":" << LoopDiagDouble(mean.GetHeading()) << "}"
++        out << ",\"measurement\":{\"dx\":" << GraphDumpDouble(mean.GetX())
++            << ",\"dy\":" << GraphDumpDouble(mean.GetY())
++            << ",\"dtheta\":" << GraphDumpDouble(mean.GetHeading()) << "}"
+             << ",\"covariance_3x3\":[["
+-            << LoopDiagDouble(covariance(0, 0)) << "," << LoopDiagDouble(covariance(0, 1))
+-            << "," << LoopDiagDouble(covariance(0, 2)) << "],["
+-            << LoopDiagDouble(covariance(1, 0)) << "," << LoopDiagDouble(covariance(1, 1))
+-            << "," << LoopDiagDouble(covariance(1, 2)) << "],["
+-            << LoopDiagDouble(covariance(2, 0)) << "," << LoopDiagDouble(covariance(2, 1))
+-            << "," << LoopDiagDouble(covariance(2, 2)) << "]]";
++            << GraphDumpDouble(covariance(0, 0)) << "," << GraphDumpDouble(covariance(0, 1))
++            << "," << GraphDumpDouble(covariance(0, 2)) << "],["
++            << GraphDumpDouble(covariance(1, 0)) << "," << GraphDumpDouble(covariance(1, 1))
++            << "," << GraphDumpDouble(covariance(1, 2)) << "],["
++            << GraphDumpDouble(covariance(2, 0)) << "," << GraphDumpDouble(covariance(2, 1))
++            << "," << GraphDumpDouble(covariance(2, 2)) << "]]";

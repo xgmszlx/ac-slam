@@ -1,0 +1,220 @@
+{
+  "LD_LIBRARY_PATH": "/home/wcqw/ac-slam/results/realizability_pilot/p1_cd_serial_backend_screening_20261008/isolated_catkin_observed/devel/lib:/opt/ros/noetic/lib:/opt/ros/noetic/lib/x86_64-linux-gnu:/usr/local/cuda-11.8/lib64",
+  "candidate": "observed",
+  "ldd": "linux-vdso.so.1 (0x00007ffdf5fab000)\n\tlibMultiMapper.so => /home/wcqw/ac-slam/results/realizability_pilot/p1_cd_serial_backend_screening_20261008/isolated_catkin_observed/devel/lib/libMultiMapper.so (0x00007f17d95e0000)\n\tlibcxsparse.so.3 => /lib/x86_64-linux-gnu/libcxsparse.so.3 (0x00007f17d956f000)\n\tlibroscpp.so => /opt/ros/noetic/lib/libroscpp.so (0x00007f17d93be000)\n\tlibpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00007f17d939b000)\n\tlibrosconsole.so => /opt/ros/noetic/lib/librosconsole.so (0x00007f17d9338000)\n\tlibrostime.so => /opt/ros/noetic/lib/librostime.so (0x00007f17d9309000)\n\tlibcholmod.so.3 => /lib/x86_64-linux-gnu/libcholmod.so.3 (0x00007f17d9226000)\n\tlibtbb.so.2 => /lib/x86_64-linux-gnu/libtbb.so.2 (0x00007f17d91e0000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x00007f17d8ffe000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007f17d8eaf000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007f17d8e94000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f17d8ca0000)\n\tlibOpenKarto.so => /home/wcqw/ac-slam/results/realizability_pilot/p1_cd_serial_backend_screening_20261008/isolated_catkin_observed/devel/lib/libOpenKarto.so (0x00007f17d8ba2000)\n\tlibSelfLocalizer.so => /home/wcqw/ac-slam/results/realizability_pilot/p1_cd_serial_backend_screening_20261008/isolated_catkin_observed/devel/lib/libSelfLocalizer.so (0x00007f17d8b7e000)\n\tlibtf.so => /opt/ros/noetic/lib/libtf.so (0x00007f17d8b4f000)\n\tlibroscpp_serialization.so => /opt/ros/noetic/lib/libroscpp_serialization.so (0x00007f17d8b4a000)\n\tlibboost_thread.so.1.71.0 => /lib/x86_64-linux-gnu/libboost_thread.so.1.71.0 (0x00007f17d8b1c000)\n\tlibxmlrpcpp.so => /opt/ros/noetic/lib/libxmlrpcpp.so (0x00007f17d8af8000)\n\tlibcpp_common.so => /opt/ros/noetic/lib/libcpp_common.so (0x00007f17d8aea000)\n\tlibboost_chrono.so.1.71.0 => /lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0 (0x00007f17d8adc000)\n\tlibboost_filesystem.so.1.71.0 => /lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0 (0x00007f17d8abe000)\n\t/lib64/ld-linux-x86-64.so.2 (0x00007f17d977b000)\n\tlibrosconsole_log4cxx.so => /opt/ros/noetic/lib/librosconsole_log4cxx.so (0x00007f17d8a9c000)\n\tlibrosconsole_backend_interface.so => /opt/ros/noetic/lib/librosconsole_backend_interface.so (0x00007f17d8a97000)\n\tliblog4cxx.so.10 => /lib/x86_64-linux-gnu/liblog4cxx.so.10 (0x00007f17d88b9000)\n\tlibboost_regex.so.1.71.0 => /lib/x86_64-linux-gnu/libboost_regex.so.1.71.0 (0x00007f17d87b9000)\n\tlibamd.so.2 => /lib/x86_64-linux-gnu/libamd.so.2 (0x00007f17d87ae000)\n\tlibcolamd.so.2 => /lib/x86_64-linux-gnu/libcolamd.so.2 (0x00007f17d87a5000)\n\tlibsuitesparseconfig.so.5 => /lib/x86_64-linux-gnu/libsuitesparseconfig.so.5 (0x00007f17d879e000)\n\tlibccolamd.so.2 => /lib/x86_64-linux-gnu/libccolamd.so.2 (0x00007f17d8791000)\n\tlibcamd.so.2 => /lib/x86_64-linux-gnu/libcamd.so.2 (0x00007f17d8785000)\n\tlibmetis.so.5 => /lib/x86_64-linux-gnu/libmetis.so.5 (0x00007f17d8517000)\n\tliblapack.so.3 => /lib/x86_64-linux-gnu/liblapack.so.3 (0x00007f17d7e73000)\n\tlibblas.so.3 => /lib/x86_64-linux-gnu/libblas.so.3 (0x00007f17d7e06000)\n\tlibgomp.so.1 => /lib/x86_64-linux-gnu/libgomp.so.1 (0x00007f17d7dc2000)\n\tlibdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00007f17d7dbc000)\n\tlibtf2_ros.so => /opt/ros/noetic/lib/libtf2_ros.so (0x00007f17d7d04000)\n\tlibtf2.so => /opt/ros/noetic/lib/libtf2.so (0x00007f17d7cc8000)\n\tlibconsole_bridge.so.0.4 => /lib/x86_64-linux-gnu/libconsole_bridge.so.0.4 (0x00007f17d7cc2000)\n\tlibapr-1.so.0 => /lib/x86_64-linux-gnu/libapr-1.so.0 (0x00007f17d7c87000)\n\tlibaprutil-1.so.0 => /lib/x86_64-linux-gnu/libaprutil-1.so.0 (0x00007f17d7c59000)\n\tlibicui18n.so.66 => /lib/x86_64-linux-gnu/libicui18n.so.66 (0x00007f17d795a000)\n\tlibicuuc.so.66 => /lib/x86_64-linux-gnu/libicuuc.so.66 (0x00007f17d7774000)\n\tlibgfortran.so.5 => /lib/x86_64-linux-gnu/libgfortran.so.5 (0x00007f17d74ac000)\n\tlibactionlib.so => /opt/ros/noetic/lib/libactionlib.so (0x00007f17d7489000)\n\tlibuuid.so.1 => /lib/x86_64-linux-gnu/libuuid.so.1 (0x00007f17d7480000)\n\tlibcrypt.so.1 => /lib/x86_64-linux-gnu/libcrypt.so.1 (0x00007f17d7445000)\n\tlibexpat.so.1 => /lib/x86_64-linux-gnu/libexpat.so.1 (0x00007f17d7417000)\n\tlibicudata.so.66 => /lib/x86_64-linux-gnu/libicudata.so.66 (0x00007f17d5956000)\n\tlibquadmath.so.0 => /lib/x86_64-linux-gnu/libquadmath.so.0 (0x00007f17d590a000)",
+  "mapper_executable": "/home/wcqw/ac-slam/results/realizability_pilot/p1_cd_serial_backend_screening_20261008/isolated_catkin_observed/devel/lib/nav2d_karto/mapper",
+  "mapper_executable_sha256": "d5fe41a093669d62608667895591912c282c1e4e89f32f53362340c5df207ee0",
+  "mapper_pid_at_smoke": 102735,
+  "nm_multimapper_constructor": [
+    "                 U karto::OpenMapper::OpenMapper(bool)"
+  ],
+  "observed_binding_log": "/home/wcqw/ac-slam/results/realizability_pilot/p1_cd_serial_backend_screening_20261008/technical/ld_bindings.103012",
+  "observed_binding_log_sha256": "a98c11d2dd5e4f0795d689fdf06040019f349d60278896ec611dd92deed23b60",
+  "proc_maps_mapped_files": [
+    {
+      "path": "/home/wcqw/ac-slam/results/realizability_pilot/p1_cd_serial_backend_screening_20261008/isolated_catkin_observed/devel/lib/libMultiMapper.so",
+      "sha256": "f79f3e5397b9dbc0ec2dd0da530fb8b27ef00f343ae2b52f91d8f9541332bcb3"
+    },
+    {
+      "path": "/home/wcqw/ac-slam/results/realizability_pilot/p1_cd_serial_backend_screening_20261008/isolated_catkin_observed/devel/lib/libOpenKarto.so",
+      "sha256": "c8bbb0004c20535e6b6404b1d12d4bb04ef46cb4bada8b8a69e7256673491af5"
+    },
+    {
+      "path": "/home/wcqw/ac-slam/results/realizability_pilot/p1_cd_serial_backend_screening_20261008/isolated_catkin_observed/devel/lib/libSelfLocalizer.so",
+      "sha256": "47f74972f6549ec6a2e73932453fe5acfaaaf5fb7fe2cfe66d85b6d85b5677fd"
+    },
+    {
+      "path": "/home/wcqw/ac-slam/results/realizability_pilot/p1_cd_serial_backend_screening_20261008/isolated_catkin_observed/devel/lib/nav2d_karto/mapper",
+      "sha256": "d5fe41a093669d62608667895591912c282c1e4e89f32f53362340c5df207ee0"
+    },
+    {
+      "path": "/opt/ros/noetic/lib/libactionlib.so",
+      "sha256": "ba1114c8c70cc86e801d620d4146ae3c30435d98adde8156c7793e1a43fd5111"
+    },
+    {
+      "path": "/opt/ros/noetic/lib/libcpp_common.so",
+      "sha256": "91ec3a88803d0a1deb5bfa8926d9d399eb8f11f09ba33120898d09e0141999f8"
+    },
+    {
+      "path": "/opt/ros/noetic/lib/librosconsole.so",
+      "sha256": "d61e661ee2a546ae0f198cf54e1a7aab48ea58c0ff36a399c078153cd580476b"
+    },
+    {
+      "path": "/opt/ros/noetic/lib/librosconsole_backend_interface.so",
+      "sha256": "35e0cefa709dbf3bf37579b369d81282fe7b672ee792fd990dd7539c5cfbb16f"
+    },
+    {
+      "path": "/opt/ros/noetic/lib/librosconsole_log4cxx.so",
+      "sha256": "135bcf7ab6956a8c5a5615902989460fb7877967a8759e05d4d28bc768950cdd"
+    },
+    {
+      "path": "/opt/ros/noetic/lib/libroscpp.so",
+      "sha256": "d90fb0e9a8784fc33c677b788830bf9e0775ea73d4b5d3002aad0946e53ff8ca"
+    },
+    {
+      "path": "/opt/ros/noetic/lib/libroscpp_serialization.so",
+      "sha256": "e89883d963d9e7cc12c0170f3083712c24be101464b05d2bd12043a0bba3c112"
+    },
+    {
+      "path": "/opt/ros/noetic/lib/librostime.so",
+      "sha256": "b2ea789daa9e06f68ebfcfe5194c6a2a03a8d400ccea5e64a094bb49b30d2223"
+    },
+    {
+      "path": "/opt/ros/noetic/lib/libtf.so",
+      "sha256": "f5424b86795578f6a60e1b97eab7bcb734fd1b62685750a5c398dfd3db1b998f"
+    },
+    {
+      "path": "/opt/ros/noetic/lib/libtf2.so",
+      "sha256": "17a12492f24477ee8446b8bca3014b4f3e062b03e35c1e72f6dc6c5c5940435a"
+    },
+    {
+      "path": "/opt/ros/noetic/lib/libtf2_ros.so",
+      "sha256": "451ac1096874e7fdd0ef03fda749690c539a73cee3799b67ab53d2208c7d62bf"
+    },
+    {
+      "path": "/opt/ros/noetic/lib/libxmlrpcpp.so",
+      "sha256": "529ca45a6e32c3e1ff6cd368f4a43891983f9b804246d9f988a8a0bc9936d8a5"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/blas/libblas.so.3.9.0",
+      "sha256": "41474fda3fbae6277c079257d8e236c702860a54585686d5a421c7731ad530b6"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.9.0",
+      "sha256": "86ce423d6069cbbf6adddd4f89e1e4ea8ca66ca86308ecfc026ace5b85fe7d92"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/ld-2.31.so",
+      "sha256": "cfd44e4341767033532d1483c8250d200ad4cdf535d0abc19064ae34cdc51ca0"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libamd.so.2.4.6",
+      "sha256": "90a6577c0b59b25680e238cf2226265c3dbb45683303e853792ef03fde970d05"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libapr-1.so.0.6.5",
+      "sha256": "f002556ea2645376d2358992f402d224b35142c262adc0fb56217159c4951320"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libaprutil-1.so.0.6.1",
+      "sha256": "d532af8eccfede0733a7dc321b606ac3cc63e916a7966262a064a917f52b1da8"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0",
+      "sha256": "d1b51a0aaec8675081523ab596742813c14ede4832c529c1cca2f25d3aee5050"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0",
+      "sha256": "e1ba3a5cf611782b0dd5d7981edd06504edcb867482d2929213ae655a98d0ae2"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0",
+      "sha256": "8ba016f96cf59ea484eb77a800bdaa2020e6a3dde60b1d320b2cf807a4aedaf2"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0",
+      "sha256": "8bf9cd91f41bb60d52083d6c66e3b79b7f5884945d14b4aa95aa13d8486d9daf"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libc-2.31.so",
+      "sha256": "53b909551f8e581120ddc2d24cfb5df76c52e3c2e2a5dac0d202b25638b3e902"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libcamd.so.2.4.6",
+      "sha256": "2da0fd13d53242a2dc3e4270b09c5fb809952e1ea0914dd8a417e40f265a7c95"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libccolamd.so.2.9.6",
+      "sha256": "a841bd18769c4f218f70a5e96936276c6080536dba7200880d98e1199fa33c0c"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libcholmod.so.3.0.14",
+      "sha256": "2fae4a48fab49868c2a7a5fec8bbb90efe30272a4e451e884f55a02df327b558"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libcolamd.so.2.9.6",
+      "sha256": "0c3ae69c2dced6cb3dbf624cf3edf5aa54b2ed560771ab9797b315eeb95934a0"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4",
+      "sha256": "3008f31164aced8976b266973a20cf5355b70ae38c60f0405e578c2bee194a43"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libcrypt.so.1.1.0",
+      "sha256": "5744b3669e4574920dfac2b33207db4e8cb501df88ef28c3801ba0673a7c7d6f"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libcxsparse.so.3.2.0",
+      "sha256": "1594e8ae0b0fd6c566043afa37d73be54b8f48a2b23f554d55f191bb717b7558"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libdl-2.31.so",
+      "sha256": "e0d0cace80b627e50ca3f7b621b64917677c27c74077080854d57cf4e548edc6"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11",
+      "sha256": "78f843a1bedfa4446d888d3ac0a501bbd27c08d3ef35999cbf6afc2592b357d6"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1",
+      "sha256": "489803ded8a4d803e2c792763a2767c12185f5764b7bba080742d14ef2452b27"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libgfortran.so.5.0.0",
+      "sha256": "01fc721062fc3c2b5492202d276c5a374b7d952fc168d2d1e603fa85660cc502"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0",
+      "sha256": "98b21ff32bb07b53f1fb266d887d2db0086ea66c8ad03696a1db53f65321cd94"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libicudata.so.66.1",
+      "sha256": "50b039da86ab40fed973954892aa52b0b833127b94103ec62b71c1e0891ce5ed"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libicui18n.so.66.1",
+      "sha256": "e6b2f6fdf6f473bd529526a06b1e1bb6dab4a9998da941346711f1805dd42816"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libicuuc.so.66.1",
+      "sha256": "d41e9287614412b6e95f809773a5f0f86ee3763a7d5f0db4856e79f64f7c8dab"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/liblog4cxx.so.10.0.0",
+      "sha256": "5693f25a8d6fc9582486b8ae34ce72a16f4d976319eaa813587d13ac56c7ebcc"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libm-2.31.so",
+      "sha256": "a0e70f48f02a399e8dd37f861a99e226c285a9daf50a25d19fff7ccf18b97f9c"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libmetis.so.5.1.0",
+      "sha256": "3201764476cd0835c59200442463e3ecde6b5e3169947b969647bb76dca518e3"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libpthread-2.31.so",
+      "sha256": "af27ed906f6185e0143b9c0d0da287788efa7eb6b2639e44d48fb2939415fdc5"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libquadmath.so.0.0.0",
+      "sha256": "36ccd8fddb16b65129879a6ecf379b468d6e920bdcaeb01e3a7fdd4e7ddf1be8"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28",
+      "sha256": "26916e7389a561537a0510661fc75538cea236139346f3dbe21bc64ba65605bf"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libsuitesparseconfig.so.5.7.1",
+      "sha256": "be0139837fce47efe22257fc6497f7725dedab4aa77c5a0936099c071f325ef2"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libtbb.so.2",
+      "sha256": "26115b1a00c49e84d314e3f75eab0c752a2dfb20a61c60897f5656b1db239cba"
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libuuid.so.1.3.0",
+      "sha256": "5255c40077f560d9572f60e8c1b85333bd409ac5daeee326e5c1bb3273dca0a9"
+    }
+  ],
+  "readelf_dynamic": "Dynamic section at offset 0x114730 contains 39 entries:\n  \u6807\u8bb0        \u7c7b\u578b                         \u540d\u79f0/\u503c\n 0x0000000000000001 (NEEDED)             \u5171\u4eab\u5e93\uff1a[libMultiMapper.so]\n 0x0000000000000001 (NEEDED)             \u5171\u4eab\u5e93\uff1a[libcxsparse.so.3]\n 0x0000000000000001 (NEEDED)             \u5171\u4eab\u5e93\uff1a[libroscpp.so]\n 0x0000000000000001 (NEEDED)             \u5171\u4eab\u5e93\uff1a[libpthread.so.0]\n 0x0000000000000001 (NEEDED)             \u5171\u4eab\u5e93\uff1a[librosconsole.so]\n 0x0000000000000001 (NEEDED)             \u5171\u4eab\u5e93\uff1a[librostime.so]\n 0x0000000000000001 (NEEDED)             \u5171\u4eab\u5e93\uff1a[libcholmod.so.3]\n 0x0000000000000001 (NEEDED)             \u5171\u4eab\u5e93\uff1a[libtbb.so.2]\n 0x0000000000000001 (NEEDED)             \u5171\u4eab\u5e93\uff1a[libstdc++.so.6]\n 0x0000000000000001 (NEEDED)             \u5171\u4eab\u5e93\uff1a[libm.so.6]\n 0x0000000000000001 (NEEDED)             \u5171\u4eab\u5e93\uff1a[libgcc_s.so.1]\n 0x0000000000000001 (NEEDED)             \u5171\u4eab\u5e93\uff1a[libc.so.6]\n 0x000000000000001d (RUNPATH)            Library runpath: [/home/wcqw/ac-slam/results/realizability_pilot/p1_cd_serial_backend_screening_20261008/isolated_catkin_observed/devel/lib:/opt/ros/noetic/lib:]\n 0x000000000000000c (INIT)               0x44000\n 0x000000000000000d (FINI)               0xe3748\n 0x0000000000000019 (INIT_ARRAY)         0x1114c0\n 0x000000000000001b (INIT_ARRAYSZ)       120 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x111538\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x3a0\n 0x0000000000000005 (STRTAB)             0x14230\n 0x0000000000000006 (SYMTAB)             0x50c8\n 0x000000000000000a (STRSZ)              138742 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000015 (DEBUG)              0x0\n 0x0000000000000003 (PLTGOT)             0x1159e0\n 0x0000000000000002 (PLTRELSZ)           4416 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x41ff8\n 0x0000000000000007 (RELA)               0x375b8\n 0x0000000000000008 (RELASZ)             43584 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000000000001e (FLAGS)              BIND_NOW\n 0x000000006ffffffb (FLAGS_1)            \u6807\u5fd7\uff1a NOW PIE\n 0x000000006ffffffe (VERNEED)            0x37448\n 0x000000006fffffff (VERNEEDNUM)         5\n 0x000000006ffffff0 (VERSYM)             0x36026\n 0x000000006ffffff9 (RELACOUNT)          1566\n 0x0000000000000000 (NULL)               0x0"
+}

@@ -1,0 +1,36 @@
+{
+  "candidate": "SERIAL_KARTO_CANDIDATE_OBSERVED",
+  "candidate_binary_sha256": "d5fe41a093669d62608667895591912c282c1e4e89f32f53362340c5df207ee0",
+  "comparison": {
+    "angles": "compare Karto-dumped normalized radians directly; no posthoc wrap/alignment",
+    "covariance": "all 3x3 elements in edge insertion order",
+    "high_precision": "max_digits10 graph JSON; any nonzero numerical difference leads REVIEW if 6dp exact",
+    "numeric_6dp": "%.6f round-trip per float, then exact elementwise comparison",
+    "structure": "exact node IDs, unique IDs, edge endpoints and insertion order",
+    "tolerance": 0.0
+  },
+  "gate_rule": {
+    "BUILD_ISOLATION_FAILED": "runtime binary/library source or false mode unverified",
+    "SERIAL_KARTO_NUMERICAL_REVIEW_REQUIRED": "24/24 valid and 6dp exact but high-precision differs",
+    "SERIAL_KARTO_SCREENING_FAIL": "any valid structural or 6dp numerical divergence",
+    "SERIAL_KARTO_SCREENING_PASS": "24/24 valid, all same-history pairs structure/6dp/high-precision exact",
+    "SERIAL_KARTO_TECHNICALLY_INCOMPLETE": "missing/failed run or unavailable required evidence"
+  },
+  "history_roles": {
+    "target_A_H1": "previously multistable",
+    "target_A_H2": "Target A technical control",
+    "target_B_H1": "Target B technical control"
+  },
+  "mode_B": "branch-style prefix gate against new serial reference; same strict six-decimal semantics, no combined stream or suffix",
+  "mode_P": "qualification-style prefix-only without reference check",
+  "no_treatment_suffix": true,
+  "protocol_id": "CD_A1_SERIAL_KARTO_PREFIX_ONLY_20261008",
+  "pure_candidate_binary_sha256": "14ee1688c828ebc152aef2932697ba8ab0300d40b0cde48e9cd9e5b7cd955b70",
+  "rate_hz": 20.0,
+  "reference_rule": "Each history session1/P/repeat1 is its sole new serial reference; reference cannot be replaced after failure",
+  "runs": 24,
+  "sessions": 2,
+  "source_baseline_commit": "32b295d7599531bc913d7a19fb0c7de09a1ce495",
+  "stop_rule": "Stop immediately on missing/changed frozen input, binary/library SHA mismatch, reference run technical failure, crashed/partial run, callback/count/barrier failure, or provenance absence. Do not rerun failed slot. Continue all planned slots after a valid numerical mismatch to characterize clusters.",
+  "task_type": "TECHNICAL_ARCHITECTURE_SCREENING_ONLY"
+}

@@ -1,0 +1,8 @@
+--- a/dependencies/navigation_2d/nav2d_karto/src/MultiMapper.cpp
++++ b/isolated_catkin/src/navigation_2d/nav2d_karto/src/MultiMapper.cpp
+@@ -68,7 +68,7 @@
+ 		"slam_pose_graph_full", 1, true);
+ 
+ 	// Initialize KARTO-Mapper
+-	mMapper = new karto::OpenMapper(true);
++	mMapper = new karto::OpenMapper(false);
