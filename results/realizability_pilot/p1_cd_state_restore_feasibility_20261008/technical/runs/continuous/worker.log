@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/wcqw/ac-slam/results/realizability_pilot/p1_cd_state_restore_feasibility_20261008/technical/b0_run.py", line 263, in <module>
+    main()
+  File "/home/wcqw/ac-slam/results/realizability_pilot/p1_cd_state_restore_feasibility_20261008/technical/b0_run.py", line 260, in main
+    worker(args.worker) if args.worker else matrix()
+  File "/home/wcqw/ac-slam/results/realizability_pilot/p1_cd_state_restore_feasibility_20261008/technical/b0_run.py", line 129, in worker
+    publish(index, row)
+  File "/home/wcqw/ac-slam/results/realizability_pilot/p1_cd_state_restore_feasibility_20261008/technical/b0_run.py", line 101, in publish
+    assert scan.header.seq == index, 'publisher altered frozen global sequence'
+AssertionError: publisher altered frozen global sequence

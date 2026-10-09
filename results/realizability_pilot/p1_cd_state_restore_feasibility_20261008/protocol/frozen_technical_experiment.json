@@ -1,0 +1,117 @@
+{
+  "C_sha256": "800700631cd6297e184afec67dbbb1139db4f4efc1a19bcf13df649d368589ab",
+  "H_sha256": "a3f4d3b82a8fdd91217fc236a275c634c55f97d514fbb9d43848116d6182dfd5",
+  "barrier": "published complete; callbacks==expected; processed==accepted; queue0; no in_flight; synchronized graph dump; no more scan publication during save",
+  "baseline_commit": "6a0a5b89227d560c5bda2a2b2ef6b58ca96b2ff3",
+  "build": {
+    "/home/wcqw/ac-slam_cd_b0_ws/devel/lib/libasync_slam_toolbox.so": "cfa3721d709205498929dddafa50dcefe03d7801b1b91729c77dcf012de37f25",
+    "/home/wcqw/ac-slam_cd_b0_ws/devel/lib/libceres_solver_plugin.so": "fd96e647b765e879121ede7183d467a6d3c4061246bdd4b6ff8aaa84227e97db",
+    "/home/wcqw/ac-slam_cd_b0_ws/devel/lib/libkartoSlamToolbox.so": "cbcaaddc0e5bf7244923b29c861b8170c2714aad163ba607115d300f634a70f5",
+    "/home/wcqw/ac-slam_cd_b0_ws/devel/lib/liblifelong_slam_toolbox.so": "d8e0b03dc78069e8de72f9351a863bb2f01198752c45d8de324577c48f141a78",
+    "/home/wcqw/ac-slam_cd_b0_ws/devel/lib/liblocalization_slam_toolbox.so": "8d0d21fc176b44dc9a030748310491f9e4b69f6d15f529f9b87ba68c7366c304",
+    "/home/wcqw/ac-slam_cd_b0_ws/devel/lib/libsync_slam_toolbox.so": "51df49fbd841dbd977ee9e08db04c344cecc53f1b3680df146f7ba2cef6ea0de",
+    "/home/wcqw/ac-slam_cd_b0_ws/devel/lib/libtoolbox_common.so": "9f1f9d6fd8117819099c5e5ff9c2b9be4389261b5e40f86dd10d0a2a6e12c933",
+    "/home/wcqw/ac-slam_cd_b0_ws/devel/lib/slam_toolbox/sync_slam_toolbox_node": "bc3227a6cd9af9456f50890890c15bae28dd105635274188725f7e2508ffee2b"
+  },
+  "build_manifest_sha256": "1582010a3d87c0ea0b9ddf2b9510e5cded6b27b03106840f2f46d080fb4ff175",
+  "comparison": {
+    "coordinate_gauge": "common odom origin and base/laser mounting; require same first historical node anchor; no fitted rotation/translation",
+    "criteria": [
+      "mapped node sequence",
+      "corrected pose",
+      "sensor pose",
+      "ordered edge endpoints",
+      "edge measurement",
+      "edge covariance"
+    ],
+    "diagnostics": [
+      "internal ids",
+      "odometric pose after session transform",
+      "native scan time",
+      "scan acceptance",
+      "optimizer invocations"
+    ],
+    "node_mapping": "exact scan range vector to frozen source input index, unique match required",
+    "nonlocality": "raw original-input index gap; NOT a provenance label or proof of accepted closure",
+    "numeric_tolerance": 0.0
+  },
+  "drain_timeout_s": 40.0,
+  "fresh_master_and_process_each_run": true,
+  "frozen_at_utc": "2026-10-09T08:56:11Z",
+  "header_sequence_rule": "global input index on wire; restore C starts at seq20",
+  "historical_measurement_requirement": "accepted nonlocal historical constraint needs source provenance; optimizer execution alone is insufficient",
+  "input": {
+    "adapted_odometry": "algebraic inverse of documented 0.2m laser mounting at each recorded sample",
+    "base_frame": "base_footprint",
+    "base_to_laser": [
+      0.2,
+      0.0,
+      -0.2,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "constructed_metadata": [
+      "laser frame name cd_b0_laser",
+      "global scan sequence index",
+      "timestamp +10s origin shift",
+      "scan_time/time_increment=0, unknown"
+    ],
+    "cut": {
+      "C": [
+        20,
+        33
+      ],
+      "H": [
+        0,
+        20
+      ],
+      "index_semantics": "zero-based half-open; fixed before runs"
+    },
+    "map_frame": "mapper-owned map",
+    "maximum_pose_roundtrip_error": 1.3877787807814457e-17,
+    "not_claimed": [
+      "original acquisition latency",
+      "original per-beam time",
+      "hardware timing fidelity"
+    ],
+    "odom_frame": "odom",
+    "original_timing_recoverable": false,
+    "recorded_odometry": "laser odom pose derived from most recent base odom sample; not GT",
+    "records": 33,
+    "source": "results/realizability_pilot/p1_v13_technical_20260920/histories/target_A/seed_81001/canonical_prefix.jsonl",
+    "source_sha256": "4eddfa84d601f04bf4b86f52dca819c4ccd83c5476fdb48cf1e48f0c76255bde",
+    "status": "FEASIBLE_FOR_TECHNICAL_REPLAY"
+  },
+  "metadata_scan_rule": "first C published once after normal+waitForMessage subscribers connect; used both as metadata and first continuation scan",
+  "output_root": "/home/wcqw/ac-slam/results/realizability_pilot/p1_cd_state_restore_feasibility_20261008",
+  "per_run_timeout_s": 180.0,
+  "publisher_rate_hz": 5.0,
+  "restore_count": 3,
+  "restore_initial_pose_rule": "T_corrected_last_H * inverse(T_odom_last_H) * T_base_first_C; no fitted alignment",
+  "restore_mode": "START_AT_GIVEN_POSE",
+  "run_order": [
+    "continuous",
+    "checkpoint",
+    "restore_1",
+    "restore_2",
+    "restore_3"
+  ],
+  "software_config_sha256": {
+    "audit/isolation_dependency.patch": "86fe50c264f1432e3714293b97f7558bbc1849ba3e67e84d22eb389982bf6c6f",
+    "audit/observation.patch": "77efe96cb9a61ba7528b340a0ad1d9407d0edccea2002d4ab91d197f780e082e",
+    "technical/b0_run.py": "a9587b0533da8ea97f25ef59a9dc14179f77e35ba29997f5a02e503e6802815b",
+    "technical/b0_tools.py": "fbb2b3d76dfc3e514ff850718f0259237451c7666001ba2d42ccd3eb98869f15",
+    "technical/environment.sh": "fb5086e1f25dd93da88ea61f422cd2b45354b79065ab95361cf323afe3805c41",
+    "technical/parameters.yaml": "af10c346e5bd21c6835191317fa86236c73952390c02a69651cdb6386215ea31",
+    "technical/test_b0.py": "a2ef22d9910f64b34fb0a7cb8c27b7e9b2cbf675d28047fe4b5641a745e953c8"
+  },
+  "stop_rules": {
+    "maximum_replays": 5,
+    "no_scientific_collection": true,
+    "numeric_or_structure_mismatch": "complete frozen three restores; report failed equivalence without tuning",
+    "runtime_or_barrier_failure": "stop remaining matrix; save failure; no automatic retry"
+  },
+  "task_id": "CD_B0_STATE_RESTORE_BACKEND_FEASIBILITY",
+  "task_type": "TECHNICAL_ARCHITECTURE_POC_ONLY"
+}

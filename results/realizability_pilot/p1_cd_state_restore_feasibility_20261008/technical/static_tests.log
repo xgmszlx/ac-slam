@@ -1,0 +1,11 @@
+results/realizability_pilot/p1_cd_state_restore_feasibility_20261008/technical/test_b0.py:28: ResourceWarning: unclosed file <_io.TextIOWrapper name='/home/wcqw/ac-slam/results/realizability_pilot/p1_v13_technical_20260920/histories/target_A/seed_81001/canonical_prefix.jsonl' mode='r' encoding='UTF-8'>
+  source = [json.loads(line) for line in SOURCE.open() if line.strip()][:2]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/wcqw/ac-slam/results/realizability_pilot/p1_cd_state_restore_feasibility_20261008/technical/b0_tools.py:171: ResourceWarning: unclosed file <_io.TextIOWrapper name='/home/wcqw/ac-slam/results/realizability_pilot/p1_v13_technical_20260920/histories/target_A/seed_81001/canonical_prefix.jsonl' mode='r' encoding='UTF-8'>
+  source = [json.loads(x) for x in SOURCE.open() if x.strip()]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+....
+----------------------------------------------------------------------
+Ran 4 tests in 0.047s
+
+OK

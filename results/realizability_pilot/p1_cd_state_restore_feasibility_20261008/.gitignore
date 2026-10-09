@@ -1,0 +1,14 @@
+# Local full logs/streams are retained and hashed; compact evidence is published.
+technical/runs/**/ros_home/
+technical/runs/**/*.posegraph
+technical/runs/**/*.data
+!technical/input_H.jsonl
+!technical/input_C.jsonl
+!technical/runs/*/mapper.log
+!technical/runs/*/roscore.log
+!technical/runs/*/worker.log
+!technical/build_check.log
+!technical/matrix.log
+!technical/static_tests.log
+!technical/publisher_forensic_tests.log
+

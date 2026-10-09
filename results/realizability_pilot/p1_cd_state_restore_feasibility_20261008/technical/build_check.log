@@ -1,0 +1,87 @@
+-- Using CATKIN_DEVEL_PREFIX: /home/wcqw/ac-slam_cd_b0_ws/devel
+-- Using CMAKE_PREFIX_PATH: /home/wcqw/ac-slam_cd_b0_ws/devel;/home/wcqw/ac-slam_cd_b0_ws/apt_root/opt/ros/noetic;/home/wcqw/ac-slam_cd_b0_ws/apt_root/usr;/opt/ros/noetic
+-- This workspace overlays: /home/wcqw/ac-slam_cd_b0_ws/devel;/opt/ros/noetic
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using Debian Python package layout
+-- Using empy: /usr/lib/python3/dist-packages/em.py
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /home/wcqw/ac-slam_cd_b0_ws/build/test_results
+-- Forcing gtest/gmock from source, though one was otherwise available.
+-- Found gtest sources under '/usr/src/googletest': gtests will be built
+-- Found gmock sources under '/usr/src/googletest': gmock will be built
+-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+-- Using Python nosetests: /usr/bin/nosetests3
+-- catkin 0.8.12
+-- BUILD_SHARED_LIBS is on
+-- BUILD_SHARED_LIBS is on
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- ~~  traversing 1 packages in topological order:
+-- ~~  - slam_toolbox
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- +++ processing catkin package: 'slam_toolbox'
+-- ==> add_subdirectory(slam_toolbox)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- A library with LAPACK API found.
+-- Found installed version of Eigen: /usr/lib/cmake/eigen3
+-- Found required Ceres dependency: Eigen version 3.3.7 in /usr/include/eigen3
+-- Found required Ceres dependency: glog
+-- Found installed version of gflags: /home/wcqw/ac-slam_cd_b0_ws/apt_root/usr/lib/x86_64-linux-gnu/cmake/gflags
+-- Detected gflags version: 2.2.2
+-- Found required Ceres dependency: gflags
+-- Found Ceres version: 1.14.0 installed in: /home/wcqw/ac-slam_cd_b0_ws/apt_root/usr with components: [EigenSparse, SparseLinearAlgebraLibrary, LAPACK, SuiteSparse, CXSparse, SchurSpecializations, OpenMP, Multithreading]
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/wcqw/ac-slam_cd_b0_ws/build
+[ 10%] Built target kartoSlamToolbox
+[ 13%] Linking CXX shared library /home/wcqw/ac-slam_cd_b0_ws/devel/lib/libceres_solver_plugin.so
+[ 34%] Built target toolbox_common
+Scanning dependencies of target merge_maps_kinematic
+[ 37%] Building CXX object slam_toolbox/CMakeFiles/merge_maps_kinematic.dir/src/merge_maps_kinematic.cpp.o
+[ 41%] Built target ceres_solver_plugin
+Scanning dependencies of target lifelong_slam_toolbox
+[ 44%] Building CXX object slam_toolbox/CMakeFiles/lifelong_slam_toolbox.dir/src/experimental/slam_toolbox_lifelong.cpp.o
+[ 48%] Linking CXX shared library /home/wcqw/ac-slam_cd_b0_ws/devel/lib/liblifelong_slam_toolbox.so
+[ 48%] Built target lifelong_slam_toolbox
+[ 51%] Linking CXX executable /home/wcqw/ac-slam_cd_b0_ws/devel/lib/slam_toolbox/merge_maps_kinematic
+[ 51%] Built target merge_maps_kinematic
+Scanning dependencies of target localization_slam_toolbox
+[ 55%] Building CXX object slam_toolbox/CMakeFiles/localization_slam_toolbox.dir/src/slam_toolbox_localization.cpp.o
+[ 58%] Linking CXX shared library /home/wcqw/ac-slam_cd_b0_ws/devel/lib/liblocalization_slam_toolbox.so
+[ 58%] Built target localization_slam_toolbox
+Scanning dependencies of target sync_slam_toolbox
+[ 62%] Building CXX object slam_toolbox/CMakeFiles/sync_slam_toolbox.dir/src/slam_toolbox_sync.cpp.o
+[ 65%] Linking CXX shared library /home/wcqw/ac-slam_cd_b0_ws/devel/lib/libsync_slam_toolbox.so
+[ 65%] Built target sync_slam_toolbox
+Scanning dependencies of target async_slam_toolbox
+[ 68%] Building CXX object slam_toolbox/CMakeFiles/async_slam_toolbox.dir/src/slam_toolbox_async.cpp.o
+[ 72%] Linking CXX shared library /home/wcqw/ac-slam_cd_b0_ws/devel/lib/libasync_slam_toolbox.so
+[ 72%] Built target async_slam_toolbox
+Scanning dependencies of target lifelong_slam_toolbox_node
+[ 75%] Building CXX object slam_toolbox/CMakeFiles/lifelong_slam_toolbox_node.dir/src/experimental/slam_toolbox_lifelong_node.cpp.o
+[ 79%] Linking CXX executable /home/wcqw/ac-slam_cd_b0_ws/devel/lib/slam_toolbox/lifelong_slam_toolbox_node
+[ 79%] Built target lifelong_slam_toolbox_node
+Scanning dependencies of target localization_slam_toolbox_node
+[ 82%] Building CXX object slam_toolbox/CMakeFiles/localization_slam_toolbox_node.dir/src/slam_toolbox_localization_node.cpp.o
+[ 86%] Linking CXX executable /home/wcqw/ac-slam_cd_b0_ws/devel/lib/slam_toolbox/localization_slam_toolbox_node
+[ 86%] Built target localization_slam_toolbox_node
+Scanning dependencies of target sync_slam_toolbox_node
+[ 89%] Building CXX object slam_toolbox/CMakeFiles/sync_slam_toolbox_node.dir/src/slam_toolbox_sync_node.cpp.o
+[ 93%] Linking CXX executable /home/wcqw/ac-slam_cd_b0_ws/devel/lib/slam_toolbox/sync_slam_toolbox_node
+[ 93%] Built target sync_slam_toolbox_node
+Scanning dependencies of target async_slam_toolbox_node
+[ 96%] Building CXX object slam_toolbox/CMakeFiles/async_slam_toolbox_node.dir/src/slam_toolbox_async_node.cpp.o
+[100%] Linking CXX executable /home/wcqw/ac-slam_cd_b0_ws/devel/lib/slam_toolbox/async_slam_toolbox_node
+[100%] Built target async_slam_toolbox_node
+Base path: /home/wcqw/ac-slam_cd_b0_ws
+Source space: /home/wcqw/ac-slam_cd_b0_ws/src
+Build space: /home/wcqw/ac-slam_cd_b0_ws/build
+Devel space: /home/wcqw/ac-slam_cd_b0_ws/devel
+Install space: /home/wcqw/ac-slam_cd_b0_ws/install
+####
+#### Running command: "cmake /home/wcqw/ac-slam_cd_b0_ws/src -DPYTHON_EXECUTABLE=/usr/bin/python3 -DCMAKE_BUILD_TYPE=Release -Dgflags_DIR=/home/wcqw/ac-slam_cd_b0_ws/apt_root/usr/lib/x86_64-linux-gnu/cmake/gflags -DCATKIN_DEVEL_PREFIX=/home/wcqw/ac-slam_cd_b0_ws/devel -DCMAKE_INSTALL_PREFIX=/home/wcqw/ac-slam_cd_b0_ws/install -G Unix Makefiles" in "/home/wcqw/ac-slam_cd_b0_ws/build"
+####
+####
+#### Running command: "make -j2 -l2" in "/home/wcqw/ac-slam_cd_b0_ws/build"
+####

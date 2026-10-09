@@ -1,0 +1,214 @@
+--- upstream/include/slam_toolbox/slam_toolbox_sync.hpp
++++ candidate/include/slam_toolbox/slam_toolbox_sync.hpp
+@@ -21,6 +21,7 @@
+ #define SLAM_TOOLBOX_SLAM_TOOLBOX_SYNC_H_
+ 
+ #include "slam_toolbox/slam_toolbox_common.hpp"
++#include <std_srvs/Trigger.h>
+ 
+ namespace slam_toolbox
+ {
+@@ -41,6 +42,12 @@
+   std::queue<PosedScan> q_;
+   ros::ServiceServer ssClear_;
+   boost::mutex q_mutex_;
++  // CD-B0 read-only observations. Protected by the existing queue mutex.
++  ros::ServiceServer b0_status_, b0_dump_;
++  uint64_t b0_callbacks_ = 0, b0_accepted_ = 0, b0_processed_ = 0, b0_successful_ = 0;
++  bool b0_in_flight_ = false;
++  bool b0Status(std_srvs::Trigger::Request&, std_srvs::Trigger::Response&);
++  bool b0Dump(std_srvs::Trigger::Request&, std_srvs::Trigger::Response&);
+ };
+ 
+ }
+--- upstream/lib/karto_sdk/src/Mapper.cpp
++++ candidate/lib/karto_sdk/src/Mapper.cpp
+@@ -1598,6 +1598,7 @@
+           m_pMapper->FireEndLoopClosure("Loop closed!");
+ 
+           loopClosed = true;
++          std::cout << "CD_B0_ACCEPTED_LOOP scan_id=" << pScan->GetUniqueId() << std::endl;
+         }
+       }
+ 
+--- upstream/solvers/ceres_solver.cpp
++++ candidate/solvers/ceres_solver.cpp
+@@ -171,6 +171,7 @@
+ /*****************************************************************************/
+ {
+   boost::mutex::scoped_lock lock(nodes_mutex_);
++  ROS_INFO("CD_B0_OPTIMIZER_COMPUTE nodes=%zu constraints=%zu", nodes_->size(), blocks_->size());
+ 
+   if (nodes_->size() == 0)
+   {
+--- upstream/src/slam_toolbox_common.cpp
++++ candidate/src/slam_toolbox_common.cpp
+@@ -482,6 +482,8 @@
+   // Add the localized range scan to the smapper
+   boost::mutex::scoped_lock lock(smapper_mutex_);
+   bool processed = false, update_reprocessing_transform = false;
++  ROS_INFO("CD_B0_PROCESS stamp=%.17g seq=%u processor_type=%d",
++    scan->header.stamp.toSec(), scan->header.seq, static_cast<int>(processor_type_));
+ 
+   if (processor_type_ == PROCESS)
+   {
+--- upstream/src/slam_toolbox_sync.cpp
++++ candidate/src/slam_toolbox_sync.cpp
+@@ -18,6 +18,8 @@
+ /* Author: Steven Macenski */
+ 
+ #include "slam_toolbox/slam_toolbox_sync.hpp"
++#include <iomanip>
++#include <sstream>
+ 
+ namespace slam_toolbox
+ {
+@@ -29,6 +31,8 @@
+ {
+   ssClear_ = nh.advertiseService("clear_queue",
+     &SynchronousSlamToolbox::clearQueueCallback, this);
++  b0_status_ = nh.advertiseService("b0_status", &SynchronousSlamToolbox::b0Status, this);
++  b0_dump_ = nh.advertiseService("b0_dump_graph", &SynchronousSlamToolbox::b0Dump, this);
+ 
+   threads_.push_back(std::make_unique<boost::thread>(
+     boost::bind(&SynchronousSlamToolbox::run, this)));
+@@ -54,6 +58,7 @@
+         {
+           scan_w_pose = q_.front();
+           q_.pop();
++          b0_in_flight_ = true;
+ 
+           if (q_.size() > 10)
+           {
+@@ -64,7 +69,13 @@
+         }
+       }
+       if(!queue_empty){
+-        addScan(getLaser(scan_w_pose.scan), scan_w_pose);
++        auto result = addScan(getLaser(scan_w_pose.scan), scan_w_pose);
++        {
++          boost::mutex::scoped_lock lock(q_mutex_);
++          ++b0_processed_;
++          if (result) ++b0_successful_;
++          b0_in_flight_ = false;
++        }
+         continue;
+       }
+     }
+@@ -78,6 +89,10 @@
+   const sensor_msgs::LaserScan::ConstPtr& scan)
+ /*****************************************************************************/
+ {
++  {
++    boost::mutex::scoped_lock lock(q_mutex_);
++    ++b0_callbacks_;
++  }
+   // no odom info
+   karto::Pose2 pose;
+   if(!pose_helper_->getOdomPose(pose, scan->header.stamp))
+@@ -100,6 +115,7 @@
+   {
+     boost::mutex::scoped_lock lock(q_mutex_);
+     q_.push(PosedScan(scan, pose));
++    ++b0_accepted_;
+   }
+ 
+   return;
+@@ -135,4 +151,97 @@
+   return SlamToolbox::deserializePoseGraphCallback(req, resp);
+ }
+ 
++bool SynchronousSlamToolbox::b0Status(std_srvs::Trigger::Request&,
++  std_srvs::Trigger::Response& resp)
++{
++  boost::mutex::scoped_lock lock(q_mutex_);
++  std::ostringstream out;
++  out << "{\"callbacks\":" << b0_callbacks_
++      << ",\"accepted\":" << b0_accepted_
++      << ",\"processed\":" << b0_processed_
++      << ",\"successful\":" << b0_successful_
++      << ",\"queue_size\":" << q_.size()
++      << ",\"in_flight\":" << (b0_in_flight_ ? "true" : "false") << "}";
++  resp.success = true;
++  resp.message = out.str();
++  return true;
++}
++
++bool SynchronousSlamToolbox::b0Dump(std_srvs::Trigger::Request&,
++  std_srvs::Trigger::Response& resp)
++{
++  boost::mutex::scoped_lock queue_lock(q_mutex_);
++  int expected = -1;
++  nh_.getParam("b0_expected_callbacks", expected);
++  if (expected < 0 || b0_callbacks_ != static_cast<uint64_t>(expected) ||
++      !q_.empty() || b0_in_flight_ || b0_processed_ != b0_accepted_) {
++    resp.success = false;
++    resp.message = "exact input-completion / drain barrier not satisfied";
++    return true;
++  }
++  boost::mutex::scoped_lock mapper_lock(smapper_mutex_);
++  std::string path;
++  nh_.getParam("b0_graph_output", path);
++  std::ofstream out(path);
++  out << std::setprecision(17);
++  auto pose = [&](const karto::Pose2& p) {
++    out << '[' << p.GetX() << ',' << p.GetY() << ',' << p.GetHeading() << ']';
++  };
++  auto graph = smapper_->getMapper()->GetGraph();
++  if (!out || !graph) {
++    resp.success = false;
++    resp.message = "missing output or graph";
++    return true;
++  }
++  out << "{\"nodes\":[";
++  bool first = true;
++  for (const auto& sensor : graph->GetVertices()) {
++    for (const auto& item : sensor.second) {
++      auto scan = item.second->GetObject();
++      if (!first) out << ',';
++      first = false;
++      out << "{\"id\":" << scan->GetUniqueId()
++          << ",\"state_id\":" << scan->GetStateId()
++          << ",\"time\":" << scan->GetTime() << ",\"odom\":";
++      pose(scan->GetOdometricPose());
++      out << ",\"corrected\":"; pose(scan->GetCorrectedPose());
++      out << ",\"sensor_pose\":"; pose(scan->GetSensorPose());
++      out << ",\"ranges\":[";
++      bool range_first = true;
++      for (double value : scan->GetRangeReadingsVector()) {
++        if (!range_first) out << ',';
++        range_first = false;
++        out << value;
++      }
++      out << "]}";
++    }
++  }
++  out << "],\"edges\":[";
++  first = true;
++  for (auto edge : graph->GetEdges()) {
++    if (!first) out << ',';
++    first = false;
++    auto info = dynamic_cast<karto::LinkInfo*>(edge->GetLabel());
++    out << "{\"source\":" << edge->GetSource()->GetObject()->GetUniqueId()
++        << ",\"target\":" << edge->GetTarget()->GetObject()->GetUniqueId();
++    if (info) {
++      out << ",\"measurement\":"; pose(info->GetPoseDifference());
++      out << ",\"covariance\":[";
++      for (int row = 0; row < 3; ++row) {
++        for (int col = 0; col < 3; ++col) {
++          if (row || col) out << ',';
++          out << info->GetCovariance()(row, col);
++        }
++      }
++      out << ']';
++    }
++    out << '}';
++  }
++  out << "]}\n";
++  out.close();
++  resp.success = out.good();
++  resp.message = path;
++  return true;
++}
++
+ } // end namespace

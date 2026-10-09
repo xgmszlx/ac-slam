@@ -1,0 +1,43 @@
+{
+  "adapted_odometry": "algebraic inverse of documented 0.2m laser mounting at each recorded sample",
+  "base_frame": "base_footprint",
+  "base_to_laser": [
+    0.2,
+    0.0,
+    -0.2,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "constructed_metadata": [
+    "laser frame name cd_b0_laser",
+    "global scan sequence index",
+    "timestamp +10s origin shift",
+    "scan_time/time_increment=0, unknown"
+  ],
+  "cut": {
+    "C": [
+      20,
+      33
+    ],
+    "H": [
+      0,
+      20
+    ],
+    "index_semantics": "zero-based half-open; fixed before runs"
+  },
+  "map_frame": "mapper-owned map",
+  "maximum_pose_roundtrip_error": 1.3877787807814457e-17,
+  "not_claimed": [
+    "original acquisition latency",
+    "original per-beam time",
+    "hardware timing fidelity"
+  ],
+  "odom_frame": "odom",
+  "original_timing_recoverable": false,
+  "recorded_odometry": "laser odom pose derived from most recent base odom sample; not GT",
+  "records": 33,
+  "source": "results/realizability_pilot/p1_v13_technical_20260920/histories/target_A/seed_81001/canonical_prefix.jsonl",
+  "source_sha256": "4eddfa84d601f04bf4b86f52dca819c4ccd83c5476fdb48cf1e48f0c76255bde",
+  "status": "FEASIBLE_FOR_TECHNICAL_REPLAY"
+}

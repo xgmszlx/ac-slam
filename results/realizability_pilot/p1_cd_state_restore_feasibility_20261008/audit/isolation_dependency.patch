@@ -1,0 +1,5 @@
+--- extracted-libceres-dev/usr/lib/cmake/Ceres/CeresTargets-none.cmake
++++ isolated-libceres-dev/usr/lib/cmake/Ceres/CeresTargets-none.cmake
+@@
+-  IMPORTED_LINK_INTERFACE_LIBRARIES_NONE "/usr/lib/x86_64-linux-gnu/libglog.so;gflags_shared"
++  IMPORTED_LINK_INTERFACE_LIBRARIES_NONE "${_IMPORT_PREFIX}/lib/x86_64-linux-gnu/libglog.so;gflags_shared"

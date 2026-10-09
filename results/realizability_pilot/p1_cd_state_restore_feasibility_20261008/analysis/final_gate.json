@@ -1,0 +1,21 @@
+{
+  "analysis_boolean_note": "technical_verdict.json false means completion gate unmet, not a measured failed restore comparison",
+  "backend_independent_startup": "OBSERVED",
+  "backend_restore_infeasible": null,
+  "checkpoint_created": false,
+  "checkpoint_cut_validated": false,
+  "closed_at_utc": "2026-10-09T09:03:23Z",
+  "gate": "TECHNICALLY_INCOMPLETE",
+  "historical_measurement_gate": "HISTORICAL_MEASUREMENT_NOT_YET_VALIDATED",
+  "input_adapter_runtime_contract": "FAILED",
+  "input_adapter_static_audit": "FEASIBLE_FOR_TECHNICAL_REPLAY",
+  "isolated_source_build": "COMPLETE",
+  "next_action": "Separate outcome-blind adapter technical amendment; correct rospy initial sequence and test actual serialization before new freeze; retain same input/cut/parameters/run order and do not retry this frozen run.",
+  "plan_a_ready": false,
+  "reason": "adapter publication header sequence assertion before full continuous input",
+  "restore_runs_completed": 0,
+  "restore_to_continuous_exact": null,
+  "restore_to_restore_exact": null,
+  "scientific_collection_authorized": false,
+  "task_id": "CD_B0_STATE_RESTORE_BACKEND_FEASIBILITY"
+}

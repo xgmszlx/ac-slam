@@ -1,0 +1,18 @@
+{
+  "classification": "ADAPTER_HEADER_SEQUENCE_OFF_BY_ONE",
+  "emitted_seq_by_installed_implementation": 1,
+  "evidence_type": [
+    "real worker traceback",
+    "installed ROS source audit",
+    "offline installed-implementation serialization test"
+  ],
+  "frozen_adapter_initial_seq": 0,
+  "frozen_code_modified_after_launch": false,
+  "frozen_first_input_index": 0,
+  "installed_rospy_module": "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py",
+  "installed_rospy_module_sha256": "e705097f636798b9c6375bcb6d25916e0a0f432a8a517f581c224e786bd0a766",
+  "no_runtime_retry": true,
+  "runtime_limit": "worker asserted after first publish; no graph or checkpoint saved",
+  "runtime_wire_capture_preserved": false,
+  "sequence_order": "self.seq += 1 BEFORE serialize_message(self.seq, message)"
+}

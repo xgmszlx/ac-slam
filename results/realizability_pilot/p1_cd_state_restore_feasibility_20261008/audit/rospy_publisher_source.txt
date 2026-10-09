@@ -1,0 +1,129 @@
+# Software License Agreement (BSD License)
+#
+# Copyright (c) 2008, Willow Garage, Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+#
+#  * Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+#  * Redistributions in binary form must reproduce the above
+#    copyright notice, this list of conditions and the following
+#    disclaimer in the documentation and/or other materials provided
+#    with the distribution.
+#  * Neither the name of Willow Garage, Inc. nor the names of its
+#    contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+# FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+# COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+# INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+# BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+# LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+# CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# Revision $Id$
+
+    def publish(self, message, connection_override=None):
+        """
+        Publish the data to the topic. If the topic has no subscribers,
+        the method will return without any affect. Access to publish()
+        should be locked using acquire() and release() in order to
+        ensure proper message publish ordering.
+
+        @param message: message data instance to publish
+        @type  message: L{Message}
+        @param connection_override: publish to this connection instead of all
+        @type  connection_override: L{Transport}
+        @return: True if the data was published, False otherwise.
+        @rtype: bool
+        @raise genpy.SerializationError: if L{Message} instance is unable to serialize itself
+        @raise rospy.ROSException: if topic has been closed or was closed during publish()
+        """
+        #TODO: should really just use IOError instead of rospy.ROSException
+
+        if self.closed:
+            # during shutdown, the topic can get closed, which creates
+            # a race condition with user code testing is_shutdown
+            if not is_shutdown():
+                raise ROSException("publish() to a closed topic")
+            else:
+                return
+            
+        if self.is_latch:
+            self.latch = message
+
+        if not self.has_connections():
+            #publish() falls through
+            return False
+
+        if connection_override is None:
+            #copy connections so we can iterate safely
+            conns = self.connections
+        else:
+            conns = [connection_override]
+
+        # #2128 test our buffer. I don't know how this got closed in
+        # that case, but we can at least diagnose the problem.
+        b = self.buff
+        try:
+            b.tell()
+
+            # serialize the message
+            self.seq += 1 #count messages published to the topic
+            serialize_message(b, self.seq, message)
+
+            # send the buffer to all connections
+            err_con = []
+            data = b.getvalue()
+
+            for c in conns:
+                try:
+                    if not is_shutdown():
+                        c.write_data(data)
+                except TransportTerminated as e:
+                    logdebug("publisher connection to [%s] terminated, see errorlog for details:\n%s"%(c.endpoint_id, traceback.format_exc()))
+                    err_con.append(c)
+                except Exception as e:
+                    # greater severity level
+                    logdebug("publisher connection to [%s] terminated, see errorlog for details:\n%s"%(c.endpoint_id, traceback.format_exc()))
+                    err_con.append(c)
+
+            # reset the buffer and update stats
+            self.message_data_sent += b.tell() #STATS
+            b.seek(0)
+            b.truncate(0)
+            
+        except ValueError:
+            # operations on self.buff can fail if topic is closed
+            # during publish, which often happens during Ctrl-C.
+            # diagnose the error and report accordingly.
+            if self.closed:
+                if is_shutdown():
+                    # we offer no guarantees on publishes that occur
+                    # during shutdown, so this is not exceptional.
+                    return
+                else:
+                    # this indicates that user-level code most likely
+                    # closed the topic, which is exceptional.
+                    raise ROSException("topic was closed during publish()")
+            else:
+                # unexpected, so re-raise original error
+                raise
+
+        # remove any bad connections
+        for c in err_con:
+            try:
+                # connection will callback into remove_connection when
+                # we close it
+                c.close()
+            except:
+                pass
