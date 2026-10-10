@@ -1,0 +1,118 @@
+{
+ "action_id": "S0",
+ "anchor": {
+  "id": 57,
+  "theta": -1.6937114000320435,
+  "unique_id": 57,
+  "x": 22.039918899536133,
+  "y": 9.74628734588623
+ },
+ "anchor_distance_m": 0.20000009894370682,
+ "anchor_heading_error_rad": 0.07708492676285217,
+ "anchor_heading_weight": 0.5,
+ "checks": {
+  "anchor_heading_within_tolerance": true,
+  "anchor_is_not_root": true,
+  "anchor_within_reference_radius": true,
+  "minimum_history_node_count": true,
+  "segment_has_target_states": true
+ },
+ "frozen_graph_node_count": 110,
+ "frozen_phase": "G_before_return",
+ "frozen_scan_index": 2550,
+ "group_id": "place_B_r1",
+ "passed": true,
+ "place_id": "place_B",
+ "reference_commanded_waypoint": [
+  22.25,
+  10.0,
+  -1.5707963267948966
+ ],
+ "reference_mapper_pose": [
+  22.064439482802218,
+  9.944778606584991,
+  -1.7707963267948956
+ ],
+ "reference_source": "history_arrival_tf_pose",
+ "reference_world_position": [
+  -5.95,
+  -18.0
+ ],
+ "return_goal_pose": [
+  22.064439482802218,
+  9.944778606584991,
+  -1.7707963267948956
+ ],
+ "segment_length": 8,
+ "segment_state_ids": [
+  52,
+  53,
+  54,
+  55,
+  56,
+  57,
+  58,
+  59
+ ],
+ "segment_unique_ids": [
+  52,
+  53,
+  54,
+  55,
+  56,
+  57,
+  58,
+  59
+ ],
+ "target_state_ids": [
+  52,
+  53,
+  55,
+  58,
+  59
+ ],
+ "target_states": [
+  {
+   "id": 52,
+   "theta": 0.0006348228780552745,
+   "unique_id": 52,
+   "x": 20.17469024658203,
+   "y": 9.944388389587402
+  },
+  {
+   "id": 53,
+   "theta": 0.00020690099336206913,
+   "unique_id": 53,
+   "x": 21.15968894958496,
+   "y": 9.944686889648438
+  },
+  {
+   "id": 55,
+   "theta": -0.599946916103363,
+   "unique_id": 55,
+   "x": 22.239513397216797,
+   "y": 9.83185863494873
+  },
+  {
+   "id": 58,
+   "theta": -1.4859344959259033,
+   "unique_id": 58,
+   "x": 22.034236907958984,
+   "y": 8.788183212280273
+  },
+  {
+   "id": 59,
+   "theta": -1.4078118801116943,
+   "unique_id": 59,
+   "x": 22.20514488220215,
+   "y": 7.756983757019043
+  }
+ ],
+ "target_unique_ids": [
+  52,
+  53,
+  55,
+  58,
+  59
+ ]
+}

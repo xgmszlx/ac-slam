@@ -1,0 +1,118 @@
+{
+ "action_id": "L+",
+ "anchor": {
+  "id": 27,
+  "theta": -0.1069813147187233,
+  "unique_id": 27,
+  "x": -2.1816465854644775,
+  "y": 9.817026138305664
+ },
+ "anchor_distance_m": 0.20000006044384844,
+ "anchor_heading_error_rad": 0.030776107023791854,
+ "anchor_heading_weight": 0.5,
+ "checks": {
+  "anchor_heading_within_tolerance": true,
+  "anchor_is_not_root": true,
+  "anchor_within_reference_radius": true,
+  "minimum_history_node_count": true,
+  "segment_has_target_states": true
+ },
+ "frozen_graph_node_count": 110,
+ "frozen_phase": "G_before_return",
+ "frozen_scan_index": 2481,
+ "group_id": "place_A_r2",
+ "passed": true,
+ "place_id": "place_A",
+ "reference_commanded_waypoint": [
+  -2.3,
+  10.0,
+  0.0
+ ],
+ "reference_mapper_pose": [
+  -2.3805032591747657,
+  9.838381406939494,
+  -0.07620520769493144
+ ],
+ "reference_source": "history_arrival_tf_pose",
+ "reference_world_position": [
+  -30.5,
+  -18.0
+ ],
+ "return_goal_pose": [
+  -2.3805032591747657,
+  9.838381406939494,
+  -0.07620520769493144
+ ],
+ "segment_length": 8,
+ "segment_state_ids": [
+  22,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29
+ ],
+ "segment_unique_ids": [
+  22,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29
+ ],
+ "target_state_ids": [
+  22,
+  23,
+  25,
+  28,
+  29
+ ],
+ "target_states": [
+  {
+   "id": 22,
+   "theta": 1.5400006771087646,
+   "unique_id": 22,
+   "x": -2.319753408432007,
+   "y": 7.486030578613281
+  },
+  {
+   "id": 23,
+   "theta": 1.5611194372177124,
+   "unique_id": 23,
+   "x": -2.3054957389831543,
+   "y": 8.43692684173584
+  },
+  {
+   "id": 25,
+   "theta": 0.8615078330039978,
+   "unique_id": 25,
+   "x": -2.207427978515625,
+   "y": 10.04011344909668
+  },
+  {
+   "id": 28,
+   "theta": -0.662588894367218,
+   "unique_id": 28,
+   "x": -1.2853049039840698,
+   "y": 9.352958679199219
+  },
+  {
+   "id": 29,
+   "theta": -0.8032786846160889,
+   "unique_id": 29,
+   "x": -0.5327129364013672,
+   "y": 8.6074857711792
+  }
+ ],
+ "target_unique_ids": [
+  22,
+  23,
+  25,
+  28,
+  29
+ ]
+}

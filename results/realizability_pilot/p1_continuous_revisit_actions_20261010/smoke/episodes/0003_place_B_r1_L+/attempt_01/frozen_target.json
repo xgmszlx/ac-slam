@@ -1,0 +1,116 @@
+{
+ "action_id": "L+",
+ "anchor": {
+  "id": 54,
+  "theta": -1.2165714502334595,
+  "unique_id": 54,
+  "x": 22.279329299926758,
+  "y": 9.829977989196777
+ },
+ "anchor_distance_m": 0.1980188950839264,
+ "anchor_heading_error_rad": 0.39850556448744223,
+ "anchor_heading_weight": 0.5,
+ "checks": {
+  "anchor_heading_within_tolerance": true,
+  "anchor_is_not_root": true,
+  "anchor_within_reference_radius": true,
+  "minimum_history_node_count": true,
+  "segment_has_target_states": true
+ },
+ "frozen_graph_node_count": 106,
+ "frozen_phase": "G_before_return",
+ "frozen_scan_index": 2529,
+ "group_id": "place_B_r1",
+ "passed": true,
+ "place_id": "place_B",
+ "reference_commanded_waypoint": [
+  22.25,
+  10.0,
+  -1.5707963267948966
+ ],
+ "reference_mapper_pose": [
+  22.206063586210377,
+  10.013944339391285,
+  -1.6150770147209017
+ ],
+ "reference_source": "history_arrival_tf_pose",
+ "reference_world_position": [
+  -5.95,
+  -18.0
+ ],
+ "return_goal_pose": [
+  22.206063586210377,
+  10.013944339391285,
+  -1.6150770147209017
+ ],
+ "segment_length": 7,
+ "segment_state_ids": [
+  50,
+  51,
+  52,
+  53,
+  54,
+  55,
+  56
+ ],
+ "segment_unique_ids": [
+  50,
+  51,
+  52,
+  53,
+  54,
+  55,
+  56
+ ],
+ "target_state_ids": [
+  50,
+  51,
+  53,
+  55,
+  56
+ ],
+ "target_states": [
+  {
+   "id": 50,
+   "theta": -0.005728509742766619,
+   "unique_id": 50,
+   "x": 20.192975997924805,
+   "y": 9.997268676757812
+  },
+  {
+   "id": 51,
+   "theta": -0.0017013069009408355,
+   "unique_id": 51,
+   "x": 21.163232803344727,
+   "y": 9.994691848754883
+  },
+  {
+   "id": 53,
+   "theta": -0.7015330791473389,
+   "unique_id": 53,
+   "x": 22.310579299926758,
+   "y": 9.871016502380371
+  },
+  {
+   "id": 55,
+   "theta": -1.5658420324325562,
+   "unique_id": 55,
+   "x": 22.145769119262695,
+   "y": 8.757000923156738
+  },
+  {
+   "id": 56,
+   "theta": -1.5081521272659302,
+   "unique_id": 56,
+   "x": 22.181812286376953,
+   "y": 7.774035930633545
+  }
+ ],
+ "target_unique_ids": [
+  50,
+  51,
+  53,
+  55,
+  56
+ ]
+}

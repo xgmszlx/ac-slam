@@ -1,0 +1,118 @@
+{
+ "action_id": "S1",
+ "anchor": {
+  "id": 56,
+  "theta": -1.670796275138855,
+  "unique_id": 56,
+  "x": 22.028648376464844,
+  "y": 9.86320972442627
+ },
+ "anchor_distance_m": 0.2000004233951755,
+ "anchor_heading_error_rad": 0.06706012131991557,
+ "anchor_heading_weight": 0.5,
+ "checks": {
+  "anchor_heading_within_tolerance": true,
+  "anchor_is_not_root": true,
+  "anchor_within_reference_radius": true,
+  "minimum_history_node_count": true,
+  "segment_has_target_states": true
+ },
+ "frozen_graph_node_count": 111,
+ "frozen_phase": "G_before_return",
+ "frozen_scan_index": 2501,
+ "group_id": "place_B_r3",
+ "passed": true,
+ "place_id": "place_B",
+ "reference_commanded_waypoint": [
+  22.25,
+  10.0,
+  -1.5707963267948966
+ ],
+ "reference_mapper_pose": [
+  22.048615412451426,
+  10.062210947618892,
+  -1.7378563964587705
+ ],
+ "reference_source": "history_arrival_tf_pose",
+ "reference_world_position": [
+  -5.95,
+  -18.0
+ ],
+ "return_goal_pose": [
+  22.048615412451426,
+  10.062210947618892,
+  -1.7378563964587705
+ ],
+ "segment_length": 8,
+ "segment_state_ids": [
+  51,
+  52,
+  53,
+  54,
+  55,
+  56,
+  57,
+  58
+ ],
+ "segment_unique_ids": [
+  51,
+  52,
+  53,
+  54,
+  55,
+  56,
+  57,
+  58
+ ],
+ "target_state_ids": [
+  51,
+  52,
+  54,
+  57,
+  58
+ ],
+ "target_states": [
+  {
+   "id": 51,
+   "theta": -0.0035379554610699415,
+   "unique_id": 51,
+   "x": 19.810617446899414,
+   "y": 10.06445026397705
+  },
+  {
+   "id": 52,
+   "theta": -0.001145517686381936,
+   "unique_id": 52,
+   "x": 20.80561637878418,
+   "y": 10.0628023147583
+  },
+  {
+   "id": 54,
+   "theta": -0.6001956462860107,
+   "unique_id": 54,
+   "x": 22.20366096496582,
+   "y": 9.949250221252441
+  },
+  {
+   "id": 57,
+   "theta": -1.4611233472824097,
+   "unique_id": 57,
+   "x": 22.102699279785156,
+   "y": 8.862838745117188
+  },
+  {
+   "id": 58,
+   "theta": -1.4700967073440552,
+   "unique_id": 58,
+   "x": 22.17667007446289,
+   "y": 7.851357936859131
+  }
+ ],
+ "target_unique_ids": [
+  51,
+  52,
+  54,
+  57,
+  58
+ ]
+}

@@ -1,0 +1,118 @@
+{
+ "action_id": "L-",
+ "anchor": {
+  "id": 27,
+  "theta": -0.18829892575740814,
+  "unique_id": 27,
+  "x": -2.07423734664917,
+  "y": 9.977300643920898
+ },
+ "anchor_distance_m": 0.19999994735541565,
+ "anchor_heading_error_rad": 2.1149556272970216e-09,
+ "anchor_heading_weight": 0.5,
+ "checks": {
+  "anchor_heading_within_tolerance": true,
+  "anchor_is_not_root": true,
+  "anchor_within_reference_radius": true,
+  "minimum_history_node_count": true,
+  "segment_has_target_states": true
+ },
+ "frozen_graph_node_count": 106,
+ "frozen_phase": "G_before_return",
+ "frozen_scan_index": 2560,
+ "group_id": "place_A_r2",
+ "passed": true,
+ "place_id": "place_A",
+ "reference_commanded_waypoint": [
+  -2.3,
+  10.0,
+  0.0
+ ],
+ "reference_mapper_pose": [
+  -2.270702179026097,
+  10.014737905857036,
+  -0.18829892787236377
+ ],
+ "reference_source": "history_arrival_tf_pose",
+ "reference_world_position": [
+  -30.5,
+  -18.0
+ ],
+ "return_goal_pose": [
+  -2.270702179026097,
+  10.014737905857036,
+  -0.18829892787236377
+ ],
+ "segment_length": 8,
+ "segment_state_ids": [
+  22,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29
+ ],
+ "segment_unique_ids": [
+  22,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29
+ ],
+ "target_state_ids": [
+  22,
+  23,
+  25,
+  28,
+  29
+ ],
+ "target_states": [
+  {
+   "id": 22,
+   "theta": 1.506308913230896,
+   "unique_id": 22,
+   "x": -2.3554370403289795,
+   "y": 7.51862096786499
+  },
+  {
+   "id": 23,
+   "theta": 1.5498812198638916,
+   "unique_id": 23,
+   "x": -2.323066473007202,
+   "y": 8.510799407958984
+  },
+  {
+   "id": 25,
+   "theta": 0.8677676320075989,
+   "unique_id": 25,
+   "x": -2.2002179622650146,
+   "y": 10.128878593444824
+  },
+  {
+   "id": 28,
+   "theta": -0.18371346592903137,
+   "unique_id": 28,
+   "x": -1.109626054763794,
+   "y": 9.780378341674805
+  },
+  {
+   "id": 29,
+   "theta": -0.062359653413295746,
+   "unique_id": 29,
+   "x": -0.10774344950914383,
+   "y": 9.670027732849121
+  }
+ ],
+ "target_unique_ids": [
+  22,
+  23,
+  25,
+  28,
+  29
+ ]
+}

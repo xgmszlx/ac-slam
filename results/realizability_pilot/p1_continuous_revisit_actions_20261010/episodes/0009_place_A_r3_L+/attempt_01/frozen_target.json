@@ -1,0 +1,118 @@
+{
+ "action_id": "L+",
+ "anchor": {
+  "id": 28,
+  "theta": -0.22094395756721497,
+  "unique_id": 28,
+  "x": -2.1623525619506836,
+  "y": 10.120521545410156
+ },
+ "anchor_distance_m": 0.2000000717261092,
+ "anchor_heading_error_rad": 6.543282943249906e-09,
+ "anchor_heading_weight": 0.5,
+ "checks": {
+  "anchor_heading_within_tolerance": true,
+  "anchor_is_not_root": true,
+  "anchor_within_reference_radius": true,
+  "minimum_history_node_count": true,
+  "segment_has_target_states": true
+ },
+ "frozen_graph_node_count": 109,
+ "frozen_phase": "G_before_return",
+ "frozen_scan_index": 2589,
+ "group_id": "place_A_r3",
+ "passed": true,
+ "place_id": "place_A",
+ "reference_commanded_waypoint": [
+  -2.3,
+  10.0,
+  0.0
+ ],
+ "reference_mapper_pose": [
+  -2.3574908121527933,
+  10.164351808910478,
+  -0.22094395102393202
+ ],
+ "reference_source": "history_arrival_tf_pose",
+ "reference_world_position": [
+  -30.5,
+  -18.0
+ ],
+ "return_goal_pose": [
+  -2.3574908121527933,
+  10.164351808910478,
+  -0.22094395102393202
+ ],
+ "segment_length": 8,
+ "segment_state_ids": [
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29,
+  30
+ ],
+ "segment_unique_ids": [
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29,
+  30
+ ],
+ "target_state_ids": [
+  23,
+  24,
+  27,
+  29,
+  30
+ ],
+ "target_states": [
+  {
+   "id": 23,
+   "theta": 1.5582435131072998,
+   "unique_id": 23,
+   "x": -2.2850725650787354,
+   "y": 8.31082820892334
+  },
+  {
+   "id": 24,
+   "theta": 1.5678027868270874,
+   "unique_id": 24,
+   "x": -2.2803332805633545,
+   "y": 9.268816947937012
+  },
+  {
+   "id": 27,
+   "theta": 0.24478283524513245,
+   "unique_id": 27,
+   "x": -2.1697187423706055,
+   "y": 10.176994323730469
+  },
+  {
+   "id": 29,
+   "theta": -0.1794031858444214,
+   "unique_id": 29,
+   "x": -1.1446609497070312,
+   "y": 9.915631294250488
+  },
+  {
+   "id": 30,
+   "theta": -0.05453149974346161,
+   "unique_id": 30,
+   "x": -0.1812686324119568,
+   "y": 9.820021629333496
+  }
+ ],
+ "target_unique_ids": [
+  23,
+  24,
+  27,
+  29,
+  30
+ ]
+}

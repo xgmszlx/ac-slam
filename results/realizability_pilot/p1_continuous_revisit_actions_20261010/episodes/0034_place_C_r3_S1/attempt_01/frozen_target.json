@@ -1,0 +1,116 @@
+{
+ "action_id": "S1",
+ "anchor": {
+  "id": 71,
+  "theta": 3.016284227371216,
+  "unique_id": 71,
+  "x": 22.007766723632812,
+  "y": -1.9459943771362305
+ },
+ "anchor_distance_m": 0.19999960723617988,
+ "anchor_heading_error_rad": 0.0769531284901559,
+ "anchor_heading_weight": 0.5,
+ "checks": {
+  "anchor_heading_within_tolerance": true,
+  "anchor_is_not_root": true,
+  "anchor_within_reference_radius": true,
+  "minimum_history_node_count": true,
+  "segment_has_target_states": true
+ },
+ "frozen_graph_node_count": 110,
+ "frozen_phase": "G_before_return",
+ "frozen_scan_index": 2589,
+ "group_id": "place_C_r3",
+ "passed": true,
+ "place_id": "place_C",
+ "reference_commanded_waypoint": [
+  22.25,
+  -2.0,
+  3.141592653589793
+ ],
+ "reference_mapper_pose": [
+  22.206198152573855,
+  -1.970990594910974,
+  2.93933109888106
+ ],
+ "reference_source": "history_arrival_tf_pose",
+ "reference_world_position": [
+  -5.95,
+  -30.0
+ ],
+ "return_goal_pose": [
+  22.206198152573855,
+  -1.970990594910974,
+  2.93933109888106
+ ],
+ "segment_length": 7,
+ "segment_state_ids": [
+  67,
+  68,
+  69,
+  70,
+  71,
+  72,
+  73
+ ],
+ "segment_unique_ids": [
+  67,
+  68,
+  69,
+  70,
+  71,
+  72,
+  73
+ ],
+ "target_state_ids": [
+  67,
+  68,
+  71,
+  72,
+  73
+ ],
+ "target_states": [
+  {
+   "id": 67,
+   "theta": -1.570618987083435,
+   "unique_id": 67,
+   "x": 22.209354400634766,
+   "y": -0.3490750193595886
+  },
+  {
+   "id": 68,
+   "theta": -1.570839762687683,
+   "unique_id": 68,
+   "x": 22.209354400634766,
+   "y": -1.3228250741958618
+  },
+  {
+   "id": 71,
+   "theta": 3.016284227371216,
+   "unique_id": 71,
+   "x": 22.007766723632812,
+   "y": -1.9459943771362305
+  },
+  {
+   "id": 72,
+   "theta": -3.1289122104644775,
+   "unique_id": 72,
+   "x": 21.00811004638672,
+   "y": -1.9043785333633423
+  },
+  {
+   "id": 73,
+   "theta": -3.0501651763916016,
+   "unique_id": 73,
+   "x": 20.068410873413086,
+   "y": -1.9382399320602417
+  }
+ ],
+ "target_unique_ids": [
+  67,
+  68,
+  71,
+  72,
+  73
+ ]
+}

@@ -1,0 +1,116 @@
+{
+ "action_id": "L-",
+ "anchor": {
+  "id": 56,
+  "theta": -1.216470718383789,
+  "unique_id": 56,
+  "x": 22.276514053344727,
+  "y": 9.886384963989258
+ },
+ "anchor_distance_m": 0.19999983128606566,
+ "anchor_heading_error_rad": 0.3995186153641397,
+ "anchor_heading_weight": 0.5,
+ "checks": {
+  "anchor_heading_within_tolerance": true,
+  "anchor_is_not_root": true,
+  "anchor_within_reference_radius": true,
+  "minimum_history_node_count": true,
+  "segment_has_target_states": true
+ },
+ "frozen_graph_node_count": 109,
+ "frozen_phase": "G_before_return",
+ "frozen_scan_index": 2580,
+ "group_id": "place_B_r3",
+ "passed": true,
+ "place_id": "place_B",
+ "reference_commanded_waypoint": [
+  22.25,
+  10.0,
+  -1.5707963267948966
+ ],
+ "reference_mapper_pose": [
+  22.20712303574921,
+  10.0739611330287,
+  -1.6159893337479287
+ ],
+ "reference_source": "history_arrival_tf_pose",
+ "reference_world_position": [
+  -5.95,
+  -18.0
+ ],
+ "return_goal_pose": [
+  22.20712303574921,
+  10.0739611330287,
+  -1.6159893337479287
+ ],
+ "segment_length": 7,
+ "segment_state_ids": [
+  52,
+  53,
+  54,
+  55,
+  56,
+  57,
+  58
+ ],
+ "segment_unique_ids": [
+  52,
+  53,
+  54,
+  55,
+  56,
+  57,
+  58
+ ],
+ "target_state_ids": [
+  52,
+  53,
+  55,
+  57,
+  58
+ ],
+ "target_states": [
+  {
+   "id": 52,
+   "theta": -0.0006601552595384419,
+   "unique_id": 52,
+   "x": 20.192121505737305,
+   "y": 10.049928665161133
+  },
+  {
+   "id": 53,
+   "theta": -0.00021276765619404614,
+   "unique_id": 53,
+   "x": 21.172870635986328,
+   "y": 10.049615859985352
+  },
+  {
+   "id": 55,
+   "theta": -0.6000553965568542,
+   "unique_id": 55,
+   "x": 22.30118179321289,
+   "y": 9.936577796936035
+  },
+  {
+   "id": 57,
+   "theta": -1.5654575824737549,
+   "unique_id": 57,
+   "x": 22.137399673461914,
+   "y": 8.814695358276367
+  },
+  {
+   "id": 58,
+   "theta": -1.5103719234466553,
+   "unique_id": 58,
+   "x": 22.16734504699707,
+   "y": 7.831882953643799
+  }
+ ],
+ "target_unique_ids": [
+  52,
+  53,
+  55,
+  57,
+  58
+ ]
+}

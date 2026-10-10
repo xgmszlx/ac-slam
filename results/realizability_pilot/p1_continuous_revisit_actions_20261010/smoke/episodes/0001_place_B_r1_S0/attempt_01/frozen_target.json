@@ -1,0 +1,118 @@
+{
+ "action_id": "S0",
+ "anchor": {
+  "id": 55,
+  "theta": -1.6837115287780762,
+  "unique_id": 55,
+  "x": 22.162195205688477,
+  "y": 9.781946182250977
+ },
+ "anchor_distance_m": 0.20000000247375804,
+ "anchor_heading_error_rad": 0.0870847980168199,
+ "anchor_heading_weight": 0.5,
+ "checks": {
+  "anchor_heading_within_tolerance": true,
+  "anchor_is_not_root": true,
+  "anchor_within_reference_radius": true,
+  "minimum_history_node_count": true,
+  "segment_has_target_states": true
+ },
+ "frozen_graph_node_count": 107,
+ "frozen_phase": "G_before_return",
+ "frozen_scan_index": 2518,
+ "group_id": "place_B_r1",
+ "passed": true,
+ "place_id": "place_B",
+ "reference_commanded_waypoint": [
+  22.25,
+  10.0,
+  -1.5707963267948966
+ ],
+ "reference_mapper_pose": [
+  22.18473051184117,
+  9.98067252918592,
+  -1.770796326794896
+ ],
+ "reference_source": "history_arrival_tf_pose",
+ "reference_world_position": [
+  -5.95,
+  -18.0
+ ],
+ "return_goal_pose": [
+  22.18473051184117,
+  9.98067252918592,
+  -1.770796326794896
+ ],
+ "segment_length": 8,
+ "segment_state_ids": [
+  50,
+  51,
+  52,
+  53,
+  54,
+  55,
+  56,
+  57
+ ],
+ "segment_unique_ids": [
+  50,
+  51,
+  52,
+  53,
+  54,
+  55,
+  56,
+  57
+ ],
+ "target_state_ids": [
+  50,
+  51,
+  54,
+  56,
+  57
+ ],
+ "target_states": [
+  {
+   "id": 50,
+   "theta": 0.0005889403983019292,
+   "unique_id": 50,
+   "x": 20.36448097229004,
+   "y": 9.980323791503906
+  },
+  {
+   "id": 51,
+   "theta": 0.00017956100055016577,
+   "unique_id": 51,
+   "x": 21.330480575561523,
+   "y": 9.980596542358398
+  },
+  {
+   "id": 54,
+   "theta": -1.1612026691436768,
+   "unique_id": 54,
+   "x": 22.274377822875977,
+   "y": 9.797216415405273
+  },
+  {
+   "id": 56,
+   "theta": -1.5523637533187866,
+   "unique_id": 56,
+   "x": 22.140872955322266,
+   "y": 8.762391090393066
+  },
+  {
+   "id": 57,
+   "theta": -1.4669251441955566,
+   "unique_id": 57,
+   "x": 22.1597843170166,
+   "y": 7.7660675048828125
+  }
+ ],
+ "target_unique_ids": [
+  50,
+  51,
+  54,
+  56,
+  57
+ ]
+}

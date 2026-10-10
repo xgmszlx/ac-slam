@@ -1,0 +1,97 @@
+{
+ "episode_id": "0022_place_B_r3_L+",
+ "moves": [
+  {
+   "action_finished": true,
+   "action_state": 3,
+   "cumulative_rotation_rad": 5.653830252229701,
+   "end_time": 46.0,
+   "expected_gt_pose": [
+    -30.5,
+    -18.0,
+    0.0
+   ],
+   "gt_heading_error_rad": 0.09911971013114972,
+   "gt_pose_after": [
+    -30.296744870861556,
+    -18.084791710226433,
+    -0.09911971013114972
+   ],
+   "gt_pose_before": [
+    -27.168333333333326,
+    -28.0,
+    -0.6168146928204183
+   ],
+   "gt_position_error_m": 0.2202323356008584,
+   "gt_reached": true,
+   "gt_sample_count": 300,
+   "label": "history_01",
+   "path_length_m": 11.356970930217535,
+   "reached": true,
+   "start_time": 16.0,
+   "target_theta": 0.0,
+   "target_x": -2.3,
+   "target_y": 10.0,
+   "tf_heading_error_rad": 0.10000000000000013,
+   "tf_pose_after": [
+    -2.2874534946675578,
+    9.920866778884259,
+    -0.10000000000000013
+   ],
+   "tf_pose_before": [
+    0.8324023027080761,
+    0.01594454518734898,
+    -0.6180437894360894
+   ],
+   "tf_position_error_m": 0.08012166673384807,
+   "tf_reached": true
+  },
+  {
+   "action_finished": true,
+   "action_state": 4,
+   "cumulative_rotation_rad": 0.0,
+   "end_time": 47.1,
+   "expected_gt_pose": [
+    -5.949999999999999,
+    -18.0,
+    -1.5707963267948966
+   ],
+   "gt_heading_error_rad": 1.471676616663747,
+   "gt_pose_after": [
+    -30.296744870861556,
+    -18.084791710226433,
+    -0.09911971013114972
+   ],
+   "gt_pose_before": [
+    -30.296744870861556,
+    -18.084791710226433,
+    -0.09911971013114972
+   ],
+   "gt_position_error_m": 24.346892521242758,
+   "gt_reached": false,
+   "gt_sample_count": 11,
+   "label": "history_02",
+   "path_length_m": 0.0,
+   "reached": false,
+   "start_time": 46.0,
+   "target_theta": -1.5707963267948966,
+   "target_x": 22.25,
+   "target_y": 10.0,
+   "tf_heading_error_rad": 1.4707963267948965,
+   "tf_pose_after": [
+    -2.2874534946675578,
+    9.920866778884259,
+    -0.10000000000000013
+   ],
+   "tf_pose_before": [
+    -2.2874534946675578,
+    9.920866778884259,
+    -0.10000000000000013
+   ],
+   "tf_position_error_m": 24.53758109654775,
+   "tf_reached": false
+  }
+ ],
+ "reason": "RuntimeError: MoveTo history_02 failed with state 4",
+ "status": "FAILED"
+}

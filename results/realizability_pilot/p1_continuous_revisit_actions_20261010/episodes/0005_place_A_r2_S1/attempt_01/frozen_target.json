@@ -1,0 +1,118 @@
+{
+ "action_id": "S1",
+ "anchor": {
+  "id": 27,
+  "theta": -0.12303014099597931,
+  "unique_id": 27,
+  "x": -2.1093974113464355,
+  "y": 9.815376281738281
+ },
+ "anchor_distance_m": 0.19999999076423647,
+ "anchor_heading_error_rad": 0.058363298646638626,
+ "anchor_heading_weight": 0.5,
+ "checks": {
+  "anchor_heading_within_tolerance": true,
+  "anchor_is_not_root": true,
+  "anchor_within_reference_radius": true,
+  "minimum_history_node_count": true,
+  "segment_has_target_states": true
+ },
+ "frozen_graph_node_count": 109,
+ "frozen_phase": "G_before_return",
+ "frozen_scan_index": 2551,
+ "group_id": "place_A_r2",
+ "passed": true,
+ "place_id": "place_A",
+ "reference_commanded_waypoint": [
+  -2.3,
+  10.0,
+  0.0
+ ],
+ "reference_mapper_pose": [
+  -2.3078857027817503,
+  9.839920007388317,
+  -0.06466684234934068
+ ],
+ "reference_source": "history_arrival_tf_pose",
+ "reference_world_position": [
+  -30.5,
+  -18.0
+ ],
+ "return_goal_pose": [
+  -2.3078857027817503,
+  9.839920007388317,
+  -0.06466684234934068
+ ],
+ "segment_length": 8,
+ "segment_state_ids": [
+  22,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29
+ ],
+ "segment_unique_ids": [
+  22,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29
+ ],
+ "target_state_ids": [
+  22,
+  23,
+  25,
+  28,
+  29
+ ],
+ "target_states": [
+  {
+   "id": 22,
+   "theta": 1.5392844676971436,
+   "unique_id": 22,
+   "x": -2.326122999191284,
+   "y": 7.399270057678223
+  },
+  {
+   "id": 23,
+   "theta": 1.5618748664855957,
+   "unique_id": 23,
+   "x": -2.3125829696655273,
+   "y": 8.323678016662598
+  },
+  {
+   "id": 25,
+   "theta": 0.9696985483169556,
+   "unique_id": 25,
+   "x": -2.1947760581970215,
+   "y": 9.98486328125
+  },
+  {
+   "id": 28,
+   "theta": -0.20900385081768036,
+   "unique_id": 28,
+   "x": -1.1440868377685547,
+   "y": 9.626612663269043
+  },
+  {
+   "id": 29,
+   "theta": -0.1701641082763672,
+   "unique_id": 29,
+   "x": -0.14240995049476624,
+   "y": 9.439763069152832
+  }
+ ],
+ "target_unique_ids": [
+  22,
+  23,
+  25,
+  28,
+  29
+ ]
+}

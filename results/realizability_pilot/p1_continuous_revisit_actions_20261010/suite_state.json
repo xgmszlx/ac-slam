@@ -1,0 +1,4630 @@
+{
+ "created_utc": "2026-10-10T03:56:12.242084+00:00",
+ "episodes": [
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T04:01:44.716570+00:00",
+     "run_dir": "episodes/0001_place_A_r1_S0/attempt_01",
+     "started_utc": "2026-10-10T03:56:16.417113+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0001_place_A_r1_S0",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "S0",
+    "action_label": "static_hold",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0001_place_A_r1_S0",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_A_r1",
+    "group_index": 0,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 0.0,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 0,
+    "place_id": "place_A",
+    "place_world_position": [
+     -30.5,
+     -18.0
+    ],
+    "planned_cumulative_rotation_rad": 0.0,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 1,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 1,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 0,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44001
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T04:07:31.095286+00:00",
+     "run_dir": "episodes/0002_place_A_r1_S1/attempt_01",
+     "started_utc": "2026-10-10T04:01:44.727108+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0002_place_A_r1_S1",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "S1",
+    "action_label": "half_dose_rotation",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0002_place_A_r1_S1",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_A_r1",
+    "group_index": 0,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 0.5439732814124925,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 1,
+    "place_id": "place_A",
+    "place_world_position": [
+     -30.5,
+     -18.0
+    ],
+    "planned_cumulative_rotation_rad": 1.087946562824985,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 1,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 2,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 0,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44002
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T04:13:08.545269+00:00",
+     "run_dir": "episodes/0003_place_A_r1_L+/attempt_01",
+     "started_utc": "2026-10-10T04:07:31.111934+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0003_place_A_r1_L+",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "L+",
+    "action_label": "positive_quarter_turn",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0003_place_A_r1_L+",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_A_r1",
+    "group_index": 0,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 1.5707963267948966,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 2,
+    "place_id": "place_A",
+    "place_world_position": [
+     -30.5,
+     -18.0
+    ],
+    "planned_cumulative_rotation_rad": 3.141592653589793,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 1,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 3,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 0,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44003
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T04:18:35.368636+00:00",
+     "run_dir": "episodes/0004_place_A_r1_L-/attempt_01",
+     "started_utc": "2026-10-10T04:13:08.553572+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0004_place_A_r1_L-",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "L-",
+    "action_label": "negative_quarter_turn",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0004_place_A_r1_L-",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_A_r1",
+    "group_index": 0,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": -1.5707963267948966,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 3,
+    "place_id": "place_A",
+    "place_world_position": [
+     -30.5,
+     -18.0
+    ],
+    "planned_cumulative_rotation_rad": 3.141592653589793,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 1,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 4,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 0,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44004
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T04:24:18.531439+00:00",
+     "run_dir": "episodes/0005_place_A_r2_S1/attempt_01",
+     "started_utc": "2026-10-10T04:18:35.378146+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0005_place_A_r2_S1",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "S1",
+    "action_label": "half_dose_rotation",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0005_place_A_r2_S1",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_A_r2",
+    "group_index": 1,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 0.5439732814124925,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 0,
+    "place_id": "place_A",
+    "place_world_position": [
+     -30.5,
+     -18.0
+    ],
+    "planned_cumulative_rotation_rad": 1.087946562824985,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 2,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 5,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 0,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44005
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T04:29:54.863058+00:00",
+     "run_dir": "episodes/0006_place_A_r2_L+/attempt_01",
+     "started_utc": "2026-10-10T04:24:18.542712+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0006_place_A_r2_L+",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "L+",
+    "action_label": "positive_quarter_turn",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0006_place_A_r2_L+",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_A_r2",
+    "group_index": 1,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 1.5707963267948966,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 1,
+    "place_id": "place_A",
+    "place_world_position": [
+     -30.5,
+     -18.0
+    ],
+    "planned_cumulative_rotation_rad": 3.141592653589793,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 2,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 6,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 0,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44006
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T04:35:40.320407+00:00",
+     "run_dir": "episodes/0007_place_A_r2_L-/attempt_01",
+     "started_utc": "2026-10-10T04:29:54.871248+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0007_place_A_r2_L-",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "L-",
+    "action_label": "negative_quarter_turn",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0007_place_A_r2_L-",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_A_r2",
+    "group_index": 1,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": -1.5707963267948966,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 2,
+    "place_id": "place_A",
+    "place_world_position": [
+     -30.5,
+     -18.0
+    ],
+    "planned_cumulative_rotation_rad": 3.141592653589793,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 2,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 7,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 0,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44007
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T04:41:32.644810+00:00",
+     "run_dir": "episodes/0008_place_A_r2_S0/attempt_01",
+     "started_utc": "2026-10-10T04:35:40.328705+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0008_place_A_r2_S0",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "S0",
+    "action_label": "static_hold",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0008_place_A_r2_S0",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_A_r2",
+    "group_index": 1,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 0.0,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 3,
+    "place_id": "place_A",
+    "place_world_position": [
+     -30.5,
+     -18.0
+    ],
+    "planned_cumulative_rotation_rad": 0.0,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 2,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 8,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 0,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44008
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T04:47:24.057890+00:00",
+     "run_dir": "episodes/0009_place_A_r3_L+/attempt_01",
+     "started_utc": "2026-10-10T04:41:32.653248+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0009_place_A_r3_L+",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "L+",
+    "action_label": "positive_quarter_turn",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0009_place_A_r3_L+",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_A_r3",
+    "group_index": 2,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 1.5707963267948966,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 0,
+    "place_id": "place_A",
+    "place_world_position": [
+     -30.5,
+     -18.0
+    ],
+    "planned_cumulative_rotation_rad": 3.141592653589793,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 3,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 9,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 0,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44009
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T04:52:46.375873+00:00",
+     "run_dir": "episodes/0010_place_A_r3_L-/attempt_01",
+     "started_utc": "2026-10-10T04:47:24.068714+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0010_place_A_r3_L-",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "L-",
+    "action_label": "negative_quarter_turn",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0010_place_A_r3_L-",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_A_r3",
+    "group_index": 2,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": -1.5707963267948966,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 1,
+    "place_id": "place_A",
+    "place_world_position": [
+     -30.5,
+     -18.0
+    ],
+    "planned_cumulative_rotation_rad": 3.141592653589793,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 3,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 10,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 0,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44010
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T04:58:11.439997+00:00",
+     "run_dir": "episodes/0011_place_A_r3_S0/attempt_01",
+     "started_utc": "2026-10-10T04:52:46.386048+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0011_place_A_r3_S0",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "S0",
+    "action_label": "static_hold",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0011_place_A_r3_S0",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_A_r3",
+    "group_index": 2,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 0.0,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 2,
+    "place_id": "place_A",
+    "place_world_position": [
+     -30.5,
+     -18.0
+    ],
+    "planned_cumulative_rotation_rad": 0.0,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 3,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 11,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 0,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44011
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T05:03:30.302310+00:00",
+     "run_dir": "episodes/0012_place_A_r3_S1/attempt_01",
+     "started_utc": "2026-10-10T04:58:11.447603+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0012_place_A_r3_S1",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "S1",
+    "action_label": "half_dose_rotation",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0012_place_A_r3_S1",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_A_r3",
+    "group_index": 2,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 0.5439732814124925,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 3,
+    "place_id": "place_A",
+    "place_world_position": [
+     -30.5,
+     -18.0
+    ],
+    "planned_cumulative_rotation_rad": 1.087946562824985,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 3,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 12,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 0,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44012
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T05:10:05.240000+00:00",
+     "run_dir": "episodes/0013_place_B_r1_L-/attempt_01",
+     "started_utc": "2026-10-10T05:03:30.306852+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0013_place_B_r1_L-",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "L-",
+    "action_label": "negative_quarter_turn",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0013_place_B_r1_L-",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_B_r1",
+    "group_index": 3,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": -1.5707963267948966,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 0,
+    "place_id": "place_B",
+    "place_world_position": [
+     -5.95,
+     -18.0
+    ],
+    "planned_cumulative_rotation_rad": 3.141592653589793,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 1,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 13,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 1,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44013
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T05:16:36.074847+00:00",
+     "run_dir": "episodes/0014_place_B_r1_S0/attempt_01",
+     "started_utc": "2026-10-10T05:10:05.252109+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0014_place_B_r1_S0",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "S0",
+    "action_label": "static_hold",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0014_place_B_r1_S0",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_B_r1",
+    "group_index": 3,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 0.0,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 1,
+    "place_id": "place_B",
+    "place_world_position": [
+     -5.95,
+     -18.0
+    ],
+    "planned_cumulative_rotation_rad": 0.0,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 1,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 14,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 1,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44014
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T05:22:43.922117+00:00",
+     "run_dir": "episodes/0015_place_B_r1_S1/attempt_01",
+     "started_utc": "2026-10-10T05:16:36.087482+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0015_place_B_r1_S1",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "S1",
+    "action_label": "half_dose_rotation",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0015_place_B_r1_S1",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_B_r1",
+    "group_index": 3,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 0.5439732814124925,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 2,
+    "place_id": "place_B",
+    "place_world_position": [
+     -5.95,
+     -18.0
+    ],
+    "planned_cumulative_rotation_rad": 1.087946562824985,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 1,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 15,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 1,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44015
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T05:29:09.657588+00:00",
+     "run_dir": "episodes/0016_place_B_r1_L+/attempt_01",
+     "started_utc": "2026-10-10T05:22:43.933919+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0016_place_B_r1_L+",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "L+",
+    "action_label": "positive_quarter_turn",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0016_place_B_r1_L+",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_B_r1",
+    "group_index": 3,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 1.5707963267948966,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 3,
+    "place_id": "place_B",
+    "place_world_position": [
+     -5.95,
+     -18.0
+    ],
+    "planned_cumulative_rotation_rad": 3.141592653589793,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 1,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 16,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 1,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44016
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T05:35:47.776478+00:00",
+     "run_dir": "episodes/0017_place_B_r2_S0/attempt_01",
+     "started_utc": "2026-10-10T05:29:09.668320+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0017_place_B_r2_S0",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "S0",
+    "action_label": "static_hold",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0017_place_B_r2_S0",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_B_r2",
+    "group_index": 4,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 0.0,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 0,
+    "place_id": "place_B",
+    "place_world_position": [
+     -5.95,
+     -18.0
+    ],
+    "planned_cumulative_rotation_rad": 0.0,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 2,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 17,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 1,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44017
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T05:42:23.515025+00:00",
+     "run_dir": "episodes/0018_place_B_r2_S1/attempt_01",
+     "started_utc": "2026-10-10T05:35:47.786202+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0018_place_B_r2_S1",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "S1",
+    "action_label": "half_dose_rotation",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0018_place_B_r2_S1",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_B_r2",
+    "group_index": 4,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 0.5439732814124925,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 1,
+    "place_id": "place_B",
+    "place_world_position": [
+     -5.95,
+     -18.0
+    ],
+    "planned_cumulative_rotation_rad": 1.087946562824985,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 2,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 18,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 1,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44018
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T05:48:53.285803+00:00",
+     "run_dir": "episodes/0019_place_B_r2_L+/attempt_01",
+     "started_utc": "2026-10-10T05:42:23.526108+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0019_place_B_r2_L+",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "L+",
+    "action_label": "positive_quarter_turn",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0019_place_B_r2_L+",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_B_r2",
+    "group_index": 4,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 1.5707963267948966,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 2,
+    "place_id": "place_B",
+    "place_world_position": [
+     -5.95,
+     -18.0
+    ],
+    "planned_cumulative_rotation_rad": 3.141592653589793,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 2,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 19,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 1,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44019
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T05:55:24.299531+00:00",
+     "run_dir": "episodes/0020_place_B_r2_L-/attempt_01",
+     "started_utc": "2026-10-10T05:48:53.296966+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0020_place_B_r2_L-",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "L-",
+    "action_label": "negative_quarter_turn",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0020_place_B_r2_L-",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_B_r2",
+    "group_index": 4,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": -1.5707963267948966,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 3,
+    "place_id": "place_B",
+    "place_world_position": [
+     -5.95,
+     -18.0
+    ],
+    "planned_cumulative_rotation_rad": 3.141592653589793,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 2,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 20,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 1,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44020
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T06:01:52.143106+00:00",
+     "run_dir": "episodes/0021_place_B_r3_S1/attempt_01",
+     "started_utc": "2026-10-10T05:55:24.309469+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0021_place_B_r3_S1",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "S1",
+    "action_label": "half_dose_rotation",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0021_place_B_r3_S1",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_B_r3",
+    "group_index": 5,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 0.5439732814124925,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 0,
+    "place_id": "place_B",
+    "place_world_position": [
+     -5.95,
+     -18.0
+    ],
+    "planned_cumulative_rotation_rad": 1.087946562824985,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 3,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 21,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 1,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44021
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T06:03:00.130475+00:00",
+     "reason": "RuntimeError: driver exited with code 1",
+     "run_dir": "episodes/0022_place_B_r3_L+/attempt_01",
+     "started_utc": "2026-10-10T06:01:52.154689+00:00",
+     "status": "FAILED"
+    }
+   ],
+   "episode_id": "0022_place_B_r3_L+",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "L+",
+    "action_label": "positive_quarter_turn",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0022_place_B_r3_L+",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_B_r3",
+    "group_index": 5,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 1.5707963267948966,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 1,
+    "place_id": "place_B",
+    "place_world_position": [
+     -5.95,
+     -18.0
+    ],
+    "planned_cumulative_rotation_rad": 3.141592653589793,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 3,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 22,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 1,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44022
+   },
+   "status": "FAILED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T06:09:35.882051+00:00",
+     "run_dir": "episodes/0023_place_B_r3_L-/attempt_01",
+     "started_utc": "2026-10-10T06:03:00.139953+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0023_place_B_r3_L-",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "L-",
+    "action_label": "negative_quarter_turn",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0023_place_B_r3_L-",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_B_r3",
+    "group_index": 5,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": -1.5707963267948966,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 2,
+    "place_id": "place_B",
+    "place_world_position": [
+     -5.95,
+     -18.0
+    ],
+    "planned_cumulative_rotation_rad": 3.141592653589793,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 3,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 23,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 1,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44023
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T06:16:02.627344+00:00",
+     "run_dir": "episodes/0024_place_B_r3_S0/attempt_01",
+     "started_utc": "2026-10-10T06:09:35.892427+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0024_place_B_r3_S0",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "S0",
+    "action_label": "static_hold",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0024_place_B_r3_S0",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_B_r3",
+    "group_index": 5,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 0.0,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 3,
+    "place_id": "place_B",
+    "place_world_position": [
+     -5.95,
+     -18.0
+    ],
+    "planned_cumulative_rotation_rad": 0.0,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 3,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 24,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 1,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44024
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T06:22:36.179794+00:00",
+     "run_dir": "episodes/0025_place_C_r1_L+/attempt_01",
+     "started_utc": "2026-10-10T06:16:02.638658+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0025_place_C_r1_L+",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "L+",
+    "action_label": "positive_quarter_turn",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0025_place_C_r1_L+",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_C_r1",
+    "group_index": 6,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 1.5707963267948966,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 0,
+    "place_id": "place_C",
+    "place_world_position": [
+     -5.95,
+     -30.0
+    ],
+    "planned_cumulative_rotation_rad": 3.141592653589793,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 1,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 25,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 2,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44025
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T06:29:01.929039+00:00",
+     "run_dir": "episodes/0026_place_C_r1_L-/attempt_01",
+     "started_utc": "2026-10-10T06:22:36.190568+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0026_place_C_r1_L-",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "L-",
+    "action_label": "negative_quarter_turn",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0026_place_C_r1_L-",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_C_r1",
+    "group_index": 6,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": -1.5707963267948966,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 1,
+    "place_id": "place_C",
+    "place_world_position": [
+     -5.95,
+     -30.0
+    ],
+    "planned_cumulative_rotation_rad": 3.141592653589793,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 1,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 26,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 2,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44026
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T06:35:41.057812+00:00",
+     "run_dir": "episodes/0027_place_C_r1_S0/attempt_01",
+     "started_utc": "2026-10-10T06:29:01.940721+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0027_place_C_r1_S0",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "S0",
+    "action_label": "static_hold",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0027_place_C_r1_S0",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_C_r1",
+    "group_index": 6,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 0.0,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 2,
+    "place_id": "place_C",
+    "place_world_position": [
+     -5.95,
+     -30.0
+    ],
+    "planned_cumulative_rotation_rad": 0.0,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 1,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 27,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 2,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44027
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T06:41:52.722530+00:00",
+     "run_dir": "episodes/0028_place_C_r1_S1/attempt_01",
+     "started_utc": "2026-10-10T06:35:41.068434+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0028_place_C_r1_S1",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "S1",
+    "action_label": "half_dose_rotation",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0028_place_C_r1_S1",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_C_r1",
+    "group_index": 6,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 0.5439732814124925,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 3,
+    "place_id": "place_C",
+    "place_world_position": [
+     -5.95,
+     -30.0
+    ],
+    "planned_cumulative_rotation_rad": 1.087946562824985,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 1,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 28,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 2,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44028
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T06:48:19.596727+00:00",
+     "run_dir": "episodes/0029_place_C_r2_L-/attempt_01",
+     "started_utc": "2026-10-10T06:41:52.732152+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0029_place_C_r2_L-",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "L-",
+    "action_label": "negative_quarter_turn",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0029_place_C_r2_L-",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_C_r2",
+    "group_index": 7,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": -1.5707963267948966,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 0,
+    "place_id": "place_C",
+    "place_world_position": [
+     -5.95,
+     -30.0
+    ],
+    "planned_cumulative_rotation_rad": 3.141592653589793,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 2,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 29,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 2,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44029
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T06:54:49.380602+00:00",
+     "run_dir": "episodes/0030_place_C_r2_S0/attempt_01",
+     "started_utc": "2026-10-10T06:48:19.605272+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0030_place_C_r2_S0",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "S0",
+    "action_label": "static_hold",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0030_place_C_r2_S0",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_C_r2",
+    "group_index": 7,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 0.0,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 1,
+    "place_id": "place_C",
+    "place_world_position": [
+     -5.95,
+     -30.0
+    ],
+    "planned_cumulative_rotation_rad": 0.0,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 2,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 30,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 2,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44030
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T07:00:48.797608+00:00",
+     "run_dir": "episodes/0031_place_C_r2_S1/attempt_01",
+     "started_utc": "2026-10-10T06:54:49.391688+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0031_place_C_r2_S1",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "S1",
+    "action_label": "half_dose_rotation",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0031_place_C_r2_S1",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_C_r2",
+    "group_index": 7,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 0.5439732814124925,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 2,
+    "place_id": "place_C",
+    "place_world_position": [
+     -5.95,
+     -30.0
+    ],
+    "planned_cumulative_rotation_rad": 1.087946562824985,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 2,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 31,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 2,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44031
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T07:07:12.571128+00:00",
+     "run_dir": "episodes/0032_place_C_r2_L+/attempt_01",
+     "started_utc": "2026-10-10T07:00:48.805555+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0032_place_C_r2_L+",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "L+",
+    "action_label": "positive_quarter_turn",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0032_place_C_r2_L+",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_C_r2",
+    "group_index": 7,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 1.5707963267948966,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 3,
+    "place_id": "place_C",
+    "place_world_position": [
+     -5.95,
+     -30.0
+    ],
+    "planned_cumulative_rotation_rad": 3.141592653589793,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 2,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 32,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 2,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44032
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T07:13:32.259851+00:00",
+     "run_dir": "episodes/0033_place_C_r3_S0/attempt_01",
+     "started_utc": "2026-10-10T07:07:12.596401+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0033_place_C_r3_S0",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "S0",
+    "action_label": "static_hold",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0033_place_C_r3_S0",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_C_r3",
+    "group_index": 8,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 0.0,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 0,
+    "place_id": "place_C",
+    "place_world_position": [
+     -5.95,
+     -30.0
+    ],
+    "planned_cumulative_rotation_rad": 0.0,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 3,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 33,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 2,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44033
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T07:20:00.942498+00:00",
+     "run_dir": "episodes/0034_place_C_r3_S1/attempt_01",
+     "started_utc": "2026-10-10T07:13:32.271201+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0034_place_C_r3_S1",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "S1",
+    "action_label": "half_dose_rotation",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0034_place_C_r3_S1",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_C_r3",
+    "group_index": 8,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 0.5439732814124925,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 1,
+    "place_id": "place_C",
+    "place_world_position": [
+     -5.95,
+     -30.0
+    ],
+    "planned_cumulative_rotation_rad": 1.087946562824985,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 3,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 34,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 2,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44034
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T07:26:27.425138+00:00",
+     "run_dir": "episodes/0035_place_C_r3_L+/attempt_01",
+     "started_utc": "2026-10-10T07:20:00.950770+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0035_place_C_r3_L+",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "L+",
+    "action_label": "positive_quarter_turn",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0035_place_C_r3_L+",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_C_r3",
+    "group_index": 8,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 1.5707963267948966,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 2,
+    "place_id": "place_C",
+    "place_world_position": [
+     -5.95,
+     -30.0
+    ],
+    "planned_cumulative_rotation_rad": 3.141592653589793,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 3,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 35,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 2,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44035
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T07:32:46.096919+00:00",
+     "run_dir": "episodes/0036_place_C_r3_L-/attempt_01",
+     "started_utc": "2026-10-10T07:26:27.429742+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0036_place_C_r3_L-",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "L-",
+    "action_label": "negative_quarter_turn",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0036_place_C_r3_L-",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_C_r3",
+    "group_index": 8,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": -1.5707963267948966,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 3,
+    "place_id": "place_C",
+    "place_world_position": [
+     -5.95,
+     -30.0
+    ],
+    "planned_cumulative_rotation_rad": 3.141592653589793,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 3,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 36,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 2,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44036
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T07:38:24.266898+00:00",
+     "run_dir": "episodes/0037_place_D_r1_S1/attempt_01",
+     "started_utc": "2026-10-10T07:32:46.102058+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0037_place_D_r1_S1",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "S1",
+    "action_label": "half_dose_rotation",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0037_place_D_r1_S1",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_D_r1",
+    "group_index": 9,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 0.5439732814124925,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 0,
+    "place_id": "place_D",
+    "place_world_position": [
+     -30.5,
+     -30.0
+    ],
+    "planned_cumulative_rotation_rad": 1.087946562824985,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 1,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 37,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 3,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44037
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T07:43:40.182037+00:00",
+     "run_dir": "episodes/0038_place_D_r1_L+/attempt_01",
+     "started_utc": "2026-10-10T07:38:24.281275+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0038_place_D_r1_L+",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "L+",
+    "action_label": "positive_quarter_turn",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0038_place_D_r1_L+",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_D_r1",
+    "group_index": 9,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 1.5707963267948966,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 1,
+    "place_id": "place_D",
+    "place_world_position": [
+     -30.5,
+     -30.0
+    ],
+    "planned_cumulative_rotation_rad": 3.141592653589793,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 1,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 38,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 3,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44038
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T07:49:02.987988+00:00",
+     "run_dir": "episodes/0039_place_D_r1_L-/attempt_01",
+     "started_utc": "2026-10-10T07:43:40.214851+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0039_place_D_r1_L-",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "L-",
+    "action_label": "negative_quarter_turn",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0039_place_D_r1_L-",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_D_r1",
+    "group_index": 9,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": -1.5707963267948966,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 2,
+    "place_id": "place_D",
+    "place_world_position": [
+     -30.5,
+     -30.0
+    ],
+    "planned_cumulative_rotation_rad": 3.141592653589793,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 1,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 39,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 3,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44039
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T07:54:24.207991+00:00",
+     "run_dir": "episodes/0040_place_D_r1_S0/attempt_01",
+     "started_utc": "2026-10-10T07:49:02.992545+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0040_place_D_r1_S0",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "S0",
+    "action_label": "static_hold",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0040_place_D_r1_S0",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_D_r1",
+    "group_index": 9,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 0.0,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 3,
+    "place_id": "place_D",
+    "place_world_position": [
+     -30.5,
+     -30.0
+    ],
+    "planned_cumulative_rotation_rad": 0.0,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 1,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 40,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 3,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44040
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T07:59:59.345809+00:00",
+     "run_dir": "episodes/0041_place_D_r2_L+/attempt_01",
+     "started_utc": "2026-10-10T07:54:24.218644+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
+   "episode_id": "0041_place_D_r2_L+",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "L+",
+    "action_label": "positive_quarter_turn",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0041_place_D_r2_L+",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_D_r2",
+    "group_index": 10,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 1.5707963267948966,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 0,
+    "place_id": "place_D",
+    "place_world_position": [
+     -30.5,
+     -30.0
+    ],
+    "planned_cumulative_rotation_rad": 3.141592653589793,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 2,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 41,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 3,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44041
+   },
+   "status": "SUCCEEDED"
+  },
+  {
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T08:01:23.258141+00:00",
+     "run_dir": "episodes/0042_place_D_r2_L-/attempt_01",
+     "started_utc": "2026-10-10T07:59:59.354256+00:00",
+     "status": "INTERRUPTED"
+    }
+   ],
+   "episode_id": "0042_place_D_r2_L-",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "L-",
+    "action_label": "negative_quarter_turn",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0042_place_D_r2_L-",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_D_r2",
+    "group_index": 10,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": -1.5707963267948966,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 1,
+    "place_id": "place_D",
+    "place_world_position": [
+     -30.5,
+     -30.0
+    ],
+    "planned_cumulative_rotation_rad": 3.141592653589793,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 2,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 42,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 3,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44042
+   },
+   "status": "INTERRUPTED"
+  },
+  {
+   "attempts": [],
+   "episode_id": "0043_place_D_r2_S0",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "S0",
+    "action_label": "static_hold",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0043_place_D_r2_S0",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_D_r2",
+    "group_index": 10,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 0.0,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 2,
+    "place_id": "place_D",
+    "place_world_position": [
+     -30.5,
+     -30.0
+    ],
+    "planned_cumulative_rotation_rad": 0.0,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 2,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 43,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 3,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44043
+   },
+   "status": "PENDING"
+  },
+  {
+   "attempts": [],
+   "episode_id": "0044_place_D_r2_S1",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "S1",
+    "action_label": "half_dose_rotation",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0044_place_D_r2_S1",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_D_r2",
+    "group_index": 10,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 0.5439732814124925,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 3,
+    "place_id": "place_D",
+    "place_world_position": [
+     -30.5,
+     -30.0
+    ],
+    "planned_cumulative_rotation_rad": 1.087946562824985,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 2,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 44,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 3,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44044
+   },
+   "status": "PENDING"
+  },
+  {
+   "attempts": [],
+   "episode_id": "0045_place_D_r3_L-",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "L-",
+    "action_label": "negative_quarter_turn",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0045_place_D_r3_L-",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_D_r3",
+    "group_index": 11,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": -1.5707963267948966,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 0,
+    "place_id": "place_D",
+    "place_world_position": [
+     -30.5,
+     -30.0
+    ],
+    "planned_cumulative_rotation_rad": 3.141592653589793,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 3,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 45,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 3,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44045
+   },
+   "status": "PENDING"
+  },
+  {
+   "attempts": [],
+   "episode_id": "0046_place_D_r3_S0",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "S0",
+    "action_label": "static_hold",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0046_place_D_r3_S0",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_D_r3",
+    "group_index": 11,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 0.0,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 1,
+    "place_id": "place_D",
+    "place_world_position": [
+     -30.5,
+     -30.0
+    ],
+    "planned_cumulative_rotation_rad": 0.0,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 3,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 46,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 3,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44046
+   },
+   "status": "PENDING"
+  },
+  {
+   "attempts": [],
+   "episode_id": "0047_place_D_r3_S1",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "S1",
+    "action_label": "half_dose_rotation",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0047_place_D_r3_S1",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_D_r3",
+    "group_index": 11,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 0.5439732814124925,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 2,
+    "place_id": "place_D",
+    "place_world_position": [
+     -30.5,
+     -30.0
+    ],
+    "planned_cumulative_rotation_rad": 1.087946562824985,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 3,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 47,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 3,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44047
+   },
+   "status": "PENDING"
+  },
+  {
+   "attempts": [],
+   "episode_id": "0048_place_D_r3_L+",
+   "spec": {
+    "action_finish_hold_s": 2.0,
+    "action_frames": 347,
+    "action_id": "L+",
+    "action_label": "positive_quarter_turn",
+    "action_phase_timeout_s": 240.0,
+    "action_waypoints": [
+     1.0,
+     0.0
+    ],
+    "arrival_hold_s": 2.0,
+    "diagnostics_enabled": false,
+    "episode_id": "0048_place_D_r3_L+",
+    "goal_heading_tolerance_rad": 0.35,
+    "goal_position_tolerance_m": 0.75,
+    "goal_settle_s": 1.0,
+    "group_id": "place_D_r3",
+    "group_index": 11,
+    "gt_heading_tolerance_rad": 0.35,
+    "gt_position_tolerance_m": 0.75,
+    "history_hold_s": 2.0,
+    "history_offsets": [
+     [
+      -2.5,
+      10.0,
+      0.0
+     ],
+     [
+      22.05,
+      10.0,
+      -1.5707963267948966
+     ],
+     [
+      22.05,
+      -2.0,
+      3.141592653589793
+     ],
+     [
+      -2.5,
+      -2.0,
+      0.0
+     ],
+     [
+      6.0,
+      -2.0,
+      0.0
+     ]
+    ],
+    "instrumentation_flush_period_s": 0.0,
+    "map_id": "map3",
+    "map_name": "map3/map3",
+    "map_width": 74.0,
+    "max_abs_yaw_rad": 1.5707963267948966,
+    "minimum_history_node_count": 40,
+    "move_timeout_s": 360.0,
+    "observer_enabled": true,
+    "order_position": 3,
+    "place_id": "place_D",
+    "place_world_position": [
+     -30.5,
+     -30.0
+    ],
+    "planned_cumulative_rotation_rad": 3.141592653589793,
+    "protocol_version": "p1_continuous_revisit_v1",
+    "provenance_enabled": true,
+    "record_stream": true,
+    "repeat": 3,
+    "robot_position": "-28.0 -28.0 0",
+    "round": "main",
+    "route_axis_heading_rad": 0.0,
+    "sequence": 48,
+    "start_pose": [
+     -28.0,
+     -28.0,
+     0.0
+    ],
+    "target_anchor_heading_tolerance_rad": 0.6,
+    "target_anchor_heading_weight": 0.5,
+    "target_anchor_max_distance_m": 1.0,
+    "target_history_waypoint_index": 3,
+    "target_reached_radius_m": 1.0,
+    "target_segment_radius_m": 2.5,
+    "target_state_count": 5,
+    "tsp_seed": 44048
+   },
+   "status": "PENDING"
+  }
+ ],
+ "last_started_utc": "2026-10-10T07:59:59.350186+00:00",
+ "protocol_version": "p1_continuous_revisit_v1",
+ "schema_version": 1,
+ "status": "INTERRUPTED"
+}
