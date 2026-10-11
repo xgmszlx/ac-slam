@@ -1,0 +1,289 @@
+{
+ "action_summary": {
+  "L+": {
+   "action_gain_mean": 0.20328297635891013,
+   "action_gain_positive_fraction": 1.0,
+   "action_gain_spread": 0.14228736153346286,
+   "action_keyscans_created_mean": 4.75,
+   "action_keyscans_created_spread": 0.4330127018922193,
+   "action_loop_edges_mean": 7.5,
+   "action_new_heading_fraction_mean": 0.2615273775216138,
+   "action_new_heading_fraction_spread": 0.39664049752400765,
+   "action_share_of_total_mean": 0.76029059271021,
+   "duration_mean_s": 34.59999999999998,
+   "episodes": 4,
+   "max_heading_deflection_mean_rad": 1.8022020203162847,
+   "measured_path_mean_m": 0.0,
+   "measured_rotation_mean_rad": 3.6723650298852397,
+   "measured_rotation_spread_rad": 0.07652774830131046,
+   "planned_rotation_rad": 3.141592653589793,
+   "return_gain_mean": 0.05211344860285316,
+   "return_gain_spread": 0.056008312301892,
+   "tail_gain_mean": 0.0,
+   "total_gain_mean": 0.2553964249617633
+  },
+  "L-": {
+   "action_gain_mean": 0.09017386380253489,
+   "action_gain_positive_fraction": 1.0,
+   "action_gain_spread": 0.05333153836898824,
+   "action_keyscans_created_mean": 4.25,
+   "action_keyscans_created_spread": 0.4330127018922193,
+   "action_loop_edges_mean": 5.5,
+   "action_new_heading_fraction_mean": 0.33645533141210376,
+   "action_new_heading_fraction_spread": 0.3434015667293763,
+   "action_share_of_total_mean": 0.35311857412040665,
+   "duration_mean_s": 34.60000000000002,
+   "episodes": 4,
+   "max_heading_deflection_mean_rad": 1.6535810511800302,
+   "measured_path_mean_m": 0.0,
+   "measured_rotation_mean_rad": 3.4871154395274857,
+   "measured_rotation_spread_rad": 0.11532607982218694,
+   "planned_rotation_rad": 3.141592653589793,
+   "return_gain_mean": 0.12216447589545187,
+   "return_gain_spread": 0.06946577329019234,
+   "tail_gain_mean": 0.0,
+   "total_gain_mean": 0.21233833969798677
+  }
+ },
+ "analysis_failures": [],
+ "cost_summary": {
+  "L+": {
+   "action_duration_mean_s": 34.59999999999998,
+   "action_path_mean_m": 0.0,
+   "action_rotation_mean_rad": 3.6723650298852397,
+   "episodes": 4,
+   "total_duration_mean_s": 338.375
+  },
+  "L-": {
+   "action_duration_mean_s": 34.60000000000002,
+   "action_path_mean_m": 0.0,
+   "action_rotation_mean_rad": 3.4871154395274857,
+   "episodes": 4,
+   "total_duration_mean_s": 342.7750000000001
+  }
+ },
+ "difference_summary": {
+  "L+_L-": {
+   "action_gain_max": 0.3250825413369496,
+   "action_gain_mean": 0.18914379013672322,
+   "action_gain_min": 0.05320503893649686,
+   "action_gain_positive_groups": 2,
+   "action_gain_values": [
+    0.05320503893649686,
+    0.3250825413369496
+   ],
+   "groups": 2,
+   "measured_rotation_mean_rad": 0.23642966649888497,
+   "new_heading_fraction_mean": 0.34438040345821325
+  }
+ },
+ "episode_count_analysed": 8,
+ "episode_count_planned": 8,
+ "errors_vs_information": {
+  "action": {
+   "error_delta_mean_m": -0.0007723298150075662,
+   "gain_mean": 0.1467284200807225,
+   "pearson_r": 0.34430220996983724,
+   "samples": 8
+  },
+  "return": {
+   "error_delta_mean_m": 0.0002939188517023213,
+   "gain_mean": 0.08713896224915252,
+   "pearson_r": 0.3475902243018141,
+   "samples": 8
+  },
+  "rows": [
+   {
+    "G_action_done_target_error_mean_m": 0.0510347908068875,
+    "G_arrival_target_error_mean_m": 0.05218630822099547,
+    "G_final_target_error_mean_m": 0.0510347908068875,
+    "action_gain": 0.06212267923461212,
+    "action_id": "L+",
+    "episode_id": "0003_place_A_r1_L+_L+_rep1",
+    "place_id": "place_A",
+    "return_gain": 0.13324825215770275
+   },
+   {
+    "G_action_done_target_error_mean_m": 0.08551835815650574,
+    "G_arrival_target_error_mean_m": 0.08860793965681243,
+    "G_final_target_error_mean_m": 0.08551835815650574,
+    "action_gain": 0.19648035785132834,
+    "action_id": "L+",
+    "episode_id": "0003_place_A_r1_L+_L+_rep2",
+    "place_id": "place_A",
+    "return_gain": 0.0752055422536877
+   },
+   {
+    "G_action_done_target_error_mean_m": 0.11430737089298222,
+    "G_arrival_target_error_mean_m": 0.11750163855080194,
+    "G_final_target_error_mean_m": 0.11430737089298222,
+    "action_gain": 0.10576155602204196,
+    "action_id": "L-",
+    "episode_id": "0004_place_A_r1_L-_L-_rep1",
+    "place_id": "place_A",
+    "return_gain": 0.21689269516845044
+   },
+   {
+    "G_action_done_target_error_mean_m": 0.062370088590706085,
+    "G_arrival_target_error_mean_m": 0.061940433265604646,
+    "G_final_target_error_mean_m": 0.062370088590706085,
+    "action_gain": 0.14327531891483147,
+    "action_id": "L-",
+    "episode_id": "0004_place_A_r1_L-_L-_rep2",
+    "place_id": "place_A",
+    "return_gain": 0.15389891338138462
+   },
+   {
+    "G_action_done_target_error_mean_m": 0.050537257106122425,
+    "G_arrival_target_error_mean_m": 0.04994123475628968,
+    "G_final_target_error_mean_m": 0.050537257106122425,
+    "action_gain": 0.11904977666061356,
+    "action_id": "L+",
+    "episode_id": "0016_place_B_r1_L+_L+_rep1",
+    "place_id": "place_B",
+    "return_gain": -8.881784197001252e-15
+   },
+   {
+    "G_action_done_target_error_mean_m": 0.06968899604496312,
+    "G_arrival_target_error_mean_m": 0.06837141995849108,
+    "G_final_target_error_mean_m": 0.06968899604496312,
+    "action_gain": 0.4354790916890865,
+    "action_id": "L+",
+    "episode_id": "0016_place_B_r1_L+_L+_rep2",
+    "place_id": "place_B",
+    "return_gain": 3.108624468950438e-14
+   },
+   {
+    "G_action_done_target_error_mean_m": 0.044050709603400594,
+    "G_arrival_target_error_mean_m": 0.04443442186633424,
+    "G_final_target_error_mean_m": 0.044050709603400594,
+    "action_gain": 0.0012620299211292263,
+    "action_id": "L-",
+    "episode_id": "0013_place_B_r1_L-_L-_rep1",
+    "place_id": "place_B",
+    "return_gain": 0.03319346211802454
+   },
+   {
+    "G_action_done_target_error_mean_m": 0.04981246634666496,
+    "G_arrival_target_error_mean_m": 0.050515279792963684,
+    "G_final_target_error_mean_m": 0.04981246634666496,
+    "action_gain": 0.11039655035213691,
+    "action_id": "L-",
+    "episode_id": "0013_place_B_r1_L-_L-_rep2",
+    "place_id": "place_B",
+    "return_gain": 0.08467283291394789
+   }
+  ]
+ },
+ "measurement_sensitivity": [
+  {
+   "action_id": "L+",
+   "added_edge_J_T_gain": 0.020760059890287508,
+   "episode_id": "0003_place_A_r1_L+_L+_rep1",
+   "place_id": "place_A"
+  },
+  {
+   "action_id": "L+",
+   "added_edge_J_T_gain": 0.01588237546011939,
+   "episode_id": "0003_place_A_r1_L+_L+_rep2",
+   "place_id": "place_A"
+  },
+  {
+   "action_id": "L-",
+   "added_edge_J_T_gain": 0.010974712235004347,
+   "episode_id": "0004_place_A_r1_L-_L-_rep1",
+   "place_id": "place_A"
+  },
+  {
+   "action_id": "L-",
+   "added_edge_J_T_gain": 0.016773014348272497,
+   "episode_id": "0004_place_A_r1_L-_L-_rep2",
+   "place_id": "place_A"
+  },
+  {
+   "action_id": "L+",
+   "added_edge_J_T_gain": 0.012981920477983522,
+   "episode_id": "0016_place_B_r1_L+_L+_rep1",
+   "place_id": "place_B"
+  },
+  {
+   "action_id": "L+",
+   "added_edge_J_T_gain": 0.023548230472937526,
+   "episode_id": "0016_place_B_r1_L+_L+_rep2",
+   "place_id": "place_B"
+  },
+  {
+   "action_id": "L-",
+   "added_edge_J_T_gain": 0.03334780332449938,
+   "episode_id": "0013_place_B_r1_L-_L-_rep1",
+   "place_id": "place_B"
+  },
+  {
+   "action_id": "L-",
+   "added_edge_J_T_gain": 0.025814160259629126,
+   "episode_id": "0013_place_B_r1_L-_L-_rep2",
+   "place_id": "place_B"
+  }
+ ],
+ "place_action_summary": {
+  "place_A": {
+   "L+": {
+    "action_gain_mean": 0.12930151854297023,
+    "action_measured_rotation_mean_rad": 3.6289796398343146,
+    "episodes": 2,
+    "return_gain_mean": 0.10422689720569522,
+    "tail_gain_mean": 0.0,
+    "total_gain_mean": 0.23352841574866545
+   },
+   "L-": {
+    "action_gain_mean": 0.12451843746843672,
+    "action_measured_rotation_mean_rad": 3.5275274240575722,
+    "episodes": 2,
+    "return_gain_mean": 0.18539580427491753,
+    "tail_gain_mean": 0.0,
+    "total_gain_mean": 0.30991424174335425
+   }
+  },
+  "place_B": {
+   "L+": {
+    "action_gain_mean": 0.27726443417485,
+    "action_measured_rotation_mean_rad": 3.715750419936165,
+    "episodes": 2,
+    "return_gain_mean": 1.1102230246251565e-14,
+    "tail_gain_mean": 0.0,
+    "total_gain_mean": 0.27726443417486113
+   },
+   "L-": {
+    "action_gain_mean": 0.05582929013663307,
+    "action_measured_rotation_mean_rad": 3.4467034549973987,
+    "episodes": 2,
+    "return_gain_mean": 0.05893314751598622,
+    "tail_gain_mean": 0.0,
+    "total_gain_mean": 0.11476243765261929
+   }
+  },
+  "place_C": {},
+  "place_D": {}
+ },
+ "suite_dir": "results/realizability_pilot/p1_continuous_revisit_actions_20261010/repeatability",
+ "view_summary": {
+  "L+": {
+   "action_keyscans_created_mean": 4.75,
+   "episodes": 4,
+   "historical_heading_span_mean_rad": 1.6587420592950366,
+   "max_heading_deflection_mean_rad": 1.8022020203162847,
+   "max_margin_mean_rad": 0.44226798007191503,
+   "new_heading_fraction_mean": 0.2615273775216138,
+   "new_heading_fraction_spread": 0.39664049752400765
+  },
+  "L-": {
+   "action_keyscans_created_mean": 4.25,
+   "episodes": 4,
+   "historical_heading_span_mean_rad": 1.701071704941569,
+   "max_heading_deflection_mean_rad": 1.6535810511800302,
+   "max_margin_mean_rad": 1.621538350757521,
+   "new_heading_fraction_mean": 0.33645533141210376,
+   "new_heading_fraction_spread": 0.3434015667293763
+  }
+ }
+}

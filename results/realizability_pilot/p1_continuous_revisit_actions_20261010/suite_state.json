@@ -2053,6 +2053,13 @@
      "run_dir": "episodes/0022_place_B_r3_L+/attempt_01",
      "started_utc": "2026-10-10T06:01:52.154689+00:00",
      "status": "FAILED"
+    },
+    {
+     "attempt": 2,
+     "finished_utc": "2026-10-10T08:16:10.680599+00:00",
+     "run_dir": "episodes/0022_place_B_r3_L+/attempt_02",
+     "started_utc": "2026-10-10T08:09:55.433133+00:00",
+     "status": "SUCCEEDED"
     }
    ],
    "episode_id": "0022_place_B_r3_L+",
@@ -2141,7 +2148,7 @@
     "target_state_count": 5,
     "tsp_seed": 44022
    },
-   "status": "FAILED"
+   "status": "SUCCEEDED"
   },
   {
    "attempts": [
@@ -3998,6 +4005,13 @@
      "run_dir": "episodes/0042_place_D_r2_L-/attempt_01",
      "started_utc": "2026-10-10T07:59:59.354256+00:00",
      "status": "INTERRUPTED"
+    },
+    {
+     "attempt": 2,
+     "finished_utc": "2026-10-10T08:21:35.740366+00:00",
+     "run_dir": "episodes/0042_place_D_r2_L-/attempt_02",
+     "started_utc": "2026-10-10T08:16:10.691257+00:00",
+     "status": "SUCCEEDED"
     }
    ],
    "episode_id": "0042_place_D_r2_L-",
@@ -4086,10 +4100,18 @@
     "target_state_count": 5,
     "tsp_seed": 44042
    },
-   "status": "INTERRUPTED"
+   "status": "SUCCEEDED"
   },
   {
-   "attempts": [],
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T08:27:05.977943+00:00",
+     "run_dir": "episodes/0043_place_D_r2_S0/attempt_01",
+     "started_utc": "2026-10-10T08:21:35.840413+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
    "episode_id": "0043_place_D_r2_S0",
    "spec": {
     "action_finish_hold_s": 2.0,
@@ -4173,10 +4195,18 @@
     "target_state_count": 5,
     "tsp_seed": 44043
    },
-   "status": "PENDING"
+   "status": "SUCCEEDED"
   },
   {
-   "attempts": [],
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T08:32:44.532186+00:00",
+     "run_dir": "episodes/0044_place_D_r2_S1/attempt_01",
+     "started_utc": "2026-10-10T08:27:06.002742+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
    "episode_id": "0044_place_D_r2_S1",
    "spec": {
     "action_finish_hold_s": 2.0,
@@ -4263,10 +4293,18 @@
     "target_state_count": 5,
     "tsp_seed": 44044
    },
-   "status": "PENDING"
+   "status": "SUCCEEDED"
   },
   {
-   "attempts": [],
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T08:38:21.066267+00:00",
+     "run_dir": "episodes/0045_place_D_r3_L-/attempt_01",
+     "started_utc": "2026-10-10T08:32:44.542167+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
    "episode_id": "0045_place_D_r3_L-",
    "spec": {
     "action_finish_hold_s": 2.0,
@@ -4353,10 +4391,18 @@
     "target_state_count": 5,
     "tsp_seed": 44045
    },
-   "status": "PENDING"
+   "status": "SUCCEEDED"
   },
   {
-   "attempts": [],
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T08:43:58.634106+00:00",
+     "run_dir": "episodes/0046_place_D_r3_S0/attempt_01",
+     "started_utc": "2026-10-10T08:38:21.093107+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
    "episode_id": "0046_place_D_r3_S0",
    "spec": {
     "action_finish_hold_s": 2.0,
@@ -4440,10 +4486,18 @@
     "target_state_count": 5,
     "tsp_seed": 44046
    },
-   "status": "PENDING"
+   "status": "SUCCEEDED"
   },
   {
-   "attempts": [],
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T08:49:11.718738+00:00",
+     "run_dir": "episodes/0047_place_D_r3_S1/attempt_01",
+     "started_utc": "2026-10-10T08:43:58.646437+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
    "episode_id": "0047_place_D_r3_S1",
    "spec": {
     "action_finish_hold_s": 2.0,
@@ -4530,10 +4584,18 @@
     "target_state_count": 5,
     "tsp_seed": 44047
    },
-   "status": "PENDING"
+   "status": "SUCCEEDED"
   },
   {
-   "attempts": [],
+   "attempts": [
+    {
+     "attempt": 1,
+     "finished_utc": "2026-10-10T08:54:48.225548+00:00",
+     "run_dir": "episodes/0048_place_D_r3_L+/attempt_01",
+     "started_utc": "2026-10-10T08:49:11.729682+00:00",
+     "status": "SUCCEEDED"
+    }
+   ],
    "episode_id": "0048_place_D_r3_L+",
    "spec": {
     "action_finish_hold_s": 2.0,
@@ -4620,11 +4682,12 @@
     "target_state_count": 5,
     "tsp_seed": 44048
    },
-   "status": "PENDING"
+   "status": "SUCCEEDED"
   }
  ],
- "last_started_utc": "2026-10-10T07:59:59.350186+00:00",
+ "finished_utc": "2026-10-10T08:54:48.230059+00:00",
+ "last_started_utc": "2026-10-10T08:49:11.725884+00:00",
  "protocol_version": "p1_continuous_revisit_v1",
  "schema_version": 1,
- "status": "INTERRUPTED"
+ "status": "SUCCEEDED"
 }

@@ -12,31 +12,32 @@ Maintained continuously while the round runs.  Newest entries first.
 | matrix | 48 episodes = 4 places x 3 repeats x 4 actions |
 | execution | serial, one Stage + Karto run per episode, resumable |
 | smoke | 4/4 arms succeeded and passed all five handoff checks |
-| main matrix | **PAUSED 2026-10-10 16:0x at 40 SUCCEEDED / 1 FAILED / 1 INTERRUPTED / 6 PENDING** |
-| repeatability | planned (8 executions = 4 fixed configurations x 2), not started |
-| analysis at pause point | 40 episodes analysed, 8 without a successful attempt (6 pending, 1 failed, 1 interrupted) |
+| main matrix | **COMPLETE 48/48 SUCCEEDED** (2026-10-10; one episode needed its single allowed retry) |
+| repeatability | **COMPLETE 8/8 SUCCEEDED** (4 fixed configurations x 2 re-executions) |
+| analysis | 48 + 8 episodes analysed, 0 analysis failures; verification 47/48 clean + 1 flagged record |
 
-### Pause point (user-requested interruption, 2026-10-10)
+### Completion log
 
-The suite was stopped gracefully: the runner received SIGTERM, so the episode in
-flight is recorded as `INTERRUPTED` (episode `0042_place_D_r2_L-`) and every
-finished episode is committed to disk.  All ROS processes were stopped; no run
-was left half-written inside the ledger.
+* 2026-10-10 16:0x — user-requested pause: the runner received SIGTERM, the
+  in-flight episode was recorded as `INTERRUPTED` (`0042_place_D_r2_L-`), all ROS
+  processes stopped, ledger consistent.
+* 2026-10-10 16:11–16:57 — `resume` finished the main matrix: the interrupted
+  episode, the six pending episodes and the one technical failure
+  (`0022_place_B_r3_L+`, `MoveTo history_02 failed with state 4`; the retry in
+  `attempt_02` succeeded, first failure record kept) → **48/48 SUCCEEDED**.
+* 2026-10-10 16:58–17:4x — repeatability suite ran; it was itself interrupted
+  once (6/8) and finished on 2026-10-11 by `resume` → **8/8 SUCCEEDED**.
+* 2026-10-11 — final analysis (48 + 8 episodes, 0 analysis failures), 7 figures,
+  verification, doc 77 final sections 6–9.
 
-Outstanding work when the round resumes:
+### Data-quality flags (kept in the analysis, not hidden)
 
-1. `resume` the main matrix: retries the interrupted episode and the six pending
-   episodes, and retries the one genuine technical failure
-   (`0022_place_B_r3_L+`, `RuntimeError: MoveTo history_02 failed with state 4` —
-   the navigator aborted the history move; first failure record kept).
-2. Run the repeatability suite (already planned by `runner.py plan
-   --repeatability ...`, 8 executions).
-3. Re-run analysis/figures/verify and fill doc 77 sections 6–8 with the final
-   numbers.
-
-Partial results at the pause point are written into
-`docs/research_log/77_continuous_revisit_action_validation.md` (marked as
-partial) and into `analysis/` (which always reflects whatever episodes exist).
+* `0020_place_B_r2_L-`: the action ended 0.378 rad away from theta0 (gate: 0.35),
+  executed rotation 5.76 rad, action_gain +0.30709.  Excluding it leaves the L-
+  mean at +0.09822 (sd 0.08502, n=11, 11/11 positive).
+* `place_D`: executed L+/L- rotations differ by more than 0.6 rad (5.40 vs 3.56
+  rad) with identical commanded doses — an execution-level asymmetry reported in
+  doc 77 section 6.4.
 
 ## Implementation fixes made during smoke validation
 

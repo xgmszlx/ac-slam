@@ -1,0 +1,114 @@
+{
+ "action_id": "L+",
+ "anchor": {
+  "id": 57,
+  "theta": -1.1309250593185425,
+  "unique_id": 57,
+  "x": 22.090923309326172,
+  "y": 9.790352821350098
+ },
+ "anchor_distance_m": 0.19999985783637275,
+ "anchor_heading_error_rad": 0.4616932887801932,
+ "anchor_heading_weight": 0.5,
+ "checks": {
+  "anchor_heading_within_tolerance": true,
+  "anchor_is_not_root": true,
+  "anchor_within_reference_radius": true,
+  "minimum_history_node_count": true,
+  "segment_has_target_states": true
+ },
+ "frozen_graph_node_count": 111,
+ "frozen_phase": "G_before_return",
+ "frozen_scan_index": 2374,
+ "group_id": "place_B_r3",
+ "passed": true,
+ "place_id": "place_B",
+ "reference_commanded_waypoint": [
+  22.25,
+  10.0,
+  -1.5707963267948966
+ ],
+ "reference_mapper_pose": [
+  22.00575904603444,
+  9.97131411940177,
+  -1.5926183480987357
+ ],
+ "reference_source": "history_arrival_tf_pose",
+ "reference_world_position": [
+  -5.95,
+  -18.0
+ ],
+ "return_goal_pose": [
+  22.00575904603444,
+  9.97131411940177,
+  -1.5926183480987357
+ ],
+ "segment_length": 6,
+ "segment_state_ids": [
+  54,
+  55,
+  56,
+  57,
+  58,
+  59
+ ],
+ "segment_unique_ids": [
+  54,
+  55,
+  56,
+  57,
+  58,
+  59
+ ],
+ "target_state_ids": [
+  54,
+  55,
+  57,
+  58,
+  59
+ ],
+ "target_states": [
+  {
+   "id": 54,
+   "theta": -0.0005918118404224515,
+   "unique_id": 54,
+   "x": 20.56447410583496,
+   "y": 9.97320556640625
+  },
+  {
+   "id": 55,
+   "theta": -0.0001780915044946596,
+   "unique_id": 55,
+   "x": 21.5112247467041,
+   "y": 9.972943305969238
+  },
+  {
+   "id": 57,
+   "theta": -1.1309250593185425,
+   "unique_id": 57,
+   "x": 22.090923309326172,
+   "y": 9.790352821350098
+  },
+  {
+   "id": 58,
+   "theta": -1.445723295211792,
+   "unique_id": 58,
+   "x": 22.079322814941406,
+   "y": 8.8024263381958
+  },
+  {
+   "id": 59,
+   "theta": -1.466884970664978,
+   "unique_id": 59,
+   "x": 22.198116302490234,
+   "y": 7.768289566040039
+  }
+ ],
+ "target_unique_ids": [
+  54,
+  55,
+  57,
+  58,
+  59
+ ]
+}

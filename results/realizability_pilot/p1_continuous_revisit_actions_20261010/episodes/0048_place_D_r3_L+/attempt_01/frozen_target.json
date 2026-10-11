@@ -1,0 +1,122 @@
+{
+ "action_id": "L+",
+ "anchor": {
+  "id": 101,
+  "theta": -0.041552990674972534,
+  "unique_id": 101,
+  "x": -2.421549081802368,
+  "y": -2.048902988433838
+ },
+ "anchor_distance_m": 0.19999996459116245,
+ "anchor_heading_error_rad": 0.11324239217656583,
+ "anchor_heading_weight": 0.5,
+ "checks": {
+  "anchor_heading_within_tolerance": true,
+  "anchor_is_not_root": true,
+  "anchor_within_reference_radius": true,
+  "minimum_history_node_count": true,
+  "segment_has_target_states": true
+ },
+ "frozen_graph_node_count": 110,
+ "frozen_phase": "G_before_return",
+ "frozen_scan_index": 2569,
+ "group_id": "place_D_r3",
+ "passed": true,
+ "place_id": "place_D",
+ "reference_commanded_waypoint": [
+  -2.3,
+  -2.0,
+  0.0
+ ],
+ "reference_mapper_pose": [
+  -2.621376405336865,
+  -2.0405947632620145,
+  0.0716894015015933
+ ],
+ "reference_source": "history_arrival_tf_pose",
+ "reference_world_position": [
+  -30.5,
+  -30.0
+ ],
+ "return_goal_pose": [
+  -2.621376405336865,
+  -2.0405947632620145,
+  0.0716894015015933
+ ],
+ "segment_length": 10,
+ "segment_state_ids": [
+  94,
+  95,
+  96,
+  97,
+  98,
+  99,
+  100,
+  101,
+  102,
+  103
+ ],
+ "segment_unique_ids": [
+  94,
+  95,
+  96,
+  97,
+  98,
+  99,
+  100,
+  101,
+  102,
+  103
+ ],
+ "target_state_ids": [
+  94,
+  95,
+  99,
+  102,
+  103
+ ],
+ "target_states": [
+  {
+   "id": 94,
+   "theta": 3.140937566757202,
+   "unique_id": 94,
+   "x": -0.7851263880729675,
+   "y": -2.0406720638275146
+  },
+  {
+   "id": 95,
+   "theta": 3.1415655612945557,
+   "unique_id": 95,
+   "x": -1.7588764429092407,
+   "y": -2.040548801422119
+  },
+  {
+   "id": 99,
+   "theta": -1.2415529489517212,
+   "unique_id": 99,
+   "x": -2.546710968017578,
+   "y": -2.2298521995544434
+  },
+  {
+   "id": 102,
+   "theta": -8.611927478341386e-05,
+   "unique_id": 102,
+   "x": -1.3712279796600342,
+   "y": -2.0037832260131836
+  },
+  {
+   "id": 103,
+   "theta": -0.004275253973901272,
+   "unique_id": 103,
+   "x": -0.4167376756668091,
+   "y": -2.0184757709503174
+  }
+ ],
+ "target_unique_ids": [
+  94,
+  95,
+  99,
+  102,
+  103
+ ]
+}

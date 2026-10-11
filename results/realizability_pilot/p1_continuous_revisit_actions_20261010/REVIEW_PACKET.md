@@ -3,34 +3,39 @@
 Purpose: let a second reviewer check this round's claims without re-running the
 experiment, and re-derive every number from the recordings.
 
-## 1. What is claimed (status: PAUSED at 40/48 episodes)
+## 1. What is claimed (final: 48/48 main + 8/8 repeatability)
 
-Doc 77 section 6–7 holds the current quantitative claims, all marked as the pause
-point (2026-10-10):
+Doc 77 sections 0 and 6–9 hold the quantitative claims; each is backed by
+`analysis/per_episode_metrics.csv`, `analysis/summary.json` or
+`analysis/figures/*`.
 
-1. The return leg itself adds target information: mean `return_gain` +0.056 (S0),
-   +0.082 (S1), +0.121 (L+), +0.088 (L-) nats.
-2. The extra rotation also adds information, but the largest rotation is **not**
-   dominant: mean `action_gain` +0.097 (S1), +0.120 (L-), +0.069 (L+),
-   exactly 0.000 for S0 (10/10 episodes).
-3. The two directions differ: paired `L+ - L-` mean -0.051 nats (3/9 groups
-   positive) and `L+ - S1` mean -0.035 (3/9).
-4. `S1` is not mainly limited by the mapper's 0.52 rad keyframe gate: it creates
-   1.2 states per action on average (L+: 5.9, L-: 5.7) yet reaches the same
-   information order as `L+`/`L-`.
-5. The information gains are **not** accompanied by measurable real map-error
-   changes at the target states (+0.0001 m mean; Pearson r = +0.18 for the action
-   stage).
-6. Not yet claimable: whether any of the paired differences exceed run-to-run
-   variation (the repeatability suite has not run), and the final numbers for the
-   remaining 8 episodes.
+1. The measurement chain is trustworthy: the static arm's action-stage gain is
+   exactly 0.00000 nats in 12/12 episodes, and a synthetic constraint on the
+   target states moves J_T by +0.01934 nats on average (48/48 positive).
+2. The return leg itself adds target information: mean `return_gain` +0.10082
+   (S0), +0.11725 (S1), +0.11894 (L+), +0.10608 (L-) nats.
+3. The extra rotation adds a comparable amount, but the largest rotation is not
+   dominant: mean `action_gain` **+0.08144 (S1)**, **+0.06485 (L+)**,
+   **+0.11562 (L-)**, **0.00000 (S0)**; positive in 11/12, 7/12, 12/12, 0/12.
+4. Direction matters only in sign, not in size: paired `L+ - L-` mean -0.05077
+   nats (4/12 groups positive), `L+ - S1` mean -0.01659 (5/12).
+5. **Neither difference exceeds the same-configuration re-run spread**:
+   `s_rep = 0.10458` nats (pooled within-configuration sd of `action_gain`, 3
+   executions per configuration; e.g. place_B `L+` returned 0.000 / 0.277 / 0.119
+   under the identical command).  By the pre-registered rule in doc 77 section 1
+   the ordering differences are therefore not usable as a selection signal.
+6. `S1` is not limited by the mapper's 0.52 rad keyframe gate: it creates
+   1.33 states per action (L+: 5.92, L-: 5.50) yet still gains +0.08144 nats.
+7. Graph information does not translate into measurable map-error change at the
+   target states: +0.00010 m mean change, Pearson r = +0.14 with `action_gain`.
+8. Recommendation: do not build an action selector from this evidence.  First
+   reduce the run-to-run variance (paired initialisation or replayed backend), or
+   reframe the question as which pre-action geometry predicts a new target
+   constraint.
 
-Status bookkeeping: `suite_state.json` has 40 SUCCEEDED, 1 FAILED
-(`0022_place_B_r3_L+`, navigator ABORT on `history_02`), 1 INTERRUPTED
-(`0042_place_D_r2_L-`, graceful pause), 6 PENDING.  `verification.json` lists the
-per-episode integrity checks and one protocol flag (`place_D` executed L+/L-
-rotations differ by more than 0.6 rad — an execution-level asymmetry, reported in
-doc 77 section 6.4).
+Data-quality flags (kept, not hidden): `0020_place_B_r2_L-` ended 0.378 rad from
+theta0 (gate 0.35); `place_D` executed L+/L- rotations differ by more than
+0.6 rad.  `verification.json` holds all per-episode checks.
 
 ## 2. Where to look first
 

@@ -1,0 +1,116 @@
+{
+ "action_id": "L+",
+ "anchor": {
+  "id": 56,
+  "theta": -1.2712738513946533,
+  "unique_id": 56,
+  "x": 22.127880096435547,
+  "y": 9.848357200622559
+ },
+ "anchor_distance_m": 0.20000019973857017,
+ "anchor_heading_error_rad": 0.3424478326637015,
+ "anchor_heading_weight": 0.5,
+ "checks": {
+  "anchor_heading_within_tolerance": true,
+  "anchor_is_not_root": true,
+  "anchor_within_reference_radius": true,
+  "minimum_history_node_count": true,
+  "segment_has_target_states": true
+ },
+ "frozen_graph_node_count": 109,
+ "frozen_phase": "G_before_return",
+ "frozen_scan_index": 2477,
+ "group_id": "place_B_r1",
+ "passed": true,
+ "place_id": "place_B",
+ "reference_commanded_waypoint": [
+  22.25,
+  10.0,
+  -1.5707963267948966
+ ],
+ "reference_mapper_pose": [
+  22.068867446437935,
+  10.039452954201039,
+  -1.6137216840583548
+ ],
+ "reference_source": "history_arrival_tf_pose",
+ "reference_world_position": [
+  -5.95,
+  -18.0
+ ],
+ "return_goal_pose": [
+  22.068867446437935,
+  10.039452954201039,
+  -1.6137216840583548
+ ],
+ "segment_length": 7,
+ "segment_state_ids": [
+  52,
+  53,
+  54,
+  55,
+  56,
+  57,
+  58
+ ],
+ "segment_unique_ids": [
+  52,
+  53,
+  54,
+  55,
+  56,
+  57,
+  58
+ ],
+ "target_state_ids": [
+  52,
+  53,
+  55,
+  57,
+  58
+ ],
+ "target_states": [
+  {
+   "id": 52,
+   "theta": -0.0006057012942619622,
+   "unique_id": 52,
+   "x": 20.148866653442383,
+   "y": 10.029825210571289
+  },
+  {
+   "id": 53,
+   "theta": -0.00019564417016226798,
+   "unique_id": 53,
+   "x": 21.113866806030273,
+   "y": 10.029542922973633
+  },
+  {
+   "id": 55,
+   "theta": -0.700049877166748,
+   "unique_id": 55,
+   "x": 22.231828689575195,
+   "y": 9.900601387023926
+  },
+  {
+   "id": 57,
+   "theta": -1.4691553115844727,
+   "unique_id": 57,
+   "x": 22.144611358642578,
+   "y": 8.791082382202148
+  },
+  {
+   "id": 58,
+   "theta": -1.496577262878418,
+   "unique_id": 58,
+   "x": 22.232271194458008,
+   "y": 7.811142921447754
+  }
+ ],
+ "target_unique_ids": [
+  52,
+  53,
+  55,
+  57,
+  58
+ ]
+}

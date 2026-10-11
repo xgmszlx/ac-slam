@@ -13,7 +13,8 @@ This root contains the whole round:
 | `analysis/` | per-episode metrics, stage gains, comparisons, summary JSON |
 | `analysis/figures/` | figures (`fig*.png` preview + `fig*.svg` editable) |
 | `smoke/` | the four-arm smoke validation (not part of the main matrix) |
-| `repeatability/` | the limited repeatability re-executions |
+| `repeatability/` | the limited repeatability re-executions (4 fixed configs x 2, all succeeded) |
+| `verification.json` | per-episode integrity / protocol checks (47/48 clean, 1 flagged record) |
 | `STATUS.md` | running status and deviations |
 | `REVIEW_PACKET.md` | what to review, where to look, and what is claimed |
 
@@ -45,7 +46,15 @@ setsid nohup /usr/bin/python3 tools/realizability_pilot/continuous_revisit/runne
   --suite-dir results/realizability_pilot/p1_continuous_revisit_actions_20261010
 ```
 
-## Completion count
+## Completion count (final)
+
+The round finished on 2026-10-11 with **48/48 main episodes** and **8/8
+repeatability executions** succeeded (0 failed).  One main episode needed its
+single allowed retry after a navigator ABORT, and one repeatability execution was
+resumed after the user-requested pause; both first attempts are kept in the
+ledger.
+
+```bash
 
 ```bash
 /usr/bin/python3 -c "

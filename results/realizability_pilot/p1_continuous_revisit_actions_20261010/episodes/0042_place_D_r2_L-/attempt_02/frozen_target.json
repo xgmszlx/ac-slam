@@ -1,0 +1,122 @@
+{
+ "action_id": "L-",
+ "anchor": {
+  "id": 102,
+  "theta": 0.013552220538258553,
+  "unique_id": 102,
+  "x": -1.9246379137039185,
+  "y": -1.991209864616394
+ },
+ "anchor_distance_m": 0.20000002753197574,
+ "anchor_heading_error_rad": 0.058077721341316765,
+ "anchor_heading_weight": 0.5,
+ "checks": {
+  "anchor_heading_within_tolerance": true,
+  "anchor_is_not_root": true,
+  "anchor_within_reference_radius": true,
+  "minimum_history_node_count": true,
+  "segment_has_target_states": true
+ },
+ "frozen_graph_node_count": 110,
+ "frozen_phase": "G_before_return",
+ "frozen_scan_index": 2389,
+ "group_id": "place_D_r2",
+ "passed": true,
+ "place_id": "place_D",
+ "reference_commanded_waypoint": [
+  -2.3,
+  -2.0,
+  0.0
+ ],
+ "reference_mapper_pose": [
+  -2.124619574798911,
+  -1.9939202591409104,
+  -0.04452550080305822
+ ],
+ "reference_source": "history_arrival_tf_pose",
+ "reference_world_position": [
+  -30.5,
+  -30.0
+ ],
+ "return_goal_pose": [
+  -2.124619574798911,
+  -1.9939202591409104,
+  -0.04452550080305822
+ ],
+ "segment_length": 10,
+ "segment_state_ids": [
+  95,
+  96,
+  97,
+  98,
+  99,
+  100,
+  101,
+  102,
+  103,
+  104
+ ],
+ "segment_unique_ids": [
+  95,
+  96,
+  97,
+  98,
+  99,
+  100,
+  101,
+  102,
+  103,
+  104
+ ],
+ "target_state_ids": [
+  95,
+  96,
+  99,
+  103,
+  104
+ ],
+ "target_states": [
+  {
+   "id": 95,
+   "theta": -3.140482187271118,
+   "unique_id": 95,
+   "x": -0.1409807652235031,
+   "y": -2.0161893367767334
+  },
+  {
+   "id": 96,
+   "theta": -3.141249418258667,
+   "unique_id": 96,
+   "x": -1.044730544090271,
+   "y": -2.0167596340179443
+  },
+  {
+   "id": 99,
+   "theta": 1.8402483463287354,
+   "unique_id": 99,
+   "x": -2.1789803504943848,
+   "y": -1.8299134969711304
+  },
+  {
+   "id": 103,
+   "theta": 0.0036426899023354053,
+   "unique_id": 103,
+   "x": -0.9518440365791321,
+   "y": -2.0398614406585693
+  },
+  {
+   "id": 104,
+   "theta": 0.0010768447536975145,
+   "unique_id": 104,
+   "x": 0.02538914605975151,
+   "y": -2.0248911380767822
+  }
+ ],
+ "target_unique_ids": [
+  95,
+  96,
+  99,
+  103,
+  104
+ ]
+}

@@ -1,0 +1,134 @@
+{
+ "action_id": "S1",
+ "anchor": {
+  "id": 101,
+  "theta": 0.3644205331802368,
+  "unique_id": 101,
+  "x": -2.170945167541504,
+  "y": -1.7223060131072998
+ },
+ "anchor_distance_m": 0.21231597108119402,
+ "anchor_heading_error_rad": 0.17381754642524444,
+ "anchor_heading_weight": 0.5,
+ "checks": {
+  "anchor_heading_within_tolerance": true,
+  "anchor_is_not_root": true,
+  "anchor_within_reference_radius": true,
+  "minimum_history_node_count": true,
+  "segment_has_target_states": true
+ },
+ "frozen_graph_node_count": 114,
+ "frozen_phase": "G_before_return",
+ "frozen_scan_index": 2318,
+ "group_id": "place_D_r3",
+ "passed": true,
+ "place_id": "place_D",
+ "reference_commanded_waypoint": [
+  -2.3,
+  -2.0,
+  0.0
+ ],
+ "reference_mapper_pose": [
+  -2.0689034095694807,
+  -1.9084928848413978,
+  0.19060298675499238
+ ],
+ "reference_source": "history_arrival_tf_pose",
+ "reference_world_position": [
+  -30.5,
+  -30.0
+ ],
+ "return_goal_pose": [
+  -2.0689034095694807,
+  -1.9084928848413978,
+  0.19060298675499238
+ ],
+ "segment_length": 16,
+ "segment_state_ids": [
+  93,
+  94,
+  95,
+  96,
+  97,
+  98,
+  99,
+  100,
+  101,
+  102,
+  103,
+  104,
+  105,
+  106,
+  107,
+  108
+ ],
+ "segment_unique_ids": [
+  93,
+  94,
+  95,
+  96,
+  97,
+  98,
+  99,
+  100,
+  101,
+  102,
+  103,
+  104,
+  105,
+  106,
+  107,
+  108
+ ],
+ "target_state_ids": [
+  93,
+  95,
+  98,
+  106,
+  108
+ ],
+ "target_states": [
+  {
+   "id": 93,
+   "theta": 3.1408731937408447,
+   "unique_id": 93,
+   "x": 0.21841256320476532,
+   "y": -2.0180580615997314
+  },
+  {
+   "id": 95,
+   "theta": 3.14158296585083,
+   "unique_id": 95,
+   "x": -1.7279235124588013,
+   "y": -2.018315553665161
+  },
+  {
+   "id": 98,
+   "theta": 2.006587505340576,
+   "unique_id": 98,
+   "x": -2.726118326187134,
+   "y": -1.858169674873352
+  },
+  {
+   "id": 106,
+   "theta": -0.17196358740329742,
+   "unique_id": 106,
+   "x": -1.8721110820770264,
+   "y": -1.9371330738067627
+  },
+  {
+   "id": 108,
+   "theta": -0.15681716799736023,
+   "unique_id": 108,
+   "x": 0.15284964442253113,
+   "y": -2.0011956691741943
+  }
+ ],
+ "target_unique_ids": [
+  93,
+  95,
+  98,
+  106,
+  108
+ ]
+}
