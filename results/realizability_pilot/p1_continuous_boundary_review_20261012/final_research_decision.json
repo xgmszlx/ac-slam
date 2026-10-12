@@ -1,0 +1,83 @@
+{
+ "focus_cases": {
+  "0005_place_A_r2_S1": {
+   "created_action_closures": 0,
+   "created_action_effective_closures": 0,
+   "created_action_increment": 0.0,
+   "created_return_increment": 0.202597916859526,
+   "recorded_action_gain": 0.09570399042953603,
+   "recorded_return_gain": 0.10690020547626844
+  },
+  "0016_place_B_r1_L+": {
+   "created_action_closures": 1,
+   "created_action_effective_closures": 0,
+   "created_action_increment": -8.881784197001252e-16,
+   "created_return_increment": 6.039613253960852e-14,
+   "recorded_action_gain": -1.7763568394002505e-15,
+   "recorded_return_gain": 6.128431095930864e-14
+  },
+  "0016_place_B_r1_L+_L+_rep2": {
+   "created_action_closures": 5,
+   "created_action_effective_closures": 5,
+   "created_action_increment": 0.4203529797140755,
+   "created_return_increment": 0.01512635962453146,
+   "recorded_action_gain": 0.4354790916890865,
+   "recorded_return_gain": 3.108624468950438e-14
+  },
+  "0025_place_C_r1_L+": {
+   "created_action_closures": 6,
+   "created_action_effective_closures": 6,
+   "created_action_increment": 0.08733271480660143,
+   "created_return_increment": 0.33130163032981663,
+   "recorded_action_gain": 0.08733464805654023,
+   "recorded_return_gain": 0.3312960263082161
+  }
+ },
+ "inputs": {
+  "attribution": "stage_attribution_correction.csv (labelled diagnostic)",
+  "boundary_evidence": "boundary_event_audit.csv / recoverability_matrix.csv",
+  "gate": "offline_evidence_gate.json",
+  "ground_truth": "corrected_gt_metrics.csv",
+  "mechanism": "historical_factor_mechanism.csv",
+  "recorded_statistics": "statistical_correction.csv"
+ },
+ "online_diagnostic": {
+  "preconditions_if_revived": [
+   "periodic provenance flush (instrumentation_flush_period_s > 0) so the edge-provenance JSONL is actually written",
+   "/Mapper/dump_pose_graph_now called at each boundary as an in-mapper barrier, with SHA-stamped files",
+   "scan-queue / accept-progress counters recorded before trusting the dump",
+   "old-topic and new synchronous snapshots stored in the same run",
+   "budget: place_A r2 S0/S1 first (2 runs), then at most place_B r1 L+/L- and place_C r1 L+/L- (4 runs), hard cap 8 including technical repairs"
+  ],
+  "reason": "the offline data already support stage attribution (accept-time identity for every keyframe, content times for every snapshot); the remaining questions are mechanism-level (why some runs form no effective closure) and would need the repaired observation chain rather than more of the old one",
+  "run": false
+ },
+ "questions": {
+  "q1_misattributed_action_gain": "the entire late-published share: S1 0.08144 -> 0.00946; L- 0.11562 -> 0.04636; L+ 0.06485 -> 0.04360; per-run table in stage_attribution_correction.csv",
+  "q2_recomputable_records": "all 56 recorded stage gains recompute exactly; keyframe accept times and creation-stage attribution are recoverable; edge provenance enums and never-published edge sets are not (instrumentation gap, documented)",
+  "q3_incremental_value_after_correction": "yes but small and realisation-dependent: S0 zero, S1 ~0.009, L+ ~0.044 (5/12 exactly zero), L- ~0.046 (0/12 zero)",
+  "q4_place_direction_difference": "the mean direction difference disappears; a realisation asymmetry remains: L- created an effective closure in 12/12 main runs, L+ failed in 5/12 (A r2/r3 and all three B runs)",
+  "q5_pre_action_explanation": "no pre-action feature explains the remaining asymmetry; it clusters by place/run order (see DIRECTION_DIFFERENCE_EXPLANATION rows)",
+  "q6_information_vs_gt": "no measurable GT improvement: target error change ~+1e-4 m, robot SLAM error unchanged, relative pose error unchanged",
+  "q7_localisation_error_needing_repair": "no case-specific repair signal: robot SLAM error is centimetre-scale and does not accumulate through the action; target-state map error ~9.5 cm is constant across boundaries",
+  "q8_best_fixed_action_sufficient": "a fixed L- action is the most reliable default (0 zeros), but its expected increment (~0.046 nats) is far below the same-configuration re-execution scale (0.127 nats) per run, so single-run benefit is not demonstrable",
+  "q9_method_necessity": "no: no localisation value, no selection signal above realisation noise; the remaining interest is the closure-realisation mechanism itself"
+ },
+ "rationale": [
+  "recorded stage gains are reproducible independently (all 56 runs), but the snapshot-difference attribution mixed stages: closures created during the return leg were published after the arrival boundary and landed in the action difference",
+  "after the FIXED_LINEARIZATION_FACTOR_DIAGNOSTIC attribution, the S1 action mean drops from 0.08144 to 0.00946 nats; L+ from 0.06485 to 0.04360; L- from 0.11562 to 0.04636; S0 stays exactly zero in 12/12",
+  "the recorded L+ minus L- direction difference (-0.05077 nats) collapses to -0.00277 (positive in 6/12 pairs) after the correction: the apparent direction effect was a publication-timing artifact",
+  "information gains never translated into localisation value: target-state map error change (final - before) is 0.000124 m mean, SLAM robot error change (tail - history) is 0.007033 m mean; no GT improvement accompanies the J_T gains",
+  "the mechanism is fully accounted for: every stage gain equals the marginal contribution of the closure edges added in that stage difference (0 law violations of 168 stage rows); zero-gain runs are runs whose action produced no effective closure"
+ ],
+ "review_version": "p1_continuous_boundary_review_v1",
+ "single_next_step": "close the pure-rotation selection line and, if the revisit topic continues, restart it as a closure-realisation mechanism study using the repaired observation chain (periodic provenance flush + synchronous dump per boundary), beginning with a bounded place_B L+ zero-cluster replication (<=4 runs) instead of any further selector evaluation",
+ "verdict": "D_PURE_ROTATION_SELECTION_NOT_SUPPORTED",
+ "verdict_options_considered": {
+  "A_LOCAL_ACTION_METHOD_WORTH_TESTING": false,
+  "B_GEOMETRY_MECHANISM_ONLY": "describes the remaining scientific value, not a method",
+  "C_METRIC_VALIDITY_UNRESOLVED": false,
+  "D_PURE_ROTATION_SELECTION_NOT_SUPPORTED": true,
+  "E_EVIDENCE_TECHNICALLY_INCOMPLETE": false
+ }
+}

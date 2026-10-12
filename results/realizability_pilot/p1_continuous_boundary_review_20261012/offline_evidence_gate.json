@@ -1,0 +1,446 @@
+{
+ "gates": {
+  "G1_snapshot_integrity": {
+   "interpretation": "quiescence satisfied does not imply full integration: the snapshot content time can predate the last accepted states",
+   "keyframe_deferred_to_later_stage": 4,
+   "keyframe_missing_from_all_snapshots": 94,
+   "keyscan_missing_check_vacuous_rows": 224,
+   "quiescence_failures": 0,
+   "stages_with_content_older_than_motion_end": 100,
+   "unexpected_gap_states": 0
+  },
+  "G2_stage_attribution": {
+   "action_attribution_created_vs_recorded": {
+    "L+_main": {
+     "created_mean": 0.04359620256950447,
+     "created_sd_ddof1": 0.049356459863476386,
+     "detail": "recorded mean 0.06485 (zeros 5), created mean 0.04360 (zeros 5)"
+    },
+    "L+_repeatability": {
+     "created_mean": 0.1528483029784049,
+     "created_sd_ddof1": 0.18349076183421242,
+     "detail": "recorded mean 0.20328 (zeros 0), created mean 0.15285 (zeros 0)"
+    },
+    "L-_main": {
+     "created_mean": 0.04636215734980209,
+     "created_sd_ddof1": 0.07119589229551328,
+     "detail": "recorded mean 0.11562 (zeros 0), created mean 0.04636 (zeros 0)"
+    },
+    "L-_repeatability": {
+     "created_mean": 0.04207975198420377,
+     "created_sd_ddof1": 0.044853549871286334,
+     "detail": "recorded mean 0.09017 (zeros 0), created mean 0.04208 (zeros 0)"
+    },
+    "S0_main": {
+     "created_mean": 0.0,
+     "created_sd_ddof1": 0.0,
+     "detail": "recorded mean 0.00000 (zeros 12), created mean 0.00000 (zeros 12)"
+    },
+    "S1_main": {
+     "created_mean": 0.009458179026659685,
+     "created_sd_ddof1": 0.009794396576449238,
+     "detail": "recorded mean 0.08144 (zeros 1), created mean 0.00946 (zeros 2)"
+    }
+   },
+   "gain_equals_closure_sum_failures": 0,
+   "interpretation": "stage gains are fully explained by closure edges added in the stage difference (relative tolerance); chain edges behave as subtrees.  Attributing edges by their creation time instead of their publication time moves late-published return-leg closures out of the action stage; the created means above are the time-true stage values"
+  },
+  "G3_corrected_statistics": {
+   "ARM_ATTRIBUTION": [
+    {
+     "action_id": "S0",
+     "config": "main",
+     "mean": 0.0,
+     "method": "action-stage information attributed by edge creation time (nested cumulative graphs, fixed final-pose linearisation) vs the recorded snapshot-difference gain",
+     "place_id": "",
+     "row_type": "ARM_ATTRIBUTION",
+     "runs": 12,
+     "sd_ddof0": 0.0,
+     "sd_ddof1": 0.0,
+     "values": "recorded mean 0.00000 (zeros 12), created mean 0.00000 (zeros 12)"
+    },
+    {
+     "action_id": "S1",
+     "config": "main",
+     "mean": 0.009458179026659685,
+     "method": "action-stage information attributed by edge creation time (nested cumulative graphs, fixed final-pose linearisation) vs the recorded snapshot-difference gain",
+     "place_id": "",
+     "row_type": "ARM_ATTRIBUTION",
+     "runs": 12,
+     "sd_ddof0": 0.009377420786408375,
+     "sd_ddof1": 0.009794396576449238,
+     "values": "recorded mean 0.08144 (zeros 1), created mean 0.00946 (zeros 2)"
+    },
+    {
+     "action_id": "L+",
+     "config": "main",
+     "mean": 0.04359620256950447,
+     "method": "action-stage information attributed by edge creation time (nested cumulative graphs, fixed final-pose linearisation) vs the recorded snapshot-difference gain",
+     "place_id": "",
+     "row_type": "ARM_ATTRIBUTION",
+     "runs": 12,
+     "sd_ddof0": 0.04725521261617998,
+     "sd_ddof1": 0.049356459863476386,
+     "values": "recorded mean 0.06485 (zeros 5), created mean 0.04360 (zeros 5)"
+    },
+    {
+     "action_id": "L+",
+     "config": "repeatability",
+     "mean": 0.1528483029784049,
+     "method": "action-stage information attributed by edge creation time (nested cumulative graphs, fixed final-pose linearisation) vs the recorded snapshot-difference gain",
+     "place_id": "",
+     "row_type": "ARM_ATTRIBUTION",
+     "runs": 4,
+     "sd_ddof0": 0.1589076611081881,
+     "sd_ddof1": 0.18349076183421242,
+     "values": "recorded mean 0.20328 (zeros 0), created mean 0.15285 (zeros 0)"
+    },
+    {
+     "action_id": "L-",
+     "config": "main",
+     "mean": 0.04636215734980209,
+     "method": "action-stage information attributed by edge creation time (nested cumulative graphs, fixed final-pose linearisation) vs the recorded snapshot-difference gain",
+     "place_id": "",
+     "row_type": "ARM_ATTRIBUTION",
+     "runs": 12,
+     "sd_ddof0": 0.06816487724462503,
+     "sd_ddof1": 0.07119589229551328,
+     "values": "recorded mean 0.11562 (zeros 0), created mean 0.04636 (zeros 0)"
+    },
+    {
+     "action_id": "L-",
+     "config": "repeatability",
+     "mean": 0.04207975198420377,
+     "method": "action-stage information attributed by edge creation time (nested cumulative graphs, fixed final-pose linearisation) vs the recorded snapshot-difference gain",
+     "place_id": "",
+     "row_type": "ARM_ATTRIBUTION",
+     "runs": 4,
+     "sd_ddof0": 0.0388443136384462,
+     "sd_ddof1": 0.044853549871286334,
+     "values": "recorded mean 0.09017 (zeros 0), created mean 0.04208 (zeros 0)"
+    }
+   ],
+   "ARM_REALISATION": [
+    {
+     "action_id": "S0",
+     "config": "main",
+     "mean": 0.0,
+     "method": "independent recomputation over main + repeatability runs",
+     "place_id": "",
+     "row_type": "ARM_REALISATION",
+     "runs": 12,
+     "sd_ddof0": 0.0,
+     "sd_ddof1": 0.0,
+     "values": "12/12 exactly-zero action_gain"
+    },
+    {
+     "action_id": "S0",
+     "config": "repeatability",
+     "mean": null,
+     "method": "independent recomputation over main + repeatability runs",
+     "place_id": "",
+     "row_type": "ARM_REALISATION",
+     "runs": 0,
+     "sd_ddof0": null,
+     "sd_ddof1": null,
+     "values": "0/0 exactly-zero action_gain"
+    },
+    {
+     "action_id": "S1",
+     "config": "main",
+     "mean": 0.08144158983538596,
+     "method": "independent recomputation over main + repeatability runs",
+     "place_id": "",
+     "row_type": "ARM_REALISATION",
+     "runs": 12,
+     "sd_ddof0": 0.07151801730328487,
+     "sd_ddof1": 0.07469813286452921,
+     "values": "1/12 exactly-zero action_gain"
+    },
+    {
+     "action_id": "S1",
+     "config": "repeatability",
+     "mean": null,
+     "method": "independent recomputation over main + repeatability runs",
+     "place_id": "",
+     "row_type": "ARM_REALISATION",
+     "runs": 0,
+     "sd_ddof0": null,
+     "sd_ddof1": null,
+     "values": "0/0 exactly-zero action_gain"
+    },
+    {
+     "action_id": "L+",
+     "config": "main",
+     "mean": 0.06485348803327821,
+     "method": "independent recomputation over main + repeatability runs",
+     "place_id": "",
+     "row_type": "ARM_REALISATION",
+     "runs": 12,
+     "sd_ddof0": 0.06157060841677944,
+     "sd_ddof1": 0.06430840313375476,
+     "values": "5/12 exactly-zero action_gain"
+    },
+    {
+     "action_id": "L+",
+     "config": "repeatability",
+     "mean": 0.20328297635891013,
+     "method": "independent recomputation over main + repeatability runs",
+     "place_id": "",
+     "row_type": "ARM_REALISATION",
+     "runs": 4,
+     "sd_ddof0": 0.14228736153346286,
+     "sd_ddof1": 0.16429929296725276,
+     "values": "0/4 exactly-zero action_gain"
+    },
+    {
+     "action_id": "L-",
+     "config": "main",
+     "mean": 0.11562433845885518,
+     "method": "independent recomputation over main + repeatability runs",
+     "place_id": "",
+     "row_type": "ARM_REALISATION",
+     "runs": 12,
+     "sd_ddof0": 0.09979710113937676,
+     "sd_ddof1": 0.10423467262509846,
+     "values": "0/12 exactly-zero action_gain"
+    },
+    {
+     "action_id": "L-",
+     "config": "repeatability",
+     "mean": 0.09017386380253489,
+     "method": "independent recomputation over main + repeatability runs",
+     "place_id": "",
+     "row_type": "ARM_REALISATION",
+     "runs": 4,
+     "sd_ddof0": 0.05333153836898824,
+     "sd_ddof1": 0.06158195606726444,
+     "values": "0/4 exactly-zero action_gain"
+    }
+   ],
+   "DIRECTION_DIFFERENCE_EXPLANATION": [
+    {
+     "action_id": "",
+     "config": "Lplus_minus_Lminus_vs_rotation_difference_rad",
+     "mean": 0.550513326757468,
+     "method": "Pearson r between the corrected L+ minus L- action difference and the pre-action feature across the 12 main place x repeat pairs; place labels are kept in the values column for the grouped reading",
+     "place_id": "",
+     "row_type": "DIRECTION_DIFFERENCE_EXPLANATION",
+     "runs": 12,
+     "sd_ddof0": null,
+     "sd_ddof1": null,
+     "values": "0.5905:0.0435;0.0700:-0.0063;0.1841:-0.0580;-0.1162:-0.0163;-2.3561:-0.2551;-0.2924:-0.0091;0.1287:0.0841;-0.1048:0.1067;-0.0301:0.0552;3.4257:0.0345;1.9603:0.0118;0.1493:-0.0242"
+    },
+    {
+     "action_id": "",
+     "config": "Lplus_minus_Lminus_vs_pre_action_states_difference",
+     "mean": -0.021130869811280522,
+     "method": "Pearson r between the corrected L+ minus L- action difference and the pre-action feature across the 12 main place x repeat pairs; place labels are kept in the values column for the grouped reading",
+     "place_id": "",
+     "row_type": "DIRECTION_DIFFERENCE_EXPLANATION",
+     "runs": 12,
+     "sd_ddof0": null,
+     "sd_ddof1": null,
+     "values": "4.0000:0.0435;4.0000:-0.0063;0.0000:-0.0580;-3.0000:-0.0163;0.0000:-0.2551;2.0000:-0.0091;3.0000:0.0841;0.0000:0.1067;-7.0000:0.0552;-1.0000:0.0345;-3.0000:0.0118;2.0000:-0.0242"
+    },
+    {
+     "action_id": "",
+     "config": "Lplus_minus_Lminus_vs_anchor_heading_difference_rad",
+     "mean": -0.3881355460444293,
+     "method": "Pearson r between the corrected L+ minus L- action difference and the pre-action feature across the 12 main place x repeat pairs; place labels are kept in the values column for the grouped reading",
+     "place_id": "",
+     "row_type": "DIRECTION_DIFFERENCE_EXPLANATION",
+     "runs": 12,
+     "sd_ddof0": null,
+     "sd_ddof1": null,
+     "values": "-0.0000:0.0435;0.0308:-0.0063;0.0000:-0.0580;0.1091:-0.0163;0.1672:-0.2551;0.0622:-0.0091;-0.1677:0.0841;-0.0000:0.1067;-0.4624:0.0552;-0.1465:0.0345;0.2530:0.0118;-0.3214:-0.0242"
+    }
+   ],
+   "PAIRED_CONTRAST_CORRECTED": [
+    {
+     "action_id": "",
+     "config": "L+_minus_L-",
+     "mean": -0.002765954780297619,
+     "method": "paired per place x repeat on corrected action increments; positive count = 6 of 12",
+     "place_id": "",
+     "row_type": "PAIRED_CONTRAST_CORRECTED",
+     "runs": 12,
+     "sd_ddof0": 0.08852367913925677,
+     "sd_ddof1": 0.09245996736681675,
+     "values": "0.04354;-0.00633;-0.05798;-0.01630;-0.25509;-0.00911;0.08408;0.10669;0.05518;0.03450;0.01182;-0.02417"
+    },
+    {
+     "action_id": "",
+     "config": "L+_minus_S1",
+     "mean": 0.034138023542844786,
+     "method": "paired per place x repeat on corrected action increments; positive count = 8 of 12",
+     "place_id": "",
+     "row_type": "PAIRED_CONTRAST_CORRECTED",
+     "runs": 12,
+     "sd_ddof0": 0.04507788195587033,
+     "sd_ddof1": 0.047082312157953325,
+     "values": "0.12751;-0.00000;-0.00673;0.00000;-0.01902;-0.01833;0.07197;0.07883;0.05159;0.07745;0.03412;0.01227"
+    },
+    {
+     "action_id": "",
+     "config": "L-_minus_S1",
+     "mean": 0.036903978323142406,
+     "method": "paired per place x repeat on corrected action increments; positive count = 8 of 12",
+     "place_id": "",
+     "row_type": "PAIRED_CONTRAST_CORRECTED",
+     "runs": 12,
+     "sd_ddof0": 0.06712183888761851,
+     "sd_ddof1": 0.0701064742619558,
+     "values": "0.08397;0.00633;0.05125;0.01630;0.23608;-0.00921;-0.01210;-0.02786;-0.00360;0.04295;0.02230;0.03644"
+    }
+   ],
+   "POOLED_SD_ALL_FIVE_RUNS": [
+    {
+     "action_id": "",
+     "config": "ALL_4_CONFIGS",
+     "mean": null,
+     "method": "pooled within-cell sd over the three main repeats plus the two re-runs of each of the four configs (ddof=1)",
+     "place_id": "",
+     "row_type": "POOLED_SD_ALL_FIVE_RUNS",
+     "runs": 5,
+     "sd_ddof0": null,
+     "sd_ddof1": 0.12636342987620675,
+     "values": ""
+    }
+   ],
+   "POOLED_SD_RECONCILIATION": [
+    {
+     "action_id": "",
+     "config": "ALL_4_CONFIGS",
+     "mean": null,
+     "method": "sd_ddof0 column reproduces doc-77 s_rep = mean over place x action of pstdev(all runs of that cell, ddof=0); sd_ddof1 column is the corrected same-configuration pooled within-group sd (equal weights over the four configs, each with 3 runs, ddof=1)",
+     "place_id": "",
+     "row_type": "POOLED_SD_RECONCILIATION",
+     "runs": 3,
+     "sd_ddof0": 0.10457636463198372,
+     "sd_ddof1": 0.12701144341701123,
+     "values": ""
+    }
+   ],
+   "REPEATABILITY_CONFIG": [
+    {
+     "action_id": "L+",
+     "config": "0003_place_A_r1_L+",
+     "mean": 0.1422609323868181,
+     "method": "three same-configuration full runs (r1 + 2 re-runs), action_gain recomputed; pre-state spread: {\"pre_action_states\": \"min 129 max 133 spread 4\", \"action_states_created\": \"min 4 max 6 spread 2\", \"action_rotation_rad\": \"min 3.6 max 4.1 spread 0.5005\", \"return_duration_s\": \"min 31.4 max 32.4 spread 1\"}",
+     "place_id": "place_A",
+     "row_type": "REPEATABILITY_CONFIG",
+     "runs": 3,
+     "sd_ddof0": 0.05783214603399824,
+     "sd_ddof1": 0.07082962425670877,
+     "values": "0.16818;0.06212;0.19648",
+     "values_doc77": "0.16818;0.06212;0.19648"
+    },
+    {
+     "action_id": "L-",
+     "config": "0004_place_A_r1_L-",
+     "mean": 0.1653569588798529,
+     "method": "three same-configuration full runs (r1 + 2 re-runs), action_gain recomputed; pre-state spread: {\"pre_action_states\": \"min 129 max 134 spread 5\", \"action_states_created\": \"min 4 max 5 spread 1\", \"action_rotation_rad\": \"min 3.441 max 3.641 spread 0.1997\", \"return_duration_s\": \"min 31.4 max 33.6 spread 2.2\"}",
+     "place_id": "place_A",
+     "row_type": "REPEATABILITY_CONFIG",
+     "runs": 3,
+     "sd_ddof0": 0.0597504538047269,
+     "sd_ddof1": 0.07317906186065933,
+     "values": "0.24703;0.10576;0.14328",
+     "values_doc77": "0.24703;0.10576;0.14328"
+    },
+    {
+     "action_id": "L+",
+     "config": "0016_place_B_r1_L+",
+     "mean": 0.1848429561165661,
+     "method": "three same-configuration full runs (r1 + 2 re-runs), action_gain recomputed; pre-state spread: {\"pre_action_states\": \"min 132 max 134 spread 2\", \"action_states_created\": \"min 3 max 5 spread 2\", \"action_rotation_rad\": \"min 3.4 max 3.8 spread 0.4\", \"return_duration_s\": \"min 75.4 max 77.4 spread 2\"}",
+     "place_id": "place_B",
+     "row_type": "REPEATABILITY_CONFIG",
+     "runs": 3,
+     "sd_ddof0": 0.18376990444897975,
+     "sd_ddof1": 0.2250712479900103,
+     "values": "-0.00000;0.11905;0.43548",
+     "values_doc77": "-0.00000;0.11905;0.43548"
+    },
+    {
+     "action_id": "L-",
+     "config": "0013_place_B_r1_L-",
+     "mean": 0.042651484184570876,
+     "method": "three same-configuration full runs (r1 + 2 re-runs), action_gain recomputed; pre-state spread: {\"pre_action_states\": \"min 135 max 142 spread 7\", \"action_states_created\": \"min 4 max 5 spread 1\", \"action_rotation_rad\": \"min 3.344 max 3.549 spread 0.2053\", \"return_duration_s\": \"min 77.4 max 81.4 spread 4\"}",
+     "place_id": "place_B",
+     "row_type": "REPEATABILITY_CONFIG",
+     "runs": 3,
+     "sd_ddof0": 0.04829457938221173,
+     "sd_ddof1": 0.059148538414377796,
+     "values": "0.01630;0.00126;0.11040",
+     "values_doc77": "0.01630;0.00126;0.11040"
+    }
+   ],
+   "VARIANCE_DECOMPOSITION": [
+    {
+     "action_id": "",
+     "config": "FULL_SYSTEM_REEXECUTION",
+     "mean": 0.10705711813043906,
+     "method": "same-configuration re-execution: three complete runs per config (r1 + 2 re-runs), pooled within sd with equal config weights",
+     "place_id": "",
+     "row_type": "VARIANCE_DECOMPOSITION",
+     "runs": 4,
+     "sd_ddof0": null,
+     "sd_ddof1": 0.12701144341701123,
+     "values": "0.070830;0.073179;0.225071;0.059149"
+    },
+    {
+     "action_id": "",
+     "config": "SAME_INPUT_BACKEND",
+     "mean": null,
+     "method": "the doc-77 protocol re-executes the complete Stage+Karto stack; no same-recorded-input replay exists for this suite, so the pure backend numerical floor is not measurable from these files (the earlier v12 pilot replays used a different protocol and are not transferable). The closure-realisation mechanism below bounds its role indirectly",
+     "place_id": "",
+     "row_type": "VARIANCE_DECOMPOSITION",
+     "runs": 0,
+     "sd_ddof0": null,
+     "sd_ddof1": null,
+     "values": "NOT_MEASURED_IN_THIS_PROTOCOL"
+    },
+    {
+     "action_id": "",
+     "config": "ACTION_MEAN_UNCERTAINTY",
+     "mean": 0.024854134736491562,
+     "method": "standard error of an arm mean scales with the run sd above; the per-arm equivalent is reported in ARM_ATTRIBUTION",
+     "place_id": "",
+     "row_type": "VARIANCE_DECOMPOSITION",
+     "runs": 48,
+     "sd_ddof0": 0.046465216126935355,
+     "sd_ddof1": 0.046956925228883534,
+     "values": "corrected action increments over all 48 main runs"
+    },
+    {
+     "action_id": "",
+     "config": "BETWEEN_PLACE_CONDITION",
+     "mean": 0.024854134736491562,
+     "method": "place-level means of the corrected action increment (all arms pooled)",
+     "place_id": "",
+     "row_type": "VARIANCE_DECOMPOSITION",
+     "runs": 4,
+     "sd_ddof0": 0.0023376436411786028,
+     "sd_ddof1": 0.002699278371007767,
+     "values": "place_A 0.02570;place_B 0.02649;place_C 0.02639;place_D 0.02084"
+    }
+   ]
+  },
+  "G4_ground_truth": {
+   "families_evaluated": [
+    "MAP_CONSISTENCY",
+    "RELATIVE_POSE_ERROR",
+    "ROBOT_LOCALIZATION_ERROR",
+    "TARGET_MAP_ERROR"
+   ],
+   "not_evaluable_rows": 0
+  },
+  "G5_mechanism_bounds": {
+   "focus_runs_above_0p01_nats_worst_case": 2,
+   "note": "worst case: one synthetic closure to the nearest published state for every never-published keyframe, using the median observed closure covariance; labelled FIXED_LINEARIZATION_FACTOR_DIAGNOSTIC"
+  }
+ },
+ "review_version": "p1_continuous_boundary_review_v1",
+ "runs_audited": 56
+}
