@@ -1,0 +1,175 @@
+{
+ "cost_note": "actual cumulative rotation 3.40-3.83 rad vs planned pi rad; B_Lplus_2 has non-zero action path; action cost is NOT identical across runs and an information-per-angle ratio is auxiliary only",
+ "cross_differences": {
+  "counts": {
+   "place_B": 4,
+   "place_C": 2
+  },
+  "definition": "L+ minus L- within a place; all combinations, descriptive only",
+  "warning": "cross differences reuse the same runs; they are NOT independent pair trials and carry no extra replication"
+ },
+ "final_gate_semantics": {
+  "SUITE_COMPLETE": false,
+  "VALID_RUN_MEASUREMENT_PASS": true,
+  "attempts": 8,
+  "completed_planned_episodes": 7,
+  "doc79_field_measurement_validated": false,
+  "planned_episodes": 8,
+  "reason": "Doc-79 code required valid_attempts == total_attempts; the physical retry made attempts (8) exceed validated runs (7)",
+  "valid_runs": 7
+ },
+ "group_summary": [
+  {
+   "action_gain_max": 0.34937564364035456,
+   "action_gain_mean": 0.316345486672017,
+   "action_gain_min": 0.28331532970367945,
+   "action_path_mean_m": 0.15565809423244983,
+   "actual_rotation_max_rad": 3.8000000000000007,
+   "actual_rotation_mean_rad": 3.614269466206181,
+   "actual_rotation_min_rad": 3.428538932412361,
+   "episode_id": "SUMMARY_place_B_L+",
+   "rotation_vs_plan_ratio": 1.1504577024256393,
+   "runs": 2,
+   "unit": "descriptive"
+  },
+  {
+   "action_gain_max": 0.022533519237976307,
+   "action_gain_mean": 0.016230006006020314,
+   "action_gain_min": 0.009926492774064322,
+   "action_path_mean_m": 0.0,
+   "actual_rotation_max_rad": 3.7449062598512657,
+   "actual_rotation_mean_rad": 3.5730068509734707,
+   "actual_rotation_min_rad": 3.4011074420956753,
+   "episode_id": "SUMMARY_place_B_L-",
+   "rotation_vs_plan_ratio": 1.1373234040672697,
+   "runs": 2,
+   "unit": "descriptive"
+  },
+  {
+   "action_gain_max": 0.12440747400482444,
+   "action_gain_mean": 0.11541347150849646,
+   "action_gain_min": 0.10641946901216848,
+   "action_path_mean_m": 0.0,
+   "actual_rotation_max_rad": 3.831074688015512,
+   "actual_rotation_mean_rad": 3.6176590909322934,
+   "actual_rotation_min_rad": 3.4042434938490747,
+   "episode_id": "SUMMARY_place_C_L+",
+   "rotation_vs_plan_ratio": 1.151536653486414,
+   "runs": 2,
+   "unit": "descriptive"
+  },
+  {
+   "action_gain_max": 0.00236692048353504,
+   "action_gain_mean": 0.00236692048353504,
+   "action_gain_min": 0.00236692048353504,
+   "action_path_mean_m": 0.0,
+   "actual_rotation_max_rad": 3.446953595195634,
+   "actual_rotation_mean_rad": 3.446953595195634,
+   "actual_rotation_min_rad": 3.446953595195634,
+   "episode_id": "SUMMARY_place_C_L-",
+   "rotation_vs_plan_ratio": 1.0971994065675303,
+   "runs": 1,
+   "unit": "descriptive"
+  }
+ ],
+ "per_run": [
+  {
+   "action": "L-",
+   "action_gain_sync": 0.022533519237976307,
+   "action_path_m": 0.0,
+   "actual_rotation_rad": 3.4011074420956753,
+   "attempt": "attempt_01",
+   "episode_id": "D79_B_Lminus_1",
+   "observation_duration_s": 34.599999999999966,
+   "place": "place_B",
+   "planned_rotation_rad": 3.141592653589793,
+   "seed": "44013",
+   "total_rotation_rad": null,
+   "unit": "episode"
+  },
+  {
+   "action": "L-",
+   "action_gain_sync": 0.009926492774064322,
+   "action_path_m": 0.0,
+   "actual_rotation_rad": 3.7449062598512657,
+   "attempt": "attempt_01",
+   "episode_id": "D79_B_Lminus_2",
+   "observation_duration_s": 34.60000000000002,
+   "place": "place_B",
+   "planned_rotation_rad": 3.141592653589793,
+   "seed": "44013",
+   "total_rotation_rad": null,
+   "unit": "episode"
+  },
+  {
+   "action": "L+",
+   "action_gain_sync": 0.28331532970367945,
+   "action_path_m": 0.0,
+   "actual_rotation_rad": 3.8000000000000007,
+   "attempt": "attempt_02",
+   "episode_id": "D79_B_Lplus_1",
+   "observation_duration_s": 34.60000000000002,
+   "place": "place_B",
+   "planned_rotation_rad": 3.141592653589793,
+   "seed": "44016",
+   "total_rotation_rad": null,
+   "unit": "episode"
+  },
+  {
+   "action": "L+",
+   "action_gain_sync": 0.34937564364035456,
+   "action_path_m": 0.31131618846489967,
+   "actual_rotation_rad": 3.428538932412361,
+   "attempt": "attempt_01",
+   "episode_id": "D79_B_Lplus_2",
+   "observation_duration_s": 34.599999999999966,
+   "place": "place_B",
+   "planned_rotation_rad": 3.141592653589793,
+   "seed": "44016",
+   "total_rotation_rad": null,
+   "unit": "episode"
+  },
+  {
+   "action": "L-",
+   "action_gain_sync": 0.00236692048353504,
+   "action_path_m": 0.0,
+   "actual_rotation_rad": 3.446953595195634,
+   "attempt": "attempt_01",
+   "episode_id": "D79_C_Lminus_1",
+   "observation_duration_s": 34.599999999999966,
+   "place": "place_C",
+   "planned_rotation_rad": 3.141592653589793,
+   "seed": "44026",
+   "total_rotation_rad": null,
+   "unit": "episode"
+  },
+  {
+   "action": "L+",
+   "action_gain_sync": 0.12440747400482444,
+   "action_path_m": 0.0,
+   "actual_rotation_rad": 3.831074688015512,
+   "attempt": "attempt_01",
+   "episode_id": "D79_C_Lplus_1",
+   "observation_duration_s": 34.60000000000002,
+   "place": "place_C",
+   "planned_rotation_rad": 3.141592653589793,
+   "seed": "44025",
+   "total_rotation_rad": null,
+   "unit": "episode"
+  },
+  {
+   "action": "L+",
+   "action_gain_sync": 0.10641946901216848,
+   "action_path_m": 0.0,
+   "actual_rotation_rad": 3.4042434938490747,
+   "attempt": "attempt_01",
+   "episode_id": "D79_C_Lplus_2",
+   "observation_duration_s": 34.60000000000002,
+   "place": "place_C",
+   "planned_rotation_rad": 3.141592653589793,
+   "seed": "44025",
+   "total_rotation_rad": null,
+   "unit": "episode"
+  }
+ ]
+}

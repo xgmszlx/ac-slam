@@ -1,0 +1,34 @@
+{
+ "action": "L+",
+ "action_frames_target": 347,
+ "action_start_scan_index": 3277,
+ "attempt": "attempt_01",
+ "episode_id": "D79_C_Lplus_1",
+ "history_end_scan": 2532,
+ "place": "place_C",
+ "planner_action_definition": {
+  "L+": "theta0 -> theta0 + pi/2 -> theta0",
+  "L-": "theta0 -> theta0 - pi/2 -> theta0",
+  "planned_rotation_rad": 3.141592653589793
+ },
+ "return_start_scan": 2535,
+ "seed": 44025,
+ "stage_windows": {
+  "action": [
+   3277,
+   3624
+  ],
+  "history": [
+   0,
+   2532
+  ],
+  "return": [
+   2535,
+   3277
+  ],
+  "tail": [
+   3624,
+   null
+  ]
+ }
+}

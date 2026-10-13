@@ -1,0 +1,135 @@
+{
+ "evidence_levels": {
+  "DIAGNOSTIC": [
+   "class-A dominance of the information gain; equal closure and historic contributions; small node displacements"
+  ],
+  "HYPOTHESIS": [
+   "H1 directional visibility; fixed L+ advantage (H3 is closer to observed but not separated from H1)"
+  ],
+  "NOT_IDENTIFIABLE": [
+   "counterfactual direction effects at the same initial state; Karto rejection causes"
+  ],
+  "OBSERVED": [
+   "all-positive L+ - L- differences; tail-only topic deficit; zero beyond-watermark nodes; no GT improvement"
+  ]
+ },
+ "hypotheses_file": "analysis/directional_competing_hypotheses.csv",
+ "level_1_measurement_validity": {
+  "PREACTION_FEATURE_EVIDENCE": {
+   "firewall": "feature_construction reads only the pre-action bundle",
+   "runs": 7
+  },
+  "PREACTION_FEATURE_INPUT_VALID": true,
+  "SYNC_MEASUREMENT_EVIDENCE": {
+   "boundaries_checked": 28,
+   "interpretation": "every synchronous stage graph contains exactly the acceptances up to the motion end; no stage contamination detected",
+   "nodes_beyond_watermark_total": 0
+  },
+  "SYNC_MEASUREMENT_REUSED_VALID": true,
+  "TARGET_GT_CORRECTION_EVIDENCE": {
+   "alignment_pre_action_only": true,
+   "corrected_per_stage": {
+    "action_done": {
+     "max_m": 0.06013478307172212,
+     "mean_m": 0.016545501922383604,
+     "n": 35
+    },
+    "arrival": {
+     "max_m": 0.06123369602372498,
+     "mean_m": 0.01584767674156682,
+     "n": 35
+    },
+    "before_return": {
+     "max_m": 0.06123369602372498,
+     "mean_m": 0.015343501437067827,
+     "n": 35
+    },
+    "final": {
+     "max_m": 0.06013478307172212,
+     "mean_m": 0.016545501922383604,
+     "n": 35
+    }
+   },
+   "node_displacements": {
+    "action_done": {
+     "max_m": 0.014228778468206376,
+     "mean_m": 0.003241384558271722
+    },
+    "arrival": {
+     "max_m": 0.005939997261986664,
+     "mean_m": 0.001353572785236003
+    },
+    "final": {
+     "max_m": 0.0,
+     "mean_m": 0.0
+    }
+   },
+   "what_changed_vs_doc79": "Doc-79 reused the recorded acceptance-time map_base for all stages; the correction reads the target node from each stage graph. The values agree within the TF-lag band (mean diff <= 0.018 m); no stage-dependent movement beyond 0.014 m."
+  },
+  "TARGET_GT_CORRECTION_VALID": true
+ },
+ "level_2_mechanism_judgment": {
+  "boundary": "The action-stage information gain is carried by first-visit history links. The DIRECTIONAL visibility of that association is NOT identified by the collected geometry: hypothesis H1 remains unverified.",
+  "evidence": {
+   "class_A_dominant_runs": 6,
+   "class_contribution_sums": {
+    "A": 0.8971899613501311,
+    "B": 0.02487135392559292,
+    "C": 0.02900174940222655
+   },
+   "class_edge_counts": {
+    "A": 29,
+    "B": 18,
+    "C": 10
+   },
+   "doc79_equal_pair_note": "closure_contribution == historic_contribution to <= 5e-14 reproduced; delta_J_action_sync differs from historic_contribution by -3.0e-6 .. +1.8e-5 and the two comparisons are reported separately in doc79_contribution_comparisons.csv"
+  },
+  "verdict": "A HISTORICAL_ASSOCIATION_MECHANISM_SUPPORTED"
+ },
+ "level_3_alternatives_considered": {
+  "B PREACTION_VISIBILITY_HYPOTHESIS_ONLY": "not chosen: no clear pre-action visibility difference with physical grounding was found in the collected geometry",
+  "C TASK_BENEFIT_UNRESOLVED": "not chosen: benefit is estimable at these scales and is not detectable; the limitation is scale, recorded explicitly",
+  "D EVIDENCE_TECHNICALLY_INSUFFICIENT": "not chosen: all raw files verified (99/99 SHA-256), frames and extrinsics verified, targets evaluable in 7/7 runs"
+ },
+ "level_3_single_next_step": {
+  "reasons": [
+   "no pre-action discriminator exists in the collected features (exclusive sectors 0-7 nodes; deltas mixed)",
+   "all observed place/direction pairs favour L+ (fixed-policy explanation not excluded; no switching evidence)",
+   "corrected GT shows no localisation benefit (mixed sign, smaller than the TF-lag noise floor)",
+   "the historic-link mechanism is real but its actionable part (choosing a direction ex ante) is not supported"
+  ],
+  "recommendation": "A STOP_PURE_ROTATION_SELECTION",
+  "what_would_change_this_verdict": [
+   "a same-state counterfactual pair showing a direction-dependent historic-link effect",
+   "a pre-action observable that predicts realised historic links out of sample",
+   "a task-level benefit (localisation or cost) in a longer horizon"
+  ]
+ },
+ "robot_boundary_gt": {
+  "evaluable": 7,
+  "improved": 1,
+  "localisation_change_mean": 0.009836630046740081,
+  "localisation_change_values": [
+   0.006906421521359627,
+   0.0634064777336584,
+   0.007347288062344031,
+   0.0016567847657742718,
+   -0.007599479341726053,
+   -0.0027884562337266335,
+   -7.262618050307007e-05
+  ],
+  "runs": 7,
+  "worsened": 3
+ },
+ "role": "Doc-80 final research gate (three levels)",
+ "statistics": {
+  "SUITE_COMPLETE": false,
+  "VALID_RUN_MEASUREMENT_PASS": true,
+  "attempts": 8,
+  "completed_planned_episodes": 7,
+  "doc79_field_measurement_validated": false,
+  "planned_episodes": 8,
+  "reason": "Doc-79 code required valid_attempts == total_attempts; the physical retry made attempts (8) exceed validated runs (7)",
+  "valid_runs": 7
+ }
+}

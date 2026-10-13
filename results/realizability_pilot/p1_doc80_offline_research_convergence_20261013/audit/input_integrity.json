@@ -1,0 +1,31 @@
+{
+ "doc": "80",
+ "git_head_baseline": "4f290fc0691324e13158d72fa77c18278e28b71e",
+ "ledger": {
+  "attempts_on_disk": 8,
+  "attempts_recorded": 8,
+  "attempts_used": 8,
+  "budget": 8,
+  "episode_status_counts": {
+   "PENDING": 1,
+   "SUCCEEDED": 7
+  },
+  "findings": [],
+  "independent_unit": "episode (cross differences are not independent trials)",
+  "ok": true,
+  "physical_failure": "D79_B_Lplus_1 attempt_01",
+  "suite_halt_reason": "budget exhausted (8 attempts)",
+  "suite_status": "PAUSED_ON_TECHNICAL_FAILURE"
+ },
+ "local_only_files": {
+  "findings": [],
+  "mismatched": [],
+  "missing": [],
+  "ok": true,
+  "rows": 99,
+  "total_bytes": 381158593,
+  "verified": 99
+ },
+ "ok": true,
+ "role": "input integrity: attempt ledger + local-only raw files"
+}

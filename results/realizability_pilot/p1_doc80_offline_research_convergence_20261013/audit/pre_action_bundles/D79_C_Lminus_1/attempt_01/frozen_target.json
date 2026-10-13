@@ -1,0 +1,116 @@
+{
+ "action_id": "L-",
+ "anchor": {
+  "id": 70,
+  "theta": -2.727644443511963,
+  "unique_id": 70,
+  "x": 22.04347801208496,
+  "y": -1.9242725372314453
+ },
+ "anchor_distance_m": 0.19797551075326225,
+ "anchor_heading_error_rad": 0.5139482028982434,
+ "anchor_heading_weight": 0.5,
+ "checks": {
+  "anchor_heading_within_tolerance": true,
+  "anchor_is_not_root": true,
+  "anchor_within_reference_radius": true,
+  "minimum_history_node_count": true,
+  "segment_has_target_states": true
+ },
+ "frozen_graph_node_count": 108,
+ "frozen_phase": "G_before_return",
+ "frozen_scan_index": 2538,
+ "group_id": "place_C_r1",
+ "passed": true,
+ "place_id": "place_C",
+ "reference_commanded_waypoint": [
+  22.25,
+  -2.0,
+  3.141592653589793
+ ],
+ "reference_mapper_pose": [
+  22.21548999966021,
+  -1.8262614205740617,
+  3.04159266076938
+ ],
+ "reference_source": "history_arrival_tf_pose",
+ "reference_world_position": [
+  -5.95,
+  -30.0
+ ],
+ "return_goal_pose": [
+  22.21548999966021,
+  -1.8262614205740617,
+  3.04159266076938
+ ],
+ "segment_length": 7,
+ "segment_state_ids": [
+  66,
+  67,
+  68,
+  69,
+  70,
+  71,
+  72
+ ],
+ "segment_unique_ids": [
+  66,
+  67,
+  68,
+  69,
+  70,
+  71,
+  72
+ ],
+ "target_state_ids": [
+  66,
+  67,
+  70,
+  71,
+  72
+ ],
+ "target_states": [
+  {
+   "id": 66,
+   "theta": -1.570515513420105,
+   "unique_id": 66,
+   "x": 22.225828170776367,
+   "y": -0.0974886566400528
+  },
+  {
+   "id": 67,
+   "theta": -1.5704373121261597,
+   "unique_id": 67,
+   "x": 22.226285934448242,
+   "y": -1.0699964761734009
+  },
+  {
+   "id": 70,
+   "theta": -2.727644443511963,
+   "unique_id": 70,
+   "x": 22.04347801208496,
+   "y": -1.9242725372314453
+  },
+  {
+   "id": 71,
+   "theta": -3.0172126293182373,
+   "unique_id": 71,
+   "x": 20.97877311706543,
+   "y": -1.896898865699768
+  },
+  {
+   "id": 72,
+   "theta": -3.0315098762512207,
+   "unique_id": 72,
+   "x": 19.958349227905273,
+   "y": -2.039175510406494
+  }
+ ],
+ "target_unique_ids": [
+  66,
+  67,
+  70,
+  71,
+  72
+ ]
+}
