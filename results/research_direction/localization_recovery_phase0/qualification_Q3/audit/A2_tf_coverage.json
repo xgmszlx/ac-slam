@@ -1,0 +1,26 @@
+{
+  "a2_is_scientifically_eligible": false,
+  "causal_strength": "delayed reception/cache/backpressure are probable; raw availability is confirmed; sole cause unresolved",
+  "classification_counts": {
+    "OUTSIDE_RECORDED_RANGE": 252,
+    "RESOLVED_EXACT_REQUEST_TIME": 793,
+    "TF_BRACKET_TOO_WIDE": 603
+  },
+  "conclusion": "Map chain exists and many scan timestamps are strictly reconstructible offline. Online failure is not absence of map chain. Callback receipt/exception telemetry is absent, so cache expiration versus query-too-early cannot be uniquely assigned per scan.",
+  "conflicting_duplicate_tf_records": 0,
+  "duplicate_policy": "first received at edge/stamp, matching TF2 repeated-data rejection; conflicts reported",
+  "evaluation_stamp_error_s": 0.0,
+  "full_tf_chain_exists": true,
+  "interpolation_span_distribution_s": {
+    "max": 0.0,
+    "median": 0.0,
+    "min": 0.0,
+    "p95": 0.0
+  },
+  "maximum_allowed_tf_bracket_s": 0.15,
+  "old_eligibility_unchanged": true,
+  "original_map_base_present": 0,
+  "sealed_scan_count": 1648,
+  "strict_coverage": 0.4811893203883495,
+  "strictly_reconstructible_scans": 793
+}

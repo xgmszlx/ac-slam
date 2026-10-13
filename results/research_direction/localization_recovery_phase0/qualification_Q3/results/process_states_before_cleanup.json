@@ -1,0 +1,123 @@
+{
+  "processes": [
+    {
+      "cmdline": [
+        "/usr/bin/python3",
+        "/opt/ros/noetic/bin/roscore",
+        "-p",
+        "11481"
+      ],
+      "name": "roscore",
+      "pid": 81247,
+      "status": "sleeping"
+    },
+    {
+      "cmdline": [
+        "/usr/bin/python3",
+        "/opt/ros/noetic/bin/rosmaster",
+        "--core",
+        "-p",
+        "11481",
+        "-w",
+        "3",
+        "__log:=/home/wcqw/ac-slam_doc81/results/research_direction/localization_recovery_phase0/qualification_Q3/runtime/ros_logs/469003e6-c6d5-11f1-93cf-fd59256174fd/master.log"
+      ],
+      "name": "rosmaster",
+      "pid": 81284,
+      "status": "sleeping"
+    },
+    {
+      "cmdline": [
+        "/usr/bin/python3",
+        "/opt/ros/noetic/bin/roslaunch",
+        "/home/wcqw/ac-slam_doc81/results/research_direction/localization_recovery_phase0/qualification_Q3/protocol/native_Q3.launch"
+      ],
+      "name": "roslaunch",
+      "pid": 81322,
+      "status": "sleeping"
+    },
+    {
+      "cmdline": [
+        "/opt/ros/noetic/lib/rosout/rosout",
+        "__name:=rosout",
+        "__log:=/home/wcqw/ac-slam_doc81/results/research_direction/localization_recovery_phase0/qualification_Q3/runtime/ros_logs/469003e6-c6d5-11f1-93cf-fd59256174fd/rosout-1.log"
+      ],
+      "name": "rosout",
+      "pid": 81324,
+      "status": "sleeping"
+    },
+    {
+      "cmdline": [
+        "/opt/ros/noetic/lib/stage_ros/stageros",
+        "/home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/world/map3/map3.world",
+        "__name:=Stage",
+        "__log:=/home/wcqw/ac-slam_doc81/results/research_direction/localization_recovery_phase0/qualification_Q3/runtime/ros_logs/469003e6-c6d5-11f1-93cf-fd59256174fd/Stage-1.log"
+      ],
+      "name": "stageros",
+      "pid": 81481,
+      "status": "sleeping"
+    },
+    {
+      "cmdline": [
+        "/home/wcqw/ac-slam/catkin_ws/devel/lib/nav2d_operator/operator",
+        "scan:=base_scan",
+        "__name:=Operator",
+        "__log:=/home/wcqw/ac-slam_doc81/results/research_direction/localization_recovery_phase0/qualification_Q3/runtime/ros_logs/469003e6-c6d5-11f1-93cf-fd59256174fd/Operator-2.log"
+      ],
+      "name": "operator",
+      "pid": 81482,
+      "status": "sleeping"
+    },
+    {
+      "cmdline": [
+        "/home/wcqw/ac-slam/doc79_ws/devel/lib/nav2d_karto/mapper",
+        "scan:=base_scan",
+        "__name:=Mapper",
+        "__log:=/home/wcqw/ac-slam_doc81/results/research_direction/localization_recovery_phase0/qualification_Q3/runtime/ros_logs/469003e6-c6d5-11f1-93cf-fd59256174fd/Mapper-3.log"
+      ],
+      "name": "mapper",
+      "pid": 81484,
+      "status": "sleeping"
+    },
+    {
+      "cmdline": [
+        "/home/wcqw/ac-slam/catkin_ws/devel/lib/nav2d_navigator/navigator",
+        "__name:=Navigator",
+        "__log:=/home/wcqw/ac-slam_doc81/results/research_direction/localization_recovery_phase0/qualification_Q3/runtime/ros_logs/469003e6-c6d5-11f1-93cf-fd59256174fd/Navigator-4.log"
+      ],
+      "name": "navigator",
+      "pid": 81489,
+      "status": "sleeping"
+    },
+    {
+      "cmdline": [
+        "/home/wcqw/ac-slam/catkin_ws/devel/lib/nav2d_navigator/get_map_client",
+        "__name:=GetMap",
+        "__log:=/home/wcqw/ac-slam_doc81/results/research_direction/localization_recovery_phase0/qualification_Q3/runtime/ros_logs/469003e6-c6d5-11f1-93cf-fd59256174fd/GetMap-5.log"
+      ],
+      "name": "get_map_client",
+      "pid": 81497,
+      "status": "sleeping"
+    },
+    {
+      "cmdline": [
+        "/opt/ros/noetic/lib/robot_state_publisher/robot_state_publisher",
+        "__name:=robot_state_publisher",
+        "__log:=/home/wcqw/ac-slam_doc81/results/research_direction/localization_recovery_phase0/qualification_Q3/runtime/ros_logs/469003e6-c6d5-11f1-93cf-fd59256174fd/robot_state_publisher-6.log"
+      ],
+      "name": "robot_state_publisher",
+      "pid": 81502,
+      "status": "sleeping"
+    },
+    {
+      "cmdline": [
+        "/home/wcqw/ac-slam/catkin_ws/devel/lib/p2os_urdf/p2os_publisher_3at",
+        "__name:=publisher",
+        "__log:=/home/wcqw/ac-slam_doc81/results/research_direction/localization_recovery_phase0/qualification_Q3/runtime/ros_logs/469003e6-c6d5-11f1-93cf-fd59256174fd/publisher-7.log"
+      ],
+      "name": "p2os_publisher_3at",
+      "pid": 81512,
+      "status": "sleeping"
+    }
+  ]
+}

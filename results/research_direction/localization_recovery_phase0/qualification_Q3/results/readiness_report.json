@@ -1,0 +1,139 @@
+{
+  "clock_basis_for_waits": "time.monotonic wall seconds",
+  "clock_pacing": {
+    "gui": true,
+    "sim_elapsed_s": 1.9999999999999998,
+    "sim_wall_ratio": 0.999862788330022,
+    "wall_elapsed_s": 2.000274460999208
+  },
+  "events": [
+    {
+      "ros_s": 0.0,
+      "stage": "NATIVE_CLOCK_SCAN_GT_ODOM_WAIT",
+      "wall_monotonic_s": 21932.421714306
+    },
+    {
+      "elapsed_wall_s": 2.074641821000114,
+      "ros_s": 2.3,
+      "stage": "NATIVE_CLOCK_SCAN_GT_ODOM_READY",
+      "wall_monotonic_s": 21934.496773422
+    },
+    {
+      "ros_s": 2.3,
+      "stage": "GET_FIRST_MAP_ACTION_WAIT",
+      "wall_monotonic_s": 21934.49770311
+    },
+    {
+      "elapsed_wall_s": 6.113400013418868e-05,
+      "ros_s": 2.3,
+      "stage": "GET_FIRST_MAP_ACTION_READY",
+      "wall_monotonic_s": 21934.49837521
+    },
+    {
+      "ros_s": 2.3,
+      "stage": "START_MAPPING_REQUEST",
+      "wall_monotonic_s": 21934.499112988
+    },
+    {
+      "ros_s": 3.2,
+      "stage": "GET_FIRST_MAP_RESULT_WAIT",
+      "wall_monotonic_s": 21935.414907262
+    },
+    {
+      "elapsed_wall_s": 10.48363312499714,
+      "ros_s": 13.7,
+      "stage": "GET_FIRST_MAP_RESULT_READY",
+      "wall_monotonic_s": 21945.898782174
+    },
+    {
+      "result": {
+        "received_ros_s": 13.7,
+        "received_wall_monotonic_s": 21945.898524126,
+        "result_stamp": 13.7,
+        "status": 3
+      },
+      "ros_s": 13.7,
+      "stage": "INITIALIZATION_COMPLETE",
+      "wall_monotonic_s": 21945.899459603
+    },
+    {
+      "ros_s": 13.7,
+      "stage": "REAL_MAP_BASE_CHAIN_WAIT",
+      "wall_monotonic_s": 21945.899831453
+    },
+    {
+      "elapsed_wall_s": 4.637999882106669e-05,
+      "ros_s": 13.7,
+      "stage": "REAL_MAP_BASE_CHAIN_READY",
+      "wall_monotonic_s": 21945.900249458
+    },
+    {
+      "ros_s": 13.7,
+      "stage": "MOVE_TO_CONNECTED_WAIT",
+      "wall_monotonic_s": 21945.900496451
+    },
+    {
+      "elapsed_wall_s": 2.941899947472848e-05,
+      "ros_s": 13.7,
+      "stage": "MOVE_TO_CONNECTED_READY",
+      "wall_monotonic_s": 21945.900725778
+    },
+    {
+      "ros_s": 13.7,
+      "stage": "POST_INITIALIZATION_STATIONARY_WAIT",
+      "wall_monotonic_s": 21945.900898706
+    },
+    {
+      "elapsed_wall_s": 2.084246146998339,
+      "ros_s": 15.8,
+      "stage": "POST_INITIALIZATION_STATIONARY_READY",
+      "wall_monotonic_s": 21947.985312431
+    },
+    {
+      "ros_s": 15.8,
+      "stage": "FIXED_STATIC_WINDOW_WAIT",
+      "wall_monotonic_s": 21947.985841314
+    },
+    {
+      "elapsed_wall_s": 2.2995983059990976,
+      "ros_s": 18.1,
+      "stage": "FIXED_STATIC_WINDOW_READY",
+      "wall_monotonic_s": 21950.285763169
+    },
+    {
+      "ros_s": 18.1,
+      "stage": "STATIC_WINDOW_TF_DRAIN_WAIT",
+      "wall_monotonic_s": 21950.287729481
+    },
+    {
+      "elapsed_wall_s": 8.557499677408487e-05,
+      "ros_s": 18.1,
+      "stage": "STATIC_WINDOW_TF_DRAIN_READY",
+      "wall_monotonic_s": 21950.288787383
+    },
+    {
+      "report_sha256": "0f2717fad0a024c39d73021fe9e4fea51e2a89d72e7d112e3f1581c9939302e8",
+      "ros_s": 18.2,
+      "stage": "ALIGNMENT_FROZEN_BEFORE_TASK",
+      "wall_monotonic_s": 21950.403073152
+    },
+    {
+      "ros_s": 21.2,
+      "stage": "TASK_STOPPED_WAIT",
+      "wall_monotonic_s": 21953.38564564
+    },
+    {
+      "elapsed_wall_s": 2.2050922850030474,
+      "ros_s": 23.4,
+      "stage": "TASK_STOPPED_READY",
+      "wall_monotonic_s": 21955.591603344
+    },
+    {
+      "ros_s": 23.4,
+      "stage": "SHORT_NAVIGATION_COMPLETE",
+      "wall_monotonic_s": 21955.594362521
+    }
+  ],
+  "move_to_connected": true,
+  "status": "COMPLETED"
+}
