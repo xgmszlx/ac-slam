@@ -1,0 +1,129 @@
+{
+ "created_utc": "2026-10-13",
+ "frozen_before_any_run": true,
+ "plan_order": [
+  [
+   "place_B",
+   "L+",
+   1
+  ],
+  [
+   "place_B",
+   "L-",
+   1
+  ],
+  [
+   "place_C",
+   "L-",
+   1
+  ],
+  [
+   "place_C",
+   "L+",
+   1
+  ],
+  [
+   "place_B",
+   "L-",
+   2
+  ],
+  [
+   "place_B",
+   "L+",
+   2
+  ],
+  [
+   "place_C",
+   "L+",
+   2
+  ],
+  [
+   "place_C",
+   "L-",
+   2
+  ]
+ ],
+ "budget_episodes": 8,
+ "episodes": [
+  {
+   "order": 1,
+   "episode_id": "D79_B_Lplus_1",
+   "run_index": 1,
+   "place_id": "place_B",
+   "action_id": "L+",
+   "tsp_seed": 44016,
+   "source_episode_id": "0016_place_B_r1_L+",
+   "spec_sha256": "53ef6e7f116d042a96abcaac6a9cfc67a0604c7df8c90fd9d82eb0ceb99f50eb"
+  },
+  {
+   "order": 2,
+   "episode_id": "D79_B_Lminus_1",
+   "run_index": 1,
+   "place_id": "place_B",
+   "action_id": "L-",
+   "tsp_seed": 44013,
+   "source_episode_id": "0013_place_B_r1_L-",
+   "spec_sha256": "6c119e4c1aabaa093b26d6185f8ac65a05377415af377fe0c080c1741e3a116d"
+  },
+  {
+   "order": 3,
+   "episode_id": "D79_C_Lminus_1",
+   "run_index": 1,
+   "place_id": "place_C",
+   "action_id": "L-",
+   "tsp_seed": 44026,
+   "source_episode_id": "0026_place_C_r1_L-",
+   "spec_sha256": "db110f4d480eda38a2cac9a46c9855dc6d1ebc0a37a0a90a89da81d23e3d80cf"
+  },
+  {
+   "order": 4,
+   "episode_id": "D79_C_Lplus_1",
+   "run_index": 1,
+   "place_id": "place_C",
+   "action_id": "L+",
+   "tsp_seed": 44025,
+   "source_episode_id": "0025_place_C_r1_L+",
+   "spec_sha256": "3f39af4d9f4ea9d5bbd84b50b89fb1a60e6810050d42d0ba2bf36d7563c42f3c"
+  },
+  {
+   "order": 5,
+   "episode_id": "D79_B_Lminus_2",
+   "run_index": 2,
+   "place_id": "place_B",
+   "action_id": "L-",
+   "tsp_seed": 44013,
+   "source_episode_id": "0013_place_B_r1_L-",
+   "spec_sha256": "3cf6fd1d530b77e28c49cc2de01d3449e496cd3f464b1721f0e889a4ee490552"
+  },
+  {
+   "order": 6,
+   "episode_id": "D79_B_Lplus_2",
+   "run_index": 2,
+   "place_id": "place_B",
+   "action_id": "L+",
+   "tsp_seed": 44016,
+   "source_episode_id": "0016_place_B_r1_L+",
+   "spec_sha256": "a53fcfe07ee09a419caea55c42302c400fe6bde96e5421930f0564e468e9b3c5"
+  },
+  {
+   "order": 7,
+   "episode_id": "D79_C_Lplus_2",
+   "run_index": 2,
+   "place_id": "place_C",
+   "action_id": "L+",
+   "tsp_seed": 44025,
+   "source_episode_id": "0025_place_C_r1_L+",
+   "spec_sha256": "2c8c56ff9aa2ad74578592af79e5eee29ca9ce263c230786e85a9b07d4e98e65"
+  },
+  {
+   "order": 8,
+   "episode_id": "D79_C_Lminus_2",
+   "run_index": 2,
+   "place_id": "place_C",
+   "action_id": "L-",
+   "tsp_seed": 44026,
+   "source_episode_id": "0026_place_C_r1_L-",
+   "spec_sha256": "522b723f196695e24eaccc2995d05655705e8889a07f6a4d06b9494f25ce88b7"
+  }
+ ]
+}

@@ -1,0 +1,70 @@
+{
+ "suite": "results/realizability_pilot/p1_doc79_synchronous_revisit_validation_20261012",
+ "attempts": 8,
+ "episodes_planned": 8,
+ "technically_validated_attempts": 7,
+ "measurement_validated": false,
+ "per_place_direction": [
+  {
+   "place": "place_B",
+   "action": "L+",
+   "runs": 2,
+   "action_gain_values": "0.283315;0.349376",
+   "action_gain_mean": 0.316345486672017,
+   "action_gain_spread": 0.06606031393667511,
+   "rotation_values": "3.8000;3.4285"
+  },
+  {
+   "place": "place_B",
+   "action": "L-",
+   "runs": 2,
+   "action_gain_values": "0.022534;0.009926",
+   "action_gain_mean": 0.016230006006020314,
+   "action_gain_spread": 0.012607026463911986,
+   "rotation_values": "3.4011;3.7449"
+  },
+  {
+   "place": "place_C",
+   "action": "L+",
+   "runs": 2,
+   "action_gain_values": "0.124407;0.106419",
+   "action_gain_mean": 0.11541347150849646,
+   "action_gain_spread": 0.01798800499265596,
+   "rotation_values": "3.8311;3.4042"
+  },
+  {
+   "place": "place_C",
+   "action": "L-",
+   "runs": 1,
+   "action_gain_values": "0.002367",
+   "action_gain_mean": 0.00236692048353504,
+   "action_gain_spread": null,
+   "rotation_values": "3.4470"
+  },
+  {
+   "place": "place_B",
+   "action": "L+_minus_L-",
+   "runs": 4,
+   "action_gain_values": "0.260782;0.273389;0.326842;0.339449",
+   "action_gain_mean": 0.3001154806659967,
+   "action_gain_spread": 0.0786673404005871,
+   "rotation_values": ""
+  },
+  {
+   "place": "place_C",
+   "action": "L+_minus_L-",
+   "runs": 2,
+   "action_gain_values": "0.122041;0.104053",
+   "action_gain_mean": 0.11304655102496142,
+   "action_gain_spread": 0.01798800499265596,
+   "rotation_values": ""
+  }
+ ],
+ "mechanism_summary": {
+  "historic_links_total": 84,
+  "local_only_closures_total": 17
+ },
+ "gt_summary": {
+  "relative_translation_mean_m": 0.03083248284927574
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "doc": "79",
+ "role": "isolated observability build manifest (doc79_ws overlay)",
+ "underlay": "catkin_ws (built, untouched)",
+ "overlay_workspace": "doc79_ws",
+ "cmake_args": "-DCMAKE_BUILD_TYPE=Release -DPYTHON_EXECUTABLE=/usr/bin/python3",
+ "source_files": {
+  "doc79_ws/src/nav2d_karto/src/MultiMapper.cpp": "b275c97047d465a4e6142fe5540437865b41081e4e7eb138cee3f7da6b503e95",
+  "doc79_ws/src/nav2d_karto/include/nav2d_karto/MultiMapper.h": "ea4b9141bd65926e426a34435ff72ed8eb0ea14fcd31a9e1c63dd8d01fc2de25",
+  "doc79_ws/src/nav2d_karto/CMakeLists.txt": "90f29bfaddf4b1e0679b2571f1c5c144f09dce6a521710f7fb9f615a3f6bcf39"
+ },
+ "binary": {
+  "path": "doc79_ws/devel/lib/nav2d_karto/mapper",
+  "sha256": "23526f4f10c6dd2da40b7916e279da79b1925c9658c3b5c35b7eff0cf05bdce2"
+ },
+ "production_binary": {
+  "path": "catkin_ws/devel/lib/nav2d_karto/mapper",
+  "sha256": "7ab54496b4572e831d7f10d615ad3d700bec3a0b89c5abdb9c562616a67d92f6"
+ },
+ "patch_file": "audit/observability_patch.diff",
+ "services_added": [
+  "/Mapper/get_native_scan_telemetry",
+  "/Mapper/doc79_sync_boundary_export"
+ ]
+}

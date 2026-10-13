@@ -1,0 +1,45 @@
+--- dependencies/navigation_2d/nav2d_karto/include/nav2d_karto/MultiMapper.h	2026-09-20 16:18:01.356949790 +0800
++++ doc79_ws/src/nav2d_karto/include/nav2d_karto/MultiMapper.h	2026-10-13 09:18:58.516643749 +0800
+@@ -50,6 +50,14 @@
+ 	                      std_srvs::Trigger::Response &res);
+ 	bool getProcessedLocalizedScanCount(std_srvs::Trigger::Request &req,
+ 	                                    std_srvs::Trigger::Response &res);
++	// Doc 79 observation-only telemetry and synchronous boundary export.
++	// Both handlers run on the single MapperNode callback queue and therefore
++	// serialize with receiveLaserScan(); they never change scan matching or
++	// graph optimisation behaviour.
++	bool getNativeScanTelemetry(std_srvs::Trigger::Request &req,
++	                            std_srvs::Trigger::Response &res);
++	bool doc79SyncBoundaryExport(std_srvs::Trigger::Request &req,
++	                             std_srvs::Trigger::Response &res);
+ 	void publishLoop();
+ 	void publishTransform();
+ 	void setScanSolver(karto::ScanSolver* scanSolver);
+@@ -143,6 +151,27 @@
+ 	std::string mPoseGraphDumpPath;
+ 	unsigned long long mProcessedLocalizedScanCount;
+ 	bool mInstrumentationThreadStarted;
++
++	// Doc 79 observation-only native-scan telemetry.  Updated only from
++	// receiveLaserScan() (single callback thread); read from the two Doc 79
++	// services.  No matching or optimisation behaviour depends on these.
++	ros::ServiceServer mNativeScanTelemetryServer;
++	ros::ServiceServer mSyncBoundaryExportServer;
++	unsigned long long mNativeScanReceived;
++	unsigned long long mNativeScanWaitingMapDrops;
++	unsigned long long mNativeScanTfFailed;
++	unsigned long long mNativeScanProcessed;
++	unsigned long long mNativeScanProcessException;
++	unsigned long long mNativeScanAccepted;
++	int mLastNativeScanSeq;
++	double mLastNativeScanStamp;
++	std::string mLastNativeScanFrameId;
++	double mLastNativeScanProcessedRosTime;
++	double mLastNativeScanCallbackCompleteRosTime;
++	long long mLastAcceptedStateId;
++	long long mLastAcceptedUniqueId;
++	double mLastAcceptedSimTime;
++	std::string nativeTelemetryBody();
+ };
+ 
+ #endif

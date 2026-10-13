@@ -1,0 +1,23 @@
+{
+ "doc": "79",
+ "created": "2026-10-13",
+ "role": "post-run production integrity check (read-only)",
+ "note": "hashes identical to audit/production_integrity.json baseline; verified after all 8 budget attempts finished",
+ "files": [
+  {
+   "path": "catkin_ws/devel/lib/nav2d_karto/mapper",
+   "sha256": "7ab54496b4572e831d7f10d615ad3d700bec3a0b89c5abdb9c562616a67d92f6",
+   "matches_baseline": true
+  },
+  {
+   "path": "catkin_ws/devel/lib/libMultiMapper.so",
+   "sha256": "a5338a332209d4bda3aa40e53de4f438fbdc6a02dcdd3d9c2331159e93bc19f4",
+   "matches_baseline": true
+  }
+ ],
+ "overlay": {
+  "path": "doc79_ws/devel/lib/libMultiMapper.so",
+  "sha256": "022de4bc81de57419d3fd70ef1f2a80ad619356f07d4b8aef3ff959913c54598",
+  "note": "isolated build used by the Doc-79 runner only"
+ }
+}

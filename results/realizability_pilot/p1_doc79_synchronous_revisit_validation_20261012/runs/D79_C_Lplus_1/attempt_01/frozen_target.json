@@ -1,0 +1,116 @@
+{
+ "action_id": "L+",
+ "anchor": {
+  "id": 70,
+  "theta": -2.8715946674346924,
+  "unique_id": 70,
+  "x": 22.144121170043945,
+  "y": -1.9085966348648071
+ },
+ "anchor_distance_m": 0.20000030015423062,
+ "anchor_heading_error_rad": 0.4687688823598449,
+ "anchor_heading_weight": 0.5,
+ "checks": {
+  "anchor_heading_within_tolerance": true,
+  "anchor_is_not_root": true,
+  "anchor_within_reference_radius": true,
+  "minimum_history_node_count": true,
+  "segment_has_target_states": true
+ },
+ "frozen_graph_node_count": 107,
+ "frozen_phase": "G_before_return",
+ "frozen_scan_index": 2534,
+ "group_id": "place_C_r1",
+ "passed": true,
+ "place_id": "place_C",
+ "reference_commanded_waypoint": [
+  22.25,
+  -2.0,
+  3.141592653589793
+ ],
+ "reference_mapper_pose": [
+  22.3368757831295,
+  -1.855250789703066,
+  2.9428217573850497
+ ],
+ "reference_source": "history_arrival_tf_pose",
+ "reference_world_position": [
+  -5.95,
+  -30.0
+ ],
+ "return_goal_pose": [
+  22.3368757831295,
+  -1.855250789703066,
+  2.9428217573850497
+ ],
+ "segment_length": 7,
+ "segment_state_ids": [
+  66,
+  67,
+  68,
+  69,
+  70,
+  71,
+  72
+ ],
+ "segment_unique_ids": [
+  66,
+  67,
+  68,
+  69,
+  70,
+  71,
+  72
+ ],
+ "target_state_ids": [
+  66,
+  67,
+  70,
+  71,
+  72
+ ],
+ "target_states": [
+  {
+   "id": 66,
+   "theta": -1.5713659524917603,
+   "unique_id": 66,
+   "x": 22.326515197753906,
+   "y": -0.18370091915130615
+  },
+  {
+   "id": 67,
+   "theta": -1.57081937789917,
+   "unique_id": 67,
+   "x": 22.326356887817383,
+   "y": -1.1574509143829346
+  },
+  {
+   "id": 70,
+   "theta": -2.8715946674346924,
+   "unique_id": 70,
+   "x": 22.144121170043945,
+   "y": -1.9085966348648071
+  },
+  {
+   "id": 71,
+   "theta": -3.0737924575805664,
+   "unique_id": 71,
+   "x": 21.079317092895508,
+   "y": -1.7984800338745117
+  },
+  {
+   "id": 72,
+   "theta": -2.9706168174743652,
+   "unique_id": 72,
+   "x": 20.040782928466797,
+   "y": -1.9651708602905273
+  }
+ ],
+ "target_unique_ids": [
+  66,
+  67,
+  70,
+  71,
+  72
+ ]
+}

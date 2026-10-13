@@ -1,0 +1,81 @@
+{
+ "doc79_id": "DOC79_SYNCHRONOUS_REVISIT_OBSERVATION_VALIDATION",
+ "created_utc": "2026-10-13",
+ "head_at_freeze": "cac55c4bb817705529bee6f39fbdf7cfb698677c",
+ "budget": {
+  "episodes": 8,
+  "includes": "successes, technical failures, interruptions, retries",
+  "no_second_suite": true,
+  "no_selection_of_samples": true
+ },
+ "design": {
+  "places": [
+   "place_B",
+   "place_C"
+  ],
+  "actions": [
+   "L+",
+   "L-"
+  ],
+  "runs_per_condition": 2,
+  "rationale": "B/C chosen from Doc-77/78 exploratory results: post-hoc selection, no generalization claim",
+  "run_order_fixed": true,
+  "reorder_forbidden": true,
+  "seeds": "same tsp_seed as the frozen r1 spec of the same condition (identical for both runs of a condition)",
+  "physical_protocol": "inherited unchanged: fresh Stage+Karto, map3, same route/actions/347-frame budget"
+ },
+ "actions": {
+  "L+": "theta0 -> theta0+pi/2 -> theta0 (cumulative pi)",
+  "L-": "theta0 -> theta0-pi/2 -> theta0 (cumulative pi)"
+ },
+ "qualification": {
+  "first_pair": "D79_B_Lplus_1 then D79_B_Lminus_1 must pass technical checks before runs 3-8",
+  "technical_checks": [
+   "native scan processing barrier satisfied at all four boundaries",
+   "sync export success, path echo, run_id, counts, sha256",
+   "provenance non-empty, run_id match, sequences monotone",
+   "ledger covers four boundaries, accepted/received counters consistent",
+   "episode_result SUCCEEDED"
+  ],
+  "failure_policy": "record truthfully; retry allowed only as a new attempt within the 8-run budget; big code fix => stop suite"
+ },
+ "analysis": {
+  "primary_information": "J_T from SYNCHRONOUS dumps only",
+  "comparison": "topic cache vs sync dump (nodes/edges only present in sync, timing lag)",
+  "mechanism": "provenance enum classification + endpoints + creation time; rejection causes NOT observable",
+  "gt": "SE(2) relative pose error with explicit extrinsics; pre-action alignment only; GT_EFFECT_NOT_ESTIMABLE when insufficient",
+  "pre_action_features": "two candidates only: historical view/direction overlap; residual rotation/translation to keyframe gate",
+  "diagnostics": "any fixed-linearization/edge-removal result labelled FIXED_LINEARIZATION_FACTOR_DIAGNOSTIC and reported separately"
+ },
+ "decision_rules": {
+  "technical": "MEASUREMENT_VALIDATED vs MEASUREMENT_NOT_VALIDATED (no science ordering if not validated)",
+  "science_options": [
+   "A CONDITIONAL_EFFECT_CANDIDATE",
+   "B MECHANISM_ONLY",
+   "C PURE_ROTATION_NOT_SUPPORTED",
+   "D TECHNICALLY_INCOMPLETE"
+  ],
+  "forbidden_inferences": [
+   "global mean ~0 => no conditional effect",
+   "B/C pattern => trainable selector",
+   "more edges => better localisation",
+   "mean < single-run sd => no value",
+   "sync nodes => all new historic constraints valid",
+   "no TRY_CLOSE_LOOP => no NEAR_CHAIN links",
+   "contiguous unpublished ids => leaf subtrees"
+  ]
+ },
+ "stop_rules": [
+  "watermark unverifiable",
+  "export service failure",
+  "dump file identity mismatch",
+  "unexplained provenance gaps",
+  "binary/manifest mismatch",
+  "GT transform undetermined",
+  "unexplained stage cross-contamination",
+  "action not completed as planned",
+  "params changed",
+  "process crash",
+  "budget reached"
+ ]
+}
