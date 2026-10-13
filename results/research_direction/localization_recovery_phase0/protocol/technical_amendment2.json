@@ -1,0 +1,389 @@
+{
+  "amendment2_code_sha256": "6f9a8653aa5701cf434f5d4e30ef9c83be3eb5174c0bcbce491230bbe26fb87c",
+  "amendment_code_sha256": "c297952513668270496c261320803b83177a6e5387c0c73a5b758d2e3104838b",
+  "change": "only new generated launch -u replaced by -g; original source/launch/failed files unchanged",
+  "coverage_amendment": "3healthy+3corridor+1repetitive valid episodes;2 technical failures consume9 baseline slots. Repetitive seeds271002/271003 unstarted before outcomes.",
+  "date": "2026-10-13",
+  "first_gate": "three healthy eligible controls plus complete corridor3;2/3 corridor events suffice. Repetitive2 is descriptive, cannot claim3-seed replication.",
+  "id": "DOC81_TECHNICAL_AMENDMENT2_STAGE_CLI",
+  "immutable_R0_sha256": {
+    "analysis/A1_scientific_gate.json": "5d906d4b57d2f6f2f00c7ccb0f31b2456cb80a68b361311dee65737323bbad79",
+    "analysis/scientific_gate.json": "1239669cffdf956b3bc35804785aaf16588dce59c950cbb5b99434e033279f9c",
+    "baseline/NORMAL_GEOMETRY_271001/control_stream.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline/NORMAL_GEOMETRY_271001/driver.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline/NORMAL_GEOMETRY_271001/episode_spec.json": "13c861e978e4bf7adb9e9f1dd5c15f73bef8b9b8121d917add1aa5525a14868f",
+    "baseline/NORMAL_GEOMETRY_271001/gt_stream.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline/NORMAL_GEOMETRY_271001/keyscan_stream.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline/NORMAL_GEOMETRY_271001/loop_events.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline/NORMAL_GEOMETRY_271001/native.launch": "846b2a3af8181f0670bbcf0ff0d31b1276964cfd86b68be4cdd522b1af72ef9d",
+    "baseline/NORMAL_GEOMETRY_271001/odom_stream.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline/NORMAL_GEOMETRY_271001/planning_time.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline/NORMAL_GEOMETRY_271001/roscore.log": "3e9a851fee61218af70c70a043f4ed1aca34b5fe724d3a9cdeedf3735d15872b",
+    "baseline/NORMAL_GEOMETRY_271001/roslaunch.log": "13bca1b6630d7a743ffb43888f626236b662cdd20b3eb78c207270e441b28815",
+    "baseline/NORMAL_GEOMETRY_271001/run_state.json": "693c0cb21186a7c43b4d5e55097b045f203c9874e72c3cb4e3b9e444c87c794d",
+    "baseline/NORMAL_GEOMETRY_271001/scan_stream.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline/NORMAL_GEOMETRY_271001/tf_stream.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline/NORMAL_GEOMETRY_271001_A1/bootstrap_clock.txt": "fe34630b275ec00f79053f993a79957f5b57f06693931e28aa1de3f77de8d4db",
+    "baseline/NORMAL_GEOMETRY_271001_A1/control_stream.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline/NORMAL_GEOMETRY_271001_A1/driver.log": "034a5ac077224f51827df24ca8d4001381f02eb92683b6b88d4559d20da51e5c",
+    "baseline/NORMAL_GEOMETRY_271001_A1/episode_spec.json": "9f376754ad97d6cac88c3a75e54f742ec0fba07fde946d60d01d2b9133452c25",
+    "baseline/NORMAL_GEOMETRY_271001_A1/get_first_map.txt": "33147ad5516c704b4bfbed14a88209ae5910ad303f6053dd923c1f4d6645112f",
+    "baseline/NORMAL_GEOMETRY_271001_A1/gt_stream.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline/NORMAL_GEOMETRY_271001_A1/keyscan_stream.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline/NORMAL_GEOMETRY_271001_A1/loop_events.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline/NORMAL_GEOMETRY_271001_A1/native.launch": "20e62a20056fdd275a57f3de5b6805c3f228a40da45ad037a40599a1b2d13130",
+    "baseline/NORMAL_GEOMETRY_271001_A1/odom_stream.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline/NORMAL_GEOMETRY_271001_A1/planning_time.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline/NORMAL_GEOMETRY_271001_A1/roscore.log": "c4748e2d9870d25ac7d706136538eae24d7569cbfc9b5cbcf915b5a6963501f8",
+    "baseline/NORMAL_GEOMETRY_271001_A1/roslaunch.log": "41e8922679d7b3223dcbce7eadc2f79dfb7b64cafa813d4dd6c8f26ee460abcd",
+    "baseline/NORMAL_GEOMETRY_271001_A1/run_state.json": "75f02c1f136221e66850abf9517176c562ed1e056c3bcef0a1f1921b3d93ee13",
+    "baseline/NORMAL_GEOMETRY_271001_A1/scan_stream.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline/NORMAL_GEOMETRY_271001_A1/start_mapping.txt": "ea4d67de8956a08502d9bd4f163754889ca4407fd2c2cfd74a8862633cdcbf05",
+    "baseline/NORMAL_GEOMETRY_271001_A1/tf_stream.jsonl": "d760bf11af34429a1d302667250c3163cf89dde6a355b584de780d8e78b2d6bf",
+    "protocol/frozen_baseline_matrix.json": "ad38d4cc8ad4045aff11a663caca27a1dd9a3ba870028705dd10f0c80a13cfb2",
+    "protocol/preregistration.json": "6e180ee0efdc4e35917cde3a674aebec66401810253ca4bac5ebbc9b1fca49e1",
+    "protocol/preregistration_hash.json": "b14bb26697b6f2ac5e0f27f7762e70dc628bf37aaca6c5b5140d947ead1e51dd",
+    "protocol/technical_amendment1.json": "b01e366d48be8f7286438dc49f0debb6bba8f01ee0765287ec078ae083bf3ff5"
+  },
+  "included_sensor_sha256": "63187469b0c9173f2ab1e5086723283d8e920007e1a77030a64d583cdf19dc32",
+  "not_started_by_budget": {
+    "arm": "BASELINE_CONTINUE",
+    "distance_m": 30.0,
+    "episode_id": "REPETITIVE_OR_TRANSITION_GEOMETRY_271003",
+    "route": [
+      [
+        0.0,
+        10.0,
+        0.0
+      ],
+      [
+        5.0,
+        10.0,
+        0.0
+      ],
+      [
+        10.0,
+        10.0,
+        0.0
+      ],
+      [
+        15.0,
+        10.0,
+        0.0
+      ],
+      [
+        20.0,
+        10.0,
+        0.0
+      ]
+    ],
+    "scenario": "REPETITIVE_OR_TRANSITION_GEOMETRY",
+    "seed": 271003,
+    "start": [
+      -28.024460162804385,
+      -28.01107338829831,
+      -0.005797503124024861
+    ]
+  },
+  "not_started_seeds": {
+    "REPETITIVE_OR_TRANSITION_GEOMETRY": [
+      271002,
+      271003
+    ]
+  },
+  "planned_matrix": [
+    {
+      "arm": "BASELINE_CONTINUE",
+      "distance_m": 30.0,
+      "episode_id": "NORMAL_GEOMETRY_271001_A2",
+      "route": [
+        [
+          6.0,
+          0.0,
+          0.0
+        ],
+        [
+          6.0,
+          10.0,
+          0.0
+        ],
+        [
+          16.0,
+          10.0,
+          0.0
+        ],
+        [
+          16.0,
+          6.0,
+          0.0
+        ]
+      ],
+      "scenario": "NORMAL_GEOMETRY",
+      "seed": 271001,
+      "start": [
+        -28.029659777681886,
+        -28.003319011287687,
+        0.0016967719582933836
+      ],
+      "technical_retry_of": "NORMAL_GEOMETRY_271001"
+    },
+    {
+      "arm": "BASELINE_CONTINUE",
+      "distance_m": 30.0,
+      "episode_id": "NORMAL_GEOMETRY_271002",
+      "route": [
+        [
+          6.0,
+          0.0,
+          0.0
+        ],
+        [
+          6.0,
+          10.0,
+          0.0
+        ],
+        [
+          16.0,
+          10.0,
+          0.0
+        ],
+        [
+          16.0,
+          6.0,
+          0.0
+        ]
+      ],
+      "scenario": "NORMAL_GEOMETRY",
+      "seed": 271002,
+      "start": [
+        -28.005330911117262,
+        -27.972237833823392,
+        -0.009863937220088818
+      ]
+    },
+    {
+      "arm": "BASELINE_CONTINUE",
+      "distance_m": 30.0,
+      "episode_id": "NORMAL_GEOMETRY_271003",
+      "route": [
+        [
+          6.0,
+          0.0,
+          0.0
+        ],
+        [
+          6.0,
+          10.0,
+          0.0
+        ],
+        [
+          16.0,
+          10.0,
+          0.0
+        ],
+        [
+          16.0,
+          6.0,
+          0.0
+        ]
+      ],
+      "scenario": "NORMAL_GEOMETRY",
+      "seed": 271003,
+      "start": [
+        -28.024460162804385,
+        -28.01107338829831,
+        -0.005797503124024861
+      ]
+    },
+    {
+      "arm": "BASELINE_CONTINUE",
+      "distance_m": 30.0,
+      "episode_id": "CORRIDOR_DEGENERACY_271001",
+      "route": [
+        [
+          5.0,
+          0.0,
+          0.0
+        ],
+        [
+          10.0,
+          0.0,
+          0.0
+        ],
+        [
+          15.0,
+          0.0,
+          0.0
+        ],
+        [
+          20.0,
+          0.0,
+          0.0
+        ],
+        [
+          25.0,
+          0.0,
+          0.0
+        ],
+        [
+          30.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "scenario": "CORRIDOR_DEGENERACY",
+      "seed": 271001,
+      "start": [
+        -15.029659777681884,
+        -0.003319011287688158,
+        0.0016967719582933836
+      ]
+    },
+    {
+      "arm": "BASELINE_CONTINUE",
+      "distance_m": 30.0,
+      "episode_id": "CORRIDOR_DEGENERACY_271002",
+      "route": [
+        [
+          5.0,
+          0.0,
+          0.0
+        ],
+        [
+          10.0,
+          0.0,
+          0.0
+        ],
+        [
+          15.0,
+          0.0,
+          0.0
+        ],
+        [
+          20.0,
+          0.0,
+          0.0
+        ],
+        [
+          25.0,
+          0.0,
+          0.0
+        ],
+        [
+          30.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "scenario": "CORRIDOR_DEGENERACY",
+      "seed": 271002,
+      "start": [
+        -15.00533091111726,
+        0.027762166176608642,
+        -0.009863937220088818
+      ]
+    },
+    {
+      "arm": "BASELINE_CONTINUE",
+      "distance_m": 30.0,
+      "episode_id": "CORRIDOR_DEGENERACY_271003",
+      "route": [
+        [
+          5.0,
+          0.0,
+          0.0
+        ],
+        [
+          10.0,
+          0.0,
+          0.0
+        ],
+        [
+          15.0,
+          0.0,
+          0.0
+        ],
+        [
+          20.0,
+          0.0,
+          0.0
+        ],
+        [
+          25.0,
+          0.0,
+          0.0
+        ],
+        [
+          30.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "scenario": "CORRIDOR_DEGENERACY",
+      "seed": 271003,
+      "start": [
+        -15.024460162804386,
+        -0.011073388298311917,
+        -0.005797503124024861
+      ]
+    },
+    {
+      "arm": "BASELINE_CONTINUE",
+      "distance_m": 30.0,
+      "episode_id": "REPETITIVE_OR_TRANSITION_GEOMETRY_271001",
+      "route": [
+        [
+          0.0,
+          10.0,
+          0.0
+        ],
+        [
+          5.0,
+          10.0,
+          0.0
+        ],
+        [
+          10.0,
+          10.0,
+          0.0
+        ],
+        [
+          15.0,
+          10.0,
+          0.0
+        ],
+        [
+          20.0,
+          10.0,
+          0.0
+        ]
+      ],
+      "scenario": "REPETITIVE_OR_TRANSITION_GEOMETRY",
+      "seed": 271001,
+      "start": [
+        -28.029659777681886,
+        -28.003319011287687,
+        0.0016967719582933836
+      ]
+    }
+  ],
+  "pre_amendment_scientific_capture_bytes": 0,
+  "pre_amendment_scientific_endpoint_existed": false,
+  "predeclared_repair_limit": "No further physical attempt after a new qualification failure; stop current round",
+  "reason": "installed stageros -u uses model names; observed /robot/odom and /robot/base_scan namespace. Upstream main confirms -g disables GUI and leaves unprefixed topics.",
+  "retry_world_sha256": "19048e33046ded44e724cfe561d9b3fdecfe272d1f583f30f654961212b22409",
+  "scientific_capture_before_amendment": false,
+  "unchanged": [
+    "routes",
+    "seeds",
+    "initial nuisance poses",
+    "odometry coefficients",
+    "sensor",
+    "Karto",
+    "GT alignment",
+    "error metric",
+    "healthy threshold rule",
+    "event duration",
+    "15 total and9 baseline attempts"
+  ]
+}

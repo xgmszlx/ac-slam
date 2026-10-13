@@ -1,0 +1,130 @@
+{
+  "attempts": [
+    {
+      "detail": "Command '['rostopic', 'echo', '-n', '1', '/clock']' timed out after 15 seconds",
+      "episode_id": "NORMAL_GEOMETRY_271001",
+      "kind": "baseline",
+      "ordinal": 1,
+      "spec": {
+        "arm": "BASELINE_CONTINUE",
+        "distance_m": 30.0,
+        "episode_id": "NORMAL_GEOMETRY_271001",
+        "route": [
+          [
+            6.0,
+            0.0,
+            0.0
+          ],
+          [
+            6.0,
+            10.0,
+            0.0
+          ],
+          [
+            16.0,
+            10.0,
+            0.0
+          ],
+          [
+            16.0,
+            6.0,
+            0.0
+          ]
+        ],
+        "scenario": "NORMAL_GEOMETRY",
+        "seed": 271001,
+        "start": [
+          -28.029659777681886,
+          -28.003319011287687,
+          0.0016967719582933836
+        ]
+      },
+      "status": "TECHNICAL_FAILURE"
+    },
+    {
+      "detail": "GetFirstMap failed",
+      "episode_id": "NORMAL_GEOMETRY_271001_A1",
+      "kind": "baseline",
+      "ordinal": 2,
+      "spec": {
+        "arm": "BASELINE_CONTINUE",
+        "distance_m": 30.0,
+        "episode_id": "NORMAL_GEOMETRY_271001_A1",
+        "route": [
+          [
+            6.0,
+            0.0,
+            0.0
+          ],
+          [
+            6.0,
+            10.0,
+            0.0
+          ],
+          [
+            16.0,
+            10.0,
+            0.0
+          ],
+          [
+            16.0,
+            6.0,
+            0.0
+          ]
+        ],
+        "scenario": "NORMAL_GEOMETRY",
+        "seed": 271001,
+        "start": [
+          -28.029659777681886,
+          -28.003319011287687,
+          0.0016967719582933836
+        ],
+        "technical_retry_of": "NORMAL_GEOMETRY_271001"
+      },
+      "status": "TECHNICAL_FAILURE"
+    },
+    {
+      "detail": "driver exit 1",
+      "episode_id": "NORMAL_GEOMETRY_271001_A2",
+      "kind": "baseline",
+      "ordinal": 3,
+      "spec": {
+        "arm": "BASELINE_CONTINUE",
+        "distance_m": 30.0,
+        "episode_id": "NORMAL_GEOMETRY_271001_A2",
+        "route": [
+          [
+            6.0,
+            0.0,
+            0.0
+          ],
+          [
+            6.0,
+            10.0,
+            0.0
+          ],
+          [
+            16.0,
+            10.0,
+            0.0
+          ],
+          [
+            16.0,
+            6.0,
+            0.0
+          ]
+        ],
+        "scenario": "NORMAL_GEOMETRY",
+        "seed": 271001,
+        "start": [
+          -28.029659777681886,
+          -28.003319011287687,
+          0.0016967719582933836
+        ],
+        "technical_retry_of": "NORMAL_GEOMETRY_271001"
+      },
+      "status": "TECHNICAL_FAILURE"
+    }
+  ],
+  "maximum": 15
+}

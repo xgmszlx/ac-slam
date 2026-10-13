@@ -1,0 +1,400 @@
+{
+  "amendment_code_sha256": "c297952513668270496c261320803b83177a6e5387c0c73a5b758d2e3104838b",
+  "change": "read-only sensor include alias; same frozen bytes, no physics or matcher parameter change",
+  "coverage_amendment": "8 valid planned baselines plus1 already failed attempt;3 healthy+3 corridor+2 repetitive. Missing repetitive seed271003 is declared before outcomes, not replaced.",
+  "date": "2026-10-13",
+  "first_gate": "three healthy eligible controls plus complete corridor3;2/3 corridor events suffice. Repetitive2 is descriptive, cannot claim3-seed replication.",
+  "id": "DOC81_TECHNICAL_AMENDMENT1_INCLUDE_PATH",
+  "immutable_R0_sha256": {
+    "analysis/scientific_gate.json": "1239669cffdf956b3bc35804785aaf16588dce59c950cbb5b99434e033279f9c",
+    "baseline/NORMAL_GEOMETRY_271001/control_stream.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline/NORMAL_GEOMETRY_271001/driver.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline/NORMAL_GEOMETRY_271001/episode_spec.json": "13c861e978e4bf7adb9e9f1dd5c15f73bef8b9b8121d917add1aa5525a14868f",
+    "baseline/NORMAL_GEOMETRY_271001/gt_stream.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline/NORMAL_GEOMETRY_271001/keyscan_stream.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline/NORMAL_GEOMETRY_271001/loop_events.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline/NORMAL_GEOMETRY_271001/native.launch": "846b2a3af8181f0670bbcf0ff0d31b1276964cfd86b68be4cdd522b1af72ef9d",
+    "baseline/NORMAL_GEOMETRY_271001/odom_stream.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline/NORMAL_GEOMETRY_271001/planning_time.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline/NORMAL_GEOMETRY_271001/roscore.log": "3e9a851fee61218af70c70a043f4ed1aca34b5fe724d3a9cdeedf3735d15872b",
+    "baseline/NORMAL_GEOMETRY_271001/roslaunch.log": "13bca1b6630d7a743ffb43888f626236b662cdd20b3eb78c207270e441b28815",
+    "baseline/NORMAL_GEOMETRY_271001/run_state.json": "693c0cb21186a7c43b4d5e55097b045f203c9874e72c3cb4e3b9e444c87c794d",
+    "baseline/NORMAL_GEOMETRY_271001/scan_stream.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline/NORMAL_GEOMETRY_271001/tf_stream.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "protocol/frozen_baseline_matrix.json": "ad38d4cc8ad4045aff11a663caca27a1dd9a3ba870028705dd10f0c80a13cfb2",
+    "protocol/preregistration.json": "6e180ee0efdc4e35917cde3a674aebec66401810253ca4bac5ebbc9b1fca49e1",
+    "protocol/preregistration_hash.json": "b14bb26697b6f2ac5e0f27f7762e70dc628bf37aaca6c5b5140d947ead1e51dd"
+  },
+  "included_sensor_sha256": "63187469b0c9173f2ab1e5086723283d8e920007e1a77030a64d583cdf19dc32",
+  "not_started_by_budget": {
+    "arm": "BASELINE_CONTINUE",
+    "distance_m": 30.0,
+    "episode_id": "REPETITIVE_OR_TRANSITION_GEOMETRY_271003",
+    "route": [
+      [
+        0.0,
+        10.0,
+        0.0
+      ],
+      [
+        5.0,
+        10.0,
+        0.0
+      ],
+      [
+        10.0,
+        10.0,
+        0.0
+      ],
+      [
+        15.0,
+        10.0,
+        0.0
+      ],
+      [
+        20.0,
+        10.0,
+        0.0
+      ]
+    ],
+    "scenario": "REPETITIVE_OR_TRANSITION_GEOMETRY",
+    "seed": 271003,
+    "start": [
+      -28.024460162804385,
+      -28.01107338829831,
+      -0.005797503124024861
+    ]
+  },
+  "planned_matrix": [
+    {
+      "arm": "BASELINE_CONTINUE",
+      "distance_m": 30.0,
+      "episode_id": "NORMAL_GEOMETRY_271001_A1",
+      "route": [
+        [
+          6.0,
+          0.0,
+          0.0
+        ],
+        [
+          6.0,
+          10.0,
+          0.0
+        ],
+        [
+          16.0,
+          10.0,
+          0.0
+        ],
+        [
+          16.0,
+          6.0,
+          0.0
+        ]
+      ],
+      "scenario": "NORMAL_GEOMETRY",
+      "seed": 271001,
+      "start": [
+        -28.029659777681886,
+        -28.003319011287687,
+        0.0016967719582933836
+      ],
+      "technical_retry_of": "NORMAL_GEOMETRY_271001"
+    },
+    {
+      "arm": "BASELINE_CONTINUE",
+      "distance_m": 30.0,
+      "episode_id": "NORMAL_GEOMETRY_271002",
+      "route": [
+        [
+          6.0,
+          0.0,
+          0.0
+        ],
+        [
+          6.0,
+          10.0,
+          0.0
+        ],
+        [
+          16.0,
+          10.0,
+          0.0
+        ],
+        [
+          16.0,
+          6.0,
+          0.0
+        ]
+      ],
+      "scenario": "NORMAL_GEOMETRY",
+      "seed": 271002,
+      "start": [
+        -28.005330911117262,
+        -27.972237833823392,
+        -0.009863937220088818
+      ]
+    },
+    {
+      "arm": "BASELINE_CONTINUE",
+      "distance_m": 30.0,
+      "episode_id": "NORMAL_GEOMETRY_271003",
+      "route": [
+        [
+          6.0,
+          0.0,
+          0.0
+        ],
+        [
+          6.0,
+          10.0,
+          0.0
+        ],
+        [
+          16.0,
+          10.0,
+          0.0
+        ],
+        [
+          16.0,
+          6.0,
+          0.0
+        ]
+      ],
+      "scenario": "NORMAL_GEOMETRY",
+      "seed": 271003,
+      "start": [
+        -28.024460162804385,
+        -28.01107338829831,
+        -0.005797503124024861
+      ]
+    },
+    {
+      "arm": "BASELINE_CONTINUE",
+      "distance_m": 30.0,
+      "episode_id": "CORRIDOR_DEGENERACY_271001",
+      "route": [
+        [
+          5.0,
+          0.0,
+          0.0
+        ],
+        [
+          10.0,
+          0.0,
+          0.0
+        ],
+        [
+          15.0,
+          0.0,
+          0.0
+        ],
+        [
+          20.0,
+          0.0,
+          0.0
+        ],
+        [
+          25.0,
+          0.0,
+          0.0
+        ],
+        [
+          30.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "scenario": "CORRIDOR_DEGENERACY",
+      "seed": 271001,
+      "start": [
+        -15.029659777681884,
+        -0.003319011287688158,
+        0.0016967719582933836
+      ]
+    },
+    {
+      "arm": "BASELINE_CONTINUE",
+      "distance_m": 30.0,
+      "episode_id": "CORRIDOR_DEGENERACY_271002",
+      "route": [
+        [
+          5.0,
+          0.0,
+          0.0
+        ],
+        [
+          10.0,
+          0.0,
+          0.0
+        ],
+        [
+          15.0,
+          0.0,
+          0.0
+        ],
+        [
+          20.0,
+          0.0,
+          0.0
+        ],
+        [
+          25.0,
+          0.0,
+          0.0
+        ],
+        [
+          30.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "scenario": "CORRIDOR_DEGENERACY",
+      "seed": 271002,
+      "start": [
+        -15.00533091111726,
+        0.027762166176608642,
+        -0.009863937220088818
+      ]
+    },
+    {
+      "arm": "BASELINE_CONTINUE",
+      "distance_m": 30.0,
+      "episode_id": "CORRIDOR_DEGENERACY_271003",
+      "route": [
+        [
+          5.0,
+          0.0,
+          0.0
+        ],
+        [
+          10.0,
+          0.0,
+          0.0
+        ],
+        [
+          15.0,
+          0.0,
+          0.0
+        ],
+        [
+          20.0,
+          0.0,
+          0.0
+        ],
+        [
+          25.0,
+          0.0,
+          0.0
+        ],
+        [
+          30.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "scenario": "CORRIDOR_DEGENERACY",
+      "seed": 271003,
+      "start": [
+        -15.024460162804386,
+        -0.011073388298311917,
+        -0.005797503124024861
+      ]
+    },
+    {
+      "arm": "BASELINE_CONTINUE",
+      "distance_m": 30.0,
+      "episode_id": "REPETITIVE_OR_TRANSITION_GEOMETRY_271001",
+      "route": [
+        [
+          0.0,
+          10.0,
+          0.0
+        ],
+        [
+          5.0,
+          10.0,
+          0.0
+        ],
+        [
+          10.0,
+          10.0,
+          0.0
+        ],
+        [
+          15.0,
+          10.0,
+          0.0
+        ],
+        [
+          20.0,
+          10.0,
+          0.0
+        ]
+      ],
+      "scenario": "REPETITIVE_OR_TRANSITION_GEOMETRY",
+      "seed": 271001,
+      "start": [
+        -28.029659777681886,
+        -28.003319011287687,
+        0.0016967719582933836
+      ]
+    },
+    {
+      "arm": "BASELINE_CONTINUE",
+      "distance_m": 30.0,
+      "episode_id": "REPETITIVE_OR_TRANSITION_GEOMETRY_271002",
+      "route": [
+        [
+          0.0,
+          10.0,
+          0.0
+        ],
+        [
+          5.0,
+          10.0,
+          0.0
+        ],
+        [
+          10.0,
+          10.0,
+          0.0
+        ],
+        [
+          15.0,
+          10.0,
+          0.0
+        ],
+        [
+          20.0,
+          10.0,
+          0.0
+        ]
+      ],
+      "scenario": "REPETITIVE_OR_TRANSITION_GEOMETRY",
+      "seed": 271002,
+      "start": [
+        -28.005330911117262,
+        -27.972237833823392,
+        -0.009863937220088818
+      ]
+    }
+  ],
+  "pre_amendment_scientific_capture_bytes": 0,
+  "pre_amendment_scientific_endpoint_existed": false,
+  "reason": "Stage resolves p3at.inc nested hokuyo.inc relative to new world root; first Stage exited, no scans/GT/endpoints",
+  "retry_world_sha256": "19048e33046ded44e724cfe561d9b3fdecfe272d1f583f30f654961212b22409",
+  "unchanged": [
+    "routes",
+    "seeds",
+    "initial nuisance poses",
+    "odometry coefficients",
+    "sensor",
+    "Karto",
+    "GT alignment",
+    "error metric",
+    "healthy threshold rule",
+    "event duration",
+    "15 total and9 baseline attempts"
+  ]
+}

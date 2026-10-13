@@ -1,0 +1,14 @@
+<launch>
+ <param name="use_sim_time" value="true"/><param name="use_tf1" value="true"/>
+ <rosparam file="/home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/param/ros.yaml"/>
+ <node name="Stage" pkg="stage_ros" type="stageros" args="-g /home/wcqw/ac-slam_doc81/results/research_direction/localization_recovery_phase0/protocol/worlds/NORMAL_GEOMETRY_271001_A2.world" output="screen"><param name="base_watchdog_timeout" value="0"/></node>
+ <node name="Operator" pkg="nav2d_operator" type="operator"><remap from="scan" to="base_scan"/><rosparam file="/home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/param/operator.yaml"/><rosparam file="/home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/param/costmap.yaml" ns="local_map"/></node>
+ <node name="Mapper" pkg="nav2d_karto" type="mapper" output="screen"><remap from="scan" to="base_scan"/><rosparam file="/home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/param/mapper.yaml"/>
+   <param name="enable_edge_provenance" value="true"/><param name="edge_provenance_path" value="/home/wcqw/ac-slam_doc81/results/research_direction/localization_recovery_phase0/baseline/NORMAL_GEOMETRY_271001_A2/edge_provenance.jsonl"/><param name="edge_provenance_run_id" value="NORMAL_GEOMETRY_271001_A2"/>
+   <param name="instrumentation_flush_period_s" value="0.0"/><param name="enable_full_pose_graph_observer" value="true"/></node>
+ <node name="Navigator" pkg="nav2d_navigator" type="navigator" output="screen"><rosparam file="/home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/param/navigator.yaml"/><param name="exploration_strategy" value="NearestFrontierPlanner"/><param name="save_path_plan_time" value="/home/wcqw/ac-slam_doc81/results/research_direction/localization_recovery_phase0/baseline/NORMAL_GEOMETRY_271001_A2/planning_time.txt"/></node>
+ <node name="GetMap" pkg="nav2d_navigator" type="get_map_client"/>
+ <param name="robot_description" command="rosrun xacro xacro $(find p2os_urdf)/defs/pioneer3at.xacro"/>
+ <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher"/>
+ <node pkg="p2os_urdf" type="p2os_publisher_3at" name="publisher"/>
+</launch>

@@ -1,0 +1,10 @@
+include "/home/wcqw/ac-slam/baseline/Graph-Based_SLAM-Aware_Exploration/world/map3/p3at.inc"
+interval_sim 100
+resolution 0.025
+threads 2
+define wall model ( color "gray30" obstacle_return 1 laser_return 1 )
+wall (size [100 0.3 1] pose [0 1.7 0 0])
+wall (size [100 0.3 1] pose [0 -1.7 0 0])
+wall (size [0.3 3.7 1] pose [-50 0 0 0])
+wall (size [0.3 3.7 1] pose [50 0 0 0])
+pioneer3at (name "robot" pose [-15.029659777682 -0.003319011288 0 0.097217872006])

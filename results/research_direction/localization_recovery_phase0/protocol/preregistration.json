@@ -1,0 +1,49 @@
+{
+  "alignment": "one initial stationary map-base to GT SE2 transform before StartMapping; never refit",
+  "baseline_commit": "4746834ffa44504443fd07214105fe850d6f94e6",
+  "baseline_limit": 9,
+  "baseline_matrix_sha256": "ad38d4cc8ad4045aff11a663caca27a1dd9a3ba870028705dd10f0c80a13cfb2",
+  "date": "2026-10-13",
+  "degradation_event": "strict translation error > frozen threshold for >=2s with consecutive gap <=0.25s; GT is offline only",
+  "first_gate": "at least 2/3 episodes of a weak scenario have events and are worse than healthy; geometry proxy not sufficient",
+  "frozen_code_sha256": {
+    "tools/research_direction/localization_recovery_phase0/analysis.py": "0db380430b3810ba7b7af3b73c432b5bacf9d09b59f6be366cd56e1ddfca65f5",
+    "tools/research_direction/localization_recovery_phase0/driver.py": "2d315814c053e659f30d1b7d381068d8882b6e7a2be781f5c84b4371b82617a2",
+    "tools/research_direction/localization_recovery_phase0/metrics.py": "292c613e0577ae27b5a0e162d99b9fcd6dac6162e60a0435d1d0ef5ffb53f0f4",
+    "tools/research_direction/localization_recovery_phase0/protocol.py": "4aeb79bba02cc9bdd6f56f55a98609b1a50e0e6ad18c63fb9c966462cb6d37d5",
+    "tools/research_direction/localization_recovery_phase0/runner.py": "0f2e9a71bfe370c8bf8e96af59c521c8e8fbd1ba8a080a707a88c93da141cebc",
+    "tools/research_direction/localization_recovery_phase0/test_phase0.py": "0732f650ca814d2495411a351ef781d1865f77d32bd291d4e6b2589bdd06caf1"
+  },
+  "geometry_proxy": "point-to-local-line normal Jacobian [dx,dy,L*dtheta], L=1m, unit weights; not Karto correlation matcher Hessian; no threshold fitted",
+  "goal_sim_timeout_s": 150,
+  "gt_sync": "linear x/y plus shortest-angle heading interpolation; bracketing gap <=0.15s; exact stamped TF only, missing stays missing",
+  "hard_episode_wall_timeout_s": 600,
+  "healthy_calibration": "all three NORMAL_GEOMETRY episodes first; threshold=max(0.15m,3*max episode p95 error); freeze before other six",
+  "id": "DOC81_LOCALIZATION_DEGRADATION_RECOVERY_FEASIBILITY",
+  "intervention_limit": 6,
+  "karto_parameters": "same committed mapper.yaml and ros.yaml; frozen Doc79 observation binary, no rebuild",
+  "max_tf_record_missing_fraction": 0.1,
+  "max_total_episode_attempts": 15,
+  "no_auto_retry": true,
+  "no_extra_pressure_round": true,
+  "no_gt_online_decision": true,
+  "primary_metrics": [
+    "online GT translation/heading error",
+    "1s translation/rotation RPE",
+    "continuous error exceedance exposure",
+    "events",
+    "task completion",
+    "time",
+    "path length"
+  ],
+  "recovery": "only after first gate; protocol must be frozen separately before intervention. No automatic method development. Local geometry reposition must be safely reachable and informative; may be infeasible.",
+  "robot_odometry": "unchanged p3at explicit odom_error [0.05,0.05,0.1,0]; no injected noise or stress search",
+  "seed_semantics": "frozen independent start x/y +/-0.03m and heading +/-0.01rad nuisance perturbations; NOT a TSP seed, NOT deterministic Karto/Stage threading",
+  "seeds": [
+    271001,
+    271002,
+    271003
+  ],
+  "task": "online mapping SLAM, fixed Nav2D tasks; no known map enters planner, map3 bitmap only defines physical simulator",
+  "type": "FEASIBILITY_SCREENING"
+}
