@@ -1,0 +1,16 @@
+{
+  "scope": "bounded offline direction screening, not a manuscript or exhaustive review",
+  "claims": [
+    {"id":"G1_FULL", "type":"repository_raw_verified", "intent":"Full valid map3 trajectories retain task-level error beyond local probe scale", "anchors":["analysis/task_headroom_audit.csv", "analysis/formal_headroom_summary.json", "baseline/src/pubPathGT.cpp laser GT conversion"]},
+    {"id":"G1_LOCAL", "type":"repository_raw_verified", "intent":"Local synchronous information changes do not consistently reduce target GT error", "anchors":["analysis/independent_doc79_target_GT.csv", "analysis/historical_constraint_value.csv"]},
+    {"id":"G2", "type":"repository_limit", "intent":"Geometric alternatives exist but pre-decision occupancy safety and counterfactual outcomes are absent", "anchors":["audit/available_decision_states.csv", "analysis/local_path_candidates.csv", "analysis/global_target_candidates.csv"]},
+    {"id":"PALC", "type":"primary_method_verified", "intent":"Probability times uncertainty reduction minus travel cost is already used for global ALC target choice", "anchors":["https://cdn.amazon.science/7b/55/cb3dafd14b5ba7210870af299c8f/probabilistic-active-loop-closure-for-autonomous-exploration.pdf#page=4", "V-B/V-C equations 9-10; VI target rotation"]},
+    {"id":"RETRACE", "type":"primary_method_verified", "intent":"Historical waypoint retracing and bidirectional graph stabilizing paths are prior mechanisms", "anchors":["https://arxiv.org/pdf/2503.17005v3", "IV framework and IV-C navigation", "https://arxiv.org/html/2504.10416v3#S4.SS2", "IV-B region refinement"]},
+    {"id":"KIM", "type":"primary_method_verified", "intent":"Expected association-aware information along a revisit path predates 2024", "anchors":["https://s3.us-east-2.amazonaws.com/publications.perl.engin.umich.edu/akim-2015a.pdf", "4.2 and 4.3.1-4.3.2"]},
+    {"id":"RETRO", "type":"primary_method_verified", "intent":"Retroactive loop closure revisits stored data, not a physical action selector", "anchors":["https://arxiv.org/html/2607.13516v1#S3.SS5", "III-E equations 13-18; IV-C"]},
+    {"id":"LAEG", "type":"partial_source_only", "intent":"Known graph/inner-frontier overlap; full implementation and experimental baselines remain unverified", "anchors":["https://www.sciencedirect.com/science/article/pii/S092188902200104X", "publisher preview: LAEG and Exploring and closing loops sections"]},
+    {"id":"FINAL", "type":"inference", "intent":"No demonstrated fixed-policy defect implies hypothesis-only rather than method-development authorization", "anchors":["analysis/A1_A2_research_decision_matrix.csv", "literature/literature_matrix.csv", "analysis/counterfactual_limitations.md"]}
+  ],
+  "pdf_anchor_policy": "PASS integrity sidecar required for PDF page anchors; Pathak preflight UNAVAILABLE (xref coverage), cite sections/algorithm only; Region/retroactive HTML methods read, PDF acquisition failed",
+  "no_full_text_publication": true
+}
