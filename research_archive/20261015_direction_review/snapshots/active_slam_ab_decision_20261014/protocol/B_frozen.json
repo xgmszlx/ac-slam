@@ -1,0 +1,75 @@
+{
+  "cases": [
+    [
+      "corner",
+      "asymmetric",
+      false,
+      [
+        4.4,
+        4.0,
+        0.0
+      ]
+    ],
+    [
+      "structure_view",
+      "asymmetric",
+      false,
+      [
+        4.0,
+        4.4,
+        1.5707963267948966
+      ]
+    ],
+    [
+      "changed_front",
+      "asymmetric",
+      true,
+      [
+        4.4,
+        4.0,
+        0.0
+      ]
+    ],
+    [
+      "changed_side",
+      "asymmetric",
+      true,
+      [
+        4.0,
+        4.4,
+        1.5707963267948966
+      ]
+    ],
+    [
+      "symmetric_front",
+      "symmetric",
+      false,
+      [
+        4.4,
+        4.0,
+        0.0
+      ]
+    ],
+    [
+      "symmetric_side",
+      "symmetric",
+      false,
+      [
+        4.0,
+        4.4,
+        1.5707963267948966
+      ]
+    ]
+  ],
+  "beams": 901,
+  "range": 25.0,
+  "noise": 0.03,
+  "seed": 7,
+  "guess_error": [
+    0.2,
+    0.0,
+    0.02
+  ],
+  "actual_algorithm": "installed RTAB-Map RegistrationIcp; default ICP parameters except PointToPlane=true",
+  "scope": "pairwise registration, not full SLAM; no closed-loop policy"
+}

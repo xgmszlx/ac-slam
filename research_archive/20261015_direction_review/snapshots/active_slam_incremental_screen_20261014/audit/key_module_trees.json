@@ -1,0 +1,157 @@
+[
+  {
+    "name": "fael",
+    "path": "fael_planner/planner/src",
+    "items": [
+      {
+        "name": "graph",
+        "path": "fael_planner/planner/src/graph",
+        "contentType": "directory"
+      },
+      {
+        "name": "perception",
+        "path": "fael_planner/planner/src/perception",
+        "contentType": "directory"
+      },
+      {
+        "name": "preprocess",
+        "path": "fael_planner/planner/src/preprocess",
+        "contentType": "directory"
+      },
+      {
+        "name": "rapid_cover_planner",
+        "path": "fael_planner/planner/src/rapid_cover_planner",
+        "contentType": "directory"
+      },
+      {
+        "name": "topo_planner",
+        "path": "fael_planner/planner/src/topo_planner",
+        "contentType": "directory"
+      },
+      {
+        "name": "tsp_solver",
+        "path": "fael_planner/planner/src/tsp_solver",
+        "contentType": "directory"
+      }
+    ]
+  },
+  {
+    "name": "epic",
+    "path": "src/global_planner/frontier_manager/src",
+    "items": [
+      {
+        "name": "frontier_manager.cpp",
+        "path": "src/global_planner/frontier_manager/src/frontier_manager.cpp",
+        "contentType": "file"
+      },
+      {
+        "name": "frontier_viszer.cpp",
+        "path": "src/global_planner/frontier_manager/src/frontier_viszer.cpp",
+        "contentType": "file"
+      },
+      {
+        "name": "global_planning.cpp",
+        "path": "src/global_planner/frontier_manager/src/global_planning.cpp",
+        "contentType": "file"
+      },
+      {
+        "name": "raycast.cpp",
+        "path": "src/global_planner/frontier_manager/src/raycast.cpp",
+        "contentType": "file"
+      }
+    ]
+  },
+  {
+    "name": "metricsemantic",
+    "path": "exploration_planner/planner/exploration_manager/src",
+    "items": [
+      {
+        "name": "exploration_node.cpp",
+        "path": "exploration_planner/planner/exploration_manager/src/exploration_node.cpp",
+        "contentType": "file"
+      },
+      {
+        "name": "global_plan_server.cpp",
+        "path": "exploration_planner/planner/exploration_manager/src/global_plan_server.cpp",
+        "contentType": "file"
+      },
+      {
+        "name": "global_plan_server_node.cpp",
+        "path": "exploration_planner/planner/exploration_manager/src/global_plan_server_node.cpp",
+        "contentType": "file"
+      },
+      {
+        "name": "ms_exploration_fsm.cpp",
+        "path": "exploration_planner/planner/exploration_manager/src/ms_exploration_fsm.cpp",
+        "contentType": "file"
+      },
+      {
+        "name": "ms_exploration_manager.cpp",
+        "path": "exploration_planner/planner/exploration_manager/src/ms_exploration_manager.cpp",
+        "contentType": "file"
+      }
+    ]
+  },
+  {
+    "name": "falcon",
+    "path": "falcon_planner/exploration_manager/src",
+    "items": [
+      {
+        "name": "exploration_fsm.cpp",
+        "path": "falcon_planner/exploration_manager/src/exploration_fsm.cpp",
+        "contentType": "file"
+      },
+      {
+        "name": "exploration_manager.cpp",
+        "path": "falcon_planner/exploration_manager/src/exploration_manager.cpp",
+        "contentType": "file"
+      },
+      {
+        "name": "exploration_node.cpp",
+        "path": "falcon_planner/exploration_manager/src/exploration_node.cpp",
+        "contentType": "file"
+      }
+    ]
+  },
+  {
+    "name": "pipe",
+    "path": "eval_deploy",
+    "items": [
+      {
+        "name": "notebooks",
+        "path": "eval_deploy/notebooks",
+        "contentType": "directory"
+      },
+      {
+        "name": "deploy_map_prop.py",
+        "path": "eval_deploy/deploy_map_prop.py",
+        "contentType": "file"
+      },
+      {
+        "name": "deploy_scratch.py",
+        "path": "eval_deploy/deploy_scratch.py",
+        "contentType": "file"
+      },
+      {
+        "name": "deploy_utils.py",
+        "path": "eval_deploy/deploy_utils.py",
+        "contentType": "file"
+      },
+      {
+        "name": "glocal_utils.py",
+        "path": "eval_deploy/glocal_utils.py",
+        "contentType": "file"
+      },
+      {
+        "name": "map_prop_pred_node.py",
+        "path": "eval_deploy/map_prop_pred_node.py",
+        "contentType": "file"
+      },
+      {
+        "name": "viz_utils.py",
+        "path": "eval_deploy/viz_utils.py",
+        "contentType": "file"
+      }
+    ]
+  }
+]

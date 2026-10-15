@@ -1,0 +1,155 @@
+--- upstream/rtabmap_odom/CMakeLists.txt
++++ instrumented/rtabmap_odom/CMakeLists.txt
+@@ -2,6 +2,7 @@
+ project(rtabmap_odom)
+ 
+ find_package(catkin REQUIRED COMPONENTS
++             slam_audit
+              cv_bridge image_geometry laser_geometry message_filters 
+              nav_msgs nodelet pcl_conversions pcl_ros pluginlib roscpp 
+              sensor_msgs rtabmap_conversions rtabmap_msgs rtabmap_util
+@@ -32,9 +33,6 @@
+ )
+   
+ SET(rtabmap_odom_plugins_lib_src
+-   src/nodelets/rgbd_odometry.cpp
+-   src/nodelets/stereo_odometry.cpp
+-   src/nodelets/rgbdicp_odometry.cpp
+    src/nodelets/icp_odometry.cpp
+ )
+ 
+@@ -97,3 +95,5 @@
+    nodelet_plugins.xml
+    DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+ )
++
++add_dependencies(rtabmap_odom ${catkin_EXPORTED_TARGETS})
+--- upstream/rtabmap_odom/package.xml
++++ instrumented/rtabmap_odom/package.xml
+@@ -10,6 +10,7 @@
+   <url type="repository">https://github.com/introlab/rtabmap_ros</url>
+ 
+   <buildtool_depend>catkin</buildtool_depend>
++  <depend>slam_audit</depend>
+ 
+   <depend>cv_bridge</depend>
+   <depend>image_geometry</depend>
+--- upstream/rtabmap_odom/src/OdometryROS.cpp
++++ instrumented/rtabmap_odom/src/OdometryROS.cpp
+@@ -25,6 +25,7 @@
+ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+ 
++#include <slam_audit/Trace.h>
+ #include "rtabmap_odom/OdometryROS.h"
+ 
+ #include <sensor_msgs/Image.h>
+@@ -99,6 +100,7 @@
+ 
+ void OdometryROS::onInit()
+ {
++	slam_audit::emit(std_msgs::Header(),"FRONTEND_INITIALIZED");
+ 	ros::NodeHandle & nh = getNodeHandle();
+ 	ros::NodeHandle & pnh = getPrivateNodeHandle();
+ 
+@@ -460,13 +462,14 @@
+ 
+ void OdometryROS::processData(SensorData & data, const std_msgs::Header & header)
+ {
+-	//NODELET_WARN("Received image: %f delay=%f", data.stamp(), (ros::Time::now() - header.stamp).toSec());
++	slam_audit::emit(header,"SLOT_ATTEMPT");
+ 	if(dataMutex_.lockTry() == 0)
+ 	{
+ 		if(bufferedDataToProcess_) {
+ 			NODELET_ERROR("We didn't receive IMU newer than previous image (%f) and we just received a new image (%f). The previous image is dropped!",
+ 						dataHeaderToProcess_.stamp.toSec(), header.stamp.toSec());
+ 		}
++		slam_audit::emit(header,"SLOT_ACCEPTED");
+ 		dataToProcess_ = data;
+ 		dataHeaderToProcess_ = header;
+ 		bufferedDataToProcess_ = false;
+@@ -475,6 +478,7 @@
+ 	}
+ 	else
+ 	{
++		slam_audit::emit(header,"LOCK_DROP");
+ 		NODELET_DEBUG("Dropping image/scan data");
+ 	}
+ }
+@@ -495,11 +499,14 @@
+ 		return;
+ 	}
+ 
++	slam_audit::End end; // declared before lock: emits AFTER mutex release
+ 	UScopeMutex lock(dataMutex_);
+ 
+ 	// aliases
+ 	SensorData & data = dataToProcess_;
+ 	std_msgs::Header & header = dataHeaderToProcess_;
++	end.header=header; slam_audit::setContext(header);
++	slam_audit::emit(header,"PROCESS_LOOP_ENTER");
+ 
+ 	std::vector<std::pair<double, IMU> > imus;
+ 	{
+@@ -603,7 +610,9 @@
+ 	Transform guessCurrentPose;
+ 	if(!guessFrameId_.empty())
+ 	{
++		slam_audit::emit(header,"GUESS_TF_BEGIN");
+ 		guessCurrentPose = rtabmap_conversions::getTransform(guessFrameId_, frameId_, header.stamp, this->tfListener(), this->waitForTransformDuration());
++		slam_audit::emit(header,guessCurrentPose.isNull()?"GUESS_TF_FAIL":"GUESS_TF_OK");
+ 
+ 		Transform previousPose = guessPreviousPose_;
+ 		if(guessPreviousPose_.isNull())
+@@ -670,7 +679,9 @@
+ 	rtabmap::Transform pose;
+ 	if(!tooOldPreviousData)
+ 	{
++		slam_audit::emit(header,"ESTIMATOR_BEGIN");
+ 		pose = odometry_->process(data, guess_, &info);
++		slam_audit::emit(header,pose.isNull()?"ESTIMATOR_FAILED":"ESTIMATOR_SUCCESS");
+ 	}
+ 	if(!pose.isNull())
+ 	{
+@@ -951,6 +962,7 @@
+ 		infoMsg.header.frame_id = odomFrameId_;
+ 		if(odomInfoPub_.getNumSubscribers()>0) {
+ 			odomInfoPub_.publish(infoMsg);
++			slam_audit::emit(header,"ODOMINFO_PUBLISHED",std::string("{\"lost\":")+(infoMsg.lost?"true":"false")+"}");
+ 		}
+ 
+ 		if(odomInfoLitePub_.getNumSubscribers()>0)
+--- upstream/rtabmap_odom/src/nodelets/icp_odometry.cpp
++++ instrumented/rtabmap_odom/src/nodelets/icp_odometry.cpp
+@@ -25,6 +25,7 @@
+ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+ 
++#include <slam_audit/Trace.h>
+ #include <rtabmap_odom/OdometryROS.h>
+ 
+ #include <pluginlib/class_list_macros.hpp>
+@@ -335,6 +336,7 @@
+ 			return;
+ 		}
+ 
++		slam_audit::emit(scanMsg->header,"CALLBACK_ENTER");
+ 		scanReceived_ = true;
+ 		if(this->isPaused())
+ 		{
+@@ -347,6 +349,7 @@
+ 				scanMsg->header.stamp,
+ 				this->tfListener(),
+ 				this->waitForTransformDuration());
++		slam_audit::emit(scanMsg->header,localScanTransform.isNull()?"LASER_TF_FAIL":"LASER_TF_OK");
+ 		if(localScanTransform.isNull())
+ 		{
+ 			ROS_ERROR("TF of received laser scan topic at time %fs is not set, aborting odometry update.", scanMsg->header.stamp.toSec());
+@@ -560,6 +563,7 @@
+ 				0,
+ 				rtabmap_conversions::timestampFromROS(scanMsg->header.stamp));
+ 
++		slam_audit::emit(scanMsg->header,"PREPROCESS_COMPLETE");
+ 		this->processData(data, scanMsg->header);
+ 	}
+ 

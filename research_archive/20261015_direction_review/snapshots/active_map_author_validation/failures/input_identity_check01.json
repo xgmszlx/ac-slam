@@ -1,0 +1,53 @@
+{
+  "checks": {
+    "old_directories_unchanged": true,
+    "B1_raw_inputs_identical": false,
+    "all_owned_processes_exited": true,
+    "author_numerical_yaml_unchanged": true,
+    "author_runtime_source_frozen": true,
+    "scientific_scene_assets_frozen": true
+  },
+  "protection": {
+    "/home/wcqw/ac-slam": true,
+    "/home/wcqw/ac-slam_alc_screen": true,
+    "/home/wcqw/ac-slam_doc81": true,
+    "/home/wcqw/active_slam_ab_decision_20261014": true,
+    "/home/wcqw/active_slam_feedback_probe_20261014": true
+  },
+  "input_checks": {
+    "scientific_05_B1_S1": {
+      "/scan": {
+        "original": 506,
+        "replay": 506,
+        "ordered_serialized_messages_identical": false
+      },
+      "/odom": {
+        "original": 506,
+        "replay": 506,
+        "ordered_serialized_messages_identical": false
+      },
+      "/base_pose_ground_truth": {
+        "original": 506,
+        "replay": 506,
+        "ordered_serialized_messages_identical": false
+      }
+    },
+    "scientific_06_B1_S3": {
+      "/scan": {
+        "original": 506,
+        "replay": 506,
+        "ordered_serialized_messages_identical": false
+      },
+      "/odom": {
+        "original": 506,
+        "replay": 506,
+        "ordered_serialized_messages_identical": false
+      },
+      "/base_pose_ground_truth": {
+        "original": 506,
+        "replay": 506,
+        "ordered_serialized_messages_identical": false
+      }
+    }
+  }
+}

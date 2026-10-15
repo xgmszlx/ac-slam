@@ -1,0 +1,96 @@
+{
+  "scan_count": 283,
+  "odom_count": 217,
+  "odominfo_count": 217,
+  "strict_pairs": 199,
+  "pair_fraction": 0.7031802120141343,
+  "missing": {
+    "EXACT_STAMP_ABSENT": 66,
+    "OUTSIDE_RECORDED_RANGE": 18
+  },
+  "tf_conflicting_duplicates": 0,
+  "tf_multiple_parents": {},
+  "tf_owners": {
+    "base_link->base_laser_link": [
+      "unknown"
+    ],
+    "base_footprint->base_link": [
+      "unknown"
+    ],
+    "wheel_odom->base_footprint": [
+      "unknown"
+    ],
+    "icp_odom->wheel_odom": [
+      "unknown"
+    ],
+    "map->icp_odom": [
+      "unknown"
+    ]
+  },
+  "mean_translation_error": 0.008947452615037694,
+  "max_translation_error": 0.015207908570610766,
+  "mean_1s_rpe": 0.0012181101214730572,
+  "icp_nonlost": 217,
+  "icp_lost": 0,
+  "icp_noninitial_with_correspondences": 216,
+  "icp_mean_processing_s": 0.01368495615945983,
+  "graph_nodes": 25,
+  "graph_links": 29,
+  "link_types": {
+    "0": 24,
+    "2": 5
+  },
+  "linked_node_records": 15,
+  "map_messages": 15,
+  "map_final": {
+    "stamp_ns": 22400000000,
+    "resolution": 0.05000000074505806,
+    "width": 228,
+    "height": 189,
+    "known_truth_cells": 30957,
+    "observed_known_cells": 30937,
+    "false_occupied_cells": 539,
+    "false_free_cells": 65,
+    "unknown_visible_cells": 671,
+    "observed_binary_errors": 604,
+    "actual_aligned_delta_cells": 210,
+    "info_at_stamp": true,
+    "graph_at_stamp": true
+  },
+  "gt_motion_m": 2.2500000000000036,
+  "clock_monotonic": true,
+  "collector": {
+    "status": "COMPLETED",
+    "dropped": 0,
+    "counts": {
+      "/stage_tf": 849,
+      "/base_pose_ground_truth": 283,
+      "/clock": 283,
+      "/wheel/odom_native": 283,
+      "/tf_static": 849,
+      "/scan": 283,
+      "/wheel/odom": 283,
+      "/tf": 1008,
+      "/rosout_agg": 286,
+      "/icp/odom": 217,
+      "/icp/odom_info": 217,
+      "/rtabmap/grid_map": 15,
+      "/rtabmap/info": 25,
+      "/rtabmap/mapGraph": 15,
+      "/rtabmap/mapData": 25,
+      "/cmd_vel": 622
+    },
+    "events": [
+      {
+        "event": "START",
+        "stamp": 2.9,
+        "wall": 21397.555105901
+      }
+    ],
+    "wall_s": 28.821714659999998
+  },
+  "map_metric_boundary": "Exact occupied/free error within both observed and known support. Unknown reported separately. Thick GT bitmap and endpoint-only occupancy differ; no whole-map accuracy claim.",
+  "GT_alignment": "A-priori initial world pose [-3,-2,0]; map anchor equals initial ICP coordinate. No optimized/final GT fit. GT only offline.",
+  "limitations": "No induced failure/reject qualification; neighbor graph links derive from odometry, not independent frontend matches; ICP accepted is not correctness; map updates need not improve GT metric.",
+  "signal_qualified": false
+}

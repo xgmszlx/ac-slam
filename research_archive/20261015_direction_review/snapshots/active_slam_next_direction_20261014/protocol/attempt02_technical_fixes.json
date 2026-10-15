@@ -1,0 +1,18 @@
+{
+  "scientific_parameters_unchanged": true,
+  "changes": [
+    "single bag writer including final service result",
+    "set use_sim_time before any collector init",
+    "republish rigid Stage base/laser extrinsics on latched tf_static and suppress those dynamic duplicates",
+    "ICP queue20 and TF wait duration .3s; no algorithm threshold changes"
+  ],
+  "source_hashes": {
+    "code/frame_bridge.py": "280313edca713e8817708fb9859832c0a4e52127732cfc23d64c6c991a98802e",
+    "code/a_residual.py": "ce3486de3219a6329b9f4ad1cd521b9b380597be753f4068af7036bfc9c29738",
+    "code/b_collect.py": "4affb619134e5c605e406992b43baf2d8bc110dfb203c3d4f23072ecef67db4e",
+    "code/protect.py": "2fea5faaf1c2c526a16ed18b87541cf7983ec9cd17190e9f34f9e3a5457bfbf9",
+    "code/b_evaluate.py": "65acd1df70827ac36e0fc2b583a12f8593433a5efb6895e927a680af8975c4d8",
+    "code/b_run.py": "9822564ac8c5368ad73e1f56acbd3c3015139a610ca6ef756ea09ce0241d4879",
+    "code/time_geometry.py": "18276c6706f027f1dee22b683c593df07259adad1824db9b97355c43ae152ea9"
+  }
+}

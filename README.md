@@ -1,5 +1,7 @@
 # ac-slam
 
+最新研究状态（2026-10-15）：见[多轮选题与实验审查汇总](research_archive/20261015_direction_review/README.md)。纯旋转与主动地图变化核验主线已停止，RTAB自建封装链冻结；最新候选仅建议一次受限探索性实验，尚无正式SCI方法立项。
+
 Reproducible research workspace for the public Graph-Based SLAM-Aware
 Exploration baseline. The repository preserves the code baseline, pinned
 third-party source snapshots, Phase 1--4 experiment tooling, research logs, and

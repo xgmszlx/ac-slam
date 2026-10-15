@@ -1,0 +1,90 @@
+{
+  "maximum_technical_attempts": 3,
+  "maximum_scientific_attempts": 8,
+  "attempts": [
+    {
+      "id": "technical_01_T0",
+      "kind": "technical",
+      "case": "T0",
+      "status": "TECHNICAL_RUN_FAIL",
+      "wall": 1791948138.183992,
+      "failure": "COLLECTOR_EXIT_3",
+      "finished_wall": 1791948233.4982162
+    },
+    {
+      "id": "technical_02_T0",
+      "kind": "technical",
+      "case": "T0",
+      "status": "RUNTIME_DATA_QUALIFIED",
+      "wall": 1791948266.4930503,
+      "failure": null,
+      "finished_wall": 1791948301.1644452,
+      "evaluation": "results/technical_02_T0/evaluation.json"
+    },
+    {
+      "id": "scientific_01_S0",
+      "kind": "scientific",
+      "case": "S0",
+      "status": "RUNTIME_DATA_QUALIFIED",
+      "wall": 1791948532.0114992,
+      "failure": null,
+      "finished_wall": 1791948586.699918,
+      "evaluation": "results/scientific_01_S0/evaluation.json"
+    },
+    {
+      "id": "scientific_02_S1",
+      "kind": "scientific",
+      "case": "S1",
+      "status": "RUNTIME_DATA_QUALIFIED",
+      "wall": 1791948710.176009,
+      "failure": null,
+      "finished_wall": 1791948764.9965625,
+      "evaluation": "results/scientific_02_S1/evaluation.json"
+    },
+    {
+      "id": "scientific_03_S2",
+      "kind": "scientific",
+      "case": "S2",
+      "status": "RUNTIME_DATA_QUALIFIED",
+      "wall": 1791948811.4568071,
+      "failure": null,
+      "finished_wall": 1791948866.086723,
+      "evaluation": "results/scientific_03_S2/evaluation.json"
+    },
+    {
+      "id": "scientific_04_S3",
+      "kind": "scientific",
+      "case": "S3",
+      "status": "RUNTIME_DATA_QUALIFIED",
+      "wall": 1791949100.838168,
+      "failure": null,
+      "finished_wall": 1791949155.4274433,
+      "evaluation": "results/scientific_04_S3/evaluation.json"
+    },
+    {
+      "id": "scientific_05_B1_S1",
+      "kind": "scientific",
+      "case": "B1_S1",
+      "status": "RUNTIME_DATA_QUALIFIED",
+      "wall": 1791949490.2657673,
+      "replay": true,
+      "source": "/home/wcqw/active_map_author_validation/results/scientific_02_S1",
+      "failure": null,
+      "finished_wall": 1791949565.5891278,
+      "evaluation": "results/scientific_05_B1_S1/evaluation.json"
+    },
+    {
+      "id": "scientific_06_B1_S3",
+      "kind": "scientific",
+      "case": "B1_S3",
+      "status": "RUNTIME_DATA_QUALIFIED",
+      "wall": 1791949649.8928268,
+      "replay": true,
+      "source": "/home/wcqw/active_map_author_validation/results/scientific_04_S3",
+      "failure": null,
+      "finished_wall": 1791949721.234636,
+      "evaluation": "results/scientific_06_B1_S3/evaluation.json"
+    }
+  ],
+  "note": "4 fixed conditions, at most 1 repeat each; passive and active stages conditional; no automatic expansion"
+}

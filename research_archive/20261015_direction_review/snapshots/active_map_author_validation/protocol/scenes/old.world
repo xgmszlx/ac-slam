@@ -1,0 +1,21 @@
+name "Author-map validation"
+interval_sim 100
+resolution 0.025
+threads 1
+window(size [700 600] scale 45 center [0 0] show_data 0)
+define laser ranger(
+ sensor(range [0.0 25.0] fov 360.0 samples 901)
+ size [0.07 0.07 0.05]
+)
+define robot_model position(
+ drive "diff"
+ localization "odom"
+ odom_error [0.05 0.05 0.1 0]
+ size [0.626 0.505 0.4]
+ origin [0 0 0 0]
+ velocity_bounds [-0.3 0.3 0 0 0 0 -30 30]
+ acceleration_bounds [-0.5 0.5 0 0 0 0 -90 90]
+ laser(pose [0 0 -0.2 0])
+)
+model(name "floorplan" bitmap "/home/wcqw/active_map_author_validation/protocol/scenes/old.png" size [10.5 8.55 1] pose [0 0 0 0] boundary 0 gui_move 0)
+robot_model(name "robot" pose [-3 -2 0 0])

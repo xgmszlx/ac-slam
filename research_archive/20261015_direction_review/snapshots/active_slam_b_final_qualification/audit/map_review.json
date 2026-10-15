@@ -1,0 +1,40 @@
+{
+  "original_errors": 604,
+  "FP": 539,
+  "FN": 65,
+  "unknown_visible": 671,
+  "FP_with_GT_endpoints": 402,
+  "GT_endpoint_free_cells": 652,
+  "GT_endpoint_free_distance_quantiles": [
+    0.05,
+    0.05,
+    0.05,
+    0.1118033988749895
+  ],
+  "forward_resampling_duplicate_target_cells": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "evaluation_issues": [
+    "Bitmap solid thickness versus surface laser returns",
+    "floor rasterization and float32 grid origin/resolution phase",
+    "GT ray visibility overshoots endpoints by5cm",
+    "unknown excluded from binary errors but separately reported",
+    "final visibility includes all recorded scans, not necessarily mapper accepted inputs",
+    "free-space/occupied cell count mixes coverage, representation, pose and integration"
+  ],
+  "judgment": "UNRESOLVED as standalone SLAM map-quality outcome. Coordinate/unknown conventions are auditable; 604 cannot be interpreted as nominal SLAM failure. GT endpoint agreement supports representation effects, not exclusive cause."
+}

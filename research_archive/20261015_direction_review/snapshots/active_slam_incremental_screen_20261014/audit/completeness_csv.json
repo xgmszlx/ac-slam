@@ -1,0 +1,55 @@
+{
+  "source": "sources/completeness/Results/predictions_labelled_KTH+MIT_08.csv",
+  "rows": 3647,
+  "types": {
+    "TN": 2274,
+    "FP": 44,
+    "TP": 1176,
+    "FN": 153
+  },
+  "fp_rows": 44,
+  "fp_environments": 24,
+  "examples": [
+    {
+      "image_name": "NW10-1@run1@2.0Map.png",
+      "prediction_NOT_EX": "0.052016128",
+      "prediction_EX": "0.94798386",
+      "class_id": "1",
+      "type": "FP"
+    },
+    {
+      "image_name": "0510035737_A_40_1_105@run1@0Map.png",
+      "prediction_NOT_EX": "0.113940865",
+      "prediction_EX": "0.8860591",
+      "class_id": "1",
+      "type": "FP"
+    },
+    {
+      "image_name": "NW16-2@run1@30.0Map.png",
+      "prediction_NOT_EX": "0.10018765",
+      "prediction_EX": "0.8998124",
+      "class_id": "1",
+      "type": "FP"
+    },
+    {
+      "image_name": "N52-2@run1@8.0Map.png",
+      "prediction_NOT_EX": "0.046038613",
+      "prediction_EX": "0.9539614",
+      "class_id": "1",
+      "type": "FP"
+    },
+    {
+      "image_name": "N52-2@run1@7.0Map.png",
+      "prediction_NOT_EX": "0.048798937",
+      "prediction_EX": "0.9512011",
+      "class_id": "1",
+      "type": "FP"
+    }
+  ],
+  "status": "PUBLIC_AUTHOR_OUTPUT_AUDIT_ONLY",
+  "not_reproduction": [
+    "No model inference performed",
+    "CSV release provenance versus final 2026 evaluation not independently established",
+    "Do not equate raw CSV count to final paper filtered counts"
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "classification": "ALGEBRAIC_SOURCE_AUDIT_ONLY",
+  "ensembles": {
+    "A": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "B": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ]
+  },
+  "same_mean": [
+    0.3333333333333333,
+    0.3333333333333333,
+    0.3333333333333333
+  ],
+  "same_variance": [
+    0.22222222222222224,
+    0.22222222222222224,
+    0.22222222222222224
+  ],
+  "paper_intended_1D_threshold": 0.8,
+  "paper_intended_stop_equal": true,
+  "paper_intended_stop": 3,
+  "paper_intended_1D_variance_sum_equal": true,
+  "first_hit_A": [
+    {
+      "first_hit": null,
+      "visible_cells": 3
+    },
+    {
+      "first_hit": 1,
+      "visible_cells": 1
+    },
+    {
+      "first_hit": null,
+      "visible_cells": 3
+    }
+  ],
+  "first_hit_B": [
+    {
+      "first_hit": 3,
+      "visible_cells": 3
+    },
+    {
+      "first_hit": 2,
+      "visible_cells": 2
+    },
+    {
+      "first_hit": 1,
+      "visible_cells": 1
+    }
+  ],
+  "expected_visible_cells_A": 2.3333333333333335,
+  "expected_visible_cells_B": 2.0,
+  "limitations": [
+    "Finite controlled input, not trained LaMa outputs",
+    "Paper intended 1D cumulative stopping rule, not the released implementation or full flood-fill",
+    "Not calibrated map posterior",
+    "No robot action executed",
+    "No scientific task benefit demonstrated"
+  ]
+}

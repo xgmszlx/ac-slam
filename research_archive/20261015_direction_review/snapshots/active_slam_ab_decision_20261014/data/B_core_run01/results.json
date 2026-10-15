@@ -1,0 +1,140 @@
+[
+  {
+    "case": "corner",
+    "status": "CORE_EXECUTED",
+    "predicted_new_cells": 24,
+    "accepted": true,
+    "translation_error_offline": 0.1882101912951832,
+    "yaw_error_offline": 0.0014064299999998475,
+    "registration": {
+      "accepted": "1",
+      "x": "0.588155",
+      "y": "-0.00455764",
+      "yaw": "0.00140643",
+      "correspondences": "280",
+      "inliers_ratio": "0.404624",
+      "complexity": "0.282277",
+      "icp_rms": "0",
+      "cov_x": "8.28535e-05",
+      "cov_y": "8.28535e-05",
+      "rejected": ""
+    },
+    "graph_edge_admission": "NOT_MEASURED",
+    "map_update": "NOT_MEASURED"
+  },
+  {
+    "case": "structure_view",
+    "status": "CORE_EXECUTED",
+    "predicted_new_cells": 3117,
+    "accepted": true,
+    "translation_error_offline": 0.03574093276468869,
+    "yaw_error_offline": 0.0008463267948966013,
+    "registration": {
+      "accepted": "1",
+      "x": "0.0355817",
+      "y": "0.40337",
+      "yaw": "1.56995",
+      "correspondences": "226",
+      "inliers_ratio": "0.32659",
+      "complexity": "0.279605",
+      "icp_rms": "0",
+      "cov_x": "9.35894e-05",
+      "cov_y": "9.35894e-05",
+      "rejected": ""
+    },
+    "graph_edge_admission": "NOT_MEASURED",
+    "map_update": "NOT_MEASURED"
+  },
+  {
+    "case": "changed_front",
+    "status": "CORE_EXECUTED",
+    "predicted_new_cells": 20,
+    "accepted": true,
+    "translation_error_offline": 0.1842243668357687,
+    "yaw_error_offline": 0.0035057200000001565,
+    "registration": {
+      "accepted": "1",
+      "x": "0.583712",
+      "y": "-0.0137302",
+      "yaw": "0.00350572",
+      "correspondences": "215",
+      "inliers_ratio": "0.365646",
+      "complexity": "0.277203",
+      "icp_rms": "0",
+      "cov_x": "8.83351e-05",
+      "cov_y": "8.83351e-05",
+      "rejected": ""
+    },
+    "graph_edge_admission": "NOT_MEASURED",
+    "map_update": "NOT_MEASURED"
+  },
+  {
+    "case": "changed_side",
+    "status": "CORE_EXECUTED",
+    "predicted_new_cells": 3120,
+    "accepted": true,
+    "translation_error_offline": 0.1113208096853414,
+    "yaw_error_offline": 0.0018036732051034399,
+    "registration": {
+      "accepted": "1",
+      "x": "0.11127",
+      "y": "0.396637",
+      "yaw": "1.5726",
+      "correspondences": "117",
+      "inliers_ratio": "0.183386",
+      "complexity": "0.275732",
+      "icp_rms": "0",
+      "cov_x": "0.000104252",
+      "cov_y": "0.000104252",
+      "rejected": ""
+    },
+    "graph_edge_admission": "NOT_MEASURED",
+    "map_update": "NOT_MEASURED"
+  },
+  {
+    "case": "symmetric_front",
+    "status": "CORE_EXECUTED",
+    "predicted_new_cells": 7,
+    "accepted": false,
+    "translation_error_offline": null,
+    "yaw_error_offline": null,
+    "registration": {
+      "accepted": "0",
+      "x": "0",
+      "y": "0",
+      "yaw": "0",
+      "correspondences": "0",
+      "inliers_ratio": "0",
+      "complexity": "0.305019",
+      "icp_rms": "0",
+      "cov_x": "1",
+      "cov_y": "1",
+      "rejected": "Cannot compute transform (ICP correction too large -> 0.200418 m 0.019903 rad, limits=0.200000 m, 0.780000 rad)"
+    },
+    "graph_edge_admission": "NOT_MEASURED",
+    "map_update": "NOT_MEASURED"
+  },
+  {
+    "case": "symmetric_side",
+    "status": "CORE_EXECUTED",
+    "predicted_new_cells": 3034,
+    "accepted": false,
+    "translation_error_offline": null,
+    "yaw_error_offline": null,
+    "registration": {
+      "accepted": "0",
+      "x": "0",
+      "y": "0",
+      "yaw": "0",
+      "correspondences": "0",
+      "inliers_ratio": "0",
+      "complexity": "0.30605",
+      "icp_rms": "0",
+      "cov_x": "1",
+      "cov_y": "1",
+      "rejected": "Cannot compute transform (ICP correction too large -> 0.203837 m 0.022941 rad, limits=0.200000 m, 0.780000 rad)"
+    },
+    "graph_edge_admission": "NOT_MEASURED",
+    "map_update": "NOT_MEASURED"
+  }
+]

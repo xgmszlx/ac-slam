@@ -1,0 +1,103 @@
+{
+  "author_sha": "57e83ec9ecdc9382b15b140c6f1eb89f4fd35fbe",
+  "author_parameter_source": "checked-in parameters.yaml; anomalous fraction 0.58, unchanged",
+  "paper_mismatch": "README0.8; paper0.75/0.90; not asserted equal",
+  "resolution": 0.05,
+  "size": [
+    10.5,
+    8.55
+  ],
+  "origin": [
+    -5.25,
+    -4.275,
+    0
+  ],
+  "original_racks": [
+    [
+      -0.7,
+      0.2,
+      -0.3,
+      2.2
+    ],
+    [
+      2.3,
+      0.2,
+      2.7,
+      2.2
+    ]
+  ],
+  "changed_racks": [
+    [
+      -0.7,
+      -0.8,
+      -0.3,
+      1.2
+    ],
+    [
+      1.3,
+      0.2,
+      1.7,
+      2.2
+    ]
+  ],
+  "start": [
+    -3,
+    -2,
+    0
+  ],
+  "seed": 7,
+  "science_duration_s": 50,
+  "trajectory": {
+    "stationary_before_s": 8,
+    "straight_until_s": 28,
+    "linear_speed": 0.15,
+    "angular_speed": 0
+  },
+  "pose_error_injection": {
+    "time_s": 16,
+    "relative_to_current_amcl": [
+      1.5,
+      0,
+      0
+    ],
+    "covariance_xy": 0.0025,
+    "covariance_yaw": 0.0004
+  },
+  "cases": {
+    "S0": {
+      "world": "old",
+      "inject": false
+    },
+    "S1": {
+      "world": "old",
+      "inject": true
+    },
+    "S2": {
+      "world": "changed",
+      "inject": false
+    },
+    "S3": {
+      "world": "changed",
+      "inject": true
+    }
+  },
+  "qualification": {
+    "world": "old",
+    "duration_s": 30,
+    "trajectory_same": true
+  },
+  "gate": {
+    "maximum_nominal_translation_error_m": 0.15,
+    "minimum_paired_scan_fraction": 0.9,
+    "minimum_processed_scans": 8
+  },
+  "provenance": "Scale/resolution and manually injected ~1.5m localization fault follow paper experiment choices; new fixed rack layout is not paper scene reproduction",
+  "assets": {
+    "truth_maps.npz": "de4b11f92d5f81cea73953b529153dc217e06cf47254a016f3fb056e916d03e4",
+    "changed.png": "058d2ac22db44db61ed23fb96b6e3921150378aebaccfc2202798f86fe207b41",
+    "old.yaml": "a081a8b18c4b78a962542191067a3d9c77b11e60f555d081c2fdaa7f9e57d47e",
+    "old.world": "c53f1df5023b7dfd51a8b6b227243cbf9527d2aeed843abd4e066af476a6885f",
+    "old.png": "80d79706c2465fb930266c6978faa7c78e5c5be50d1fb6f35b386dcdaf4a3e40",
+    "changed.world": "da0e253ee01a83608d2701188eec9c3a5a93d1396f5ba84f62e409d291d06454"
+  }
+}

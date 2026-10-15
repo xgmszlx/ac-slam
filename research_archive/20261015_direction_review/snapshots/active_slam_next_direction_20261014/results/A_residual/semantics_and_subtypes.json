@@ -1,0 +1,16 @@
+{
+  "missed_unseen_all": {
+    "add_occupied": 330,
+    "remove_old_occupied": 194
+  },
+  "missed_seen_all": {
+    "add_occupied": 148,
+    "remove_old_occupied": 66
+  },
+  "missed_seen_processed": {
+    "add_occupied": 133,
+    "remove_old_occupied": 60
+  },
+  "buffer_log_contract": "Only count>0 cells are emitted. no_buffer in summary.json means no POSITIVE count appeared, not absent allocation. Eligibility for zero-count cells with mature neighbors cannot be reconstructed. 90 of 193 processed-visible missed cells have positive histories and all recorded count+neighbor <7; 103 have no positive history.",
+  "active_necessity": "No new-view action or downstream localization/navigation loss measured. Missed coverage and raster differences do not prove need for active ambiguity resolution."
+}

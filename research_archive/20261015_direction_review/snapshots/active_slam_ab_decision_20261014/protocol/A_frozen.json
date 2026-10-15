@@ -1,0 +1,56 @@
+{
+  "resolution": 0.1,
+  "size": 120,
+  "beams": 121,
+  "range": 10.0,
+  "noise_std": 0.03,
+  "seeds": [
+    7,
+    17,
+    27
+  ],
+  "start": [
+    4.0,
+    4.0,
+    0.0
+  ],
+  "offsets_x": [
+    -0.6,
+    0.0,
+    0.6
+  ],
+  "offsets_y": [
+    -0.4,
+    0.0,
+    0.4
+  ],
+  "offsets_yaw": [
+    -0.04,
+    0.0,
+    0.04
+  ],
+  "decision_confidence": 0.9,
+  "effective_beams": 8.0,
+  "robust_scale": 0.15,
+  "change_prior": 0.35,
+  "footprint_radius": 0.35,
+  "scenes": [
+    "asymmetric",
+    "symmetric"
+  ],
+  "conditions": [
+    "none",
+    "pose",
+    "change",
+    "both",
+    "out_of_bank"
+  ],
+  "policies": [
+    "nearest",
+    "uncertainty",
+    "stable",
+    "discriminative",
+    "passive"
+  ],
+  "experiment_scope": "one additional view; synthetic; no trajectory SLAM"
+}

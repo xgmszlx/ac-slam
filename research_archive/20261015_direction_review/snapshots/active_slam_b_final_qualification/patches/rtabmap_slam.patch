@@ -1,0 +1,66 @@
+--- upstream/rtabmap_slam/CMakeLists.txt
++++ instrumented/rtabmap_slam/CMakeLists.txt
+@@ -4,6 +4,7 @@
+ 
+ 
+ find_package(catkin REQUIRED COMPONENTS
++             slam_audit
+              actionlib actionlib_msgs cv_bridge geometry_msgs 
+              move_base_msgs nav_msgs nodelet pluginlib sensor_msgs 
+              std_msgs std_srvs tf tf2_ros visualization_msgs 
+@@ -128,3 +129,5 @@
+    nodelet_plugins.xml
+    DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+ )
++
++add_dependencies(rtabmap_slam_plugins ${catkin_EXPORTED_TARGETS})
+--- upstream/rtabmap_slam/package.xml
++++ instrumented/rtabmap_slam/package.xml
+@@ -10,6 +10,7 @@
+   <url type="repository">https://github.com/introlab/rtabmap_ros</url>
+ 
+   <buildtool_depend>catkin</buildtool_depend>
++  <depend>slam_audit</depend>
+ 
+   <depend>actionlib</depend>
+   <depend>actionlib_msgs</depend>
+--- upstream/rtabmap_slam/src/CoreWrapper.cpp
++++ instrumented/rtabmap_slam/src/CoreWrapper.cpp
+@@ -25,6 +25,7 @@
+ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+ 
++#include <slam_audit/Trace.h>
+ #include "rtabmap_slam/CoreWrapper.h"
+ 
+ #include <stdio.h>
+@@ -139,6 +140,7 @@
+ 
+ void CoreWrapper::onInit()
+ {
++	slam_audit::emit(std_msgs::Header(),"SLAM_INITIALIZED");
+ 	ros::NodeHandle & nh = getNodeHandle();
+ 	ros::NodeHandle & pnh = getPrivateNodeHandle();
+ 
+@@ -2076,8 +2078,11 @@
+ 		}
+ 
+ 		timeMsgConversion += timer.ticks();
++		std_msgs::Header auditHeader; auditHeader.stamp=stamp; slam_audit::setContext(auditHeader);
++		slam_audit::emit(auditHeader,"GRAPH_PROCESS_BEGIN");
+ 		if(rtabmap_.process(data, odom, covariance, odomVelocity, externalStats))
+ 		{
++			slam_audit::emit(auditHeader,"GRAPH_PROCESS_SUCCESS",std::string("{\"last_node_id\":")+std::to_string(rtabmap_.getMemory()->getLastSignatureId())+"}");
+ 			timeRtabmap = timer.ticks();
+ 			mapToOdomMutex_.lock();
+ 			mapToOdom_ = rtabmap_.getMapCorrection();
+@@ -2182,7 +2187,9 @@
+ 
+ 				timeUpdateMaps = timer.ticks();
+ 
++				slam_audit::emit(auditHeader,"MAP_CACHE_SELECTED",slam_audit::ids(filteredPoses));
+ 				mapsManager_.publishMaps(filteredPoses, stamp, mapFrameId_);
++				slam_audit::emit(auditHeader,"MAP_PUBLISH_RETURN",slam_audit::ids(filteredPoses));
+ 
+ 				// Publish local graph, info
+ 				this->publishStats(stamp);

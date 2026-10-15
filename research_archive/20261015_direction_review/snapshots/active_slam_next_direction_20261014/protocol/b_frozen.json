@@ -1,0 +1,30 @@
+{
+  "scope": "Technical signal qualification only; no active policy or science matrix",
+  "runtime": "Installed RTAB-Map 0.21.13, Stage GUI 1x real time, scan-only",
+  "master_port": 11631,
+  "trajectory": {
+    "stationary_before_s": 5,
+    "straight_until_s": 20,
+    "linear_speed": 0.15,
+    "total_s": 25
+  },
+  "GT_scope": "recording and offline only; no online subscriber other than collector",
+  "tf_owners": {
+    "wheel_odom->base_footprint": "Stage via frame bridge",
+    "icp_odom->wheel_odom": "icp_odometry",
+    "map->icp_odom": "rtabmap"
+  },
+  "gates": {
+    "minimum_exact_scan_odom_GT_pair_fraction": 0.9,
+    "maximum_normal_translation_error_m": 0.15,
+    "minimum_graph_nodes": 5,
+    "collector_dropped": 0,
+    "association": "Node id+stamp to scan, OdomInfo, links, published map stamp; no guessed IDs"
+  },
+  "assets": {
+    "protocol/b_runtime.launch": "47684793cb32ba15f46de51fcb35cfe324e8635fd93c0069a6ffe2fee4ec0c91",
+    "protocol/scenes/truth_maps.npz": "de4b11f92d5f81cea73953b529153dc217e06cf47254a016f3fb056e916d03e4",
+    "protocol/scenes/old.world": "443515afd2d7ede9091e29c0b5348910baebbbeec604fbe57cfdde27365e4a7a",
+    "protocol/scenes/old.png": "80d79706c2465fb930266c6978faa7c78e5c5be50d1fb6f35b386dcdaf4a3e40"
+  }
+}

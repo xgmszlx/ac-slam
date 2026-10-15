@@ -1,0 +1,172 @@
+[
+  {
+    "name": "graph",
+    "path": "src",
+    "items": [
+      {
+        "name": "AStar",
+        "path": "src/AStar",
+        "contentType": "directory"
+      },
+      {
+        "name": "graph",
+        "path": "src/graph",
+        "contentType": "directory"
+      },
+      {
+        "name": "MyPlanner.cpp",
+        "path": "src/MyPlanner.cpp",
+        "contentType": "file"
+      },
+      {
+        "name": "MyPlanner.h",
+        "path": "src/MyPlanner.h",
+        "contentType": "file"
+      },
+      {
+        "name": "exploration_plugins.cpp",
+        "path": "src/exploration_plugins.cpp",
+        "contentType": "file"
+      },
+      {
+        "name": "pubPathGT.cpp",
+        "path": "src/pubPathGT.cpp",
+        "contentType": "file"
+      },
+      {
+        "name": "updateDistance.cpp",
+        "path": "src/updateDistance.cpp",
+        "contentType": "file"
+      }
+    ]
+  },
+  {
+    "name": "fael",
+    "path": "fael_planner/planner",
+    "items": [
+      {
+        "name": "include",
+        "path": "fael_planner/planner/include",
+        "contentType": "directory"
+      },
+      {
+        "name": "launch",
+        "path": "fael_planner/planner/launch",
+        "contentType": "directory"
+      },
+      {
+        "name": "msg",
+        "path": "fael_planner/planner/msg",
+        "contentType": "directory"
+      },
+      {
+        "name": "resource",
+        "path": "fael_planner/planner/resource",
+        "contentType": "directory"
+      },
+      {
+        "name": "src",
+        "path": "fael_planner/planner/src",
+        "contentType": "directory"
+      },
+      {
+        "name": "CMakeLists.txt",
+        "path": "fael_planner/planner/CMakeLists.txt",
+        "contentType": "file"
+      },
+      {
+        "name": "package.xml",
+        "path": "fael_planner/planner/package.xml",
+        "contentType": "file"
+      }
+    ]
+  },
+  {
+    "name": "epic",
+    "path": "src/global_planner",
+    "items": [
+      {
+        "name": "exploration_manager",
+        "path": "src/global_planner/exploration_manager",
+        "contentType": "directory"
+      },
+      {
+        "name": "frontier_manager",
+        "path": "src/global_planner/frontier_manager",
+        "contentType": "directory"
+      },
+      {
+        "name": "lidar_map",
+        "path": "src/global_planner/lidar_map",
+        "contentType": "directory"
+      },
+      {
+        "name": "pointcloud_topo",
+        "path": "src/global_planner/pointcloud_topo",
+        "contentType": "directory"
+      },
+      {
+        "name": "utils",
+        "path": "src/global_planner/utils",
+        "contentType": "directory"
+      }
+    ]
+  },
+  {
+    "name": "metricsemantic",
+    "path": "exploration_planner/planner",
+    "items": [
+      {
+        "name": "active_perception",
+        "path": "exploration_planner/planner/active_perception",
+        "contentType": "directory"
+      },
+      {
+        "name": "cop_lib",
+        "path": "exploration_planner/planner/cop_lib",
+        "contentType": "directory"
+      },
+      {
+        "name": "exploration_manager",
+        "path": "exploration_planner/planner/exploration_manager",
+        "contentType": "directory"
+      },
+      {
+        "name": "exploration_msgs",
+        "path": "exploration_planner/planner/exploration_msgs",
+        "contentType": "directory"
+      },
+      {
+        "name": "plan_env",
+        "path": "exploration_planner/planner/plan_env",
+        "contentType": "directory"
+      },
+      {
+        "name": "plan_manage",
+        "path": "exploration_planner/planner/plan_manage",
+        "contentType": "directory"
+      },
+      {
+        "name": "utils",
+        "path": "exploration_planner/planner/utils",
+        "contentType": "directory"
+      }
+    ]
+  },
+  {
+    "name": "activesplat",
+    "path": "src/planner",
+    "items": [
+      {
+        "name": "__init__.py",
+        "path": "src/planner/__init__.py",
+        "contentType": "file"
+      },
+      {
+        "name": "planner.py",
+        "path": "src/planner/planner.py",
+        "contentType": "file"
+      }
+    ]
+  }
+]

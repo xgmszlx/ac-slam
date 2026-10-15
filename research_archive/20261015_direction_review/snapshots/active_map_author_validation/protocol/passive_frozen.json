@@ -1,0 +1,15 @@
+{
+  "xy_search_halfwidth_m": 2.0,
+  "coarse_xy_step_m": 0.1,
+  "yaw_halfwidth_rad": 0.2,
+  "coarse_yaw_step_rad": 0.05,
+  "refine_xy_halfwidth_m": 0.1,
+  "refine_xy_step_m": 0.025,
+  "refine_yaw_halfwidth_rad": 0.05,
+  "refine_yaw_step_rad": 0.0125,
+  "distance_cap_m": 0.5,
+  "max_sampled_beams": 181,
+  "reestimate_every_scans": 5,
+  "input_scope": "causal current scan, prior occupancy, received baseline pose and wheel odometry; no GT",
+  "parameter_selection": "frozen once after B0 failures; no tuning or independent efficacy claim"
+}

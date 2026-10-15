@@ -1,0 +1,59 @@
+# A/B最近邻矩阵
+
+A1–A5和B1–B5各五项；S1是补充排重。未知不等于作者未实现。方法为文献支持，固定源码行为为已验证事实。
+
+| id | title | year_venue | paper_url | read_scope |
+| --- | --- | --- | --- | --- |
+| A1 | Safe and Robust Map Updating for Long-Term Operations in Dynamic Environments | Sensors 2023,23(13):6066 | https://www.mdpi.com/1424-8220/23/13/6066 | 出版站检索全文5.2/5.5/7、作者预印本；固定SHA源码；本地HTTP403失败也保留 |
+| A2 | A unified framework for data association aware robust belief space planning and perception | IJRR 2018,37(2–3) | https://indelman.github.io/ANPL-Website/Publications/Pathak18ijrr.pdf | 作者29页全文，方法3–5、Gazebo和Pioneer实验6；非2024–26新论文 |
+| A3 | PBD-AG: Persistent Baseline-Delta Active Graphs with Uncertainty-Aware Inspection for Long-Horizon Service Robots | 2026 arXiv:2608.10449v1；正式venue未确认 | https://arxiv.org/html/2608.10449v1 | 全文3.3/3.4/4和作者项目页；未核实完整执行代码 |
+| A4 | Chamelion: Reliable Change Detection for Long-Term LiDAR Mapping in Transient Environments | RA-L 2026,11(4):4361–4368, DOI10.1109/LRA.2026.3665079 | https://arxiv.org/html/2602.08189v1 | 预印本全文3/4.3/5；正式身份由Crossref/KAIST核实；固定SHA代码/README；最终VOR方法等价性未核全 |
+| A5 | Multi-session perception-aware coverage path planning for active semantic SLAM and automatic change detection | Ocean Engineering 2026,355:125170 | https://flore.unifi.it/bitstream/2158/1464552/1/1-s2.0-S0029801826010048-main%20%281%29_compressed.pdf | 作者机构20页全文4.2/4.3/5/6/7 |
+| B1 | Optimizing Exploration With a New Uncertainty Framework for Active SLAM Systems | RAS 2025，193:105059 | https://arxiv.org/html/2506.17775v1 | 方法3、实验5、附录A.4/A.5全文+代码 |
+| B2 | FIT-SLAM 2: Efficient 3D Exploration With Fisher Information and Traversability-Based Adaptive Roadmap | RAS 2025，194:105188 | https://doi.org/10.1016/j.robot.2025.105188 | 出版摘要+方法实验节选；固定SHA当前核心源码；未完整最终全文 |
+| B3 | Active Visual SLAM for Robotic Area Coverage: Theory and Experiment | IJRR 2015 | https://robots.engin.umich.edu/publications/akim-2015a.pdf | 本轮重读本地作者PDF缓存4.3.1/4.3.2和结论；17页 |
+| B4 | Probabilistic Active Loop Closure for Autonomous Exploration | ICRA 2024 | https://cdn.amazon.science/7b/55/cb3dafd14b5ba7210870af299c8f/probabilistic-active-loop-closure-for-autonomous-exploration.pdf | 方法IV-VI和实验VII作者全文 |
+| B5 | A unified framework for data association aware robust belief space planning and perception | IJRR 2018,37(2–3) | https://indelman.github.io/ANPL-Website/Publications/Pathak18ijrr.pdf | 作者29页全文，方法3–5、Gazebo和Pioneer实验6；非2024–26新论文 |
+| S1 | OASIS-Map: Object-Level Change Detection in Multi-Session Mapping using Semantic Correspondence Matching | 2026 arXiv2607.14899v1；作者页under review | https://arxiv.org/html/2607.14899v1 | 全文III/IV/V与Oxford作者页 |
+
+| id | problem | algorithm_core | sensors | real_slam | controlled_action |
+| --- | --- | --- | --- | --- | --- |
+| A1 | 错误定位及暂态障碍使占据图更新污染；长期安全更新 | 虚拟beam/实测endpoint配对；异常beam比例触发暂停和重新定位；cell滚动buffer达到计数后修改 | 2D激光、轮式底盘、AMCL | 已有地图的定位+更新，非必须在线从零SLAM；仿真/实机 | 更新启停、请求定位修正/停止；核读代码未实现按区别能力选新观察位置 |
+| A2 | 定位不确定、感知混叠及关联未知时，标准BSP的理想观测假设失效 | 高斯混合belief；对未来观测及关联假设边缘化；歧义、后验不确定性、运动成本；多步规划 | 观测模型/视觉关联；真实Pioneer办公场景，具体全部传感器未逐项核全 | 真实机器人主动感知/定位；不能自动等同未知占据地图变化维护 | 机器人候选运动/多步控制序列 |
+| A3 | 长期对象身份、存在/支持关系和可核验几何证据 | 不可变baseline+事件delta；visibility-gated存在log-odds；graph不确定性选fixture；安全近视角优化 | RGB-D、range/2D occupancy、SigLIP/GroundingDINO/SAM2及VLM | 实机集成定性；定量OmniGibson相机pose由模拟器给，不能作独立pose漂移验证 | 可达fixture观察位置及定点相机sweep、frontier |
+| A4 | 遮挡及频繁变化下scan-map长期增删判断 | 双head change classification/cross-visibility confidence；composition pseudo data；visibility条件Bayes map更新 | 3D LiDAR/point clouds | 接受配准地图/scan来维护，主要评价变化检测；不是由此验证完整active SLAM闭环 | 读scan/map并更新；本轮核查核心未实现主动运动选择，不从摘要作此判断 |
+| A5 | 跨任务发现/移除目标与语义定位/覆盖效率 | KDE-informed RRT IG；iSAM2语义目标/导航；voxel occupancy/accuracy/change probabilities；mission-specific Eq20/23 | AUV camera、DVL/IMU等导航传感器；实机SSD MobileNetV2/Jetson Nano | 是，语义定位/建图；FeelHippo仿真和实机 | AUV coverage轨迹与目标重访，发现/核验两任务策略 |
+| B1 | 地图覆盖与测量不确定性量纲、frontier和停止问题 | dispersion probability log-odds更新；UM梯度UF；signed KL SiREn；改造RRT* | 360度2D LiDAR/差速底盘 | 受限：线性位置KF-SLAM，航向已知，无匹配错误假设 | UF/CF目标、RRT/RRT*路径 |
+| B2 | 地面机器人在复杂3D地形高效探索并维持定位 | SLAM/frontier adaptive roadmap、traversability、local/global frontier与TSP；Fisher查表监测 | 视觉landmarks用于信息；RGB-D/点云用于地形；全部硬件配置未核全 | active模式集成ORB-SLAM3；论文另有GT规划计时实验，需分开 | frontier/路径；低信息触发取消目标、区域屏蔽及后退 |
+| B3 | 水下区域覆盖中的定位漂移 | saliency路径、Bernoulli visual-link success、预期终端协方差、探索/重访选择 | 相机、水下odometry/姿态/深度 | 是，iSAM视觉SLAM | 历史waypoint、往返路径或继续覆盖 |
+| B4 | 低计算量下选择真正有价值的历史目标 | cluster loop probability ×预计不确定性下降－行驶成本；neighbor D-opt/距离代理；branch-and-bound | 低算力窄FOV视觉/深度移动机器人 | 是，真实on-device | 历史keyframe cluster目标、到点固定360度观察 |
+| B5 | 定位不确定、感知混叠及关联未知时，标准BSP的理想观测假设失效 | 高斯混合belief；对未来观测及关联假设边缘化；歧义、后验不确定性、运动成本；多步规划 | 观测模型/视觉关联；真实Pioneer办公场景，具体全部传感器未逐项核全 | 真实机器人主动感知/定位；不能自动等同未知占据地图变化维护 | 机器人候选运动/多步控制序列 |
+| S1 | 跨session遮挡/分割错/相似对象的持久关联和变化 | DINOv3 dense semantic correspondence双向matching；SAM2、geometry association、object identities | RGB-LiDAR和RGB-D | pose/geometric frontend输入，非主动控制比较 | 本文核读处理采集session，主动NBV未在所读方法出现；代码尚未公开不能全称否定 |
+
+| id | future_gain | execution_feedback | assumptions | experiments_metrics | strongest_baselines |
+| --- | --- | --- | --- | --- | --- |
+| A1 | 核心更新并非未来视点收益规划 | 实测冲突、变化buffer、定位恢复；已有反馈，不能称为开环 | 异常数量可用于定位检查；大变化可能与错误定位混淆 | ROS/Gazebo与实机；地图质量、AMCL定位/恢复；实机外部tracking仍待加强 | 前作更新法/持续更新无安全检查，必须用作者实际分类器复验 |
+| A2 | 考虑动作条件的观测与关联分支，期望后验歧义与不确定性 | 推断和规划共享多假设belief，接收真实观测更新分量 | 可定义观测似然与关联候选；本文不是未知长期变化地图的专用模型 | 理论案例、Gazebo、Pioneer；歧义及估计误差/决策，完整统计需按原表重建 | BSP-uni（单峰/激进pruning），Table7/8多步及重复比较；精确配置需重新实现核对 |
+| A3 | 固定权重graph不确定性、预期表面覆盖、距离/clearance/边界约束 | 历史失败视点排除、确认/拒绝、可见miss、bounded retry及cooldown | posed RGB-D及稳定fixture；pinned fixture不动态删除；模拟导航为shortest-path proxy | 9个scene-seed构图；3个动态shared-stream；F1/IDF1/事件recall/false absence；定性实机 | DynaMem/ConceptGraphs adapted与inspired共同输入控制；作者明确不是完整系统复现 |
+| A4 | 预测cross-visibility/change置信，不是本文审查到的NBV动作收益 | 累积观测经Bayes filter修改地图；已有有效证据选择 | 共享坐标和配准；训练voxel/density接近；4.3 misalignment扰动较小范围 | 真实construction/office、公开LiSTA；scan IoU、map preservation/rejection/F1、runtime及错配噪声消融 | geometry visibility/occupancy、MapMOS、SPS；map指标没有各场景都占优 |
+| A5 | 预测voxel未知、目标识别/变化概率和revisit收益，非单纯几何覆盖 | ATR/semantic map新结果反馈动态replan和再次检查目标 | 中等尺度场景、能检测的语义OPI；大幅定位故障与地图变化竞争假设未获独立验证 | 四次仿真比较、20x20m实机浮标增删；目标位置/协方差、状态概率、90/95%coverage路程 | 同一planner仅覆盖Eq17 vs perception-aware Eq20/23；不是广泛强长期SLAM方法对照 |
+| B1 | 传播机器人及landmark不确定性；UF能否消除 | 实际测量更新UM/UF，规划器再选择；这已是反馈 | A.5线性位置KF、已知航向、无matching errors；A.4用单个最近landmark的估计不确定性传播 | Gazebo简化走廊/开阔场；四planner、覆盖、SiREn及估计不确定性 | PPS1–PPS4：CF/UF和RRT/modified RRT*因素对照 |
+| B2 | 候选可见landmark信息、路网和可通行性 | 已验证BT调用isPoseSafe，取消Nav2目标、MarkLethalFOV；核读模块未见执行残差更新预测模型 | GT planner计时与ORB-SLAM3 active模式须区分；ROS2 Humble | corridor/cave/marsyard及作者实机展示；时间覆盖、定位与计时；正式摘要33%不作独立结论 | FIT-SLAM1、GB-Planner2、FAEL、NBVP；完整最终全文仍未获取 |
+| B3 | 沿路径可能获得的视觉约束和概率 | 更新SLAM/saliency后再次决策；不是静态假设所有边必实现 | 历史visual link统计及saliency；未知区域saliency线性插值；one-step回访 | 仿真/真实船体；覆盖、导航精度、open-loop/固定回访对照 | open-loop覆盖OPL、deterministic revisit DET vs PDN；真实水下视觉link |
+| B4 | 观测匹配概率与relative graph/map distance；预期图不确定性减小 | 最新图驱动trigger/目标；本轮未确认每次执行残差校准参数 | 近邻cluster/距离不确定性代理，具体完整软件未获 | 多个floorplan；地图质量、探索时间，和全图D-opt离线比较 | 经典ALC/full-graph D-opt对照；逐项统计配置仍需完整核对 |
+| B5 | 考虑动作条件的观测与关联分支，期望后验歧义与不确定性 | 推断和规划共享多假设belief，接收真实观测更新分量 | 可定义观测似然与关联候选；本文不是未知长期变化地图的专用模型 | 理论案例、Gazebo、Pioneer；歧义及估计误差/决策，完整统计需按原表重建 | BSP-uni（单峰/激进pruning），Table7/8多步及重复比较；精确配置需重新实现核对 |
+| S1 | 匹配confidence/可见变化；不是所读全文中的动作预期收益 | 持续session mapping/association；增删移动unknown保留 | 共享坐标/posed输入；语义及geometry关联仍有限 | 户外停车场和3RScan；对象检测/关联/变化P/R/F1 | LT-Mapper、ConceptGraphs改造、Where’s-my-glasses；后者是直接对象级增量对照 |
+
+| id | code | candidate_overlap | author_stated_limitations | unknowns |
+| --- | --- | --- | --- | --- |
+| A1 | https://github.com/CentroEPiaggio/safe_and_robust_lidar_map_updating @57e83ec9ecdc9382b15b140c6f1eb89f4fd35fbe | A直接锚点；已有错误更新保护及恢复，不能重新宣布创新 | 讨论7明确大量真实变化且定位正确也可能停止；建议3D及实机外部tracking | 本机编译/原实验复现、冻结持续时间、现代强被动系统是否仍有同类损失 |
+| A2 | 本轮未核实作者完整可执行仓库 | A：主动假设消歧思想直接覆盖；B：未来测量/关联并非必然正确已直接覆盖 | 7.2明确non-myopic关联分支指数膨胀及scalability问题；多假设增加计算负担 | 地图变化假设与pose假设的联合异常建模、现行可执行代码、完整跨场景复验 |
+| A3 | 项目 https://shuobao214.github.io/PBD-AG/；本轮未找到完整作者可执行repo | 普通uncertainty核验、稳定baseline、证据gate、反复观察已有强重合；全文未见显式pose-error/map-change竞争后验，不等同证明所有版本没有 | 4.2重复几何及受限视点降低表现；4.4实机只有定性且不进定量表 | 对定位故障显式消歧、真实SLAM误差对闭环影响、代码/补充paired acquisition数据 |
+| A4 | https://github.com/url-kaist/chamelion @b03f6dd88bb2ddc7e0eefdf2aa0664a0d2533c94；HF数据/权重公开链接 | 置信证据过滤及map维护强重合；主动共同pose/change核验是否可超越仍未知 | 结论：固定cross-visibility在较小配准误差/类似训练voxel更好；future动态计算visibility | 大pose故障下false update、8GB本机依赖兼容、最终VOR差异、主动反事实动作效果 |
+| A5 | 未核实完整作者repo；不能据此说没有代码 | 跨时段主动核验+真实SLAM反馈明确已有；换2D激光/加普通gain无新颖性 | 结论未来大环境扩展和声学/多模态融合 | 完整数据/代码、极端pose错误、与强被动地图维护在同预算下比较 |
+| B1 | https://github.com/Seba-san/UncertaintyMap | 实际测量更新UM并重规划已存在；仅换RTAB-Map后端不是新机制 | 正文明确简化环境与子系统；附录明确已知航向、不考虑匹配错误 | 普通非线性SLAM、关联错误和实机有效性；当前源码航向取/gazebo/model_states，不能直接用于本方案在线决策 |
+| B2 | https://github.com/suchetanrs/FIT-SLAM | Fisher在线gate/取消/屏蔽/后退已实现；普通健康触发改路高度重合 | 未取得完整限制章节，不填推断 | 论文版本与当前代码差异；最终全文的统计/消融；校准反馈是否另处实现 |
+| B3 | 完整可执行作者系统未核实 | 从proposed/verified真实视觉link统计估计成功概率→预期信息→动作，直接覆盖B的宽泛设想 | 结论：未知区域saliency线性插值；更长horizon需预测feature和measurement likelihood；原始模态/历史训练不能自动解决本机非平稳误差 | 现代在线执行校准是否必要；无可移植完整系统保证 |
+| B4 | 未核实完整作者代码发布 | 闭环概率×预期不确定性下降－成本已有；概率收益乘积本身不能成为B贡献 | 作者说明距离代理进一步减少计算；近邻D-opt验证与on-device代理不是同一实现 | 全系统/模型更新细节；不能以传感器迁移作新颖性 |
+| B5 | 本轮未核实作者完整可执行仓库 | A：主动假设消歧思想直接覆盖；B：未来测量/关联并非必然正确已直接覆盖 | 7.2明确non-myopic关联分支指数膨胀及scalability问题；多假设增加计算负担 | 地图变化假设与pose假设的联合异常建模、现行可执行代码、完整跨场景复验 |
+| S1 | Oxford项目页标Code Soon | A的跨时段变化检测/持久ID非空白；不能据代码未得断言主动joint-pose不存在 | 本文实验低recall需进一步排查；完整作者限制不作未核断言 | 完整代码、极端位姿错误/主动核验实验、新发表版本 |

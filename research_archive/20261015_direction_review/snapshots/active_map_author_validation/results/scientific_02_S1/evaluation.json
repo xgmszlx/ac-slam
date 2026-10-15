@@ -1,0 +1,41 @@
+{
+  "scan_count": 506,
+  "strict_tf_gt_pairs": 501,
+  "pair_fraction": 0.9901185770750988,
+  "tf_conflicting_duplicates": 0,
+  "processed_scan_count": 33,
+  "freeze_count": 0,
+  "max_anomalous_ratio": 0.5660377358490566,
+  "mean_translation_error": 1.0403027057746,
+  "max_translation_error": 1.5470416234012736,
+  "mean_1s_translation_rpe": 0.03188758056896505,
+  "gt_displacement_m": 3.0000001192092896,
+  "changed_cells": 0,
+  "visible_changed_cells": 0,
+  "map_before_error": 0,
+  "actual_map_commit_events": 14,
+  "map_final": {
+    "stamp": 50.6,
+    "actual_delta": 0,
+    "map_error_cells": 1251,
+    "false_update_cells": 1251,
+    "correct_update_cells": 0,
+    "change_recall": 0.0,
+    "visible_change_recall": 0.0,
+    "occupied_union_map_score": 0.5124707716289946
+  },
+  "initialpose_messages": [
+    {
+      "stamp": 16.5,
+      "pose": [
+        -0.3316329716881561,
+        -2.025612907648419,
+        -0.00022524459749138158
+      ]
+    }
+  ],
+  "collector_dropped": 0,
+  "collector_status": "COMPLETED",
+  "note": "GT header says odom but installed Stage publishes GetGlobalPose world coordinates; known map frame equals Stage world, no fitted alignment",
+  "technical_qualification": true
+}

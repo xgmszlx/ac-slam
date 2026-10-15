@@ -1,0 +1,79 @@
+[
+  {
+    "case": "corner",
+    "diff": {},
+    "events": [
+      "ICP_BEGIN",
+      "ICP_SUCCESS"
+    ]
+  },
+  {
+    "case": "changed_front",
+    "diff": {},
+    "events": [
+      "ICP_BEGIN",
+      "ICP_SUCCESS"
+    ]
+  },
+  {
+    "case": "changed_side",
+    "diff": {
+      "x": [
+        "0.11127",
+        "0.120661"
+      ],
+      "y": [
+        "0.396638",
+        "0.395657"
+      ],
+      "yaw": [
+        "1.5726",
+        "1.5747"
+      ],
+      "correspondences": [
+        "117",
+        "119"
+      ],
+      "inliers_ratio": [
+        "0.183386",
+        "0.18652"
+      ],
+      "cov_x": [
+        "0.000104248",
+        "0.000103058"
+      ],
+      "cov_y": [
+        "0.000104248",
+        "0.000103058"
+      ]
+    },
+    "events": [
+      "ICP_BEGIN",
+      "ICP_SUCCESS"
+    ]
+  },
+  {
+    "case": "structure_view",
+    "diff": {},
+    "events": [
+      "ICP_BEGIN",
+      "ICP_SUCCESS"
+    ]
+  },
+  {
+    "case": "symmetric_front",
+    "diff": {},
+    "events": [
+      "ICP_BEGIN",
+      "ICP_FAILED"
+    ]
+  },
+  {
+    "case": "symmetric_side",
+    "diff": {},
+    "events": [
+      "ICP_BEGIN",
+      "ICP_FAILED"
+    ]
+  }
+]

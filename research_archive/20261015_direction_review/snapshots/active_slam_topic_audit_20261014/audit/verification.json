@@ -1,0 +1,47 @@
+[
+  {
+    "check": "q3_tests",
+    "exit_code": 0,
+    "command": [
+      "/usr/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tools/research_direction/localization_recovery_phase0/qualification_q3",
+      "-p",
+      "test_q3.py",
+      "-v"
+    ],
+    "cwd": "/home/wcqw/ac-slam_doc81",
+    "tail": "test_actual_action_connections_not_just_topic_names (test_q3.Tests) ... ok\ntest_alignment_after_mapping_and_before_motion (test_q3.Tests) ... ok\ntest_alignment_cannot_refit_later_motion (test_q3.Tests) ... ok\ntest_alignment_rejects_motion_and_missing_or_bad_gt (test_q3.Tests) ... ok\ntest_all_old_attempts_and_budget_still_sealed (test_q3.Tests) ... ok\ntest_control_never_reads_gt_or_alignment_transform (test_q3.Tests) ... ok\ntest_exact_requested_stamp_and_scan_identity_after_delay (test_q3.Tests) ... ok\ntest_first_receipt_duplicate_policy (test_q3.Tests) ... ok\ntest_fixed_joint_requires_explicit_static_topic (test_q3.Tests) ... ok\ntest_launch_gui_and_no_robot_namespace (test_q3.Tests) ... ok\ntest_navigation_failure_has_log_and_close_paths (test_q3.Tests) ... ok\ntest_no_latest_pose_for_missing_time (test_q3.Tests) ... ok\ntest_owned_dummy_process_is_cleaned (test_q3.Tests) ... ok\ntest_queue_capacity_is_explicit (test_q3.Tests) ... ok\ntest_queue_wall_timeout_explicit_missing (test_q3.Tests) ... ok\ntest_real_tf_chain_and_namespace_identity (test_q3.Tests) ... ok\ntest_scan_callback_does_not_block_on_tf (test_q3.Tests) ... ok\ntest_stage_resources_nested_and_original_world (test_q3.Tests) ... ok\ntest_stage_spawn_failure_closes_own_lifecycle (test_q3.Tests) ... ok\ntest_strict_interpolation_no_outside_extrapolation (test_q3.Tests) ... ok\ntest_tf_history_bounded (test_q3.Tests) ... ok\ntest_tf_interpolation_span_boundary (test_q3.Tests) ... ok\ntest_unique_reservation_and_immutable_old_budget (test_q3.Tests) ... ok\ntest_wait_server_failure_exits_if_process_dies (test_q3.Tests) ... ok\ntest_wall_clock_timeout_independent_of_ros_clock (test_q3.Tests) ... ok\n\n----------------------------------------------------------------------\nRan 25 tests in 2.003s\n\nOK\n"
+  },
+  {
+    "check": "phase0_tests",
+    "exit_code": 0,
+    "command": [
+      "/usr/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tools/research_direction/localization_recovery_phase0",
+      "-p",
+      "test_phase0.py",
+      "-v"
+    ],
+    "cwd": "/home/wcqw/ac-slam_doc81",
+    "tail": "test_budget_and_failed_id_preservation (test_phase0.Tests) ... ok\ntest_control_does_not_read_gt (test_phase0.Tests) ... ok\ntest_data_gap_does_not_bridge_event (test_phase0.Tests) ... ok\ntest_event_duration (test_phase0.Tests) ... ok\ntest_freeze_cannot_overwrite_existing_failure (test_phase0.Tests) ... ok\ntest_geometry_is_not_primary_metric (test_phase0.Tests) ... ok\ntest_heading_wrap (test_phase0.Tests) ... ok\ntest_initial_only_alignment_cannot_hide_later_error (test_phase0.Tests) ... ok\ntest_initial_state_seed_not_exact_backend (test_phase0.Tests) ... ok\ntest_interpolation_heading_short_path (test_phase0.Tests) ... ok\ntest_laser_base_inverse (test_phase0.Tests) ... ok\ntest_pose_error (test_phase0.Tests) ... ok\ntest_relative_error_global_gauge (test_phase0.Tests) ... ok\ntest_seeds_are_preplanned_units_not_frames (test_phase0.Tests) ... ok\ntest_threshold_strict (test_phase0.Tests) ... ok\ntest_time_sync_rejects_long_gap (test_phase0.Tests) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.262s\n\nOK\n"
+  },
+  {
+    "check": "frontier_build",
+    "exit_code": 0,
+    "command": [
+      "bash",
+      "-c",
+      "source /opt/ros/noetic/setup.bash && catkin_make -DPYTHON_EXECUTABLE=/usr/bin/python3 -DCMAKE_BUILD_TYPE=Release -DCATKIN_ENABLE_TESTING=OFF -j2"
+    ],
+    "cwd": "/home/wcqw/active_slam_topic_audit_20261014/frontier_build_ws",
+    "tail": "ate_messages_lisp\nScanning dependencies of target sensor_msgs_generate_messages_nodejs\n[  0%] Built target sensor_msgs_generate_messages_lisp\n[  0%] Built target sensor_msgs_generate_messages_nodejs\nScanning dependencies of target explore\n[ 25%] Building CXX object explore_lite/CMakeFiles/explore.dir/src/costmap_client.cpp.o\n[ 50%] Building CXX object explore_lite/CMakeFiles/explore.dir/src/explore.cpp.o\n[ 75%] Building CXX object explore_lite/CMakeFiles/explore.dir/src/frontier_search.cpp.o\n[100%] Linking CXX executable /home/wcqw/active_slam_topic_audit_20261014/frontier_build_ws/devel/lib/explore_lite/explore\n[100%] Built target explore\nBase path: /home/wcqw/active_slam_topic_audit_20261014/frontier_build_ws\nSource space: /home/wcqw/active_slam_topic_audit_20261014/frontier_build_ws/src\nBuild space: /home/wcqw/active_slam_topic_audit_20261014/frontier_build_ws/build\nDevel space: /home/wcqw/active_slam_topic_audit_20261014/frontier_build_ws/devel\nInstall space: /home/wcqw/active_slam_topic_audit_20261014/frontier_build_ws/install\nCreating symlink \"/home/wcqw/active_slam_topic_audit_20261014/frontier_build_ws/src/CMakeLists.txt\" pointing to \"/opt/ros/noetic/share/catkin/cmake/toplevel.cmake\"\n####\n#### Running command: \"cmake /home/wcqw/active_slam_topic_audit_20261014/frontier_build_ws/src -DPYTHON_EXECUTABLE=/usr/bin/python3 -DCMAKE_BUILD_TYPE=Release -DCATKIN_ENABLE_TESTING=OFF -DCATKIN_DEVEL_PREFIX=/home/wcqw/active_slam_topic_audit_20261014/frontier_build_ws/devel -DCMAKE_INSTALL_PREFIX=/home/wcqw/active_slam_topic_audit_20261014/frontier_build_ws/install -G Unix Makefiles\" in \"/home/wcqw/active_slam_topic_audit_20261014/frontier_build_ws/build\"\n####\n####\n#### Running command: \"make -j2\" in \"/home/wcqw/active_slam_topic_audit_20261014/frontier_build_ws/build\"\n####\n"
+  }
+]

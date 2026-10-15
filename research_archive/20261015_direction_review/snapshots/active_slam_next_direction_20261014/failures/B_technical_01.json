@@ -1,0 +1,13 @@
+{
+  "status": "TECHNICAL_FAIL",
+  "bag_reader_exception": "rosbag.bag.ROSBagFormatException: expected op field in record",
+  "identified_code_errors": [
+    "final service result written by main thread concurrently with queued writer",
+    "collector initialized before use_sim_time set"
+  ],
+  "source_confirmed_interface_risks": [
+    "ICP queue_size=1",
+    "wait_for_transform set instead of wait_for_transform_duration; actual duration .1s",
+    "Stage publishes fixed laser TF dynamically after scan"
+  ]
+}

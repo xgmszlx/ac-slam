@@ -1,0 +1,54 @@
+{
+  "inputs": 283,
+  "no_OdomInfo": 66,
+  "strict_pairs": 199,
+  "strict_coverage": 0.7031802120141343,
+  "map_TF_missing_with_output": [
+    0.6,
+    0.7,
+    0.9,
+    1.0,
+    1.1,
+    1.3,
+    1.5,
+    1.6,
+    1.8,
+    2.0,
+    2.1,
+    2.2,
+    2.3,
+    2.4,
+    2.5,
+    2.7,
+    2.9,
+    3.0
+  ],
+  "map_TF_recorded_range": [
+    3.1,
+    28.4
+  ],
+  "phases": {
+    "INITIALIZATION": {
+      "input": 28,
+      "odominfo": 16,
+      "strict": 0,
+      "strict_coverage": 0.0
+    },
+    "STATIONARY": {
+      "input": 105,
+      "odominfo": 86,
+      "strict": 84,
+      "strict_coverage": 0.8
+    },
+    "MOTION": {
+      "input": 150,
+      "odominfo": 115,
+      "strict": 115,
+      "strict_coverage": 0.7666666666666667
+    }
+  },
+  "missing_after_prior_latency_gt_scanperiod": 59,
+  "missing_with_prior": 61,
+  "internal_events": "UNKNOWN for all old scans; missing output is not evidence of callback entry, lock drop, or ICP rejection",
+  "map_membership": "Local grid presence and graph/map publication are observed; exact per-node MapsManager cache inclusion not recorded; used_in_global_map UNKNOWN"
+}

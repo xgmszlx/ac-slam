@@ -1,0 +1,49 @@
+{
+  "scan_count": 506,
+  "strict_tf_gt_pairs": 501,
+  "pair_fraction": 0.9901185770750988,
+  "tf_conflicting_duplicates": 0,
+  "processed_scan_count": 33,
+  "freeze_count": 1,
+  "max_anomalous_ratio": 0.58157602663707,
+  "mean_translation_error": 0.36006471655027694,
+  "max_translation_error": 1.5060654200944137,
+  "mean_1s_translation_rpe": 0.06376143560767089,
+  "gt_displacement_m": 2.9700001180171967,
+  "changed_cells": 960,
+  "visible_changed_cells": 436,
+  "map_before_error": 960,
+  "actual_map_commit_events": 23,
+  "map_final": {
+    "stamp": 50.6,
+    "actual_delta": 0,
+    "map_error_cells": 1131,
+    "false_update_cells": 609,
+    "correct_update_cells": 438,
+    "change_recall": 0.45625,
+    "visible_change_recall": 0.6559633027522935,
+    "occupied_union_map_score": 0.528160200250313
+  },
+  "initialpose_messages": [
+    {
+      "stamp": 16.5,
+      "pose": [
+        -0.33977164273130067,
+        -2.02153268807918,
+        0.00015167146806674008
+      ]
+    },
+    {
+      "stamp": 26.7,
+      "pose": [
+        -0.3860322833061218,
+        -2.0704379081726074,
+        -0.02196123398338028
+      ]
+    }
+  ],
+  "collector_dropped": 0,
+  "collector_status": "COMPLETED",
+  "note": "GT header says odom but installed Stage publishes GetGlobalPose world coordinates; known map frame equals Stage world, no fitted alignment",
+  "technical_qualification": true
+}
