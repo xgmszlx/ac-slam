@@ -1,0 +1,14 @@
+{
+  "superseded_result": "results/phase0_inference.json",
+  "reason": "TF/Keras2.13.1 EfficientNet imagenet branch adds a parameter-free Rescaling after Normalization; full-array equality did not certify computational equivalence",
+  "valid_claims_retained": [
+    "444 arrays loaded exactly in that variant",
+    "Measured time/memory for that variant"
+  ],
+  "invalid_claims": [
+    "Variant probabilities are exact author constructor predictions",
+    "Author checkpoint originally makes those same mistakes"
+  ],
+  "action": "Use literal author weights=imagenet constructor and then standard full custom H5 load, no manual remapping",
+  "original_results_and_code_preserved": true
+}

@@ -1,0 +1,28 @@
+{
+  "scope": "Gaussian RNG reseed-point qualification; not full trajectory determinism proof",
+  "status": "PASS",
+  "results": [
+    {
+      "allocator_call": 1,
+      "expected_effective_seed": 1702,
+      "uniform_draws_exactly_equal": true,
+      "first_four": [
+        0.2763573849379135,
+        0.9628721232033683,
+        0.9307191044009748,
+        0.18687213407515202
+      ]
+    },
+    {
+      "allocator_call": 2,
+      "expected_effective_seed": 1703,
+      "uniform_draws_exactly_equal": true,
+      "first_four": [
+        0.147159693603502,
+        0.6674625874470337,
+        0.6691646669443223,
+        0.6523929371932766
+      ]
+    }
+  ]
+}

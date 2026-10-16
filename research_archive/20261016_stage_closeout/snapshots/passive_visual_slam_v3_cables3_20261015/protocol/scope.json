@@ -1,0 +1,26 @@
+{
+  "registered_utc": "2026-10-15T09:07:26.085822+00:00",
+  "stage": "V3_BOUNDED_PROBLEM_VALIDATION",
+  "official_commit": "4452a3c4ab75b1cde34e5505a36ec3f9edcdc4c4",
+  "dataset": "ETH3D cables_3 training RGB-D",
+  "sequence_frames_expected": 313,
+  "system_reserve_bytes": 1073741824,
+  "data_destination": "/media/wcqw/KESU/slam_research/v3_cables3_20261015",
+  "maximum_science": {
+    "B0": 3,
+    "B1": 3
+  },
+  "order": [
+    "B0_01",
+    "B1_01",
+    "B0_02",
+    "B1_02",
+    "B0_03",
+    "B1_03"
+  ],
+  "boundaries": "3x3 valid depth max-min > max(0.05m,0.03*center_depth), center valid, at least 2 valid samples; no dilation; image exterior treated invalid",
+  "allowed_phases": "Phase0 metadata/data then Phase1 exposure then conditional Phase2 frozen science",
+  "old_directions_frozen": true,
+  "GT_online": false,
+  "science_frozen": false
+}

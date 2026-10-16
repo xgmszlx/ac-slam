@@ -1,0 +1,88 @@
+{
+  "wall": 1792133305.4480653,
+  "scope": "OFFLINE_DIAGNOSTIC, static_0 and lt_changes_0 only, first 0-10s; no estimator/ROS startup",
+  "source_commit": "f13af47ee2bca6c3bf99db2965e46e55303f6e66",
+  "time_origin": "first official GT stamp independently per sequence",
+  "targets_s": [
+    0,
+    1,
+    2,
+    5,
+    7,
+    10
+  ],
+  "scan_selection": "nearest original front scan whose stamp lies within [GT0,GT0+10]; ties earlier stamp; no score-based selection",
+  "trajectory_centers": "GT/A0/A1/A2 at exact scan time by linear XY and quaternion SLERP, no spatial fit or extrapolation; unavailable center explicitly omitted",
+  "references": {
+    "static_0": {
+      "A0": "/home/wcqw/lilocbench_amcl_validation_20261016/results/offline_seed1702_static_0_A0",
+      "A1": "/home/wcqw/lilocbench_amcl_validation_20261016/results/offline_seed1702_static_0_A1",
+      "A2": "/home/wcqw/lilocbench_amcl_validation_20261016/results/offline_seed1702_static_0_A2"
+    },
+    "lt_changes_0": {
+      "A0": "/home/wcqw/lilocbench_amcl_validation_20261016/results/offline_seed1702_lt_changes_0_A0",
+      "A1": "/home/wcqw/lilocbench_amcl_validation_20261016/results/offline_seed1702_lt_changes_0_A1",
+      "A2": "/home/wcqw/lilocbench_amcl_validation_20261016/results/offline_seed1702_lt_changes_0_A2"
+    }
+  },
+  "static_A0_actual_initial_seed": 1,
+  "all_other_reference_actual_initial_seeds": 1702,
+  "grid": {
+    "centers": [
+      "GT",
+      "A0",
+      "A1",
+      "A2"
+    ],
+    "dx_dy_m": {
+      "min": -0.6,
+      "max": 0.6,
+      "step": 0.05
+    },
+    "yaw_offset_deg": {
+      "min": -20,
+      "max": 20,
+      "step": 2
+    },
+    "include_exact_centers": true,
+    "union": "exact float64 pose triples, duplicates removed; center grids retained separately for widths and ESS proxies",
+    "no_expansion": true
+  },
+  "beam_indices": "0,9,...,810: all 91 physical slots; common validity and pz for both aggregations",
+  "model": {
+    "z_hit": 0.95,
+    "z_rand": 0.05,
+    "sigma_hit": 0.2,
+    "max_occ_dist": 2.0,
+    "A0": "1 + sum(pz^3)",
+    "A1": "sum(log(pz)) preserved in log domain; normalized ratios only within model",
+    "beam_skip": "NOT applied; historical A2 masks/particle population unavailable; A2 is candidate pose only"
+  },
+  "validity": "native amcl_node min/max remapping and sensor max/NaN exclusion",
+  "sectors_deg": [
+    -135,
+    -81,
+    -27,
+    27,
+    81,
+    135.1
+  ],
+  "sector_coordinates": "original laser scan bearing, not global map or candidate-specific sectors",
+  "grid_proxy": "ESS and half-height XY profile width computed only within uniform GT-centered grid; not actual PF ESS or calibrated uncertainty",
+  "numerical_test_tolerance": {
+    "logscore_abs": 1e-10,
+    "pz_abs": 1e-12
+  },
+  "sample_geometry_bins": "<=0.2m GT-near, >0.6m outside 3 initial xy SD, >1m severe; descriptive not changed historical failure definition",
+  "peak": "finite candidate set only, not full-map optimum",
+  "resource_reserve_bytes": 5368709120,
+  "output_budget_bytes": 536870912,
+  "decision_boundary": "concentration alone does not prove wrong localization; GT support alone cannot prove actual PF particles included it",
+  "forbidden": [
+    "new data/weights/software",
+    "ROS/AMCL/Stage/Gazebo runs",
+    "source formula modification",
+    "beam-weight method design",
+    "extending beyond10s"
+  ]
+}

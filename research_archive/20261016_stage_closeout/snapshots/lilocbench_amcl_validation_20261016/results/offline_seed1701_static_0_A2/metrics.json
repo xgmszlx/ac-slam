@@ -1,0 +1,59 @@
+{
+  "id": "offline_seed1701_static_0_A2",
+  "sequence": "static_0",
+  "config": "A2",
+  "binary": "diagnostic",
+  "seed": 1701,
+  "status": "COMPLETE",
+  "trajectory_rows": 967,
+  "unique_monotonic_finite": true,
+  "official_position_RMSE_m": 0.036686672928718266,
+  "official_yaw_RMSE_deg": 1.8404537762138768,
+  "no_endpoint_padding_position_RMSE_m": 0.03656323778087579,
+  "native_output_stamp_position_RMSE_m": 0.036960676090707634,
+  "native_output_stamp_yaw_RMSE_deg": 1.5901029004972862,
+  "position_p95_m": 0.05992856170460689,
+  "position_max_m": 0.18323441681299532,
+  "position_high_over_0p2m_duration_s": 0.0,
+  "longest_high_error_s": 0.0,
+  "native_time_span_GT_coverage_fraction": 0.9990778774415291,
+  "GT_bracketed_support_max_gap_s": {
+    "1.0": 0.9228770223824294,
+    "2.0": 0.9944672646491742
+  },
+  "max_AMCL_output_gap_s": 2.732646942138672,
+  "poses_per_front_scan_fraction_not_tracking_rate": 0.10765976397238922,
+  "collector_scan_count": 8982,
+  "expected_scan_count": 8982,
+  "pose_frames": [
+    "map"
+  ],
+  "TF_parent_and_publisher": {
+    "base_link": [
+      [
+        "odom",
+        "/amcl"
+      ]
+    ],
+    "scan_front_link": [
+      [
+        "base_link",
+        "/amcl"
+      ]
+    ],
+    "odom": [
+      [
+        "map",
+        "/amcl"
+      ]
+    ]
+  },
+  "processed_sensor_updates": 967,
+  "beam_diagnostic_events": 967,
+  "effective_skipping_events": 963,
+  "fallback_events": 0,
+  "elapsed_wall_s": 11.493499517440796,
+  "first_pose_stamp": 1733376701.337983,
+  "last_pose_stamp": 1733377299.6027384,
+  "initialization": "registered single GT initial pose; not global localization"
+}

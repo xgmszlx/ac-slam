@@ -1,0 +1,103 @@
+{
+  "wall": 1792134622.8317182,
+  "scope": "Exactly ONE full lt_changes_0 native AMCL run. No retry/seed expansion/new source or method",
+  "source_commit": "f13af47ee2bca6c3bf99db2965e46e55303f6e66",
+  "maximum_full_runs": 1,
+  "reference_runs": {
+    "A1 ON": "/home/wcqw/lilocbench_amcl_validation_20261016/results/offline_seed1702_lt_changes_0_A1",
+    "A1 R0": "/home/wcqw/lilocbench_amcl_recovery_control_20261016/results/A1_R0",
+    "A2 ON": "/home/wcqw/lilocbench_amcl_validation_20261016/results/offline_seed1702_lt_changes_0_A2",
+    "A2 R0": "/home/wcqw/lilocbench_amcl_recovery_control_20261016/results/A2_R0",
+    "A0 102 ON": "/home/wcqw/lilocbench_amcl_validation_20261016/results/offline_seed1702_lt_changes_0_A0"
+  },
+  "parameter_diff_to_A1_R0": {
+    "laser_model_type": [
+      "likelihood_field_prob",
+      "likelihood_field"
+    ],
+    "laser_max_beams": [
+      100,
+      91
+    ]
+  },
+  "why_two_fields": "Native strides differ by model. max_beams conversion gives same physical indices; does not change weighting formula. Do not falsely claim one literal ROS field differs.",
+  "thresholds": {
+    "first_deviation_m": 0.2,
+    "persistent_gt_position_thresholds_m": [
+      0.2,
+      1.0,
+      2.0
+    ],
+    "min_persistent_s": 3.0,
+    "reapproach_threshold_m": 0.2,
+    "reapproach_min_s": 3.0,
+    "remote_output_jump_translation_m": 2.0,
+    "remote_jump_motion_excess_m": 1.0,
+    "max_gap_for_remote_jump_s": 3.0,
+    "angle_jump_deg": 45.0
+  },
+  "decision_rule": {
+    "early_improved": "0-10s position RMSE <=50% of frozen A1-R0 same window, no >1m period>=3s and no odom-inconsistent remote jumps",
+    "full_improved": "Full position RMSE and P95 <=50% of A1-R0; no >2m period>=3s and no odom-inconsistent remote jumps",
+    "note": "Descriptive engineering gate for this single run, not application-wide accuracy qualification; report >1m residuals even when improved; no significance/generalization"
+  },
+  "pose_interpolation": "Official SE3 interpolation/planar XY-yaw, no spatial alignment, no extrapolation for provenance table; raw nearest output separately labeled",
+  "provenance_times": "reuse fixed lt_changes scans near targets1,2,5,7,10, not a new scan selection",
+  "reserve_bytes": 5368709120,
+  "runs": [
+    {
+      "id": "A0_91_R0",
+      "sequence": "lt_changes_0",
+      "config": "A0-91-R0",
+      "seed": 1702,
+      "model": "likelihood_field",
+      "skip": false,
+      "binary": "exact_prior_recovery_PF_library",
+      "parameters": {
+        "odom_model_type": "omni-corrected",
+        "odom_alpha1": 0.2,
+        "odom_alpha2": 0.2,
+        "odom_alpha3": 0.2,
+        "odom_alpha4": 0.2,
+        "odom_alpha5": 0.2,
+        "odom_frame_id": "odom",
+        "base_frame_id": "base_link",
+        "global_frame_id": "map",
+        "min_particles": 1000,
+        "max_particles": 10000,
+        "kld_err": 0.01,
+        "kld_z": 0.99,
+        "laser_max_beams": 91,
+        "laser_min_range": -1.0,
+        "laser_max_range": -1.0,
+        "laser_z_hit": 0.95,
+        "laser_z_rand": 0.05,
+        "laser_z_short": 0.1,
+        "laser_z_max": 0.05,
+        "laser_sigma_hit": 0.2,
+        "laser_lambda_short": 0.1,
+        "laser_likelihood_max_dist": 2.0,
+        "beam_skip_distance": 0.5,
+        "beam_skip_threshold": 0.3,
+        "beam_skip_error_threshold": 0.9,
+        "update_min_d": 0.2,
+        "update_min_a": 0.5235987755982988,
+        "resample_interval": 1,
+        "selective_resampling": false,
+        "transform_tolerance": 0.1,
+        "recovery_alpha_slow": 0.0,
+        "recovery_alpha_fast": 0.0,
+        "tf_broadcast": true,
+        "save_pose_rate": -1.0,
+        "initial_pose_x": -2.738933106918383,
+        "initial_pose_y": -4.032919583929678,
+        "initial_pose_a": 0.03718665059826174,
+        "initial_cov_xx": 0.04,
+        "initial_cov_yy": 0.04,
+        "initial_cov_aa": 0.030461741978670857,
+        "laser_model_type": "likelihood_field",
+        "do_beamskip": false
+      }
+    }
+  ]
+}

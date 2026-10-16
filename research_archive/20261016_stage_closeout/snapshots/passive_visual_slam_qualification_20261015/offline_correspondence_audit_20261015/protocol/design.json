@@ -1,0 +1,352 @@
+{
+  "registered_utc": "2026-10-15T08:07:03.936853+00:00",
+  "label": "OFFLINE_DIAGNOSTIC",
+  "windows": {
+    "before": [
+      18,
+      21
+    ],
+    "critical": [
+      22,
+      24.5
+    ],
+    "after": [
+      25,
+      27
+    ]
+  },
+  "pair_selection": "three evenly spread, fixed 0.25s desired separation, nearest existing associated frames; no skipping on matching results",
+  "pairs": [
+    {
+      "id": "before_1",
+      "window": "before",
+      "requested_relative_s": [
+        18.0,
+        18.25
+      ],
+      "frames": [
+        {
+          "index": 512,
+          "stamp": "1341846331.586139",
+          "relative_s": 17.994112968444824,
+          "rgb": "rgb/1341846331.586139.png",
+          "depth_stamp": "1341846331.586171",
+          "depth": "depth/1341846331.586171.png",
+          "rgb_sha256": "fd0dc566aef581f9b16cd39f95d0dcdf840e2dd903157336fd69766c5b1eb420",
+          "depth_sha256": "6a1f0b9d6052777add47d05fc5b85bec86160739a161586560c9432323acb77c"
+        },
+        {
+          "index": 520,
+          "stamp": "1341846331.853849",
+          "relative_s": 18.261822938919067,
+          "rgb": "rgb/1341846331.853849.png",
+          "depth_stamp": "1341846331.853866",
+          "depth": "depth/1341846331.853866.png",
+          "rgb_sha256": "83c5a09f2b9fec1d4c6e998439e4ce6064f9a82944a4cb0dc99057d18e3e77e1",
+          "depth_sha256": "785d5f479d8d332c7d0010256193d5faee657c2cc9cf3f3b324745a85b1a7909"
+        }
+      ]
+    },
+    {
+      "id": "before_2",
+      "window": "before",
+      "requested_relative_s": [
+        19.25,
+        19.5
+      ],
+      "frames": [
+        {
+          "index": 549,
+          "stamp": "1341846332.857898",
+          "relative_s": 19.26587200164795,
+          "rgb": "rgb/1341846332.857898.png",
+          "depth_stamp": "1341846332.857981",
+          "depth": "depth/1341846332.857981.png",
+          "rgb_sha256": "d4282fb1cfdee2f2149e02cb5ea25a5e0960ab8c77314ec2a83b50d0d9868e3f",
+          "depth_sha256": "ca63431966b12a0f728c647632502d0c2fe38ae816e1ec939655f0965f9748d2"
+        },
+        {
+          "index": 556,
+          "stamp": "1341846333.094024",
+          "relative_s": 19.50199794769287,
+          "rgb": "rgb/1341846333.094024.png",
+          "depth_stamp": "1341846333.094940",
+          "depth": "depth/1341846333.094940.png",
+          "rgb_sha256": "993405da05af419a8de713f8b4e394cdd12d2a455a15f831b3b535926b2301f0",
+          "depth_sha256": "676cc0faa42b681e5333008567aa37b28fc65afba1fc6d1df890a7d721390d08"
+        }
+      ]
+    },
+    {
+      "id": "before_3",
+      "window": "before",
+      "requested_relative_s": [
+        20.5,
+        20.75
+      ],
+      "frames": [
+        {
+          "index": 586,
+          "stamp": "1341846334.097932",
+          "relative_s": 20.505906105041504,
+          "rgb": "rgb/1341846334.097932.png",
+          "depth_stamp": "1341846334.098596",
+          "depth": "depth/1341846334.098596.png",
+          "rgb_sha256": "5894d648044798c67175e9a3d55d6a8689ca23c442339344cd930e3da660f774",
+          "depth_sha256": "5f5d5b2356fa24267f08f8a8bb9f608365756d03da8b4eae8cd34126bdcf5f24"
+        },
+        {
+          "index": 593,
+          "stamp": "1341846334.334036",
+          "relative_s": 20.74201011657715,
+          "rgb": "rgb/1341846334.334036.png",
+          "depth_stamp": "1341846334.334058",
+          "depth": "depth/1341846334.334058.png",
+          "rgb_sha256": "cccfb15dff37f3a092aeecdddd0431843b3411c8a44b0009b748c1f96786b606",
+          "depth_sha256": "b383418dd2b5cf0df4c2017bc9154c67e8e0a22fc76b412ba7e537570e19dfa5"
+        }
+      ]
+    },
+    {
+      "id": "critical_1",
+      "window": "critical",
+      "requested_relative_s": [
+        22.0,
+        22.25
+      ],
+      "frames": [
+        {
+          "index": 629,
+          "stamp": "1341846335.605970",
+          "relative_s": 22.013943910598755,
+          "rgb": "rgb/1341846335.605970.png",
+          "depth_stamp": "1341846335.605987",
+          "depth": "depth/1341846335.605987.png",
+          "rgb_sha256": "df4d2bf67e3750e5cf64dfda20583ba8510291180a045329ecdd27b95e529b0e",
+          "depth_sha256": "2bcae6be207687883953bc0fa9040e1091b6e9a788a9500e242f08a5b8db1ff9"
+        },
+        {
+          "index": 636,
+          "stamp": "1341846335.842031",
+          "relative_s": 22.25000500679016,
+          "rgb": "rgb/1341846335.842031.png",
+          "depth_stamp": "1341846335.842046",
+          "depth": "depth/1341846335.842046.png",
+          "rgb_sha256": "f22502b0d3506bece0991a85f5551ec05daec49c997ea1ccbe3962331290ec8e",
+          "depth_sha256": "05cbb38cbc131e4e49cf5a181f29ba84fcffe8655ceef2c04e1a54fb402ad0f2"
+        }
+      ]
+    },
+    {
+      "id": "critical_2",
+      "window": "critical",
+      "requested_relative_s": [
+        23.0,
+        23.25
+      ],
+      "frames": [
+        {
+          "index": 657,
+          "stamp": "1341846336.578003",
+          "relative_s": 22.985976934432983,
+          "rgb": "rgb/1341846336.578003.png",
+          "depth_stamp": "1341846336.578022",
+          "depth": "depth/1341846336.578022.png",
+          "rgb_sha256": "59f9309cac359e60ffc7ca7e5e58205e11eda2e685cc5a2c1150bb226ab37aac",
+          "depth_sha256": "554d892052da21e33115225780172958e18be45185ced512fbdb786a44eefd4f"
+        },
+        {
+          "index": 664,
+          "stamp": "1341846336.820006",
+          "relative_s": 23.22797989845276,
+          "rgb": "rgb/1341846336.820006.png",
+          "depth_stamp": "1341846336.820063",
+          "depth": "depth/1341846336.820063.png",
+          "rgb_sha256": "851c939e0a0d97762ed34caead223e617a1512ae6913bfe13f81af325f63f5ac",
+          "depth_sha256": "4b810fed8c8c5d151544529103784a9d733d32880fd2804b4b715b0224115e28"
+        }
+      ]
+    },
+    {
+      "id": "critical_3",
+      "window": "critical",
+      "requested_relative_s": [
+        24.0,
+        24.25
+      ],
+      "frames": [
+        {
+          "index": 686,
+          "stamp": "1341846337.585971",
+          "relative_s": 23.993945121765137,
+          "rgb": "rgb/1341846337.585971.png",
+          "depth_stamp": "1341846337.585983",
+          "depth": "depth/1341846337.585983.png",
+          "rgb_sha256": "786c565e5fda9af6d3e7ba0dc95d3491e12f4949af8008be5e277d03a9e8431c",
+          "depth_sha256": "a883f719921f7cb0641de1557ff993e04bf760167650e1fae9348520c79c2ab2"
+        },
+        {
+          "index": 694,
+          "stamp": "1341846337.854071",
+          "relative_s": 24.26204490661621,
+          "rgb": "rgb/1341846337.854071.png",
+          "depth_stamp": "1341846337.854081",
+          "depth": "depth/1341846337.854081.png",
+          "rgb_sha256": "76c60e7932775e4ea5eeb5cf783fea9bc481957517a6a9ec2bfc0b219a834694",
+          "depth_sha256": "d912320cd070d630db9ee30b9892e84dadd91a64a63a38ee9713c983f9b3c165"
+        }
+      ]
+    },
+    {
+      "id": "after_1",
+      "window": "after",
+      "requested_relative_s": [
+        25.0,
+        25.25
+      ],
+      "frames": [
+        {
+          "index": 716,
+          "stamp": "1341846338.589842",
+          "relative_s": 24.99781608581543,
+          "rgb": "rgb/1341846338.589842.png",
+          "depth_stamp": "1341846338.589855",
+          "depth": "depth/1341846338.589855.png",
+          "rgb_sha256": "cb369c879939c48418fde15ed4a951b70fef8033555ebd6fabc754516f48dd1e",
+          "depth_sha256": "b4da4f117e4054104119ae439a2e95e2c6710e6ec1a2bf0bfcad85142f722213"
+        },
+        {
+          "index": 723,
+          "stamp": "1341846338.826048",
+          "relative_s": 25.23402190208435,
+          "rgb": "rgb/1341846338.826048.png",
+          "depth_stamp": "1341846338.826077",
+          "depth": "depth/1341846338.826077.png",
+          "rgb_sha256": "874d204e0ed1eeb321c8ab05ba4647cee78dd8c83858325b6286454726c05f4e",
+          "depth_sha256": "852b3eb426df19522b512fded7674c87ded357abfed2d5ba54e659b95ea1d95b"
+        }
+      ]
+    },
+    {
+      "id": "after_2",
+      "window": "after",
+      "requested_relative_s": [
+        25.75,
+        26.0
+      ],
+      "frames": [
+        {
+          "index": 738,
+          "stamp": "1341846339.326577",
+          "relative_s": 25.734550952911377,
+          "rgb": "rgb/1341846339.326577.png",
+          "depth_stamp": "1341846339.327137",
+          "depth": "depth/1341846339.327137.png",
+          "rgb_sha256": "826b44225283d84316ac2126709ea99b8f874c2db33dd8b90721c2b8432798c5",
+          "depth_sha256": "0dbdc25abd28177331094a81bce60c339fe4602f42e849c6161bf678eb500069"
+        },
+        {
+          "index": 744,
+          "stamp": "1341846339.595122",
+          "relative_s": 26.003096103668213,
+          "rgb": "rgb/1341846339.595122.png",
+          "depth_stamp": "1341846339.595813",
+          "depth": "depth/1341846339.595813.png",
+          "rgb_sha256": "6740527971217b95441cd83b0620fc391fdfcdf7e1a45cb47ecf66f4ba66ab9b",
+          "depth_sha256": "c229b6a7c448574c3a63573a61691640d5620c987209f171408728395f5763b2"
+        }
+      ]
+    },
+    {
+      "id": "after_3",
+      "window": "after",
+      "requested_relative_s": [
+        26.5,
+        26.75
+      ],
+      "frames": [
+        {
+          "index": 759,
+          "stamp": "1341846340.098009",
+          "relative_s": 26.505983114242554,
+          "rgb": "rgb/1341846340.098009.png",
+          "depth_stamp": "1341846340.098499",
+          "depth": "depth/1341846340.098499.png",
+          "rgb_sha256": "06ffb827af290582971da6bce11dcf27a203c9e182010428723693c1815a1f30",
+          "depth_sha256": "9101307f5a15e61da11639ce83625759b0f2aeeffcaa4b4acba43c662b960cda"
+        },
+        {
+          "index": 766,
+          "stamp": "1341846340.334063",
+          "relative_s": 26.742037057876587,
+          "rgb": "rgb/1341846340.334063.png",
+          "depth_stamp": "1341846340.334074",
+          "depth": "depth/1341846340.334074.png",
+          "rgb_sha256": "4cfa54c583fde1bc66f2568cf368db147941cd7c324ba070a2be49188e118d7c",
+          "depth_sha256": "10ded3d9a8895b31056132d96ac53a4a812a18f7ebedda3f0309d5978a4b0e1e"
+        }
+      ]
+    }
+  ],
+  "GT": "offline Twc interpolation (translation lerp, quaternion SLERP), brackets <=.02s; T_target_source=inverse(Twc_target)*Twc_source, no fitted extrinsics or scale",
+  "camera": {
+    "fx": 535.4,
+    "fy": 539.2,
+    "cx": 320.1,
+    "cy": 247.6,
+    "distortion": 0,
+    "depth_factor": 5000
+  },
+  "features": {
+    "implementation": "installed OpenCV ORB, not native ORB-SLAM3 extractor or optimization inliers",
+    "nfeatures": 1000,
+    "scaleFactor": 1.2,
+    "nlevels": 8,
+    "edgeThreshold": 31,
+    "patchSize": 31,
+    "fastThreshold": 20,
+    "WTA_K": 2,
+    "scoreType": "HARRIS"
+  },
+  "matching": {
+    "metric": "Hamming",
+    "ratio": 0.75,
+    "audit_set": "bidirectional ratio passes and mutual nearest identity",
+    "also_record": "forward nearest, ratio only, mutual nearest counts",
+    "RANSAC_prefilter": false
+  },
+  "geometry_primary": {
+    "reprojection_error_px": 5.0,
+    "depth_tolerance": "max(0.05m, 0.03*predicted_z)",
+    "3D_error_m_auxiliary": 0.1,
+    "depth_sampling": "floor keypoint original image position, >0 only; no gap filling",
+    "stable_depth_auxiliary": "both original keypoint 3x3 neighborhoods all positive and max-min <=0.1m",
+    "reprojection_sensitivity_px": [
+      3,
+      5,
+      8
+    ]
+  },
+  "manual_labels": {
+    "annotation_before_correspondence_results": true,
+    "source": "human-authored visible body polygons and conservative enclosing boxes, image only",
+    "person": "polygon eroded3px",
+    "uncertain": "enclosing box expanded5px minus person-core",
+    "background": "outside expanded boxes, candidate nonperson not guaranteed static",
+    "primary_groups": "person-person and background-background endpoints; mixed/uncertain separate",
+    "not_automatic_output": true,
+    "not_motion_ground_truth": true,
+    "not_SLAM_input": true
+  },
+  "reliable_background_definition": "mutual-ratio, positive depth at both ends, both endpoints nonperson-candidate, <=5px and depth tolerance; this is a diagnostic static-consistent set, not actual inliers",
+  "conclusions": "geometric evidence not causal contamination; n=3 pairs per window no significance/pooling as independent frames",
+  "hard_limits": {
+    "downloads": 0,
+    "weights": 0,
+    "training": 0,
+    "backend_compile": 0,
+    "SLAM_runs": 0,
+    "ROS_simulation": 0
+  },
+  "minimum_free_bytes": 1000000000
+}

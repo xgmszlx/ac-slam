@@ -1,0 +1,40 @@
+{
+  "id": "native_static_0_A0",
+  "spec": {
+    "id": "native_static_0_A0",
+    "sequence": "static_0",
+    "config": "A0",
+    "model": "likelihood_field",
+    "skip": false,
+    "binary": "installed",
+    "seed": null
+  },
+  "start_wall": 1792123412.7436273,
+  "status": "FAILED",
+  "commands": [
+    {
+      "command": [
+        "/opt/ros/noetic/bin/roscore",
+        "-p",
+        "11331"
+      ],
+      "log": "roscore.log"
+    },
+    {
+      "command": [
+        "/opt/ros/noetic/bin/roslaunch",
+        "--wait",
+        "/home/wcqw/lilocbench_amcl_validation_20261016/results/native_static_0_A0/run.launch"
+      ],
+      "log": "launch.log"
+    }
+  ],
+  "error": "RuntimeError('timeout waiting map and AMCL subscribers')",
+  "end_wall": 1792123439.6758897,
+  "elapsed_wall_s": 26.932263135910034,
+  "process_exit": [
+    0,
+    0
+  ],
+  "clean_collector": false
+}

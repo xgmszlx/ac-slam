@@ -1,0 +1,65 @@
+--- v2/pf.c
++++ recovery_stats/pf.c
+@@ -319,6 +319,21 @@
+   }
+ 
+   set->n_effective = 1.0/set->n_effective;
++  /* AUDIT_BEGIN: read-only post-normalization statistics. */
++  {
++    int audit_nonfinite = 0;
++    double audit_max_weight = 0.0, audit_sum_weight = 0.0;
++    for (int audit_i = 0; audit_i < set->sample_count; ++audit_i) {
++      double audit_weight = set->samples[audit_i].weight;
++      if (!isfinite(audit_weight)) ++audit_nonfinite;
++      if (audit_weight > audit_max_weight) audit_max_weight = audit_weight;
++      audit_sum_weight += audit_weight;
++    }
++    fprintf(stderr, "RECOVERY_SENSOR %.17g %d %.17g %.17g %.17g %.17g %.17g %d %d %d\n",
++      total, set->sample_count, set->n_effective, pf->w_slow, pf->w_fast,
++      audit_max_weight, audit_sum_weight, total == 0.0, !isfinite(total), audit_nonfinite);
++  }
++  /* AUDIT_END */
+   return;
+ }
+ 
+@@ -378,6 +393,7 @@
+   double* c;
+ 
+   double w_diff;
++  int audit_random_count = 0; /* AUDIT: local counter, no RNG call. */
+ 
+   set_a = pf->sets + pf->current_set;
+   set_b = pf->sets + (pf->current_set + 1) % 2;
+@@ -417,6 +433,10 @@
+   if(w_diff < 0.0)
+     w_diff = 0.0;
+   //printf("w_diff: %9.6f\n", w_diff);
++  /* AUDIT_BEGIN */
++  fprintf(stderr, "RECOVERY_RESAMPLE_BEGIN %.17g %.17g %.17g %d %.17g\n",
++    w_diff, pf->w_slow, pf->w_fast, set_a->sample_count, set_a->n_effective);
++  /* AUDIT_END */
+ 
+   // Can't (easily) combine low-variance sampler with KLD adaptive
+   // sampling, so we'll take the more traditional route.
+@@ -433,7 +453,10 @@
+     sample_b = set_b->samples + set_b->sample_count++;
+ 
+     if(drand48() < w_diff)
++    {
++      ++audit_random_count; /* AUDIT: existing branch only. */
+       sample_b->pose = (pf->random_pose_fn)(pf->random_pose_data);
++    }
+     else
+     {
+       // Can't (easily) combine low-variance sampler with KLD adaptive
+@@ -509,6 +532,10 @@
+   pf->current_set = (pf->current_set + 1) % 2; 
+ 
+   pf_update_converged(pf);
++  /* AUDIT_BEGIN */
++  fprintf(stderr, "RECOVERY_RESAMPLE_END %d %d %.17g %.17g %d\n",
++    audit_random_count, set_b->sample_count, pf->w_slow, pf->w_fast, set_b->cluster_count);
++  /* AUDIT_END */
+ 
+   free(c);
+   return;

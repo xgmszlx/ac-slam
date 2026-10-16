@@ -1,0 +1,7 @@
+{
+  "frozen_field": "candidate_manifest.support.*.uses_after10s_bracket_only_for_inrange_time",
+  "issue": "Initial helper left a constant False placeholder; do not interpret it as an evaluated fact",
+  "authoritative_evidence": "results/interpolation_audit.json contains actual bracketing stamps and bracket_may_exceed10s",
+  "scope": "All scored scan times <=10s. A right trajectory interpolation endpoint may lie slightly beyond10s; no scan or localization outcome beyond10s is scored or analyzed",
+  "frozen_candidate_or_scores_changed": false
+}

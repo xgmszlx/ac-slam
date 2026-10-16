@@ -1,0 +1,11 @@
+{
+  "opencv_version": "4.2.0",
+  "input_read": "cv::imread IMREAD_UNCHANGED yields BGR channels for color PNG",
+  "official_Camera_RGB": 1,
+  "official_Tracking_conversion": "COLOR_RGB2GRAY when mbRGB==true",
+  "example_does_not_swap_channels": true,
+  "first_frame_mean_abs_gray_difference_between_RGB_and_BGR_interpretation": 4.37439453125,
+  "original_config_unchanged": true,
+  "effect_on_localization": "UNRESOLVED; no color-order ablation this round; cannot attribute ATE to this difference",
+  "first_frame_imread_equals_PIL_reversed_channels": true
+}

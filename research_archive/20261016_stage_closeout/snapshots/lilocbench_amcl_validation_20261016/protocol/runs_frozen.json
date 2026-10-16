@@ -1,0 +1,233 @@
+{
+  "frozen_wall": 1792123405.7094293,
+  "scope": "Pose tracking only; maximum 4 installed-binary qualification runs then 12 source-controlled runs (2 common seeds x 3 models x 2 sequences). No automatic retry. Native failures stop gate. No extra sequences.",
+  "common_params": {
+    "odom_model_type": "omni-corrected",
+    "odom_alpha1": 0.2,
+    "odom_alpha2": 0.2,
+    "odom_alpha3": 0.2,
+    "odom_alpha4": 0.2,
+    "odom_alpha5": 0.2,
+    "odom_frame_id": "odom",
+    "base_frame_id": "base_link",
+    "global_frame_id": "map",
+    "min_particles": 1000,
+    "max_particles": 10000,
+    "kld_err": 0.01,
+    "kld_z": 0.99,
+    "laser_max_beams": 100,
+    "laser_min_range": -1.0,
+    "laser_max_range": -1.0,
+    "laser_z_hit": 0.95,
+    "laser_z_rand": 0.05,
+    "laser_z_short": 0.1,
+    "laser_z_max": 0.05,
+    "laser_sigma_hit": 0.2,
+    "laser_lambda_short": 0.1,
+    "laser_likelihood_max_dist": 2.0,
+    "beam_skip_distance": 0.5,
+    "beam_skip_threshold": 0.3,
+    "beam_skip_error_threshold": 0.9,
+    "update_min_d": 0.2,
+    "update_min_a": 0.5235987755982988,
+    "resample_interval": 1,
+    "selective_resampling": false,
+    "transform_tolerance": 0.1,
+    "recovery_alpha_slow": 0.001,
+    "recovery_alpha_fast": 0.1,
+    "tf_broadcast": true,
+    "save_pose_rate": -1.0
+  },
+  "initial_params": {
+    "static_0": {
+      "initial_pose_x": 9.971633020984841,
+      "initial_pose_y": -3.6393372484958983,
+      "initial_pose_a": 0.02574233717974559,
+      "initial_cov_xx": 0.04,
+      "initial_cov_yy": 0.04,
+      "initial_cov_aa": 0.030461741978670857
+    },
+    "lt_changes_0": {
+      "initial_pose_x": -2.738933106918383,
+      "initial_pose_y": -4.032919583929678,
+      "initial_pose_a": 0.03718665059826174,
+      "initial_cov_xx": 0.04,
+      "initial_cov_yy": 0.04,
+      "initial_cov_aa": 0.030461741978670857
+    }
+  },
+  "initialization": "one projection of first official GT pose per sequence; initial Gaussian sd .2m,.2m,10deg; GT never subscribed online",
+  "source_sha": "f13af47ee2bca6c3bf99db2965e46e55303f6e66",
+  "installed_package": "1.17.3-1focal.20250521.001518",
+  "diagnostic_modifications": "seed selection replaces wall-time RNG seed; scan identity and native beam mask/fallback logging only. Seed control changes random realization, not formulas. Diagnostic cost retained. No proof of bitwise equivalence to installed binary.",
+  "playback_rate": 8.0,
+  "hard_timeout_wall_s": 180,
+  "reserve_bytes": 5368709120,
+  "GT_evaluation": "official planar APE, no spatial alignment; independent no-extrapolation and temporal-support reports",
+  "high_error_threshold_m": 0.2,
+  "temporal_support_report_gaps_s": [
+    1.0,
+    2.0
+  ],
+  "runs": [
+    {
+      "id": "native_static_0_A0",
+      "sequence": "static_0",
+      "config": "A0",
+      "model": "likelihood_field",
+      "skip": false,
+      "binary": "installed",
+      "seed": null
+    },
+    {
+      "id": "native_lt_changes_0_A0",
+      "sequence": "lt_changes_0",
+      "config": "A0",
+      "model": "likelihood_field",
+      "skip": false,
+      "binary": "installed",
+      "seed": null
+    },
+    {
+      "id": "native_static_0_A1",
+      "sequence": "static_0",
+      "config": "A1",
+      "model": "likelihood_field_prob",
+      "skip": false,
+      "binary": "installed",
+      "seed": null
+    },
+    {
+      "id": "native_lt_changes_0_A1",
+      "sequence": "lt_changes_0",
+      "config": "A1",
+      "model": "likelihood_field_prob",
+      "skip": false,
+      "binary": "installed",
+      "seed": null
+    },
+    {
+      "id": "seed1701_static_0_A0",
+      "sequence": "static_0",
+      "config": "A0",
+      "model": "likelihood_field",
+      "skip": false,
+      "binary": "diagnostic",
+      "seed": 1701
+    },
+    {
+      "id": "seed1701_lt_changes_0_A0",
+      "sequence": "lt_changes_0",
+      "config": "A0",
+      "model": "likelihood_field",
+      "skip": false,
+      "binary": "diagnostic",
+      "seed": 1701
+    },
+    {
+      "id": "seed1701_static_0_A1",
+      "sequence": "static_0",
+      "config": "A1",
+      "model": "likelihood_field_prob",
+      "skip": false,
+      "binary": "diagnostic",
+      "seed": 1701
+    },
+    {
+      "id": "seed1701_lt_changes_0_A1",
+      "sequence": "lt_changes_0",
+      "config": "A1",
+      "model": "likelihood_field_prob",
+      "skip": false,
+      "binary": "diagnostic",
+      "seed": 1701
+    },
+    {
+      "id": "seed1701_static_0_A2",
+      "sequence": "static_0",
+      "config": "A2",
+      "model": "likelihood_field_prob",
+      "skip": true,
+      "binary": "diagnostic",
+      "seed": 1701
+    },
+    {
+      "id": "seed1701_lt_changes_0_A2",
+      "sequence": "lt_changes_0",
+      "config": "A2",
+      "model": "likelihood_field_prob",
+      "skip": true,
+      "binary": "diagnostic",
+      "seed": 1701
+    },
+    {
+      "id": "seed1702_static_0_A0",
+      "sequence": "static_0",
+      "config": "A0",
+      "model": "likelihood_field",
+      "skip": false,
+      "binary": "diagnostic",
+      "seed": 1702
+    },
+    {
+      "id": "seed1702_lt_changes_0_A0",
+      "sequence": "lt_changes_0",
+      "config": "A0",
+      "model": "likelihood_field",
+      "skip": false,
+      "binary": "diagnostic",
+      "seed": 1702
+    },
+    {
+      "id": "seed1702_static_0_A1",
+      "sequence": "static_0",
+      "config": "A1",
+      "model": "likelihood_field_prob",
+      "skip": false,
+      "binary": "diagnostic",
+      "seed": 1702
+    },
+    {
+      "id": "seed1702_lt_changes_0_A1",
+      "sequence": "lt_changes_0",
+      "config": "A1",
+      "model": "likelihood_field_prob",
+      "skip": false,
+      "binary": "diagnostic",
+      "seed": 1702
+    },
+    {
+      "id": "seed1702_static_0_A2",
+      "sequence": "static_0",
+      "config": "A2",
+      "model": "likelihood_field_prob",
+      "skip": true,
+      "binary": "diagnostic",
+      "seed": 1702
+    },
+    {
+      "id": "seed1702_lt_changes_0_A2",
+      "sequence": "lt_changes_0",
+      "config": "A2",
+      "model": "likelihood_field_prob",
+      "skip": true,
+      "binary": "diagnostic",
+      "seed": 1702
+    }
+  ],
+  "input_hashes": {
+    "data/lt_changes_0.bag": "638f9ee912302bb252a32aeb146fb96337fb5ac7c09556e58aa462b7cb5ca830",
+    "data/static_0.bag": "5579090b35a48cf24a66fb1118899052218d2089f9b956788d5abee76e01f4ce",
+    "data/map/map_office.png": "8a9ff6aa0d954e7743ed7dd1801d9df2a44a4d023cfda8de6ef12daa39cd57bf",
+    "data/map/map_office.yaml": "6e61ed85520c2e4638684734c738daf63c17de830a535cd8458cee14cd1fb11e",
+    "code/fetch_official.py": "19d9abc62db4bb2f489924ed98106f918b5eb30cf2a27e24ec3a3908d347cf39",
+    "code/plot_author_examples.py": "5a7312d18408a1d1fade8db7d6d44128d9a21f2ed45815287e53a1fe89b14672",
+    "code/audit_bags.py": "f990c2304aa63fe7d8c09fdc0c2086becb221f27e0aa4d762d839900ab28dd66",
+    "code/prepare_diagnostic_source.py": "9a91f2e5888648c99420755dd96664f5791d3825f3de4f861c209a120f449317",
+    "code/audit_official_evaluation.py": "d1c3d3eec988260de84d5d727f3b512fab0c2bd3415943e208e052a970d172cd",
+    "code/run_one.py": "0878fda10273c8639cb21487d74e7f8b23dccd9000727e6a0dea6b32a0e3dadd",
+    "code/collect_amcl.py": "3d15bbf12349a5228fd60e08bcbbb64b7d1797f4265f941fd1b497ee0f531bab",
+    "sources/LILocBench-68e86f33ae3ff660444b92093fb98ca4d5633b46/src/download_example_data.py": "f3d28f80911549abc0aa57e6f5576931d62509ec5ffb6df0f940d390899420c3",
+    "sources/LILocBench-68e86f33ae3ff660444b92093fb98ca4d5633b46/src/evaluate.py": "8518a76aaad3799cffb66bdf22de55e543177330950e800624f774add1c4a13f"
+  }
+}

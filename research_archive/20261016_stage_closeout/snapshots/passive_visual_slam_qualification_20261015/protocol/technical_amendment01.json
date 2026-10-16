@@ -1,0 +1,21 @@
+{
+  "reason": "native01 exit -11; observer01 debugger SIGSEGV in Viewer::Run after exports; Shutdown viewer finish disabled in pinned code",
+  "original_frozen_protocol_sha256": "87f03ac4e2e97a13ee2f7a617d541ee5466056d1059cbdef526665fddaf19d11",
+  "preserve_frozen_protocol": true,
+  "compatibility_change": "example-only official System viewer argument true to false",
+  "core_change": false,
+  "parameter_tuning": false,
+  "new_run_limit": 4,
+  "original_runs": [
+    "walking/native01",
+    "walking/observer01"
+  ],
+  "remaining": [
+    "walking/headless01",
+    "sitting/headless01 if walking headless exits 0 and disk gate passes"
+  ],
+  "stop_if_headless_fails": true,
+  "no_further_restructuring": true,
+  "new_observer_replay": false,
+  "original_native_failure_remains_failure": true
+}

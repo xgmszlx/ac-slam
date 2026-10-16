@@ -1,0 +1,57 @@
+{
+  "status": "NO_QUALIFIED_WITHIN_BUDGET_EVENT_EVIDENCE",
+  "records": [
+    {
+      "method": "A_nearest_frontier",
+      "native_map_files": [
+        "/home/wcqw/ac-slam/results/phase1/smoke_A_nearest_frontier_map3_run1/final_map.pgm"
+      ],
+      "mapping_start_s": 41.7,
+      "final_map_stamp_s": 874.0,
+      "exploration_duration_s": 832.4,
+      "final_map_within_300s_of_task_start": false,
+      "serialized_scan_matcher_state": false,
+      "recorded_navigation_costmap": false,
+      "occupancy_time_series_available": false,
+      "source_commit": "5a116671143611601736c3e4218a762a6a5a9263",
+      "metrics_sha256": "6fbb96dfad02814d148617841f917e9c6558c666cd2c13317573efc59d64feed"
+    },
+    {
+      "method": "B_prior_tsp",
+      "native_map_files": [
+        "/home/wcqw/ac-slam/results/phase1/smoke_B_prior_tsp_map3_run1/final_map.pgm"
+      ],
+      "mapping_start_s": 52.1,
+      "final_map_stamp_s": 998.3,
+      "exploration_duration_s": 946.6999999999999,
+      "final_map_within_300s_of_task_start": false,
+      "serialized_scan_matcher_state": false,
+      "recorded_navigation_costmap": false,
+      "occupancy_time_series_available": false,
+      "source_commit": "5a116671143611601736c3e4218a762a6a5a9263",
+      "metrics_sha256": "bbb459deb28cf9d1053169b0553d8436214a133ccbdda23c96b82c91e93b9eb1"
+    },
+    {
+      "method": "C_slam_aware",
+      "native_map_files": [
+        "/home/wcqw/ac-slam/results/phase1/smoke_C_slam_aware_map3_run1/final_map.pgm"
+      ],
+      "mapping_start_s": 44.9,
+      "final_map_stamp_s": 1400.3,
+      "exploration_duration_s": 1355.8999999999999,
+      "final_map_within_300s_of_task_start": false,
+      "serialized_scan_matcher_state": false,
+      "recorded_navigation_costmap": false,
+      "occupancy_time_series_available": false,
+      "source_commit": "5a116671143611601736c3e4218a762a6a5a9263",
+      "metrics_sha256": "62b748122eb45a4b67d768189e5693edb1066704df8affba6b7f72e114c0fe7e"
+    }
+  ],
+  "continuous_occupancy_sequence_available": false,
+  "can_infer_first_CNN_stop_time": false,
+  "near_complete_state_restore": "NOT_QUALIFIED_PGM_AND_POSE_GRAPH_DO_NOT_RESTORE_KARTO_AND_NAVIGATION",
+  "within_300s_event": "UNKNOWN_NOT_PROVEN_ABSENT",
+  "scene_selection": "UNCHANGED_MAP3_NO_OUTCOME_BASED_REPLACEMENT",
+  "new_ROS_allowed_by_phase2": false,
+  "warning": "Completion time beyond 300s does not prove CNN cannot stop earlier. Final-map p_EX also cannot establish its first crossing."
+}

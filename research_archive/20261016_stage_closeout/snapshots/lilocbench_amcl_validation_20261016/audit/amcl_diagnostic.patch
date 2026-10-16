@@ -1,0 +1,61 @@
+diff -ruN /home/wcqw/lilocbench_amcl_validation_20261016/sources/pristine/navigation-f13af47ee2bca6c3bf99db2965e46e55303f6e66/amcl/src/amcl/pf/pf.c /home/wcqw/lilocbench_amcl_validation_20261016/diagnostic_ws/src/amcl/src/amcl/pf/pf.c
+--- /home/wcqw/lilocbench_amcl_validation_20261016/sources/pristine/navigation-f13af47ee2bca6c3bf99db2965e46e55303f6e66/amcl/src/amcl/pf/pf.c	2023-01-11 01:09:10.000000000 +0800
++++ /home/wcqw/lilocbench_amcl_validation_20261016/diagnostic_ws/src/amcl/src/amcl/pf/pf.c	2026-10-16 12:01:02.939776109 +0800
+@@ -29,6 +29,7 @@
+ #include <math.h>
+ #include <stdlib.h>
+ #include <time.h>
++#include <stdio.h>
+ 
+ #include "amcl/pf/pf.h"
+ #include "amcl/pf/pf_pdf.h"
+@@ -52,7 +53,11 @@
+   pf_sample_set_t *set;
+   pf_sample_t *sample;
+   
+-  srand48(time(NULL));
++  /* Experimental reproducibility control; default remains native wall-time seed. */
++  const char *audit_seed_env = getenv("AMCL_EXPERIMENT_SEED");
++  long audit_seed = audit_seed_env ? strtol(audit_seed_env, NULL, 10) : (long)time(NULL);
++  srand48(audit_seed);
++  fprintf(stderr, "AUDIT_SEED %ld\n", audit_seed);
+ 
+   pf = calloc(1, sizeof(pf_t));
+ 
+diff -ruN /home/wcqw/lilocbench_amcl_validation_20261016/sources/pristine/navigation-f13af47ee2bca6c3bf99db2965e46e55303f6e66/amcl/src/amcl/sensors/amcl_laser.cpp /home/wcqw/lilocbench_amcl_validation_20261016/diagnostic_ws/src/amcl/src/amcl/sensors/amcl_laser.cpp
+--- /home/wcqw/lilocbench_amcl_validation_20261016/sources/pristine/navigation-f13af47ee2bca6c3bf99db2965e46e55303f6e66/amcl/src/amcl/sensors/amcl_laser.cpp	2023-01-11 01:09:10.000000000 +0800
++++ /home/wcqw/lilocbench_amcl_validation_20261016/diagnostic_ws/src/amcl/src/amcl/sensors/amcl_laser.cpp	2026-10-16 12:01:02.939776109 +0800
+@@ -446,6 +446,12 @@
+     }
+   }
+   
++  int audit_slots = (data->range_count + step - 1) / step;
++  int audit_valid = 0;
++  for (int ai=0; ai<data->range_count; ai+=step) {
++    if(data->ranges[ai][0] == data->ranges[ai][0] && data->ranges[ai][0] < data->range_max) ++audit_valid;
++  }
++  if (!do_beamskip) fprintf(stderr, "AUDIT_BEAMS %d %d %d 0 %d %d -1 -1 0\n", self->do_beamskip, set->converged, set->sample_count, audit_slots, audit_valid);
+   if(do_beamskip){
+     int skipped_beam_count = 0; 
+     for (beam_ind = 0; beam_ind < self->max_beams; beam_ind++){
+@@ -469,6 +475,9 @@
+       error = true; 
+     }
+ 
++    int audit_physical_skipped = 0;
++    for(int ai=0; ai<audit_slots; ++ai) if(!obs_mask[ai]) ++audit_physical_skipped;
++    fprintf(stderr, "AUDIT_BEAMS %d %d %d 1 %d %d %d %d %d\n", self->do_beamskip, set->converged, set->sample_count, audit_slots, audit_valid, skipped_beam_count, audit_physical_skipped, error);
+     for (j = 0; j < set->sample_count; j++)
+       {
+ 	sample = set->samples + j;
+diff -ruN /home/wcqw/lilocbench_amcl_validation_20261016/sources/pristine/navigation-f13af47ee2bca6c3bf99db2965e46e55303f6e66/amcl/src/amcl_node.cpp /home/wcqw/lilocbench_amcl_validation_20261016/diagnostic_ws/src/amcl/src/amcl_node.cpp
+--- /home/wcqw/lilocbench_amcl_validation_20261016/sources/pristine/navigation-f13af47ee2bca6c3bf99db2965e46e55303f6e66/amcl/src/amcl_node.cpp	2023-01-11 01:09:10.000000000 +0800
++++ /home/wcqw/lilocbench_amcl_validation_20261016/diagnostic_ws/src/amcl/src/amcl_node.cpp	2026-10-16 12:01:02.939776109 +0800
+@@ -1326,6 +1326,7 @@
+               (i * angle_increment);
+     }
+ 
++    fprintf(stderr, "AUDIT_SCAN %u %u %u %d %d\n", laser_scan->header.seq, laser_scan->header.stamp.sec, laser_scan->header.stamp.nsec, pf_->sets[pf_->current_set].sample_count, pf_->sets[pf_->current_set].converged);
+     lasers_[laser_index]->UpdateSensor(pf_, (AMCLSensorData*)&ldata);
+ 
+     lasers_update_[laser_index] = false;

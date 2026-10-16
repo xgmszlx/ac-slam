@@ -1,0 +1,83 @@
+{
+  "registered_utc": "2026-10-15T07:37:52.664308+00:00",
+  "stage": "P2_FINAL_QUALIFICATION_AND_CONDITIONAL_COMPARISON",
+  "old_scientific_results_read_only": true,
+  "ORB_commit": "4452a3c4ab75b1cde34e5505a36ec3f9edcdc4c4",
+  "old_core_sha256": "a20db0416fc54ca5949e6b6ac834c12f59dc0bae5f08dc2945e46943a3532c46",
+  "model_commit": "bb17b6c3eef36d80be441ae8e5339be66e8e3b7a",
+  "model_bytes": 23306119,
+  "model_git_blob_SHA1": "253e5012dd6a17666fd7ae16cfa14a6860280ff7",
+  "download_budget": {
+    "max_routes": 3,
+    "route1": "fixed raw github range probe and <=8 distinct parallel ranges; no per-range retries",
+    "route2": "fixed author Git blob API raw; one request, store bounded partial if fails",
+    "route3": "official README deploy Google Drive link, no mirror/model substitution",
+    "max_total_wall_s": 300,
+    "max_transfer_bytes": 80000000,
+    "no_repeat_failed_route": true
+  },
+  "mask": {
+    "person_class": 15,
+    "threshold": 0.5,
+    "size": [
+      300,
+      300
+    ],
+    "scale": 0.007843,
+    "mean": 127.5,
+    "swapRB": false,
+    "bbox_expansion": 0,
+    "input": "single current RGB only",
+    "offline_precompute": true
+  },
+  "window_seconds": [
+    22.0,
+    24.5
+  ],
+  "normal_context_seconds": [
+    18.0,
+    21.0,
+    25.0,
+    27.0
+  ],
+  "quality_sample_seconds": [
+    0.0,
+    10.0,
+    18.0,
+    19.0,
+    20.0,
+    21.0,
+    22.0,
+    22.5,
+    22.75,
+    23.0,
+    23.25,
+    23.5,
+    23.75,
+    24.0,
+    24.5,
+    25.0,
+    26.0,
+    27.0
+  ],
+  "additional_quality_samples": "old uniform indices walking 0:83:827 plus826; sitting 0:122:1219 plus1218",
+  "Frame_test_scope": "old/new empty Frame exact keys/descriptors/depth/grid; actual bbox filtering correct subset/depth/map-point indices/timestamps; no artificial pixels/features",
+  "P2_max_runs": {
+    "walking": 3,
+    "sitting": 1
+  },
+  "P2_order": [
+    "walking/P2_01",
+    "walking/P2_02",
+    "walking/P2_03",
+    "sitting/P2_01"
+  ],
+  "no_P1_repeats": true,
+  "evaluation": "reuse old frozen evaluate.py; primary unchanged; single SE3 no scale; old RPE/time and coverage rules; unique export timestamp required for precision qualification",
+  "local_comparison": "RPE pairs start/end both within 22.0..24.5s relative first walking stamp; also fixed 18..21 and25..27s normal windows; all full-sequence metrics reported",
+  "sufficiency_gate": "prior three walking P2 ATE/RPEt<=.05m coverage>=.99 all exits0; sitting ATE/RPEt not >.02m worse than P1; repeated residual and partial improvements reported separately",
+  "minimum_free_bytes": 1000000000,
+  "GT_online": false,
+  "no_scientific_retries": true,
+  "stop": "no credible weights/detections/integration -> no P2; no new dataset, framework or backend method"
+}

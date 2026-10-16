@@ -1,0 +1,20 @@
+{
+  "type": "UNWEIGHTED_LEGACY_HDF5_LAYOUT_AUDIT_NO_LOADING_OR_PREDICTION",
+  "checkpoint_arrays": 440,
+  "model_arrays": 440,
+  "before_shape_mismatches": 376,
+  "after_original_freeze200_shape_mismatches": 0,
+  "source_layer_200": "block5b_project_conv",
+  "saved_first": [
+    "block5b_project_conv/kernel:0",
+    "block5b_project_bn/gamma:0",
+    "block5b_project_bn/beta:0"
+  ],
+  "model_legacy_first_after_original_freeze": [
+    "block5b_project_conv/kernel:0",
+    "block5b_project_bn/gamma:0",
+    "block5b_project_bn/beta:0"
+  ],
+  "legacy_order": "trainable_weights + non_trainable_weights; confirmed from installed Keras hdf5_format.py",
+  "all_shapes_match": true
+}

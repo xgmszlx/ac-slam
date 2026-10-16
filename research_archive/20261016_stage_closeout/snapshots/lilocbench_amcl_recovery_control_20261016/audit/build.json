@@ -1,0 +1,46 @@
+{
+  "compile": [
+    "/usr/bin/cc",
+    "-O3",
+    "-DNDEBUG",
+    "-fPIC",
+    "-DHAVE_DRAND48",
+    "-DHAVE_UNISTD_H",
+    "-DROSCONSOLE_BACKEND_LOG4CXX",
+    "-DROS_BUILD_SHARED_LIBS=1",
+    "-DROS_PACKAGE_NAME=\"amcl\"",
+    "-Damcl_pf_EXPORTS",
+    "-I/home/wcqw/lilocbench_amcl_validation_20261016/diagnostic_ws_v2/src/amcl/include",
+    "-I/home/wcqw/lilocbench_amcl_validation_20261016/diagnostic_ws_v2/src/amcl/src/include",
+    "-c",
+    "/home/wcqw/lilocbench_amcl_recovery_control_20261016/sources/pf.c",
+    "-o",
+    "/home/wcqw/lilocbench_amcl_recovery_control_20261016/build/pf.c.o"
+  ],
+  "link": [
+    "/usr/bin/cc",
+    "-fPIC",
+    "-O3",
+    "-DNDEBUG",
+    "-shared",
+    "-Wl,-soname,libamcl_pf.so",
+    "-o",
+    "/home/wcqw/lilocbench_amcl_recovery_control_20261016/lib/libamcl_pf.so",
+    "/home/wcqw/lilocbench_amcl_recovery_control_20261016/build/pf.c.o",
+    "/home/wcqw/lilocbench_amcl_validation_20261016/diagnostic_ws_v2/build/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_kdtree.c.o",
+    "/home/wcqw/lilocbench_amcl_validation_20261016/diagnostic_ws_v2/build/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_pdf.c.o",
+    "/home/wcqw/lilocbench_amcl_validation_20261016/diagnostic_ws_v2/build/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_vector.c.o",
+    "/home/wcqw/lilocbench_amcl_validation_20261016/diagnostic_ws_v2/build/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/eig3.c.o",
+    "/home/wcqw/lilocbench_amcl_validation_20261016/diagnostic_ws_v2/build/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_draw.c.o"
+  ],
+  "reverse_edits_restore_v2_exactly": true,
+  "RNG_call_text_unchanged": true,
+  "unchanged_old_object_sha256": {
+    "/home/wcqw/lilocbench_amcl_validation_20261016/diagnostic_ws_v2/build/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_kdtree.c.o": "09d61c1f8d5a5cc505e8115a8218e44f831d2ea435e7eae4392dff0853a865e5",
+    "/home/wcqw/lilocbench_amcl_validation_20261016/diagnostic_ws_v2/build/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_pdf.c.o": "b27acb57514c4d545e56d23a455b3493cc31c290f05894a7f96063cfdbc2ce45",
+    "/home/wcqw/lilocbench_amcl_validation_20261016/diagnostic_ws_v2/build/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_vector.c.o": "aab04909b3483c9d605404637b8376cbba2f9e0c96a59931be736572d1b5e6a4",
+    "/home/wcqw/lilocbench_amcl_validation_20261016/diagnostic_ws_v2/build/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/eig3.c.o": "6e874b3724301bcbc113679f850d4b350af3f1acddcecbedc93cc59bc418e56c",
+    "/home/wcqw/lilocbench_amcl_validation_20261016/diagnostic_ws_v2/build/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_draw.c.o": "912860b77b5bd612453db5252ee3a4e1bc97cd44dd80ca687f6214c00eaa17e2"
+  },
+  "scope": "Only pf.c rebuilt, old executable/sensors/map and pf_pdf allocator reused unchanged; no algorithm or sampling formulas modified; no claim of universal timing equivalence"
+}

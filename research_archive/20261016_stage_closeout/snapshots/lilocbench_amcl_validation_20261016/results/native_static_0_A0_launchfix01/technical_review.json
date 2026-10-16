@@ -1,0 +1,11 @@
+{
+  "decision": "INVALID_FOR_SCIENTIFIC_COMPARISON",
+  "automatic_basic_gate": "covered span / monotonic pose / input receipt checks passed, but did not test TF lag; its original PASS string is not end-to-end qualification",
+  "TF_error_lines": 1461,
+  "first_errors": [
+    "[WARN] [1792123548.781376663, 1733376918.172087741]: Failed to compute odom pose, skipping scan (Lookup would require extrapolation 0.033957871s into the future.  Requested time 1733376908.004002094 but the latest data is at time 1733376907.970044136, when looking up transform from frame [base_link] to frame [odom])",
+    "[ERROR] [1792123548.781417896, 1733376918.172087741]: Couldn't determine robot's pose associated with laser scan",
+    "[WARN] [1792123548.781445611, 1733376918.172087741]: Failed to compute odom pose, skipping scan (Lookup would require extrapolation 0.099902583s into the future.  Requested time 1733376908.069946766 but the latest data is at time 1733376907.970044136, when looking up transform from frame [base_link] to frame [odom])"
+  ],
+  "reason": "8x asynchronous replay TF backlog; retain original trajectory, error values and logs; exclude from scientific comparisons"
+}

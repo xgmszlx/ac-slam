@@ -1,0 +1,83 @@
+{
+  "disk": {
+    "total": 115890958336,
+    "used": 108067119104,
+    "free": 1889636352
+  },
+  "checks": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-c",
+        "import cv2,sys;print(sys.version);print(cv2.__version__)"
+      ],
+      "exit": 0,
+      "stdout": "3.8.10 (default, Mar 18 2025, 20:04:55) \n[GCC 9.4.0]\n4.2.0\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "nvidia-smi",
+        "--query-gpu=name,memory.total,memory.free",
+        "--format=csv,noheader"
+      ],
+      "exit": 0,
+      "stdout": "NVIDIA GeForce RTX 4060 Laptop GPU, 8188 MiB, 7881 MiB\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/local/cuda-11.8/bin/nvcc",
+        "--version"
+      ],
+      "exit": 0,
+      "stdout": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2022 NVIDIA Corporation\nBuilt on Wed_Sep_21_10:33:58_PDT_2022\nCuda compilation tools, release 11.8, V11.8.89\nBuild cuda_11.8.r11.8/compiler.31833905_0\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "free",
+        "-b"
+      ],
+      "exit": 0,
+      "stdout": "              \u603b\u8ba1         \u5df2\u7528        \u7a7a\u95f2      \u5171\u4eab    \u7f13\u51b2/\u7f13\u5b58    \u53ef\u7528\n\u5185\u5b58\uff1a 24910815232  7330091008  5529718784  1041682432 12051005440 16126332928\n\u4ea4\u6362\uff1a  9999216640           0  9999216640\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "ldconfig",
+        "-p"
+      ],
+      "exit": 0,
+      "stdout": "\tlibopencv_core.so.4.2 (libc6,x86-64) => /lib/x86_64-linux-gnu/libopencv_core.so.4.2\n\tlibopencv_core.so (libc6,x86-64) => /lib/x86_64-linux-gnu/libopencv_core.so",
+      "stderr": ""
+    }
+  ],
+  "torch_default_python": {
+    "command": [
+      "python3",
+      "-c",
+      "import importlib.util,sys; print(sys.version); print(importlib.util.find_spec(\"torch\"))"
+    ],
+    "exit": 0,
+    "stdout": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:27:36) [GCC 11.2.0]\nNone\n",
+    "stderr": ""
+  },
+  "author_ast": {
+    "como_setup.py": "PASS_SYNTAX_ONLY",
+    "mac_Module_Optimization___init__.py": "PASS_SYNTAX_ONLY",
+    "mac_Module_Covariance_Project2to3.py": "PASS_SYNTAX_ONLY",
+    "mac_Module_KeypointSelector.py": "PASS_SYNTAX_ONLY"
+  },
+  "existing_orb": {
+    "/home/wcqw/passive_visual_slam_qualification_20261015/sources/ORB_SLAM3-4452a3c4ab75b1cde34e5505a36ec3f9edcdc4c4/lib/libORB_SLAM3.so": {
+      "exists": true,
+      "sha256": "a20db0416fc54ca5949e6b6ac834c12f59dc0bae5f08dc2945e46943a3532c46"
+    },
+    "/home/wcqw/passive_visual_slam_qualification_20261015/diagnostic_comparison_20261015/build/rgbd_diagnostic": {
+      "exists": true,
+      "sha256": "303dbf7b98cd96bd479854f4fed8f154b78fb146f5f138fad8ff197f3fca2236"
+    }
+  },
+  "scope": "STATIC_FEASIBILITY_ONLY; no build, no dataset/model payload, no SLAM run"
+}

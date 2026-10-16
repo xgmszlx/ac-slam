@@ -1,0 +1,57 @@
+--- a/Examples/RGB-D/rgbd_tum.cc
++++ b/Examples/RGB-D/rgbd_tum_trace.cc
+@@ -20,6 +20,9 @@
+ #include<algorithm>
+ #include<fstream>
+ #include<chrono>
++#include<iomanip>
++#include<cmath>
++#include<array>
+ 
+ #include<opencv2/core/core.hpp>
+ 
+@@ -70,6 +73,8 @@
+     cout << "Start processing sequence ..." << endl;
+     cout << "Images in the sequence: " << nImages << endl << endl;
+ 
++    struct Observation {int index,state; double stamp,track_s,observer_s; vector<cv::KeyPoint> keys; vector<unsigned char> associated;};
++    vector<Observation> observations; observations.reserve(nImages);
+     // Main loop
+     cv::Mat imRGB, imD;
+     for(int ni=0; ni<nImages; ni++)
+@@ -112,6 +117,15 @@
+         double ttrack= std::chrono::duration_cast<std::chrono::duration<double> >(t2 - t1).count();
+ 
+         vTimesTrack[ni]=ttrack;
++        auto observer_start=std::chrono::steady_clock::now();
++        Observation row; row.index=ni; row.stamp=tframe; row.track_s=ttrack;
++        row.state=SLAM.GetTrackingState();
++        row.keys=SLAM.GetTrackedKeyPointsUn();
++        auto points=SLAM.GetTrackedMapPoints();
++        row.associated.reserve(points.size());
++        for(auto point:points) row.associated.push_back(point!=nullptr);
++        row.observer_s=std::chrono::duration<double>(std::chrono::steady_clock::now()-observer_start).count();
++        observations.push_back(std::move(row));
+ 
+         // Wait to load the next frame
+         double T=0;
+@@ -127,6 +141,19 @@
+     // Stop all threads
+     SLAM.Shutdown();
+ 
++    // Write buffered observations after estimator shutdown. No estimator setters used.
++    ofstream statefile("frame_states.csv"), keyfile("keypoints.csv");
++    statefile << "index,stamp,state,n_keypoints,n_nonnull_associations,track_s,observer_s\n";
++    keyfile << "index,x,y,octave,nonnull_association\n";
++    statefile << setprecision(17); keyfile << setprecision(8);
++    for(const auto &row:observations) {
++        int count=0; for(auto value:row.associated)count+=value;
++        statefile << row.index << "," << row.stamp << "," << row.state << "," << row.keys.size() << "," << count << "," << row.track_s << "," << row.observer_s << "\n";
++        for(size_t k=0;k<row.keys.size();++k) {
++            keyfile << row.index << "," << row.keys[k].pt.x << "," << row.keys[k].pt.y << "," << row.keys[k].octave << "," << (k<row.associated.size()?int(row.associated[k]):0) << "\n";
++        }
++    }
++    statefile.close();keyfile.close();
+     // Tracking time statistics
+     sort(vTimesTrack.begin(),vTimesTrack.end());
+     float totaltime = 0;

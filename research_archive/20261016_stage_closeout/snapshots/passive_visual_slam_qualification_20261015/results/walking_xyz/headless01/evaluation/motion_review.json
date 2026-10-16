@@ -1,0 +1,30 @@
+{
+  "all_pairs": 768,
+  "maximum_RPE_pair": {
+    "start": 1341846336.241891,
+    "end": 1341846337.250087,
+    "gt_translation_m": 0.17210595573657564,
+    "estimated_translation_m": 1.3395950523106015,
+    "gt_rotation_deg": 4.782052911000461,
+    "estimated_rotation_deg": 29.929283036280506,
+    "translation_rpe_m": 1.420811860008372,
+    "rotation_rpe_deg": 25.791854168499935
+  },
+  "gt_1s_translation": {
+    "n": 768,
+    "rmse": 0.22910318743917915,
+    "median": 0.22658590829620778,
+    "p90": 0.3088170923987642,
+    "max": 0.47680293623256964,
+    "mean": 0.20853657560799752
+  },
+  "estimated_1s_translation": {
+    "n": 768,
+    "rmse": 0.48418404637128515,
+    "median": 0.3460960639723388,
+    "p90": 0.7546074747765567,
+    "max": 1.3395950523106015,
+    "mean": 0.40370830166998317
+  },
+  "causal_dynamic_attribution": "UNRESOLVED; motion comparison does not label erroneous correspondences"
+}

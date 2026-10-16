@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-15",
+  "status": "ANALYZED",
+  "primary": {
+    "family": "V3",
+    "question": "Surface identity under image-location uncertainty at static RGB-D depth boundaries",
+    "anchor": "MAC-VO, ICRA 2025",
+    "problem_evidence": "LITERATURE_SUPPORTED_GENERAL_PROBLEM",
+    "anchor_representation": "CODE_VERIFIED_PER_POINT_COVARIANCE_INTERFACE",
+    "remaining_task_loss": "UNKNOWN",
+    "novelty_space": "UNRESOLVED",
+    "method_development": "NOT_RECOMMENDED",
+    "minimal_experiment": "RECOMMENDED_CONDITIONAL_DATA_AND_DISK_GATE"
+  },
+  "secondary": {
+    "family": "V2",
+    "question": "Separating local illumination compensation from pose constraints",
+    "anchor": "COMO, ECCV 2024",
+    "broad_mechanism": "NOVELTY_CONFLICT",
+    "narrow_mechanism": "UNRESOLVED",
+    "experiment": "NOT_RECOMMENDED"
+  },
+  "data_qualification": "INCOMPLETE_METADATA_ACQUISITION",
+  "next_unique_task": "ETH3D cables_3 complete-sequence native RGB-D versus simple depth invalidation, maximum 3+3 runs only after gates",
+  "performed": {
+    "slam_runs": 0,
+    "ros_simulation": 0,
+    "compilations": 0,
+    "training": 0,
+    "installations": 0,
+    "dataset_payloads": 0,
+    "model_payloads": 0
+  },
+  "old_walking_state": "STOP_CURRENT_WALKING_METHOD_DEVELOPMENT"
+}

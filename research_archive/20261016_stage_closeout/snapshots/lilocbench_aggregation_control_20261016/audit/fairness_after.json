@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "parameter_diffs": {
+    "laser_max_beams": [
+      100,
+      91
+    ],
+    "laser_model_type": [
+      "likelihood_field_prob",
+      "likelihood_field"
+    ]
+  },
+  "same_708_seq_and_stamp": true,
+  "same_708_output_stamps": true,
+  "raw_scans_received": 6540,
+  "actual_gaussian_seed": 1702,
+  "random_particle_count": 0,
+  "normal_resample_calls": 708,
+  "zero_or_nonfinite_total_or_weights_events": 0,
+  "accepted_valid_beam_min_max": [
+    82,
+    91
+  ],
+  "beam_evidence": "Native deterministic source loop + actual received input/stamps and effective params; not a newly inserted per-beam sensor trace",
+  "GT": "same one-time initial params, no online GT stream",
+  "same_existing_executable_sensors_map_PF": "See pre-run hashes; no rebuild"
+}

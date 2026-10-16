@@ -1,0 +1,28 @@
+{
+  "sequence": "walking",
+  "configuration": "P0_03",
+  "command": [
+    "/home/wcqw/passive_visual_slam_qualification_20261015/diagnostic_comparison_20261015/build/rgbd_diagnostic",
+    "/home/wcqw/passive_visual_slam_qualification_20261015/sources/ORB_SLAM3-4452a3c4ab75b1cde34e5505a36ec3f9edcdc4c4/Vocabulary/ORBvoc.txt",
+    "/home/wcqw/passive_visual_slam_qualification_20261015/diagnostic_comparison_20261015/config/P0.yaml",
+    "/home/wcqw/passive_visual_slam_qualification_20261015/data/rgbd_dataset_freiburg3_walking_xyz",
+    "/home/wcqw/passive_visual_slam_qualification_20261015/data/rgbd_dataset_freiburg3_walking_xyz/associations.txt"
+  ],
+  "start_unix": 1792048305.3802514,
+  "core_sha256": "a20db0416fc54ca5949e6b6ac834c12f59dc0bae5f08dc2945e46943a3532c46",
+  "binary_sha256": "303dbf7b98cd96bd479854f4fed8f154b78fb146f5f138fad8ff197f3fca2236",
+  "yaml_sha256": "0993b2b0f1021e0c97ec3a28ff42048c5c0039316a67cae4fae0367c1672b429",
+  "gt_online": false,
+  "frames_expected": 827,
+  "diagnostic": "identical memory-buffer public state and TrackRGBD pose; no disk IO in main loop; native trajectory exports precede buffer writes",
+  "exit_status": 0,
+  "elapsed_wall_s": 39.325113623002835,
+  "state_counts": {
+    "2": 827
+  },
+  "processed_frames": 827,
+  "getter_us": {
+    "mean": 0.16869528415961305,
+    "max": 0.43
+  }
+}

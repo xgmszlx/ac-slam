@@ -1,0 +1,13 @@
+{
+  "reason": "Restore omitted author freeze_until=200; use documented legacy HDF5 variable ordering for independent verification",
+  "source_evidence": "Original notebook lines 169-174; installed Keras hdf5_format.py _legacy_weights and convert_nested_model",
+  "before_sha256": "8320e21c89cb4e7811b378162da46549bdd0cec19aff001f7665ef063e0b9248",
+  "after_sha256": "f5d6e64df1a18f4fd5f5da14a048380b6a19f161a9dd914fc3d3c2ff02b1e09b",
+  "standard_load_weights_API_unchanged": true,
+  "manual_weight_remapping": false,
+  "weights_changed": false,
+  "threshold_changed": false,
+  "scientific_runs_before_correction": 0,
+  "first_failure_preserved": true,
+  "note": "Initial raw model.weights layout comparison was not HDF5 legacy order; static_legacy_layout.json is the relevant comparison."
+}

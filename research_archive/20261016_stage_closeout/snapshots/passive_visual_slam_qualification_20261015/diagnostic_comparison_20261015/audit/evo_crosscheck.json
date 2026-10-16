@@ -1,0 +1,127 @@
+{
+  "evo": "v1.31.1",
+  "checks": [
+    {
+      "sequence": "walking",
+      "run": "P0_02",
+      "kind": "exported",
+      "evo_ATE_m": 0.7302279001248495,
+      "ours_ATE_m": 0.7320437451895969,
+      "difference_m": 0.0018158450647474123,
+      "GT_pairs": 825,
+      "PASS_1e9": false
+    },
+    {
+      "sequence": "walking",
+      "run": "P0_02",
+      "kind": "online",
+      "evo_ATE_m": 0.7338413990602063,
+      "ours_ATE_m": 0.7338413990602071,
+      "difference_m": 7.771561172376096e-16,
+      "GT_pairs": 738,
+      "PASS_1e9": true
+    },
+    {
+      "sequence": "walking",
+      "run": "P0_03",
+      "kind": "exported",
+      "evo_ATE_m": 0.7853308375642338,
+      "ours_ATE_m": 0.7853308375642334,
+      "difference_m": 4.440892098500626e-16,
+      "GT_pairs": 826,
+      "PASS_1e9": true
+    },
+    {
+      "sequence": "walking",
+      "run": "P0_03",
+      "kind": "online",
+      "evo_ATE_m": 0.7852380283529392,
+      "ours_ATE_m": 0.7852380283529395,
+      "difference_m": 3.3306690738754696e-16,
+      "GT_pairs": 826,
+      "PASS_1e9": true
+    },
+    {
+      "sequence": "walking",
+      "run": "P1_01",
+      "kind": "exported",
+      "evo_ATE_m": 0.4375441092216184,
+      "ours_ATE_m": 0.437544109221619,
+      "difference_m": 6.106226635438361e-16,
+      "GT_pairs": 826,
+      "PASS_1e9": true
+    },
+    {
+      "sequence": "walking",
+      "run": "P1_01",
+      "kind": "online",
+      "evo_ATE_m": 0.4757739741935135,
+      "ours_ATE_m": 0.4757739741935129,
+      "difference_m": 6.106226635438361e-16,
+      "GT_pairs": 826,
+      "PASS_1e9": true
+    },
+    {
+      "sequence": "walking",
+      "run": "P1_02",
+      "kind": "exported",
+      "evo_ATE_m": 0.43183934987938566,
+      "ours_ATE_m": 0.4318393498793854,
+      "difference_m": 2.7755575615628914e-16,
+      "GT_pairs": 826,
+      "PASS_1e9": true
+    },
+    {
+      "sequence": "walking",
+      "run": "P1_02",
+      "kind": "online",
+      "evo_ATE_m": 0.4554906690990976,
+      "ours_ATE_m": 0.4554906690990976,
+      "difference_m": 0.0,
+      "GT_pairs": 826,
+      "PASS_1e9": true
+    },
+    {
+      "sequence": "walking",
+      "run": "P1_03",
+      "kind": "exported",
+      "evo_ATE_m": 0.41364371089104246,
+      "ours_ATE_m": 0.41364371089104246,
+      "difference_m": 0.0,
+      "GT_pairs": 826,
+      "PASS_1e9": true
+    },
+    {
+      "sequence": "walking",
+      "run": "P1_03",
+      "kind": "online",
+      "evo_ATE_m": 0.4415448520011531,
+      "ours_ATE_m": 0.44154485200115345,
+      "difference_m": 3.3306690738754696e-16,
+      "GT_pairs": 826,
+      "PASS_1e9": true
+    },
+    {
+      "sequence": "sitting",
+      "run": "P1_01",
+      "kind": "exported",
+      "evo_ATE_m": 0.009186028709017392,
+      "ours_ATE_m": 0.009186028709017432,
+      "difference_m": 3.9898639947466563e-17,
+      "GT_pairs": 1216,
+      "PASS_1e9": true
+    },
+    {
+      "sequence": "sitting",
+      "run": "P1_01",
+      "kind": "online",
+      "evo_ATE_m": 0.009107776654548583,
+      "ours_ATE_m": 0.009107776654548648,
+      "difference_m": 6.418476861114186e-17,
+      "GT_pairs": 1216,
+      "PASS_1e9": true
+    }
+  ],
+  "PASS": false,
+  "initial_full_agreement_assertion": "FAILED; retained initial script; inspect all deltas before concluding"
+}

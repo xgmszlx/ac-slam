@@ -1,0 +1,26 @@
+{
+  "registered_utc": "2026-10-15T07:16:13.320127+00:00",
+  "source_sha256": {
+    "masked_source/src/Frame.cc": "ce47ae157869883aab689a5fa4f380518af0758933f9ae54d231756365eadb0a",
+    "masked_source/src/Tracking.cc": "bf2a85dcee6dbf55effe3046b006729d18c8b54ed9cb7e9c80c27743580d81bd",
+    "masked_source/src/System.cc": "3eeda7bb48f17870d34350bc0a2cd4cd67f4bc0d99595bca928ddef16126a4d3",
+    "masked_source/include/System.h": "c30428595b3428d206a3dcb6c8c3e50a5648b09ef7157434def2584df3563d77",
+    "masked_source/include/Tracking.h": "f612031b83bbdb1a2b785609f598e081b6f89b3dbe607b958fd2947338dc71d6",
+    "masked_source/include/Frame.h": "328644a74466bcacb04738b4ad5eda9d74ff5cc6cfb15b0e7ebcdd68562cd18b",
+    "masked_source/include/FeatureExclusion.h": "8c82a8cefa551afec53a2561c1c7ef5a52301ad1919ed68c8e0c6a60d51470e8",
+    "code/rgbd_masked.cc": "3191bd833f12807430305ba6e482a9dc7dc5d847286036c07017a564c014b1d6",
+    "code/make_masks.py": "5d27bc619f91a8d5bbcefd231cc805cdcf0bebf1f5731b340674216cb6b5e80c"
+  },
+  "original_methods_preserved": true,
+  "class_layout_unchanged": true,
+  "unchanged_backend_objects": "read-only linked from original build; no optimizer compilation/modification",
+  "mask_filter": "post ExtractORB, before N/depth/undistortion/grid in added RGBD Frame overload",
+  "map_point_boundary": "does not delete old map points or mark dynamic; descriptor matching uses remaining current-frame indices; no additional projection semantic filter",
+  "P2_order": [
+    "walking/P2_01",
+    "walking/P2_02",
+    "walking/P2_03",
+    "sitting/P2_01"
+  ],
+  "order_limitation": "P2 qualification conditional on completed P1; P0/P1 interleaved, P2 runs later; no extra P1 runs authorized"
+}

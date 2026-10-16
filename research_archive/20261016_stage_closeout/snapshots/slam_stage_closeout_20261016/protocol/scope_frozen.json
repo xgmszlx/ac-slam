@@ -1,0 +1,25 @@
+{
+  "scope": "OFFLINE_DIAGNOSTIC",
+  "windows": [
+    {
+      "start_s": 202.20333814620972,
+      "end_s": 205.85343146324158,
+      "duration_s": 3.6500933170318604
+    },
+    {
+      "start_s": 276.95409059524536,
+      "end_s": 289.20389318466187,
+      "duration_s": 12.249802589416504
+    }
+  ],
+  "selection": "All actual sensor updates inside the two registered windows; first/midpoint-nearest/last for display. No other windows, no new pose-grid search.",
+  "conflict_proxy": "native endpoint occupied-distance > 0.5m, not change labels",
+  "GT": "offline only",
+  "new_SLAM_runs": 0,
+  "L1_model_development": "STOPPED",
+  "papers": [
+    "Reliable MCL JFR2023",
+    "LILocBench IROS2025",
+    "ENM-MCL ICRA2025"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "no_spatial_alignment_1m_control": "PASS",
+  "yaw_radians_control": "PASS",
+  "author_endpoint_padding_control": "PASS",
+  "independent_xy_yaw_agreement_all_12": "PASS",
+  "plot_convergence_unit_issue": {
+    "expression": "r < r2d(rot_bound)",
+    "config_rot_bound_degrees": 5,
+    "computed_radian_comparator": 286.4788975654116,
+    "correct_radian_comparator": 0.08726646259971647,
+    "scope": "plot convergence only; scoring uses correct d2r; original source left unchanged"
+  },
+  "SO3_reconstruction_max_element_delta": 1.3877787807814457e-17,
+  "initial_test_failure": "Exact rotation element equality failed after SLERP matrix reconstruction; original script/log retained. Translation endpoint equality remains exact; rotation tested at 1e-12 matrix tolerance. Not a trajectory acceptance change.",
+  "provenance": "AUTHOR_EXAMPLE_ONLY"
+}

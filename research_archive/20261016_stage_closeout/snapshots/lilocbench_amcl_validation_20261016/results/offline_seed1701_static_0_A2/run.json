@@ -1,0 +1,60 @@
+{
+  "id": "offline_seed1701_static_0_A2",
+  "spec": {
+    "id": "offline_seed1701_static_0_A2",
+    "sequence": "static_0",
+    "config": "A2",
+    "model": "likelihood_field_prob",
+    "skip": true,
+    "binary": "diagnostic",
+    "seed": 1701
+  },
+  "start_wall": 1792124097.7137396,
+  "status": "COMPLETE",
+  "commands": [
+    {
+      "command": [
+        "/opt/ros/noetic/bin/roscore",
+        "-p",
+        "11331"
+      ],
+      "log": "roscore.log"
+    },
+    {
+      "command": [
+        "/opt/ros/noetic/lib/map_server/map_server",
+        "/home/wcqw/lilocbench_amcl_validation_20261016/data/map/map_office.yaml",
+        "__name:=map_server"
+      ],
+      "log": "map_server.log"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "/home/wcqw/lilocbench_amcl_validation_20261016/code/collect_amcl.py",
+        "/home/wcqw/lilocbench_amcl_validation_20261016/results/offline_seed1701_static_0_A2"
+      ],
+      "log": "collector.log"
+    },
+    {
+      "command": [
+        "/home/wcqw/lilocbench_amcl_validation_20261016/diagnostic_ws/devel/lib/amcl/amcl",
+        "--run-from-bag",
+        "/home/wcqw/lilocbench_amcl_validation_20261016/data/static_0_native_topics02.bag",
+        "__name:=amcl"
+      ],
+      "log": "launch.log"
+    }
+  ],
+  "interface": "official --run-from-bag; /use_sim_time=false; original scan/TF stamps drive propagation; no asynchronous bag player",
+  "estimator_exit": 0,
+  "end_wall": 1792124109.207238,
+  "elapsed_wall_s": 11.493499517440796,
+  "process_exit": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "clean_collector": true
+}

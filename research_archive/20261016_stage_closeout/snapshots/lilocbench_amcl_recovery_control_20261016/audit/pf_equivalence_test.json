@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "scope": "12-step deterministic PF fixture, both recovery configurations, zero-total sensor case; not whole ROS timing-invariance proof",
+  "results": [
+    {
+      "recovery_enabled": false,
+      "particle_poses_weights_wslow_wfast_and_next_RNG_draw_exact": true,
+      "sha256": "5e1c0c9a55932b40ea382c30e89ffcb83cf0aca6ab127694a319b37a79793824"
+    },
+    {
+      "recovery_enabled": true,
+      "particle_poses_weights_wslow_wfast_and_next_RNG_draw_exact": true,
+      "sha256": "4d59169247b743230a5ba398bbcc28b1deb3d2c6a8a8a4769ade3040ae083d04"
+    }
+  ]
+}

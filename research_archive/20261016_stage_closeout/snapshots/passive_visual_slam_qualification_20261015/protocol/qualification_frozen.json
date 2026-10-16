@@ -1,0 +1,43 @@
+{
+  "purpose": "passive RGB-D SLAM problem qualification; not method benchmark",
+  "native_settings": "official TUM3.yaml unchanged",
+  "input_policy": "all unique RGB/depth pairs within 20ms, no truncation",
+  "first_sequence": "walking_xyz",
+  "second_sequence": "sitting_xyz only after first native completes and disk budget passes",
+  "allowed_runs": [
+    {
+      "sequence": "walking_xyz",
+      "name": "native01",
+      "purpose": "unchanged official example"
+    },
+    {
+      "sequence": "walking_xyz",
+      "name": "observer01",
+      "purpose": "minimal public getter observation, only if native output lacks per-frame states"
+    },
+    {
+      "sequence": "sitting_xyz",
+      "name": "native01",
+      "purpose": "conditional low-dynamic context; not motion-matched causal control"
+    }
+  ],
+  "maximum_runs": 3,
+  "no_best_run_selection": true,
+  "no_parameter_search": true,
+  "evaluation": {
+    "alignment": "SE3 no scale",
+    "GT_max_dt_s": 0.02,
+    "RGB_depth_max_dt_s": 0.02,
+    "RPE_delta_s": 1.0,
+    "RPE_delta_tolerance_s": 0.02,
+    "RPE_max_intervening_pose_gap_s": 0.1,
+    "coverage_denominators": [
+      "all RGB rows",
+      "associated input frames",
+      "input timestamps in GT support"
+    ],
+    "lost_not_inferred_from_keyframes": true
+  },
+  "evidence_policy": "Native failure or large ATE alone does not prove dynamic causal mechanism; masks not tested this round; no innovation claim from generic weighting or feature quality",
+  "stop": "no more native systems, no more than two sequences, no estimator threshold change; if build cannot be readied with bounded compatibility fixes, TECHNICAL_INCOMPLETE"
+}

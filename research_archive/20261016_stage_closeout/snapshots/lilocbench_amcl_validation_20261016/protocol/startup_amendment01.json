@@ -1,0 +1,29 @@
+{
+  "time": 1792123517.7342098,
+  "reason": "First roslaunch failed to resolve absolute node type; no sensor playback. Use ROS native package/type resolution and scoped overlay paths; bootstrap bag initial clock once and close publisher before replay. No estimator, model, map, scan or scientific parameter changes.",
+  "failed_run": "native_static_0_A0",
+  "replacement_runs": [
+    {
+      "id": "native_static_0_A0_launchfix01",
+      "sequence": "static_0",
+      "config": "A0",
+      "model": "likelihood_field",
+      "skip": false,
+      "binary": "installed",
+      "seed": null
+    }
+  ],
+  "additional_scientific_runs": 0,
+  "scope": "one startup replacement; original failure and protocol retained",
+  "code_hashes": {
+    "code/fetch_official.py": "19d9abc62db4bb2f489924ed98106f918b5eb30cf2a27e24ec3a3908d347cf39",
+    "code/plot_author_examples.py": "5a7312d18408a1d1fade8db7d6d44128d9a21f2ed45815287e53a1fe89b14672",
+    "code/audit_bags.py": "f990c2304aa63fe7d8c09fdc0c2086becb221f27e0aa4d762d839900ab28dd66",
+    "code/evaluate_one.py": "c0705a2801439332c4b2c1c9849292c9df925d3ee4c4c07fbe77a56062093761",
+    "code/prepare_diagnostic_source.py": "9a91f2e5888648c99420755dd96664f5791d3825f3de4f861c209a120f449317",
+    "code/audit_official_evaluation.py": "d1c3d3eec988260de84d5d727f3b512fab0c2bd3415943e208e052a970d172cd",
+    "code/run_one.py": "6e487945953b424e2dea4ce9cc5682e173cf690e7bc73e88d5680e4c4dba6b45",
+    "code/start_clock.py": "0b349e4438d09c1a08d7579b8854a5b853872053227ffdd7d178733738471662",
+    "code/collect_amcl.py": "3d15bbf12349a5228fd60e08bcbbb64b7d1797f4265f941fd1b497ee0f531bab"
+  }
+}

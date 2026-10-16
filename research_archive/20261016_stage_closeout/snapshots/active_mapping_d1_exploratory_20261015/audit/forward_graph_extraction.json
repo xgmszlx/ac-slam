@@ -1,0 +1,17 @@
+{
+  "scope": "Only final initialization download/load branch omitted; entire forward factory AST retained",
+  "original_factory_sha256": "dde457ffa678612cc95344d682cdd1dc72263ab0ef30ca626c685ed39253f044",
+  "removed_statement_ast": "If(test=Compare(left=Name(id='weights', ctx=Load()), ops=[Eq()], comparators=[Constant(value='imagenet', kind=None)]), body=[If(test=Name(id='include_top', ctx=Load()), body=[Assign(targets=[Name(id='file_suffix', ctx=Store())], value=Constant(value='.h5', kind=None), type_comment=None), Assign(targets=[Name(id='file_hash', ctx=Store())], value=Subscript(value=Subscript(value=Name(id='WEIGHTS_HASHES', ctx=Load()), slice=Index(value=Subscript(value=Name(id='model_name', ctx=Load()), slice=Slice(lower=UnaryOp(op=USub(), operand=Constant(value=2, kind=None)), upper=None, step=None), ctx=Load())), ctx=Load()), slice=Index(value=Constant(value=0, kind=None)), ctx=Load()), type_comment=None)], orelse=[Assign(targets=[Name(id='file_suffix', ctx=Store())], value=Constant(value='_notop.h5', kind=None), type_comment=None), Assign(targets=[Name(id='file_hash', ctx=Store())], value=Subscript(value=Subscript(value=Name(id='WEIGHTS_HASHES', ctx=Load()), slice=Index(value=Subscript(value=Name(id='model_name', ctx=Load()), slice=Slice(lower=UnaryOp(op=USub(), operand=Constant(value=2, kind=None)), upper=None, step=None), ctx=Load())), ctx=Load()), slice=Index(value=Constant(value=1, kind=None)), ctx=Load()), type_comment=None)]), Assign(targets=[Name(id='file_name', ctx=Store())], value=BinOp(left=Name(id='model_name', ctx=Load()), op=Add(), right=Name(id='file_suffix', ctx=Load())), type_comment=None), Assign(targets=[Name(id='weights_path', ctx=Store())], value=Call(func=Attribute(value=Name(id='data_utils', ctx=Load()), attr='get_file', ctx=Load()), args=[Name(id='file_name', ctx=Load()), BinOp(left=Name(id='BASE_WEIGHTS_PATH', ctx=Load()), op=Add(), right=Name(id='file_name', ctx=Load()))], keywords=[keyword(arg='cache_subdir', value=Constant(value='models', kind=None)), keyword(arg='file_hash', value=Name(id='file_hash', ctx=Load()))]), type_comment=None), Expr(value=Call(func=Attribute(value=Name(id='model', ctx=Load()), attr='load_weights', ctx=Load()), args=[Name(id='weights_path', ctx=Load())], keywords=[]))], orelse=[If(test=Compare(left=Name(id='weights', ctx=Load()), ops=[IsNot()], comparators=[Constant(value=None, kind=None)]), body=[Expr(value=Call(func=Attribute(value=Name(id='model', ctx=Load()), attr='load_weights', ctx=Load()), args=[Name(id='weights', ctx=Load())], keywords=[]))], orelse=[])])",
+  "forward_AST_preserved": true,
+  "original_EfficientNetB1_arguments_preserved": true,
+  "rescaling_layers": [
+    0.00392156862745098,
+    [
+      2.0896918976428642,
+      2.1128856368212916,
+      2.1081851067789197
+    ]
+  ],
+  "required_followup": "Standard full author H5 load plus equality of every model variable",
+  "no_manual_weight_mapping": true
+}

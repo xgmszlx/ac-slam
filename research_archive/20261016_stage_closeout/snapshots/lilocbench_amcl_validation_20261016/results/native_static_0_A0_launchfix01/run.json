@@ -1,0 +1,77 @@
+{
+  "id": "native_static_0_A0_launchfix01",
+  "spec": {
+    "id": "native_static_0_A0_launchfix01",
+    "sequence": "static_0",
+    "config": "A0",
+    "model": "likelihood_field",
+    "skip": false,
+    "binary": "installed",
+    "seed": null
+  },
+  "start_wall": 1792123517.818409,
+  "status": "COMPLETE",
+  "commands": [
+    {
+      "command": [
+        "/opt/ros/noetic/bin/roscore",
+        "-p",
+        "11331"
+      ],
+      "log": "roscore.log"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "/home/wcqw/lilocbench_amcl_validation_20261016/code/start_clock.py",
+        "1733376701167929088"
+      ],
+      "log": "clock_bootstrap.log"
+    },
+    {
+      "command": [
+        "/opt/ros/noetic/bin/roslaunch",
+        "--wait",
+        "/home/wcqw/lilocbench_amcl_validation_20261016/results/native_static_0_A0_launchfix01/run.launch"
+      ],
+      "log": "launch.log"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "/home/wcqw/lilocbench_amcl_validation_20261016/code/collect_amcl.py",
+        "/home/wcqw/lilocbench_amcl_validation_20261016/results/native_static_0_A0_launchfix01"
+      ],
+      "log": "collector.log"
+    },
+    {
+      "command": [
+        "/opt/ros/noetic/bin/rosbag",
+        "play",
+        "--clock",
+        "--hz",
+        "100",
+        "--rate",
+        "8.0",
+        "/home/wcqw/lilocbench_amcl_validation_20261016/data/static_0.bag",
+        "--topics",
+        "/laser_scan_front/scan",
+        "/dingo_velocity_controller/odom",
+        "/tf",
+        "/tf_static"
+      ],
+      "log": "playback.log"
+    }
+  ],
+  "playback_exit": 0,
+  "end_wall": 1792123600.869691,
+  "elapsed_wall_s": 83.05128240585327,
+  "process_exit": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "clean_collector": true
+}

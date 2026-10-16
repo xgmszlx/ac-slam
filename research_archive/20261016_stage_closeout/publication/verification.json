@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "archive_checks": {
+    "status": "PASS",
+    "byte_exact_selected_files": 658,
+    "included_bytes": 12863600,
+    "report_count": 13,
+    "python_AST_files": 116,
+    "checks": [
+      "source and published hashes identical",
+      "AMCL final comparison and same input counts",
+      "three correct-format walking runs and failed P0 identity retained",
+      "V3 no scientific runs; both latest transfer failures retained",
+      "all 27 A0 diagnostic scans retain GT-higher scores",
+      "NO_METHOD_READY and L1_NOT_YET_JUSTIFIED preserved",
+      "prohibited artifacts and credential-shaped strings absent",
+      "new index local links valid; historical omissions documented"
+    ],
+    "scope": "Archive/evidence consistency only, not scientific replication or standalone deployment"
+  },
+  "trajectory_math_tests": "PASS: SE3 no scale fit, unique time pairing, analytic 1s RPE, missing coverage",
+  "geometry_tests": "PASS: backprojection, transform direction, static/dynamic distinction, SLERP, no GT extrapolation",
+  "new_SLAM_runs": 0,
+  "model_training": 0,
+  "scientific_claim": "No new method qualification; historical experiments are ANALYZED",
+  "remote_push": "Verified after commit in separate local publication receipt"
+}

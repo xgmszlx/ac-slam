@@ -1,0 +1,576 @@
+{
+  "sequence": "static_0",
+  "bag_bytes": 141839376,
+  "bag_start": 1733376701.1679292,
+  "bag_end": 1733377299.9622302,
+  "messages_read": 110812,
+  "topics": {
+    "/dingo_velocity_controller/cmd_vel": {
+      "type": "geometry_msgs/Twist",
+      "count": 22092,
+      "first_header_ns": null,
+      "last_header_ns": null,
+      "nonincreasing": 0
+    },
+    "/dingo_velocity_controller/odom": {
+      "type": "nav_msgs/Odometry",
+      "count": 8714,
+      "first_header_ns": 1733376701207436190,
+      "last_header_ns": 1733377299927426617,
+      "nonincreasing": 0
+    },
+    "/joint_states": {
+      "type": "sensor_msgs/JointState",
+      "count": 8715,
+      "first_header_ns": 1733376701207436190,
+      "last_header_ns": 1733377299927426617,
+      "nonincreasing": 0
+    },
+    "/laser_scan_front/scan": {
+      "type": "sensor_msgs/LaserScan",
+      "count": 8982,
+      "first_header_ns": 1733376701204436424,
+      "last_header_ns": 1733377299935263650,
+      "nonincreasing": 0
+    },
+    "/laser_scan_rear/scan": {
+      "type": "sensor_msgs/LaserScan",
+      "count": 8982,
+      "first_header_ns": 1733376701232218919,
+      "last_header_ns": 1733377299962099713,
+      "nonincreasing": 0
+    },
+    "/tf": {
+      "type": "tf2_msgs/TFMessage",
+      "count": 53323,
+      "first_header_ns": null,
+      "last_header_ns": null,
+      "nonincreasing": 0
+    },
+    "/tf_static": {
+      "type": "tf2_msgs/TFMessage",
+      "count": 4,
+      "first_header_ns": null,
+      "last_header_ns": null,
+      "nonincreasing": 0
+    }
+  },
+  "scans": {
+    "/laser_scan_front/scan": {
+      "frame_id": "scan_front_link",
+      "angle_min": -2.356194496154785,
+      "angle_max": 2.3557233810424805,
+      "angle_increment": 0.00581718236207962,
+      "time_increment": 6.172839493956417e-05,
+      "scan_time": 0.06666667014360428,
+      "range_min": 0.05000000074505806,
+      "range_max": 100.0,
+      "range_count": 811,
+      "seq_first": 19322,
+      "valid_beams_total": 7228182,
+      "all_beams_total": 7284402
+    },
+    "/laser_scan_rear/scan": {
+      "frame_id": "scan_rear_link",
+      "angle_min": -2.356194496154785,
+      "angle_max": 2.3557233810424805,
+      "angle_increment": 0.00581718236207962,
+      "time_increment": 6.172839493956417e-05,
+      "scan_time": 0.06666667014360428,
+      "range_min": 0.05000000074505806,
+      "range_max": 100.0,
+      "range_count": 811,
+      "seq_first": 19322,
+      "valid_beams_total": 7226029,
+      "all_beams_total": 7284402
+    }
+  },
+  "odometry": {
+    "/dingo_velocity_controller/odom": {
+      "frame_id": "odom",
+      "child_frame_id": "base_link",
+      "max_abs_vx": 0.4405152985965846,
+      "max_abs_vy": 0.0397256407907388,
+      "max_abs_wz": 0.6910531959324377
+    }
+  },
+  "tf_static": {
+    "base_link -> chassis_link": {
+      "xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "front_c_mount -> front_b_mount": {
+      "xyz": [
+        0.08,
+        0.0,
+        0.0
+      ],
+      "xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "chassis_link -> front_bumper_mount": {
+      "xyz": [
+        0.34159,
+        0.0,
+        0.0345115
+      ],
+      "xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "mid_mount -> front_c_mount": {
+      "xyz": [
+        0.08,
+        0.0,
+        0.0
+      ],
+      "xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "front_b_mount -> front_mount": {
+      "xyz": [
+        0.08,
+        0.0,
+        0.0
+      ],
+      "xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "chassis_link -> imu_link": {
+      "xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "chassis_link -> mid_mount": {
+      "xyz": [
+        0.0,
+        0.0,
+        0.069023
+      ],
+      "xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "rear_c_mount -> rear_b_mount": {
+      "xyz": [
+        -0.08,
+        0.0,
+        0.0
+      ],
+      "xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "mid_mount -> rear_c_mount": {
+      "xyz": [
+        -0.08,
+        0.0,
+        0.0
+      ],
+      "xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "rear_b_mount -> rear_mount": {
+      "xyz": [
+        -0.08,
+        0.0,
+        0.0
+      ],
+      "xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "camera_front_link -> camera_front_depth_frame": {
+      "xyz": [
+        0.0,
+        -0.0,
+        -0.0
+      ],
+      "xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "camera_front_depth_frame -> camera_front_depth_optical_frame": {
+      "xyz": [
+        0.0,
+        -0.0,
+        -0.0
+      ],
+      "xyzw": [
+        -0.5,
+        0.4999999999999999,
+        -0.5,
+        0.5000000000000001
+      ]
+    },
+    "camera_front_link -> camera_front_color_frame": {
+      "xyz": [
+        -0.0001586774451425299,
+        -0.05900955572724342,
+        8.118730329442769e-05
+      ],
+      "xyzw": [
+        -0.00014199950965121388,
+        0.00030503078596666455,
+        0.002436782233417034,
+        0.9999969601631165
+      ]
+    },
+    "camera_front_color_frame -> camera_front_color_optical_frame": {
+      "xyz": [
+        0.0,
+        -0.0,
+        -0.0
+      ],
+      "xyzw": [
+        -0.5,
+        0.4999999999999999,
+        -0.5,
+        0.5000000000000001
+      ]
+    },
+    "camera_right_link -> camera_right_depth_frame": {
+      "xyz": [
+        0.0,
+        -0.0,
+        -0.0
+      ],
+      "xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "camera_right_depth_frame -> camera_right_depth_optical_frame": {
+      "xyz": [
+        0.0,
+        -0.0,
+        -0.0
+      ],
+      "xyzw": [
+        -0.5,
+        0.4999999999999999,
+        -0.5,
+        0.5000000000000001
+      ]
+    },
+    "camera_right_link -> camera_right_color_frame": {
+      "xyz": [
+        -0.00044161363621242344,
+        -0.05910636857151985,
+        0.0003997598250862211
+      ],
+      "xyzw": [
+        0.0006869261851534247,
+        -0.003346631769090891,
+        -6.615725578740239e-05,
+        0.9999942779541016
+      ]
+    },
+    "camera_right_color_frame -> camera_right_color_optical_frame": {
+      "xyz": [
+        0.0,
+        -0.0,
+        -0.0
+      ],
+      "xyzw": [
+        -0.5,
+        0.4999999999999999,
+        -0.5,
+        0.5000000000000001
+      ]
+    },
+    "camera_left_link -> camera_left_depth_frame": {
+      "xyz": [
+        0.0,
+        -0.0,
+        -0.0
+      ],
+      "xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "camera_left_depth_frame -> camera_left_depth_optical_frame": {
+      "xyz": [
+        0.0,
+        -0.0,
+        -0.0
+      ],
+      "xyzw": [
+        -0.5,
+        0.4999999999999999,
+        -0.5,
+        0.5000000000000001
+      ]
+    },
+    "camera_left_link -> camera_left_color_frame": {
+      "xyz": [
+        -0.0002863394911400974,
+        -0.059225406497716904,
+        1.425971004209714e-05
+      ],
+      "xyzw": [
+        0.011111225932836533,
+        -0.007886732928454876,
+        -0.0008319192565977573,
+        0.9999068379402161
+      ]
+    },
+    "camera_left_color_frame -> camera_left_color_optical_frame": {
+      "xyz": [
+        0.0,
+        -0.0,
+        -0.0
+      ],
+      "xyzw": [
+        -0.5,
+        0.4999999999999999,
+        -0.5,
+        0.5000000000000001
+      ]
+    }
+  },
+  "tf_dynamic": {
+    "odom -> base_link": {
+      "first_stamp_ns": 1733376701207436190,
+      "last_stamp_ns": 1733377299927426617,
+      "count": 8710,
+      "first_xyz": [
+        -19.837104518096528,
+        -0.4284300911532414,
+        0.0
+      ],
+      "first_xyzw": [
+        0.0,
+        0.0,
+        0.9975268335841402,
+        0.07028667213347888
+      ],
+      "max_transform_element_delta": 23.713984161463184
+    },
+    "chassis_link -> front_left_wheel_link": {
+      "first_stamp_ns": 1733376701207436190,
+      "last_stamp_ns": 1733377299927426617,
+      "count": 8715,
+      "first_xyz": [
+        0.285,
+        0.2104,
+        0.035145
+      ],
+      "first_xyzw": [
+        0.0,
+        0.9213549499385643,
+        0.0,
+        0.38872233821032953
+      ],
+      "max_transform_element_delta": 1.7840901439038364
+    },
+    "chassis_link -> front_right_wheel_link": {
+      "first_stamp_ns": 1733376701207436190,
+      "last_stamp_ns": 1733377299927426617,
+      "count": 8715,
+      "first_xyz": [
+        0.285,
+        -0.2104,
+        0.035145
+      ],
+      "first_xyzw": [
+        0.0,
+        -0.29028467725467294,
+        0.0,
+        0.9569403357321451
+      ],
+      "max_transform_element_delta": 1.4569403357320985
+    },
+    "chassis_link -> rear_left_wheel_link": {
+      "first_stamp_ns": 1733376701207436190,
+      "last_stamp_ns": 1733377299927426617,
+      "count": 8715,
+      "first_xyz": [
+        -0.285,
+        0.2104,
+        0.035145
+      ],
+      "first_xyzw": [
+        0.0,
+        0.1370107588541707,
+        0.0,
+        0.990569559373901
+      ],
+      "max_transform_element_delta": 1.4905695593737789
+    },
+    "chassis_link -> rear_right_wheel_link": {
+      "first_stamp_ns": 1733376701207436190,
+      "last_stamp_ns": 1733377299927426617,
+      "count": 8715,
+      "first_xyz": [
+        -0.285,
+        -0.2104,
+        0.035145
+      ],
+      "first_xyzw": [
+        0.0,
+        0.5224982241080107,
+        0.0,
+        0.8526403730788116
+      ],
+      "max_transform_element_delta": 1.3852334180732389
+    },
+    "base_link -> gt_camera": {
+      "first_stamp_ns": 1733376701318706473,
+      "last_stamp_ns": 1733377299995902122,
+      "count": 5983,
+      "first_xyz": [
+        0.006238387187468946,
+        -0.01184196632527648,
+        0.6692773993095489
+      ],
+      "first_xyzw": [
+        0.0012615479441863355,
+        -0.022146503317451178,
+        -0.0021837571754331334,
+        0.9997515551836833
+      ],
+      "max_transform_element_delta": 0.0
+    },
+    "base_link -> scan_rear_link": {
+      "first_stamp_ns": 1733376701327790450,
+      "last_stamp_ns": 1733377300015342851,
+      "count": 5983,
+      "first_xyz": [
+        -0.30272182866463804,
+        -0.001624570483175795,
+        0.165
+      ],
+      "first_xyzw": [
+        0.0,
+        0.0,
+        0.9999853067886563,
+        -0.005420904610579566
+      ],
+      "max_transform_element_delta": 0.0
+    },
+    "base_link -> scan_front_link": {
+      "first_stamp_ns": 1733376701327826607,
+      "last_stamp_ns": 1733377300015459886,
+      "count": 5983,
+      "first_xyz": [
+        0.30455923000105006,
+        -0.005976866498877387,
+        0.165
+      ],
+      "first_xyzw": [
+        0.0,
+        0.0,
+        0.009603885349331175,
+        0.9999538816296465
+      ],
+      "max_transform_element_delta": 0.0
+    },
+    "base_link -> camera_front_link": {
+      "first_stamp_ns": 1733376701327826429,
+      "last_stamp_ns": 1733377300015406188,
+      "count": 5983,
+      "first_xyz": [
+        0.09458070637620515,
+        0.037099046261380865,
+        0.6601355404878785
+      ],
+      "first_xyzw": [
+        0.004180118605338102,
+        0.020176172033258038,
+        -0.0004593315397031184,
+        0.9997875962948661
+      ],
+      "max_transform_element_delta": 0.0
+    },
+    "base_link -> camera_right_link": {
+      "first_stamp_ns": 1733376701327905721,
+      "last_stamp_ns": 1733377300015526225,
+      "count": 5983,
+      "first_xyz": [
+        0.055081181387584555,
+        -0.10184541079728843,
+        0.6584296028207204
+      ],
+      "first_xyzw": [
+        -0.006928030484845009,
+        0.0064750770011940744,
+        -0.7081683879608692,
+        0.705979893526957
+      ],
+      "max_transform_element_delta": 0.0
+    },
+    "base_link -> camera_left_link": {
+      "first_stamp_ns": 1733376701331540230,
+      "last_stamp_ns": 1733377300015638838,
+      "count": 5983,
+      "first_xyz": [
+        -0.040184262842190135,
+        0.07916436657297303,
+        0.6597364340741249
+      ],
+      "first_xyzw": [
+        -0.005308192331485649,
+        -0.020775056146090487,
+        0.7044787464238852,
+        0.7094010966817926
+      ],
+      "max_transform_element_delta": 0.0
+    }
+  },
+  "status": "COMPLETE_READ_NO_ROS_RUN",
+  "sha256": "5579090b35a48cf24a66fb1118899052218d2089f9b956788d5abee76e01f4ce"
+}

@@ -1,0 +1,102 @@
+{
+  "archive_sha256": "05c071672cda22a668860a935124737a4eb4fa772cbad372e73d5a99ce4be205",
+  "archive_bytes": 775406859,
+  "extracted_file_bytes": 840265705,
+  "rgb_frames": 1261,
+  "depth_frames": 1231,
+  "associated_frames": 1219,
+  "unassociated_rgb_indices": [
+    42,
+    60,
+    94,
+    184,
+    195,
+    203,
+    233,
+    243,
+    290,
+    364,
+    379,
+    387,
+    397,
+    436,
+    512,
+    560,
+    561,
+    606,
+    639,
+    648,
+    651,
+    672,
+    676,
+    716,
+    745,
+    791,
+    838,
+    840,
+    870,
+    882,
+    890,
+    904,
+    915,
+    933,
+    935,
+    943,
+    951,
+    969,
+    1044,
+    1072,
+    1091,
+    1188
+  ],
+  "association_policy": "TUM greedy unique; absolute difference <20ms; no comments in native input",
+  "association_abs_dt_s": {
+    "max": 0.006916999816894531,
+    "median": 2.002716064453125e-05
+  },
+  "rgb_time_range": [
+    1341845820.751833,
+    1341845863.315718
+  ],
+  "depth_time_range": [
+    1341845820.751874,
+    1341845863.316245
+  ],
+  "gt_time_range": [
+    1341845820.8614,
+    1341845863.361
+  ],
+  "gt_count": 4251,
+  "image_shapes": [
+    [
+      "rgb",
+      [
+        640,
+        480
+      ]
+    ],
+    [
+      "depth",
+      [
+        640,
+        480
+      ]
+    ]
+  ],
+  "image_modes": [
+    [
+      "rgb",
+      "RGB"
+    ],
+    [
+      "depth",
+      "I;16"
+    ]
+  ],
+  "invalid_images": [],
+  "depth_zero_fraction_mean": 0.3731294568849125,
+  "depth_factor": 5000.0,
+  "depth_prescaled_by_dataset": true,
+  "calibration": "unchanged official Examples/RGB-D/TUM3.yaml",
+  "gt_online": false
+}

@@ -1,0 +1,21 @@
+{
+  "type": "UNWEIGHTED_STATIC_LAYOUT_AUDIT_NO_PREDICTION",
+  "checkpoint_arrays": 440,
+  "model_arrays": 440,
+  "before_shape_mismatches": 433,
+  "after_original_freeze200_shape_mismatches": 433,
+  "source_layer_200": "block5b_project_conv",
+  "saved_first": [
+    "block5b_project_conv/kernel:0",
+    "block5b_project_bn/gamma:0",
+    "block5b_project_bn/beta:0"
+  ],
+  "model_first_after_original_freeze": [
+    "normalization/mean:0",
+    "normalization/variance:0",
+    "normalization/count:0"
+  ],
+  "keras_checkpoint": "2.4.0",
+  "runtime": "2.13.1",
+  "original_freeze200_declared_in_author_notebook": true
+}

@@ -1,0 +1,32 @@
+{
+  "PASS": false,
+  "mask_model_source_qualified": false,
+  "commit": "bb17b6c3eef36d80be441ae8e5339be66e8e3b7a",
+  "git_blob_sha1": "253e5012dd6a17666fd7ae16cfa14a6860280ff7",
+  "expected_bytes": 23306119,
+  "elapsed_s": 26.256550590998813,
+  "events": [
+    {
+      "route": 1,
+      "event": "FAILED",
+      "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Read timed out. (read timeout=15)\"))",
+      "partial_bytes": 0,
+      "elapsed_s": 15.180288414998358
+    },
+    {
+      "route": 2,
+      "event": "FAILED",
+      "error": "HTTPError('403 Client Error: rate limit exceeded for url: https://api.github.com/repos/chuanqi305/MobileNet-SSD/git/blobs/253e5012dd6a17666fd7ae16cfa14a6860280ff7')",
+      "partial_bytes": 0,
+      "elapsed_s": 16.242083720000664
+    },
+    {
+      "route": 3,
+      "event": "FAILED",
+      "error": "ConnectionError(MaxRetryError(\"HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?export=download&id=0B3gersZ2cHIxRm5PMWRoTkdHdHc&resourcekey=0-1Lpfs4EvGDeCQz12AF64hQ (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3c3331c320>: Failed to establish a new connection: [Errno 101] Network is unreachable'))\"))",
+      "partial_bytes": 0,
+      "elapsed_s": 26.256075614997826
+    }
+  ],
+  "no_more_acquisition_attempts": true
+}

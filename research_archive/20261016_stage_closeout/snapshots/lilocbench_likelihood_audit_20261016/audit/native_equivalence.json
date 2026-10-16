@@ -1,0 +1,324 @@
+{
+  "status": "PASS",
+  "scope": "Native installed map loader + fixed built AMCL cspace; native sensor static functions, no PF/ROS node; A0 common91 uses offline max_beams91 solely to select stride9; native stride102 checked separately",
+  "tests": [
+    {
+      "id": "static_0_t00",
+      "center": "GT",
+      "common91_add_log_abs_error": 8.881784197001252e-16,
+      "common91_product_log_abs_error": 5.329070518200751e-15,
+      "native102_add_log_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "id": "static_0_t01",
+      "center": "GT",
+      "common91_add_log_abs_error": 8.881784197001252e-16,
+      "common91_product_log_abs_error": 4.440892098500626e-15,
+      "native102_add_log_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "id": "static_0_t01",
+      "center": "A0",
+      "common91_add_log_abs_error": 0.0,
+      "common91_product_log_abs_error": 3.552713678800501e-14,
+      "native102_add_log_abs_error": 0.0
+    },
+    {
+      "id": "static_0_t01",
+      "center": "A1",
+      "common91_add_log_abs_error": 0.0,
+      "common91_product_log_abs_error": 2.842170943040401e-14,
+      "native102_add_log_abs_error": 0.0
+    },
+    {
+      "id": "static_0_t01",
+      "center": "A2",
+      "common91_add_log_abs_error": 0.0,
+      "common91_product_log_abs_error": 2.842170943040401e-14,
+      "native102_add_log_abs_error": 0.0
+    },
+    {
+      "id": "static_0_t02",
+      "center": "GT",
+      "common91_add_log_abs_error": 0.0,
+      "common91_product_log_abs_error": 3.552713678800501e-15,
+      "native102_add_log_abs_error": 8.881784197001252e-16
+    },
+    {
+      "id": "static_0_t02",
+      "center": "A0",
+      "common91_add_log_abs_error": 0.0,
+      "common91_product_log_abs_error": 1.4210854715202004e-14,
+      "native102_add_log_abs_error": 0.0
+    },
+    {
+      "id": "static_0_t02",
+      "center": "A1",
+      "common91_add_log_abs_error": 4.440892098500626e-16,
+      "common91_product_log_abs_error": 3.552713678800501e-14,
+      "native102_add_log_abs_error": 0.0
+    },
+    {
+      "id": "static_0_t02",
+      "center": "A2",
+      "common91_add_log_abs_error": 4.440892098500626e-16,
+      "common91_product_log_abs_error": 3.552713678800501e-14,
+      "native102_add_log_abs_error": 0.0
+    },
+    {
+      "id": "static_0_t05",
+      "center": "GT",
+      "common91_add_log_abs_error": 8.881784197001252e-16,
+      "common91_product_log_abs_error": 3.907985046680551e-14,
+      "native102_add_log_abs_error": 0.0
+    },
+    {
+      "id": "static_0_t05",
+      "center": "A0",
+      "common91_add_log_abs_error": 0.0,
+      "common91_product_log_abs_error": 1.4210854715202004e-14,
+      "native102_add_log_abs_error": 0.0
+    },
+    {
+      "id": "static_0_t05",
+      "center": "A1",
+      "common91_add_log_abs_error": 0.0,
+      "common91_product_log_abs_error": 6.217248937900877e-15,
+      "native102_add_log_abs_error": 8.881784197001252e-16
+    },
+    {
+      "id": "static_0_t05",
+      "center": "A2",
+      "common91_add_log_abs_error": 0.0,
+      "common91_product_log_abs_error": 6.217248937900877e-15,
+      "native102_add_log_abs_error": 8.881784197001252e-16
+    },
+    {
+      "id": "static_0_t07",
+      "center": "GT",
+      "common91_add_log_abs_error": 0.0,
+      "common91_product_log_abs_error": 1.0658141036401503e-14,
+      "native102_add_log_abs_error": 8.881784197001252e-16
+    },
+    {
+      "id": "static_0_t07",
+      "center": "A0",
+      "common91_add_log_abs_error": 8.881784197001252e-16,
+      "common91_product_log_abs_error": 3.019806626980426e-14,
+      "native102_add_log_abs_error": 0.0
+    },
+    {
+      "id": "static_0_t07",
+      "center": "A1",
+      "common91_add_log_abs_error": 8.881784197001252e-16,
+      "common91_product_log_abs_error": 0.0,
+      "native102_add_log_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "id": "static_0_t07",
+      "center": "A2",
+      "common91_add_log_abs_error": 8.881784197001252e-16,
+      "common91_product_log_abs_error": 0.0,
+      "native102_add_log_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "id": "static_0_t10",
+      "center": "GT",
+      "common91_add_log_abs_error": 8.881784197001252e-16,
+      "common91_product_log_abs_error": 6.394884621840902e-14,
+      "native102_add_log_abs_error": 8.881784197001252e-16
+    },
+    {
+      "id": "static_0_t10",
+      "center": "A0",
+      "common91_add_log_abs_error": 4.440892098500626e-16,
+      "common91_product_log_abs_error": 9.947598300641403e-14,
+      "native102_add_log_abs_error": 4.440892098500626e-16
+    },
+    {
+      "id": "static_0_t10",
+      "center": "A1",
+      "common91_add_log_abs_error": 8.881784197001252e-16,
+      "common91_product_log_abs_error": 5.684341886080802e-14,
+      "native102_add_log_abs_error": 8.881784197001252e-16
+    },
+    {
+      "id": "static_0_t10",
+      "center": "A2",
+      "common91_add_log_abs_error": 8.881784197001252e-16,
+      "common91_product_log_abs_error": 6.394884621840902e-14,
+      "native102_add_log_abs_error": 8.881784197001252e-16
+    },
+    {
+      "id": "lt_changes_0_t00",
+      "center": "GT",
+      "common91_add_log_abs_error": 0.0,
+      "common91_product_log_abs_error": 1.4210854715202004e-14,
+      "native102_add_log_abs_error": 8.881784197001252e-16
+    },
+    {
+      "id": "lt_changes_0_t01",
+      "center": "GT",
+      "common91_add_log_abs_error": 0.0,
+      "common91_product_log_abs_error": 2.842170943040401e-14,
+      "native102_add_log_abs_error": 0.0
+    },
+    {
+      "id": "lt_changes_0_t01",
+      "center": "A0",
+      "common91_add_log_abs_error": 0.0,
+      "common91_product_log_abs_error": 5.684341886080802e-14,
+      "native102_add_log_abs_error": 0.0
+    },
+    {
+      "id": "lt_changes_0_t01",
+      "center": "A1",
+      "common91_add_log_abs_error": 0.0,
+      "common91_product_log_abs_error": 1.4210854715202004e-14,
+      "native102_add_log_abs_error": 4.440892098500626e-16
+    },
+    {
+      "id": "lt_changes_0_t01",
+      "center": "A2",
+      "common91_add_log_abs_error": 8.881784197001252e-16,
+      "common91_product_log_abs_error": 9.947598300641403e-14,
+      "native102_add_log_abs_error": 8.881784197001252e-16
+    },
+    {
+      "id": "lt_changes_0_t02",
+      "center": "GT",
+      "common91_add_log_abs_error": 0.0,
+      "common91_product_log_abs_error": 2.842170943040401e-14,
+      "native102_add_log_abs_error": 0.0
+    },
+    {
+      "id": "lt_changes_0_t02",
+      "center": "A0",
+      "common91_add_log_abs_error": 0.0,
+      "common91_product_log_abs_error": 1.4210854715202004e-13,
+      "native102_add_log_abs_error": 0.0
+    },
+    {
+      "id": "lt_changes_0_t02",
+      "center": "A1",
+      "common91_add_log_abs_error": 4.440892098500626e-16,
+      "common91_product_log_abs_error": 5.684341886080802e-14,
+      "native102_add_log_abs_error": 8.881784197001252e-16
+    },
+    {
+      "id": "lt_changes_0_t02",
+      "center": "A2",
+      "common91_add_log_abs_error": 4.440892098500626e-16,
+      "common91_product_log_abs_error": 1.4210854715202004e-14,
+      "native102_add_log_abs_error": 4.440892098500626e-16
+    },
+    {
+      "id": "lt_changes_0_t05",
+      "center": "GT",
+      "common91_add_log_abs_error": 0.0,
+      "common91_product_log_abs_error": 5.684341886080802e-14,
+      "native102_add_log_abs_error": 0.0
+    },
+    {
+      "id": "lt_changes_0_t05",
+      "center": "A0",
+      "common91_add_log_abs_error": 4.440892098500626e-16,
+      "common91_product_log_abs_error": 5.684341886080802e-14,
+      "native102_add_log_abs_error": 8.881784197001252e-16
+    },
+    {
+      "id": "lt_changes_0_t05",
+      "center": "A1",
+      "common91_add_log_abs_error": 0.0,
+      "common91_product_log_abs_error": 0.0,
+      "native102_add_log_abs_error": 0.0
+    },
+    {
+      "id": "lt_changes_0_t05",
+      "center": "A2",
+      "common91_add_log_abs_error": 0.0,
+      "common91_product_log_abs_error": 2.842170943040401e-14,
+      "native102_add_log_abs_error": 0.0
+    },
+    {
+      "id": "lt_changes_0_t07",
+      "center": "GT",
+      "common91_add_log_abs_error": 0.0,
+      "common91_product_log_abs_error": 1.4210854715202004e-14,
+      "native102_add_log_abs_error": 0.0
+    },
+    {
+      "id": "lt_changes_0_t07",
+      "center": "A0",
+      "common91_add_log_abs_error": 4.440892098500626e-16,
+      "common91_product_log_abs_error": 0.0,
+      "native102_add_log_abs_error": 0.0
+    },
+    {
+      "id": "lt_changes_0_t07",
+      "center": "A1",
+      "common91_add_log_abs_error": 4.440892098500626e-16,
+      "common91_product_log_abs_error": 0.0,
+      "native102_add_log_abs_error": 0.0
+    },
+    {
+      "id": "lt_changes_0_t07",
+      "center": "A2",
+      "common91_add_log_abs_error": 1.7763568394002505e-15,
+      "common91_product_log_abs_error": 1.4210854715202004e-14,
+      "native102_add_log_abs_error": 1.3322676295501878e-15
+    },
+    {
+      "id": "lt_changes_0_t10",
+      "center": "GT",
+      "common91_add_log_abs_error": 0.0,
+      "common91_product_log_abs_error": 2.1316282072803006e-14,
+      "native102_add_log_abs_error": 8.881784197001252e-16
+    },
+    {
+      "id": "lt_changes_0_t10",
+      "center": "A0",
+      "common91_add_log_abs_error": 0.0,
+      "common91_product_log_abs_error": 2.842170943040401e-14,
+      "native102_add_log_abs_error": 0.0
+    },
+    {
+      "id": "lt_changes_0_t10",
+      "center": "A1",
+      "common91_add_log_abs_error": 4.440892098500626e-16,
+      "common91_product_log_abs_error": 1.4210854715202004e-14,
+      "native102_add_log_abs_error": 4.440892098500626e-16
+    },
+    {
+      "id": "lt_changes_0_t10",
+      "center": "A2",
+      "common91_add_log_abs_error": 0.0,
+      "common91_product_log_abs_error": 7.105427357601002e-15,
+      "native102_add_log_abs_error": 8.881784197001252e-16
+    }
+  ],
+  "max_log_abs_error": 1.4210854715202004e-13,
+  "scored_center_count": 42,
+  "pointwise_pz_equivalence": "Native aggregate checks, not a separate complete per-beam native trace",
+  "GT_yaw_projection": "official intrinsic ZYX",
+  "map": {
+    "width": 1000,
+    "height": 1000,
+    "scale_float32_promoted": 0.05000000074505806,
+    "AMCL_origin_xy": [
+      3.725290298461914e-07,
+      3.725290298461914e-07
+    ],
+    "grid_origin_xy": [
+      -25,
+      -25
+    ],
+    "states": {
+      "-1": 105001,
+      "0": 878184,
+      "1": 16815
+    },
+    "native_distance_field": true,
+    "lib_sha256": "2c99be56c5c02370a2570e8ddff3086b1b3a430ccb756c2c5d0dbeff0d1cbe89"
+  }
+}
