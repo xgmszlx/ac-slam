@@ -1,0 +1,41 @@
+{
+  "status": "PROTOTYPE_SOFTWARE_TESTED; DATA_NOT_QUALIFIED",
+  "maximum_full_runs": 3,
+  "order": [
+    "S0",
+    "S1",
+    "S2"
+  ],
+  "started": 0,
+  "remaining": 3,
+  "S0": "native RGB-D estimator, frontend hook no-action branch; same read-only edge diagnostics",
+  "S1": "Native ORB + mutual ratio .75/Hamming<=50; 0.2s reference in [.18,.28]s; LK FB<=1px/LK-to-ORB<=2px; bad matched 2D discarded; common EPNP-RANSAC 100 iterations/3px/.99, >=8 inliers, source depth .3-6m. If pose qualified and dual depth positive, 3D residual>.05m discards feature. Unmatched/unassessed observations left to native processing.",
+  "S2": "Same raw frontend/PnP; depth reliability .3-6m, 3x3 >=5 valid and range<=max(.05m,.03z) on both ends. With qualified pose and verified2D but unreliable depth: retain keypoint/descriptor, set current positive depth to mvDepth=mvuRight=-1. Good depth uses S1 rejection. Bad2D not protected. No GT in decisions.",
+  "specificity_unresolved": "Range vs neighborhood vs loss of constraints not isolated by three single runs. Read-only reason counters; no S3 or automatic repeats.",
+  "backend": "Frame is modified before N/depth/grid; Optimizer only adds end-of-PoseOptimization counters; no objective/weights/kernels changed. System adds retained fallback association counts; no class layout changes. S0 timing/numerical equivalence to old uninstrumented runs not asserted.",
+  "RNG": "PnP uses saved/restored OpenCV RNG state with fixed frame-dependent seed, no GT; SLAM threading remains asynchronous.",
+  "inspection": "After complete data acceptance, three fixed 30/50/70-percent frame pairs at .2s; RGB labels before scores. Count 2D/3D separately, require at least one visually verified dynamic-box and static 2D correspondence; do not add windows if absent.",
+  "evaluation": "Frozen evaluate.py SE3 no scale; online/exported separately;1s +/-20ms; GT strict20ms and gap100ms. Retain duplicate/multi-map failures and mark gauge unqualified.",
+  "file_hashes": {
+    "/home/wcqw/passive_rgbd_combo_20261019/code/test_combo.cc": "d54ae68cfb4bf053968b82340432689e61faf9b054d5382a6abe1a344db16452",
+    "/home/wcqw/passive_rgbd_combo_20261019/code/accept_complete.py": "b64157226cfb71d661d4bbe162001cd3e089c5c5921de4618718589038cf3b44",
+    "/home/wcqw/passive_rgbd_combo_20261019/code/prepare.py": "fc782dedc21d4a5639baa2b2e4988e0cebe205ab03842f6b9e728c9301376216",
+    "/home/wcqw/passive_rgbd_combo_20261019/code/Optimizer_trace.cc": "6a01e2d2b48d32a3f3b219942ed1b7c43706c68620e5c0327dca0550a762c376",
+    "/home/wcqw/passive_rgbd_combo_20261019/code/get_data.py": "ed9e3a70649525e9b89457ea0c791027c2d561525e2e37c747604118d9991588",
+    "/home/wcqw/passive_rgbd_combo_20261019/code/test_frame.cc": "08736617e73a50b962947eca949f8ed28f65a5c8a1448cee10934e62c7ff41c7",
+    "/home/wcqw/passive_rgbd_combo_20261019/code/run_three.py": "61390d7b627045869c91a436cdd810737936aacb7aff2028f8b9ce5209a6d0bc",
+    "/home/wcqw/passive_rgbd_combo_20261019/code/get_full_once.py": "5dc3efaffff4c690982ff590e5a3540154ead98c034aa40f8863d437ce2cb52a",
+    "/home/wcqw/passive_rgbd_combo_20261019/code/Combo.h": "23dca8984d13748f48cef9f329d35d9bd6029c3a9384cd63353a177c82cb4c1c",
+    "/home/wcqw/passive_rgbd_combo_20261019/code/build_entry.py": "81b1cce8b0d8170cc062f05e074bfeeca861f61951e4d3cf81511461e1d9f756",
+    "/home/wcqw/passive_rgbd_combo_20261019/code/Frame_combo.cc": "371cf6b7e168066f83a075321449871118b442003f79abd3b91be674b81dceb6",
+    "/home/wcqw/passive_rgbd_combo_20261019/code/evaluate.py": "21c696ff70d9cb5fa2816a6cec227656326c267d1bf427f94d09031241cc2ef8",
+    "/home/wcqw/passive_rgbd_combo_20261019/code/build.py": "00da19369b31b95f27fc98eae4c494ff2133a4e3e37cd647634ddffb6e491359",
+    "/home/wcqw/passive_rgbd_combo_20261019/code/Combo.cc": "42c4844633e19ffa1bed1f7fe1f556970cdbdfc6ad2df0297125512d56bf87b9",
+    "/home/wcqw/passive_rgbd_combo_20261019/code/System_combo.cc": "18f149caca974ddaa7f6c54fd57734b7779c3f12945f0c75ef8efb0b2a4647b9",
+    "/home/wcqw/passive_rgbd_combo_20261019/code/finish_tail.py": "f29df0dfb6fc3fde5f5eaf2f215f99d6724d8c694e82ed0655ffca1ce32df39c",
+    "/home/wcqw/passive_rgbd_combo_20261019/code/rgbd_combo.cc": "5054afe34933f84ed6c3a2e1300f610432abdb819ba4d29c554b74a0a5aa0a4b",
+    "/home/wcqw/passive_rgbd_combo_20261019/config/bonn.yaml": "972bc2bc9ba7006d81fb08398d7e609f7c8d03f1a9a86c1784deaa34bffd96d0",
+    "/home/wcqw/passive_rgbd_combo_20261019/build/rgbd_combo": "f0da0ab8d392833bf2032f4dec0d990150b4e55ec242b2af3f2aded24f8fc032",
+    "/home/wcqw/passive_rgbd_combo_20261019/build/libORB_SLAM3.so": "fd8df98d60bbdd31a21360bfbd9d4ac7884ec0974e533e0afb75325789a2f6db"
+  }
+}

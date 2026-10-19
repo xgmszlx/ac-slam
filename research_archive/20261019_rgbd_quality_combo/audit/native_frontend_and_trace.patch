@@ -1,0 +1,68 @@
+--- a/src/Frame.cc
++++ b/src/Frame.cc
+@@ -1,3 +1,4 @@
++#include "Combo.h"
+ /**
+ * This file is part of ORB-SLAM3
+ *
+@@ -220,6 +221,7 @@
+     std::chrono::steady_clock::time_point time_StartExtORB = std::chrono::steady_clock::now();
+ #endif
+     ExtractORB(0,imGray,0,0);
++    combo::before(imGray,imDepth,timeStamp,K,distCoef,mvKeys,mDescriptors);
+ #ifdef REGISTER_TIMES
+     std::chrono::steady_clock::time_point time_EndExtORB = std::chrono::steady_clock::now();
+ 
+@@ -235,6 +237,7 @@
+     UndistortKeyPoints();
+ 
+     ComputeStereoFromRGBD(imDepth);
++    combo::invalidate(mvDepth,mvuRight);
+ 
+     mvpMapPoints = vector<MapPoint*>(N,static_cast<MapPoint*>(NULL));
+ 
+--- a/src/Optimizer.cc
++++ b/src/Optimizer.cc
+@@ -1,3 +1,4 @@
++#include "Combo.h"
+ /**
+ * This file is part of ORB-SLAM3
+ *
+@@ -1110,6 +1111,7 @@
+             SE3quat_recov.translation().cast<float>());
+     pFrame->SetPose(pose);
+ 
++    combo::edges(pFrame->mTimeStamp,vnIndexEdgeMono,vnIndexEdgeStereo,pFrame->mvbOutlier);
+     return nInitialCorrespondences-nBad;
+ }
+ 
+--- a/src/System.cc
++++ b/src/System.cc
+@@ -1,3 +1,4 @@
++#include "Combo.h"
+ /**
+ * This file is part of ORB-SLAM3
+ *
+@@ -1552,7 +1553,7 @@
+ std::vector<double> ORB_SLAM3::System::AuditRGBD(const cv::Mat& originalDepth, const cv::Mat& boundary, double expectedStamp)
+ {
+  const Frame &f=mpTracker->mCurrentFrame;
+- double valid=0,bound=0,invalidBound=0,validBound=0,assoc=0,i2=0,i3=0,boundAssoc=0,zeroBoth=0;
++ double valid=0,bound=0,invalidBound=0,validBound=0,assoc=0,i2=0,i3=0,boundAssoc=0,zeroBoth=0,tag2=0,tag3=0;
+  const bool present=std::abs(f.mTimeStamp-expectedStamp)<1e-6;
+  for(int i=0;present && i<f.N;++i){
+   const int x=(int)f.mvKeys[i].pt.x,y=(int)f.mvKeys[i].pt.y;
+@@ -1560,10 +1561,10 @@
+   if(f.mvDepth[i]>0)++valid;
+   if(target){++bound;if(f.mvDepth[i]<0)++invalidBound;else ++validBound;if(f.mvDepth[i]==-1 && f.mvuRight[i]==-1)++zeroBoth;}
+   MapPoint *m=f.mvpMapPoints[i];
+-  if(m){++assoc;if(target)++boundAssoc;if(!f.mvbOutlier[i]){if(f.mvuRight[i]<0)++i2;else ++i3;}}
++  if(m){++assoc;if(target)++boundAssoc;if(!f.mvbOutlier[i]){if(f.mvuRight[i]<0){++i2;if(combo::fallback(i,expectedStamp))++tag2;}else{++i3;if(combo::fallback(i,expectedStamp))++tag3;}}}
+  }
+  Map *m=mpAtlas->GetCurrentMap();
+  double allpoints=0,allkf=0;
+  for(Map *q:mpAtlas->GetAllMaps()){allpoints+=q->MapPointsInMap();allkf+=q->KeyFramesInMap();}
+- return {f.mTimeStamp,present?(double)f.mnId:-1.,present?(double)f.N:-1.,valid,bound,invalidBound,validBound,zeroBoth,assoc,i2,i3,boundAssoc,(double)m->GetId(),(double)mpAtlas->CountMaps(),(double)m->MapPointsInMap(),(double)m->KeyFramesInMap(),allpoints,allkf};
+-}
++ return {f.mTimeStamp,present?(double)f.mnId:-1.,present?(double)f.N:-1.,valid,bound,invalidBound,validBound,zeroBoth,assoc,i2,i3,boundAssoc,(double)m->GetId(),(double)mpAtlas->CountMaps(),(double)m->MapPointsInMap(),(double)m->KeyFramesInMap(),allpoints,allkf,tag2,tag3};
++}

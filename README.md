@@ -1,6 +1,6 @@
 # ac-slam
 
-最新研究状态（2026-10-19，desk重复完成）：见[第二轮深度观测重复](research_archive/20261019_depth_repeats/REPORT.md)。**B1_INCONCLUSIVE**：新增4次完整运行，累计8次；B1与合格B0结果重叠，另保留B0_03失跟/重建及导出身份失败，不补跑。暂停追加A实验和方法开发。原[第一轮结果](research_archive/20261019_passive_rgbd_depth/REPORT.md)及旧主动/AMCL收口完整保留。
+最新研究状态（2026-10-19）：[RGB-D质量与几何筛选组合原型](research_archive/20261019_rgbd_quality_combo/REPORT.md)。**TECHNICAL_INCOMPLETE**：原型已编译、合成Frame测试通过；Bonn官方文件仍不完整，S0/S1/S2真实运行0/3，没有轨迹收益结论。数据获取已停止；下一步只验收手动取得的同一官方完整文件。此前[desk重复B1_INCONCLUSIVE](research_archive/20261019_depth_repeats/REPORT.md)与旧主动/AMCL收口保持。
 
 Reproducible research workspace for the public Graph-Based SLAM-Aware
 Exploration baseline. The repository preserves the code baseline, pinned
