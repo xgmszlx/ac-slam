@@ -1,0 +1,36 @@
+--- a/include/System.h
++++ b/include/System.h
+@@ -174,6 +174,7 @@
+     // Information from most recent processed frame
+     // You can call this right after TrackMonocular (or stereo or RGBD)
+     int GetTrackingState();
++    std::vector<double> AuditRGBD(const cv::Mat& originalDepth, const cv::Mat& boundary, double expectedStamp); // read-only diagnostic, no class layout change
+     std::vector<MapPoint*> GetTrackedMapPoints();
+     std::vector<cv::KeyPoint> GetTrackedKeyPointsUn();
+ 
+--- a/src/System.cc
++++ b/src/System.cc
+@@ -1547,3 +1547,23 @@
+ 
+ } //namespace ORB_SLAM
+ 
++
++// Read-only snapshot after synchronous TrackRGBD returns. No optimizer or sampling change.
++std::vector<double> ORB_SLAM3::System::AuditRGBD(const cv::Mat& originalDepth, const cv::Mat& boundary, double expectedStamp)
++{
++ const Frame &f=mpTracker->mCurrentFrame;
++ double valid=0,bound=0,invalidBound=0,validBound=0,assoc=0,i2=0,i3=0,boundAssoc=0,zeroBoth=0;
++ const bool present=std::abs(f.mTimeStamp-expectedStamp)<1e-6;
++ for(int i=0;present && i<f.N;++i){
++  const int x=(int)f.mvKeys[i].pt.x,y=(int)f.mvKeys[i].pt.y;
++  const bool target=boundary.at<unsigned char>(y,x)!=0 && originalDepth.at<unsigned short>(y,x)>0;
++  if(f.mvDepth[i]>0)++valid;
++  if(target){++bound;if(f.mvDepth[i]<0)++invalidBound;else ++validBound;if(f.mvDepth[i]==-1 && f.mvuRight[i]==-1)++zeroBoth;}
++  MapPoint *m=f.mvpMapPoints[i];
++  if(m){++assoc;if(target)++boundAssoc;if(!f.mvbOutlier[i]){if(f.mvuRight[i]<0)++i2;else ++i3;}}
++ }
++ Map *m=mpAtlas->GetCurrentMap();
++ double allpoints=0,allkf=0;
++ for(Map *q:mpAtlas->GetAllMaps()){allpoints+=q->MapPointsInMap();allkf+=q->KeyFramesInMap();}
++ return {f.mTimeStamp,present?(double)f.mnId:-1.,present?(double)f.N:-1.,valid,bound,invalidBound,validBound,zeroBoth,assoc,i2,i3,boundAssoc,(double)m->GetId(),(double)mpAtlas->CountMaps(),(double)m->MapPointsInMap(),(double)m->KeyFramesInMap(),allpoints,allkf};
++}

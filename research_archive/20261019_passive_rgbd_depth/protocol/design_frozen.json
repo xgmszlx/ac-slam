@@ -1,0 +1,48 @@
+{
+  "status": "FROZEN_BEFORE_FIRST_SCIENTIFIC_RUN",
+  "date": "2026-10-19",
+  "maximum_runs": 4,
+  "order": [
+    "desk/B0",
+    "desk/B1",
+    "large_cabinet/B0",
+    "large_cabinet/B1"
+  ],
+  "file_hashes": {
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/code/run_four.py": "7f0f39e2af96bba60fb56c6c6c45a78ae868c4c1f3e6c81e4f6b749926810bf0",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/code/rgbd_screen.cc": "be480a76f50545b06144f4690141675bcb3a634626b19f33372336ce6bea5859",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/code/fetch_ranges.py": "6568004bf23ff61159cdf2b6a482fbfaaa9cc2d77b800f22298f8fe66fbf683e",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/code/depth_rule.h": "8102f23bee773b42faaa55e07e2672f451551ba7fccd26aeca3a901758b1461b",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/code/test_depth_frame.cc": "20ee69db8af5acc1a40daa2be8e6878792a68e59a5fe5f726ca412f2904370ce",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/code/prepare_datasets.py": "032352cf192616da88b93e5bab1fc78b6feab831032f36408da0b9667d7b138d",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/code/evaluate.py": "21c696ff70d9cb5fa2816a6cec227656326c267d1bf427f94d09031241cc2ef8",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/code/fetch_ranges_direct.py": "304a13726265c541a14f51b1e2f2c31c5b59189b049818f9867c838027dff5af",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/code/System_diagnostic.cc": "f990626cd8a7e3148f4b3ed657fe575fd8f3022517e6b5f2e2d6d6622d9e4d70",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/config/desk.yaml": "7a282cb623cce89e903efc03d3468a29f68834b9b01cf4dd1ec3b82e9c150aa1",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/config/large_cabinet.yaml": "240b4da9adda44b13c768e5bab55f95e07b5f23ca8789a55311774fd9d1ddd32",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/build/rgbd_screen": "9e6d97523fc32e1b15791ab3ea29ded1583876b7587b2b402646d800391efb25",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/build/libORB_SLAM3.so": "c9f08e6c3998c00d1f1d5272c045ff5b70c40e33458a6bc996cff493e8c56b66",
+    "/home/wcqw/passive_visual_slam_qualification_20261015/sources/ORB_SLAM3-4452a3c4ab75b1cde34e5505a36ec3f9edcdc4c4/lib/libORB_SLAM3.so": "a20db0416fc54ca5949e6b6ac834c12f59dc0bae5f08dc2945e46943a3532c46",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/data/rgbd_dataset_freiburg1_desk/associations.txt": "86dfcf237cf092cc7466ee2c67dfc0a3a507fe879a1bbe063b962d8a7442c536",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/data/rgbd_dataset_freiburg1_desk/groundtruth.txt": "48c4fa61f5d78310ea579f404d31d296738c4210c19c2bdac4a5cdf6bff50831",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/audit/dataset_desk.json": "7e008a79d2d807c1f52448f9996723c0c93ab8905599bf4b1b8ddc9aeae5b9aa",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/data/rgbd_dataset_freiburg3_large_cabinet/associations.txt": "5c3b70a39649c242668f13cebb45b95c9256ace1ebd1136fc924a4179ab8aad4",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/data/rgbd_dataset_freiburg3_large_cabinet/groundtruth.txt": "d8b5f39e6db5c2088cc41d4633075911b8c6d615a2468a137204f6f42dc5ca8d",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/audit/dataset_large_cabinet.json": "c767a124a890396569cd4c3f7ad1f130d4a329d8e99e831e0957b418891330a3"
+  },
+  "B1_rule": "See protocol/scope.json and code/depth_rule.h; same one fixed rule",
+  "same_estimator": "Original 27 other core object files reused; System.cc only adds read-only member; no class layout or estimation-method edits",
+  "diagnostic_boundary": "Counts native current Frame depth and retained map associations after TrackRGBD; 2D/3D is mvuRight<0/>=0 with pointer and !outlier. Not a trace of every optimizer solve or BA constraint. Initialization may not execute ordinary tracking optimizer.",
+  "diagnostic_timing": "New same library/entry both conditions; extra read-only snapshot affects load/timing; numerical equivalence to old uninstrumented runs not asserted.",
+  "pacing": "full preprocessing+Track+read diagnostics paced to original RGB stamp difference; image decode excluded from pacing timer, same both",
+  "preprocess": "B0 computes boundary for auditing but leaves depth unchanged; B1 additionally zeros selected depth. Both CPU costs included and separately logged.",
+  "metrics": "Copied frozen prior evaluate.py: unique GT association, SE3 rotation+translation no scale; 1s RPE\u00b120ms; reject gap>100ms; online and exported evaluated separately. Identity/multi-map flags govern interpretation.",
+  "scientific_stop": "No automatic repeat or threshold adjustment. Technical failure stops unrun tasks; natural tracking loss retained.",
+  "source_objects": 28,
+  "loadavg_before": [
+    1.52,
+    2.0,
+    2.47
+  ],
+  "GT_online": false
+}

@@ -1,0 +1,17 @@
+{
+  "events": [
+    {
+      "pid": 8464,
+      "name": "desk",
+      "action": "stop bounded initial direct transfer after low throughput; preserve incomplete file"
+    },
+    {
+      "pid": 8474,
+      "name": "large_cabinet",
+      "action": "stop bounded initial direct transfer after low throughput; preserve incomplete file"
+    }
+  ],
+  "bounded_probe": "1MiB valid HTTP206 in 4.92s over existing environment network path",
+  "change": "Reuse same verified range downloader, trust_env=True; same official HTTPS and strict ranges; no SSL bypass",
+  "maximum_path_switches": 1
+}

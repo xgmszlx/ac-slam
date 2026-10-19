@@ -1,6 +1,6 @@
 # ac-slam
 
-最新研究状态（2026-10-16）：见[近期进度与阶段收口](research_archive/20261016_stage_closeout/README.md)。当前 **NO_METHOD_READY**；二维激光A1/A2与L1方法开发停止，视觉walking开发停止；V3仅优先补证，ETH3D数据未取得，B0/B1未运行。旧RTAB与主动方向继续冻结。此前记录保留于[2026-10-15归档](research_archive/20261015_direction_review/README.md)。
+最新研究状态（2026-10-19）：见[被动RGB-D四次深度观测对照](research_archive/20261019_passive_rgbd_depth/README.md)。已完成desk/large_cabinet各B0/B1一次；原生深度干预可测，单次简单基线有收益，但尚无SCI方法原型资格。唯一建议是desk受限重复；B独立地图查询未合格，C不开发。旧主动/AMCL方向继续冻结，[此前收口](research_archive/20261016_stage_closeout/README.md)完整保留。
 
 Reproducible research workspace for the public Graph-Based SLAM-Aware
 Exploration baseline. The repository preserves the code baseline, pinned

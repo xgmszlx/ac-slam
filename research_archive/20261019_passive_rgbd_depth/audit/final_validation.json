@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "frozen_files_unchanged": 20,
+  "old_core_objects_unchanged": 28,
+  "B0_B1_per_frame_RGB_stamp_N_boundary_count": "equal for all 1557 input pairs",
+  "depth_propagation": "all 81596 targeted native depths changed to mvDepth=mvuRight=-1 in B1; no keypoint deletion",
+  "initialization_evidence": [
+    {
+      "sequence": "desk",
+      "boundary_features": 40,
+      "B0_boundary_associations_at_initialization": 40,
+      "B1_boundary_associations_at_initialization": 0,
+      "initial_map_points_B0": 942,
+      "initial_map_points_B1": 902
+    },
+    {
+      "sequence": "large_cabinet",
+      "boundary_features": 39,
+      "B0_boundary_associations_at_initialization": 39,
+      "B1_boundary_associations_at_initialization": 0,
+      "initial_map_points_B0": 310,
+      "initial_map_points_B1": 271
+    }
+  ],
+  "budget_used": 4,
+  "budget_max": 4,
+  "new_repeat_runs": 0,
+  "scope": "Observation/identity/archival consistency; not numerical equivalence to uninstrumented asynchronous SLAM and not causal wrong-depth labels"
+}

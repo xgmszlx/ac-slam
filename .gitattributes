@@ -7,3 +7,8 @@
 # Preserve published research snapshots byte-for-byte, including original whitespace.
 /research_archive/20261016_stage_closeout/snapshots/** -whitespace
 /research_archive/20261016_stage_closeout/publication/pf_recovery_diagnostic.patch -whitespace
+
+# Preserve byte-exact 2026-10-19 diagnostic snapshots and native patch context.
+/research_archive/20261019_passive_rgbd_depth/code/** -whitespace
+/research_archive/20261019_passive_rgbd_depth/audit/*.patch -whitespace
+/research_archive/20261019_passive_rgbd_depth/config/** -whitespace

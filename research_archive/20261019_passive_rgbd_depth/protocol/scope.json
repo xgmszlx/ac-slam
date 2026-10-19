@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-19",
+  "scope": "PASSIVE_RGBD_DEPTH_FIRST_SCREEN",
+  "base_archive": "96156bb2e5ff9ae93e8664391fc9d850b467dcd7",
+  "ORB_commit": "4452a3c4ab75b1cde34e5505a36ec3f9edcdc4c4",
+  "order": [
+    "desk/B0",
+    "desk/B1",
+    "large_cabinet/B0",
+    "large_cabinet/B1"
+  ],
+  "max_SLAM_runs": 4,
+  "rule": "3x3 valid-depth max-min > max(0.05m,0.03*valid center depth); center must be valid; at least 2 valid neighbors; image exterior ignored; no dilation. Set suspicious center to zero only.",
+  "root_reserve_bytes": 5368709120,
+  "GT_online": false,
+  "no_automatic_repeats": true
+}
