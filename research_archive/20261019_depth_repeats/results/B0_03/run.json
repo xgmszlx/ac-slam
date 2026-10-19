@@ -1,0 +1,61 @@
+{
+  "sequence": "desk",
+  "label": "B0_03",
+  "condition": "B0",
+  "command": [
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/build/rgbd_screen",
+    "/home/wcqw/passive_visual_slam_qualification_20261015/sources/ORB_SLAM3-4452a3c4ab75b1cde34e5505a36ec3f9edcdc4c4/Vocabulary/ORBvoc.txt",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/config/desk.yaml",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/data/rgbd_dataset_freiburg1_desk",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/data/rgbd_dataset_freiburg1_desk/associations.txt",
+    "B0",
+    "/home/wcqw/passive_rgbd_depth_repeats_20261019/results/B0_03"
+  ],
+  "binary_sha256": "9e6d97523fc32e1b15791ab3ea29ded1583876b7587b2b402646d800391efb25",
+  "core_sha256": "c9f08e6c3998c00d1f1d5272c045ff5b70c40e33458a6bc996cff493e8c56b66",
+  "yaml_sha256": "7a282cb623cce89e903efc03d3468a29f68834b9b01cf4dd1ec3b82e9c150aa1",
+  "association_sha256": "86dfcf237cf092cc7466ee2c67dfc0a3a507fe879a1bbe063b962d8a7442c536",
+  "GT_online": false,
+  "frames_expected": 573,
+  "start_unix": 1792395409.8612037,
+  "loadavg_before": [
+    2.58,
+    1.9,
+    1.97
+  ],
+  "LD_LIBRARY_PATH": "/home/wcqw/passive_rgbd_depth_screen_20261019/build:/home/wcqw/passive_visual_slam_qualification_20261015/local/lib:/opt/ros/noetic/lib:/opt/ros/noetic/lib/x86_64-linux-gnu:/usr/local/cuda-11.8/lib64",
+  "exit": 0,
+  "elapsed_wall_s": 28.393589808000343,
+  "processed_frames": 573,
+  "states": {
+    "2": 487,
+    "3": 85,
+    "0": 1
+  },
+  "map_ids": [
+    0,
+    1
+  ],
+  "frame_identity_missing": 1,
+  "multi_map_gauge_warning": true,
+  "exported": {
+    "ATE": 0.10462871954183262,
+    "RPEt": 0.06093963721650011,
+    "RPEr": 2.5354229836100677,
+    "RPE_pairs": 419,
+    "coverage": 0.8534031413612565,
+    "identity_gauge_qualified": false,
+    "rows": 572,
+    "unique_stamps": 489
+  },
+  "online": {
+    "ATE": 0.8558417318166288,
+    "RPEt": 0.743797387026169,
+    "RPEr": 23.299394720550662,
+    "RPE_pairs": 417,
+    "coverage": 0.849912739965096,
+    "identity_gauge_qualified": false,
+    "rows": 487,
+    "unique_stamps": 487
+  }
+}

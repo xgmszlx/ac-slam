@@ -1,0 +1,64 @@
+{
+  "status": "FROZEN_BEFORE_NEW_RUNS",
+  "maximum_new_runs": 4,
+  "old_complete_runs": 4,
+  "project_maximum_complete_runs": 8,
+  "order": [
+    "B1_02",
+    "B0_02",
+    "B0_03",
+    "B1_03"
+  ],
+  "sequence": "desk",
+  "file_hashes": {
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/code/run_four.py": "7f0f39e2af96bba60fb56c6c6c45a78ae868c4c1f3e6c81e4f6b749926810bf0",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/code/rgbd_screen.cc": "be480a76f50545b06144f4690141675bcb3a634626b19f33372336ce6bea5859",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/code/fetch_ranges.py": "6568004bf23ff61159cdf2b6a482fbfaaa9cc2d77b800f22298f8fe66fbf683e",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/code/depth_rule.h": "8102f23bee773b42faaa55e07e2672f451551ba7fccd26aeca3a901758b1461b",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/code/test_depth_frame.cc": "20ee69db8af5acc1a40daa2be8e6878792a68e59a5fe5f726ca412f2904370ce",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/code/prepare_datasets.py": "032352cf192616da88b93e5bab1fc78b6feab831032f36408da0b9667d7b138d",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/code/evaluate.py": "21c696ff70d9cb5fa2816a6cec227656326c267d1bf427f94d09031241cc2ef8",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/code/fetch_ranges_direct.py": "304a13726265c541a14f51b1e2f2c31c5b59189b049818f9867c838027dff5af",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/code/System_diagnostic.cc": "f990626cd8a7e3148f4b3ed657fe575fd8f3022517e6b5f2e2d6d6622d9e4d70",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/config/desk.yaml": "7a282cb623cce89e903efc03d3468a29f68834b9b01cf4dd1ec3b82e9c150aa1",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/config/large_cabinet.yaml": "240b4da9adda44b13c768e5bab55f95e07b5f23ca8789a55311774fd9d1ddd32",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/build/rgbd_screen": "9e6d97523fc32e1b15791ab3ea29ded1583876b7587b2b402646d800391efb25",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/build/libORB_SLAM3.so": "c9f08e6c3998c00d1f1d5272c045ff5b70c40e33458a6bc996cff493e8c56b66",
+    "/home/wcqw/passive_visual_slam_qualification_20261015/sources/ORB_SLAM3-4452a3c4ab75b1cde34e5505a36ec3f9edcdc4c4/lib/libORB_SLAM3.so": "a20db0416fc54ca5949e6b6ac834c12f59dc0bae5f08dc2945e46943a3532c46",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/data/rgbd_dataset_freiburg1_desk/associations.txt": "86dfcf237cf092cc7466ee2c67dfc0a3a507fe879a1bbe063b962d8a7442c536",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/data/rgbd_dataset_freiburg1_desk/groundtruth.txt": "48c4fa61f5d78310ea579f404d31d296738c4210c19c2bdac4a5cdf6bff50831",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/audit/dataset_desk.json": "7e008a79d2d807c1f52448f9996723c0c93ab8905599bf4b1b8ddc9aeae5b9aa",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/data/rgbd_dataset_freiburg3_large_cabinet/associations.txt": "5c3b70a39649c242668f13cebb45b95c9256ace1ebd1136fc924a4179ab8aad4",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/data/rgbd_dataset_freiburg3_large_cabinet/groundtruth.txt": "d8b5f39e6db5c2088cc41d4633075911b8c6d615a2468a137204f6f42dc5ca8d",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/audit/dataset_large_cabinet.json": "c767a124a890396569cd4c3f7ad1f130d4a329d8e99e831e0957b418891330a3",
+    "/home/wcqw/passive_rgbd_depth_repeats_20261019/code/run_repeats.py": "d27ac759cfb037814a7bf3927920b11748184c678f0c5188b1c3886fb09e93d1",
+    "/home/wcqw/passive_rgbd_depth_repeats_20261019/code/evaluate.py": "21c696ff70d9cb5fa2816a6cec227656326c267d1bf427f94d09031241cc2ef8",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/protocol/attempts.jsonl": "738ca185a5255a1a0ecaac296433c7326f1fb797962d80e8befd6a58d5bca7cd",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/data/desk_image_hashes.json": "a315e3ce8deeee8c80813205bb85266ee71f10a4460a5863eace3d9aea7224d5"
+  },
+  "raw_associated_image_hashes_verified": 1146,
+  "B1_rule": "3x3 valid-depth neighbors >=2; max-min > max(0.05m,0.03*valid center depth); zero valid center; no dilation",
+  "primary_metrics": [
+    "online_ATE",
+    "exported_ATE",
+    "online_RPEt",
+    "exported_RPEt"
+  ],
+  "repeatable_signal_gate": "All three B1 values below all three B0 values for each primary metric, equal qualified full coverage and single-map identity. Otherwise B1_INCONCLUSIVE; technical qualification failure TECHNICAL_INCOMPLETE. Descriptive n=3, no significance inference.",
+  "secondary_metrics": [
+    "online/exported 1s rotation RPE",
+    "maps",
+    "keyframes",
+    "retained 2D/3D",
+    "track and preprocessing time",
+    "CPU and RSS"
+  ],
+  "data_evaluation": "Same frozen evaluate.py, separate SE3 no scale for online/exported, 1s +/-20ms RPE and original GT/gap rules. No new GT input to estimator.",
+  "stop": "No retry, extra seed or substitute run. Technical failure stops unrun slots; natural tracking failure preserved. No B/C work.",
+  "new_compile_install_downloads": false,
+  "loadavg": [
+    1.82,
+    1.66,
+    1.9
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "sequence": "desk",
+  "label": "B1_02",
+  "condition": "B1",
+  "command": [
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/build/rgbd_screen",
+    "/home/wcqw/passive_visual_slam_qualification_20261015/sources/ORB_SLAM3-4452a3c4ab75b1cde34e5505a36ec3f9edcdc4c4/Vocabulary/ORBvoc.txt",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/config/desk.yaml",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/data/rgbd_dataset_freiburg1_desk",
+    "/home/wcqw/passive_rgbd_depth_screen_20261019/data/rgbd_dataset_freiburg1_desk/associations.txt",
+    "B1",
+    "/home/wcqw/passive_rgbd_depth_repeats_20261019/results/B1_02"
+  ],
+  "binary_sha256": "9e6d97523fc32e1b15791ab3ea29ded1583876b7587b2b402646d800391efb25",
+  "core_sha256": "c9f08e6c3998c00d1f1d5272c045ff5b70c40e33458a6bc996cff493e8c56b66",
+  "yaml_sha256": "7a282cb623cce89e903efc03d3468a29f68834b9b01cf4dd1ec3b82e9c150aa1",
+  "association_sha256": "86dfcf237cf092cc7466ee2c67dfc0a3a507fe879a1bbe063b962d8a7442c536",
+  "GT_online": false,
+  "frames_expected": 573,
+  "start_unix": 1792395351.1827388,
+  "loadavg_before": [
+    1.69,
+    1.64,
+    1.89
+  ],
+  "LD_LIBRARY_PATH": "/home/wcqw/passive_rgbd_depth_screen_20261019/build:/home/wcqw/passive_visual_slam_qualification_20261015/local/lib:/opt/ros/noetic/lib:/opt/ros/noetic/lib/x86_64-linux-gnu:/usr/local/cuda-11.8/lib64",
+  "exit": 0,
+  "elapsed_wall_s": 28.44486704300016,
+  "processed_frames": 573,
+  "states": {
+    "2": 573
+  },
+  "map_ids": [
+    0
+  ],
+  "frame_identity_missing": 0,
+  "multi_map_gauge_warning": false,
+  "exported": {
+    "ATE": 0.017617472594652715,
+    "RPEt": 0.023916181595160835,
+    "RPEr": 1.5157772321447578,
+    "RPE_pairs": 524,
+    "coverage": 1.0,
+    "identity_gauge_qualified": true,
+    "rows": 573,
+    "unique_stamps": 573
+  },
+  "online": {
+    "ATE": 0.020996386202028972,
+    "RPEt": 0.029156277167466098,
+    "RPEr": 1.649820986095139,
+    "RPE_pairs": 524,
+    "coverage": 1.0,
+    "identity_gauge_qualified": true,
+    "rows": 573,
+    "unique_stamps": 573
+  }
+}

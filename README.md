@@ -1,6 +1,6 @@
 # ac-slam
 
-最新研究状态（2026-10-19）：见[被动RGB-D四次深度观测对照](research_archive/20261019_passive_rgbd_depth/README.md)。已完成desk/large_cabinet各B0/B1一次；原生深度干预可测，单次简单基线有收益，但尚无SCI方法原型资格。唯一建议是desk受限重复；B独立地图查询未合格，C不开发。旧主动/AMCL方向继续冻结，[此前收口](research_archive/20261016_stage_closeout/README.md)完整保留。
+最新研究状态（2026-10-19，desk重复完成）：见[第二轮深度观测重复](research_archive/20261019_depth_repeats/REPORT.md)。**B1_INCONCLUSIVE**：新增4次完整运行，累计8次；B1与合格B0结果重叠，另保留B0_03失跟/重建及导出身份失败，不补跑。暂停追加A实验和方法开发。原[第一轮结果](research_archive/20261019_passive_rgbd_depth/REPORT.md)及旧主动/AMCL收口完整保留。
 
 Reproducible research workspace for the public Graph-Based SLAM-Aware
 Exploration baseline. The repository preserves the code baseline, pinned
