@@ -1,0 +1,25 @@
+{
+  "partial_files_preserved": [
+    {
+      "name": "ngd_original.tar.gz",
+      "bytes": 107646976,
+      "complete": false,
+      "reason": "archive canceled before end / dependency transfer timed out"
+    },
+    {
+      "name": "opencv-python-4.5.5.64.tar.gz",
+      "bytes": 9216549,
+      "complete": false,
+      "reason": "archive canceled before end / dependency transfer timed out"
+    }
+  ],
+  "opencv_sdist_expected_bytes": 89920521,
+  "opencv_sdist_expected_sha256": "f65de0446a330c3b773cd04ba10345d8ce1b15dcac3f49770204e37602d0b3f7",
+  "complete_OpenCV_source": false,
+  "source_checkout_error": "RPC curl56 GnuTLS recv error -9 / remote hangup / early EOF / index-pack failed",
+  "OpenCV_git_error": "gnutls_handshake improperly terminated",
+  "direct_official_host_error": "connection timed out after8s",
+  "native_version_requirement_not_lowered": true,
+  "TLS_verification_not_disabled": true,
+  "no_system_install": true
+}

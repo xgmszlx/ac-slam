@@ -1,6 +1,6 @@
 # ac-slam
 
-最新研究状态（2026-10-20）：[RGB-D删除消融结题](research_archive/20261020_rgbd_deletion_ablation/REPORT.md)。**STOP_CURRENT_COMBINATION_PROTOTYPE**：E1二维删除、E2三维删除及S0重复各一次完成；在线ATE为0.749/0.714/0.554m，两项消融均差于旧S1和两次原生S0。未找到可继续投入的删除改进环节，三次预算关闭，不追加模块或实验。原[S0/S1/S2真实比较](research_archive/20261020_rgbd_combo_e2e/REPORT.md)、更早失败及旧主动/AMCL收口保持。
+最新研究状态（2026-10-20）：[NGD作者基线隔离资格](research_archive/20261020_ngd_native_qualification/REPORT.md)。**BASELINE_NOT_QUALIFIED**：固定作者提交已核、必要源码/随仓模型与隔离OpenCV未完整取得；原生CMake拒绝系统4.2。没有NGD真实运行、M1/M2或方法收益，有限获取已停止。此前[删除消融STOP](research_archive/20261020_rgbd_deletion_ablation/REPORT.md)及原始负结果不变，不恢复旧原型。
 
 Reproducible research workspace for the public Graph-Based SLAM-Aware
 Exploration baseline. The repository preserves the code baseline, pinned
