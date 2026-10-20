@@ -1,0 +1,29 @@
+Build type: Release
+-- Using flag -std=c++14.
+OPENCV VERSION:
+4.5.5
+CMake Warning at CMakeLists.txt:43 (find_package):
+  By not providing "Findrealsense2.cmake" in CMAKE_MODULE_PATH this project
+  has asked CMake to find a package configuration file provided by
+  "realsense2", but CMake did not find one.
+
+  Could not find a package configuration file provided by "realsense2" with
+  any of the following names:
+
+    realsense2Config.cmake
+    realsense2-config.cmake
+
+  Add the installation prefix of "realsense2" to CMAKE_PREFIX_PATH or set
+  "realsense2_DIR" to a directory containing one of the above files.  If
+  "realsense2" provides a separate development package or SDK, be sure it has
+  been installed.
+
+
+-- BUILD TYPE:Release
+-- Compiling on Unix
+-- Found OpenMP_C: -fopenmp  
+-- Found OpenMP_CXX: -fopenmp  
+-- Found OpenMP: TRUE   
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/ngd-build

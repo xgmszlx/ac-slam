@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/usr/bin/time",
+    "-v",
+    "-o",
+    "/home/wcqw/ngd_native_recovery_20261020/results/walking01/resource.txt",
+    "/media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/rgbd_tum_headless",
+    "/media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/NGD-SLAM/Vocabulary/ORBvoc.txt",
+    "/home/wcqw/ngd_native_recovery_20261020/config/TUM3_BGR.yaml",
+    "/home/wcqw/passive_visual_slam_qualification_20261015/data/rgbd_dataset_freiburg3_walking_xyz",
+    "/home/wcqw/passive_visual_slam_qualification_20261015/data/rgbd_dataset_freiburg3_walking_xyz/associations.txt"
+  ],
+  "cwd": "/media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/NGD-SLAM",
+  "exit_status": 139,
+  "timed_out": false,
+  "wall_seconds": 5.015056602999948,
+  "finished_at": "2026-10-20T15:07:47.771834+08:00",
+  "gt_online": false,
+  "notes": "native estimator; viewer-disabled copied author example, no state/mask/constraint hooks"
+}

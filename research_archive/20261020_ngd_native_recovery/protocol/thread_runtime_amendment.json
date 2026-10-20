@@ -1,0 +1,12 @@
+{
+  "registered_at": "2026-10-20T15:12:16.000892+08:00",
+  "prior_run": "walking01; SIGSEGV before first completed frame, no trajectory; retained unchanged",
+  "diagnostics": "first GDB stopped at PLT/real entry before frame body; corrected GDB bounded to one frame captured SIGBUS in OpenCV LabelingBolelli4CParallel invoked from original YOLO::postprocess",
+  "preflight": "same original first RGB-D author YOLO::Detect passes with OPENCV_FOR_THREADS_NUM=1, 82438 nonzero mask pixels",
+  "allowed_change": "runtime environment OPENCV_FOR_THREADS_NUM=1 only; no author source, estimator, mask, roll or model change",
+  "additional_technical_run_limit": 1,
+  "total_real_run_call_limit": 2,
+  "complete_sequences_before_retry": 0,
+  "stop_if_retry_fails": true,
+  "science_scope": "first native baseline qualification, not algorithm comparison or evidence of tracking quality effect of threads"
+}

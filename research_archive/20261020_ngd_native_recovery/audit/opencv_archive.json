@@ -1,0 +1,8 @@
+{
+  "path": "/home/wcqw/ac-slam/opencv-4.5.5.tar.gz",
+  "bytes": 89879893,
+  "sha256": "a1cfdcf6619387ca9e232687504da996aaa9f7b5689986b8331ec02cb61d28ad",
+  "expanded_bytes": 185781306,
+  "version_header": "// This file is part of OpenCV project.\n// It is subject to the license terms in the LICENSE file found in the top-level directory\n// of this distribution and at http://opencv.org/license.html.\n\n#ifndef OPENCV_VERSION_HPP\n#define OPENCV_VERSION_HPP\n\n#define CV_VERSION_MAJOR    4\n#define CV_VERSION_MINOR    5\n#define CV_VERSION_REVISION 5\n#define CV_VERSION_STATUS   \"\"\n\n#define CVAUX_STR_EXP(__A)  #__A\n#define CVAUX_STR(__A)      CVAUX_STR_EXP(__A)\n\n#define CVAUX_STRW_EXP(__A)  L ## #__A\n#define CVAUX_STRW(__A)      CVAUX_STRW_EXP(__A)\n\n#define CV_VERSION          CVAUX_STR(CV_VERSION_MAJOR) \".\" CVAUX_STR(CV_VERSION_MINOR) \".\" CVAUX_STR(CV_VERSION_REVISION) CV_VERSION_STATUS\n\n/* old  style version constants*/\n#define CV_MAJOR_VERSION    CV_VERSION_MAJOR\n#define CV_MINOR_VERSION    CV_VERSION_MINOR\n#define CV_SUBMINOR_VERSION CV_VERSION_REVISION\n\n#endif // OPENCV_VERSION_HPP\n",
+  "preparation_note": "Extraction completed; first metadata writer used closed TarFile and failed. Reopened headers to finish metadata; no re-extraction."
+}

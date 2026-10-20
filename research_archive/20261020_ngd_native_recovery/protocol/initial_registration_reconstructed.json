@@ -1,0 +1,59 @@
+{
+  "status": "RECONSTRUCTED_AFTER_RUN_NOT_ORIGINAL_RECORD",
+  "reason": "retry launcher path replacement failed for protocol paths; first_run_frozen.json and attempts_final.json were overwritten with retry records",
+  "evidence_preserved": "walking01 started.json/run.json/resource/stdout and all binaries/source/config unchanged",
+  "reconstructed_initial_registration": {
+    "new_run_budget": 1,
+    "run_order": [
+      "walking01"
+    ],
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/home/wcqw/ngd_native_recovery_20261020/results/walking01/resource.txt",
+      "/media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/rgbd_tum_headless",
+      "/media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/NGD-SLAM/Vocabulary/ORBvoc.txt",
+      "/home/wcqw/ngd_native_recovery_20261020/config/TUM3_BGR.yaml",
+      "/home/wcqw/passive_visual_slam_qualification_20261015/data/rgbd_dataset_freiburg3_walking_xyz",
+      "/home/wcqw/passive_visual_slam_qualification_20261015/data/rgbd_dataset_freiburg3_walking_xyz/associations.txt"
+    ],
+    "cwd": "/media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/NGD-SLAM",
+    "input_frames": 827,
+    "source_commit": "a93a14c4019efc7a209be5fbf9fefa46f5d1d90f",
+    "hashes": {
+      "/media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/rgbd_tum_headless": "990dbf962075db037a5322a142d9e9de333ed16271a8670edb13bf94c6fc6da5",
+      "/media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/NGD-SLAM/lib/libORB_SLAM3.so": "5e8c7e7ef751cedc53a11031d089bf0ca96092fa78c4f8cb471c99e7070064ea",
+      "/media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/NGD-SLAM/Examples/RGB-D/rgbd_tum": "07ff9deedbc00c6ce628748ed02f1b94233bd364021e2a9e57fe5624fe0d8333",
+      "/media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/NGD-SLAM/Thirdparty/YOLO/yolo-fastest-xl.cfg": "0b89db6f713f53479b8dbf1c1d66a323e274ed232eaff825dc869a407ddecea9",
+      "/media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/NGD-SLAM/Thirdparty/YOLO/yolo-fastest-xl.weights": "eb37bc51b21efc53f383de29b7504f818b1a9cb9949a2d62b332ba56e44a4027",
+      "/media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/NGD-SLAM/Vocabulary/ORBvoc.txt": "f8dd027f7a6cb88129821341194d7f2c75b77b3394257ddd0d2229863d1a3570",
+      "/home/wcqw/ngd_native_recovery_20261020/config/TUM3_BGR.yaml": "240b4da9adda44b13c768e5bab55f95e07b5f23ca8789a55311774fd9d1ddd32",
+      "/home/wcqw/ngd_native_recovery_20261020/code/evaluate.py": "6572de236f8ca0514a0a726878e7c5e744552fcedcacf67280fc958522faa90c"
+    },
+    "entry": "author rgbd_tum with only viewer bool false; no logging hooks",
+    "evaluator": "existing SE3 scale1/1s RPE/20ms GT matching/100ms gap exclusion",
+    "frozen_at": "2026-10-20T15:07:42.756534+08:00"
+  },
+  "initial_result": {
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/home/wcqw/ngd_native_recovery_20261020/results/walking01/resource.txt",
+      "/media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/rgbd_tum_headless",
+      "/media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/NGD-SLAM/Vocabulary/ORBvoc.txt",
+      "/home/wcqw/ngd_native_recovery_20261020/config/TUM3_BGR.yaml",
+      "/home/wcqw/passive_visual_slam_qualification_20261015/data/rgbd_dataset_freiburg3_walking_xyz",
+      "/home/wcqw/passive_visual_slam_qualification_20261015/data/rgbd_dataset_freiburg3_walking_xyz/associations.txt"
+    ],
+    "cwd": "/media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/NGD-SLAM",
+    "exit_status": 139,
+    "timed_out": false,
+    "wall_seconds": 5.015056602999948,
+    "finished_at": "2026-10-20T15:07:47.771834+08:00",
+    "gt_online": false,
+    "notes": "native estimator; viewer-disabled copied author example, no state/mask/constraint hooks"
+  },
+  "limitation": "initial pre-run registration original bytes are unavailable; reconstructed hashes are from unchanged artifacts, not a newly found pre-run file"
+}

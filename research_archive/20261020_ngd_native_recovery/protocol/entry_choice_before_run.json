@@ -1,0 +1,10 @@
+{
+  "choice": "author RGB-D example copied to independent headless entry; only viewer API bool true to false",
+  "rationale": "Previous qualified ORB3 platform documented a Viewer::Run shutdown segfault with the same commented shutdown wait pattern; avoid known UI lifetime issue without estimator modification",
+  "native_source_unchanged": true,
+  "logging_hooks": 0,
+  "new_full_run_budget": 1,
+  "source_sha256": "5f69d96ccde9efa1e496c70508c0fb7cc054a59ffb90b8967df8c122d3be27c7",
+  "entry_sha256": "f890fc7638a6de7eab7affd1964e60de27817626cf6821b84d04af800f9fc8f7",
+  "pose_states_without_hooks": "per-frame public states and internal reset completeness may remain UNKNOWN; native logs and export identity will be reported"
+}

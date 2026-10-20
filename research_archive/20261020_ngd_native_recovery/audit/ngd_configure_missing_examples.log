@@ -1,0 +1,203 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+Build type: Release
+-- Performing Test COMPILER_SUPPORTS_CXX11
+-- Performing Test COMPILER_SUPPORTS_CXX11 - Success
+-- Performing Test COMPILER_SUPPORTS_CXX0X
+-- Performing Test COMPILER_SUPPORTS_CXX0X - Success
+-- Using flag -std=c++14.
+-- Found OpenCV: /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/opencv-install (found suitable version "4.5.5", minimum required is "4.4") 
+OPENCV VERSION:
+4.5.5
+CMake Warning at CMakeLists.txt:43 (find_package):
+  By not providing "Findrealsense2.cmake" in CMAKE_MODULE_PATH this project
+  has asked CMake to find a package configuration file provided by
+  "realsense2", but CMake did not find one.
+
+  Could not find a package configuration file provided by "realsense2" with
+  any of the following names:
+
+    realsense2Config.cmake
+    realsense2-config.cmake
+
+  Add the installation prefix of "realsense2" to CMAKE_PREFIX_PATH or set
+  "realsense2_DIR" to a directory containing one of the above files.  If
+  "realsense2" provides a separate development package or SDK, be sure it has
+  been installed.
+
+
+-- BUILD TYPE:Release
+-- Compiling on Unix
+-- Found OpenMP_C: -fopenmp (found version "4.5") 
+-- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+-- Found OpenMP: TRUE (found version "4.5")  
+-- Configuring done
+CMake Error at CMakeLists.txt:380 (add_executable):
+  Cannot find source file:
+
+    Examples_old/Stereo-Inertial/stereo_inertial_tum_vi.cc
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
+  .hpp .hxx .in .txx
+
+
+CMake Error at CMakeLists.txt:359 (add_executable):
+  Cannot find source file:
+
+    Examples_old/Monocular-Inertial/mono_inertial_tum_vi.cc
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
+  .hpp .hxx .in .txx
+
+
+CMake Error at CMakeLists.txt:338 (add_executable):
+  Cannot find source file:
+
+    Examples_old/Monocular/mono_tum_vi.cc
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
+  .hpp .hxx .in .txx
+
+
+CMake Error at CMakeLists.txt:376 (add_executable):
+  Cannot find source file:
+
+    Examples_old/Stereo-Inertial/stereo_inertial_euroc.cc
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
+  .hpp .hxx .in .txx
+
+
+CMake Error at CMakeLists.txt:330 (add_executable):
+  Cannot find source file:
+
+    Examples_old/Monocular/mono_kitti.cc
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
+  .hpp .hxx .in .txx
+
+
+CMake Error at CMakeLists.txt:326 (add_executable):
+  Cannot find source file:
+
+    Examples_old/Monocular/mono_tum.cc
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
+  .hpp .hxx .in .txx
+
+
+CMake Error at CMakeLists.txt:305 (add_executable):
+  Cannot find source file:
+
+    Examples_old/Stereo/stereo_euroc.cc
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
+  .hpp .hxx .in .txx
+
+
+CMake Error at CMakeLists.txt:301 (add_executable):
+  Cannot find source file:
+
+    Examples_old/Stereo/stereo_kitti.cc
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
+  .hpp .hxx .in .txx
+
+
+CMake Error at CMakeLists.txt:334 (add_executable):
+  Cannot find source file:
+
+    Examples_old/Monocular/mono_euroc.cc
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
+  .hpp .hxx .in .txx
+
+
+CMake Error at CMakeLists.txt:355 (add_executable):
+  Cannot find source file:
+
+    Examples_old/Monocular-Inertial/mono_inertial_euroc.cc
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
+  .hpp .hxx .in .txx
+
+
+CMake Error at CMakeLists.txt:309 (add_executable):
+  Cannot find source file:
+
+    Examples_old/Stereo/stereo_tum_vi.cc
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
+  .hpp .hxx .in .txx
+
+
+CMake Error at CMakeLists.txt:278 (add_executable):
+  Cannot find source file:
+
+    Examples_old/RGB-D/rgbd_tum.cc
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
+  .hpp .hxx .in .txx
+
+
+CMake Error at CMakeLists.txt:380 (add_executable):
+  No SOURCES given to target: stereo_inertial_tum_vi_old
+
+
+CMake Error at CMakeLists.txt:359 (add_executable):
+  No SOURCES given to target: mono_inertial_tum_vi_old
+
+
+CMake Error at CMakeLists.txt:338 (add_executable):
+  No SOURCES given to target: mono_tum_vi_old
+
+
+CMake Error at CMakeLists.txt:376 (add_executable):
+  No SOURCES given to target: stereo_inertial_euroc_old
+
+
+CMake Error at CMakeLists.txt:330 (add_executable):
+  No SOURCES given to target: mono_kitti_old
+
+
+CMake Error at CMakeLists.txt:326 (add_executable):
+  No SOURCES given to target: mono_tum_old
+
+
+CMake Error at CMakeLists.txt:305 (add_executable):
+  No SOURCES given to target: stereo_euroc_old
+
+
+CMake Error at CMakeLists.txt:301 (add_executable):
+  No SOURCES given to target: stereo_kitti_old
+
+
+CMake Error at CMakeLists.txt:334 (add_executable):
+  No SOURCES given to target: mono_euroc_old
+
+
+CMake Error at CMakeLists.txt:355 (add_executable):
+  No SOURCES given to target: mono_inertial_euroc_old
+
+
+CMake Error at CMakeLists.txt:309 (add_executable):
+  No SOURCES given to target: stereo_tum_vi_old
+
+
+CMake Error at CMakeLists.txt:278 (add_executable):
+  No SOURCES given to target: rgbd_tum_old
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.

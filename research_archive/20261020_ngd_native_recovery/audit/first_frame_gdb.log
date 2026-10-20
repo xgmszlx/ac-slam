@@ -1,0 +1,96 @@
+Function "ORB_SLAM3::Tracking::GrabImageRGBD" not defined.
+Breakpoint 1 (ORB_SLAM3::Tracking::GrabImageRGBD) pending.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+ORB-SLAM3 Copyright (C) 2017-2020 Carlos Campos, Richard Elvira, Juan J. Gómez, José M.M. Montiel and Juan D. Tardós, University of Zaragoza.
+ORB-SLAM2 Copyright (C) 2014-2016 Raúl Mur-Artal, José M.M. Montiel and Juan D. Tardós, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: RGB-D
+Loading settings from /home/wcqw/ngd_native_recovery_20261020/config/TUM3_BGR.yaml
+Camera1.k3 optional parameter does not exist...
+	-Loaded camera 1
+Camera.newHeight optional parameter does not exist...
+Camera.newWidth optional parameter does not exist...
+	-Loaded image info
+	-Loaded RGB-D calibration
+	-Loaded ORB settings
+Viewer.imageViewScale optional parameter does not exist...
+	-Loaded viewer settings
+System.LoadAtlasFromFile optional parameter does not exist...
+System.SaveAtlasToFile optional parameter does not exist...
+	-Loaded Atlas settings
+System.thFarPoints optional parameter does not exist...
+	-Loaded misc parameters
+----------------------------------
+SLAM settings: 
+	-Camera 1 parameters (Pinhole): [ 535.4 539.2 320.1 247.6 ]
+	-Camera 1 distortion parameters: [  0 0 0 0 ]
+	-Original image size: [ 640 , 480 ]
+	-Current image size: [ 640 , 480 ]
+	-Sequence FPS: 30
+	-RGB-D depth map factor: 5000
+	-Features per image: 1000
+	-ORB scale factor: 1.2
+	-ORB number of scales: 8
+	-Initial FAST threshold: 20
+	-Min FAST threshold: 7
+
+
+Loading ORB Vocabulary. This could take a while...
+Vocabulary loaded!
+
+Initialization of Atlas from scratch 
+Creation of new map with id: 0
+Creation of new map with last KF id: 0
+Seq. Name: 
+There are 1 cameras in the atlas
+Camera 0 is pinhole
+[New Thread 0x7fffe3487700 (LWP 15157)]
+[New Thread 0x7fffe2c86700 (LWP 15158)]
+Net use yolo-fastest
+[New Thread 0x7fffe22b4700 (LWP 15159)]
+
+-------
+Start processing sequence ...
+Images in the sequence: 827
+
+
+Thread 1 "rgbd_tum_headle" hit Breakpoint 1, 0x00007ffff7d2e340 in ORB_SLAM3::Tracking::GrabImageRGBD(cv::Mat const&, cv::Mat const&, double const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)@plt () from /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/NGD-SLAM/lib/libORB_SLAM3.so
+Temporary breakpoint 2 at 0x7ffff7d2e340 (2 locations)
+
+Thread 1 "rgbd_tum_headle" hit Temporary breakpoint 2, 0x00007ffff7d9eb30 in ORB_SLAM3::Tracking::GrabImageRGBD(cv::Mat const&, cv::Mat const&, double const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) () from /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/NGD-SLAM/lib/libORB_SLAM3.so
+
+Thread 4 (Thread 0x7fffe22b4700 (LWP 15159)):
+#0  0x00007ffff5f23ff3 in __GI___pthread_mutex_lock (mutex=0x55555578e5a0) at ../nptl/pthread_mutex_lock.c:80
+#1  0x00007ffff7f535ac in ORB_SLAM3::YOLO::CheckFinish() () at /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/NGD-SLAM/lib/libORB_SLAM3.so
+#2  0x00007ffff7f554c8 in ORB_SLAM3::YOLO::Run() () at /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/NGD-SLAM/lib/libORB_SLAM3.so
+#3  0x00007ffff6e5adf4 in  () at /lib/x86_64-linux-gnu/libstdc++.so.6
+#4  0x00007ffff5f21609 in start_thread (arg=<optimized out>) at pthread_create.c:477
+#5  0x00007ffff6c96353 in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+
+Thread 3 (Thread 0x7fffe2c86700 (LWP 15158)):
+#0  0x00007ffff6c5423f in __GI___clock_nanosleep (clock_id=clock_id@entry=0, flags=flags@entry=0, req=req@entry=0x7fffe2c85810, rem=rem@entry=0x0) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:78
+#1  0x00007ffff6c59ec7 in __GI___nanosleep (requested_time=requested_time@entry=0x7fffe2c85810, remaining=remaining@entry=0x0) at nanosleep.c:27
+#2  0x00007ffff6c8ca7f in usleep (useconds=<optimized out>) at ../sysdeps/posix/usleep.c:32
+#3  0x00007ffff7dc18b2 in ORB_SLAM3::LoopClosing::Run() () at /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/NGD-SLAM/lib/libORB_SLAM3.so
+#4  0x00007ffff6e5adf4 in  () at /lib/x86_64-linux-gnu/libstdc++.so.6
+#5  0x00007ffff5f21609 in start_thread (arg=<optimized out>) at pthread_create.c:477
+#6  0x00007ffff6c96353 in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+
+Thread 2 (Thread 0x7fffe3487700 (LWP 15157)):
+#0  0x00007ffff6c5423f in __GI___clock_nanosleep (clock_id=clock_id@entry=0, flags=flags@entry=0, req=req@entry=0x7fffe34869d0, rem=rem@entry=0x0) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:78
+#1  0x00007ffff6c59ec7 in __GI___nanosleep (requested_time=requested_time@entry=0x7fffe34869d0, remaining=remaining@entry=0x0) at nanosleep.c:27
+#2  0x00007ffff6c8ca7f in usleep (useconds=<optimized out>) at ../sysdeps/posix/usleep.c:32
+#3  0x00007ffff7db17a5 in ORB_SLAM3::LocalMapping::Run() () at /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/NGD-SLAM/lib/libORB_SLAM3.so
+#4  0x00007ffff6e5adf4 in  () at /lib/x86_64-linux-gnu/libstdc++.so.6
+#5  0x00007ffff5f21609 in start_thread (arg=<optimized out>) at pthread_create.c:477
+#6  0x00007ffff6c96353 in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+
+Thread 1 (Thread 0x7ffff3a9fb80 (LWP 15151)):
+#0  0x00007ffff7d9eb30 in ORB_SLAM3::Tracking::GrabImageRGBD(cv::Mat const&, cv::Mat const&, double const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) () at /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/NGD-SLAM/lib/libORB_SLAM3.so
+#1  0x00007ffff7d4373f in ORB_SLAM3::System::TrackRGBD(cv::Mat const&, cv::Mat const&, double const&, std::vector<ORB_SLAM3::IMU::Point, std::allocator<ORB_SLAM3::IMU::Point> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) () at /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/NGD-SLAM/lib/libORB_SLAM3.so
+#2  0x00005555555593c5 in main ()
