@@ -1,0 +1,5 @@
+config/bonn.yaml -whitespace
+audit/switches.patch -whitespace
+# Preserve generated evaluation/log bytes including CRLF.
+results/*/evaluation/*/*.csv -whitespace
+results/*/stdout.log -whitespace

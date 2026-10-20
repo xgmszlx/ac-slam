@@ -1,6 +1,6 @@
 # ac-slam
 
-最新研究状态（2026-10-20）：[Bonn RGB-D S0/S1/S2真实对照](research_archive/20261020_rgbd_combo_e2e/REPORT.md)。**三次完整运行已完成，当前组合无定位收益证据**：在线ATE为0.557/0.631/0.656m，导出为0.532/0.615/0.642m；均589帧完整覆盖。S2退回观测确实进入二维优化，但增加内点未改善定位。预算3/3关闭，不追加运行或模块。原[原型/下载失败归档](research_archive/20261019_rgbd_quality_combo/REPORT.md)、[V3重复负结果](research_archive/20261019_depth_repeats/REPORT.md)及旧主动/AMCL收口保持。
+最新研究状态（2026-10-20）：[RGB-D删除消融结题](research_archive/20261020_rgbd_deletion_ablation/REPORT.md)。**STOP_CURRENT_COMBINATION_PROTOTYPE**：E1二维删除、E2三维删除及S0重复各一次完成；在线ATE为0.749/0.714/0.554m，两项消融均差于旧S1和两次原生S0。未找到可继续投入的删除改进环节，三次预算关闭，不追加模块或实验。原[S0/S1/S2真实比较](research_archive/20261020_rgbd_combo_e2e/REPORT.md)、更早失败及旧主动/AMCL收口保持。
 
 Reproducible research workspace for the public Graph-Based SLAM-Aware
 Exploration baseline. The repository preserves the code baseline, pinned

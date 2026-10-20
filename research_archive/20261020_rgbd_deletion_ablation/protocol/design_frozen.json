@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-20",
+  "parent_commit": "2e9e20d48eba78867f384e53c9e89097b73ed916",
+  "order": [
+    "E1",
+    "E2",
+    "S0"
+  ],
+  "maximum_full_runs": 3,
+  "no_retries_or_repeats": true,
+  "E1": "mode3: same S1 matches/LK/PnP/residual calculations; delete bad2D only, no deletion from 3D residual",
+  "E2": "mode4: bad2D skipped from PnP/3D judgement, kept for native tracker; only good2D+qualifiedPnP+dualDepth+3Dresidual>.05 removes feature",
+  "S0": "mode0 unchanged; second full native repeat",
+  "same_backend": true,
+  "no_S1_S2_full_runs": true,
+  "parameters": "all existing rules unchanged; only two deletion flags and entry labels added",
+  "GT": "offline evaluator only",
+  "primary_interpretation": "compare all online/exported ATE/RPE/coverage and cost against both S0 and old S1; n=1 E1/E2, S0 n=2; no significance claim",
+  "stop_rule": "if both E1/E2 do not improve on S0, recommend stop current prototype, no modules or extra runs"
+}

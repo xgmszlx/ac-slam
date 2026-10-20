@@ -1,0 +1,33 @@
+--- previous/code/Combo.cc
++++ ablation/code/Combo.cc
+@@ -32,7 +32,7 @@
+    cv::undistortPoints(p,un1,K,dist);cv::undistortPoints(q,un2,K,dist);
+    std::vector<unsigned char> good(matches.size(),0);std::vector<cv::Point3f> object;std::vector<cv::Point2f> image;
+    for(size_t j=0;j<matches.size();++j){int i=matches[j].trainIdx;bool pass=ok1[j]&&ok2[j]&&cv::norm(back[j]-p[j])<=1.&&cv::norm(flow[j]-q[j])<=2.;
+-    if(!pass){drop[i]=1;g.s[4]++;continue;}good[j]=1;g.s[3]++;
++    if(!pass){if(g.mode!=4){drop[i]=1;g.s[4]++;}continue;}good[j]=1;g.s[3]++;
+     float zz=z(a.depth,p[j]);if(zz>=.3 && zz<=6){object.push_back(xyz(un1[j],zz));image.push_back(q[j]);}
+    }
+    cv::Mat rv,tv,inliers;bool pose=false;
+@@ -43,7 +43,7 @@
+      bool depthOK=reliable(a.depth,p[j])&&reliable(depth,q[j]);bool motion=false;
+      if(both){auto X=xyz(un1[j],z1),Y=xyz(un2[j],z2);cv::Mat src=(cv::Mat_<double>(3,1)<<X.x,X.y,X.z),dst=(cv::Mat_<double>(3,1)<<Y.x,Y.y,Y.z);motion=cv::norm(dst-(R*src+tv))>.05;g.s[7]++;}
+      if(g.mode==2 && !depthOK){if(z2>0){tag[i]=1;g.s[9]++;if(z1<.3||z1>6||z2<.3||z2>6)g.s[16]++;else g.s[17]++;}else g.s[18]++;g.s[10]++;}
+-     else if(motion){drop[i]=1;g.s[8]++;}
++     else if(motion && g.mode!=3){drop[i]=1;g.s[8]++;}
+     }
+    }
+   }
+--- previous/code/rgbd_combo.cc
++++ ablation/code/rgbd_combo.cc
+@@ -11,8 +11,8 @@
+ using Clock=std::chrono::steady_clock;
+ struct Record{double stamp,track;int state;Sophus::SE3f pose;std::vector<double> native,front;};
+ int main(int argc,char** argv){
+- if(argc!=7){std::cerr<<"vocabulary yaml data associations S0|S1|S2 output\n";return 2;}
+- std::string condition=argv[5];if(condition!="S0"&&condition!="S1"&&condition!="S2")return 3;combo::configure(condition[1]-'0');
++ if(argc!=7){std::cerr<<"vocabulary yaml data associations S0|S1|S2|E1|E2 output\n";return 2;}
++ std::string condition=argv[5];if(condition!="S0"&&condition!="S1"&&condition!="S2"&&condition!="E1"&&condition!="E2")return 3;combo::configure(condition=="E1"?3:condition=="E2"?4:condition[1]-'0');
+  std::ifstream f(argv[4]);std::string line;std::vector<double> stamps;std::vector<std::string> rgb,dep;
+  while(std::getline(f,line)){if(line.empty()||line[0]=='#')continue;std::istringstream s(line);double a,b;std::string r,d;s>>a>>r>>b>>d;if(!s)return 4;stamps.push_back(a);rgb.push_back(r);dep.push_back(d);}
+  ORB_SLAM3::System slam(argv[1],argv[2],ORB_SLAM3::System::RGBD,false);if(slam.GetImageScale()!=1)return 5;
