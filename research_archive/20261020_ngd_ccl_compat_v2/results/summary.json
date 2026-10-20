@@ -1,0 +1,41 @@
+{
+  "label": "NGD-M0-compat-v2",
+  "status": "BASELINE_TECHNICAL_PASS_SINGLE_SEQUENCE",
+  "source_commit": "a93a14c4019efc7a209be5fbf9fefa46f5d1d90f",
+  "author_changed_files": [
+    "src/Tracking.cc",
+    "src/YOLO.cc"
+  ],
+  "short_completed": 12,
+  "full_completed": 827,
+  "exit_status": 0,
+  "online_ATE": "UNAVAILABLE: unchanged entry records no online poses",
+  "exported_ATE_m": 0.015766046783750504,
+  "RPE_1s_translation_m": 0.019700863632970203,
+  "RPE_1s_rotation_deg": 0.587427406117976,
+  "exported_pose_coverage": 1.0,
+  "camera_poses": 827,
+  "keyframes": 75,
+  "GT_pairs": 826,
+  "management_wall_s": 40.530389022000236,
+  "resources": {
+    "User time (seconds)": "72.70",
+    "System time (seconds)": "1.57",
+    "Maximum resident set size (kbytes)": "598484",
+    "Elapsed (wall clock) time (h:mm:ss or m:ss)": "0:40.31"
+  },
+  "tracking_times": {
+    "median_TrackRGBD_seconds": 0.0128044,
+    "mean_TrackRGBD_seconds": 0.013018
+  },
+  "frame_ids_contiguous_0_826": true,
+  "map_creation_messages": [
+    "Creation of new map with id: 0",
+    "Creation of new map with last KF id: 0",
+    "First KF:0; Map init KF:0"
+  ],
+  "per_frame_state": "NOT_RECORDED; output presence is not state OK",
+  "map_state_boundary": "native messages and trajectory timestamps only; no map-ID-per-pose export",
+  "shutdown_boundary": "author Shutdown requests finishes but does not wait for all workers; no changes, not certified fully converged BA",
+  "new_algorithms": 0
+}

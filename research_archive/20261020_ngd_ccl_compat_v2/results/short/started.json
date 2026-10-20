@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/usr/bin/time",
+    "-v",
+    "-o",
+    "/home/wcqw/ngd_ccl_compat_v2_20261020/results/short/resource.txt",
+    "/media/wcqw/KESU/slam_research/ngd_ccl_compat_v2_20261020/rgbd_tum_headless",
+    "/media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/NGD-SLAM/Vocabulary/ORBvoc.txt",
+    "/home/wcqw/ngd_ccl_compat_v2_20261020/config/TUM3_BGR.yaml",
+    "/home/wcqw/passive_visual_slam_qualification_20261015/data/rgbd_dataset_freiburg3_walking_xyz",
+    "/home/wcqw/ngd_ccl_compat_v2_20261020/results/short/associations_first12.txt"
+  ],
+  "stage": "short"
+}

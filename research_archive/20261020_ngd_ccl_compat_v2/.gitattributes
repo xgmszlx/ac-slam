@@ -1,0 +1,6 @@
+# Preserve verbatim author diff context and native logs.
+*.log whitespace=-blank-at-eol,-blank-at-eof
+*.patch whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab
+config/TUM3_BGR.yaml whitespace=-blank-at-eol,-blank-at-eof
+*.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+results/map_and_tracking_messages.txt whitespace=-blank-at-eol,-blank-at-eof

@@ -1,0 +1,22 @@
+{
+  "stage": "full",
+  "label": "NGD-M0-compat-v2",
+  "command": [
+    "/usr/bin/time",
+    "-v",
+    "-o",
+    "/home/wcqw/ngd_ccl_compat_v2_20261020/results/full/resource.txt",
+    "/media/wcqw/KESU/slam_research/ngd_ccl_compat_v2_20261020/rgbd_tum_headless",
+    "/media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/NGD-SLAM/Vocabulary/ORBvoc.txt",
+    "/home/wcqw/ngd_ccl_compat_v2_20261020/config/TUM3_BGR.yaml",
+    "/home/wcqw/passive_visual_slam_qualification_20261015/data/rgbd_dataset_freiburg3_walking_xyz",
+    "/home/wcqw/passive_visual_slam_qualification_20261015/data/rgbd_dataset_freiburg3_walking_xyz/associations.txt"
+  ],
+  "exit_status": 0,
+  "timed_out": false,
+  "wall_seconds": 40.530389022000236,
+  "completed_frame_calls": 827,
+  "input_frames": 827,
+  "finished_at": "2026-10-20T16:06:32.142174+08:00",
+  "gt_online": false
+}

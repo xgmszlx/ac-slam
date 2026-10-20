@@ -1,0 +1,11 @@
+--- a/src/YOLO.cc
++++ b/src/YOLO.cc
+@@ -125,7 +125,7 @@
+ 
+ 				// ========== Find connected components ==========
+ 				cv::Mat labels, stats, centroids;
+-				int nLabels = cv::connectedComponentsWithStats(localMask, labels, stats, centroids, 4, CV_32S);
++				int nLabels = cv::connectedComponentsWithStats(localMask, labels, stats, centroids, 4, CV_32S, cv::CCL_SAUF);
+ 
+ 				// Identify the largest component
+ 				int largestLabel = 0;

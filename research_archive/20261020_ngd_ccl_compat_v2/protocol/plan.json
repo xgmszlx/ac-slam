@@ -1,0 +1,29 @@
+{
+  "label": "NGD-M0-compat-v2",
+  "parent_commit": "40035951ba461fc782fc47db5b61d4675c80e6f0",
+  "source_commit": "a93a14c4019efc7a209be5fbf9fefa46f5d1d90f",
+  "only_new_change": "src/Tracking.cc CreateMaskFromClusters explicit CCL_SAUF, connectivity4/CV_32S; prior YOLO fix retained",
+  "untouched_risk": "pointsDepth may be empty before median access; do not fix preemptively",
+  "short_frames": 12,
+  "full_frames": 827,
+  "full_budget": 1,
+  "full_gate": "short exit0 and exactly12 completed TrackRGBD calls",
+  "threads": 1,
+  "new_fault_action": "one exact GDB prefix replay; stop without other source edits",
+  "repro_cases": [
+    "zero10",
+    "zero480",
+    "diag10",
+    "rects",
+    "tie",
+    "edge"
+  ],
+  "algorithms": [
+    "default",
+    "sauf"
+  ],
+  "threads_semantic": [
+    1,
+    4
+  ]
+}
