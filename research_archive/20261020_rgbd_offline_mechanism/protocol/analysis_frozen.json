@@ -1,0 +1,32 @@
+{
+  "status": "OFFLINE_DIAGNOSTIC",
+  "frozen_at": "2026-10-20T11:01:46.744668+08:00",
+  "runs": {
+    "S0": "/home/wcqw/passive_rgbd_combo_20261019/e2e_20261020/results/S0",
+    "S1": "/home/wcqw/passive_rgbd_combo_20261019/e2e_20261020/results/S1",
+    "S2": "/home/wcqw/passive_rgbd_combo_20261019/e2e_20261020/results/S2",
+    "E1": "/home/wcqw/passive_rgbd_deletion_ablation_20261020/results/E1",
+    "E2": "/home/wcqw/passive_rgbd_deletion_ablation_20261020/results/E2",
+    "S0_02": "/home/wcqw/passive_rgbd_deletion_ablation_20261020/results/S0"
+  },
+  "no_new_slam": true,
+  "definitions": {
+    "support": "retained_2d+retained_3d after TrackRGBD, nonnull MapPoint and !outlier; not complete PoseOptimization edges",
+    "deleted": "bad_2d_rejected+motion_rejected",
+    "deletion_fraction": "deleted/raw_N",
+    "timestamp_matching": "frame stamps exact across runs; evaluation rounded timestamp nearest unique within 2 microseconds; no interpolation",
+    "rpe_support": "support and actions at RPE start; forward approximately 1s error from saved evaluator",
+    "gt_motion": "same unique nearest GT matches as frozen evaluator, <=20ms; relative endpoint translation/rotation, offline only"
+  },
+  "statistics": [
+    "Pearson and Spearman descriptive only, no p values or iid confidence intervals",
+    "2s fixed time-bin centered residual correlations",
+    "residual correlations after OLS fixed 2s phase indicators plus GT 1s displacement and rotation",
+    "first-difference correlation within consecutive RPE-start pairs",
+    "paired differences relative S0 at same timestamps, raw and phase/motion adjusted",
+    "quartile support bins per run; data-dependent descriptive edges, no threshold claim"
+  ],
+  "window_selection": "fixed disjoint physical 2s bins [0,2),...,[18,20), only RPE pairs with both endpoints inside; rank bins by max(S1 RMS RPEt - S0 RMS RPEt,S2 RMS RPEt - S0 RMS RPEt), select top 3; outcome-selected exploratory, never altered by count patterns",
+  "figures": 3,
+  "budget_new_runs": 0
+}

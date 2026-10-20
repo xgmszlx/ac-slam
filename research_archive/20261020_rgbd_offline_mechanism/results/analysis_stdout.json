@@ -1,0 +1,84 @@
+{
+  "reproduced": {
+    "S1": {
+      "support__ate": {
+        "n": 588,
+        "pearson": 0.28449836126719064,
+        "spearman": 0.34171044990859106
+      },
+      "support__rpet": {
+        "n": 558,
+        "pearson": 0.007025224987077562,
+        "spearman": -0.018639354123039097
+      },
+      "delete_fraction__ate": {
+        "n": 588,
+        "pearson": -0.05424449595628187,
+        "spearman": -0.030080609162243373
+      }
+    },
+    "S2": {
+      "support__ate": {
+        "n": 588,
+        "pearson": 0.2683735900959759,
+        "spearman": 0.3159210764675543
+      },
+      "support__rpet": {
+        "n": 558,
+        "pearson": -0.0052794301106515625,
+        "spearman": -0.04248189271288045
+      },
+      "delete_fraction__ate": {
+        "n": 588,
+        "pearson": -0.054404590905013206,
+        "spearman": -0.045486200836158446
+      }
+    }
+  },
+  "windows": [
+    {
+      "start_s": 8,
+      "end_s": 10,
+      "S0_rpet_rmse": 0.2638840813195632,
+      "S1_rpet_rmse": 0.47943799568564915,
+      "S1_support_mean": 206.53333333333333,
+      "S1_delete_sum": 4147,
+      "S2_rpet_rmse": 0.38348222323540204,
+      "S2_support_mean": 209.48333333333332,
+      "S2_delete_sum": 4074
+    },
+    {
+      "start_s": 4,
+      "end_s": 6,
+      "S0_rpet_rmse": 0.5512482028756035,
+      "S1_rpet_rmse": 0.6293871243318956,
+      "S1_support_mean": 379.55,
+      "S1_delete_sum": 5177,
+      "S2_rpet_rmse": 0.6423866450859141,
+      "S2_support_mean": 384.8333333333333,
+      "S2_delete_sum": 4666
+    },
+    {
+      "start_s": 10,
+      "end_s": 12,
+      "S0_rpet_rmse": 0.7670370965524183,
+      "S1_rpet_rmse": 0.7823229217159019,
+      "S1_support_mean": 395.75,
+      "S1_delete_sum": 4991,
+      "S2_rpet_rmse": 0.8201720989449007,
+      "S2_support_mean": 400.71666666666664,
+      "S2_delete_sum": 4493
+    }
+  ],
+  "s2": {
+    "fallback_candidates": 26675,
+    "fallback_already_invalid": 8723,
+    "depth_invalidated": 17952,
+    "fallback_range_reason": 4396,
+    "fallback_neighborhood_reason": 13556,
+    "fallback_pose_edges_2d_last": 11742,
+    "fallback_pose_edges_3d_last": 0,
+    "fallback_pose_inlier2d_last": 8753,
+    "fallback_retained_2d": 8753
+  }
+}
