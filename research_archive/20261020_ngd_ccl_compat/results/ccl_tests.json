@@ -1,0 +1,559 @@
+{
+  "issue": "https://github.com/opencv/opencv/issues/21366",
+  "tests": [
+    {
+      "case": "zero10",
+      "threads": 1,
+      "algorithm": "default",
+      "command": [
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/ccl_probe",
+        "default",
+        "zero10",
+        "1",
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/probe_outputs/zero10_1_default"
+      ],
+      "returncode": -11,
+      "signal": 11
+    },
+    {
+      "case": "zero10",
+      "threads": 1,
+      "algorithm": "sauf",
+      "command": [
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/ccl_probe",
+        "sauf",
+        "zero10",
+        "1",
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/probe_outputs/zero10_1_sauf"
+      ],
+      "returncode": 0,
+      "signal": null,
+      "geometry": {
+        "components": 1,
+        "reference_components": 1,
+        "partition_equal_bfs": true,
+        "largest_equal_bfs_rowmajor": true,
+        "final_equal_bfs_rowmajor": true,
+        "largest_foreground_area": 0
+      }
+    },
+    {
+      "case": "zero10",
+      "threads": 4,
+      "algorithm": "default",
+      "command": [
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/ccl_probe",
+        "default",
+        "zero10",
+        "4",
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/probe_outputs/zero10_4_default"
+      ],
+      "returncode": -11,
+      "signal": 11
+    },
+    {
+      "case": "zero10",
+      "threads": 4,
+      "algorithm": "sauf",
+      "command": [
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/ccl_probe",
+        "sauf",
+        "zero10",
+        "4",
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/probe_outputs/zero10_4_sauf"
+      ],
+      "returncode": 0,
+      "signal": null,
+      "geometry": {
+        "components": 1,
+        "reference_components": 1,
+        "partition_equal_bfs": true,
+        "largest_equal_bfs_rowmajor": true,
+        "final_equal_bfs_rowmajor": true,
+        "largest_foreground_area": 0
+      }
+    },
+    {
+      "case": "zero480",
+      "threads": 1,
+      "algorithm": "default",
+      "command": [
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/ccl_probe",
+        "default",
+        "zero480",
+        "1",
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/probe_outputs/zero480_1_default"
+      ],
+      "returncode": 0,
+      "signal": null,
+      "geometry": {
+        "components": 1,
+        "reference_components": 1,
+        "partition_equal_bfs": true,
+        "largest_equal_bfs_rowmajor": true,
+        "final_equal_bfs_rowmajor": true,
+        "largest_foreground_area": 0
+      }
+    },
+    {
+      "case": "zero480",
+      "threads": 1,
+      "algorithm": "sauf",
+      "command": [
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/ccl_probe",
+        "sauf",
+        "zero480",
+        "1",
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/probe_outputs/zero480_1_sauf"
+      ],
+      "returncode": 0,
+      "signal": null,
+      "geometry": {
+        "components": 1,
+        "reference_components": 1,
+        "partition_equal_bfs": true,
+        "largest_equal_bfs_rowmajor": true,
+        "final_equal_bfs_rowmajor": true,
+        "largest_foreground_area": 0
+      }
+    },
+    {
+      "case": "zero480",
+      "threads": 4,
+      "algorithm": "default",
+      "command": [
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/ccl_probe",
+        "default",
+        "zero480",
+        "4",
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/probe_outputs/zero480_4_default"
+      ],
+      "returncode": 0,
+      "signal": null,
+      "geometry": {
+        "components": 1,
+        "reference_components": 1,
+        "partition_equal_bfs": true,
+        "largest_equal_bfs_rowmajor": true,
+        "final_equal_bfs_rowmajor": true,
+        "largest_foreground_area": 0
+      }
+    },
+    {
+      "case": "zero480",
+      "threads": 4,
+      "algorithm": "sauf",
+      "command": [
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/ccl_probe",
+        "sauf",
+        "zero480",
+        "4",
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/probe_outputs/zero480_4_sauf"
+      ],
+      "returncode": 0,
+      "signal": null,
+      "geometry": {
+        "components": 1,
+        "reference_components": 1,
+        "partition_equal_bfs": true,
+        "largest_equal_bfs_rowmajor": true,
+        "final_equal_bfs_rowmajor": true,
+        "largest_foreground_area": 0
+      }
+    },
+    {
+      "case": "diag10",
+      "threads": 1,
+      "algorithm": "default",
+      "command": [
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/ccl_probe",
+        "default",
+        "diag10",
+        "1",
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/probe_outputs/diag10_1_default"
+      ],
+      "returncode": -11,
+      "signal": 11
+    },
+    {
+      "case": "diag10",
+      "threads": 1,
+      "algorithm": "sauf",
+      "command": [
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/ccl_probe",
+        "sauf",
+        "diag10",
+        "1",
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/probe_outputs/diag10_1_sauf"
+      ],
+      "returncode": 0,
+      "signal": null,
+      "geometry": {
+        "components": 11,
+        "reference_components": 11,
+        "partition_equal_bfs": true,
+        "largest_equal_bfs_rowmajor": true,
+        "final_equal_bfs_rowmajor": true,
+        "largest_foreground_area": 1
+      }
+    },
+    {
+      "case": "diag10",
+      "threads": 4,
+      "algorithm": "default",
+      "command": [
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/ccl_probe",
+        "default",
+        "diag10",
+        "4",
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/probe_outputs/diag10_4_default"
+      ],
+      "returncode": -11,
+      "signal": 11
+    },
+    {
+      "case": "diag10",
+      "threads": 4,
+      "algorithm": "sauf",
+      "command": [
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/ccl_probe",
+        "sauf",
+        "diag10",
+        "4",
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/probe_outputs/diag10_4_sauf"
+      ],
+      "returncode": 0,
+      "signal": null,
+      "geometry": {
+        "components": 11,
+        "reference_components": 11,
+        "partition_equal_bfs": true,
+        "largest_equal_bfs_rowmajor": true,
+        "final_equal_bfs_rowmajor": true,
+        "largest_foreground_area": 1
+      }
+    },
+    {
+      "case": "rects",
+      "threads": 1,
+      "algorithm": "default",
+      "command": [
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/ccl_probe",
+        "default",
+        "rects",
+        "1",
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/probe_outputs/rects_1_default"
+      ],
+      "returncode": 0,
+      "signal": null,
+      "geometry": {
+        "components": 4,
+        "reference_components": 4,
+        "partition_equal_bfs": true,
+        "largest_equal_bfs_rowmajor": true,
+        "final_equal_bfs_rowmajor": true,
+        "largest_foreground_area": 551
+      }
+    },
+    {
+      "case": "rects",
+      "threads": 1,
+      "algorithm": "sauf",
+      "command": [
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/ccl_probe",
+        "sauf",
+        "rects",
+        "1",
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/probe_outputs/rects_1_sauf"
+      ],
+      "returncode": 0,
+      "signal": null,
+      "geometry": {
+        "components": 4,
+        "reference_components": 4,
+        "partition_equal_bfs": true,
+        "largest_equal_bfs_rowmajor": true,
+        "final_equal_bfs_rowmajor": true,
+        "largest_foreground_area": 551
+      }
+    },
+    {
+      "case": "rects",
+      "threads": 4,
+      "algorithm": "default",
+      "command": [
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/ccl_probe",
+        "default",
+        "rects",
+        "4",
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/probe_outputs/rects_4_default"
+      ],
+      "returncode": 0,
+      "signal": null,
+      "geometry": {
+        "components": 4,
+        "reference_components": 4,
+        "partition_equal_bfs": true,
+        "largest_equal_bfs_rowmajor": true,
+        "final_equal_bfs_rowmajor": true,
+        "largest_foreground_area": 551
+      }
+    },
+    {
+      "case": "rects",
+      "threads": 4,
+      "algorithm": "sauf",
+      "command": [
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/ccl_probe",
+        "sauf",
+        "rects",
+        "4",
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/probe_outputs/rects_4_sauf"
+      ],
+      "returncode": 0,
+      "signal": null,
+      "geometry": {
+        "components": 4,
+        "reference_components": 4,
+        "partition_equal_bfs": true,
+        "largest_equal_bfs_rowmajor": true,
+        "final_equal_bfs_rowmajor": true,
+        "largest_foreground_area": 551
+      }
+    },
+    {
+      "case": "tie",
+      "threads": 1,
+      "algorithm": "default",
+      "command": [
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/ccl_probe",
+        "default",
+        "tie",
+        "1",
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/probe_outputs/tie_1_default"
+      ],
+      "returncode": 0,
+      "signal": null,
+      "geometry": {
+        "components": 3,
+        "reference_components": 3,
+        "partition_equal_bfs": true,
+        "largest_equal_bfs_rowmajor": true,
+        "final_equal_bfs_rowmajor": true,
+        "largest_foreground_area": 100
+      }
+    },
+    {
+      "case": "tie",
+      "threads": 1,
+      "algorithm": "sauf",
+      "command": [
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/ccl_probe",
+        "sauf",
+        "tie",
+        "1",
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/probe_outputs/tie_1_sauf"
+      ],
+      "returncode": 0,
+      "signal": null,
+      "geometry": {
+        "components": 3,
+        "reference_components": 3,
+        "partition_equal_bfs": true,
+        "largest_equal_bfs_rowmajor": true,
+        "final_equal_bfs_rowmajor": true,
+        "largest_foreground_area": 100
+      }
+    },
+    {
+      "case": "tie",
+      "threads": 4,
+      "algorithm": "default",
+      "command": [
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/ccl_probe",
+        "default",
+        "tie",
+        "4",
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/probe_outputs/tie_4_default"
+      ],
+      "returncode": 0,
+      "signal": null,
+      "geometry": {
+        "components": 3,
+        "reference_components": 3,
+        "partition_equal_bfs": true,
+        "largest_equal_bfs_rowmajor": true,
+        "final_equal_bfs_rowmajor": true,
+        "largest_foreground_area": 100
+      }
+    },
+    {
+      "case": "tie",
+      "threads": 4,
+      "algorithm": "sauf",
+      "command": [
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/ccl_probe",
+        "sauf",
+        "tie",
+        "4",
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/probe_outputs/tie_4_sauf"
+      ],
+      "returncode": 0,
+      "signal": null,
+      "geometry": {
+        "components": 3,
+        "reference_components": 3,
+        "partition_equal_bfs": true,
+        "largest_equal_bfs_rowmajor": true,
+        "final_equal_bfs_rowmajor": true,
+        "largest_foreground_area": 100
+      }
+    },
+    {
+      "case": "edge",
+      "threads": 1,
+      "algorithm": "default",
+      "command": [
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/ccl_probe",
+        "default",
+        "edge",
+        "1",
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/probe_outputs/edge_1_default"
+      ],
+      "returncode": 0,
+      "signal": null,
+      "geometry": {
+        "components": 4,
+        "reference_components": 4,
+        "partition_equal_bfs": true,
+        "largest_equal_bfs_rowmajor": true,
+        "final_equal_bfs_rowmajor": true,
+        "largest_foreground_area": 300
+      }
+    },
+    {
+      "case": "edge",
+      "threads": 1,
+      "algorithm": "sauf",
+      "command": [
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/ccl_probe",
+        "sauf",
+        "edge",
+        "1",
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/probe_outputs/edge_1_sauf"
+      ],
+      "returncode": 0,
+      "signal": null,
+      "geometry": {
+        "components": 4,
+        "reference_components": 4,
+        "partition_equal_bfs": true,
+        "largest_equal_bfs_rowmajor": true,
+        "final_equal_bfs_rowmajor": true,
+        "largest_foreground_area": 300
+      }
+    },
+    {
+      "case": "edge",
+      "threads": 4,
+      "algorithm": "default",
+      "command": [
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/ccl_probe",
+        "default",
+        "edge",
+        "4",
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/probe_outputs/edge_4_default"
+      ],
+      "returncode": 0,
+      "signal": null,
+      "geometry": {
+        "components": 4,
+        "reference_components": 4,
+        "partition_equal_bfs": true,
+        "largest_equal_bfs_rowmajor": true,
+        "final_equal_bfs_rowmajor": true,
+        "largest_foreground_area": 300
+      }
+    },
+    {
+      "case": "edge",
+      "threads": 4,
+      "algorithm": "sauf",
+      "command": [
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/ccl_probe",
+        "sauf",
+        "edge",
+        "4",
+        "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/probe_outputs/edge_4_sauf"
+      ],
+      "returncode": 0,
+      "signal": null,
+      "geometry": {
+        "components": 4,
+        "reference_components": 4,
+        "partition_equal_bfs": true,
+        "largest_equal_bfs_rowmajor": true,
+        "final_equal_bfs_rowmajor": true,
+        "largest_foreground_area": 300
+      }
+    }
+  ],
+  "successful_default_vs_sauf": [
+    {
+      "case": "zero480",
+      "threads": 1,
+      "partition": true,
+      "max": true,
+      "final": true
+    },
+    {
+      "case": "zero480",
+      "threads": 4,
+      "partition": true,
+      "max": true,
+      "final": true
+    },
+    {
+      "case": "rects",
+      "threads": 1,
+      "partition": true,
+      "max": true,
+      "final": true
+    },
+    {
+      "case": "rects",
+      "threads": 4,
+      "partition": true,
+      "max": true,
+      "final": true
+    },
+    {
+      "case": "tie",
+      "threads": 1,
+      "partition": true,
+      "max": true,
+      "final": true
+    },
+    {
+      "case": "tie",
+      "threads": 4,
+      "partition": true,
+      "max": true,
+      "final": true
+    },
+    {
+      "case": "edge",
+      "threads": 1,
+      "partition": true,
+      "max": true,
+      "final": true
+    },
+    {
+      "case": "edge",
+      "threads": 4,
+      "partition": true,
+      "max": true,
+      "final": true
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+#include "YOLO.h"
+#include <opencv2/imgcodecs.hpp>
+int main(int argc,char**argv){if(argc!=4)return 2;std::cout<<"OpenCV "<<CV_VERSION<<" threads "<<cv::getNumThreads()<<std::endl;auto rgb=cv::imread(argv[1],cv::IMREAD_UNCHANGED),raw=cv::imread(argv[2],cv::IMREAD_UNCHANGED);cv::Mat d;raw.convertTo(d,CV_32F,1./5000.);ORB_SLAM3::YOLO y(.5,.4,320,320,"./Thirdparty/YOLO/coco.names","./Thirdparty/YOLO/yolo-fastest-xl.cfg","./Thirdparty/YOLO/yolo-fastest-xl.weights","yolo-fastest");auto m=y.Detect(rgb,d,0);if(!cv::imwrite(argv[3],m))return 3;std::cout<<"mask_nonzero "<<cv::countNonZero(m)<<std::endl;}

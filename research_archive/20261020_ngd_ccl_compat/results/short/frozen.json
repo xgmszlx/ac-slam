@@ -1,0 +1,29 @@
+{
+  "stage": "short",
+  "label": "NGD-M0-compat",
+  "source_commit": "a93a14c4019efc7a209be5fbf9fefa46f5d1d90f",
+  "inputs": 12,
+  "command": [
+    "/usr/bin/time",
+    "-v",
+    "-o",
+    "/home/wcqw/ngd_ccl_compat_20261020/results/short/resource.txt",
+    "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/rgbd_tum_headless",
+    "/media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/NGD-SLAM/Vocabulary/ORBvoc.txt",
+    "/home/wcqw/ngd_ccl_compat_20261020/config/TUM3_BGR.yaml",
+    "/home/wcqw/passive_visual_slam_qualification_20261015/data/rgbd_dataset_freiburg3_walking_xyz",
+    "/home/wcqw/ngd_ccl_compat_20261020/results/short/associations_first12.txt"
+  ],
+  "cwd": "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/NGD-SLAM",
+  "runtime_threads": 1,
+  "hashes": {
+    "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/rgbd_tum_headless": "4a230b7e35a9a1cdbef82b8528322184d4ebae6cc46fbf4e40d7b6ef07a9c4a8",
+    "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/lib/libORB_SLAM3.so": "8e1e2fed16b1da500a81fc584a0e67c04aab523331ae1c052bde79f8e3e28def",
+    "/media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/NGD-SLAM/src/YOLO.cc": "981e0ee99445e7e5a17448375028aa99f20070d1e8c1bcd7e6114fc0aac9669d",
+    "/home/wcqw/ngd_ccl_compat_20261020/config/TUM3_BGR.yaml": "240b4da9adda44b13c768e5bab55f95e07b5f23ca8789a55311774fd9d1ddd32",
+    "/home/wcqw/ngd_ccl_compat_20261020/results/short/associations_first12.txt": "fb5a0dc1d2d25fa86214795b30571a48fc08a7af545d6730e980635456964273",
+    "/home/wcqw/ngd_ccl_compat_20261020/code/evaluate.py": "6572de236f8ca0514a0a726878e7c5e744552fcedcacf67280fc958522faa90c"
+  },
+  "gt_sha256_offline_only": "4117699f2b027a6e305f84d3b17f1928aa5361db300d5df10639824540d92b6d",
+  "registered_at": "2026-10-20T15:41:38.127411+08:00"
+}

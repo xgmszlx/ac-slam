@@ -1,0 +1,36 @@
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+OpenCV 4.5.5 threads 4 case diag10 alg default
+[New Thread 0x7ffff7007700 (LWP 17445)]
+[New Thread 0x7ffff6806700 (LWP 17446)]
+[New Thread 0x7ffff6005700 (LWP 17447)]
+
+Thread 1 "ccl_probe" received signal SIGSEGV, Segmentation fault.
+0x00007ffff7afd026 in cv::connectedcomponents::LabelingBolelli4CParallel<int, unsigned char, cv::connectedcomponents::CCStatsOp>::operator()(cv::Mat const&, cv::Mat&, int, cv::connectedcomponents::CCStatsOp&) () from /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/opencv-install/lib/libopencv_imgproc.so.405
+
+Thread 4 (Thread 0x7ffff6005700 (LWP 17447)):
+#0  0x00007ffff72a871b in sched_yield () at ../sysdeps/unix/syscall-template.S:78
+#1  0x00007ffff77df30b in cv::WorkerThread::thread_body() () from /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/opencv-install/lib/libopencv_core.so.405
+#2  0x00007ffff77df3bd in cv::WorkerThread::thread_loop_wrapper(void*) () from /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/opencv-install/lib/libopencv_core.so.405
+#3  0x00007ffff7034609 in start_thread (arg=<optimized out>) at pthread_create.c:477
+#4  0x00007ffff72c5353 in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+
+Thread 3 (Thread 0x7ffff6806700 (LWP 17446)):
+#0  0x00007ffff72a871b in sched_yield () at ../sysdeps/unix/syscall-template.S:78
+#1  0x00007ffff77df30b in cv::WorkerThread::thread_body() () from /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/opencv-install/lib/libopencv_core.so.405
+#2  0x00007ffff77df3bd in cv::WorkerThread::thread_loop_wrapper(void*) () from /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/opencv-install/lib/libopencv_core.so.405
+#3  0x00007ffff7034609 in start_thread (arg=<optimized out>) at pthread_create.c:477
+#4  0x00007ffff72c5353 in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+
+Thread 2 (Thread 0x7ffff7007700 (LWP 17445)):
+#0  0x00007ffff77df356 in cv::WorkerThread::thread_body() () from /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/opencv-install/lib/libopencv_core.so.405
+#1  0x00007ffff77df3bd in cv::WorkerThread::thread_loop_wrapper(void*) () from /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/opencv-install/lib/libopencv_core.so.405
+#2  0x00007ffff7034609 in start_thread (arg=<optimized out>) at pthread_create.c:477
+#3  0x00007ffff72c5353 in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+
+Thread 1 (Thread 0x7ffff700b740 (LWP 17441)):
+#0  0x00007ffff7afd026 in cv::connectedcomponents::LabelingBolelli4CParallel<int, unsigned char, cv::connectedcomponents::CCStatsOp>::operator()(cv::Mat const&, cv::Mat&, int, cv::connectedcomponents::CCStatsOp&) () from /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/opencv-install/lib/libopencv_imgproc.so.405
+#1  0x00007ffff7afdb05 in int cv::connectedComponents_sub1<cv::connectedcomponents::CCStatsOp>(cv::Mat const&, cv::Mat&, int, int, cv::connectedcomponents::CCStatsOp&) () from /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/opencv-install/lib/libopencv_imgproc.so.405
+#2  0x00007ffff7afde1d in cv::connectedComponentsWithStats(cv::_InputArray const&, cv::_OutputArray const&, cv::_OutputArray const&, cv::_OutputArray const&, int, int, int) () from /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/opencv-install/lib/libopencv_imgproc.so.405
+#3  0x00007ffff7afdf2f in cv::connectedComponentsWithStats(cv::_InputArray const&, cv::_OutputArray const&, cv::_OutputArray const&, cv::_OutputArray const&, int, int) () from /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/opencv-install/lib/libopencv_imgproc.so.405
+#4  0x0000555555556def in main (argc=<optimized out>, argv=<optimized out>) at /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/opencv-install/include/opencv4/opencv2/core/mat.inl.hpp:92

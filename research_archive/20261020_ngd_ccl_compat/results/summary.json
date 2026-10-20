@@ -1,0 +1,27 @@
+{
+  "label": "NGD-M0-compat",
+  "status": "BASELINE_NOT_QUALIFIED",
+  "issue_21366_reproduced": true,
+  "primitive_tests": 24,
+  "default_crashes": 4,
+  "sauf_passes": 12,
+  "successful_pair_comparisons": 8,
+  "real_mask_pairs": 5,
+  "real_mask_different_pixels": 0,
+  "first_trackrgbd_pass": true,
+  "short_input_frames": 12,
+  "short_completed_frames": 2,
+  "short_exit_status": 139,
+  "new_fault_thread": "main/thread1",
+  "new_fault_stack": "LabelingBolelli4C -> connectedComponentsWithStats -> Tracking::CreateMaskFromClusters -> PredictCurrentMask -> GrabImageRGBD",
+  "first_relevant_source_call": "src/Tracking.cc:4565 (unique call in stack-named function; release binary has no source line debug info)",
+  "changed_author_files": [
+    "src/YOLO.cc"
+  ],
+  "full_walking_runs": 0,
+  "ATE": null,
+  "RPE": null,
+  "trajectory_coverage": "NOT_AVAILABLE; no trajectory exported, no extrapolated partial metric",
+  "new_algorithms": 0,
+  "next_action": "Only consider the same explicitly selected 4-connected SAUF compatibility policy at Tracking.cc:4565 in a separately scoped next step; no current additional code change"
+}

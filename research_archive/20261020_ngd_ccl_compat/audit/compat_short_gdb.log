@@ -1,0 +1,119 @@
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+ORB-SLAM3 Copyright (C) 2017-2020 Carlos Campos, Richard Elvira, Juan J. Gómez, José M.M. Montiel and Juan D. Tardós, University of Zaragoza.
+ORB-SLAM2 Copyright (C) 2014-2016 Raúl Mur-Artal, José M.M. Montiel and Juan D. Tardós, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: RGB-D
+Loading settings from /home/wcqw/ngd_ccl_compat_20261020/config/TUM3_BGR.yaml
+Camera1.k3 optional parameter does not exist...
+	-Loaded camera 1
+Camera.newHeight optional parameter does not exist...
+Camera.newWidth optional parameter does not exist...
+	-Loaded image info
+	-Loaded RGB-D calibration
+	-Loaded ORB settings
+Viewer.imageViewScale optional parameter does not exist...
+	-Loaded viewer settings
+System.LoadAtlasFromFile optional parameter does not exist...
+System.SaveAtlasToFile optional parameter does not exist...
+	-Loaded Atlas settings
+System.thFarPoints optional parameter does not exist...
+	-Loaded misc parameters
+----------------------------------
+SLAM settings: 
+	-Camera 1 parameters (Pinhole): [ 535.4 539.2 320.1 247.6 ]
+	-Camera 1 distortion parameters: [  0 0 0 0 ]
+	-Original image size: [ 640 , 480 ]
+	-Current image size: [ 640 , 480 ]
+	-Sequence FPS: 30
+	-RGB-D depth map factor: 5000
+	-Features per image: 1000
+	-ORB scale factor: 1.2
+	-ORB number of scales: 8
+	-Initial FAST threshold: 20
+	-Min FAST threshold: 7
+
+
+Loading ORB Vocabulary. This could take a while...
+Vocabulary loaded!
+
+Initialization of Atlas from scratch 
+Creation of new map with id: 0
+Creation of new map with last KF id: 0
+Seq. Name: 
+There are 1 cameras in the atlas
+Camera 0 is pinhole
+[New Thread 0x7fffe3487700 (LWP 17629)]
+[New Thread 0x7fffe2c86700 (LWP 17630)]
+Net use yolo-fastest
+
+-------
+[New Thread 0x7fffe22b4700 (LWP 17631)]
+Start processing sequence ...
+Images in the sequence: 12
+
+First KF:0; Map init KF:0
+New Map created with 526 points
+Average processing time of GrabImageRGBD(): 42.1671ms
+Frame 0 end
+Average processing time of GrabImageRGBD(): 33.1607ms
+Frame 1 end
+
+Thread 1 "rgbd_tum_headle" received signal SIGSEGV, Segmentation fault.
+0x00007ffff76ed489 in cv::connectedcomponents::LabelingBolelli4C<int, unsigned char, cv::connectedcomponents::CCStatsOp>::operator()(cv::Mat const&, cv::Mat&, int, cv::connectedcomponents::CCStatsOp&) () from /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/opencv-install/lib/libopencv_imgproc.so.405
+
+Thread 4 (Thread 0x7fffe22b4700 (LWP 17631)):
+#0  0x00007ffff6319003 in cv::dnn::opt_AVX2::fastConv(float const*, unsigned long, float const*, float const*, float*, int const*, int, int, int, float const*, bool) () at /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/opencv-install/lib/libopencv_dnn.so.405
+#1  0x00007ffff61c9475 in cv::dnn::ConvolutionLayerImpl::ParallelConv::operator()(cv::Range const&) const () at /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/opencv-install/lib/libopencv_dnn.so.405
+#2  0x00007ffff73bfaa3 in cv::parallel_for_(cv::Range const&, cv::ParallelLoopBody const&, double) () at /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/opencv-install/lib/libopencv_core.so.405
+#3  0x00007ffff61ce960 in cv::dnn::ConvolutionLayerImpl::ParallelConv::run(cv::Mat const&, cv::Mat&, cv::Mat const&, std::vector<float, std::allocator<float> > const&, std::vector<float, std::allocator<float> > const&, std::vector<unsigned long, std::allocator<unsigned long> > const&, std::vector<unsigned long, std::allocator<unsigned long> > const&, std::vector<unsigned long, std::allocator<unsigned long> > const&, std::vector<unsigned long, std::allocator<unsigned long> > const&, std::vector<unsigned long, std::allocator<unsigned long> > const&, cv::dnn::dnn4_v20211220::ActivationLayer const*, int, int) () at /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/opencv-install/lib/libopencv_dnn.so.405
+#4  0x00007ffff61cf845 in cv::dnn::ConvolutionLayerImpl::forward(cv::_InputArray const&, cv::_OutputArray const&, cv::_OutputArray const&) () at /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/opencv-install/lib/libopencv_dnn.so.405
+#5  0x00007ffff615ca5f in cv::dnn::dnn4_v20211220::Net::Impl::forwardLayer(cv::dnn::dnn4_v20211220::LayerData&) () at /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/opencv-install/lib/libopencv_dnn.so.405
+#6  0x00007ffff61816ce in cv::dnn::dnn4_v20211220::Net::forward(cv::_OutputArray const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) () at /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/opencv-install/lib/libopencv_dnn.so.405
+#7  0x00007ffff7f55312 in ORB_SLAM3::YOLO::Detect(cv::Mat const&, cv::Mat const&, float) () at /media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/lib/libORB_SLAM3.so
+#8  0x00007ffff7f555ba in ORB_SLAM3::YOLO::Run() () at /media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/lib/libORB_SLAM3.so
+#9  0x00007ffff6e5adf4 in  () at /lib/x86_64-linux-gnu/libstdc++.so.6
+#10 0x00007ffff5f21609 in start_thread (arg=<optimized out>) at pthread_create.c:477
+#11 0x00007ffff6c96353 in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+
+Thread 3 (Thread 0x7fffe2c86700 (LWP 17630)):
+#0  0x00007ffff6c5423f in __GI___clock_nanosleep (clock_id=clock_id@entry=0, flags=flags@entry=0, req=req@entry=0x7fffe2c85810, rem=rem@entry=0x0) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:78
+#1  0x00007ffff6c59ec7 in __GI___nanosleep (requested_time=requested_time@entry=0x7fffe2c85810, remaining=remaining@entry=0x0) at nanosleep.c:27
+#2  0x00007ffff6c8ca7f in usleep (useconds=<optimized out>) at ../sysdeps/posix/usleep.c:32
+#3  0x00007ffff7dc18d2 in ORB_SLAM3::LoopClosing::Run() () at /media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/lib/libORB_SLAM3.so
+#4  0x00007ffff6e5adf4 in  () at /lib/x86_64-linux-gnu/libstdc++.so.6
+#5  0x00007ffff5f21609 in start_thread (arg=<optimized out>) at pthread_create.c:477
+#6  0x00007ffff6c96353 in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+
+Thread 2 (Thread 0x7fffe3487700 (LWP 17629)):
+#0  0x00007ffff6c5423f in __GI___clock_nanosleep (clock_id=clock_id@entry=0, flags=flags@entry=0, req=req@entry=0x7fffe34869d0, rem=rem@entry=0x0) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:78
+#1  0x00007ffff6c59ec7 in __GI___nanosleep (requested_time=requested_time@entry=0x7fffe34869d0, remaining=remaining@entry=0x0) at nanosleep.c:27
+#2  0x00007ffff6c8ca7f in usleep (useconds=<optimized out>) at ../sysdeps/posix/usleep.c:32
+#3  0x00007ffff7db17c5 in ORB_SLAM3::LocalMapping::Run() () at /media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/lib/libORB_SLAM3.so
+#4  0x00007ffff6e5adf4 in  () at /lib/x86_64-linux-gnu/libstdc++.so.6
+#5  0x00007ffff5f21609 in start_thread (arg=<optimized out>) at pthread_create.c:477
+#6  0x00007ffff6c96353 in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+
+Thread 1 (Thread 0x7ffff3a9fb80 (LWP 17621)):
+#0  0x00007ffff76ed489 in cv::connectedcomponents::LabelingBolelli4C<int, unsigned char, cv::connectedcomponents::CCStatsOp>::operator()(cv::Mat const&, cv::Mat&, int, cv::connectedcomponents::CCStatsOp&) () at /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/opencv-install/lib/libopencv_imgproc.so.405
+#1  0x00007ffff76f19c8 in int cv::connectedComponents_sub1<cv::connectedcomponents::CCStatsOp>(cv::Mat const&, cv::Mat&, int, int, cv::connectedcomponents::CCStatsOp&) () at /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/opencv-install/lib/libopencv_imgproc.so.405
+#2  0x00007ffff76f1e1d in cv::connectedComponentsWithStats(cv::_InputArray const&, cv::_OutputArray const&, cv::_OutputArray const&, cv::_OutputArray const&, int, int, int) () at /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/opencv-install/lib/libopencv_imgproc.so.405
+#3  0x00007ffff76f1f2f in cv::connectedComponentsWithStats(cv::_InputArray const&, cv::_OutputArray const&, cv::_OutputArray const&, cv::_OutputArray const&, int, int) () at /media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/opencv-install/lib/libopencv_imgproc.so.405
+#4  0x00007ffff7d96be4 in ORB_SLAM3::Tracking::CreateMaskFromClusters(std::map<int, std::vector<cv::Point3_<float>, std::allocator<cv::Point3_<float> > >, std::less<int>, std::allocator<std::pair<int const, std::vector<cv::Point3_<float>, std::allocator<cv::Point3_<float> > > > > > const&) () at /media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/lib/libORB_SLAM3.so
+#5  0x00007ffff7d97371 in ORB_SLAM3::Tracking::PredictCurrentMask() () at /media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/lib/libORB_SLAM3.so
+#6  0x00007ffff7d9ef4e in ORB_SLAM3::Tracking::GrabImageRGBD(cv::Mat const&, cv::Mat const&, double const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) () at /media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/lib/libORB_SLAM3.so
+#7  0x00007ffff7d4375f in ORB_SLAM3::System::TrackRGBD(cv::Mat const&, cv::Mat const&, double const&, std::vector<ORB_SLAM3::IMU::Point, std::allocator<ORB_SLAM3::IMU::Point> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) () at /media/wcqw/KESU/slam_research/ngd_ccl_compat_20261020/lib/libORB_SLAM3.so
+#8  0x00005555555593c5 in main ()
+No line number information available for address 0x7ffff76ed489 <_ZN2cv19connectedcomponents17LabelingBolelli4CIihNS0_9CCStatsOpEEclERKNS_3MatERS4_iRS2_+937>
+   0x7ffff76ed47d <_ZN2cv19connectedcomponents17LabelingBolelli4CIihNS0_9CCStatsOpEEclERKNS_3MatERS4_iRS2_+925>:	mov    (%rbx),%eax
+   0x7ffff76ed47f <_ZN2cv19connectedcomponents17LabelingBolelli4CIihNS0_9CCStatsOpEEclERKNS_3MatERS4_iRS2_+927>:	imul   %rdx,%rax
+   0x7ffff76ed483 <_ZN2cv19connectedcomponents17LabelingBolelli4CIihNS0_9CCStatsOpEEclERKNS_3MatERS4_iRS2_+931>:	mov    %edx,(%rdi,%rcx,4)
+   0x7ffff76ed486 <_ZN2cv19connectedcomponents17LabelingBolelli4CIihNS0_9CCStatsOpEEclERKNS_3MatERS4_iRS2_+934>:	add    %r12,%rax
+=> 0x7ffff76ed489 <_ZN2cv19connectedcomponents17LabelingBolelli4CIihNS0_9CCStatsOpEEclERKNS_3MatERS4_iRS2_+937>:	cmp    %ecx,(%rax)
+   0x7ffff76ed48b <_ZN2cv19connectedcomponents17LabelingBolelli4CIihNS0_9CCStatsOpEEclERKNS_3MatERS4_iRS2_+939>:	cmovle (%rax),%r8d
+   0x7ffff76ed48f <_ZN2cv19connectedcomponents17LabelingBolelli4CIihNS0_9CCStatsOpEEclERKNS_3MatERS4_iRS2_+943>:	cmp    %ecx,0x8(%rax)
+   0x7ffff76ed492 <_ZN2cv19connectedcomponents17LabelingBolelli4CIihNS0_9CCStatsOpEEclERKNS_3MatERS4_iRS2_+946>:	mov    %r8d,(%rax)

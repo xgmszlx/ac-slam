@@ -1,0 +1,36 @@
+{
+  "registered_at": "2026-10-20T15:37:48.921172+08:00",
+  "opencv_issue": "https://github.com/opencv/opencv/issues/21366",
+  "opencv_dir": "/media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/opencv-install",
+  "repro_cases": [
+    "zero10",
+    "zero480",
+    "diag10",
+    "rects",
+    "tie",
+    "edge"
+  ],
+  "algorithms": [
+    "default",
+    "sauf"
+  ],
+  "threads": [
+    1,
+    4
+  ],
+  "ccl_reference": "independent 4-neighbor BFS; compare canonical foreground partitions, maximal foreground masks, original largest-label/dilate/80%-clear output",
+  "actual_yolo_image_indices": [
+    0,
+    206,
+    413,
+    620,
+    826
+  ],
+  "actual_yolo_compare_threads": 1,
+  "runtime_threads": 1,
+  "patch_scope": "one YOLO.cc call gains cv::CCL_SAUF; connectivity4 and CV_32S unchanged",
+  "short_inputs": 12,
+  "full_sequence_budget": 1,
+  "if_new_crash": "capture exact bounded-prefix stack and stop further code changes",
+  "no_estimator_state_hooks": true
+}
