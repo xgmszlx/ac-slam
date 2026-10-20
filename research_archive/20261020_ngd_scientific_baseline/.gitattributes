@@ -1,0 +1,4 @@
+# Preserve native text bytes and CSV CRLF without suppressing code checks.
+*.log whitespace=-blank-at-eol,-blank-at-eof
+*.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+config/*.yaml whitespace=-blank-at-eol,-blank-at-eof

@@ -1,0 +1,53 @@
+{
+  "label": "INDEPENDENT_YOLO_PROBE_NOT_M0_MASK_TRACE",
+  "selection": "fixed index fractions 0,1/4,1/2,3/4,last; chosen before detector outputs; no ATE selection",
+  "sequence": "/home/wcqw/passive_rgbd_combo_20261019/e2e_20261020/data/rgbd_bonn_moving_obstructing_box",
+  "frames": [
+    {
+      "index": 0,
+      "assoc": [
+        "1548339348.69390",
+        "rgb/1548339348.69390.png",
+        "1548339348.69468",
+        "depth/1548339348.69468.png"
+      ]
+    },
+    {
+      "index": 147,
+      "assoc": [
+        "1548339353.61850",
+        "rgb/1548339353.61850.png",
+        "1548339353.63311",
+        "depth/1548339353.63311.png"
+      ]
+    },
+    {
+      "index": 294,
+      "assoc": [
+        "1548339358.54568",
+        "rgb/1548339358.54568.png",
+        "1548339358.53824",
+        "depth/1548339358.53824.png"
+      ]
+    },
+    {
+      "index": 441,
+      "assoc": [
+        "1548339363.47190",
+        "rgb/1548339363.47190.png",
+        "1548339363.47664",
+        "depth/1548339363.47664.png"
+      ]
+    },
+    {
+      "index": 588,
+      "assoc": [
+        "1548339368.39921",
+        "rgb/1548339368.39921.png",
+        "1548339368.41516",
+        "depth/1548339368.41516.png"
+      ]
+    }
+  ],
+  "purpose": "finite detector mask visual evidence only; not propagation/optimizer or true motion labels"
+}

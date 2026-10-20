@@ -1,0 +1,29 @@
+{
+  "item": {
+    "tag": "M0_05",
+    "sequence": "/home/wcqw/passive_rgbd_combo_20261019/e2e_20261020/data/rgbd_bonn_moving_obstructing_box",
+    "config": "/home/wcqw/ngd_scientific_baseline_20261020/config/bonn.yaml",
+    "input_frames": 589,
+    "association_sha256": "c30faa1d078dee17349f4d6d1c36cc7e8918487de5f9c719d717947c9ba4db22",
+    "config_sha256": "972bc2bc9ba7006d81fb08398d7e609f7c8d03f1a9a86c1784deaa34bffd96d0",
+    "GT_sha256_offline_only": "84d3420a6bf5deee7a523c29f97142203d3458399f6c7d35517ab9d024449ba0"
+  },
+  "command": [
+    "/usr/bin/time",
+    "-v",
+    "-o",
+    "/home/wcqw/ngd_scientific_baseline_20261020/results/M0_05/resource.txt",
+    "/media/wcqw/KESU/slam_research/ngd_ccl_compat_v2_20261020/rgbd_tum_headless",
+    "/media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/NGD-SLAM/Vocabulary/ORBvoc.txt",
+    "/home/wcqw/ngd_scientific_baseline_20261020/config/bonn.yaml",
+    "/home/wcqw/passive_rgbd_combo_20261019/e2e_20261020/data/rgbd_bonn_moving_obstructing_box",
+    "/home/wcqw/passive_rgbd_combo_20261019/e2e_20261020/data/rgbd_bonn_moving_obstructing_box/associations.txt"
+  ],
+  "cwd": "/media/wcqw/KESU/slam_research/ngd_ccl_compat_v2_20261020/NGD-SLAM",
+  "env_specific": {
+    "OPENCV_FOR_THREADS_NUM": "1",
+    "TMPDIR": "/media/wcqw/KESU/slam_research/ngd_ccl_compat_v2_20261020/tmp",
+    "LD_LIBRARY_PATH": "/media/wcqw/KESU/slam_research/ngd_ccl_compat_v2_20261020/lib:/media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/opencv-install/lib:/media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/NGD-SLAM/Thirdparty/DBoW2/lib:/media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/NGD-SLAM/Thirdparty/g2o/lib:/home/wcqw/passive_visual_slam_qualification_20261015/local/lib"
+  },
+  "started": "2026-10-20T08:27:05.187842+00:00"
+}

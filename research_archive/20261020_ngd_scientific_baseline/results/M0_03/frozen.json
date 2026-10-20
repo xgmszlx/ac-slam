@@ -1,0 +1,29 @@
+{
+  "item": {
+    "tag": "M0_03",
+    "sequence": "/home/wcqw/passive_visual_slam_qualification_20261015/data/rgbd_dataset_freiburg3_walking_xyz",
+    "config": "/home/wcqw/ngd_scientific_baseline_20261020/config/TUM3_BGR.yaml",
+    "input_frames": 827,
+    "association_sha256": "ab704a8160ae078e63de1b3f84498ebe2cfcf1561713f0ba9f73ea6d205c8fa0",
+    "config_sha256": "240b4da9adda44b13c768e5bab55f95e07b5f23ca8789a55311774fd9d1ddd32",
+    "GT_sha256_offline_only": "4117699f2b027a6e305f84d3b17f1928aa5361db300d5df10639824540d92b6d"
+  },
+  "command": [
+    "/usr/bin/time",
+    "-v",
+    "-o",
+    "/home/wcqw/ngd_scientific_baseline_20261020/results/M0_03/resource.txt",
+    "/media/wcqw/KESU/slam_research/ngd_ccl_compat_v2_20261020/rgbd_tum_headless",
+    "/media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/NGD-SLAM/Vocabulary/ORBvoc.txt",
+    "/home/wcqw/ngd_scientific_baseline_20261020/config/TUM3_BGR.yaml",
+    "/home/wcqw/passive_visual_slam_qualification_20261015/data/rgbd_dataset_freiburg3_walking_xyz",
+    "/home/wcqw/passive_visual_slam_qualification_20261015/data/rgbd_dataset_freiburg3_walking_xyz/associations.txt"
+  ],
+  "cwd": "/media/wcqw/KESU/slam_research/ngd_ccl_compat_v2_20261020/NGD-SLAM",
+  "env_specific": {
+    "OPENCV_FOR_THREADS_NUM": "1",
+    "TMPDIR": "/media/wcqw/KESU/slam_research/ngd_ccl_compat_v2_20261020/tmp",
+    "LD_LIBRARY_PATH": "/media/wcqw/KESU/slam_research/ngd_ccl_compat_v2_20261020/lib:/media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/opencv-install/lib:/media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/NGD-SLAM/Thirdparty/DBoW2/lib:/media/wcqw/KESU/slam_research/ngd_native_recovery_20261020/NGD-SLAM/Thirdparty/g2o/lib:/home/wcqw/passive_visual_slam_qualification_20261015/local/lib"
+  },
+  "started": "2026-10-20T08:24:31.982339+00:00"
+}

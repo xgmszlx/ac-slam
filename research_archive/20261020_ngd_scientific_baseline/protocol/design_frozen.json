@@ -1,0 +1,56 @@
+{
+  "parent_commit": "92156b25a671cce73d0f8055c1953af94ab54a0f",
+  "label": "NGD-M0-compat-v2",
+  "new_full_run_budget": 4,
+  "order": [
+    {
+      "tag": "M0_02",
+      "sequence": "/home/wcqw/passive_visual_slam_qualification_20261015/data/rgbd_dataset_freiburg3_walking_xyz",
+      "config": "/home/wcqw/ngd_scientific_baseline_20261020/config/TUM3_BGR.yaml",
+      "input_frames": 827,
+      "association_sha256": "ab704a8160ae078e63de1b3f84498ebe2cfcf1561713f0ba9f73ea6d205c8fa0",
+      "config_sha256": "240b4da9adda44b13c768e5bab55f95e07b5f23ca8789a55311774fd9d1ddd32",
+      "GT_sha256_offline_only": "4117699f2b027a6e305f84d3b17f1928aa5361db300d5df10639824540d92b6d"
+    },
+    {
+      "tag": "M0_03",
+      "sequence": "/home/wcqw/passive_visual_slam_qualification_20261015/data/rgbd_dataset_freiburg3_walking_xyz",
+      "config": "/home/wcqw/ngd_scientific_baseline_20261020/config/TUM3_BGR.yaml",
+      "input_frames": 827,
+      "association_sha256": "ab704a8160ae078e63de1b3f84498ebe2cfcf1561713f0ba9f73ea6d205c8fa0",
+      "config_sha256": "240b4da9adda44b13c768e5bab55f95e07b5f23ca8789a55311774fd9d1ddd32",
+      "GT_sha256_offline_only": "4117699f2b027a6e305f84d3b17f1928aa5361db300d5df10639824540d92b6d"
+    },
+    {
+      "tag": "M0_04",
+      "sequence": "/home/wcqw/passive_visual_slam_qualification_20261015/data/rgbd_dataset_freiburg3_sitting_xyz",
+      "config": "/home/wcqw/ngd_scientific_baseline_20261020/config/TUM3_BGR.yaml",
+      "input_frames": 1219,
+      "association_sha256": "e386b50e295c1ca6cd1d21d690e849218afb617b95b4b8006eef550e7452f6c8",
+      "config_sha256": "240b4da9adda44b13c768e5bab55f95e07b5f23ca8789a55311774fd9d1ddd32",
+      "GT_sha256_offline_only": "17bfc4d03f725c7769eef468449ef0dae68b97309714f1561eec4a89807a0066"
+    },
+    {
+      "tag": "M0_05",
+      "sequence": "/home/wcqw/passive_rgbd_combo_20261019/e2e_20261020/data/rgbd_bonn_moving_obstructing_box",
+      "config": "/home/wcqw/ngd_scientific_baseline_20261020/config/bonn.yaml",
+      "input_frames": 589,
+      "association_sha256": "c30faa1d078dee17349f4d6d1c36cc7e8918487de5f9c719d717947c9ba4db22",
+      "config_sha256": "972bc2bc9ba7006d81fb08398d7e609f7c8d03f1a9a86c1784deaa34bffd96d0",
+      "GT_sha256_offline_only": "84d3420a6bf5deee7a523c29f97142203d3458399f6c7d35517ab9d024449ba0"
+    }
+  ],
+  "method_changed": false,
+  "binary_sha256": "53b63dd3841b966a0b7e1966b84ef03a346a894aaf22d88a1a5f5e742eaaacc0",
+  "core_sha256": "75ab2f67745e2595eb45ef12e77c3a4021dd724faf8a752e16280f50d7f06d83",
+  "eval_sha256": "6572de236f8ca0514a0a726878e7c5e744552fcedcacf67280fc958522faa90c",
+  "source_sha256": {
+    "Tracking.cc": "5ef74ab9f814bd04b9349c8ec900edf9fbf4bad435c45df27944a49171b5a098",
+    "YOLO.cc": "981e0ee99445e7e5a17448375028aa99f20070d1e8c1bcd7e6114fc0aac9669d"
+  },
+  "threads": 1,
+  "evaluation": "same existing SE3 scale1,20ms GT unique pairing,1s +/-20ms RPE and no >100ms internal gap",
+  "new_logs": "no hooks/rebuild; unavailable internal events remain UNKNOWN",
+  "on_failure": "record exit and completed inputs; no retries/no algorithm modifications",
+  "statistical_policy": "three walking trials report range/median only, no significance or per-frame independent-repeat claims"
+}
