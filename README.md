@@ -1,6 +1,6 @@
 # ac-slam
 
-最新研究状态（2026-10-19）：[RGB-D质量与几何筛选组合原型](research_archive/20261019_rgbd_quality_combo/REPORT.md)。**TECHNICAL_INCOMPLETE**：原型已编译、合成Frame测试通过；Bonn官方文件仍不完整，S0/S1/S2真实运行0/3，没有轨迹收益结论。数据获取已停止；下一步只验收手动取得的同一官方完整文件。此前[desk重复B1_INCONCLUSIVE](research_archive/20261019_depth_repeats/REPORT.md)与旧主动/AMCL收口保持。
+最新研究状态（2026-10-20）：[Bonn RGB-D S0/S1/S2真实对照](research_archive/20261020_rgbd_combo_e2e/REPORT.md)。**三次完整运行已完成，当前组合无定位收益证据**：在线ATE为0.557/0.631/0.656m，导出为0.532/0.615/0.642m；均589帧完整覆盖。S2退回观测确实进入二维优化，但增加内点未改善定位。预算3/3关闭，不追加运行或模块。原[原型/下载失败归档](research_archive/20261019_rgbd_quality_combo/REPORT.md)、[V3重复负结果](research_archive/20261019_depth_repeats/REPORT.md)及旧主动/AMCL收口保持。
 
 Reproducible research workspace for the public Graph-Based SLAM-Aware
 Exploration baseline. The repository preserves the code baseline, pinned

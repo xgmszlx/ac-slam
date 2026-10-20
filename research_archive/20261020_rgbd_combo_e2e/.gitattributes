@@ -1,0 +1,5 @@
+config/bonn.yaml -whitespace
+audit/protocol_and_guard.patch -whitespace
+# Preserve native logs and evaluator CSV byte-for-byte (including CRLF).
+results/*/evaluation/*/*.csv -whitespace
+results/*/stdout.log -whitespace

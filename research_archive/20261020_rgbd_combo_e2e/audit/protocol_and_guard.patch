@@ -1,0 +1,12 @@
+--- previous/code/run_three.py
++++ e2e_20261020/code/run_three.py
+@@ -5,7 +5,8 @@
+ P=Path(__file__).resolve().parents[1];S=Path('/home/wcqw/passive_visual_slam_qualification_20261015/sources/ORB_SLAM3-4452a3c4ab75b1cde34e5505a36ec3f9edcdc4c4');sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+ def main():
+  assert json.loads((P/'audit/data_acquisition.json').read_text())['qualified'],'DATA_NOT_QUALIFIED; no run authorized with partial archive'
+- qual=json.loads((P/'audit/observation_qualification.json').read_text());assert qual['qualified'] and qual['trusted_dynamic_2d']>0 and qual['trusted_static_2d']>0
++ assert json.loads((P/'audit/technical_qualification.json').read_text())['qualified'],'TECHNICAL_INPUT_NOT_QUALIFIED'
++ assert json.loads((P/'protocol/revision_before_runs.json').read_text())['maximum_full_runs']==3
+  data=json.loads((P/'audit/dataset.json').read_text());D=Path(data['path']);ledger=P/'protocol/attempts.jsonl';assert not ledger.exists(),'No automatic retry or budget expansion'
+  files=[P/'build/rgbd_combo',P/'build/libORB_SLAM3.so',P/'config/bonn.yaml',P/'data/associations.txt',P/'code/evaluate.py',P/'code/Combo.cc',P/'code/Combo.h',P/'code/rgbd_combo.cc',D/'groundtruth.txt',P/'data/image_hashes.json']
+  freeze={'budget':3,'order':['S0','S1','S2'],'file_hashes':{str(f):sha(f) for f in files},'GT_online':False,'no_parameter_tuning':True};(P/'protocol/run_inputs_frozen.json').write_text(json.dumps(freeze,indent=2))

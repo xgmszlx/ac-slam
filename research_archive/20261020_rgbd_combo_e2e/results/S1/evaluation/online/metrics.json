@@ -1,0 +1,96 @@
+{
+  "input_associated_frames": 589,
+  "saved_camera_poses": 589,
+  "all_rgb_frames": 590,
+  "saved_keyframes": 86,
+  "gt_rows": 593,
+  "gt_time_range": [
+    1548339348.72716,
+    1548339368.46093
+  ],
+  "input_frames_with_gt": 588,
+  "saved_poses_with_gt": 588,
+  "saved_pose_fraction_of_input": 1.0,
+  "saved_gt_matched_fraction_of_input": 0.99830220713073,
+  "saved_pose_fraction_of_all_rgb": 0.9983050847457627,
+  "saved_gt_match_fraction_of_gt_eligible_input": 1.0,
+  "duplicate_saved_timestamps": 0,
+  "nonincreasing_saved_time_steps": 0,
+  "saved_trajectory_time_fraction": 1.0,
+  "saved_time_range": [
+    1548339348.6939,
+    1548339368.39921
+  ],
+  "alignment": {
+    "type": "SE3",
+    "scale": 1.0,
+    "rotation": [
+      [
+        0.2682739884261903,
+        -0.2500415981748924,
+        0.9303269674238459
+      ],
+      [
+        -0.7816360787496383,
+        -0.6209857191275331,
+        0.05849595743766804
+      ],
+      [
+        0.5630933382049492,
+        -0.7428700665808298,
+        -0.36203584994776516
+      ]
+    ],
+    "translation": [
+      1.1706514697875134,
+      -1.0441394175967087,
+      1.1232757737061103
+    ],
+    "policy": "single transform using all matched camera positions"
+  },
+  "ate_m": {
+    "n": 588,
+    "rmse": 0.6312570436087936,
+    "median": 0.5129791140733472,
+    "p90": 0.8748574879052347,
+    "max": 0.9437554596843463,
+    "mean": 0.6063556213998021
+  },
+  "rpe_1s_translation_m": {
+    "n": 558,
+    "rmse": 0.39027218274149206,
+    "median": 0.2846858952005422,
+    "p90": 0.6687847396085925,
+    "max": 0.9269492142302092,
+    "mean": 0.31958516473893545
+  },
+  "rpe_1s_rotation_deg": {
+    "n": 558,
+    "rmse": 20.16204349696298,
+    "median": 18.063999047427068,
+    "p90": 29.671730857894808,
+    "max": 37.68507898625768,
+    "mean": 18.269463045021535
+  },
+  "rpe_1s_timestamp_eligible_pairs": 558,
+  "rpe_pairs_excluded_for_intervening_output_gap": 0,
+  "auxiliary_rpe_1s_including_gaps_translation_m": {
+    "n": 558,
+    "rmse": 0.39027218274149206,
+    "median": 0.2846858952005422,
+    "p90": 0.6687847396085925,
+    "max": 0.9269492142302092,
+    "mean": 0.31958516473893545
+  },
+  "auxiliary_rpe_1s_including_gaps_rotation_deg": {
+    "n": 558,
+    "rmse": 20.16204349696298,
+    "median": 18.063999047427068,
+    "p90": 29.671730857894808,
+    "max": 37.68507898625768,
+    "mean": 18.269463045021535
+  },
+  "rpe_policy": "1s +/-20ms; no intervening saved-output gap >100ms; camera-to-world relative transforms",
+  "missing_output_intervals": [],
+  "warning": "missing exported pose is not by itself a LOST state; see native export code and state trace"
+}

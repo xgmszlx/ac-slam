@@ -1,0 +1,11 @@
+{
+  "same_input_stamps_all_conditions": true,
+  "same_raw_keys_S1_S2": true,
+  "same_common_match_PnP_trace_S1_S2": true,
+  "S1_N_equals_raw_minus_disjoint_rejections": true,
+  "S2_N_equals_raw_minus_disjoint_rejections": true,
+  "all_fallback_edges_are_mono": true,
+  "fallback_last_pose_inliers_equal_retained_tagged_associations": true,
+  "same_backends": "same executable/core shared by all conditions, hashes frozen before runs",
+  "limitations": "Counts are frame-observation events, not unique physical points. No claim of global PF lineage or per-pixel motion labels."
+}
