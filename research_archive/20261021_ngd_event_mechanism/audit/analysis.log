@@ -1,0 +1,173 @@
+{
+  "input_frames": 589,
+  "common_stamps_exact": true,
+  "new_SLAM_runs": 0,
+  "first_accepted": 271,
+  "differences": {
+    "base_hash": {
+      "count": 2,
+      "first": 319,
+      "first_time_s": 10.689589977264404
+    },
+    "full_hash": {
+      "count": 5,
+      "first": 271,
+      "first_time_s": 9.08148980140686
+    },
+    "N": {
+      "count": 544,
+      "first": 3,
+      "first_time_s": 0.1005399227142334
+    },
+    "associations": {
+      "count": 582,
+      "first": 3,
+      "first_time_s": 0.1005399227142334
+    },
+    "pnp_inliers": {
+      "count": 582,
+      "first": 3,
+      "first_time_s": 0.1005399227142334
+    },
+    "poseopt_last_edges": {
+      "count": 155,
+      "first": 26,
+      "first_time_s": 0.8698599338531494
+    },
+    "tx": {
+      "count": 586,
+      "first": 3,
+      "first_time_s": 0.1005399227142334
+    },
+    "qx": {
+      "count": 586,
+      "first": 3,
+      "first_time_s": 0.1005399227142334
+    }
+  },
+  "online_separation_without_fit": {
+    "1e-06": {
+      "first_index": 3,
+      "first_s": 0.1005399227142334
+    },
+    "0.001": {
+      "first_index": 11,
+      "first_s": 0.36609983444213867
+    },
+    "0.01": {
+      "first_index": 64,
+      "first_s": 2.1432998180389404
+    },
+    "0.05": {
+      "first_index": 173,
+      "first_s": 5.79600977897644
+    },
+    "0.1": {
+      "first_index": 271,
+      "first_s": 9.08148980140686
+    },
+    "0.2": {
+      "first_index": 309,
+      "first_s": 10.35470986366272
+    }
+  },
+  "pre_first_intervention_max_online_separation_m": 0.09468370564400083,
+  "loop_log_messages": {
+    "M0": [],
+    "M2": [
+      {
+        "last_completed_input_when_printed": 490,
+        "text": "*Loop detected"
+      },
+      {
+        "last_completed_input_when_printed": 490,
+        "text": "Local Mapping STOP"
+      },
+      {
+        "last_completed_input_when_printed": 492,
+        "text": "Local Mapping RELEASE"
+      },
+      {
+        "last_completed_input_when_printed": 499,
+        "text": "Local Mapping STOP"
+      },
+      {
+        "last_completed_input_when_printed": 499,
+        "text": "Local Mapping RELEASE"
+      }
+    ]
+  },
+  "surviving_exported_keyframes": {
+    "M0": 100,
+    "M2": 101
+  },
+  "common_RPE_windows_per_output": 558,
+  "surviving_exported_keyframe_stamp_differences_for_pre_event_inputs": [
+    26,
+    27,
+    66,
+    79,
+    81,
+    87,
+    89,
+    92,
+    93,
+    94,
+    95,
+    98,
+    99,
+    105,
+    106,
+    113,
+    114,
+    123,
+    124,
+    128,
+    133,
+    134,
+    139,
+    145,
+    148,
+    153,
+    157,
+    161,
+    163,
+    165,
+    166,
+    170,
+    171,
+    172,
+    175,
+    189,
+    192,
+    196,
+    197,
+    199,
+    200,
+    201,
+    204,
+    205,
+    206,
+    208,
+    209,
+    214,
+    219,
+    221,
+    223,
+    225,
+    232,
+    234,
+    245,
+    265,
+    270
+  ],
+  "keyframe_limit": "final surviving stamps are hindsight; later culling may affect earlier stamps, so these do not prove pre-event live keyframe state",
+  "M2_largest_adjacent_online_step": {
+    "index": 493,
+    "time_s": 16.521420001983643,
+    "dt_s": 0.03352022171020508,
+    "GT_step_m": 0.003414912719273557,
+    "M0_online_step_m": 0.004309167955107615,
+    "M2_online_step_m": 0.829707654152735
+  }
+}

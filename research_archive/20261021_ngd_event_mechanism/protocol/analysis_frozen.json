@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-21T14:57:27.384832",
+  "source_runs": "original 20261021 M0/M2 only",
+  "events": [
+    271,
+    292,
+    299
+  ],
+  "event_neighborhood_seconds": 0.5,
+  "common_RPE_windows": "from fixed input timestamps: nearest +1s, strict <20ms, same endpoints in both methods",
+  "blocks_seconds": [
+    0,
+    5,
+    10,
+    15,
+    20
+  ],
+  "coverage_strata_M0_only": [
+    0,
+    0.05,
+    0.3,
+    1.0
+  ],
+  "RPE_stratum": "mean M0 pre-extension mask area on all inputs from start through end; never M2 masks",
+  "no_independent_samples_claim": true,
+  "recording_limit": "event masks, per-point IDs/Jacobians/BA/YOLO timestamps were not saved; never reconstruct as original",
+  "phase2_gate": "specific mechanism or isolated causal contrast needed; correlation and unpaired history alone do not authorize algorithm experiment",
+  "new_SLAM_budget_here": 0
+}
