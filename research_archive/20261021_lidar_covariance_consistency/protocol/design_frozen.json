@@ -68,6 +68,16 @@
    "sigma_range_m": 0.06
   }
  ],
+ "corrections": {
+  "date": "2026-10-21",
+  "note": "original results and audit files unchanged; report wording corrected only",
+  "withdrawn": [
+   "rank corr(NEES, predicted sigma) as a calibration test",
+   "pooled empirical correlation as evidence against the Hessian conditional covariance",
+   "claim that the original predicted correlations were not reproducible",
+   "sqrt(NEES)*sigma_xy as an estimate of translational error"
+  ]
+ },
  "estimator": {
   "convergence": "max|delta| < 1e-8",
   "correspondence": {
