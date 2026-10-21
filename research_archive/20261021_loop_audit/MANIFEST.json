@@ -1,0 +1,72 @@
+{
+  "archive": "20261021_loop_audit",
+  "branch": "research/ngd-loop-audit-20261021",
+  "audited_branch": "research/ngd-region-prototype-20261021",
+  "audited_commit": "82d550f0",
+  "upstream_method": "https://github.com/yuhaozhang7/NGD-SLAM",
+  "read_only": true,
+  "new_slam_runs": 0,
+  "python": {
+    "version": "3.11 (Anaconda)",
+    "deps": [
+      "numpy>=1.24",
+      "scipy>=1.10"
+    ],
+    "optional": []
+  },
+  "sources": {
+    "20261021_ngd_region_prototype/config/bonn.yaml": "49b1ad335bb0e630531eec6ac8182b36accb4cbf510d4997cda187630ddd3b14",
+    "20261021_ngd_region_prototype/results/M0/OnlineTrajectory.txt": "c9934f867edc2210fded520ddb406965fbe96c17b2b3cf41f42092240f51ece0",
+    "20261021_ngd_region_prototype/results/M0/CameraTrajectory.txt": "d3f0c646bf2f474135cf018935f416955339442da258ce7e6fc46a616b575cf4",
+    "20261021_ngd_region_prototype/results/M0/KeyFrameTrajectory.txt": "eaa622cad0431872f8088b4a0371775cdba0dffcbda142ab2f9b39b3ba0d4bf9",
+    "20261021_ngd_region_prototype/results/M0/frame_states.csv": "e44f6dafddcc2498bccbc75e243bd77c6db1d787984f1935ca98085d5c9f05c0",
+    "20261021_ngd_region_prototype/results/M0/stdout.log": "17182657b6d32c4938d286514de54152ae5fc69a835535ac2ffb93af2f244249",
+    "20261021_ngd_region_prototype/results/M0/evaluation/online/metrics.json": "143fc6d960518dcf94cd4ba16bc65b3354596fa704ec6c1d33886799b0878f8c",
+    "20261021_ngd_region_prototype/results/M0/evaluation/exported/metrics.json": "91abdd956d81b6b6d448b674d9c21f395737f90d565209b8565ad33917b4cf18",
+    "20261021_ngd_region_prototype/results/M2/OnlineTrajectory.txt": "13d83c639247605760400da8f4072854cf43aa0179dec7a1369de7c7d1ae0c40",
+    "20261021_ngd_region_prototype/results/M2/CameraTrajectory.txt": "66d4ea0b3966bfee1dfbf831c3a0db4112101b41dabe7b739403fd7962bbd527",
+    "20261021_ngd_region_prototype/results/M2/KeyFrameTrajectory.txt": "02a59be3815649d79d63081609931835efb4950c71f1ee4bf489dabe5cdb250a",
+    "20261021_ngd_region_prototype/results/M2/frame_states.csv": "a79a4747ff1348bd7037c35c58f85bff9b72cd3764d03f695edae476905520ff",
+    "20261021_ngd_region_prototype/results/M2/stdout.log": "5ed0ccd2de9103a42352cdc4e5e1266b94635fb3a7ddb13f0f0f14cd2a32abaf",
+    "20261021_ngd_region_prototype/results/M2/evaluation/online/metrics.json": "f22af6bd45076ed11f80f0fb7c01b518b9d51cf4c5bc1b2cf224de5b52acc561",
+    "20261021_ngd_region_prototype/results/M2/evaluation/exported/metrics.json": "739b4a16d9a45cda00a3c6209c34e69cb5809b8b0226bd27391a1a8416836c73",
+    "20261021_ngd_region_prototype/results/M1/failure_note.json": "414eba2fc474d4fc13fbd827323c43b8dfd4af2f92959d82eb1ed76f9b29ccb7",
+    "20261020_ngd_scientific_baseline/results/M0_05/evaluation/metrics.json": "c0ffcc7cd8280187a64ce7caf01927106652d1bd846e517e6691016ea74bf16b",
+    "20261020_ngd_scientific_baseline/results/M0_02/evaluation/metrics.json": "bbe79afbbef7cf6a1c1e015829ea735f594a90263c686898b002929c02974dde",
+    "20261020_ngd_scientific_baseline/results/M0_03/evaluation/metrics.json": "01896fb119c7ee8a1d3e399e7e27afb6a0236d9f8e42b97ed2cd8319c0c416a2",
+    "20261020_ngd_scientific_baseline/results/comparison.csv": "049f6e16dd1b1bc09e5f10050483cb2585cdf7b19033774be708a5076a07be20",
+    "20261020_rgbd_combo_e2e/results/S0/evaluation/exported/metrics.json": "39f3599fe6dbe1c9601d51ea0cd4ca8a854772a884e94d67a2e77261655e6fc5",
+    "20261020_rgbd_deletion_ablation/results/S0/evaluation/exported/metrics.json": "79b2c08343a4e6a3fda15cc5e2b35e6803ad7b3410aa42770f907bf88671aea9",
+    "20261020_rgbd_deletion_ablation/protocol/design_frozen.json": "86bba15f033de6bcdfa1d36392bc6ee7b069a4e8bf557fcca78f5290ae86e92a",
+    "20261019_depth_repeats/results/B0_03/stdout.log": "9b996a19c3e8666a7ad8d877825368a8b425fb27118b202ec9fa05f2c055b30a",
+    "20261019_depth_repeats/results/B0_03/evaluation/online/metrics.json": "f1d2f2b0ef6e1931f7bb6261ba2d43a431f32244384890a6e023866908741db2",
+    "20261019_depth_repeats/results/B0_03/evaluation/exported/metrics.json": "13ed52ca0449fd25391124c581957b743d37d72dc0ad384cf96ef3e535fcf2c2"
+  },
+  "scripts": {
+    "analyze_align.py": "7072dd8c883e56aea15303312d1eb3a320fb9e844a88ff138a26ad5c5df5bb7b",
+    "analyze_kf.py": "d6b519200a9b0cca3bca599e649aacb2a93c0dea5ff80d74c868d57877df899a",
+    "analyze_kf2.py": "7881838caf7ef8b243d3004fdad90a86652003e365d2e62631c3133ff2f79fc5",
+    "analyze_loop.py": "7f959114c795fb77846f1d561856fbca2791abdafee0d178358aaddcfb3b80b5",
+    "analyze_residual.py": "8c77c30f5433df88140622b87788c140c6b7922eb8f5918feb93c9d673b1db98",
+    "analyze_segments.py": "46006ac110187859cc4b3277def4ed5b8792b58aeceeda86397c0299bca32347",
+    "analyze_speed.py": "bc8cceefd6fe246aef26979a746f05ccd7e4d51257189ebd96682085df0c7696",
+    "build_tables.py": "7174b6cc1e4e282acdbe749798ca9f1325942ad4d624f6ddc9ce1a1bca2d4007",
+    "scan_history.py": "e1e980c191b6444b29a99afc0fde07f96d05cdf5aa82c1bb840485340a9c4243"
+  },
+  "outputs": {
+    "tables/historical_loop_gba_audit.csv": "scripts/scan_history.py",
+    "tables/baseline_repeatability.md": "scripts/build_tables.py"
+  },
+  "assertions": [
+    "M2 OnlineTrajectory rows == 589 and adjacent step at frame 493 in [0.82,0.84] m / [28.5,28.9] deg",
+    "M2 KeyFrameTrajectory rows == 101 and step at frame 265 in [0.85,0.88] m",
+    "path ratio M2 == 1.519 +- 0.001 ; M0 == 0.976 +- 0.001",
+    "baseline ATE set == {0.3401,0.3647,0.5323,0.5461} +- 0.0005",
+    "count('*Loop detected') over 22 archived runs == 1 (M2)"
+  ],
+  "status_flags": {
+    "M2": "ARCHIVED - CAUSAL BENEFIT NOT ESTABLISHED",
+    "M1": "BLOCKED - SIGABRT at frame 175",
+    "M0": "READY AS BASELINE under LC-OFF protocol"
+  }
+}
