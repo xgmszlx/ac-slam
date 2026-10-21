@@ -1,0 +1,119 @@
+{
+  "Q": [
+    [
+      -1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "Tm_source": [
+    [
+      1.0157,
+      0.1828,
+      -0.2389,
+      0.0113
+    ],
+    [
+      0.0009,
+      -0.8431,
+      -0.6413,
+      -0.0098
+    ],
+    [
+      -0.3009,
+      0.6147,
+      -0.8085,
+      0.0111
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "singular_values": [
+    1.0593475514340585,
+    1.0592862341500768,
+    1.0592375745841025
+  ],
+  "mean_scale": 1.0592904533894127,
+  "source_det": 1.1886258577020001,
+  "source_orthogonality_error": 0.21147700174044845,
+  "rigid_E": [
+    [
+      0.9588191500995834,
+      0.1725935322702,
+      -0.2255599920659893,
+      0.0113
+    ],
+    [
+      0.000844549068846882,
+      -0.7959059752755399,
+      -0.6054196604484885,
+      -0.0098
+    ],
+    [
+      -0.28401606317105377,
+      0.5802974678035289,
+      -0.7632756544798407,
+      0.0111
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "right_factor_QE": [
+    [
+      -0.9588191500995834,
+      -0.1725935322702,
+      0.2255599920659893,
+      -0.0113
+    ],
+    [
+      -0.28401606317105377,
+      0.5802974678035289,
+      -0.7632756544798407,
+      0.0111
+    ],
+    [
+      0.000844549068846882,
+      -0.7959059752755399,
+      -0.6054196604484885,
+      -0.0098
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "right_factor_angle_deg": 172.73445383381025,
+  "rule": "H_WC(t)=Q^-1 G_file(t) Q E; E rotation is polar SO3(Tm_3x3), translation copied in meters; no scale fit",
+  "scale_origin": "Not explained by official page/script; mathematical near-uniform scale observed, not claimed to be known physical calibration cause",
+  "treatment": "remove source scale only from orientation, retain published lever-arm; do not rescale depth/GT translation/SLAM; explicit translation/s sensitivity",
+  "source_sha256": "913cb25ac0502bf3933d5e4881cac5a864265dfba1c2b753c581f31b13e25868"
+}

@@ -1,0 +1,1 @@
+本轮Bonn坐标勘误与所有修正指标详见REPORT.md和corrected/all_metrics.csv。旧归档指标不覆盖；Bonn raw GT→相机框架处理缺失属于评价错误。TUM不施加此修正。Tm尺度物理成因仍UNKNOWN，不将修正视为精确新标定。

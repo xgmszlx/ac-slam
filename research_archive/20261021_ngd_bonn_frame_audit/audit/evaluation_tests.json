@@ -1,0 +1,28 @@
+{
+  "checks": {
+    "known_marker_camera_extrinsic_recovery": true,
+    "official_model_first_pose_formula_rigidized": true,
+    "world_left_SE3_RPE_translation_invariant": true,
+    "world_left_SE3_RPE_rotation_invariant": true,
+    "quaternion_sign_equivalence": true,
+    "SO3_orthogonal_det_positive": true,
+    "published_matrix_non_SE3_explicit": true,
+    "Q_inverse_equals_Q": true,
+    "quaternion_math_independent_scipy": true,
+    "GT_unique_matching": true,
+    "GT_tolerance_strict": true,
+    "duplicate_output_timestamps_rejected": true,
+    "GT_extrapolation_rejected": true,
+    "independent_RGBD_official_vs_raw": true,
+    "independent_RGBD_wrong_extrinsic_negative": true,
+    "TUM_positive_control_ATE_unchanged": true,
+    "TUM_positive_control_RPE_translation_unchanged": true,
+    "TUM_positive_control_RPE_rotation_unchanged": true,
+    "independent_scipy_RPE_rotation": true
+  },
+  "pass": true,
+  "count": 19,
+  "geometry_not_dynamic_truth": true,
+  "official_scale_physical_cause_unknown": true,
+  "qualification": "rigidized official extrinsic convention supported; calibration uncertainty explicit"
+}
