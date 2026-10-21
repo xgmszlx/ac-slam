@@ -1,0 +1,33 @@
+{
+ "main_worktree": {
+  "HEAD": "4746834ffa44504443fd07214105fe850d6f94e6",
+  "branch": "research/phase4c-formal",
+  "note": "the two pre-existing modifications in tools/realizability_pilot/ were not touched, committed, restored or reverted by this round",
+  "path": "/home/wcqw/ac-slam",
+  "preexisting_uncommitted": [
+   "tools/realizability_pilot/same_input_replay.py |  6 +-",
+   " tools/realizability_pilot/se2_information.py   | 93 ++------------------------",
+   " 2 files changed, 8 insertions(+), 91 deletions(-)"
+  ]
+ },
+ "no_runs_executed_this_round": true,
+ "not_modified_or_deleted": [
+  "any earlier research_archive round",
+  "any .bag/.npz/GT file",
+  "any 2DLIW-SLAM source file",
+  "any result of the RGB-D rounds"
+ ],
+ "other_worktree_heads": {
+  "/home/wcqw/ac-slam_alc_screen": "c3f98f2b",
+  "/home/wcqw/ac-slam_doc81": "7db448ff",
+  "/home/wcqw/ac-slam_passive_rgbd_20261019": "b39c5480",
+  "/home/wcqw/ac-slam_publication_20261016": "96156bb2",
+  "/home/wcqw/ac-slam_rgbd_combo_20261019": "82d550f0"
+ },
+ "recorded_on": "2026-10-21",
+ "scope": "main ac-slam worktree and the other existing worktrees; this archive lives in a new linked worktree",
+ "source_workspace_untouched": {
+  "path": "/home/wcqw/snap/dsh-desktop-community/2/dsh-work",
+  "policy": "every archived script and result was copied byte-identically; origin hashes are in audit/source_hashes.json"
+ }
+}

@@ -1,0 +1,141 @@
+{
+ "archived_code_hashes": {
+  "analyze_laser_info.py": "52b5dd990f2c65004fa70b10e6b4f55420e6882b855b7ed51ad2bfe09b07663a",
+  "audit_consistency.py": "a452fc8ae133425dd610b2387ba3e63830faea56aed307d17cbc47c106c5722b",
+  "cov_consistency.py": "8136f978aa4d6220bd4faa1f7a4cb480bc45d1508791be033dcde693af377328",
+  "extract.py": "dd9eb2ef8125cff4ea2de2f262a6f719bad6441a48d5bca0fddeddebd1dc4670",
+  "native_export/PATCH_laser_info.md": "e9dbcb543c7bcb8121eb788b0c8286b9ec17e36e86401060e18ed04bb3738dc5",
+  "native_export/_laser_files.txt": "e5034fd116945ceb76490dbe23a94c1e508b14058eec0b2eccef1d073c330fc3",
+  "native_export/_tree.txt": "deaf407590be5f9de030c036bfd5fc5b9b99fdf4a6ed1552c1e368074c8a1e48",
+  "not_executed/merge_imu.py": "521d473f41b3ab703c5c2a810d770e67274a3679f55efa1d857b900eaa469027",
+  "plot_figures.py": "f923a4d29d27e0636785c288cbf96f62b7fc947b75ca16e7258065bb7836f32d",
+  "run_consistency.py": "5e9d55110b3fc7ebffb9fda2beeb4e1866644bac8b14c9475865143d8da9ee89",
+  "run_consistency2.py": "20fb801e0aa47a05029c310062e3da13bd888352fc7a8cc478c35b9dcddd8df6",
+  "run_lt.sh": "98fead1264edff39cab5dbb99bbe786e8826396e6809f717d9f2ade1b563766a",
+  "run_v3.py": "4dfe171197adfbe6e0619594941f22e7dcf24fc40bf3677d76e96c20d3bf3b0b",
+  "scanmatch.py": "ec2338c6b4149fccea5cc324aa1f0ae16006f72022709acd39d4a406944eb729",
+  "sim_cov_consistency.py": "12983f36f52de05e89fa997a29121b3f3cf073d8048652f1450a29d6dc5a1d1f",
+  "test_offset.py": "5132e52b8bc48ba15abfc2c6f13905bb11601b85a62ca69941bcc34ae5350f6b"
+ },
+ "archived_result_hashes": {
+  "correlation_check.json": "beb1989effe09da007cada87fda4089335d516e34358168de06826523c1bf269",
+  "legacy/consistency_static_0.json": "5d2833ce38b5a93f1d7880cfab0164e5715e97f979c2592dea94d1a6c69689df",
+  "legacy/res_static_0.json": "3738fd7bdf21678f62020f2b4f5d1d23ecac1b4547bd260e80916b010f7b65dc",
+  "per_frame.csv": "e0f0548eb36ed43d356a2fa7aa822b9049dd04f84c18f7dd8dac31c0231eed35",
+  "summary.json": "ba7c69c6f4860ae0956cacde63dc794e3af7a805873f745155a65e1e0eccec9d",
+  "v3_lt0.02.json": "51903fdd39b28d8c0c3fcfcc0a7205747485bea03d9ccc3785456aa07ef6e830",
+  "v3_lt0.04.json": "72eee519172bf5bd6b5a83d14b0fa7b8497688dca20b3dae874b7c29df746cd8",
+  "v3_lt0.06.json": "85db3e46fa91e4e7f9c5a1ec89e6e96950bb81c1761d678cc9f39bf7083cb6ad",
+  "v3_s0.02.json": "f21148f67bc795717205b6c19f504bb19a583d6468a4d87571547c3c24788fc9",
+  "v3_s0.04.json": "a7b90a2f4a41994c87039c4e483b96e4a411ff1b19f0fba1ba792d6a637ad6ec",
+  "v3_s0.06.json": "8efa51bcb446edd832b92314a8f53df48b49f710bf8fadcc2542bce05240807f"
+ },
+ "conditions": [
+  {
+   "frame_budget": 60,
+   "result_file": "v3_s0.02.json",
+   "scene": "static_0",
+   "sigma_range_m": 0.02
+  },
+  {
+   "frame_budget": 60,
+   "result_file": "v3_s0.04.json",
+   "scene": "static_0",
+   "sigma_range_m": 0.04
+  },
+  {
+   "frame_budget": 60,
+   "result_file": "v3_s0.06.json",
+   "scene": "static_0",
+   "sigma_range_m": 0.06
+  },
+  {
+   "frame_budget": 60,
+   "result_file": "v3_lt0.02.json",
+   "scene": "lt_changes_0",
+   "sigma_range_m": 0.02
+  },
+  {
+   "frame_budget": 60,
+   "result_file": "v3_lt0.04.json",
+   "scene": "lt_changes_0",
+   "sigma_range_m": 0.04
+  },
+  {
+   "frame_budget": 60,
+   "result_file": "v3_lt0.06.json",
+   "scene": "lt_changes_0",
+   "sigma_range_m": 0.06
+  }
+ ],
+ "estimator": {
+  "convergence": "max|delta| < 1e-8",
+  "correspondence": {
+   "distance_gate_m": 0.35,
+   "min_correspondences": 12,
+   "neighbourhood": "3x3",
+   "voxel_cell_m": 0.3
+  },
+  "information": "Omega = 1/sigma_range^2, isotropic; H = sum w_i J_i^T J_i",
+  "initialisation": {
+   "centre": "ground truth",
+   "noise_sigma": [
+    0.05,
+    0.05,
+    0.01
+   ],
+   "samples_per_frame": 4
+  },
+  "linear_solve_regularisation": 1e-12,
+  "max_iterations": 20,
+  "normal_estimation": {
+   "boundary_points_zeroed": true,
+   "half_width_points": 3,
+   "method": "scan-neighbour finite difference",
+   "span_points": 6
+  },
+  "pose_parameterisation": "[x_m, y_m, theta_rad]",
+  "rng": "numpy.random.default_rng(1), one stream per process, shared by all frames",
+  "robust_kernel": {
+   "delta_m": 0.1,
+   "type": "Huber"
+  },
+  "scan_processing": {
+   "downsample_step_beams": 4,
+   "effective_angular_step_deg": 1.332,
+   "range_max_used_m": 8.0
+  },
+  "type": "point-to-line ICP, scan-to-scan, offline"
+ },
+ "executed_on": "2026-10-20",
+ "frame_selection": "range(1, n_scans, 40)[:frame_budget]; frames dropping below 60/50 points are skipped, so 60 attempted yields 50 usable on static_0 and 60 on lt_changes_0",
+ "frozen_before_run": false,
+ "honesty_note": "These values were read back out of the scripts that actually ran on 2026-10-20. They were NOT pre-registered before execution. Any future run must freeze this file first and diff against it afterwards. The 2026-10-21 audit withdrew the original 'effective noise is 3x nominal' framing: the sigma scan is an identity of the implementation, not an experiment. The surviving evidence is scale free.",
+ "metrics": {
+  "chi2_3_reference": {
+   "mean": 3.0,
+   "median": 2.366
+  },
+  "ci_interval": "not applicable: no confidence interval is computed",
+  "correlation": "Hessian side: corr of H^-1 per frame then averaged; empirical side: Pearson on e",
+  "degeneracy_mixed_units": "lambda_min/lambda_max of the 3x3 H (NOT unit invariant)",
+  "degeneracy_translation_only": "lambda_min/lambda_max of the 2x2 xy block (unit invariant)",
+  "nees": "e^T H e with Sigma = H^-1 and 3 dof",
+  "scale_free_tail_shape": "u = NEES / median(NEES); invariant under Sigma -> k*Sigma. Compared against chi2_3 quantiles divided by its median (p90 2.642, p99 4.795, p99.9 6.875).",
+  "sigma_eff": "sigma_range * sqrt(median(NEES)/3)",
+  "sigma_scan_status": "NOT independent: the three sigma rows share identical error vectors to 1e-16 and H ratios of exactly (0.02/sigma)^2, because the Huber weight does not depend on sigma",
+  "tail_confidence": "predicted sigma_xy = sqrt(trace(inv(H)[:2,:2])); its ratio between tail and rest frames is scale free; rank correlation between NEES and predicted sigma measures whether the model knows which frames fail",
+  "tail_rule": "NEES >= p90 of the same condition"
+ },
+ "not_done": [
+  "no significance test",
+  "no independent team replication",
+  "no scan-to-submap",
+  "no full-resolution run",
+  "no dynamic filtering",
+  "no motion distortion correction",
+  "no comparison against ground-truth-free metric"
+ ],
+ "reconstructed_on": "2026-10-21",
+ "status": "RECONSTRUCTED_POST_HOC_FROM_EXECUTED_SCRIPTS"
+}
