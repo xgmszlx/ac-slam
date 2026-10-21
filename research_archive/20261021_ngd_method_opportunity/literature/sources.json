@@ -1,0 +1,50 @@
+[
+  {
+    "work": "NGD-SLAM",
+    "source": "https://arxiv.org/html/2405.07392v4",
+    "evidence": "Full author manuscript method and limitations; local fixed source a93a14c; v4 publication version differs from frozen source",
+    "code": "https://github.com/yuhaozhang7/NGD-SLAM",
+    "mechanism": "asynchronous semantic masks, RGB-D mask propagation, hybrid LK-ORB",
+    "overlap": "temporal mask prediction, feature exclusion, scheduling/propagation are already central",
+    "unresolved": "no source-to-result proof that an old mask caused our tail; a different model name does not establish novelty"
+  },
+  {
+    "work": "SR-SLAM",
+    "source": "https://arxiv.org/html/2509.01111v1",
+    "DOI": "10.1016/j.robot.2025.105306",
+    "evidence": "Full author preprint method sections; journal final implementation not reproduced",
+    "code": "UNKNOWN; bounded author-manuscript/repository-link search did not certify executable author code",
+    "mechanism": "multi-cue scene reliability with history, adaptive geometry/depth clustering, direct pose refinement, keyframe selection and frame weighting",
+    "overlap": "scene reliability, preserving support and coordinating optimization are direct prior mechanisms",
+    "unresolved": "no local comparison; cannot claim author method fails on these three events"
+  },
+  {
+    "work": "DMSG-SLAM",
+    "source": "https://www.mdpi.com/1424-8220/26/12/3634",
+    "DOI": "10.3390/s26123634",
+    "evidence": "Publisher-indexed abstract/introduction excerpt; live full page429; PMC browser challenge. No full method/formula verification",
+    "code": "UNKNOWN; no authenticated author implementation verified",
+    "mechanism": "abstract reports depth/semantic masks and rotation-aware local epipolar filtering; TSDF mapping",
+    "overlap": "depth-mask and geometry filtering are covered at the abstract mechanism level",
+    "unresolved": "cannot infer actual thresholds, decisions or insufficient capabilities from inaccessible full text"
+  },
+  {
+    "work": "CC-DPMS",
+    "source": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6959718",
+    "DOI": "10.2139/ssrn.6959718",
+    "evidence": "SSRN author metadata and abstract indexed;22pages posted2026-06-17; live page and delivery403. Full text not acquired",
+    "code": "UNKNOWN; no author code certified",
+    "mechanism": "abstract reports short-horizon TG-DSN suppression plus point dynamic risk/local coverage, retention/downweight/support-protect/suppress actions in ORB3",
+    "overlap": "HIGH_NOVELTY_OVERLAP for generic geometry-support protection and dynamic-risk action selection",
+    "unresolved": "not peer-reviewed journal evidence here; cannot certify detailed equivalence or benchmark claims from abstract"
+  },
+  {
+    "work": "DynoSAM",
+    "source": "https://arxiv.org/html/2501.11893v3",
+    "evidence": "Full author manuscript sections IV/V and limitations",
+    "code": "https://github.com/ACFR-RPG/DynOSAM",
+    "mechanism": "static/dynamic observations jointly modeled with camera/object poses and rigid motions in factor graphs",
+    "overlap": "rigid motion estimation and model comparison are mature; dynamic observations need not all be hard deleted",
+    "unresolved": "not deployed here, no claim it solves our exact tail; full-batch backend/rigid-body assumptions explicitly bounded"
+  }
+]
