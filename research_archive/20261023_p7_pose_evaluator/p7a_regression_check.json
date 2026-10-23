@@ -1,0 +1,52 @@
+{
+  "label": "P5 regression desk 120f vs desk GT",
+  "gt": {
+    "path": "/home/wcqw/passive_rgbd_depth_screen_20261019/data/rgbd_dataset_freiburg1_desk/groundtruth.txt",
+    "n": 2335,
+    "span_s": 23.399500131607056,
+    "malformed_rows": 0
+  },
+  "est": {
+    "path": "/home/wcqw/slam_multi_direction_research/p5_regression/out/OnlineTrajectory.txt",
+    "n": 120,
+    "span_s": 4.367985010147095,
+    "malformed_rows": 0
+  },
+  "association": {
+    "max_dt_s": 0.02,
+    "n_pairs": 120,
+    "coverage_est": 1.0,
+    "coverage_gt": 0.05139186295503212,
+    "dt_median_s": 0.001838088035583496,
+    "dt_max_s": 0.00418400764465332,
+    "est_span_covered_s": 4.367985010147095
+  },
+  "ate_aligned": {
+    "rmse": 0.016003399009897633,
+    "median": 0.014333086047527546,
+    "max": 0.03243809012630812,
+    "scale_used": 1.0,
+    "with_scale": false
+  },
+  "ate_unaligned": {
+    "rmse": 2.5284177166179007,
+    "median": 2.410220742096351,
+    "max": 2.84661895432262
+  },
+  "rpe": {
+    "window_s": 1.0,
+    "dt_tol_s": 0.1,
+    "n_pairs": 98,
+    "n_skipped": 21,
+    "trans_rmse": 0.02676358113972045,
+    "trans_median": 0.016627304274640542,
+    "rot_rmse_deg": 1.45210094974088,
+    "rot_median_deg": 1.2289828486101129
+  },
+  "options": {
+    "with_scale": false,
+    "bonn_camera_frame": false,
+    "window_s": 1.0,
+    "align_applied_to": "estimate only"
+  }
+}
