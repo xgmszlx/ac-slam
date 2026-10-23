@@ -1,5 +1,5 @@
 directions,family,platform,data,complete_runs,stage,technical,event,mechanism,novelty,decision,primary_effect,decision_ref,source_commit
-L1,2D lidar,hector_mapping,LILocBench static_0 + lt_changes_0,2 complete,E1,BASELINE_READY,EVENT_CONFIRMED,NO_MECHANISM_SIGNAL,NOVELTY_UNRESOLVED,HOLD,rel NEES median 0.43-0.65x ; tail R=8.28/12.23 ; rho=+0.086/+0.063,experiments/L1/decision.json,n/a (no source change)
+L1,2D lidar,hector_mapping,LILocBench static_0 + lt_changes_0,2 complete,E1,BASELINE_READY,EVENT_UNRESOLVED,INCONCLUSIVE,NOVELTY_UNRESOLVED,HOLD,"WITHDRAWN (ERRATA.md): gate n>=200 not met, n_eff 15.8/32.0. Surviving: source/binary facts only",experiments/L1/ERRATA.md,n/a (no source change)
 P5,RGB-D,ORB_SLAM3,TUM fr1_desk,4 complete (prior),E1(prior),QUALIFIED,EVENT_UNRESOLVED,INCONCLUSIVE,NOVELTY_UNRESOLVED,HOLD,ATE/RPE improved but n=1 vs async variance,archive DECISION.json,b39c5480
 P7,evaluation,n/a,prior 22 runs,n/a,E0,BASELINE_READY,n/a,n/a,NOVELTY_UNRESOLVED,ADVANCE_AS_INFRASTRUCTURE,Bonn GT/optical kouji errata established,ERRATA.md,ed5fbbf6
 P6,RGB-D dense,Open3D (missing),TUM+Bonn (local),0,E0,TECHNICAL_INCOMPLETE,NO_QUALIFYING_EVENT,INCONCLUSIVE,NOVELTY_UNRESOLVED,HOLD,never attempted; no open3d installed,none,n/a

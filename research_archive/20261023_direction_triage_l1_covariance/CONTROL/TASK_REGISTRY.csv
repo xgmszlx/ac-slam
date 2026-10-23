@@ -1,17 +1,17 @@
 direction_id,name,stage_completed,verdict,primary_evidence,technical_scientific_status,next_action
-P1,DOG预剔除/特征预算,E0,STOP_THIS_HYPOTHESIS,research/ngd-bonn-frame-audit-20261021:research_archive/20261021_ngd_method_opportunity/REPORT.md,NO_INDEPENDENT_METHOD_OPPORTUNITY,none
-P2,类别外动态物体,E0,STOP_THIS_HYPOTHESIS,同上,同上,none
-P3,动态观测风险预警,E0,STOP_THIS_HYPOTHESIS,同上 + 20261021_ngd_event_mechanism,ONLY_CORRELATION_FOUND,none
-P4,MapPoint生命周期,E0,STOP_THIS_HYPOTHESIS,同上,缺点级证据,none
-P5,RGB-D深度边界,E0,HOLD,research/passive-rgbd-depth-20261019:.../20261019_passive_rgbd_depth/DECISION.json,METHOD_PROTOTYPE_NOT_JUSTIFIED,追加4次desk运行(未授权);需先重建ORB-SLAM3 Examples
-P6,动态RGB-D TSDF,E0,HOLD,本仓无记录(从未做),UNKNOWN 新颖性未排重,需venv装open3d;先做NOVELTY_MATRIX
-P7,轨迹/后端一致性设施,E0,ADVANCE_AS_INFRASTRUCTURE,tools/ + 20261021_ngd_bonn_frame_audit/ERRATA.md,Bonn GT坐标勘误成立,冻结版本化evaluator
-P8,异步YOLO预算/mask年龄,E0,STOP_THIS_HYPOTHESIS,20261021_ngd_method_opportunity §A,缺mask年龄日志,none
+P1,DOG预剔除/特征预算,E0,ADVANCE_E1_BUILD_APPROVED,research/ngd-bonn-frame-audit-20261021:research_archive/20261021_ngd_method_opportunity/REPORT.md,"旧审查否定的是异步mask/几何保护/LK-ORB协调，不是""八叉树前真预剔除+预算重分配""；实验对象不同",独立编译NGD(串行占用BASELINE_BUILD)，先M0回归再实现A/B/C
+P2,类别外动态物体,E0,DATA_NOT_QUALIFIED,同上,旧M2区域扩张失败成立，但不等于类别外运动识别全部被否定,独立标注+离线诊断，暂不建在线方法
+P3,动态观测风险预警,E0,EVENT_UNRESOLVED,同上 + 20261021_ngd_event_mechanism,旧数据无合格预测事件,只读事件资格审查
+P4,MapPoint生命周期,E0,DATA_NOT_QUALIFIED,同上,缺点级日志=尚不能评价，不是延迟准入被否定,最小MapPoint生命周期取证
+P5,RGB-D深度边界,E0,ADVANCE_E1_BUILD_APPROVED,research/passive-rgbd-depth-20261019:.../20261019_passive_rgbd_depth/DECISION.json,已有真实干预与初步精度变化，仍需排除运行波动,独立编译ORB-SLAM3 Examples(串行)，最小基线回归后执行B0/B1追加
+P6,动态RGB-D TSDF,E0,ADVANCE_E1_ENV_READY,本仓无记录(从未做),缺Open3D是依赖问题不是科学NO-GO；open3d 0.13.0已在隔离target目录验证可用,E0排重+GT位姿TSDF两阶段重建
+P7,轨迹/后端一致性设施,E0,ADVANCE_FREEZE,tools/ + 20261021_ngd_bonn_frame_audit/ERRATA.md,Bonn评价勘误有实际价值,冻结版本化评价器，所有方向引用同一commit
+P8,异步YOLO预算/mask年龄,E0,DATA_NOT_QUALIFIED,20261021_ngd_method_opportunity §A,无mask年龄日志=缺证据,最小时间戳取证
 A1,主动回环信息收益,E0,STOP_THIS_HYPOTHESIS,research/phase4c-formal + doc80,STOP_PURE_ROTATION_SELECTION,none
 A2,探索停止/漏房间,E0,STOP_THIS_HYPOTHESIS,20261015_direction_review/snapshots/active_map_author_validation/REPORT.md,REVISE + 暂停主动选择器,none
 A3,MapEx/PIPE信息收益,E0,STOP,无本仓记录,无预测地图样本,none
 A4,遮挡后等待/退回,E0,STOP,20261015_direction_review,无合格LOST事件,none
 A5,长期变化主动核验,E0,STOP,LILocBench线归AMCL,无合法动作接口,none
 X1,语义/开放词汇主动核验,E0,STOP,无本仓记录,无语义数据/无torch,none
-L1,2D扫描匹配协方差一致性,E1,HOLD,experiments/L1/REPORT.md,NO_MECHANISM_SIGNAL(预警); 尾部重8-12x,复查生效:预注册Amendment1+带回环系统
-L2,RGB-D+2D LiDAR融合,E0,STOP,本轮实测 rosbag info,DATA_GATE=FAIL 无同步数据,none
+L1,2D扫描匹配协方差一致性,E1,HOLD_REASON_CHANGED,experiments/L1/REPORT.md,WITH_DRAWN: gate n>=200 not met (n_eff 15.8/32.0); statistics withdrawn; ERRATA.md supersedes REPORT.md,fix statistical object: Hessian parameterisation + independent sigma^2 calibration + independent-sample gate + prereg as separate commit
+L2,RGB-D+2D LiDAR融合,E0,DATA_NOT_DOWNLOADED,本轮实测 rosbag info,LILocBench官方提供全量传感器bag(含D455相机+2xSICK激光)；本地只有无相机精简版,核查下载入口/单序列体积/传感器同步，不下载整套

@@ -1,0 +1,40 @@
+{
+  "sequence": "lt_changes_0",
+  "n_records": 4324,
+  "lag1_rho": {
+    "x": 0.9829920171396971,
+    "y": 0.9852870891110805,
+    "theta": 0.9741862170571923
+  },
+  "n_eff_ar1": {
+    "x": 37.08664344197857,
+    "y": 32.045051334199336,
+    "theta": 56.53914330892463
+  },
+  "n_eff_min_axis": 32.045051334199336,
+  "gate_200_independent_frames_met": false,
+  "n_eff_caveat": "AR(1) approximation applies to the MEAN of a stationary series, not to every statistic; see CONTROL/STATISTICAL_UNITS.md",
+  "trace_Ssum": 0.08238182432512461,
+  "trace_cross_one_block": 0.003202269394755966,
+  "trace_cross_both_blocks": 0.006404538789511932,
+  "cross_over_denominator": 0.0777421335589274,
+  "trace_emp_cov_dE": 0.00012337759489149748,
+  "denominator_over_empirical": 667.7211076903715,
+  "interpretation": "denominator_over_empirical compares TWO DIFFERENT OBJECTS (uncalibrated H^-1 sum vs empirical error-difference covariance). It is NOT a covariance-mismatch factor.",
+  "per_axis_median_abs_z": {
+    "x": 0.3670159639152149,
+    "y": 0.46091350089054905,
+    "theta": 5.34517327684091
+  },
+  "per_axis_sigma_factor": {
+    "x": 0.5445340710908233,
+    "y": 0.683847924169954,
+    "theta": 7.930524149615593
+  },
+  "abs_theta_median_by_quarter_mrad": [
+    14.690389,
+    16.129904,
+    17.564407,
+    11.291607
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "sequence": "freiburg3_sitting_xyz",
+  "n_rgb": 1261,
+  "n_depth": 1231,
+  "n_gt": 4251,
+  "n_rgb_depth_pairs": 1219,
+  "n_rgb_gt_pairs": 1258,
+  "rgb_depth_dt_median_s": 2.002716064453125e-05,
+  "rgb_gt_dt_median_s": 0.0025794506072998047,
+  "max_dt_used_s": 0.02,
+  "intrinsics_family": "freiburg3",
+  "intrinsics": {
+    "fx": 535.4,
+    "fy": 539.2,
+    "cx": 320.1,
+    "cy": 247.6
+  },
+  "intrinsics_source": "TUM official per-freiburg calibration (fr1/fr2/fr3 differ)",
+  "depth_raw_max": 49350,
+  "depth_scale_used": 5000.0,
+  "depth_scale_probe": {
+    "5000": {
+      "implied_max_range_m": 9.87,
+      "plausible_indoor": true
+    },
+    "1000": {
+      "implied_max_range_m": 49.35,
+      "plausible_indoor": false
+    },
+    "1": {
+      "implied_max_range_m": 49350.0,
+      "plausible_indoor": false
+    }
+  },
+  "depth_scale_decision": "chosen as the only candidate giving an indoor max range; not assumed from folklore",
+  "extrinsics_test": {
+    "method": "A/B multi-frame fusion + reprojection depth residual",
+    "median_abs_depth_residual_world_to_camera_m": 0.017163934907224343,
+    "median_abs_depth_residual_camera_to_world_m": null,
+    "n_points_world_to_camera": 17816,
+    "n_points_camera_to_world": 24425,
+    "chosen": "extrinsic = inv(T_wc)  [world->camera]",
+    "criterion": "the convention whose multi-frame map re-projects onto the observed depth wins; a single frame cannot discriminate T from T^-1",
+    "inverted_has_overlap": false,
+    "ratio_inverted_over_correct": null,
+    "note_if_none": "None means the inverted-convention map has NO point in front of the probe camera: it does not overlap the observed scene at all, which is a stronger separation than a large residual."
+  },
+  "frames_integrated": 57,
+  "reprojection_check": {
+    "n_map_points_projected": 16176,
+    "median_abs_depth_residual_m": 0.017163934907224343,
+    "p90_abs_depth_residual_m": 0.2469420530601265,
+    "verdict": "CONSISTENT",
+    "criterion": "map re-projected into the probe camera must agree with the observed depth image; this is an absolute, convention-sensitive check"
+  },
+  "self_check": {
+    "association_nonempty": true,
+    "association_dt_within_2ms": true,
+    "depth_scale_determined_from_data": true,
+    "extrinsics_direction_resolved": true,
+    "map_nonempty": true,
+    "reprojection_consistent": true
+  },
+  "stage1_gate": "PASS"
+}

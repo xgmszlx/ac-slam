@@ -161,3 +161,67 @@ eth = wrap(v['hyaw'] - atan2(...))
    并把预登记放进**独立 commit**。
 
 不做以上三件事而继续调协方差模型，就是重演前三轮。
+
+---
+
+# ADDENDUM 2 · 勘误脚本自身的三处缺陷（2026-10-23 复审后修复）
+
+独立复审发现 `analysis/l1_posthoc_diagnostics.py` v1 本身不合格。三处**全部确认并已修复**，
+v1 保留为 `analysis/l1_posthoc_diagnostics_v1_BUGGY.py.bak`（不删，作历史对照）。
+
+## A2.1 缺陷一：Hessian 与误差记录错位（严重）
+
+v1 用**原始 `/hector_debug_info` 消息序号**建 Hessian 字典，却用 `per_frame.csv` 的
+`frame` 列去取——而 `frame` 是**配对后的 `per_scan` 下标**。两者不同
+（8979→8911、6537→6501），被跳过的消息使下标持续偏移。
+
+**这是我明知又犯**：REVIEW 阶段我刚抓过同类的下标错误，随后在勘误脚本里又写了一遍。
+v2 改为完全复刻主分析的配对规则（一个 pose 后紧跟的下一条 debug 消息），
+并输出 `pairing_audit.json` 审计每一条被跳过的消息（序号、原因、当时的 per_scan 下标）。
+
+**影响量级（实测）**：聚合统计只变了 1–3%（如 static 的 `trace_Ssum` 0.0739→0.07376），
+因为错位后读到的仍是同一序列附近的真实 Hessian——**正是"错得合理"的典型，
+比明显报错更危险**。
+
+## A2.2 缺陷二：两处系数错误（已修）
+
+| 项 | v1 | v2（正确） |
+|---|---|---|
+| 交叉项求和 | 只取一个块 → 7.3% / 3.9% | 两块相加 → **14.72% / 7.77%** |
+| 倍数 | 对 `trace_Ssum` 又乘 2 → 1238× / 1336× | 不再乘 → **618.4× / 667.7×** |
+
+审查给出的预测值（14.7%/7.8%、约 619×/668×）与 v2 实测吻合，确认是纯算术错误。
+
+并且**该量本身不应再被当作协方差失配程度**：它比较的是"未标定的 `H⁻¹` 之和"与
+"实测误差差分的经验协方差"，两者不是同一统计对象。字段名已改为
+`denominator_over_empirical`，并附 `interpretation` 说明。
+
+## A2.3 缺陷三：脚本不写文件（已修）
+
+v1 只在 docstring 里声称生成 4 个 JSON，实际只 `print`。v2 增加 `--out` 参数、真实写出
+4 个诊断 JSON + `pairing_audit.json` + `self_check.json`，并在 `self_check` 中验证：
+
+```
+pose_debug_counts_match            true
+frame_index_within_per_scan        true
+n_per_scan_equals_pose_minus_skipped true
+n_records_positive                 true
+all_outputs_written                true
+```
+
+## A2.4 修复后仍不变的结论
+
+| 量 | static_0 | lt_changes_0 |
+|---|---:|---:|
+| `n_eff`（AR-1，最不利轴） | **15.78** | **32.05** |
+| 预注册门（≥200） | ❌ 未满足 | ❌ 未满足 |
+
+`n_eff` 只用到误差序列、不涉及 Hessian，所以**"门未通过"这一判决不受上述三处缺陷影响**。
+`EVENT_UNRESOLVED / INCONCLUSIVE / HOLD` **维持**。
+
+## A2.5 `n_eff` 的适用范围（采纳审查意见）
+
+审查正确指出：`n_eff = n(1−ρ)/(1+ρ)` 只适用于**平稳 AR(1) 下均值估计**的方差修正，
+不能当作所有统计量的统一有效样本量。已新增 `CONTROL/STATISTICAL_UNITS.md` 作为跨方向强制规范：
+**先确定科学独立单位，再按统计量选不确定性估计方法**；禁止把逐帧数当独立试验，
+也禁止机械套 AR(1)。
