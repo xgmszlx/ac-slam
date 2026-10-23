@@ -1,40 +1,197 @@
 #!/usr/bin/env python3
-"""Real resource locks: file + PID + holder + created time. Stale locks are reported, never auto-removed."""
-import argparse, json, os, sys, time
-LOCKDIR = os.path.dirname(os.path.abspath(__file__)) + '/locks'
-def path(n): return os.path.join(LOCKDIR, n + '.lock')
-def alive(pid):
-    try: os.kill(pid, 0); return True
-    except OSError: return False
-def status(n):
-    p = path(n)
-    if not os.path.exists(p): return {'resource': n, 'state': 'FREE'}
-    try: d = json.load(open(p))
-    except Exception: return {'resource': n, 'state': 'UNREADABLE'}
-    d['state'] = 'HELD_ALIVE' if alive(d.get('pid', -1)) else 'STALE_PID_DEAD'
-    return d
+"""Real resource locks via flock(2).  [v2, replaces the PID-file version]
+
+Why v1 was wrong: it wrote the PID of a short-lived CLI process into a file. Once
+that process exited the lock file stayed behind with a dead PID, so the lock was
+prose, not mutex.
+
+v2 semantics:
+  * mutual exclusion is the OS file lock (fcntl.flock, LOCK_EX|LOCK_NB) -- atomic,
+    and released by the kernel if the holder dies for any reason;
+  * the lock is held by whichever process keeps the fd open. `run` holds it for the
+    whole lifetime of the child command; `hold` holds it until its own exit;
+  * the child is started in its own process group (start_new_session), and timeouts
+    signal the whole group, so grandchildren are covered;
+  * we never delete someone else's lock file and never kill processes outside the
+    process group we created; a "stale" lock is impossible by construction -- if
+    nobody holds the flock, acquisition succeeds immediately.
+
+Usage:
+  lock.py run   <resource> [--timeout S] [--holder NAME] -- <cmd...>
+  lock.py hold  <resource> [--holder NAME] [--seconds S]
+  lock.py status [resource]
+"""
+import argparse
+import fcntl
+import json
+import os
+import signal
+import subprocess
+import sys
+import time
+
+LOCKDIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'locks')
+PIDDIR = os.path.join(LOCKDIR, 'holders')
+os.makedirs(PIDDIR, exist_ok=True)
+
+
+def paths(res):
+    return (os.path.join(LOCKDIR, res + '.lock'),
+            os.path.join(PIDDIR, res + '.json'))
+
+
+def open_lock(res):
+    lp, _ = paths(res)
+    fd = os.open(lp, os.O_RDWR | os.O_CREAT, 0o644)
+    return fd
+
+
+def try_acquire(fd):
+    try:
+        fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        return True
+    except OSError:
+        return False
+
+
+def write_holder(res, holder, extra):
+    _, hp = paths(res)
+    tmp = hp + '.tmp'
+    with open(tmp, 'w') as f:
+        json.dump({'resource': res, 'pid': os.getpid(), 'pgid': os.getpgid(0),
+                   'holder': holder, 'started': time.strftime('%Y-%m-%dT%H:%M:%S'),
+                   'workspace': os.getcwd(), **extra}, f, indent=2)
+    os.replace(tmp, hp)
+
+
+def read_holder(res):
+    _, hp = paths(res)
+    try:
+        return json.load(open(hp))
+    except Exception:
+        return None
+
+
+def clear_holder(res):
+    _, hp = paths(res)
+    try:
+        os.remove(hp)
+    except OSError:
+        pass
+
+
+def cmd_run(a):
+    fd = open_lock(a.resource)
+    if not try_acquire(fd):
+        h = read_holder(a.resource)
+        print('DENIED: %s is held%s' % (a.resource, (' by ' + json.dumps(h)) if h else ''),
+              file=sys.stderr)
+        return 2
+    write_holder(a.resource, a.holder, {'mode': 'run', 'cmd': a.cmd})
+    proc = subprocess.Popen(a.cmd, start_new_session=True)   # own process group
+    try:
+        proc.wait(timeout=a.timeout)
+        rc = proc.returncode
+    except subprocess.TimeoutExpired:
+        # signal the WHOLE group so grandchildren die too
+        try:
+            os.killpg(os.getpgid(proc.pid), signal.SIGTERM)
+        except ProcessLookupError:
+            pass
+        try:
+            proc.wait(timeout=10)
+        except subprocess.TimeoutExpired:
+            try:
+                os.killpg(os.getpgid(proc.pid), signal.SIGKILL)
+            except ProcessLookupError:
+                pass
+        rc = 124
+        print('TIMEOUT: killed process group of %s after %ss' % (a.resource, a.timeout),
+              file=sys.stderr)
+    finally:
+        clear_holder(a.resource)
+        fcntl.flock(fd, fcntl.LOCK_UN)
+        os.close(fd)
+    return rc
+
+
+def cmd_hold(a):
+    fd = open_lock(a.resource)
+    if not try_acquire(fd):
+        print('DENIED: %s is held' % a.resource, file=sys.stderr)
+        return 2
+    write_holder(a.resource, a.holder, {'mode': 'hold', 'seconds': a.seconds})
+    print('HELD %s pid %d' % (a.resource, os.getpid()), flush=True)
+    try:
+        if a.seconds:
+            time.sleep(a.seconds)
+        else:
+            while True:
+                time.sleep(3600)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        clear_holder(a.resource)
+        fcntl.flock(fd, fcntl.LOCK_UN)
+        os.close(fd)
+    return 0
+
+
+def cmd_status(a):
+    res = a.resource
+    names = [res] if res else sorted(f[:-5] for f in os.listdir(LOCKDIR)
+                                     if f.endswith('.lock'))
+    out = []
+    for n in names:
+        lp, _ = paths(n)
+        if not os.path.exists(lp):
+            out.append({'resource': n, 'state': 'FREE'}); continue
+        fd = os.open(lp, os.O_RDWR)
+        free = try_acquire(fd)
+        if free:
+            fcntl.flock(fd, fcntl.LOCK_UN)
+        os.close(fd)
+        out.append({'resource': n, 'state': 'FREE' if free else 'HELD',
+                    'holder': read_holder(n)})
+    for o in out:
+        print(json.dumps(o))
+    return 0
+
+
 def main():
-    ap = argparse.ArgumentParser(); ap.add_argument('action'); ap.add_argument('resource', nargs='?')
-    ap.add_argument('--holder', default=''); ap.add_argument('--workspace', default=os.getcwd())
-    ap.add_argument('--force-stale', action='store_true')
+    # `run` needs an unambiguous split: everything after the first bare `--` is the
+    # child command, so options may appear in any order before it. argparse's
+    # REMAINDER would otherwise swallow --timeout into the command.
+    argv = sys.argv[1:]
+    if argv and argv[0] == 'run' and '--' in argv:
+        cut = argv.index('--')
+        head, child = argv[:cut], argv[cut + 1:]
+        ap2 = argparse.ArgumentParser(prog='lock.py run')
+        ap2.add_argument('action'); ap2.add_argument('resource')
+        ap2.add_argument('--timeout', type=float); ap2.add_argument('--holder', default='')
+        ns = ap2.parse_args(head)
+        ns.cmd = child
+        if not child:
+            ap2.error('run needs a command after --')
+        return cmd_run(ns)
+    ap = argparse.ArgumentParser()
+    sub = ap.add_subparsers(dest='action', required=True)
+    r = sub.add_parser('run'); r.add_argument('resource'); r.add_argument('--timeout', type=float)
+    r.add_argument('--holder', default=''); r.add_argument('cmd', nargs=argparse.REMAINDER)
+    h = sub.add_parser('hold'); h.add_argument('resource'); h.add_argument('--holder', default='')
+    h.add_argument('--seconds', type=float)
+    s = sub.add_parser('status'); s.add_argument('resource', nargs='?')
     a = ap.parse_args()
-    if a.action == 'status':
-        names = [a.resource] if a.resource else [f[:-5] for f in os.listdir(LOCKDIR) if f.endswith('.lock')]
-        for n in names: print(json.dumps(status(n)))
-        return 0
-    if a.action == 'acquire':
-        s = status(a.resource)
-        if s['state'] == 'HELD_ALIVE':
-            print('DENIED: held by', s, file=sys.stderr); return 2
-        if s['state'] == 'STALE_PID_DEAD' and not a.force_stale:
-            print('DENIED: stale lock (pid dead) present; verify then re-run with --force-stale', file=sys.stderr); return 3
-        json.dump({'resource': a.resource, 'pid': os.getpid(), 'holder': a.holder,
-                   'workspace': a.workspace, 'created': time.strftime('%Y-%m-%dT%H:%M:%S')},
-                  open(path(a.resource), 'w'), indent=2)
-        print('ACQUIRED', a.resource, 'pid', os.getpid()); return 0
-    if a.action == 'release':
-        s = status(a.resource)
-        if s.get('pid') == os.getpid() or a.force_stale:
-            os.path.exists(path(a.resource)) and os.remove(path(a.resource))
-            print('RELEASED', a.resource); return 0
-        print('DENIED: not owner', s, file=sys.stderr); return 2
+    if a.action == 'run':
+        if a.cmd and a.cmd[0] == '--':
+            a.cmd = a.cmd[1:]
+        if not a.cmd:
+            ap.error('run needs a command after --')
+        return cmd_run(a)
+    if a.action == 'hold':
+        return cmd_hold(a)
+    return cmd_status(a)
+
+
+if __name__ == '__main__':
+    sys.exit(main())

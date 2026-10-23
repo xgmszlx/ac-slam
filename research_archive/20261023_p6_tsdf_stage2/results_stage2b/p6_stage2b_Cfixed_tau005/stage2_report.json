@@ -1,0 +1,46 @@
+{
+  "sequence": "freiburg3_walking_xyz",
+  "dataset_dir": "/home/wcqw/passive_visual_slam_qualification_20261015/data/rgbd_dataset_freiburg3_walking_xyz",
+  "fusion_frames": 200,
+  "held_out_frames": 40,
+  "disjoint_by_construction": "even indices fuse, odd indices evaluate",
+  "timing": {
+    "rgb_depth_dt_median_ms": 0.0209808349609375,
+    "rgb_gt_dt_median_ms": 2.218008041381836,
+    "rgb_gt_dt_p99_ms": 5.9815883636474565,
+    "association_window_ms": 20.0,
+    "note": "rgb-depth and rgb-gt are reported separately (Stage-1 defect F1)"
+  },
+  "params": {
+    "voxel": 0.02,
+    "sdf_trunc_voxels": 4,
+    "depth_trunc_m": 4.0,
+    "geom_tau_m": 0.05,
+    "warmup_frames": 5,
+    "depth_scale": 5000.0,
+    "depth_scale_source": "TUM RGB-D official format (uint16, 1/5000 m)"
+  },
+  "methods": {
+    "C_GeomPrev": {
+      "n_points": 69971,
+      "pixels_kept_frac": 0.8421987084696347,
+      "fusion_time_median_ms": 173.54273796081543,
+      "fusion_time_p95_ms": 282.9847455024718,
+      "wall_s": 37.22551918029785,
+      "peak_rss_mib": 502.60546875,
+      "eval": {
+        "n_eval_frames": 40,
+        "depth_abs_residual_median_m": 0.17936922817863543,
+        "depth_abs_residual_p90_m": 1.3790417069972976,
+        "depth_inlier_frac_5cm": 0.3270363891986623,
+        "coverage_frac": 0.16078860161026629,
+        "free_space_violation_frac": 0.07541728555920404,
+        "note": "free-space violation is a reference-free dynamic-residue indicator, NOT an absolute ghost rate; no independent static reference cloud exists here"
+      },
+      "extra": {
+        "hog_calls": 0,
+        "hog_boxes": 0
+      }
+    }
+  }
+}
