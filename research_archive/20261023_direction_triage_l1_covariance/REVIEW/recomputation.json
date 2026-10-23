@@ -1,0 +1,42 @@
+{
+  "static_0": {
+    "n_poses": 8979,
+    "n_debug": 8979,
+    "n_paired": 8911,
+    "n_per_frame_rows": 6541,
+    "sample_n": 80,
+    "max_rel_nees_mismatch": 6.849515301332611e-08,
+    "R_recomputed": 3.8893690847446796,
+    "R_summary": 3.8893691978337532,
+    "median_recomputed": 150.28007,
+    "median_summary": 150.280067147127,
+    "verdict": "PASS",
+    "tolerance": "per_frame.csv serialized at %.8g -> 1e-6 relative tolerance (not 1e-9 absolute)",
+    "checks": {
+      "nees_sample_match": true,
+      "median_match": true,
+      "tail_R_match": true
+    },
+    "R_abs_diff": 1.130890736611434e-07
+  },
+  "lt_changes_0": {
+    "n_poses": 6537,
+    "n_debug": 6537,
+    "n_paired": 6501,
+    "n_per_frame_rows": 4324,
+    "sample_n": 80,
+    "max_rel_nees_mismatch": 5.898910198933797e-08,
+    "R_recomputed": 9.201194917167117,
+    "R_summary": 9.201194800055564,
+    "median_recomputed": 44.628035,
+    "median_summary": 44.628035296554,
+    "verdict": "PASS",
+    "tolerance": "per_frame.csv serialized at %.8g -> 1e-6 relative tolerance (not 1e-9 absolute)",
+    "checks": {
+      "nees_sample_match": true,
+      "median_match": true,
+      "tail_R_match": true
+    },
+    "R_abs_diff": 1.1711155245563987e-07
+  }
+}

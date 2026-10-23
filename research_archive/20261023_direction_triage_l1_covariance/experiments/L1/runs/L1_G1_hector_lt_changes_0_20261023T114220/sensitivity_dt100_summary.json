@@ -1,0 +1,44 @@
+{
+  "sequence": "lt_changes_0",
+  "run_dir": "runs/L1_G1_hector_lt_changes_0_20261023T114220",
+  "system": "hector_mapping (native Hessian from /hector_debug_info iterData[-1])",
+  "n_valid_frames": 6501,
+  "n_dropped": 36,
+  "gt_dt_median": 0.009624004364013672,
+  "alignment": {
+    "n_align": 50,
+    "yaw_deg": -1.7399102156345914,
+    "t": [
+      2.7618915959352544,
+      3.942362766151581
+    ],
+    "scale_fitted": false
+  },
+  "nees_median": 48.192212955643846,
+  "nees_p99": 1925.7614148044859,
+  "nees_mean": 228.98367906034588,
+  "nees_max": 5570.485389688173,
+  "nees_min": 0.008113059829767323,
+  "tail_ratio_R": 8.333667531321398,
+  "tail_ratio_ref": 4.795009159018654,
+  "u_p99": 39.96001214090248,
+  "spearman_sigma_vs_err": -0.058052160138459236,
+  "quintile_lo_err": 0.082378856115047,
+  "quintile_hi_err": 0.07952242472332946,
+  "quintile_ratio": 0.9653256730376498,
+  "err_xy_median_m": 0.08498512083818875,
+  "err_xy_p99_m": 0.15464162879897986,
+  "sigma_xy_median_m": 0.18822167517799235,
+  "gate_1_tail": true,
+  "gate_2a_rankcorr": false,
+  "gate_2b_quintile": false,
+  "gate_2": false,
+  "verdict": "PARTIAL",
+  "thresholds": {
+    "R_strong": 5.0,
+    "R_weak": 1.5,
+    "rho_min": 0.3,
+    "quintile_ratio": 2.0,
+    "min_frames": 200
+  }
+}

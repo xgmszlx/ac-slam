@@ -1,0 +1,98 @@
+{
+  "archive": "research_archive/20261023_direction_triage_l1_covariance",
+  "note": "Files kept in the local workspace only. Every number in REPORT.md / decision.json is recomputable from the committed per_frame.csv plus these raw streams.",
+  "convention_reference": "research_archive/20261021_lidar_covariance_consistency (same practice: bags registered by sha256, not committed)",
+  "excluded": [
+    {
+      "local_path": "experiments/L1/runs/L1_G1_hector_lt_changes_0_20261023T114220/measure.bag",
+      "bytes": 11522707,
+      "sha256": "45987954264cf5cb2c8d6764d325f6d2b947498634c2343dbdb807197687bff0",
+      "reason": "raw ROS message stream; registered by hash, not redistributed (repo convention)"
+    },
+    {
+      "local_path": "experiments/L1/runs/L1_G1_hector_lt_changes_0_20261023T114220/play.log",
+      "bytes": 5968335,
+      "sha256": "fe969ad8ddb7f2e22392923bf6e772117d9028edf07cce879ea6bb1976d0c00e",
+      "reason": "ROS playback progress log, regenerable, no research content"
+    },
+    {
+      "local_path": "experiments/L1/runs/L1_G1_hector_static_0_20261023T114220/measure.bag",
+      "bytes": 15822357,
+      "sha256": "f7a15c6a68224191133d556da51384d2c0fb7236d3442aea68c01abb55d38957",
+      "reason": "raw ROS message stream; registered by hash, not redistributed (repo convention)"
+    },
+    {
+      "local_path": "experiments/L1/runs/L1_G1_hector_static_0_20261023T114220/play.log",
+      "bytes": 7477297,
+      "sha256": "834966717ce7d5b78eb8eee0eb5255516454da3874cea2ac90d03f09fb27fff6",
+      "reason": "ROS playback progress log, regenerable, no research content"
+    },
+    {
+      "local_path": "experiments/L1/runs/g0_probe.bag",
+      "bytes": 383462,
+      "sha256": "39e631a75fa48d5772eab837d45afa21636c3a0a2005246c74cdc7ecad77494b",
+      "reason": "raw ROS message stream; registered by hash, not redistributed (repo convention)"
+    },
+    {
+      "local_path": "experiments/L1/runs/g0b_debug.bag",
+      "bytes": 1063809,
+      "sha256": "22feb81737435ed5fe32ee47611408a6ad5bb714c7ded5d101285eb39a2c3b06",
+      "reason": "raw ROS message stream; registered by hash, not redistributed (repo convention)"
+    },
+    {
+      "local_path": "experiments/L1/runs/play.log",
+      "bytes": 553495,
+      "sha256": "86579f109d3dbe3cbe17faf83a0b861caf090965f4927fef6794cd0c5f7a15e6",
+      "reason": "ROS playback progress log, regenerable, no research content"
+    },
+    {
+      "local_path": "experiments/L1/runs/play2.log",
+      "bytes": 498277,
+      "sha256": "9216849ff78d9352ced266e1dd4db8156472d93beb214a057190529d8981de13",
+      "reason": "ROS playback progress log, regenerable, no research content"
+    },
+    {
+      "local_path": "logs/ros_home_l1/log/02ecce92-ce93-11f1-9829-a5681eeb766e/master.log",
+      "bytes": 47634,
+      "sha256": "24736458b8dcb52e7043560644c7e94d28f1f4fb8d9e6e74d49ce9e5e4319f04",
+      "reason": "ROS playback progress log, regenerable, no research content"
+    },
+    {
+      "local_path": "logs/ros_home_l1/log/02ecce92-ce93-11f1-9829-a5681eeb766e/roslaunch-msxg-14085.log",
+      "bytes": 15213,
+      "sha256": "0b475fca3ca9ce921c6981dc2a0fb273325ecc075858d96147277a9e6dcb4243",
+      "reason": "ROS playback progress log, regenerable, no research content"
+    },
+    {
+      "local_path": "logs/ros_home_l1/log/02ecce92-ce93-11f1-9829-a5681eeb766e/rosout-1-stdout.log",
+      "bytes": 983,
+      "sha256": "5df745fc844700e00847c689e25adc6c3b6d6efda12f7f3145029fd20fab45e2",
+      "reason": "ROS playback progress log, regenerable, no research content"
+    },
+    {
+      "local_path": "logs/ros_home_l1/log/02ecce92-ce93-11f1-9829-a5681eeb766e/rosout.log",
+      "bytes": 37,
+      "sha256": "6305475181dfb74838e15296785f4f1b3fd3d5f2d9ee1b70c705cced5afed91b",
+      "reason": "ROS playback progress log, regenerable, no research content"
+    },
+    {
+      "local_path": "logs/ros_home_l1/roscore-11355.pid",
+      "bytes": 5,
+      "sha256": "24f838b44987f5e4d3439e5b3dfc0c3b43cde8d00e6123dd49617c0951ba4170",
+      "reason": "ROS playback progress log, regenerable, no research content"
+    },
+    {
+      "local_path": "logs/ros_home_l1/rospack_cache_18019822870472497271",
+      "bytes": 9905,
+      "sha256": "2e004ae770de54fa530356c613b3497d25fc0835b98f5ae3af64754ffccd1381",
+      "reason": "ROS playback progress log, regenerable, no research content"
+    },
+    {
+      "local_path": "logs/roscore_l1.log",
+      "bytes": 1277,
+      "sha256": "5d550f7bbd4acf0455ec28b40072133a75d36282a0a1bcbeb4c90f71ff0e900a",
+      "reason": "ROS playback progress log, regenerable, no research content"
+    }
+  ],
+  "excluded_total_bytes": 43364793
+}

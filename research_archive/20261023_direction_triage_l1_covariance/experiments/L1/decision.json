@@ -1,0 +1,72 @@
+{
+  "direction_id": "L1",
+  "stage_completed": "E1",
+  "technical_status": "BASELINE_READY",
+  "event_status": "EVENT_CONFIRMED",
+  "mechanism_status": "NO_MECHANISM_SIGNAL",
+  "novelty_status": "NOVELTY_UNRESOLVED",
+  "decision": "HOLD",
+  "primary_effect": {
+    "gate_1_tail_R": {
+      "static_0": 3.889,
+      "lt_changes_0": 9.201,
+      "threshold": 5.0,
+      "note": "primary absolute kouji; both sequences' interpretation blocked by drift confound"
+    },
+    "gate_2_spearman_sigma_vs_err": {
+      "static_0": -0.0784,
+      "lt_changes_0": -0.0475,
+      "threshold": 0.3
+    },
+    "gate_2_quintile_ratio": {
+      "static_0": 0.923,
+      "lt_changes_0": 0.972,
+      "threshold": 2.0
+    },
+    "post_hoc_relative_kouji": {
+      "static_0": {
+        "nees_rel_median": 1.536,
+        "tail_R": 8.275,
+        "spearman": 0.086,
+        "quintile_ratio": 1.142
+      },
+      "lt_changes_0": {
+        "nees_rel_median": 1.01,
+        "tail_R": 12.234,
+        "spearman": 0.063,
+        "quintile_ratio": 1.115
+      },
+      "label": "POST_HOC_DIAGNOSTIC_NOT_CONFIRMATORY"
+    }
+  },
+  "baseline_effect": {
+    "hector_poseupdate_covariance": "UNUSABLE_AS_COVARIANCE (sd_x median 6.85 m, sd_theta median 569 rad)",
+    "hector_native_hessian": "AVAILABLE per frame (11 LM iterations; last iteration used)"
+  },
+  "independent_scenes": 2,
+  "complete_runs": 2,
+  "failure_runs": 0,
+  "uncertainty": [
+    "Only ONE real system (hector_mapping) and ONE platform (DingoTM LILocBench), 2 sequences.",
+    "Primary kouji is contaminated by accumulated drift (lag-1 autocorr of e_theta = 0.977/0.974); its verdict is NOT attributable to covariance failure.",
+    "The post-hoc relative kouji was computed after the theta-axis relative z was already seen: NOT confirmatory.",
+    "Frozen gate has an unenumerated region [1.5,5) for R; static_0 (R=3.889) falls there.",
+    "GT pairing at 20 ms dropped 27% of frames (GT 20 Hz vs scans 15 Hz). Declared sensitivity at 100 ms gives the same conclusions.",
+    "No literature re-deduplication this round -> novelty UNRESOLVED.",
+    "hector's Hessian x-scale is ~2 orders of magnitude below the archived ICP H_xx; only scale-free criteria were used."
+  ],
+  "evidence_paths": [
+    "experiments/L1/protocol/PREREG.md",
+    "experiments/L1/audit/G0_QUALIFICATION.md",
+    "experiments/L1/REPORT.md",
+    "experiments/L1/runs/L1_G1_hector_lt_changes_0_20261023T114220/summary.json",
+    "experiments/L1/runs/L1_G1_hector_static_0_20261023T114220/summary.json",
+    "experiments/L1/analysis/coverage_stats.json",
+    "experiments/L1/analysis/per_axis_decomposition.json",
+    "experiments/L1/analysis/drift_vs_white.json",
+    "experiments/L1/analysis/scale_vs_shape.json",
+    "experiments/L1/analysis/posthoc_relative_kouji.json"
+  ],
+  "next_single_action": "Pre-register Amendment 1 (relative/incremental kouji) and re-test tail-heaviness on ONE 2D SLAM system WITH loop closure, to distinguish 'drift residual' from 'scan-matching tail'. No parameter changes, no new sequences, no method development before that.",
+  "gate_coverage_gap": "GATE_UNENUMERATED_REGION"
+}

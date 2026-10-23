@@ -1,0 +1,102 @@
+{
+  "direction_id": "L1",
+  "stage": "E1",
+  "protocol_hash": "eb5dffaf7f789ca7f319a0e2e766bf799037043a905de5a806f8675694e3b5e5",
+  "analysis_code": {
+    "analysis/l1_g1_analysis.py": "ce17451fa7820fdc6618c7f1c2ca252392ce4f56f7b87ac9e23327348c69edf4",
+    "analysis/l1_sensitivity_dt100.py": "1060777a359c04ca51ba8257d629a5998566b0ebe4266a94a9191b5ac7bf1bd8",
+    "run_g1.sh": "453bdaa4d469c79e93ad83f1e8d81806b53982fbfb01c2ea69edd29e628bfa9e"
+  },
+  "system": {
+    "name": "hector_mapping",
+    "binary": "/opt/ros/noetic/lib/hector_mapping/hector_mapping",
+    "binary_sha256": "5e7e09b9d2be92ec2840bb219971c6a4b123b8e9bd9d262ab578943ae517af17",
+    "ros_distro": "noetic",
+    "params": {
+      "map_resolution": 0.05,
+      "map_size": 2048,
+      "map_update_distance_thresh": 0.4,
+      "map_update_angle_thresh": 0.9,
+      "pub_debug_output": true,
+      "use_sim_time": true,
+      "base_frame": "base_link"
+    }
+  },
+  "datasets": {
+    "static_0": {
+      "bag": "/home/wcqw/lilocbench_amcl_validation_20261016/data/static_0.bag",
+      "bag_sha256": "5579090b35a48cf24a66fb1118899052218d2089f9b956788d5abee76e01f4ce",
+      "gt": ".../gt/static_0/gt_poses.txt"
+    },
+    "lt_changes_0": {
+      "bag": "/home/wcqw/lilocbench_amcl_validation_20261016/data/lt_changes_0.bag",
+      "bag_sha256": "638f9ee912302bb252a32aeb146fb96337fb5ac7c09556e58aa462b7cb5ca830",
+      "gt": ".../gt/lt_changes_0/gt_poses.txt"
+    }
+  },
+  "gt_usage": "evaluation_only (no online GT stream)",
+  "runs": [
+    {
+      "run_id": "L1_G1_hector_lt_changes_0_20261023T114220",
+      "sequence": "lt_changes_0",
+      "run_status": "SUCCESS",
+      "exit_code": 0,
+      "measure_bag_sha256": "45987954264cf5cb2c8d6764d325f6d2b947498634c2343dbdb807197687bff0",
+      "per_frame_sha256": "9f7aae2a7eaa7af6f95c947792c12983191d8cc6cc685102eac1af1f9745e3e7",
+      "summary_sha256": "eed94c3abffed3870ba37acdfe9b2f71dbd97a3554ee01abee90c3e3940959c1",
+      "n_valid_frames": 4324,
+      "n_dropped": 2213,
+      "input_scans": 6540,
+      "processed_scans": 6537,
+      "trajectory_coverage": 0.99954,
+      "gt_usage": "evaluation_only",
+      "seed": null,
+      "software_versions": {
+        "python": "3.8.10",
+        "numpy": "1.17.4",
+        "ros": "noetic"
+      },
+      "resource_scope": {
+        "gpu_used": false,
+        "ros_master_port": 11355,
+        "playback_rate": 1.0
+      },
+      "known_limitations": [
+        "single platform",
+        "no loop closure in hector",
+        "absolute kouji drift-confounded"
+      ]
+    },
+    {
+      "run_id": "L1_G1_hector_static_0_20261023T114220",
+      "sequence": "static_0",
+      "run_status": "SUCCESS",
+      "exit_code": 0,
+      "measure_bag_sha256": "f7a15c6a68224191133d556da51384d2c0fb7236d3442aea68c01abb55d38957",
+      "per_frame_sha256": "b4bdcfc6817244eb84382ba254b190467f23641b3a926ab5c90abd3f716760c1",
+      "summary_sha256": "5b71a998c9f703fd787c960c87f0c985eb84ad14c93ce75f93d7ec87af68fa40",
+      "n_valid_frames": 6541,
+      "n_dropped": 2438,
+      "input_scans": 8982,
+      "processed_scans": 8979,
+      "trajectory_coverage": 0.99967,
+      "gt_usage": "evaluation_only",
+      "seed": null,
+      "software_versions": {
+        "python": "3.8.10",
+        "numpy": "1.17.4",
+        "ros": "noetic"
+      },
+      "resource_scope": {
+        "gpu_used": false,
+        "ros_master_port": 11355,
+        "playback_rate": 1.0
+      },
+      "known_limitations": [
+        "single platform",
+        "no loop closure in hector",
+        "absolute kouji drift-confounded"
+      ]
+    }
+  ]
+}

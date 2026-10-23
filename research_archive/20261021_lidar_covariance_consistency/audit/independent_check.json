@@ -1,0 +1,64 @@
+{
+ "effective_noise": {
+  "lt_changes_0": 0.056771776287810244,
+  "static_0": 0.05921478236595081
+ },
+ "row_reproduction_checks": {
+  "per_condition": {
+   "lt_changes_0_sigma0.02": {
+    "file": "v3_lt0.02.json",
+    "max_relative_nees_reproduction_error": 5.595701307697815e-16,
+    "rows_with_nonfinite_relative_error": 0
+   },
+   "lt_changes_0_sigma0.04": {
+    "file": "v3_lt0.04.json",
+    "max_relative_nees_reproduction_error": 5.595701307697815e-16,
+    "rows_with_nonfinite_relative_error": 0
+   },
+   "lt_changes_0_sigma0.06": {
+    "file": "v3_lt0.06.json",
+    "max_relative_nees_reproduction_error": 4.005098603942835e-16,
+    "rows_with_nonfinite_relative_error": 0
+   },
+   "static_0_sigma0.02": {
+    "file": "v3_s0.02.json",
+    "max_relative_nees_reproduction_error": 7.661516078871672e-16,
+    "rows_with_nonfinite_relative_error": 0
+   },
+   "static_0_sigma0.04": {
+    "file": "v3_s0.04.json",
+    "max_relative_nees_reproduction_error": 7.661516078871672e-16,
+    "rows_with_nonfinite_relative_error": 0
+   },
+   "static_0_sigma0.06": {
+    "file": "v3_s0.06.json",
+    "max_relative_nees_reproduction_error": 5.352487467274941e-16,
+    "rows_with_nonfinite_relative_error": 0
+   }
+  }
+ },
+ "sigma_scaling": {
+  "lt_changes_0": {
+   "nees_median_by_sigma": {
+    "0.02": 24.172759371548803,
+    "0.04": 6.043189842887201,
+    "0.06": 2.6858621523942756
+   },
+   "ratio_0.02_over_0.04_observed": 4.0,
+   "ratio_0.02_over_0.04_theory": 4.0,
+   "ratio_0.04_over_0.06_observed": 2.25000000000003,
+   "ratio_0.04_over_0.06_theory": 2.25
+  },
+  "static_0": {
+   "nees_median_by_sigma": {
+    "0.02": 26.297928379851893,
+    "0.04": 6.574482094962973,
+    "0.06": 2.921992042205781
+   },
+   "ratio_0.02_over_0.04_observed": 4.0,
+   "ratio_0.02_over_0.04_theory": 4.0,
+   "ratio_0.04_over_0.06_observed": 2.2499999999999885,
+   "ratio_0.04_over_0.06_theory": 2.25
+  }
+ }
+}

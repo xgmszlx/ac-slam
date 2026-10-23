@@ -1,0 +1,89 @@
+{
+ "native_system_blocker": {
+  "consequence": "The planned native information-matrix export (code/native_export/PATCH_laser_info.md) is blocked on data, not on code. See NEXT_MINIMAL_ACTION.md G0.",
+  "finding": "The LILocBench bags contain no sensor_msgs/Imu. 2DLIW-SLAM subscribes to IMU unconditionally and uses the IMU frame as the system origin, so it cannot be run on this data without synthesising sensor data or re-calibrating extrinsics."
+ },
+ "not_published": {
+  "items": [
+   "both .bag files",
+   "both .npz files",
+   "both gt_poses.txt",
+   "LILocBench map files"
+  ],
+  "reason": "size and dataset terms; local paths above are authoritative"
+ },
+ "scenes": {
+  "lt_changes_0": {
+   "bag": "lt_changes_0.bag",
+   "bag_sha256": "638f9ee912302bb252a32aeb146fb96337fb5ac7c09556e58aa462b7cb5ca830",
+   "bag_size_bytes": 103773946,
+   "duration_s": 435.9,
+   "frames_used": 60,
+   "gt": "gt/lt_changes_0/gt_poses.txt",
+   "gt_rate_hz": 20,
+   "gt_rows": 8700,
+   "gt_sha256": "32c1f451eced24dbd4891771c113aaf2dccfb9d67abf54036c3a2b0f42bcb461",
+   "npz": "lt_changes_0.npz",
+   "npz_scans": 6540,
+   "npz_sha256": "b1c33783dbaa321e2f5a12abac3393c3b3ba4cc50a004d76737290cb8d015927",
+   "npz_size_bytes": 10607544,
+   "rows_used": 240,
+   "scan_geometry": {
+    "angle_increment_rad": 0.00582,
+    "angle_min_rad": -2.3562,
+    "beams": 811,
+    "fov_deg": 270.3,
+    "rate_hz": 15.0
+   },
+   "scan_topic_used": "/laser_scan_front/scan",
+   "topics": {
+    "laser_scan_front": 6540,
+    "odom": "present",
+    "tf": "present"
+   }
+  },
+  "static_0": {
+   "bag": "static_0.bag",
+   "bag_sha256": "5579090b35a48cf24a66fb1118899052218d2089f9b956788d5abee76e01f4ce",
+   "bag_size_bytes": 141839376,
+   "duration_s": 598.0,
+   "frames_used": 50,
+   "gt": "gt/static_0/gt_poses.txt",
+   "gt_rate_hz": 20,
+   "gt_rows": 11929,
+   "gt_sha256": "ff98cb1e423793a45bba7a3c95472a3e8daf6d0c54906b53c048cfd8d787acf6",
+   "messages": 110812,
+   "npz": "static_0.npz",
+   "npz_scans": 8982,
+   "npz_sha256": "fe8e5cebdcabb3270dde5970e10df5851e3ca7ac904acc2f3858c98955ce1a13",
+   "npz_size_bytes": 14985389,
+   "rows_used": 200,
+   "scan_geometry": {
+    "angle_increment_rad": 0.00582,
+    "angle_min_rad": -2.3562,
+    "beams": 811,
+    "fov_deg": 270.3,
+    "range_max_field_m": 100.0,
+    "range_min_m": 0.05,
+    "rate_hz": 15.0
+   },
+   "scan_topic_used": "/laser_scan_front/scan",
+   "topics": {
+    "cmd_vel": 22092,
+    "joint_states": 8715,
+    "laser_scan_front": 8982,
+    "laser_scan_rear": 8982,
+    "odom": 8714,
+    "tf": 53323,
+    "tf_static": 4
+   }
+  }
+ },
+ "source": "LILocBench / AMCL validation archive prepared 2026-10-16; not re-downloaded in this round",
+ "status": "QUALIFIED_FOR_OFFLINE_SCAN_MATCHING_ONLY",
+ "unused_gt_available_locally": [
+  "dynamics_0",
+  "lt_changes_dynamics_0",
+  "mapping"
+ ]
+}

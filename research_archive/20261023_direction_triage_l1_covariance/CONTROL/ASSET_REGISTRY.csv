@@ -1,0 +1,10 @@
+id,kind,path,note,exists,sha256
+hector_mapping,binary,/opt/ros/noetic/lib/hector_mapping/hector_mapping,"real 2D SLAM, per-frame LM Hessian (G0 qualified)",True,5e7e09b9d2be92ec2840bb219971c6a4b123b8e9bd9d262ab578943ae517af17
+hector_mapping-msg,msg,/opt/ros/noetic/share/hector_mapping/msg/HectorIterData.msg,float64[9] hessian,True,0c702ed80cdee351a8b49a17c1799b2d1487aba5da8720437f16aa594e42463d
+laser_scan_matcher,binary,/opt/ros/noetic/lib/libl*laser_scan_matcher.so,EXCLUDED: covariance is a static launch param,False,
+ros_noetic,distro,/opt/ros/noetic,ROS Noetic (python3.8),True,
+orb_slam3_lib,binary,/home/wcqw/passive_visual_slam_qualification_20261015/sources/ORB_SLAM3-4452a3c4ab75b1cde34e5505a36ec3f9edcdc4c4/lib/libORB_SLAM3.so,built; Examples binaries absent,True,a20db0416fc54ca5949e6b6ac834c12f59dc0bae5f08dc2945e46943a3532c46
+orbvoc,model,/home/wcqw/passive_visual_slam_qualification_20261015/sources/ORB_SLAM3-4452a3c4ab75b1cde34e5505a36ec3f9edcdc4c4/Vocabulary/ORBvoc.txt,vocabulary present,True,f8dd027f7a6cb88129821341194d7f2c75b77b3394257ddd0d2229863d1a3570
+2dliw_src,source,/home/wcqw/2dliw,2DLIW-SLAM Apache-2.0; needs IMU -> blocked on LILocBench,True,
+ngd_src_zip,archive,/home/wcqw/ac-slam/NGD-SLAM-a93a14c4019efc7a209be5fbf9fefa46f5d1d90f.zip,NGD-SLAM fixed rev; prior line CLOSED,True,SKIPPED_TOO_LARGE(621831544)
+opencv455_src,archive,/home/wcqw/ac-slam/opencv-4.5.5.tar.gz,isolated OpenCV build for NGD,True,a1cfdcf6619387ca9e232687504da996aaa9f7b5689986b8331ec02cb61d28ad

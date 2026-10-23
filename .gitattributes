@@ -15,3 +15,7 @@
 
 # Preserve original ORB-SLAM3 stdout whitespace in the four repeat records.
 /research_archive/20261019_depth_repeats/results/*/stdout.log -whitespace
+
+# Raw experiment evidence and per-frame CSV dumps under research_archive keep their
+# original bytes (CRLF from csv writers); do not reformat or flag whitespace.
+/research_archive/** -whitespace
