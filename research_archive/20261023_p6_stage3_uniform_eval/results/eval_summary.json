@@ -1,0 +1,149 @@
+{
+  "sequence": "freiburg3_walking_xyz",
+  "renderer": "z-buffered surface projection (splat radius 2)",
+  "radius": 2,
+  "fsv_margin_m": 0.1,
+  "held_out_frames": 40,
+  "methods": {
+    "A_Raw": {
+      "build": {
+        "n_points": 70081,
+        "pixels_kept_frac": 1.0,
+        "peak_rss_mib": 490.3671875,
+        "timing_s": {
+          "image_load": 10.244288119995872,
+          "preprocess_mask_geom": 0.0002046329964286997,
+          "tsdf_integrate": 1.3593699360126266,
+          "map_extract": 0.09298273900003551,
+          "total": 11.696845428004963
+        },
+        "per_frame_ms": {
+          "image_load": 51.22144059997936,
+          "preprocess_mask_geom": 0.0010231649821434985,
+          "tsdf_integrate": 6.796849680063133
+        },
+        "hog_boxes": 0
+      },
+      "all_pixels": {
+        "coverage": 0.9907806606658205,
+        "resid_med": 0.03779570360020812,
+        "resid_p90": 1.0651585258062526,
+        "inlier_5cm": 0.5569139422083331,
+        "fsv": 0.05389049070921775,
+        "resid_med_mean": 0.040561666538560984,
+        "fsv_mean": 0.0564089727337147
+      },
+      "common_domain": {
+        "resid_med": 0.028251749775549673,
+        "resid_p90": 0.9813016789520395,
+        "inlier_5cm": 0.6646467971279435,
+        "fsv": 0.04541053403684528
+      }
+    },
+    "B_MaskHOG": {
+      "build": {
+        "n_points": 70019,
+        "pixels_kept_frac": 0.9814232513442365,
+        "peak_rss_mib": 518.1015625,
+        "timing_s": {
+          "image_load": 1.8838351689937554,
+          "preprocess_mask_geom": 0.6248319689912023,
+          "tsdf_integrate": 1.2326811449966044,
+          "map_extract": 0.0818514230004439,
+          "total": 3.823199705982006
+        },
+        "per_frame_ms": {
+          "image_load": 9.419175844968777,
+          "preprocess_mask_geom": 3.1241598449560115,
+          "tsdf_integrate": 6.163405724983022
+        },
+        "hog_boxes": 8
+      },
+      "all_pixels": {
+        "coverage": 0.9904578741036718,
+        "resid_med": 0.037991276799116847,
+        "resid_p90": 1.0655227031897092,
+        "inlier_5cm": 0.556976750421557,
+        "fsv": 0.05490611657702431,
+        "resid_med_mean": 0.04066457248638038,
+        "fsv_mean": 0.05756037943578152
+      },
+      "common_domain": {
+        "resid_med": 0.028340605667298235,
+        "resid_p90": 0.9849773629076073,
+        "inlier_5cm": 0.6633509010384916,
+        "fsv": 0.04720249883505316
+      }
+    },
+    "C_GeomPrev": {
+      "build": {
+        "n_points": 69971,
+        "pixels_kept_frac": 0.8421987084696347,
+        "peak_rss_mib": 506.74609375,
+        "timing_s": {
+          "image_load": 1.8241724210020038,
+          "preprocess_mask_geom": 2.6169829909940745,
+          "tsdf_integrate": 1.3854679890037005,
+          "map_extract": 0.08210638800028391,
+          "total": 5.908729789000063
+        },
+        "per_frame_ms": {
+          "image_load": 9.12086210501002,
+          "preprocess_mask_geom": 13.084914954970372,
+          "tsdf_integrate": 6.9273399450185025
+        },
+        "hog_boxes": 0
+      },
+      "all_pixels": {
+        "coverage": 0.9904519229696105,
+        "resid_med": 0.041303561752219387,
+        "resid_p90": 1.0481427621239177,
+        "inlier_5cm": 0.5392919928977897,
+        "fsv": 0.1275472457432913,
+        "resid_med_mean": 0.04426455560205758,
+        "fsv_mean": 0.1255363486258432
+      },
+      "common_domain": {
+        "resid_med": 0.030467494891278313,
+        "resid_p90": 1.0009815186979765,
+        "inlier_5cm": 0.6340513741867262,
+        "fsv": 0.10178321794677339
+      }
+    },
+    "D_MapConfirm": {
+      "build": {
+        "n_points": 18590,
+        "pixels_kept_frac": 0.22576192388799504,
+        "peak_rss_mib": 465.43359375,
+        "timing_s": {
+          "image_load": 1.7794876939951791,
+          "preprocess_mask_geom": 21.227495446999455,
+          "tsdf_integrate": 3.6385870240055738,
+          "map_extract": 0.020213384999806294,
+          "total": 26.665783550000015
+        },
+        "per_frame_ms": {
+          "image_load": 8.897438469975896,
+          "preprocess_mask_geom": 106.13747723499728,
+          "tsdf_integrate": 18.19293512002787
+        },
+        "hog_boxes": 0
+      },
+      "all_pixels": {
+        "coverage": 0.6071655752780833,
+        "resid_med": 0.04147617468247322,
+        "resid_p90": 1.0521106465610224,
+        "inlier_5cm": 0.5539146501209536,
+        "fsv": 0.1896345533647819,
+        "resid_med_mean": 0.040992514811981066,
+        "fsv_mean": 0.17230522588038596
+      },
+      "common_domain": {
+        "resid_med": 0.041478448843357274,
+        "resid_p90": 1.0521093130306014,
+        "inlier_5cm": 0.5539268467351854,
+        "fsv": 0.1898320258636891
+      }
+    }
+  }
+}
