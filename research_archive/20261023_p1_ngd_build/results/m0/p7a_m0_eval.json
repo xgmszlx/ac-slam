@@ -1,0 +1,52 @@
+{
+  "label": "NGD M0 native baseline, fr3_sitting_xyz 120f",
+  "gt": {
+    "path": "/home/wcqw/passive_visual_slam_qualification_20261015/data/rgbd_dataset_freiburg3_sitting_xyz/groundtruth.txt",
+    "n": 4251,
+    "span_s": 42.49960017204285,
+    "malformed_rows": 0
+  },
+  "est": {
+    "path": "/home/wcqw/slam_multi_direction_research/p1_ngd/m0_regression/CameraTrajectory.txt",
+    "n": 120,
+    "span_s": 4.081820964813232,
+    "malformed_rows": 0
+  },
+  "association": {
+    "max_dt_s": 0.02,
+    "n_pairs": 117,
+    "coverage_est": 0.975,
+    "coverage_gt": 0.027522935779816515,
+    "dt_median_s": 0.002504110336303711,
+    "dt_max_s": 0.009402990341186523,
+    "est_span_covered_s": 4.081820964813232
+  },
+  "ate_aligned": {
+    "rmse": 0.013156290891030905,
+    "median": 0.00830998927628152,
+    "max": 0.04862942836484885,
+    "scale_used": 1.0,
+    "with_scale": false
+  },
+  "ate_unaligned": {
+    "rmse": 3.3273234578433852,
+    "median": 3.3289654979522925,
+    "max": 3.3558213731514095
+  },
+  "rpe": {
+    "window_s": 1.0,
+    "dt_tol_s": 0.1,
+    "n_pairs": 90,
+    "n_skipped": 26,
+    "trans_rmse": 0.016226341466598272,
+    "trans_median": 0.010080349559591176,
+    "rot_rmse_deg": 0.3784903235237005,
+    "rot_median_deg": 0.3126570864788948
+  },
+  "options": {
+    "with_scale": false,
+    "bonn_camera_frame": false,
+    "window_s": 1.0,
+    "align_applied_to": "estimate only"
+  }
+}
