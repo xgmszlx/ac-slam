@@ -2,8 +2,8 @@
   "direction_id": "L1",
   "stage_completed": "E1",
   "technical_status": "BASELINE_READY",
-  "event_status": "EVENT_CONFIRMED",
-  "mechanism_status": "NO_MECHANISM_SIGNAL",
+  "event_status": "EVENT_UNRESOLVED",
+  "mechanism_status": "INCONCLUSIVE",
   "novelty_status": "NOVELTY_UNRESOLVED",
   "decision": "HOLD",
   "primary_effect": {
@@ -68,5 +68,23 @@
     "experiments/L1/analysis/posthoc_relative_kouji.json"
   ],
   "next_single_action": "Pre-register Amendment 1 (relative/incremental kouji) and re-test tail-heaviness on ONE 2D SLAM system WITH loop closure, to distinguish 'drift residual' from 'scan-matching tail'. No parameter changes, no new sequences, no method development before that.",
-  "gate_coverage_gap": "GATE_UNENUMERATED_REGION"
+  "gate_coverage_gap": "GATE_UNENUMERATED_REGION",
+  "ERRATA_20261023": true,
+  "superseded_by": "ERRATA.md",
+  "withdrawn_claims": [
+    "relative kouji: bulk covariance correctly scaled (0.43-0.65x)",
+    "relative kouji: per-frame yaw precision approximately correct",
+    "global-scale-cannot-fix => shape problem (compared sqrt(tr Sigma_xy) with ||e_xy||)",
+    "absolute kouji: over-confidence 20-65x (never calibrated sigma^2 in Sigma ~ sigma^2 H^-1)",
+    "absolute discrepancy attributed entirely to drift",
+    "cannot-warn claim (rho computed on n_eff 16-77, insufficient)",
+    "poseupdate.covariance PSD => \"not a slot error\" inference"
+  ],
+  "gate_status": "NOT_MET: n_eff 15.8 (static) / 32.0 (lt) vs pre-registered requirement of >=200 independent frames",
+  "audit_defects": [
+    "PREREG 3.4 states log_SE2 but code uses world-frame difference",
+    "pre-registration and results in the same commit e78431b1",
+    "post-hoc diagnostics committed as JSON only, no standalone scripts"
+  ],
+  "direction_of_change": "HOLD was already correct but for the wrong reason: measurement design invalid, not mechanism absent"
 }
