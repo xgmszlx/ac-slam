@@ -1,0 +1,37 @@
+{
+  "direction_id": "P1",
+  "stage_completed": "E1",
+  "technical_status": "BASELINE_READY",
+  "event_status": "EVENT_CONFIRMED",
+  "mechanism_status": "NO_MECHANISM_SIGNAL",
+  "novelty_status": "NOVELTY_UNRESOLVED",
+  "decision": "STOP_THIS_HYPOTHESIS",
+  "primary_effect": {
+    "features_pct_vs_A": {"B": 30.87, "C": 23.52},
+    "valid_3d_pct_vs_A": {"B": 28.1, "C": 11.2},
+    "spatial_spread_pct_vs_A": {"B": 21.0, "C": 12.0},
+    "ate_rmse_m": {
+      "sitting_xyz": {"A": 0.0133, "B": 0.0136, "C": 0.0121},
+      "walking_xyz": {"A": 0.0167, "B": 0.0165, "C": 0.0157}
+    }
+  },
+  "independent_scenes": 2,
+  "complete_runs": 18,
+  "failure_runs": 1,
+  "noise_floor": {"ate_run_to_run_median_cm": 0.404, "ate_run_to_run_max_cm": 3.263},
+  "uncertainty": [
+    "3 repeats per group estimate within-group spread only; observed between-group differences (0.2-1.0 mm) are smaller than within-group spread (0.6-2.5 mm), so they are not resolvable at this precision",
+    "only the first 120 frames of two sequences, not full sequences",
+    "C descriptors come from cv::ORB, not ORBextractor's internal routine",
+    "B showed the tightest within-group spread on walking_xyz (0.8 mm); a weak stability signal, not a claim",
+    "no literature re-deduplication done -> novelty unresolved"
+  ],
+  "evidence_paths": [
+    "p1_ngd/logs/P1_AB_RESULT.md",
+    "p1_ngd/logs/P1_ABC_RESULT.md",
+    "p1_ngd/logs/P1_ABC_GEOMETRY.md",
+    "p1_ngd/logs/P1_FINAL_DECISION.md",
+    "p1_ngd/tests/test_precull.cc"
+  ],
+  "next_single_action": "Stop developing feature-budget allocation for this system. If revisited, first produce evidence that static-region feature budget is the binding bottleneck for a specific, measured failure."
+}
