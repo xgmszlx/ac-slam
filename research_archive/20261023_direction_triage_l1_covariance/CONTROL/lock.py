@@ -88,7 +88,30 @@ def cmd_run(a):
               file=sys.stderr)
         return 2
     write_holder(a.resource, a.holder, {'mode': 'run', 'cmd': a.cmd})
-    proc = subprocess.Popen(a.cmd, start_new_session=True)   # own process group
+
+    # --- parent-death safety -------------------------------------------------
+    # The flock lives on the open file description, and an OFD is shared by every
+    # process that inherits the fd. By passing the lock fd to the child, the lock
+    # stays HELD even if this parent is SIGKILLed: it is only released once the
+    # child (and anything else holding the fd) exits. That closes the "lock free
+    # but compute still running" hole that a plain parent-held lock leaves open.
+    def child_setup():
+        os.setpgid(0, 0)
+
+    proc = subprocess.Popen(a.cmd, start_new_session=True, pass_fds=(fd,))
+
+    # --- signal forwarding ---------------------------------------------------
+    # SIGTERM/SIGINT to the wrapper must abort the child GROUP, not orphan it.
+    state = {'sig': None}
+
+    def _fwd(signum, frame):
+        state['sig'] = signum
+        try:
+            os.killpg(os.getpgid(proc.pid), signal.SIGTERM)
+        except ProcessLookupError:
+            pass
+
+    old = {s: signal.signal(s, _fwd) for s in (signal.SIGTERM, signal.SIGINT)}
     try:
         proc.wait(timeout=a.timeout)
         rc = proc.returncode
@@ -109,9 +132,25 @@ def cmd_run(a):
         print('TIMEOUT: killed process group of %s after %ss' % (a.resource, a.timeout),
               file=sys.stderr)
     finally:
+        # escalate if the group ignored SIGTERM
+        if state['sig'] is not None:
+            try:
+                os.killpg(os.getpgid(proc.pid), 0)      # still alive?
+                try:
+                    os.killpg(os.getpgid(proc.pid), signal.SIGKILL)
+                except ProcessLookupError:
+                    pass
+            except ProcessLookupError:
+                pass
+            time.sleep(0.2)
+        for sig_, h in old.items():
+            signal.signal(sig_, h)
         clear_holder(a.resource)
         fcntl.flock(fd, fcntl.LOCK_UN)
         os.close(fd)
+        if state['sig'] is not None:
+            print('ABORTED by signal %d; child group terminated' % state['sig'], file=sys.stderr)
+            return 128 + state['sig']
     return rc
 
 

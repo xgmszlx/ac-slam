@@ -80,11 +80,13 @@ def t_grandchild_timeout():
     r = 'T_GRAND'
     cleanup(r)
     marker = '/tmp/locktest_grandchild_%d' % os.getpid()
+    token = 'GRANDCHILD_SENTINEL_%d' % os.getpid()   # unique: never matches other runs
     if os.path.exists(marker):
         os.remove(marker)
     code = ('import subprocess,sys,time;'
-            'subprocess.Popen([sys.executable,"-c","import time;time.sleep(120)"]);'
-            'open(%r,"w").write("up");time.sleep(120)' % marker)
+            'subprocess.Popen([sys.executable,"-c",'
+            '"import time;time.sleep(120)  # %s"]);'
+            'open(%r,"w").write("up");time.sleep(120)' % (token, marker))
     t0 = time.time()
     rc = subprocess.run([PY, LOCK, 'run', r, '--timeout', '1.5', '--', PY, '-c', code],
                         capture_output=True, text=True)
@@ -93,7 +95,7 @@ def t_grandchild_timeout():
     check('timed out promptly', el < 15, '%.1fs' % el)
     check('grandchild started (so the test is not vacuous)', os.path.exists(marker))
     time.sleep(0.6)
-    leftover = subprocess.run(['pgrep', '-f', 'time.sleep\\(120\\)'], capture_output=True, text=True).stdout
+    leftover = subprocess.run(['pgrep', '-f', token], capture_output=True, text=True).stdout
     check('no surviving grandchild process', leftover.strip() == '', 'leftover=%r' % leftover.strip()[:60])
     if os.path.exists(marker):
         os.remove(marker)
@@ -130,9 +132,70 @@ def t_owner_protected():
     cleanup(r)
 
 
+# ---------------------------------------------------------------------------
+# v3 additions: the two runtime holes the review named.
+# ---------------------------------------------------------------------------
+def t_sigterm_aborts_group():
+    print('[T7] SIGTERM to the wrapper aborts the child GROUP, not just the wrapper')
+    r = 'T_SIGTERM'
+    cleanup(r)
+    marker = '/tmp/locktest_t7_%d' % os.getpid()
+    code = ('import sys,time;open(%r,"w").write("up");time.sleep(120)' % marker)
+    w = subprocess.Popen([PY, LOCK, 'run', r, '--', PY, '-c', code],
+                         stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    for _ in range(50):
+        if os.path.exists(marker):
+            break
+        time.sleep(0.1)
+    check('child started', os.path.exists(marker))
+    w.send_signal(signal.SIGTERM)
+    out, err = w.communicate(timeout=20)
+    check('wrapper reports 128+SIGTERM', w.returncode == 128 + signal.SIGTERM,
+       'rc=%d err=%s' % (w.returncode, (err or '').strip()[:60]))
+    time.sleep(0.6)
+    # unique per-run pattern: a generic one would match leftovers from earlier runs
+    leftover = subprocess.run(['pgrep', '-f', marker], capture_output=True, text=True).stdout
+    check('no surviving child after SIGTERM', leftover.strip() == '', repr(leftover.strip()[:40]))
+    check('lock released', status(r)['state'] == 'FREE')
+    if os.path.exists(marker):
+        os.remove(marker)
+    cleanup(r)
+
+
+def t_parent_sigkill_keeps_lock():
+    print('[T8] parent SIGKILL: lock must STAY held while the child still computes')
+    r = 'T_PARENT_KILL'
+    cleanup(r)
+    marker = '/tmp/locktest_t8_%d' % os.getpid()
+    code = ('import os,time;open(%r,"w").write("up");time.sleep(6)' % marker)
+    w = subprocess.Popen([PY, LOCK, 'run', r, '--', PY, '-c', code],
+                         stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    for _ in range(60):
+        if os.path.exists(marker):
+            break
+        time.sleep(0.1)
+    check('child started', os.path.exists(marker))
+    check('lock held before parent kill', status(r)['state'] == 'HELD')
+    os.kill(w.pid, signal.SIGKILL)          # wrapper dies without any cleanup
+    w.wait(timeout=5)
+    time.sleep(0.5)
+    st = status(r)
+    check('lock STILL HELD after parent SIGKILL (child inherits the fd)',
+       st['state'] == 'HELD', json.dumps(st)[:80])
+    rc = subprocess.run([PY, LOCK, 'run', r, '--', PY, '-c', 'print(1)'],
+                        capture_output=True, text=True)
+    check('a new task is still DENIED while the child runs', rc.returncode == 2)
+    time.sleep(7)                            # let the orphan child finish on its own
+    check('lock released once the child exits', status(r)['state'] == 'FREE')
+    if os.path.exists(marker):
+        os.remove(marker)
+    cleanup(r)
+
+
 if __name__ == '__main__':
     for t in (t_concurrent, t_normal, t_kill9, t_grandchild_timeout,
-              t_different_resources, t_owner_protected):
+              t_different_resources, t_owner_protected,
+              t_sigterm_aborts_group, t_parent_sigkill_keeps_lock):
         t()
     print()
     if FAILS:
